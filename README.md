@@ -13,7 +13,7 @@
 
 配色・書体・余白・構図の表現は [Anything Frontend Art Direction](https://github.com/RNA4219/anything-frontend-art-direction) が担当します。両方を使う場合は、利用者に伝える情報と操作の目的を共有し、表現が決まった画面を同じ利用課題で再確認します。
 
-[主要サイトのクリック・タップ実測](research/product-journeys/README.md)、[人が探す・押し直すときの測定値](research/product-journeys/human-studies/README.md)、[余白と情報密度の実測](research/product-journeys/spacing/README.md)。
+[29ブランド・施設を実画面で再訪した記録](research/product-journeys/walkthrough/README.md)では、入口と終点の余白・情報密度を操作経路と一緒に比較できます。[初回のクリック・タップ実測](research/product-journeys/README.md)、[利用者を観察した研究](research/product-journeys/human-studies/README.md)、[入口画面の余白と情報密度](research/product-journeys/spacing/README.md)も参照できます。
 
 [調査資料の置き方](research/README.md)、[検証の実行方法](tests/README.md)、[実行・評価の証跡](evidence/README.md)。
 
