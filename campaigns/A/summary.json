@@ -83,7 +83,7 @@
     ],
     "scope": "All tasks one run per arm; R03 assignment leak preserved. No human efficacy claim.",
     "browser_rendering": "not executed; environment launch failed in early verification",
-    "CI": "Final follow-up head pending publication; remote CI has not been observed for it.",
+    "CI": "No CI statuses or PR workflow runs observed for 03d7aa6cd33d8b2401e2162c5446320f23603e41; no success claim. Final metadata-only head is checked separately.",
     "integration_validation": "campaigns/A/rounds/R04/integration-validation.json",
     "shared_suite": {
       "status": "NOT_PASS",
@@ -100,15 +100,16 @@
   },
   "checkpoint": "campaigns/A/rounds/R04/decision.json",
   "handoff": "campaigns/A/handoff.md",
-  "at": "2026-11-23T09:44:20.203227+00:00",
+  "at": "2026-11-23T09:46:59.037571+00:00",
   "publication": {
     "active_branch": "campaign/A-product-ia-r04-20261123",
     "integration_base_sha": "4333d097b5699528b5554434b494d8079126ba0f",
     "prior_pr": 6,
     "prior_pr_state": "merged by concurrent work; not merged by this session",
-    "follow_up_pr": null,
-    "status": "BASE_RESTORED_PUBLICATION_RESUMED",
-    "evidence": "campaigns/A/rounds/R04/remote-recovery.json",
-    "previous_integration_base_sha": "8b4d23426ffb71af82e924803f32ca59d80f3662"
+    "follow_up_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/3",
+    "status": "DRAFT_OPEN",
+    "evidence": "campaigns/A/rounds/R04/published-validation.json",
+    "previous_integration_base_sha": "8b4d23426ffb71af82e924803f32ca59d80f3662",
+    "code_evidence_commit": "03d7aa6cd33d8b2401e2162c5446320f23603e41"
   }
 }

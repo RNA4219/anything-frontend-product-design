@@ -3,7 +3,9 @@
 ## Checkpoint and integration
 
 Branch: `campaign/A-product-ia-r04-20261123`
-Previous PR #6 was observed merged by concurrent work. During R04 follow-up publication, the same repository name began returning a newly created private empty repository and PR #6 became unavailable (404). No follow-up Draft PR was created. That hold ended after a new main with an identical content tree appeared; publication resumed on the new root.
+Current Draft PR: [https://github.com/RNA4219/anything-frontend-product-design/pull/3](https://github.com/RNA4219/anything-frontend-product-design/pull/3)
+Code/evidence commit: `03d7aa6cd33d8b2401e2162c5446320f23603e41`
+Previous PR #6 belonged to the earlier repository and was observed merged by concurrent work. Its URL became unavailable during recreation. The follow-up above uses the new root and contains only Session A changes.
 
 Integration base: `4333d097b5699528b5554434b494d8079126ba0f`
 Previous integration base: `8b4d23426ffb71af82e924803f32ca59d80f3662` (identical tree)
@@ -59,6 +61,8 @@ Concurrent work integrated R03 and applied a publication cleanup while R04 was r
 
 The follow-up target returned `Git Repository is empty` (409) for refs/tree, while repository metadata reported creation at 2026-11-23T09:37:15Z and the previous PR #6 returned 404. See `rounds/R04/remote-validation.json`. This session did not delete, recreate, initialize, or merge shared main. A complete-history recovery bundle preserved the local checkpoint while the target was empty.
 
-Resume by inspecting the actual remote repository identity, refs, and integration owner's intended base. Do not blindly restore the removed main or assume the old PR URL exists. Once a base is established, port only the three Session A path prefixes, rerun relevant integration gates, and create a new Draft PR. Final-head CI did not run because no final head was published.
+Resume by inspecting the actual remote repository identity, refs, and integration owner's intended base. Do not blindly restore the removed main or assume the old PR URL exists. Once a base is established, port only the three Session A path prefixes, rerun relevant integration gates, and create a new Draft PR. At the temporary hold, no final head had been published. Publication later resumed as recorded below.
 
 Recovery resolved: the new main `4333d097b5699528b5554434b494d8079126ba0f` and previous base `8b4d23426ffb71af82e924803f32ca59d80f3662` have exactly the same tree `73f9f55b9f7c69efeec70b90f3379d15cbf3e3a4`. The authenticated API commit object was reconstructed locally and its Git SHA verified. Only Session A changes are applied on the new root; old repository ancestry is retained privately and will not be republished. See `rounds/R04/remote-recovery.json` for final publication state.
+
+Final publication check: Draft PR #3 is open and unmerged. The code/evidence tree matches the local tree exactly. No commit statuses or PR workflow runs were observed for that head; CI is not reported as successful. See `rounds/R04/published-validation.json`. The remaining shared browser gate still requires an integration environment with its executable installed.

@@ -1,0 +1,18 @@
+{
+  "observed_at": "2026-11-23T09:46:59.037571+00:00",
+  "code_evidence_commit": "03d7aa6cd33d8b2401e2162c5446320f23603e41",
+  "tree": "28edf07687cb0506ec0f04e47c025c2337741f4d",
+  "local_remote_tree_identical": true,
+  "pr_url": "https://github.com/RNA4219/anything-frontend-product-design/pull/3",
+  "pr_state": "open",
+  "draft": true,
+  "merged": false,
+  "mergeable_at_observation": true,
+  "statuses_observed": 0,
+  "pr_workflow_runs_observed": 0,
+  "CI": "NOT_OBSERVED; no CI success claim",
+  "workflow_api_limit": "PR-triggered runs, first page only",
+  "local_module": "70 methods PASS; no executable changes since run",
+  "shared_suite": "NOT_PASS: 35 methods passed, browser class setup failed because executable is unavailable.",
+  "subsequent_metadata_commit": "Publication links/status only; observe final PR head separately."
+}

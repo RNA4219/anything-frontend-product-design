@@ -42,7 +42,8 @@
   "previous_branch": "campaign/A-product-ia-evolution-20261123",
   "previous_pr_url": "https://github.com/RNA4219/anything-frontend-product-design/pull/6",
   "previous_pr_state": "merged by concurrent work",
-  "publication_status": "BASE_RESTORED_PUBLICATION_RESUMED",
-  "publication_checkpoint": "campaigns/A/rounds/R04/remote-recovery.json",
-  "previous_integration_base_sha": "8b4d23426ffb71af82e924803f32ca59d80f3662"
+  "publication_status": "DRAFT_OPEN",
+  "publication_checkpoint": "campaigns/A/rounds/R04/published-validation.json",
+  "previous_integration_base_sha": "8b4d23426ffb71af82e924803f32ca59d80f3662",
+  "pr_url": "https://github.com/RNA4219/anything-frontend-product-design/pull/3"
 }
