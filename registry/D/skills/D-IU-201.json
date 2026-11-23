@@ -43,6 +43,10 @@
     "transfer": "二つの案のユーザビリティを比較するとき",
     "limits": "目的と無関係な尺度は省ける。省いた尺度の改善を他の尺度から推定しない。"
   },
+  "product_observations": {
+    "dataset": "research/product-journeys/observations.json",
+    "examples": ["repair-ikea-mobile", "reset-netflix-mobile"]
+  },
   "status": "DRAFT",
   "version": "0.1.0"
 }
