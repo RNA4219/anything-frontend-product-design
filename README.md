@@ -19,6 +19,12 @@ Webプロダクトを、利用者が用事を終えるところまで設計・�
 | ダイアログを閉じるとキーボードの操作位置が分からなくなる | [C　UI部品の設計と実装](modules/ui-engineering-design-system/SKILL.md) |
 | 修正後に何を測ればリリースできるか決めたい | [D　検証とリリース判定](modules/design-qa-evaluation/SKILL.md) |
 
+### Art Direction と一緒に使う
+
+操作の流れと見た目を一緒に決めたいときは、このスキルと [Art Direction](https://github.com/RNA4219/anything-frontend-art-direction) の両方の `SKILL.md` をエージェントが読める状態にします。[受け渡しの記入例](references/handoff.md#art-direction)
+
+> Product Design と Art Direction を使って、予約変更の確認画面を改善してください。利用者は工作室の予約を12月8日14時から12月10日14時へ変更します。確定前に二つの日時を見比べられる配置と文字の強弱を決め、スマホでの確定後、ページを開き直して新しい日時を確認してください。
+
 ## 実サイトの測定記録を引く
 
 たとえば「スマートフォンでパスワードの再設定方法を探す」経路は、リポジトリのルートで次のコマンドを実行すると調べられます。
