@@ -1,0 +1,12 @@
+{
+  "decision": "NOT_EVALUATED",
+  "rationale": "型不正、欠けた必須値、重複所属は別の具体箇所を報告する。",
+  "status": "INVALID_INPUT",
+  "exit_code": 2,
+  "error_locations": [
+    "after.records[0].label",
+    "after.records[0].roles",
+    "after.records[1].concept_ids",
+    "after.entries[1].scope"
+  ]
+}

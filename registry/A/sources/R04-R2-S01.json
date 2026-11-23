@@ -1,0 +1,61 @@
+{
+  "id": "R04-R2-S01",
+  "url": "https://www.gov.uk/government/publications/govuk-topic-taxonomy-principles/govuk-taxonomy-principles",
+  "title": "GOV.UK Taxonomy principles",
+  "authors": [
+    "Government Digital Service"
+  ],
+  "source_type": "公式運用資料",
+  "version": "Published 2019-06-13; live page observed 2026-11-23; immutable upstream revision unavailable",
+  "doi": null,
+  "retrieved_at": "2026-11-23T08:28:44.566Z",
+  "sha256": "6cba94ab248ab8af6a34f5dc5ed0fa639e0ef051da71054f16d9cd72411982fe",
+  "hash_target": "選択抜粋Markdown全体のUTF-8 bytes（メタデータ含む）。原HTML/PDF全文または原サイトのrevision hashではない。",
+  "locator": [
+    {
+      "web": "section 2.1; Web L127",
+      "local_line": 13
+    },
+    {
+      "web": "section 3.5; Web L197",
+      "local_line": 16
+    }
+  ],
+  "web_ref": "turn526706532view0",
+  "verified_claims": [
+    "S01-F1",
+    "S01-F2",
+    "S01-F3",
+    "S01-F4"
+  ],
+  "limits": [
+    "全文未保存。短い抜粋のみ。変更可能な公式ページでimmutable revisionは未取得。",
+    "製品/組織の運用記述であり一般的なユーザー成果の実験ではない。"
+  ],
+  "source_edges": [
+    {
+      "from": "R04-R2-S01",
+      "to": "AUX-REQUESTS",
+      "relation": "body_link_with_redirect",
+      "source_locator": "Web turn295127420view0 L169, link 36",
+      "action": "web.click(ref_id=turn295127420view0,id=36)",
+      "requested_url": "https://www.gov.uk/guidance/contact-the-government-digital-service/request-a-thing",
+      "target_url": "https://guidance.publishing.service.gov.uk/accounts-support/make-content-requests/",
+      "target_locator": "turn727026394view1 L14–15",
+      "verified": true,
+      "limit": "探索時の転送を観測しただけで、全旧入口の意味が保存される証拠にしない。"
+    }
+  ],
+  "acquisition": {
+    "script": "fetch.py",
+    "script_result": "FAIL_DNS",
+    "fallback": "standard Web open/click of public original; selected excerpts",
+    "raw_html_or_pdf_saved": false,
+    "proxy_used": false,
+    "login_performed": false
+  },
+  "novel_against_known_sources": true,
+  "quoted_word_count": 22,
+  "source_id": "R04-R2-S01",
+  "publication": "Original metadata and bounded paraphrases; third-party raw excerpts are private and not redistributed."
+}

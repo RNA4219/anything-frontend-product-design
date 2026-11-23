@@ -1,0 +1,48 @@
+{
+  "decision": "NOT_EVALUATED",
+  "rationale": "集合の順序変更は差分にしない。安定ID・値の一致を検査するだけで品質判断をしない。",
+  "status": "COMPARED",
+  "exit_code": 0,
+  "differences": {
+    "concepts": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "records": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "entries": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    }
+  },
+  "counts": {
+    "concepts": {
+      "before": 2,
+      "after": 2
+    },
+    "records": {
+      "before": 2,
+      "after": 2
+    },
+    "entries": {
+      "before": 2,
+      "after": 2
+    }
+  },
+  "input_warnings": [],
+  "references_not_in_snapshot": [],
+  "unexamined_fields": [],
+  "unavailable_checks": [
+    "source_truth",
+    "whole_inventory_completeness",
+    "semantic_equivalence",
+    "change_authorization",
+    "runtime_findability",
+    "human_effectiveness"
+  ]
+}

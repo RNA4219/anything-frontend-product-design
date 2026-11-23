@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-23T09:34:41.013049+00:00",
+  "integration_base": "8b4d23426ffb71af82e924803f32ca59d80f3662",
+  "module": {
+    "command": "python -m unittest discover -s modules/product-information-architecture/tests -v",
+    "status": "PASS",
+    "methods": 70,
+    "log": "tests-after-integration.txt",
+    "log_sha256": "6f9d655e983d722ca5aa7e0388bf7bd5ded0872f8a45317e2efd21fa260f6996"
+  },
+  "shared": {
+    "command": "python -m unittest discover -s tests -v",
+    "status": "NOT_PASS",
+    "completed_passing_methods": 35,
+    "setup_errors": 1,
+    "blocked_class": "BookingChangeBrowserTests",
+    "cause": "Playwright Chromium headless shell executable unavailable",
+    "browser_behavior_evaluated": false,
+    "log": "shared-tests-after-integration.txt",
+    "log_sha256": "f446d8e1e30511413dea2f43a243796edf9309c8f8d37b547e53eb9b2aa26217"
+  },
+  "decision": "Keep follow-up PR draft. Module contract tests pass; full integrated browser gate is unresolved.",
+  "unmodified_upstream_files": [
+    "modules/product-information-architecture/agents/openai.yaml",
+    "modules/product-information-architecture/examples/booking_choice.py",
+    "modules/product-information-architecture/references/design-decisions.md"
+  ]
+}

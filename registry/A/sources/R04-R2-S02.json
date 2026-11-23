@@ -1,0 +1,73 @@
+{
+  "id": "R04-R2-S02",
+  "url": "https://learn.microsoft.com/en-us/sharepoint/managed-metadata",
+  "title": "Introduction to managed metadata",
+  "authors": [
+    "Microsoft"
+  ],
+  "source_type": "公式運用資料",
+  "version": "Last updated 2026-06-25; live page observed 2026-11-23; immutable upstream revision unavailable",
+  "doi": null,
+  "retrieved_at": "2026-11-23T08:28:44.566Z",
+  "sha256": "d84b1be6024ceb038091f364ebeb5024ce831efd2de0d23fba837f6f1d023925",
+  "hash_target": "選択抜粋Markdown全体のUTF-8 bytes（メタデータ含む）。原HTML/PDF全文または原サイトのrevision hashではない。",
+  "locator": [
+    {
+      "web": "Terms; Web L61",
+      "local_line": 13
+    },
+    {
+      "web": "Term Set; Web L55",
+      "local_line": 16
+    },
+    {
+      "web": "Metadata scenarios; Web L99",
+      "local_line": 19
+    }
+  ],
+  "web_ref": "turn526706532view1",
+  "verified_claims": [
+    "S02-F1",
+    "S02-F2",
+    "S02-F3"
+  ],
+  "limits": [
+    "全文未保存。短い抜粋のみ。変更可能な公式ページでimmutable revisionは未取得。",
+    "製品/組織の運用記述であり一般的なユーザー成果の実験ではない。"
+  ],
+  "source_edges": [
+    {
+      "from": "R04-R2-S02",
+      "to": "R04-R2-S03",
+      "relation": "body_link",
+      "source_locator": "Web turn295127420view1 L68, link 6",
+      "action": "web.click(ref_id=turn295127420view1,id=6)",
+      "target_locator": "turn227876713view0 L67–120",
+      "verified": true,
+      "limit": "本文リンクを実際に開いた。対象は公開手順で実tenantの操作ではない。"
+    },
+    {
+      "from": "R04-R2-S02",
+      "to": "AUX-GROUP",
+      "relation": "body_link",
+      "source_locator": "Web turn295127420view1 L72, link 7",
+      "action": "web.click(ref_id=turn295127420view1,id=7)",
+      "target_url": "https://learn.microsoft.com/en-us/sharepoint/set-up-new-group-for-term-sets",
+      "target_locator": "turn727026394view0 L31–48",
+      "verified": true,
+      "limit": "探索橋渡しのみ。選定3資料の一つに数えず、独立した新規根拠creditを与えない。"
+    }
+  ],
+  "acquisition": {
+    "script": "fetch.py",
+    "script_result": "FAIL_DNS",
+    "fallback": "standard Web open/click of public original; selected excerpts",
+    "raw_html_or_pdf_saved": false,
+    "proxy_used": false,
+    "login_performed": false
+  },
+  "novel_against_known_sources": true,
+  "quoted_word_count": 25,
+  "source_id": "R04-R2-S02",
+  "publication": "Original metadata and bounded paraphrases; third-party raw excerpts are private and not redistributed."
+}

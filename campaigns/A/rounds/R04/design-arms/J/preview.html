@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>設備カタログ — 修正後の情報構造の静的サンプル</title>
+</head>
+<body data-source-revision="inventory-r17" data-visual-intent-id="equipment-admin-existing">
+<header>
+  <h1>設備カタログ</h1>
+  <p><strong>修正後の情報構造の静的サンプルです。</strong>
+  96件のうち13件の正本を抜粋し、同じ設備が複数のビューに現れる例を示します。完全移行や全96件の表示実装を表していません。</p>
+  <p>入力：source-inventory.json（inventory-r17）。設計条件：requirements.json（版番号なし、current_source_revision=inventory-r17）。
+  標準HTMLを使用しています。実描画・実操作・認可は未検証です。</p>
+  <nav aria-label="静的サンプルの各ビュー">
+    <ul>
+      <li><a href="#catalog">staffの設備カタログ例</a></li>
+      <li><a href="#view-measure">旧測定入口からの着地例（測定）</a></li>
+      <li><a href="#view-heat">加熱入口からの着地例</a></li>
+      <li><a href="#manager-example">inventory_managerの材質確認例</a></li>
+      <li><a href="#entry-map">入口と正本の対応</a></li>
+    </ul>
+  </nav>
+  <p>上のリンクはこのファイル内の見本を参照します。既存URLへの転送、フィルタ動作、role切替は実装していません。</p>
+</header>
+<main>
+  <section id="catalog" aria-labelledby="catalog-title">
+    <h2 id="catalog-title">staffの設備カタログ例</h2>
+    <p>対象role：staff ／ 対象scope：all-sites ／ 用途・材質・保全：条件なし。</p>
+    <p>入力の全件照合ではstaff対象87件。この表はそのうち10件の抜粋です。認可処理の実装結果ではありません。</p>
+    
+    <fieldset disabled aria-describedby="catalog-fixed">
+      <legend>固定した条件の見本</legend>
+      <p><label for="catalog-task">用途</label>
+      <select id="catalog-task"><option value="">用途条件なし</option><option value="task.measure">測定（task.measure）</option><option value="task.cut">切断（task.cut）</option><option value="task.heat">加熱（task.heat）</option><option value="task.inspect">検査（task.inspect）</option></select></p>
+      <p><label for="catalog-material">材質</label>
+      <select id="catalog-material"><option value="" selected>材質条件なし（未確認も含む）</option><option value="material.metal">金属（material.metal）</option><option value="material.wood">木材（material.wood）</option><option value="material.unspecified">材質未確認（material.unspecified）</option></select></p>
+      <p><label for="catalog-maintenance">保全の検査状態（用途と別軸）</label>
+      <select id="catalog-maintenance"><option value="" selected>保全条件なし</option>
+      <option value="maintenance.inspect">検査の登録あり（maintenance.inspect）</option></select></p>
+    </fieldset>
+    <p id="catalog-fixed">条件欄は固定見本です。絞込処理は実装していません。材質未確認は、木材・金属の確定条件には一致しません。</p>
+    
+    <table>
+      <caption>staff対象87件中の10件を抜粋。設備IDは全ビューで同じ正本を示します。</caption>
+      <thead><tr><th scope="col">設備ID</th><th scope="col">名称</th><th scope="col">用途</th>
+      <th scope="col">材質</th><th scope="col">保全の検査状態</th><th scope="col">site（scope）</th>
+      <th scope="col">元のroles（照合用）</th></tr></thead>
+      <tbody><tr id="catalog-item-001" data-record-id="ITEM-001" data-record-label="設備 001" data-scope="site-A" data-roles="staff|inventory_manager" data-concept-ids="task.measure|material.wood" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-001</th><td>設備 001</td><td>測定（task.measure）</td><td>木材（material.wood）</td><td>登録なし（状態の判定なし）</td><td>site-A</td><td>staff / inventory_manager</td></tr>
+<tr id="catalog-item-002" data-record-id="ITEM-002" data-record-label="設備 002" data-scope="site-B" data-roles="staff|inventory_manager" data-concept-ids="task.cut|material.metal" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-002</th><td>設備 002</td><td>切断（task.cut）</td><td>金属（material.metal）</td><td>登録なし（状態の判定なし）</td><td>site-B</td><td>staff / inventory_manager</td></tr>
+<tr id="catalog-item-003" data-record-id="ITEM-003" data-record-label="設備 003" data-scope="site-A" data-roles="staff|inventory_manager" data-concept-ids="task.heat|material.wood" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-003</th><td>設備 003</td><td>加熱（task.heat）</td><td>木材（material.wood）</td><td>登録なし（状態の判定なし）</td><td>site-A</td><td>staff / inventory_manager</td></tr>
+<tr id="catalog-item-004" data-record-id="ITEM-004" data-record-label="設備 004" data-scope="site-B" data-roles="staff|inventory_manager" data-concept-ids="task.inspect|material.metal" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-004</th><td>設備 004</td><td>検査（task.inspect）</td><td>金属（material.metal）</td><td>登録なし（状態の判定なし）</td><td>site-B</td><td>staff / inventory_manager</td></tr>
+<tr id="catalog-item-008" data-record-id="ITEM-008" data-record-label="設備 008" data-scope="site-B" data-roles="staff|inventory_manager" data-concept-ids="task.inspect|material.metal|maintenance.inspect" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-008</th><td>設備 008</td><td>検査（task.inspect）</td><td>金属（material.metal）</td><td>検査（maintenance.inspect）</td><td>site-B</td><td>staff / inventory_manager</td></tr>
+<tr id="catalog-item-015" data-record-id="ITEM-015" data-record-label="設備 015" data-scope="site-A" data-roles="staff|inventory_manager" data-concept-ids="task.heat|material.unspecified" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-015</th><td>設備 015</td><td>加熱（task.heat）</td><td>材質未確認（material.unspecified）／要照会</td><td>登録なし（状態の判定なし）</td><td>site-A</td><td>staff / inventory_manager</td></tr>
+<tr id="catalog-item-045" data-record-id="ITEM-045" data-record-label="設備 045" data-scope="site-A" data-roles="staff|inventory_manager" data-concept-ids="task.measure|material.unspecified" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-045</th><td>設備 045</td><td>測定（task.measure）</td><td>材質未確認（material.unspecified）／要照会</td><td>登録なし（状態の判定なし）</td><td>site-A</td><td>staff / inventory_manager</td></tr>
+<tr id="catalog-item-073" data-record-id="ITEM-073" data-record-label="設備 073" data-scope="site-A" data-roles="staff|inventory_manager" data-concept-ids="task.measure|material.wood" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-073</th><td>設備 073</td><td>測定（task.measure）</td><td>木材（material.wood）</td><td>登録なし（状態の判定なし）</td><td>site-A</td><td>staff / inventory_manager</td></tr>
+<tr id="catalog-item-075" data-record-id="ITEM-075" data-record-label="設備 075" data-scope="site-A" data-roles="staff|inventory_manager" data-concept-ids="task.heat|material.unspecified" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-075</th><td>設備 075</td><td>加熱（task.heat）</td><td>材質未確認（material.unspecified）／要照会</td><td>登録なし（状態の判定なし）</td><td>site-A</td><td>staff / inventory_manager</td></tr>
+<tr id="catalog-item-088" data-record-id="ITEM-088" data-record-label="設備 088" data-scope="site-B" data-roles="staff|inventory_manager" data-concept-ids="task.inspect|material.metal|maintenance.inspect" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-088</th><td>設備 088</td><td>検査（task.inspect）</td><td>金属（material.metal）</td><td>検査（maintenance.inspect）</td><td>site-B</td><td>staff / inventory_manager</td></tr></tbody>
+    </table>
+    <p>用途の「検査」と保全の「検査」は別の判断軸です。保全欄の登録なしは、検査済み・未検査・正常を意味しません。</p>
+  </section>
+  <hr>
+  <section id="view-measure" aria-labelledby="measure-title" data-entry-id="entry.measure"
+           data-path="/tools/measurement" data-role="staff" data-scope="all-sites" data-concept-ids="task.measure">
+    <h2 id="measure-title">測定 — 旧入口からの着地例</h2>
+    <dl>
+      <dt>入口</dt><dd>entry.measure ／ /tools/measurement</dd>
+      <dt>保持する対象条件</dt><dd>role=staff ／ scope=all-sites ／ 用途=測定（task.measure）</dd>
+      <dt>材質条件</dt><dd>条件なし。材質未確認のITEM-045も含みます。</dd>
+    </dl>
+    <p><strong>同じ測定24件への用途条件を保持します。</strong>この表は3件の抜粋であり、24件すべての表示ではありません。</p>
+    
+    <fieldset disabled aria-describedby="measure-fixed">
+      <legend>固定した条件の見本</legend>
+      <p><label for="measure-task">用途</label>
+      <select id="measure-task"><option value="">用途条件なし</option><option value="task.measure" selected>測定（task.measure）</option><option value="task.cut">切断（task.cut）</option><option value="task.heat">加熱（task.heat）</option><option value="task.inspect">検査（task.inspect）</option></select></p>
+      <p><label for="measure-material">材質</label>
+      <select id="measure-material"><option value="" selected>材質条件なし（未確認も含む）</option><option value="material.metal">金属（material.metal）</option><option value="material.wood">木材（material.wood）</option><option value="material.unspecified">材質未確認（material.unspecified）</option></select></p>
+      <p><label for="measure-maintenance">保全の検査状態（用途と別軸）</label>
+      <select id="measure-maintenance"><option value="" selected>保全条件なし</option>
+      <option value="maintenance.inspect">検査の登録あり（maintenance.inspect）</option></select></p>
+    </fieldset>
+    <p id="measure-fixed">条件欄は固定見本です。絞込処理は実装していません。材質未確認は、木材・金属の確定条件には一致しません。</p>
+    
+    <table>
+      <caption>測定24件中の3件。ITEM-073はinventory-r17の正本IDを維持します。</caption>
+      <thead><tr><th scope="col">設備ID</th><th scope="col">名称</th><th scope="col">用途</th>
+      <th scope="col">材質</th><th scope="col">保全の検査状態</th><th scope="col">site（scope）</th>
+      <th scope="col">元のroles（照合用）</th></tr></thead>
+      <tbody><tr id="measure-item-001" data-record-id="ITEM-001" data-record-label="設備 001" data-scope="site-A" data-roles="staff|inventory_manager" data-concept-ids="task.measure|material.wood" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-001</th><td>設備 001</td><td>測定（task.measure）</td><td>木材（material.wood）</td><td>登録なし（状態の判定なし）</td><td>site-A</td><td>staff / inventory_manager</td></tr>
+<tr id="measure-item-045" data-record-id="ITEM-045" data-record-label="設備 045" data-scope="site-A" data-roles="staff|inventory_manager" data-concept-ids="task.measure|material.unspecified" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-045</th><td>設備 045</td><td>測定（task.measure）</td><td>材質未確認（material.unspecified）／要照会</td><td>登録なし（状態の判定なし）</td><td>site-A</td><td>staff / inventory_manager</td></tr>
+<tr id="measure-item-073" data-record-id="ITEM-073" data-record-label="設備 073" data-scope="site-A" data-roles="staff|inventory_manager" data-concept-ids="task.measure|material.wood" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-073</th><td>設備 073</td><td>測定（task.measure）</td><td>木材（material.wood）</td><td>登録なし（状態の判定なし）</td><td>site-A</td><td>staff / inventory_manager</td></tr></tbody>
+    </table>
+    <p>ITEM-073を別IDのITEM-X73へ置き換えません。材質未確認の設備を木材の候補として確定しません。</p>
+  </section>
+  <hr>
+  <section id="view-heat" aria-labelledby="heat-title" data-entry-id="entry.heat"
+           data-path="/tools/heat" data-role="staff" data-scope="all-sites" data-concept-ids="task.heat">
+    <h2 id="heat-title">加熱 — 入口からの着地例</h2>
+    <dl>
+      <dt>入口</dt><dd>entry.heat ／ /tools/heat</dd>
+      <dt>保持する対象条件</dt><dd>role=staff ／ scope=all-sites ／ 用途=加熱（task.heat）</dd>
+      <dt>名称の変更</dt><dd>「温熱処理」から「加熱」。概念ID・所属設備24件・入口条件は同じです。</dd>
+    </dl>
+    
+    <fieldset disabled aria-describedby="heat-fixed">
+      <legend>固定した条件の見本</legend>
+      <p><label for="heat-task">用途</label>
+      <select id="heat-task"><option value="">用途条件なし</option><option value="task.measure">測定（task.measure）</option><option value="task.cut">切断（task.cut）</option><option value="task.heat" selected>加熱（task.heat）</option><option value="task.inspect">検査（task.inspect）</option></select></p>
+      <p><label for="heat-material">材質</label>
+      <select id="heat-material"><option value="" selected>材質条件なし（未確認も含む）</option><option value="material.metal">金属（material.metal）</option><option value="material.wood">木材（material.wood）</option><option value="material.unspecified">材質未確認（material.unspecified）</option></select></p>
+      <p><label for="heat-maintenance">保全の検査状態（用途と別軸）</label>
+      <select id="heat-maintenance"><option value="" selected>保全条件なし</option>
+      <option value="maintenance.inspect">検査の登録あり（maintenance.inspect）</option></select></p>
+    </fieldset>
+    <p id="heat-fixed">条件欄は固定見本です。絞込処理は実装していません。材質未確認は、木材・金属の確定条件には一致しません。</p>
+    
+    <table>
+      <caption>加熱24件中の3件。材質未確認のITEM-015/075も元のまま保持します。</caption>
+      <thead><tr><th scope="col">設備ID</th><th scope="col">名称</th><th scope="col">用途</th>
+      <th scope="col">材質</th><th scope="col">保全の検査状態</th><th scope="col">site（scope）</th>
+      <th scope="col">元のroles（照合用）</th></tr></thead>
+      <tbody><tr id="heat-item-003" data-record-id="ITEM-003" data-record-label="設備 003" data-scope="site-A" data-roles="staff|inventory_manager" data-concept-ids="task.heat|material.wood" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-003</th><td>設備 003</td><td>加熱（task.heat）</td><td>木材（material.wood）</td><td>登録なし（状態の判定なし）</td><td>site-A</td><td>staff / inventory_manager</td></tr>
+<tr id="heat-item-015" data-record-id="ITEM-015" data-record-label="設備 015" data-scope="site-A" data-roles="staff|inventory_manager" data-concept-ids="task.heat|material.unspecified" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-015</th><td>設備 015</td><td>加熱（task.heat）</td><td>材質未確認（material.unspecified）／要照会</td><td>登録なし（状態の判定なし）</td><td>site-A</td><td>staff / inventory_manager</td></tr>
+<tr id="heat-item-075" data-record-id="ITEM-075" data-record-label="設備 075" data-scope="site-A" data-roles="staff|inventory_manager" data-concept-ids="task.heat|material.unspecified" data-view-role="staff" data-view-scope="all-sites"><th scope="row">ITEM-075</th><td>設備 075</td><td>加熱（task.heat）</td><td>材質未確認（material.unspecified）／要照会</td><td>登録なし（状態の判定なし）</td><td>site-A</td><td>staff / inventory_manager</td></tr></tbody>
+    </table>
+  </section>
+  <hr>
+  <section id="manager-example" aria-labelledby="manager-title">
+    <h2 id="manager-title">inventory_managerの材質確認例</h2>
+    <p>この節は別roleの静的表示例です。staff画面への追加表示や実認可を意味しません。
+    入力にmanager向けの既存URLは記載されていないため、実装済みの入口も示していません。</p>
+    <p>対象role：inventory_manager ／ 対象scope：all-sites。全96件のうち材質未確認は6件です。
+    この表はstaffのrolesを持たない未確認3件を抜粋しています。</p>
+    <table>
+      <caption>managerのみの未確認3件。ITEM-090にstaffを追加しません。</caption>
+      <thead><tr><th scope="col">設備ID</th><th scope="col">名称</th><th scope="col">用途</th>
+      <th scope="col">材質</th><th scope="col">保全の検査状態</th><th scope="col">site（scope）</th>
+      <th scope="col">元のroles（照合用）</th></tr></thead>
+      <tbody><tr id="manager-item-030" data-record-id="ITEM-030" data-record-label="設備 030" data-scope="site-B" data-roles="inventory_manager" data-concept-ids="task.cut|material.unspecified" data-view-role="inventory_manager" data-view-scope="all-sites"><th scope="row">ITEM-030</th><td>設備 030</td><td>切断（task.cut）</td><td>材質未確認（material.unspecified）／要照会</td><td>登録なし（状態の判定なし）</td><td>site-B</td><td>inventory_manager</td></tr>
+<tr id="manager-item-060" data-record-id="ITEM-060" data-record-label="設備 060" data-scope="site-B" data-roles="inventory_manager" data-concept-ids="task.inspect|material.unspecified" data-view-role="inventory_manager" data-view-scope="all-sites"><th scope="row">ITEM-060</th><td>設備 060</td><td>検査（task.inspect）</td><td>材質未確認（material.unspecified）／要照会</td><td>登録なし（状態の判定なし）</td><td>site-B</td><td>inventory_manager</td></tr>
+<tr id="manager-item-090" data-record-id="ITEM-090" data-record-label="設備 090" data-scope="site-B" data-roles="inventory_manager" data-concept-ids="task.cut|material.unspecified" data-view-role="inventory_manager" data-view-scope="all-sites"><th scope="row">ITEM-090</th><td>設備 090</td><td>切断（task.cut）</td><td>材質未確認（material.unspecified）／要照会</td><td>登録なし（状態の判定なし）</td><td>site-B</td><td>inventory_manager</td></tr></tbody>
+    </table>
+    <h3>材質の照会対象</h3>
+    <p>ITEM-015、ITEM-030、ITEM-045、ITEM-060、ITEM-075、ITEM-090。
+    確認先の提案はinventory_manager／設備データ管理担当です。実担当と回答は未確定です。</p>
+    <p>各設備の根拠を確認するまでmaterial.unspecifiedを保持します。保留は6件の材質確定に限り、
+    ほかの確定済み90件や用途による探索は継続します。</p>
+  </section>
+  <hr>
+  <section id="entry-map" aria-labelledby="entry-map-title">
+    <h2 id="entry-map-title">入口と正本の対応</h2>
+    <table>
+      <caption>設計上の対応。HTTP転送や実画面での確認結果ではありません。</caption>
+      <thead><tr><th scope="col">入口ID / 既存path</th><th scope="col">role / scope</th>
+      <th scope="col">着地の用途条件</th><th scope="col">同じ正本集合</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">entry.measure / /tools/measurement</th><td>staff / all-sites</td>
+          <td>測定（task.measure）</td><td>inventory-r17の測定24件</td></tr>
+        <tr><th scope="row">entry.heat / /tools/heat</th><td>staff / all-sites</td>
+          <td>加熱（task.heat）</td><td>inventory-r17の加熱24件</td></tr>
+      </tbody>
+    </table>
+    <p>固定入力の論理照合で、測定入口はsource24件、提案88件、修正24件です。
+    総合一覧が開くことだけでは旧入口の用途条件を満たしません。</p>
+    <p>ITEM-088はsite-B、ITEM-090はinventory_managerのみ、ITEM-073は同じIDを維持します。
+    legacy.unusedは現母集団の設備・入口の所属が0で、整理が承認されているため見本の選択肢には置きません。</p>
+  </section>
+  <section id="verification-limit" aria-labelledby="verification-title">
+    <h2 id="verification-title">確認した範囲</h2>
+    <p>入力全件と設計モデルのID・所属・site・roles・入口条件を照合し、HTMLソースのサンプル値と参照を解析しました。
+    実移行、認可、フィルタ操作、ブラウザ描画、利用者の成功・時間・誤りは未確認です。</p>
+    <p>方法：SKILL.md、information-architecture.md、navigation-evidence.md、decision-information.md、
+    disclosure-and-verification.md（いずれも提供版・版番号なし）の該当手順。採否は固定入力とrequirements.jsonを根拠にしています。</p>
+  </section>
+</main>
+<footer>
+  <p>出力契約：output-contract.json（版番号なし）。差分と採否はreview.json、全件の再構成規則と照合手順はdesign.mdに記録しています。</p>
+</footer>
+</body>
+</html>

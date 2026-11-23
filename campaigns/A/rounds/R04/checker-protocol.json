@@ -1,0 +1,35 @@
+{
+  "round": "R04",
+  "registered_at": "2026-11-23T08:41:57.297602+00:00",
+  "candidate": "Optional dependency-free inventory comparison helper; does not replace the plan 1.1 contract",
+  "purpose": "Expose bounded source-to-proposal differences so a reviewer can decide their meaning and authorization",
+  "inputs": "Normalized snapshots with nonempty revision/case_id, concepts/records/entries arrays and unique IDs; proposed snapshot states basis_revision",
+  "comparison_layers": [
+    "Concept IDs, labels, classification axis and optional hierarchy/scope",
+    "Record IDs, display labels, assigned concepts, declared roles and scope",
+    "Entry IDs, path, role, scope and assigned concept filters"
+  ],
+  "output_semantics": {
+    "valid_pair": "COMPARED, decision NOT_EVALUATED; all differences are review evidence, not automatic defects or approval",
+    "malformed_pair": "INVALID_INPUT with concrete location; no traceback or fabricated comparison",
+    "unknown_fields": "Explicit list of fields the helper did not examine",
+    "limits": [
+      "Snapshot truth and completeness are not established",
+      "Concept equivalence, approved changes and user comprehension remain manual",
+      "Actual authorization, redirects, search, index behavior and migration execution are untested"
+    ]
+  },
+  "frozen_mechanical_cases": [
+    "Equal source/proposal counts with missing ITEM-073 and added ITEM-X73",
+    "Changed membership edges while total and per-category counts stay identical",
+    "Changed scope ITEM-088 and expanded roles ITEM-090",
+    "Unknown-material assignments changed on six specified source IDs",
+    "Order-only changes to records and set-valued memberships do not create semantic deltas",
+    "Valid rename and unused-concept retirement remain observable changes without automatic failure",
+    "Duplicate IDs and invalid field types are rejected before dictionary indexing",
+    "Wrong basis revision is exposed even when records match",
+    "Ignored fields are reported explicitly",
+    "At least 1200 synthetic records with a single compensated ID loss are compared completely in this fixed population"
+  ],
+  "no_claim": "This is bounded data comparison correctness, not real large-service migration or human usability."
+}

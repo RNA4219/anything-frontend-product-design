@@ -1,0 +1,1258 @@
+{
+  "status": "COMPARED",
+  "decision": "NOT_EVALUATED",
+  "basis": {
+    "before_revision": "inventory-r17",
+    "after_revision": "inventory-r18-proposed",
+    "proposed_basis_revision": "inventory-r17",
+    "basis_matches": true
+  },
+  "counts": {
+    "concepts": {
+      "before": 9,
+      "after": 5
+    },
+    "records": {
+      "before": 96,
+      "after": 96
+    },
+    "entries": {
+      "before": 2,
+      "after": 2
+    }
+  },
+  "differences": {
+    "concepts": {
+      "removed_ids": [
+        "legacy.unused",
+        "maintenance.inspect",
+        "material.unspecified",
+        "task.cut",
+        "task.measure"
+      ],
+      "added_ids": [
+        "task.work"
+      ],
+      "changed_fields": [
+        {
+          "id": "task.heat",
+          "field": "label",
+          "before": {
+            "present": true,
+            "value": "温熱処理"
+          },
+          "after": {
+            "present": true,
+            "value": "加熱"
+          }
+        }
+      ]
+    },
+    "records": {
+      "removed_ids": [
+        "ITEM-073"
+      ],
+      "added_ids": [
+        "ITEM-X73"
+      ],
+      "changed_fields": [
+        {
+          "id": "ITEM-001",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-002",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-005",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-006",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-008",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "maintenance.inspect",
+              "material.metal",
+              "task.inspect"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.inspect"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-009",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-010",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-013",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-014",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-015",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.unspecified",
+              "task.heat"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.heat"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-016",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "maintenance.inspect",
+              "material.metal",
+              "task.inspect"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.inspect"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-017",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-018",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-021",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-022",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-024",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "maintenance.inspect",
+              "material.metal",
+              "task.inspect"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.inspect"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-025",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-026",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-029",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-030",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.unspecified",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-032",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "maintenance.inspect",
+              "material.metal",
+              "task.inspect"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.inspect"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-033",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-034",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-037",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-038",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-040",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "maintenance.inspect",
+              "material.metal",
+              "task.inspect"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.inspect"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-041",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-042",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-045",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.unspecified",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-046",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-048",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "maintenance.inspect",
+              "material.metal",
+              "task.inspect"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.inspect"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-049",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-050",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-053",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-054",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-056",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "maintenance.inspect",
+              "material.metal",
+              "task.inspect"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.inspect"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-057",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-058",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-060",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.unspecified",
+              "task.inspect"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.inspect"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-061",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-062",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-064",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "maintenance.inspect",
+              "material.metal",
+              "task.inspect"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.inspect"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-065",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-066",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-069",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-070",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-072",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "maintenance.inspect",
+              "material.metal",
+              "task.inspect"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.inspect"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-074",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-075",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.unspecified",
+              "task.heat"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.heat"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-077",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-078",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-080",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "maintenance.inspect",
+              "material.metal",
+              "task.inspect"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.inspect"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-081",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-082",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-085",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-086",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-088",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "maintenance.inspect",
+              "material.metal",
+              "task.inspect"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.inspect"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-088",
+          "field": "scope",
+          "before": {
+            "present": true,
+            "value": "site-B"
+          },
+          "after": {
+            "present": true,
+            "value": "site-A"
+          }
+        },
+        {
+          "id": "ITEM-089",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-090",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.unspecified",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-090",
+          "field": "roles",
+          "before": {
+            "present": true,
+            "value": [
+              "inventory_manager"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "inventory_manager",
+              "staff"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-093",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.wood",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-094",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.cut"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.work"
+            ]
+          }
+        },
+        {
+          "id": "ITEM-096",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "maintenance.inspect",
+              "material.metal",
+              "task.inspect"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "material.metal",
+              "task.inspect"
+            ]
+          }
+        }
+      ]
+    },
+    "entries": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": [
+        {
+          "id": "entry.measure",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "task.measure"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": []
+          }
+        }
+      ]
+    }
+  },
+  "input_warnings": [],
+  "references_not_in_snapshot": [],
+  "unexamined_fields": [
+    "after.changes"
+  ],
+  "checks_available": {
+    "declared_field_comparison": true,
+    "source_truth": false,
+    "whole_inventory_completeness": false,
+    "semantic_equivalence": false,
+    "change_authorization": false,
+    "runtime_findability": false,
+    "human_effectiveness": false
+  },
+  "meaning": "Differences require interpretation against intended changes and scope. Equal counts or no examined-field differences do not establish preservation, authorization or usability.",
+  "input_sha256": {
+    "before": "a4547ca54e186e677c550dcab6ca3e734c2025e633d4d8bed319b358413e15ce",
+    "after": "d0ac296c9b12587be6ed475605f00fe94a0fec091e4f2b7ac9b9ad7d727dcbba"
+  }
+}

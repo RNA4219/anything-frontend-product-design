@@ -1,0 +1,103 @@
+{
+  "decision": "NOT_EVALUATED",
+  "rationale": "同じID・総数でもroleとscopeの変化を別々に返す。実際の認可や到達性は未検査。",
+  "status": "COMPARED",
+  "exit_code": 0,
+  "differences": {
+    "concepts": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "records": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": [
+        {
+          "id": "H-fern",
+          "field": "roles",
+          "before": {
+            "present": true,
+            "value": [
+              "botanist",
+              "curator"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "visitor"
+            ]
+          }
+        },
+        {
+          "id": "H-fern",
+          "field": "scope",
+          "before": {
+            "present": true,
+            "value": "north"
+          },
+          "after": {
+            "present": true,
+            "value": "south"
+          }
+        }
+      ]
+    },
+    "entries": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": [
+        {
+          "id": "E-botanist",
+          "field": "role",
+          "before": {
+            "present": true,
+            "value": "botanist"
+          },
+          "after": {
+            "present": true,
+            "value": "visitor"
+          }
+        },
+        {
+          "id": "E-botanist",
+          "field": "scope",
+          "before": {
+            "present": true,
+            "value": "north"
+          },
+          "after": {
+            "present": true,
+            "value": "south"
+          }
+        }
+      ]
+    }
+  },
+  "counts": {
+    "concepts": {
+      "before": 2,
+      "after": 2
+    },
+    "records": {
+      "before": 2,
+      "after": 2
+    },
+    "entries": {
+      "before": 2,
+      "after": 2
+    }
+  },
+  "input_warnings": [],
+  "references_not_in_snapshot": [],
+  "unexamined_fields": [],
+  "unavailable_checks": [
+    "source_truth",
+    "whole_inventory_completeness",
+    "semantic_equivalence",
+    "change_authorization",
+    "runtime_findability",
+    "human_effectiveness"
+  ]
+}

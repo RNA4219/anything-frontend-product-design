@@ -1,0 +1,34 @@
+{
+  "round": "R04",
+  "review_complete": true,
+  "recommendation": "ACCEPT_WITHIN_REVIEWED_SCOPE",
+  "meaning": "Conditional R04 instructions and corrected comparison helper are acceptable in the bounded source/structural scope. This is not formal overall quality PASS, migration approval, user effectiveness, improvement, or equivalence evidence.",
+  "original_candidate_recommendation": "REVISE",
+  "initial_helper_sha256": "2e5cc45b1a60c6760ca2ecdb5cf8b3dc6c8ef45bdc4ea5b980507fcb4cdbe7e4",
+  "accepted_corrected_helper_sha256": "dbb31c82e2ffe6a2ec13e9f144e3ee80b93f07ca07d6592702fe42e6ce82e40b",
+  "independent_cases": {"pre_registered": 12, "matched": 12, "report": "initial-results-summary.json"},
+  "supplemental_initial_finding": {
+    "id": "R04-CR-001",
+    "origin": "Parent-suggested hypothesis, independently reproduced",
+    "variants_reproduced": 2,
+    "status_in_initial_candidate": "OPEN",
+    "report": "supplemental-initial/13_output_aliases_source/summary.json"
+  },
+  "correction": {"matched": 4, "total": 4, "status": "RESOLVED_IN_CORRECTED_HELPER", "report": "correction-check.json"},
+  "anonymous_evaluation": {"J": 6, "S": 6, "maximum": 6, "difference": 0, "hard_failures_J": [], "hard_failures_S": [], "report": "blind-evaluation.json"},
+  "source_review": {"primary_documents_checked": 6, "source_families": 4, "report": "source-verification.json", "scope": "Bounded original sections, historical NISO version with current status unverified, related W3C sources and SharePoint-specific operations distinguished."},
+  "public_repository_edited_by_reviewer": false,
+  "child_agents_spawned": 0,
+  "initial_evidence_retained": true,
+  "outstanding_blocking_findings_in_reviewed_scope": [],
+  "limitations": [
+    "Same-model independent thread, not objective human assessment.",
+    "One paired synthetic task and one trial per arm; zero score difference supports neither general improvement nor complete equivalence.",
+    "Anonymous assignment mapping was not opened, but method names may reveal assignment.",
+    "No browser rendering, actual UI operation, product migration, runtime authorization, index update, or participant outcome was measured.",
+    "Initial fixture coverage was authored after reading task/candidate/research summaries; researcher summaries contained proposed test descriptions. Parent executable tests, 96-task data, rubric/oracle, and generated proposals were not read before initial fixture execution.",
+    "Output-collision discovery belongs to the parent hypothesis; this review supplied independent reproduction and correction verification.",
+    "Initial experiment helper and corrected final helper remain distinct and separately hashed."
+  ],
+  "artifacts": ["findings.json", "review.md", "review-addendum.md", "source-verification.json", "fixtures-initial-manifest.json", "initial-results-summary.json", "correction-check.json", "blind-evaluation-manifest.json", "blind-static-audit.json", "blind-evaluation.json", "blind-evaluation.md"]
+}

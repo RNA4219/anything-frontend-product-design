@@ -1,9 +1,10 @@
 {
   "round": "R04",
-  "status": "DISCOVER",
+  "status": "COMPLETE",
   "issues": [
     "A-007",
-    "A-011"
+    "A-011",
+    "A-012"
   ],
   "question": "How can a taxonomy or navigation reorganization preserve object/capability identity, scoped findability and explicit unresolved mappings across a larger inventory, without treating a rename, broad/narrow mapping or equal item counts as semantic equivalence?",
   "planned_units": [
@@ -20,5 +21,15 @@
   "cost": {
     "actual_amount": null,
     "status": "unavailable"
-  }
+  },
+  "new_sources": 6,
+  "research_proposals": 5,
+  "extracted_revisions": 3,
+  "candidates_registered": [
+    "A-IU-005",
+    "A-IU-006",
+    "A-IU-007"
+  ],
+  "decision": "ACCEPT",
+  "completion": "decision.json"
 }

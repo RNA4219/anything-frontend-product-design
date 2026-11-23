@@ -1,0 +1,16 @@
+{
+  "case_id": "01_set_and_row_order",
+  "matched_expectations": true,
+  "exit_code": 0,
+  "mismatches": [],
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+    "--before",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/01_set_and_row_order/before.json",
+    "--after",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/01_set_and_row_order/after.json",
+    "--output",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/01_set_and_row_order/actual.json"
+  ]
+}

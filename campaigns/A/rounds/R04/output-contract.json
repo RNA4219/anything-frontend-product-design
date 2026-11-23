@@ -1,0 +1,21 @@
+{
+  "required_outputs": [
+    "review.json",
+    "design.md",
+    "preview.html"
+  ],
+  "review_shape": {
+    "case_id": "string",
+    "findings": "array of {id,category,affected_ids,severity,observation,basis,correction}",
+    "decisions": "array of {change_id,decision: keep|revise|hold,reason}",
+    "unresolved": "array of {id,affected_ids,owner,question,impact,blocking}",
+    "evidence": "array of {check,result,scope,not_checked}"
+  },
+  "rules": [
+    "全指摘に具体的な対象IDと根拠を記す。重大さは機能・情報の欠落や変更条件で説明する。",
+    "CH01–CH06すべてに採否を付ける。変更一覧外の不一致も確認する。",
+    "design.mdは改訂する分類・所属・入口、移行前照合と残件を実行可能な手順へまとめる。",
+    "preview.htmlは修正後の入口/フィルタ/対象の同一性が分かる静的サンプル。全96件の表示実装は不要だが、抜粋を完全移行と呼ばない。",
+    "解析コードの使用は自由。実行した検査と未実行の描画・操作を分ける。"
+  ]
+}

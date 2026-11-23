@@ -1,0 +1,297 @@
+{
+  "case_id": "R04-equipment-reclassification",
+  "findings": [
+    {
+      "id": "F01",
+      "category": "record_identity",
+      "affected_ids": [
+        "ITEM-073",
+        "ITEM-X73"
+      ],
+      "severity": "high",
+      "observation": "両snapshotは各96件だが、ITEM-073が欠落し、ITEM-X73が追加されている。共通IDは95件。似た名称や取込複製という表記は同一対象・承継の根拠にならず、CH01–CH06にも設備置換の宣言はない。",
+      "basis": "source-inventory.json（inventory-r17）のITEM-073とproposed-inventory.json（inventory-r18-proposed）のID集合差分。requirements.json（版番号なし、今回提供版）のmust_preserve[0]は設備の追加・削除・置換を認めていない。comparison.jsonのrecords差分。",
+      "correction": "修正案ではITEM-073をsourceのID・名称・scope・roles・concept_idsのまま保持し、ITEM-X73を正本集合に採用しない。ITEM-X73からの承継や自動併合を推定しない。本番の削除・統合操作は実行していない。"
+    },
+    {
+      "id": "F02",
+      "category": "classification",
+      "affected_ids": [
+        "task.measure",
+        "task.cut",
+        "task.work",
+        "ITEM-001",
+        "ITEM-002",
+        "ITEM-005",
+        "ITEM-006",
+        "ITEM-009",
+        "ITEM-010",
+        "ITEM-013",
+        "ITEM-014",
+        "ITEM-017",
+        "ITEM-018",
+        "ITEM-021",
+        "ITEM-022",
+        "ITEM-025",
+        "ITEM-026",
+        "ITEM-029",
+        "ITEM-030",
+        "ITEM-033",
+        "ITEM-034",
+        "ITEM-037",
+        "ITEM-038",
+        "ITEM-041",
+        "ITEM-042",
+        "ITEM-045",
+        "ITEM-046",
+        "ITEM-049",
+        "ITEM-050",
+        "ITEM-053",
+        "ITEM-054",
+        "ITEM-057",
+        "ITEM-058",
+        "ITEM-061",
+        "ITEM-062",
+        "ITEM-065",
+        "ITEM-066",
+        "ITEM-069",
+        "ITEM-070",
+        "ITEM-073",
+        "ITEM-074",
+        "ITEM-077",
+        "ITEM-078",
+        "ITEM-081",
+        "ITEM-082",
+        "ITEM-085",
+        "ITEM-086",
+        "ITEM-089",
+        "ITEM-090",
+        "ITEM-093",
+        "ITEM-094",
+        "ITEM-X73"
+      ],
+      "severity": "high",
+      "observation": "CH01は測定24件・切断24件の概念を削除し、作業用48件へ置換している。共通ID47件の用途付与が変わり、残る1件のID置換はF01の問題。上位概念へのmappingだけでは測定と切断を区別する情報が残らず、要求された用途絞込が成立しない。",
+      "basis": "requirements.json（今回提供版）must_preserve[1]の用途4区分。source-inventory.json（inventory-r17）のtask.measure/task.cutと各24件の所属、proposed-inventory.json（inventory-r18-proposed）のconcepts/records。CH01のbroaderという自己記述は所属全置換の承認ではない。",
+      "correction": "task.measureとtask.cutを別概念として保持し、全48件の用途をsourceのレコードIDから復元する。task.workは修正案の分類集合に採用しない。材質や連番から用途を推定して戻さない。"
+    },
+    {
+      "id": "F03",
+      "category": "classification",
+      "affected_ids": [
+        "maintenance.inspect",
+        "task.inspect",
+        "ITEM-008",
+        "ITEM-016",
+        "ITEM-024",
+        "ITEM-032",
+        "ITEM-040",
+        "ITEM-048",
+        "ITEM-056",
+        "ITEM-064",
+        "ITEM-072",
+        "ITEM-080",
+        "ITEM-088",
+        "ITEM-096"
+      ],
+      "severity": "high",
+      "observation": "CH02でmaintenance.inspectとその12件の所属が失われた。用途の検査24件は残っているが、保全分類を持つ12件との区別が消えている。同じ表示名でもaxisはmaintenanceとtaskで異なる。",
+      "basis": "requirements.json（今回提供版）must_preserve[1]は保全の検査状態と検査用途を別軸に指定。source-inventory.json（inventory-r17）の両概念のaxisと12件の重複所属。proposed-inventory.json（inventory-r18-proposed）のconcept/assignment差分。",
+      "correction": "maintenance.inspectを復元し、元の12件へ再付与する。用途はtask、保全はmaintenanceとして独立に示す。「用途：検査」「保全：検査」という文脈を付け、合格・実施済み・要検査など未提供の状態意味は付け足さない。"
+    },
+    {
+      "id": "F04",
+      "category": "unknown_value_assignment",
+      "affected_ids": [
+        "material.unspecified",
+        "material.wood",
+        "ITEM-015",
+        "ITEM-030",
+        "ITEM-045",
+        "ITEM-060",
+        "ITEM-075",
+        "ITEM-090"
+      ],
+      "severity": "high",
+      "observation": "CH03は材質未確認6件をすべて木材へ変え、未確認概念を削除している。木材は45件から51件になるが、個別の確認根拠は提供されていない。確定材質による絞込へ未確認設備が混入する。",
+      "basis": "requirements.json（今回提供版）must_preserve[4]は6件を未確認のまま照会対象に残す。source-inventory.json（inventory-r17）の該当6件とproposed-inventory.json（inventory-r18-proposed）の木材付与を照合。",
+      "correction": "6件のmaterial.unspecifiedを保持し、金属・木材の確定結果に含めない。材質を指定しない閲覧と未確認だけの表示は可能とする。U01で個別照会を残し、6件の材質確定だけを保留する。他90件や6件の同一性保持は停止しない。"
+    },
+    {
+      "id": "F05",
+      "category": "entry_condition",
+      "affected_ids": [
+        "entry.measure",
+        "task.measure",
+        "ITEM-001",
+        "ITEM-005",
+        "ITEM-009",
+        "ITEM-013",
+        "ITEM-017",
+        "ITEM-021",
+        "ITEM-025",
+        "ITEM-029",
+        "ITEM-033",
+        "ITEM-037",
+        "ITEM-041",
+        "ITEM-045",
+        "ITEM-049",
+        "ITEM-053",
+        "ITEM-057",
+        "ITEM-061",
+        "ITEM-065",
+        "ITEM-069",
+        "ITEM-073",
+        "ITEM-077",
+        "ITEM-081",
+        "ITEM-085",
+        "ITEM-089",
+        "ITEM-093"
+      ],
+      "severity": "high",
+      "observation": "CH06は同じ/tools/measurement、staff、all-sitesを残す一方、concept_idsを[task.measure]から空配列へ変えている。宣言されたrole/scope/概念条件を集合計算すると旧入口は測定24件、提案は無条件の88件となる。88件には別途F07のrole拡張も含む。recordsを復元しても用途条件が空なら87件となり、24件の測定入口には戻らない。実画面の表示・転送成功は確認していない。",
+      "basis": "requirements.json（今回提供版）must_preserve[3]、source-inventory.json（inventory-r17）とproposed-inventory.json（inventory-r18-proposed）のentry.measure。all-sitesは今回のsnapshot内のsite-A/site-Bを含む範囲として計算。",
+      "correction": "entry.measureのpath、role、scopeを維持し、concept_ids=[task.measure]を復元する。共通一覧を使う場合も入口から用途=測定を引き継ぎ、選択中条件と材質絞込を同じ判断場所に置く。実装の転送方式は別途確認する。"
+    },
+    {
+      "id": "F06",
+      "category": "scope",
+      "affected_ids": [
+        "ITEM-088"
+      ],
+      "severity": "high",
+      "observation": "変更一覧に記載なくITEM-088のscopeがsite-Bからsite-Aへ変わっている。拠点別の対象集合が変化する。",
+      "basis": "source-inventory.json（inventory-r17）ITEM-088.scope=site-B、proposed-inventory.json（inventory-r18-proposed）ではsite-A。requirements.json（今回提供版）must_preserve[2]は設備ごとのsite保持を要求し、変更承認はない。",
+      "correction": "ITEM-088.scopeをsite-Bとして保持する。用途task.inspect、材質material.metalに加えて保全maintenance.inspectもsourceどおり保持する。"
+    },
+    {
+      "id": "F07",
+      "category": "roles",
+      "affected_ids": [
+        "ITEM-090"
+      ],
+      "severity": "high",
+      "observation": "変更一覧に記載なくITEM-090.rolesへstaffが追加されている。元のinventory_manager専用という対象範囲を拡張する差分であり、分類再編からは正当化できない。実際の情報露出を観測したという指摘ではない。",
+      "basis": "source-inventory.json（inventory-r17）ITEM-090.roles=[inventory_manager]とproposed-inventory.json（inventory-r18-proposed）の追加staff。requirements.json（今回提供版）must_preserve[2]はroles保持を要求。",
+      "correction": "ITEM-090.roles=[inventory_manager]を維持する。scope=site-B、用途=task.cut、材質=material.unspecifiedもsourceへ揃え、staff向けの集合に含めない。認可処理そのものは未実装・未検証。"
+    }
+  ],
+  "decisions": [
+    {
+      "change_id": "CH01",
+      "decision": "revise",
+      "reason": "測定と切断の用途区別が必須であり、broaderへの全所属置換を採用しない。task.measure/task.cutとsourceの48件の所属を保持する。F02。"
+    },
+    {
+      "change_id": "CH02",
+      "decision": "revise",
+      "reason": "requirementsの別軸要件とsourceのaxisが根拠。表示名の一致や提案のexact宣言では同義と認定しない。maintenance.inspectと12件の所属を用途と独立に保持する。F03。"
+    },
+    {
+      "change_id": "CH03",
+      "decision": "hold",
+      "reason": "木材への確定変換を裏付ける値がない。6件はmaterial.unspecifiedのまま保持し、個別材質の確定だけU01で保留する。他90件の分類・探索は進める。F04。"
+    },
+    {
+      "change_id": "CH04",
+      "decision": "keep",
+      "reason": "requirements.jsonのapproved_changes[0]で名称変更を明示承認。task.heatのID・axis・用途所属24件・entry.heatの条件はsourceと一致する。採用対象は温熱処理から加熱へのlabel変更のみ。ITEM-015/075の材質変更はCH03として戻す。"
+    },
+    {
+      "change_id": "CH05",
+      "decision": "keep",
+      "reason": "requirements.jsonのapproved_changes[1]で整理を明示承認。inventory-r17の96件中legacy.unused所属0件、提供された2入口の参照0件、宣言された親参照も0件を照合したため空概念を削除できる。未提供の外部システム全体を調査済みとはしない。"
+    },
+    {
+      "change_id": "CH06",
+      "decision": "revise",
+      "reason": "requirementsの旧測定入口条件保持を優先。entry.measureのstaff/all-sitesとtask.measure条件を併せて保持する。総合一覧が開くという提案の自己評価を移行成功の根拠にしない。F05。"
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "U01",
+      "affected_ids": [
+        "ITEM-015",
+        "ITEM-030",
+        "ITEM-045",
+        "ITEM-060",
+        "ITEM-075",
+        "ITEM-090"
+      ],
+      "owner": "inventory_managerを照会窓口とする提案。実担当者は未指定。",
+      "question": "各設備の材質は何か。正本IDごとに確認できる資料・確認者・確認時点を付けて回答できるか。照会はまだ送信していない。",
+      "impact": "blockingの範囲はこの6件を確認済み材質へ変更し、材質適合を確定する判断だけ。6件は未確認のまま保持・閲覧し、材質無指定の集合と未確認集合には残す。他90件の確定材質による分類・探索や、承認済みCH04/CH05を停止しない。",
+      "blocking": true
+    },
+    {
+      "id": "U02",
+      "affected_ids": [
+        "entry.measure",
+        "entry.heat",
+        "ITEM-073",
+        "ITEM-088",
+        "ITEM-090"
+      ],
+      "owner": "遷移・認可・検索実装担当（B/C相当。実担当者未指定）",
+      "question": "実装時に旧入口から用途条件、正本ID、role/scopeを維持できるか。実転送、索引反映、権限制御、直接参照の確認をどの実装環境で行うか。",
+      "impact": "Aの分類・所属・入口設計は進められる。今回の静的資料は本番移行・認可・操作の完了証拠にならない。実装担当が該当範囲の受入確認を別途行う。",
+      "blocking": false
+    },
+    {
+      "id": "U03",
+      "affected_ids": [
+        "task.measure",
+        "task.cut",
+        "task.heat",
+        "task.inspect",
+        "maintenance.inspect",
+        "material.unspecified",
+        "entry.measure",
+        "entry.heat"
+      ],
+      "owner": "画面実装・利用者評価担当（C/D相当。実担当者未指定）",
+      "question": "実画面で用途と保全の検査を区別でき、材質未確認を確定値と誤読せず、旧入口から必要な候補を見つけられるか。",
+      "impact": "HTMLソースの静的整合のみを確認した。描画、アクセシビリティ、操作、実利用者の発見・正答・時間は未確認。提供されたvisual_intentを維持する方針であり、既存画面との視覚比較を済ませたとはしない。",
+      "blocking": false
+    }
+  ],
+  "evidence": [
+    {
+      "check": "E01 入力版と比較形式",
+      "result": "source=inventory-r17、requirements.current_source_revisionとproposal.basis_revisionが一致。compare_inventory.pyを実行しCOMPARED / decision: NOT_EVALUATED、警告0、snapshot外参照0。入力hashはcomparison.jsonに保存。",
+      "scope": "提供されたsource/proposalの全concepts、records、entries。型・一意性・宣言フィールド差分。",
+      "not_checked": "比較完了は変更承認ではない。実在設備との一致、未提供の母集団や外部参照の網羅性は未確認。"
+    },
+    {
+      "check": "E02 全設備ID・所属・scope・roles",
+      "result": "設備数96→96、共通ID95、欠落ITEM-073、追加ITEM-X73。共通IDでのフィールド差分は{'concept_ids': 62, 'scope': 1, 'roles': 1}。所属ペア数204→192。変更一覧外のscope/roles差分もF06/F07に記録。",
+      "scope": "95件の共通IDの全宣言フィールドと、追加・欠落ID集合。件数に加えてID/所属の集合を比較。",
+      "not_checked": "異なるID間の同一性を推定していない。生産データの変更・移行は行っていない。"
+    },
+    {
+      "check": "E03 要件とCH01–CH06の意味照合",
+      "result": "CH01/CH02/CH06=revise、CH03=hold、CH04/CH05=keep。CH04/CH05はrequirementsの明示承認とsource内の参照照合を根拠にした。",
+      "scope": "changesは比較checkerの未検査フィールドのため、6変更の文章と実データ差分を今回手動で照合した。",
+      "not_checked": "提案側rationaleを承認記録として扱っていない。独立した実利用者評価は未実施。"
+    },
+    {
+      "check": "E04 role/scope付き入口の集合計算",
+      "result": "entry.measureはsource24件→proposal88件。record復元後も用途無指定なら87件。修正モデルのtask.measure条件ではsourceと同一24件。entry.heatはsource/proposal/修正モデルで同一24件。",
+      "scope": "入力のrole所属、scopeとconcept_idsの積条件をPythonで評価。all-sitesは提供されたsite-A/site-Bに適用。ID集合をverification.jsonに記録。",
+      "not_checked": "HTTP応答、実転送、認可、索引、保存状態、フィルタ操作、利用者の到達成功は未検証。"
+    },
+    {
+      "check": "E05 修正モデルの保持条件",
+      "result": "sourceを基にメモリ内で作った修正モデルは96件の全recordフィールド・204所属・2入口がsourceと一致。概念は8件で、差分はtask.heatの名称変更とlegacy.unused整理のみ。材質未確認6件を保持。",
+      "scope": "設計手順の自己確認。sourceの全件コピーを基礎にした宣言モデルであり、実移行結果や独立品質評価ではない。",
+      "not_checked": "実DB、実API、移行後の再取得snapshotは存在せず検査していない。材質6件の真値は未確認。"
+    },
+    {
+      "check": "E06 成果物の契約と静的HTMLソース",
+      "result": "review.jsonの必須キー、7指摘のID/根拠、CH01–CH06の採否、残件の必要項目を照合。HTMLを標準ライブラリで解析し、抜粋行のID・名称・scope・roles・concept_idsを修正モデルに照合。資料内アンカーの参照先も照合。",
+      "scope": "review.json、design.md、preview.htmlの保存内容、および抜粋行のソース構造。verification.jsonに検査結果を記録。",
+      "not_checked": "ブラウザを開いていない。描画、画面幅、フォーカス、読み上げ、実フィルタ、実認可、利用者効果は未確認。一般plan.jsonの検査は今回の出力契約対象外。"
+    }
+  ]
+}

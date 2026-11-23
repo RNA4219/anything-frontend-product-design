@@ -1,0 +1,58 @@
+{
+  "case_id": "R04-balanced-membership",
+  "revision": "v2",
+  "concepts": [
+    {
+      "id": "P",
+      "label": "分類P",
+      "axis": "topic"
+    },
+    {
+      "id": "Q",
+      "label": "分類Q",
+      "axis": "topic"
+    },
+    {
+      "id": "unused",
+      "label": "未使用分類",
+      "axis": "topic"
+    }
+  ],
+  "records": [
+    {
+      "id": "D1",
+      "label": "D1",
+      "scope": "same",
+      "roles": [
+        "reader"
+      ],
+      "concept_ids": [
+        "P"
+      ]
+    },
+    {
+      "id": "D2",
+      "label": "D2",
+      "scope": "same",
+      "roles": [
+        "reader"
+      ],
+      "concept_ids": [
+        "Q"
+      ]
+    },
+    {
+      "id": "D3",
+      "label": "D3",
+      "scope": "same",
+      "roles": [
+        "reader"
+      ],
+      "concept_ids": [
+        "P"
+      ]
+    }
+  ],
+  "entries": [],
+  "basis_revision": "v1"
+}

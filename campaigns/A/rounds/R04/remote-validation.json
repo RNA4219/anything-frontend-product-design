@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-11-23T09:39:23.298600+00:00",
+  "status": "HOLD_REMOTE_REPLACED_EMPTY",
+  "repository": "RNA4219/anything-frontend-product-design",
+  "observed_repository_id": 1468558495,
+  "observed_created_at": "2026-11-23T09:37:15Z",
+  "observed_visibility": "private",
+  "observed_size": 0,
+  "refs_http_status": 409,
+  "refs_message": "Git Repository is empty.",
+  "previous_pr_6_http_status": 404,
+  "tree_creation": "First three follow-up tree batches succeeded; subsequent operation failed. No follow-up commit/ref update or PR was completed.",
+  "current_follow_up_pr": null,
+  "ci": "NOT_RUN: final head not published",
+  "safe_action": "Keep tested local branch and recovery bundle. Do not initialize or restore shared main; resume publication only after the integration base is established."
+}

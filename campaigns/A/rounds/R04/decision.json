@@ -1,0 +1,127 @@
+{
+  "round": "R04",
+  "status": "ACCEPT",
+  "scope": "Conditional A005–A007 taxonomy/membership/entry guidance and optional bounded snapshot comparison; no automated semantic approval or real-user efficacy claim",
+  "issues": [
+    "A-007",
+    "A-011",
+    "A-012"
+  ],
+  "actual_subagents": [
+    {
+      "id": "/root/r04_researcher_1",
+      "role": "Researcher-1",
+      "status": "completed"
+    },
+    {
+      "id": "/root/r04_researcher_2",
+      "role": "Researcher-2",
+      "status": "completed"
+    },
+    {
+      "id": "/root/r04_analyst",
+      "role": "Analyst",
+      "status": "completed"
+    },
+    {
+      "id": "/root/r04_task_x",
+      "role": "Baseline task generation",
+      "status": "completed"
+    },
+    {
+      "id": "/root/r04_task_y",
+      "role": "Candidate task generation",
+      "status": "completed"
+    },
+    {
+      "id": "/root/r04_critic",
+      "role": "Critic/Evaluator",
+      "status": "completed"
+    }
+  ],
+  "new_sources": 6,
+  "independent_source_families": 4,
+  "new_units": 0,
+  "units_updated": [
+    "A-IU-005",
+    "A-IU-006",
+    "A-IU-007"
+  ],
+  "metadata_only_corrections": [
+    "A-IU-001",
+    "A-IU-003",
+    "A-IU-004",
+    "A-IU-008",
+    "A-IU-009",
+    "A-IU-010"
+  ],
+  "deduplication": {
+    "research_proposals": 5,
+    "extracted_revisions": 3,
+    "overlaps_consolidated": 2,
+    "source_url_duplicates": 0
+  },
+  "tests": {
+    "unit_test_methods": 70,
+    "module_isolated_from_campaigns": true,
+    "synthetic_design_inventory_records": 96,
+    "synthetic_comparison_population_records": 1200,
+    "independently_pre_registered_fixtures": 12,
+    "independent_initial_matches": 12,
+    "parent_hypothesis_reproduced_variants": 2,
+    "independent_recheck_variants": 4,
+    "independent_recheck_matches": 4,
+    "fixed_finding": "R04-CR-001"
+  },
+  "task_comparison": {
+    "baseline": "J",
+    "candidate": "S",
+    "scores": {
+      "baseline": 6,
+      "candidate": 6,
+      "max": 6
+    },
+    "difference": 0,
+    "runs_per_arm": 1,
+    "hard_failures": {
+      "baseline": 0,
+      "candidate": 0
+    },
+    "explicit_assignment_path_leaks_detected": 0,
+    "method_assignment_inference_possible": true,
+    "equivalence_or_superiority_proven": false,
+    "static_rows": {
+      "baseline": 19,
+      "candidate": 16
+    },
+    "unique_records_in_each_html": 13,
+    "observed_static_value_role_scope_mismatches": 0
+  },
+  "candidate_freeze": "candidate-snapshot.json",
+  "post_freeze_repairs": [
+    "Prevent comparison output from aliasing either input by same path, symlink or hardlink",
+    "Make test data module-owned so standalone tests do not depend on campaigns/",
+    "Correct stale evidence-status metadata without changing earlier instruction semantics"
+  ],
+  "limitations": [
+    "All large-population cases are synthetic; no production migration, browser, actual routing/authorization/index or human task evidence",
+    "COMPARED is a data comparison result, not semantic equivalence or change approval",
+    "Source truth, closed population, unseen fields and record lineage across IDs remain external checks",
+    "One model-family trial per arm; source/method clues can reveal assignment",
+    "Selected source excerpts with locator/hash; no full original archive. NISO currentness not established."
+  ],
+  "cost": {
+    "actual_amount": null,
+    "currency": null,
+    "reason": "Billing unavailable; no zero-cost claim"
+  },
+  "next": [
+    "A-013",
+    "A-007",
+    "A-006",
+    "A-XD-002"
+  ],
+  "meaningful_improvement": true,
+  "saturation_streak": 0,
+  "completed_at": "2026-11-23T09:14:24.124674+00:00"
+}

@@ -1,0 +1,149 @@
+{
+  "round": "R04",
+  "finding_id": "R04-CR-001",
+  "checked_at": "2026-11-23T09:04:51.527439+00:00",
+  "initial_helper_sha256": "2e5cc45b1a60c6760ca2ecdb5cf8b3dc6c8ef45bdc4ea5b980507fcb4cdbe7e4",
+  "corrected_helper_sha256": "dbb31c82e2ffe6a2ec13e9f144e3ee80b93f07ca07d6592702fe42e6ce82e40b",
+  "candidate_experiment_boundary": "Initial candidate/proposal experiment remains frozen; this check applies to the corrected helper in the final module only.",
+  "results": [
+    {
+      "case_id": "same_before_path",
+      "expected": {
+        "exit_code": 2,
+        "status": "INVALID_INPUT",
+        "source_bytes_preserved": true
+      },
+      "actual": {
+        "exit_code": 2,
+        "status": "INVALID_INPUT",
+        "source_bytes_preserved": true,
+        "decision": "NOT_EVALUATED"
+      },
+      "matched_expectations": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/same_before_path/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/same_before_path/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/same_before_path/before.json"
+      ],
+      "input_sha256_before": {
+        "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after": "421b18cf180a665429390fcdcaa7c43cb362c0102043113bec37bc5fa1b13a5e"
+      },
+      "input_sha256_after": {
+        "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after": "421b18cf180a665429390fcdcaa7c43cb362c0102043113bec37bc5fa1b13a5e"
+      }
+    },
+    {
+      "case_id": "symlink_to_after",
+      "expected": {
+        "exit_code": 2,
+        "status": "INVALID_INPUT",
+        "source_bytes_preserved": true
+      },
+      "actual": {
+        "exit_code": 2,
+        "status": "INVALID_INPUT",
+        "source_bytes_preserved": true,
+        "decision": "NOT_EVALUATED"
+      },
+      "matched_expectations": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/symlink_to_after/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/symlink_to_after/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/symlink_to_after/result.json"
+      ],
+      "input_sha256_before": {
+        "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after": "421b18cf180a665429390fcdcaa7c43cb362c0102043113bec37bc5fa1b13a5e"
+      },
+      "input_sha256_after": {
+        "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after": "421b18cf180a665429390fcdcaa7c43cb362c0102043113bec37bc5fa1b13a5e"
+      }
+    },
+    {
+      "case_id": "hardlink_to_before",
+      "expected": {
+        "exit_code": 2,
+        "status": "INVALID_INPUT",
+        "source_bytes_preserved": true
+      },
+      "actual": {
+        "exit_code": 2,
+        "status": "INVALID_INPUT",
+        "source_bytes_preserved": true,
+        "decision": "NOT_EVALUATED"
+      },
+      "matched_expectations": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/hardlink_to_before/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/hardlink_to_before/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/hardlink_to_before/result.json"
+      ],
+      "input_sha256_before": {
+        "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after": "421b18cf180a665429390fcdcaa7c43cb362c0102043113bec37bc5fa1b13a5e"
+      },
+      "input_sha256_after": {
+        "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after": "421b18cf180a665429390fcdcaa7c43cb362c0102043113bec37bc5fa1b13a5e"
+      }
+    },
+    {
+      "case_id": "separate_output",
+      "expected": {
+        "exit_code": 0,
+        "status": "COMPARED",
+        "source_bytes_preserved": true,
+        "saved_result_matches_stdout": true
+      },
+      "actual": {
+        "exit_code": 0,
+        "status": "COMPARED",
+        "source_bytes_preserved": true,
+        "decision": "NOT_EVALUATED",
+        "saved_result_matches_stdout": true,
+        "normal_behavior_matches_frozen_candidate": true
+      },
+      "matched_expectations": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/separate_output/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/separate_output/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/separate_output/result.json"
+      ],
+      "input_sha256_before": {
+        "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after": "421b18cf180a665429390fcdcaa7c43cb362c0102043113bec37bc5fa1b13a5e"
+      },
+      "input_sha256_after": {
+        "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after": "421b18cf180a665429390fcdcaa7c43cb362c0102043113bec37bc5fa1b13a5e"
+      }
+    }
+  ],
+  "matched": 4,
+  "total": 4,
+  "resolution": "RESOLVED_IN_CORRECTED_HELPER",
+  "limits": "Tests cover three filesystem alias forms and normal separate output in this environment. No concurrent adversarial path replacement, product source data, UI, or user effectiveness was tested. Initial independent fixture/reproduction files were retained."
+}

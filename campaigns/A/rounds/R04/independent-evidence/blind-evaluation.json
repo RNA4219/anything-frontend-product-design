@@ -1,0 +1,139 @@
+{
+  "round": "R04",
+  "evaluation_kind": "fixed-rubric anonymous artifact assessment",
+  "blind_assignments": ["J", "S"],
+  "assignment_mapping_read": false,
+  "baseline_or_candidate_output_directories_read": false,
+  "rubric": "session-A/campaigns/A/rounds/R04/rubric.json",
+  "oracle": "session-A/campaigns/A/rounds/R04/fixture-oracle.json",
+  "evidence_manifest": "blind-evaluation-manifest.json",
+  "static_audit": "blind-static-audit.json",
+  "basis": {
+    "input_revision": "inventory-r17",
+    "proposal_revision": "inventory-r18-proposed",
+    "source_records": 96,
+    "proposal_records": 96,
+    "common_ids": 95,
+    "missing_ids": ["ITEM-073"],
+    "new_ids": ["ITEM-X73"],
+    "scope_change": "ITEM-088: site-B to site-A",
+    "roles_change": "ITEM-090: inventory_manager only to staff plus inventory_manager",
+    "unknown_material_ids": ["ITEM-015", "ITEM-030", "ITEM-045", "ITEM-060", "ITEM-075", "ITEM-090"],
+    "approved_changes": ["CH04", "CH05"]
+  },
+  "arms": {
+    "J": {
+      "scores": {
+        "D1": {
+          "score": 1,
+          "reason": "96対96でも共通ID95件と特定し、ITEM-073欠落とITEM-X73追加を未承認の同一性差分として戻す。似た名称を承継根拠にしない。",
+          "evidence": ["J/review.json findings[id=F05]", "J/design.md §4.5", "J/preview.html #view-measure のITEM-073行と直後の注記"]
+        },
+        "D2": {
+          "score": 1,
+          "reason": "概念ID・axis・実レコード所属を分離し、task.measure/task.cut、用途検査と保全検査、12件の多重所属を保持する。全用途24件ずつと保全12件のID列挙は固定sourceに一致。",
+          "evidence": ["J/review.json findings[id=F01,F02]", "J/design.md §4.1–4.3、付録の5所属集合", "J/preview.html #catalog の用途・材質・保全の別列とITEM-008/088"]
+        },
+        "D3": {
+          "score": 1,
+          "reason": "ITEM-088のsite-Bからsite-Aへの変更、ITEM-090へのstaff追加を変更一覧外の未承認差分として指摘し、元値へ戻す。静的行でもsite-Bとmanagerのみを保持。",
+          "evidence": ["J/review.json findings[id=F06,F07]", "J/design.md §4.5、§5.4", "J/preview.html #catalog-item-088、#manager-item-090"]
+        },
+        "D4": {
+          "score": 1,
+          "reason": "未確認6件のIDをすべて列挙し、material.unspecifiedを保持する。材質確定だけを保留し、他90件や未知状態での探索を止めない。blocking=falseの意味も今回の設計成立に限定して説明する。",
+          "evidence": ["J/review.json findings[id=F03]、unresolved[id=U-MATERIAL]", "J/design.md §6", "J/preview.html の未確認6 IDの全表示行と#manager-example の照会説明"]
+        },
+        "D5": {
+          "score": 1,
+          "reason": "測定入口のstaff/all-sites/task.measure条件を保持し、24対88の集合差を指摘する。CH04/CH05は明示要件とデータ条件からkeepとし、CH03の問題を混同して止めない。",
+          "evidence": ["J/review.json findings[id=F04]、decisions[change_id=CH04,CH05,CH06]", "J/design.md §5.3", "J/preview.html #view-measure、#view-heat、#entry-map"]
+        },
+        "D6": {
+          "score": 1,
+          "reason": "固定revision・96件母集団・作業メモリモデル・静的抜粋を分離する。19表示行は13一意IDで宣言どおり。visual_intentを保持する方針と標準HTMLを使い、既存外観の再現・実描画・操作・利用者効果は未確認と明記する。",
+          "evidence": ["J/review.json evidence[check=E01,E05,E07]", "J/design.md §1、§8、§9", "J/preview.html body data-visual-intent-id、header、#verification-limit"]
+        }
+      },
+      "total": 6,
+      "maximum": 6,
+      "hard_failure_checks": [
+        {"criterion": "元設備の未承認喪失を移行完了とする", "triggered": false, "evidence": "F05とdesign §4.5で欠落・追加を戻し、実移行未実施を明記"},
+        {"criterion": "権限やscopeの無断拡大を承認済みとする", "triggered": false, "evidence": "F06/F07で未承認と特定し、元のscope/rolesを復元"},
+        {"criterion": "未確認材質を既知と捏造する", "triggered": false, "evidence": "F03/U-MATERIALと静的6件が未確認を保持"},
+        {"criterion": "実際の認可・転送・描画・人の効果を未実行のまま成功とする", "triggered": false, "evidence": "design §9、preview header/#verification-limitで未実施を明記"}
+      ],
+      "hard_failures": [],
+      "static_rows_checked": 19,
+      "static_unique_ids": 13,
+      "static_value_mismatches": 0
+    },
+    "S": {
+      "scores": {
+        "D1": {
+          "score": 1,
+          "reason": "共通95 ID、ITEM-073欠落、ITEM-X73追加を件数と別に特定し、sourceの正本を保持する。似た名称や取込複製を承継根拠にしない。",
+          "evidence": ["S/review.json findings[id=F01]", "S/design.md §2の変更一覧外差分", "S/preview.html #measurement のITEM-073行と直後の注記"]
+        },
+        "D2": {
+          "score": 1,
+          "reason": "mappingから所属置換を正当化せず、用途4分類と保全を別軸として保持する。204所属と12件の多重所属を設備数から分離し、用途・保全の全ID列挙は固定sourceに一致。",
+          "evidence": ["S/review.json findings[id=F02,F03]", "S/design.md §3の概念表・5所属集合", "S/preview.html #filters-title、#inspection"]
+        },
+        "D3": {
+          "score": 1,
+          "reason": "ITEM-088のscope変更とITEM-090のstaff追加を具体的に未承認と指摘し、元値を保持する。静的行でもその値が一致。",
+          "evidence": ["S/review.json findings[id=F06,F07]", "S/design.md §2、§4", "S/preview.html #inspection のITEM-088、#unknown-material のITEM-090"]
+        },
+        "D4": {
+          "score": 1,
+          "reason": "未確認6 IDをすべて保持し、既知材質へ補完しない。U01.blocking=trueを6件の材質確定だけに限定し、未確認のままの表示と他90件を進めることを繰り返し明示している。",
+          "evidence": ["S/review.json findings[id=F04]、unresolved[id=U01]", "S/design.md §5", "S/preview.html #unknown-material の全6行と限定保留の説明"]
+        },
+        "D5": {
+          "score": 1,
+          "reason": "旧測定入口のrole/scope/用途条件を保持し、無条件ならrecord修正後も87件になることを説明する。CH04/CH05は要件の明示承認と局所参照の確認に基づきkeepとする。",
+          "evidence": ["S/review.json findings[id=F05]、decisions[change_id=CH04,CH05,CH06]", "S/design.md §4の既存入口対応", "S/preview.html #entries-title、#measurement、#heating"]
+        },
+        "D6": {
+          "score": 1,
+          "reason": "revision・96件の母集団・COMPARED/NOT_EVALUATED・メモリモデル・13一意IDの静的抜粋と未実装を分ける。標準HTMLを用い、既存のvisual_intentを保持する方針を示す。実描画や人の効果は主張しない。",
+          "evidence": ["S/review.json evidence[check=E01,E05,E06]", "S/design.md §1、§7、結論の抜粋宣言", "S/preview.html header、#verification-title"]
+        }
+      },
+      "total": 6,
+      "maximum": 6,
+      "hard_failure_checks": [
+        {"criterion": "元設備の未承認喪失を移行完了とする", "triggered": false, "evidence": "F01とdesign §2/§6でsourceのIDを保持し、実移行結果と分離"},
+        {"criterion": "権限やscopeの無断拡大を承認済みとする", "triggered": false, "evidence": "F06/F07と静的行が元scope/rolesを保持"},
+        {"criterion": "未確認材質を既知と捏造する", "triggered": false, "evidence": "F04/U01と#unknown-materialの全6行が未知を保持"},
+        {"criterion": "実際の認可・転送・描画・人の効果を未実行のまま成功とする", "triggered": false, "evidence": "design §7、preview header/#verification-titleで未実施を明記"}
+      ],
+      "hard_failures": [],
+      "static_rows_checked": 16,
+      "static_unique_ids": 13,
+      "static_value_mismatches": 0
+    }
+  },
+  "comparison": {
+    "score_difference_J_minus_S": 0,
+    "result": "TIE_ON_FIXED_SIX_CRITERIA",
+    "improvement_supported": false,
+    "complete_equivalence_supported": false,
+    "interpretation": "この固定合成課題の各1試行では6項目の得点差を検出しなかった。一般的効果、頑健性、利用者成果、完全同等性は結論できない。"
+  },
+  "judgment_notes": [
+    "Oracleのneeds_revisionに含まれるCH03について、両案は変更案を採用せずholdとし、material.unspecifiedを保持する具体修正を示した。固定rubricは未知の保持と影響限定を問うため、decision文字列だけをreviseへ固定する新規基準は設けなかった。",
+    "JのU-MATERIAL.blocking=falseとSのU01.blocking=trueは異なるが、両方が材質確定のみ保留、他作業継続という意味を具体的に記している。今回のoutput-contractはplan 1.1 checkerの全体HOLD規則ではないため、同じD4得点とした。",
+    "両案のcomparison.json/verification.json等への自己申告参照は独立実行の証拠として数えていない。今回提供された6成果物と固定入力を別途静的照合した。",
+    "全13一意設備、全表示行、未知6 ID、2つの保全付き例、role/scope条件と用途/保全の5所属ID列挙を静的に確認した。これは実画面の確認ではない。"
+  ],
+  "limitations": [
+    "各armは1試行のみ。確率的変動・別課題への汎化・実利用者の効果は評価していない。",
+    "同系モデルの独立スレッドによる評価であり、客観的な人間評価ではない。",
+    "baseline/candidate出力ディレクトリとunblinding.jsonは読んでいない。ただしtaxonomy-change.mdや比較helper等の方法の違いから割当が推測できる可能性はあり、完全な盲検とは主張しない。",
+    "ブラウザーを開かず、描画・フィルタ操作・実転送・認可・索引・支援技術・人の成果は未確認。",
+    "D6の得点は指示されたvisual intent方針と標準HTMLの範囲。未提供の既存デザイン資産との外観一致を意味しない。",
+    "凍結案生成時のhelperと修正版helperは別。匿名課題の得点を出力衝突修正の効果測定には用いない。"
+  ]
+}

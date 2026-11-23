@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-11-23T09:01:04.601087+00:00",
+  "origin": "Parent identified a concrete hypothesis after 12 independently authored cases; this is not an independent discovery.",
+  "hypothesis": "--output aliases --before/--after and overwrites input despite no-source-mutation contract.",
+  "expected_safe_behavior": "Reject a source alias before writing and retain both source bytes. No comparison approval claim is relevant.",
+  "variants": [
+    "exact-before-path",
+    "symlink-to-after"
+  ],
+  "original_fixtures_modified": false
+}

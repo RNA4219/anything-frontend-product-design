@@ -1,0 +1,20 @@
+{
+  "round": "R05",
+  "status": "PLANNED_NOT_STARTED",
+  "issues": [
+    "A-013"
+  ],
+  "priority": "P2",
+  "question": "Does priority guidance need distinct co-delivery, information prerequisite and execution-order dependency conditions? First compare existing A002/A004; missing-rule hypothesis is not established novelty.",
+  "source_discovery": "Two actual independent researchers; avoid rediscovering the existing 46 source records.",
+  "evaluation": "Freeze a relevant rubric before candidate construction; execute independent counterexamples if an important candidate exists.",
+  "boundary": "A owns capability relationships and priorities; B owns state and execution-order implementation.",
+  "not_executed": [
+    "research",
+    "analysis",
+    "candidate registration",
+    "implementation",
+    "evaluation"
+  ],
+  "registered_at": "2026-11-23T09:19:23.359608+00:00"
+}

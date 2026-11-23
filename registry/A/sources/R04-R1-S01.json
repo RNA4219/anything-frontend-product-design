@@ -1,0 +1,115 @@
+{
+  "id": "R04-R1-S01",
+  "url": "https://www.w3.org/TR/skos-reference/",
+  "title": "SKOS Simple Knowledge Organization System Reference",
+  "publisher": "W3C",
+  "source_type": "normative Recommendation",
+  "retrieved_at": "2026-11-23T08:30:41.944223+00:00",
+  "retrieved_at_basis": "UTC archival capture after retrieval; exact per-Web-action timestamp unavailable",
+  "sha256": "75847481df714650b277658b765bd05a7fc76cef105dff2c7525e0a0264b6baa",
+  "sha256_scope": "complete local selected-excerpt Markdown file bytes, including metadata; not original remote HTML/PDF",
+  "version": "W3C Recommendation 18 August 2009",
+  "locator": [
+    {
+      "remote": "§1.2; turn357636164view2 L268",
+      "local_line": 12,
+      "short_quote": "identified by URIs"
+    },
+    {
+      "remote": "§1.2; turn357636164view2 L269",
+      "local_line": 16,
+      "short_quote": "preferred label"
+    },
+    {
+      "remote": "§8.6.6; turn119438020view5 L1030",
+      "local_line": 20,
+      "short_quote": "immediate"
+    },
+    {
+      "remote": "§10.1; turn357636164view3 L1198",
+      "local_line": 24,
+      "short_quote": "high degree of confidence"
+    },
+    {
+      "remote": "§10.6.8; turn437460956view1 L1428",
+      "local_line": 28,
+      "short_quote": "the same individual"
+    },
+    {
+      "remote": "§10.6.3; turn119438020view3 L1352",
+      "local_line": 32,
+      "short_quote": "not transitive"
+    },
+    {
+      "remote": "§4.6.1; turn616321472view4 L616",
+      "local_line": 36,
+      "short_quote": "no way to close the boundary"
+    },
+    {
+      "remote": "§1.4; turn616321472view5 L336",
+      "local_line": 40,
+      "short_quote": "fit the data model"
+    }
+  ],
+  "verified_claims": [
+    {
+      "claim": "SKOSは概念のURI識別、表示ラベル、階層関係、分類体系間のmappingを区別する。",
+      "locator": "§1.2 L268–275; §8.6.6 L1014–1031"
+    },
+    {
+      "claim": "exactMatchは広い情報検索用途での交換可能性への強い確信を表す。sameAsの同一資源とは区別される。",
+      "locator": "§10.1 L1192–1198; §10.6.8 L1427–1452"
+    },
+    {
+      "claim": "closeMatchの連鎖は端点間の対応を含意せず、exactMatchとbroader/related等を組み合わせた性質継承も規定されない。",
+      "locator": "§10.6.3 L1343–1364; §10.6.7 L1408–1426"
+    },
+    {
+      "claim": "SKOS単独では概念集合の境界を閉じられず、形式整合性は現実に対する真偽の判定ではない。",
+      "locator": "§4.6.1 L600–618; §1.4 L322–340"
+    }
+  ],
+  "limits": [
+    "知識組織化システムの表現用データモデル。アプリのレコード同一性、権限、実際の探索成功を証明する規格ではない。",
+    "§8.6.6の直接階層関係と推移閉包の区別を、任意のUI遷移ルールへ拡張しない。",
+    "複数親や階層の循環をモデルが許すことと、当該IAで有用かは別。"
+  ],
+  "source_edges": [
+    {
+      "from_url": "https://www.w3.org/TR/skos-reference/",
+      "to_url": "https://www.w3.org/TR/skos-primer/",
+      "relation": "body_link_to_companion_guide",
+      "tool": "Web click",
+      "ref": "turn321168672view0",
+      "link_id": 30,
+      "from_locator": "Status of this Document L40; companion Primer body link",
+      "result_ref": "turn119438020view1",
+      "verified": true,
+      "post_archive_repeat_ref": "turn708494109view0",
+      "unique_edge": true
+    }
+  ],
+  "acquisition": {
+    "imozuru_fetch": "FAIL: temporary DNS name resolution failure",
+    "fetch_log": "fetch-log.jsonl",
+    "method": "permitted Web tool; manually selected short verbatim fragments with remote section/page/line locators",
+    "original_html_downloaded": false,
+    "original_pdf_downloaded": false,
+    "full_original_archive": false,
+    "web_refs": [
+      "turn321168672view0",
+      "turn357636164view2",
+      "turn357636164view3",
+      "turn119438020view3",
+      "turn119438020view5",
+      "turn616321472view4",
+      "turn616321472view5",
+      "turn437460956view1"
+    ],
+    "original_passages_read_beyond_archived_fragments": true,
+    "remote_fidelity_check": "manual against displayed Web tool original body; not a whole-source hash comparison"
+  },
+  "publication_safety": "Private research artifact. Do not copy source fragments or private reports into public Skill repository.",
+  "source_id": "R04-R1-S01",
+  "publication": "Original metadata and bounded paraphrases; third-party raw excerpts are private and not redistributed."
+}

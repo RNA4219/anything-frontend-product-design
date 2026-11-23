@@ -1,0 +1,75 @@
+{
+  "round": "R04",
+  "review_stage": "initial_candidate_before_fix_and_anonymous_evaluation",
+  "overall_status": "REVISE",
+  "acceptance_scope": "Bounded source/instruction review and implementation behavior; no migration approval, runtime UI result, or user-effectiveness finding.",
+  "candidate": {
+    "helper_sha256": "2e5cc45b1a60c6760ca2ecdb5cf8b3dc6c8ef45bdc4ea5b980507fcb4cdbe7e4",
+    "declared_snapshot": "inspected-snapshot/candidate-snapshot.json",
+    "frozen_files_hash_matched": 13,
+    "public_files_modified_by_reviewer": false
+  },
+  "independent_fixture_results": {
+    "pre_registered": 12,
+    "matched": 12,
+    "manifest": "fixtures-initial-manifest.json",
+    "summary": "initial-results-summary.json",
+    "meaning": "Expected declared-field comparisons and input diagnostics matched. Differences are not failures and no differences are not proof of preservation."
+  },
+  "supplemental_reproduction": {
+    "hypotheses": 1,
+    "variants": 2,
+    "origin": "Parent-suggested concrete hypothesis after independent fixtures; independently executed, not independently discovered.",
+    "summary": "supplemental-initial/13_output_aliases_source/summary.json"
+  },
+  "findings": [
+    {
+      "id": "R04-CR-001",
+      "severity": "medium",
+      "blocking_for_helper_acceptance": true,
+      "status": "OPEN",
+      "category": "implementation",
+      "title": "Output path can overwrite an input snapshot",
+      "location": {
+        "path": "modules/product-information-architecture/checks/compare_inventory.py",
+        "lines": [145, 147],
+        "function": "main"
+      },
+      "symptom": "--output が --before と同一パス、または --after を指すsymlinkの場合、入力を比較結果JSONで上書きしてexit 0 / COMPAREDを返す。",
+      "basis": [
+        "Candidate module docstring promises no source mutation.",
+        "The output is written with Path.write_text after the source files are read, with no path/object alias check.",
+        "Disposable exact-path and symlink reproductions both changed one input's bytes; original independent fixtures were not modified."
+      ],
+      "impact": "引数の誤指定で比較元または比較先の取得証跡を失い、元snapshotによる再検査ができなくなる。出力のinput_sha256は元のhashを残すだけで、消えた内容を復元できない。",
+      "correction": "書込み前にoutputと両入力が同一実体でないことを確認し、同一なら入力を保持したまま非0終了する。正規化された同一路径に加え、存在するpathはsamefile等でsymlink/hardlinkの別名も検査する。エラー出力自体も入力へ書き込まない。通常の別ファイル出力とstdoutのみの利用を維持する。",
+      "reproduction": {
+        "script": "reproduce_output_alias.py",
+        "one_case_two_variants": ["exact-before-path", "symlink-to-after"],
+        "command_shape": "python checks/compare_inventory.py --before before.json --after after.json --output before.json",
+        "expected": "Reject output alias without changing either input.",
+        "actual": "exit 0, status COMPARED, one input overwritten by the result JSON.",
+        "evidence_directory": "supplemental-initial/13_output_aliases_source",
+        "first_result_preserved": true,
+        "parent_hypothesis_attribution": true
+      }
+    }
+  ],
+  "non_findings": [
+    "COMPARED/NOT_EVALUATED and exit 0 do not claim adoption or quality PASS; correct output boundary is explicit.",
+    "Legitimate renaming, ID succession, multiple membership, split/merge, and intentional termination are allowed with separate interpretation; no blanket difference-is-defect rule is introduced.",
+    "Source truth, whole-inventory completeness, semantic equivalence, authorization, runtime findability, and human effectiveness are explicitly unexamined.",
+    "Unknown fields and references outside a partial snapshot are reported, without treating them as proven product defects.",
+    "Plan 1.1 contract and validate_plan.py are unchanged versus the frozen baseline; no new required top-level plan field was added.",
+    "NISO historical-version limitation, related W3C source family, and SharePoint-specific operation scope are expressly retained."
+  ],
+  "limitations": [
+    "The evaluator is an independent thread of the same model family, not an objective human evaluator.",
+    "Candidate code, instructions, task-prescribed coverage and researcher source summaries were read before fixture creation. Researcher summaries included proposed test descriptions; parent executable tests, R04 inventory-cases, 96 tasks, rubric/oracle and anonymized proposals were not read before the initial fixtures ran.",
+    "No browser rendering or actual UI operation was performed. Prior sandbox-launch restriction was accepted without retry.",
+    "No user study, real product inventory migration, tenant operation, or source-data completeness verification occurred.",
+    "Parent-reported 68-method suite result is not counted as the reviewer's independent execution.",
+    "The source review confirmed bounded original sections, not every claim in every inherited source or a complete source archive."
+  ],
+  "pending": ["Parent correction and independent recheck of R04-CR-001", "Receipt and fixed-rubric evaluation of anonymized proposals"]
+}

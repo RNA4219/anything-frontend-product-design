@@ -1,0 +1,51 @@
+{
+  "analysis_input_snapshot": "Analyst used initial R03 registry hashes recorded in its log. Parent registered candidates after units.json became available, before the analyst final status; analyst detected three registry updates and retained its initial comparison without rereading.",
+  "analysis_final_content_matches_registered_source": true,
+  "helper_scope": "Optional normalized snapshot comparison, not a new plan schema or automatic approval gate.",
+  "protocol": "checker-protocol.json was fixed before implementation.",
+  "candidate_source": "d5155e06f533ca7a91323c6ded4c535b71ffbd57c1f59c3e8fe16a3dd72dc021",
+  "analysis_final_reconciliation": {
+    "instructions_conditions_unchanged": true,
+    "final_delta": "Analyst added explicit implementation boundaries, removed one redundant proposed test and added a verification caveat. Parent adopted final output before candidate freeze.",
+    "final_tests_proposed": 14,
+    "final_sha256": "d5155e06f533ca7a91323c6ded4c535b71ffbd57c1f59c3e8fe16a3dd72dc021"
+  },
+  "post_freeze_test_portability": "The inventory regression fixtures are now owned by module/tests, so the documented tests run when the module is copied without campaigns/. This changes only test data location; candidate instructions and helper hash remain frozen.",
+  "post_freeze_source_preservation_fix": {
+    "finding": "Parent CLI alias hypothesis, independently reproduced by critic; same path and symlink initially overwrote snapshots with COMPARED/exit0",
+    "fix": "Before any output write, reject resolved-path or samefile collision against both inputs",
+    "parent_checks": "13 inventory methods pass, including same-path/symlink/hardlink refusal and separate-output success",
+    "candidate_experiment": "Frozen instruction/helper input unchanged. Historical helper will be archived as pre-fix evidence; current module contains repair.",
+    "independent_recheck": "4/4 controls passed; same path, symlink and hardlink refused without source change, separate output exactly matched frozen comparator result."
+  },
+  "metadata_only_corrections": [
+    "A-IU-001",
+    "A-IU-003",
+    "A-IU-004",
+    "A-IU-008",
+    "A-IU-009",
+    "A-IU-010"
+  ],
+  "frozen_artifact_whitespace": {
+    "path": "campaigns/A/rounds/R04/design-arms/J/preview.html",
+    "lines": [
+      31,
+      43,
+      72,
+      84,
+      105,
+      117
+    ],
+    "reason": "Whitespace-only blank lines are retained to keep the exact bytes independently evaluated and recorded in arm-snapshot.json. Functional source and all other changed files are checked normally.",
+    "full_git_diff_check": "Reports these six historical artifact whitespace warnings; not represented as a clean whole-tree whitespace result."
+  },
+  "concurrent_integration": {
+    "observed_prior_pr": 6,
+    "state": "merged",
+    "prior_merge_commit": "a66e7c3fcf682f2953270da38e6157e2b0744b90",
+    "prior_branch_advanced_to": "2b61dbf3943c7932e8398538014e0582965ab4a7",
+    "integration_base": "8b4d23426ffb71af82e924803f32ca59d80f3662",
+    "action": "Retained original local R04 checkpoint, replayed only scoped R04 changes on a new branch, preserved upstream cleanup. No main merge performed by this session."
+  },
+  "analysis_publication_view": "Final analyst bytes retained privately; public view omits a non-design recording reference. See publication-views.json."
+}

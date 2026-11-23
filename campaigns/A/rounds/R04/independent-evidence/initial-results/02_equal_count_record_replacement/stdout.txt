@@ -1,0 +1,62 @@
+{
+  "status": "COMPARED",
+  "decision": "NOT_EVALUATED",
+  "basis": {
+    "before_revision": "cabinet-17",
+    "after_revision": "cabinet-18",
+    "proposed_basis_revision": "cabinet-17",
+    "basis_matches": true
+  },
+  "counts": {
+    "concepts": {
+      "before": 2,
+      "after": 2
+    },
+    "records": {
+      "before": 2,
+      "after": 2
+    },
+    "entries": {
+      "before": 2,
+      "after": 2
+    }
+  },
+  "differences": {
+    "concepts": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "records": {
+      "removed_ids": [
+        "H-moss"
+      ],
+      "added_ids": [
+        "H-algae"
+      ],
+      "changed_fields": []
+    },
+    "entries": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    }
+  },
+  "input_warnings": [],
+  "references_not_in_snapshot": [],
+  "unexamined_fields": [],
+  "checks_available": {
+    "declared_field_comparison": true,
+    "source_truth": false,
+    "whole_inventory_completeness": false,
+    "semantic_equivalence": false,
+    "change_authorization": false,
+    "runtime_findability": false,
+    "human_effectiveness": false
+  },
+  "meaning": "Differences require interpretation against intended changes and scope. Equal counts or no examined-field differences do not establish preservation, authorization or usability.",
+  "input_sha256": {
+    "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+    "after": "e25efa5f4f763672177fd1733070ed81bef0fee00d954842f0ce479ba4803416"
+  }
+}

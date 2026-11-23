@@ -1,0 +1,70 @@
+{
+  "decision": "NOT_EVALUATED",
+  "rationale": "部分集合外の参照と未知メタデータを報告し、外部参照を製品欠陥と断定しない。既知フィールド差分0も全体保持を意味しない。",
+  "status": "COMPARED",
+  "exit_code": 0,
+  "differences": {
+    "concepts": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "records": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "entries": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    }
+  },
+  "counts": {
+    "concepts": {
+      "before": 2,
+      "after": 2
+    },
+    "records": {
+      "before": 2,
+      "after": 2
+    },
+    "entries": {
+      "before": 2,
+      "after": 2
+    }
+  },
+  "input_warnings": [],
+  "references_not_in_snapshot": [
+    {
+      "location": "before.records.H-moss.concept_ids",
+      "id": "external-concept"
+    },
+    {
+      "location": "before.concepts.use-loan.parent_ids",
+      "id": "external-parent"
+    },
+    {
+      "location": "after.records.H-moss.concept_ids",
+      "id": "external-concept"
+    },
+    {
+      "location": "after.concepts.use-loan.parent_ids",
+      "id": "external-parent"
+    }
+  ],
+  "unexamined_fields": [
+    "before.records[].source_assertion",
+    "before.snapshot_coverage",
+    "after.records[].source_assertion",
+    "after.snapshot_coverage"
+  ],
+  "unavailable_checks": [
+    "source_truth",
+    "whole_inventory_completeness",
+    "semantic_equivalence",
+    "change_authorization",
+    "runtime_findability",
+    "human_effectiveness"
+  ]
+}

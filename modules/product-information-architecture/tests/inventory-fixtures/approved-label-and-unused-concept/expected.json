@@ -1,0 +1,10 @@
+{
+  "record_deltas": 0,
+  "concept_label_changed": [
+    "P"
+  ],
+  "unused_concept_removed": [
+    "unused"
+  ],
+  "approval": "Explicit synthetic control. The comparison helper must report changes without declaring them invalid or automatically approved."
+}

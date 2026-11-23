@@ -1,0 +1,59 @@
+{
+  "hypothesis_confirmed": true,
+  "results": [
+    {
+      "variant": "exact-before-path",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/supplemental-initial/13_output_aliases_source/exact-before-path/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/supplemental-initial/13_output_aliases_source/exact-before-path/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/supplemental-initial/13_output_aliases_source/exact-before-path/before.json"
+      ],
+      "exit_code": 0,
+      "printed_status": "COMPARED",
+      "source_bytes_preserved": {
+        "before": false,
+        "after": true
+      },
+      "source_sha256_before": {
+        "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after": "421b18cf180a665429390fcdcaa7c43cb362c0102043113bec37bc5fa1b13a5e"
+      },
+      "source_sha256_after": {
+        "before": "c20a7c2eefdc898bb6697c2634f424e1d779e27127dd3f77a16b2523c422035c",
+        "after": "421b18cf180a665429390fcdcaa7c43cb362c0102043113bec37bc5fa1b13a5e"
+      }
+    },
+    {
+      "variant": "symlink-to-after",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/supplemental-initial/13_output_aliases_source/symlink-to-after/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/supplemental-initial/13_output_aliases_source/symlink-to-after/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/supplemental-initial/13_output_aliases_source/symlink-to-after/result-alias.json"
+      ],
+      "exit_code": 0,
+      "printed_status": "COMPARED",
+      "source_bytes_preserved": {
+        "before": true,
+        "after": false
+      },
+      "source_sha256_before": {
+        "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after": "421b18cf180a665429390fcdcaa7c43cb362c0102043113bec37bc5fa1b13a5e"
+      },
+      "source_sha256_after": {
+        "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after": "c20a7c2eefdc898bb6697c2634f424e1d779e27127dd3f77a16b2523c422035c"
+      }
+    }
+  ]
+}

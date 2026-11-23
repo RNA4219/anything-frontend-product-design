@@ -1,0 +1,100 @@
+{
+  "id": "R04-R1-S02",
+  "url": "https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf",
+  "title": "ANSI/NISO Z39.19-2005 (R2010)",
+  "publisher": "NISO",
+  "source_type": "historical primary standard",
+  "retrieved_at": "2026-11-23T08:30:41.944223+00:00",
+  "retrieved_at_basis": "UTC archival capture after retrieval; exact per-Web-action timestamp unavailable",
+  "sha256": "314814074a3ff7d69b5cc209ca1c1e8c153f473a6c0b66574603c081139d7fbc",
+  "sha256_scope": "complete local selected-excerpt Markdown file bytes, including metadata; not original remote HTML/PDF",
+  "version": "Approved 25 July 2005; reaffirmed 13 May 2010; PDF 184 pages",
+  "locator": [
+    {
+      "remote": "§11.3.2.1; printed p97 / PDF index108; turn437460956view0 L4366",
+      "local_line": 12,
+      "short_quote": "previously indexed database records"
+    },
+    {
+      "remote": "§11.3.2.1(b); printed p97 / PDF index108; turn437460956view0 L4377",
+      "local_line": 16,
+      "short_quote": "One-for-one term changes"
+    },
+    {
+      "remote": "§11.3.2.1(c); printed p97 / PDF index108; turn437460956view0 L4380",
+      "local_line": 20,
+      "short_quote": "human intervention"
+    },
+    {
+      "remote": "§11.3.1.2; printed p97 / PDF index108; turn437460956view0 L4357",
+      "local_line": 24,
+      "short_quote": "record of the old ones"
+    },
+    {
+      "remote": "§9.1.2; printed pp57–58 / PDF indexes68–69; turn616321472view1 L2954–2955",
+      "local_line": 28,
+      "short_quote": "each anticipated class of user"
+    },
+    {
+      "remote": "§11.3.2.1; printed p97 / PDF index108; turn437460956view0 L4367",
+      "local_line": 32,
+      "short_quote": "has never been assigned"
+    }
+  ],
+  "verified_claims": [
+    {
+      "claim": "用語または関係の変更は旧形・旧関係と変更履歴を扱う。",
+      "locator": "§11.3.1.2, printed pp96–97 / PDF indexes107–108"
+    },
+    {
+      "claim": "変更・削除時には既存の索引済みレコードを検索できるか検討する。未使用語は例外となる。",
+      "locator": "§11.3.2.1, printed p97 / PDF index108, L4364–4387"
+    },
+    {
+      "claim": "一対一の用語置換と複数の具体語への再編を区別し、後者では人の判断が必要な場合がある。代替索引なしの削除はアクセスを減らし得る。",
+      "locator": "§11.3.2.1(b)–(c), printed p97 / PDF index108"
+    },
+    {
+      "claim": "語彙表示では保守担当者・専門検索者・一般利用者それぞれの必要を考慮する。",
+      "locator": "§9.1.2, printed pp57–58 / PDF indexes68–69"
+    }
+  ],
+  "limits": [
+    "2005(R2010)版の歴史的一次規格を読んだ。2026年時点の最新版・有効性は未確認。",
+    "単一言語の統制語彙が対象。検索結果画面の生成ソフトウェアは§9で対象外。",
+    "利用者区分は語彙利用の役割であり、製品の認可・アクセス制御の規則ではない。",
+    "語の低頻度による変更・削除候補化を、機能削除の一般規則として転用しない。"
+  ],
+  "source_edges": [
+    {
+      "from_url": "https://www.niso.org/publications/ansiniso-z3919-2005-r2010",
+      "to_url": "https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf",
+      "relation": "official_publication_page_to_standard_pdf",
+      "tool": "Web click",
+      "ref": "turn119438020view0",
+      "link_id": 1,
+      "from_locator": "L7 standard download",
+      "result_ref": "turn810667150view0",
+      "verified": true,
+      "unique_edge": true
+    }
+  ],
+  "acquisition": {
+    "imozuru_fetch": "FAIL: temporary DNS name resolution failure",
+    "fetch_log": "fetch-log.jsonl",
+    "method": "permitted Web tool; manually selected short verbatim fragments with remote section/page/line locators",
+    "original_html_downloaded": false,
+    "original_pdf_downloaded": false,
+    "full_original_archive": false,
+    "web_refs": [
+      "turn810667150view0",
+      "turn616321472view1",
+      "turn437460956view0"
+    ],
+    "original_passages_read_beyond_archived_fragments": true,
+    "remote_fidelity_check": "manual against displayed Web tool original body; not a whole-source hash comparison"
+  },
+  "publication_safety": "Private research artifact. Do not copy source fragments or private reports into public Skill repository.",
+  "source_id": "R04-R1-S02",
+  "publication": "Original metadata and bounded paraphrases; third-party raw excerpts are private and not redistributed."
+}

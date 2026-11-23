@@ -1,0 +1,92 @@
+{
+  "id": "R04-R1-S03",
+  "url": "https://www.w3.org/TR/skos-primer/",
+  "title": "SKOS Simple Knowledge Organization System Primer",
+  "publisher": "W3C",
+  "source_type": "non-normative official Working Group Note",
+  "retrieved_at": "2026-11-23T08:30:41.944223+00:00",
+  "retrieved_at_basis": "UTC archival capture after retrieval; exact per-Web-action timestamp unavailable",
+  "sha256": "24ce7d823f08f9661ef9fbb0bf895395e1509df1c608bfe3cb1e18e22824f484",
+  "sha256_scope": "complete local selected-excerpt Markdown file bytes, including metadata; not original remote HTML/PDF",
+  "version": "W3C Working Group Note 18 August 2009; informative broken-link update 30 October 2023",
+  "locator": [
+    {
+      "remote": "§2.1; turn616321472view3 L127",
+      "local_line": 12,
+      "short_quote": "independent of the terms used to label them"
+    },
+    {
+      "remote": "§3.3; turn616321472view2 L410",
+      "local_line": 16,
+      "short_quote": "does not include a mechanism"
+    },
+    {
+      "remote": "§3.3; turn616321472view2 L417",
+      "local_line": 20,
+      "short_quote": "single resource can have several subjects"
+    },
+    {
+      "remote": "§3.2; turn616321472view2 L404",
+      "local_line": 24,
+      "short_quote": "additional steps may be required"
+    }
+  ],
+  "verified_claims": [
+    {
+      "claim": "概念はそれを表す語と独立した単位として説明される。",
+      "locator": "§2.1 L125–139"
+    },
+    {
+      "claim": "任意の資源を概念へ関連付ける仕組みはSKOS語彙自体に含まれず、別語彙による主題付与が例示される。",
+      "locator": "§3.3 L407–416"
+    },
+    {
+      "claim": "一つの資源は複数の主題を持ち、それらは異なる分類体系に由来してもよい。",
+      "locator": "§3.3 L417"
+    },
+    {
+      "claim": "再利用したデータの来歴や所有関係には追加の扱いが必要な場合がある。",
+      "locator": "§3.2 L394–404"
+    }
+  ],
+  "limits": [
+    "Working Group Noteの説明資料で、規範の本体はSKOS Reference。",
+    "Referenceと同じW3C SKOS系統であり独立実証として加算しない。",
+    "レコードへの付与関係を別に点検するAの手順は本調査の導出で、SKOS準拠義務ではない。"
+  ],
+  "source_edges": [
+    {
+      "from_url": "https://www.w3.org/TR/skos-reference/",
+      "to_url": "https://www.w3.org/TR/skos-primer/",
+      "relation": "body_link_to_companion_guide",
+      "tool": "Web click",
+      "ref": "turn321168672view0",
+      "link_id": 30,
+      "from_locator": "Status of this Document L40; companion Primer body link",
+      "result_ref": "turn119438020view1",
+      "verified": true,
+      "post_archive_repeat_ref": "turn708494109view0",
+      "unique_edge": true
+    }
+  ],
+  "acquisition": {
+    "imozuru_fetch": "FAIL: temporary DNS name resolution failure",
+    "fetch_log": "fetch-log.jsonl",
+    "method": "permitted Web tool; manually selected short verbatim fragments with remote section/page/line locators",
+    "original_html_downloaded": false,
+    "original_pdf_downloaded": false,
+    "full_original_archive": false,
+    "web_refs": [
+      "turn357636164view0",
+      "turn616321472view2",
+      "turn616321472view3",
+      "turn437460956view2",
+      "turn708494109view0"
+    ],
+    "original_passages_read_beyond_archived_fragments": true,
+    "remote_fidelity_check": "manual against displayed Web tool original body; not a whole-source hash comparison"
+  },
+  "publication_safety": "Private research artifact. Do not copy source fragments or private reports into public Skill repository.",
+  "source_id": "R04-R1-S03",
+  "publication": "Original metadata and bounded paraphrases; third-party raw excerpts are private and not redistributed."
+}

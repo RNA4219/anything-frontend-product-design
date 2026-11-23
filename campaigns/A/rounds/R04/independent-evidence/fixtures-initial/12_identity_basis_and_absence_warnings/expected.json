@@ -1,0 +1,65 @@
+{
+  "decision": "NOT_EVALUATED",
+  "rationale": "revision/scopeの取り違えは警告であり採否判定ではない。任意値の不在と明示空集合は区別する。",
+  "status": "COMPARED",
+  "exit_code": 0,
+  "differences": {
+    "concepts": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": [
+        {
+          "id": "use-study",
+          "field": "parent_ids",
+          "before": {
+            "present": true,
+            "value": []
+          },
+          "after": {
+            "present": false,
+            "value": null
+          }
+        }
+      ]
+    },
+    "records": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "entries": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    }
+  },
+  "counts": {
+    "concepts": {
+      "before": 2,
+      "after": 2
+    },
+    "records": {
+      "before": 2,
+      "after": 2
+    },
+    "entries": {
+      "before": 2,
+      "after": 2
+    }
+  },
+  "input_warnings": [
+    "case_id differs; establish that these snapshots are a meaningful comparison",
+    "Proposed basis_revision is missing or does not match the supplied before revision",
+    "Same declared revision contains different examined data"
+  ],
+  "references_not_in_snapshot": [],
+  "unexamined_fields": [],
+  "unavailable_checks": [
+    "source_truth",
+    "whole_inventory_completeness",
+    "semantic_equivalence",
+    "change_authorization",
+    "runtime_findability",
+    "human_effectiveness"
+  ]
+}

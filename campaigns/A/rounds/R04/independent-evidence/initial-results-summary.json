@@ -1,0 +1,202 @@
+{
+  "executed_at": "2026-11-23T08:59:31.625739+00:00",
+  "candidate_sha256": "2e5cc45b1a60c6760ca2ecdb5cf8b3dc6c8ef45bdc4ea5b980507fcb4cdbe7e4",
+  "expectations_manifest_sha256": "423338a64c4f2fb720452b8c223340601f4d788f19a5edd20c5598ce2e65f03c",
+  "results": [
+    {
+      "case_id": "01_set_and_row_order",
+      "matched_expectations": true,
+      "exit_code": 0,
+      "mismatches": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/01_set_and_row_order/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/01_set_and_row_order/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/01_set_and_row_order/actual.json"
+      ]
+    },
+    {
+      "case_id": "02_equal_count_record_replacement",
+      "matched_expectations": true,
+      "exit_code": 0,
+      "mismatches": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/02_equal_count_record_replacement/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/02_equal_count_record_replacement/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/02_equal_count_record_replacement/actual.json"
+      ]
+    },
+    {
+      "case_id": "03_equal_category_count_membership_swap",
+      "matched_expectations": true,
+      "exit_code": 0,
+      "mismatches": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/03_equal_category_count_membership_swap/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/03_equal_category_count_membership_swap/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/03_equal_category_count_membership_swap/actual.json"
+      ]
+    },
+    {
+      "case_id": "04_intended_rename_and_entry_move",
+      "matched_expectations": true,
+      "exit_code": 0,
+      "mismatches": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/04_intended_rename_and_entry_move/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/04_intended_rename_and_entry_move/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/04_intended_rename_and_entry_move/actual.json"
+      ]
+    },
+    {
+      "case_id": "05_declared_valid_id_succession",
+      "matched_expectations": true,
+      "exit_code": 0,
+      "mismatches": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/05_declared_valid_id_succession/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/05_declared_valid_id_succession/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/05_declared_valid_id_succession/actual.json"
+      ]
+    },
+    {
+      "case_id": "06_valid_multiple_membership",
+      "matched_expectations": true,
+      "exit_code": 0,
+      "mismatches": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/06_valid_multiple_membership/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/06_valid_multiple_membership/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/06_valid_multiple_membership/actual.json"
+      ]
+    },
+    {
+      "case_id": "07_same_ids_scope_and_role_change",
+      "matched_expectations": true,
+      "exit_code": 0,
+      "mismatches": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/07_same_ids_scope_and_role_change/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/07_same_ids_scope_and_role_change/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/07_same_ids_scope_and_role_change/actual.json"
+      ]
+    },
+    {
+      "case_id": "08_partial_unknown_and_outside_references",
+      "matched_expectations": true,
+      "exit_code": 0,
+      "mismatches": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/08_partial_unknown_and_outside_references/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/08_partial_unknown_and_outside_references/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/08_partial_unknown_and_outside_references/actual.json"
+      ]
+    },
+    {
+      "case_id": "09_empty_declared_collections",
+      "matched_expectations": true,
+      "exit_code": 0,
+      "mismatches": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/09_empty_declared_collections/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/09_empty_declared_collections/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/09_empty_declared_collections/actual.json"
+      ]
+    },
+    {
+      "case_id": "10_invalid_duplicate_identity",
+      "matched_expectations": true,
+      "exit_code": 2,
+      "mismatches": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/10_invalid_duplicate_identity/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/10_invalid_duplicate_identity/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/10_invalid_duplicate_identity/actual.json"
+      ]
+    },
+    {
+      "case_id": "11_invalid_types_missing_and_duplicate_membership",
+      "matched_expectations": true,
+      "exit_code": 2,
+      "mismatches": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/11_invalid_types_missing_and_duplicate_membership/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/11_invalid_types_missing_and_duplicate_membership/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/11_invalid_types_missing_and_duplicate_membership/actual.json"
+      ]
+    },
+    {
+      "case_id": "12_identity_basis_and_absence_warnings",
+      "matched_expectations": true,
+      "exit_code": 0,
+      "mismatches": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+        "--before",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/12_identity_basis_and_absence_warnings/before.json",
+        "--after",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/12_identity_basis_and_absence_warnings/after.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/12_identity_basis_and_absence_warnings/actual.json"
+      ]
+    }
+  ],
+  "meaning": "Independent implementation behavior checks only, not migration approval or user effectiveness.",
+  "matched": 12,
+  "total": 12
+}

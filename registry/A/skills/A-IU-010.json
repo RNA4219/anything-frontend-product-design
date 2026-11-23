@@ -76,7 +76,7 @@
   ],
   "confidence": {
     "source_support": "R01–R03 bounded source records and independent review; inherited source provenance retained, no claim of full-source archive or universal empirical validity.",
-    "transfer": "Synthetic decision-information task pending",
+    "transfer": "R03 synthetic decision-information task and bounded counterexamples completed; real-user transfer remains unestablished.",
     "empirical_skill_effect": "unverified",
     "task_effect": "One paired synthetic task per round; R03 6/6 versus 6/6 with assignment clue leakage; no improvement inference."
   },
@@ -112,6 +112,14 @@
       "status": "ACCEPT",
       "at": "2026-11-23T08:25:37.196539+00:00",
       "reason": "Bounded independent source/instruction review, adversarial cases and 57-method suite; paired task tie and assignment leakage retained."
+    },
+    {
+      "round": "R04",
+      "version": "1.1.1",
+      "status": "ACCEPT",
+      "kind": "metadata_correction",
+      "at": "2026-11-23T09:10:54.503462+00:00",
+      "reason": "Replace stale pending labels with completed bounded evidence; instruction meaning and empirical-effect status unchanged."
     }
   ],
   "acceptance_evidence": [

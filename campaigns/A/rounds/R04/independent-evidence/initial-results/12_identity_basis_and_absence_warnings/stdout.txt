@@ -1,0 +1,75 @@
+{
+  "status": "COMPARED",
+  "decision": "NOT_EVALUATED",
+  "basis": {
+    "before_revision": "cabinet-17",
+    "after_revision": "cabinet-17",
+    "proposed_basis_revision": "unrelated-revision",
+    "basis_matches": false
+  },
+  "counts": {
+    "concepts": {
+      "before": 2,
+      "after": 2
+    },
+    "records": {
+      "before": 2,
+      "after": 2
+    },
+    "entries": {
+      "before": 2,
+      "after": 2
+    }
+  },
+  "differences": {
+    "concepts": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": [
+        {
+          "id": "use-study",
+          "field": "parent_ids",
+          "before": {
+            "present": true,
+            "value": []
+          },
+          "after": {
+            "present": false,
+            "value": null
+          }
+        }
+      ]
+    },
+    "records": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "entries": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    }
+  },
+  "input_warnings": [
+    "case_id differs; establish that these snapshots are a meaningful comparison",
+    "Proposed basis_revision is missing or does not match the supplied before revision",
+    "Same declared revision contains different examined data"
+  ],
+  "references_not_in_snapshot": [],
+  "unexamined_fields": [],
+  "checks_available": {
+    "declared_field_comparison": true,
+    "source_truth": false,
+    "whole_inventory_completeness": false,
+    "semantic_equivalence": false,
+    "change_authorization": false,
+    "runtime_findability": false,
+    "human_effectiveness": false
+  },
+  "meaning": "Differences require interpretation against intended changes and scope. Equal counts or no examined-field differences do not establish preservation, authorization or usability.",
+  "input_sha256": {
+    "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+    "after": "c7ee5bcce4429a1f8b11c211daf54262f3ec30c3097385a2e4d5da6067175ed4"
+  }
+}

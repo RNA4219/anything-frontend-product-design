@@ -1,0 +1,35 @@
+{
+  "source_count": 96,
+  "proposal_count": 96,
+  "missing_ids": [
+    "ITEM-073"
+  ],
+  "unapproved_new_ids": [
+    "ITEM-X73"
+  ],
+  "scope_changed": [
+    "ITEM-088"
+  ],
+  "roles_expanded": [
+    "ITEM-090"
+  ],
+  "unknown_material_ids": [
+    "ITEM-015",
+    "ITEM-030",
+    "ITEM-045",
+    "ITEM-060",
+    "ITEM-075",
+    "ITEM-090"
+  ],
+  "needs_revision": [
+    "CH01",
+    "CH02",
+    "CH03",
+    "CH06"
+  ],
+  "valid_controls": [
+    "CH04",
+    "CH05"
+  ],
+  "basis": "Derived from fixed synthetic input before candidate construction; no observed user behavior."
+}

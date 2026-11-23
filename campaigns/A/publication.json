@@ -1,6 +1,5 @@
 {
-  "branch": "campaign/A-product-ia-evolution-20261123",
-  "draft_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/6",
+  "branch": "campaign/A-product-ia-r04-20261123",
   "checkpoints": [
     {
       "round": "R01",
@@ -17,7 +16,33 @@
       "tree": "3c7418f931313d5ec833d1f833b91845527cac4b",
       "tree_identity_verified": true,
       "method": "GitHub Git-data API with expected branch head"
+    },
+    {
+      "round": "R03",
+      "local_commit": "0247c941f6e639e796b93e08f87fee0e54ed08b4",
+      "remote_commit": "9e14fbaa1d7b0c3d00ddf3a4b208a21300f0d337",
+      "tree": "fca9fd598e8f222a87638d8cd6a7a157bf2f6918",
+      "method": "Connector tree/commit with expected-head ref update; local and remote tree equality verified",
+      "at": "2026-11-23T08:28:08.584322+00:00"
     }
   ],
-  "automatic_merge": false
+  "automatic_merge": false,
+  "previous_pr": {
+    "url": "https://github.com/RNA4219/anything-frontend-product-design/pull/6",
+    "state": "merged by concurrent work; not by this session",
+    "current_availability": "404 after remote repository state changed"
+  },
+  "integration_base": "4333d097b5699528b5554434b494d8079126ba0f",
+  "draft_pr": null,
+  "status": "BASE_RESTORED_PUBLICATION_RESUMED",
+  "follow_up_attempt": {
+    "branch": "campaign/A-product-ia-r04-20261123",
+    "integration_base": "4333d097b5699528b5554434b494d8079126ba0f",
+    "local_reviewed_commit": "ee4ed8de5c7e74f207c5f723aab99d5b39ff299c",
+    "remote_validation": "rounds/R04/remote-validation.json",
+    "remote_commit": null,
+    "pr": null,
+    "remote_recovery": "rounds/R04/remote-recovery.json"
+  },
+  "previous_integration_base": "8b4d23426ffb71af82e924803f32ca59d80f3662"
 }

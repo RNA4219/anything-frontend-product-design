@@ -1,0 +1,8 @@
+{
+  "head": "9e14fbaa1d7b0c3d00ddf3a4b208a21300f0d337",
+  "queried_at": "2026-11-23T08:35:25.825180+00:00",
+  "commit_statuses_returned": 0,
+  "pull_request_triggered_workflow_runs_returned": 0,
+  "interpretation": "No CI result observed through these APIs. Not CI success; workflow endpoint filters PR-triggered runs and first page.",
+  "tree_equality_verified": true
+}

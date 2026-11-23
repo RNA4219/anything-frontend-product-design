@@ -1,0 +1,1365 @@
+{
+  "revision": "inventory-r18-proposed",
+  "case_id": "R04-equipment-reclassification",
+  "concepts": [
+    {
+      "id": "task.heat",
+      "label": "加熱",
+      "axis": "task"
+    },
+    {
+      "id": "task.inspect",
+      "label": "検査",
+      "axis": "task"
+    },
+    {
+      "id": "material.metal",
+      "label": "金属",
+      "axis": "material"
+    },
+    {
+      "id": "material.wood",
+      "label": "木材",
+      "axis": "material"
+    },
+    {
+      "id": "task.work",
+      "label": "作業用",
+      "axis": "task"
+    }
+  ],
+  "records": [
+    {
+      "id": "ITEM-001",
+      "label": "設備 001",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-002",
+      "label": "設備 002",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-003",
+      "label": "設備 003",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-004",
+      "label": "設備 004",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-005",
+      "label": "設備 005",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-006",
+      "label": "設備 006",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-007",
+      "label": "設備 007",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-008",
+      "label": "設備 008",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-009",
+      "label": "設備 009",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-010",
+      "label": "設備 010",
+      "scope": "site-B",
+      "roles": [
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-011",
+      "label": "設備 011",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-012",
+      "label": "設備 012",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-013",
+      "label": "設備 013",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-014",
+      "label": "設備 014",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-015",
+      "label": "設備 015",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-016",
+      "label": "設備 016",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-017",
+      "label": "設備 017",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-018",
+      "label": "設備 018",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-019",
+      "label": "設備 019",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-020",
+      "label": "設備 020",
+      "scope": "site-B",
+      "roles": [
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-021",
+      "label": "設備 021",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-022",
+      "label": "設備 022",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-023",
+      "label": "設備 023",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-024",
+      "label": "設備 024",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-025",
+      "label": "設備 025",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-026",
+      "label": "設備 026",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-027",
+      "label": "設備 027",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-028",
+      "label": "設備 028",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-029",
+      "label": "設備 029",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-030",
+      "label": "設備 030",
+      "scope": "site-B",
+      "roles": [
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-031",
+      "label": "設備 031",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-032",
+      "label": "設備 032",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-033",
+      "label": "設備 033",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-034",
+      "label": "設備 034",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-035",
+      "label": "設備 035",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-036",
+      "label": "設備 036",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-037",
+      "label": "設備 037",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-038",
+      "label": "設備 038",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-039",
+      "label": "設備 039",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-040",
+      "label": "設備 040",
+      "scope": "site-B",
+      "roles": [
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-041",
+      "label": "設備 041",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-042",
+      "label": "設備 042",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-043",
+      "label": "設備 043",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-044",
+      "label": "設備 044",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-045",
+      "label": "設備 045",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-046",
+      "label": "設備 046",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-047",
+      "label": "設備 047",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-048",
+      "label": "設備 048",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-049",
+      "label": "設備 049",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-050",
+      "label": "設備 050",
+      "scope": "site-B",
+      "roles": [
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-051",
+      "label": "設備 051",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-052",
+      "label": "設備 052",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-053",
+      "label": "設備 053",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-054",
+      "label": "設備 054",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-055",
+      "label": "設備 055",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-056",
+      "label": "設備 056",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-057",
+      "label": "設備 057",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-058",
+      "label": "設備 058",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-059",
+      "label": "設備 059",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-060",
+      "label": "設備 060",
+      "scope": "site-B",
+      "roles": [
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-061",
+      "label": "設備 061",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-062",
+      "label": "設備 062",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-063",
+      "label": "設備 063",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-064",
+      "label": "設備 064",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-065",
+      "label": "設備 065",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-066",
+      "label": "設備 066",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-067",
+      "label": "設備 067",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-068",
+      "label": "設備 068",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-069",
+      "label": "設備 069",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-070",
+      "label": "設備 070",
+      "scope": "site-B",
+      "roles": [
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-071",
+      "label": "設備 071",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-072",
+      "label": "設備 072",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-074",
+      "label": "設備 074",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-075",
+      "label": "設備 075",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-076",
+      "label": "設備 076",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-077",
+      "label": "設備 077",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-078",
+      "label": "設備 078",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-079",
+      "label": "設備 079",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-080",
+      "label": "設備 080",
+      "scope": "site-B",
+      "roles": [
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-081",
+      "label": "設備 081",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-082",
+      "label": "設備 082",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-083",
+      "label": "設備 083",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-084",
+      "label": "設備 084",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-085",
+      "label": "設備 085",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-086",
+      "label": "設備 086",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-087",
+      "label": "設備 087",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-088",
+      "label": "設備 088",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-089",
+      "label": "設備 089",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-090",
+      "label": "設備 090",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-091",
+      "label": "設備 091",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-092",
+      "label": "設備 092",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-093",
+      "label": "設備 093",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-094",
+      "label": "設備 094",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-095",
+      "label": "設備 095",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.heat",
+        "material.wood"
+      ]
+    },
+    {
+      "id": "ITEM-096",
+      "label": "設備 096",
+      "scope": "site-B",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.inspect",
+        "material.metal"
+      ]
+    },
+    {
+      "id": "ITEM-X73",
+      "label": "設備 073（取込複製）",
+      "scope": "site-A",
+      "roles": [
+        "staff",
+        "inventory_manager"
+      ],
+      "concept_ids": [
+        "task.work",
+        "material.wood"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry.measure",
+      "path": "/tools/measurement",
+      "role": "staff",
+      "scope": "all-sites",
+      "concept_ids": []
+    },
+    {
+      "id": "entry.heat",
+      "path": "/tools/heat",
+      "role": "staff",
+      "scope": "all-sites",
+      "concept_ids": [
+        "task.heat"
+      ]
+    }
+  ],
+  "basis_revision": "inventory-r17",
+  "changes": [
+    {
+      "id": "CH01",
+      "kind": "concept_mapping",
+      "source_ids": [
+        "task.measure",
+        "task.cut"
+      ],
+      "target_ids": [
+        "task.work"
+      ],
+      "relation": "broader",
+      "rationale": "作業用の機器なので上位カテゴリへ集約。レコードの用途タグも一括置換した。"
+    },
+    {
+      "id": "CH02",
+      "kind": "concept_merge",
+      "source_ids": [
+        "maintenance.inspect"
+      ],
+      "target_ids": [
+        "task.inspect"
+      ],
+      "relation": "exact",
+      "rationale": "表示名が検査で一致するため、保全状態と用途の別を統合した。"
+    },
+    {
+      "id": "CH03",
+      "kind": "assignment_change",
+      "source_ids": [
+        "material.unspecified"
+      ],
+      "target_ids": [
+        "material.wood"
+      ],
+      "relation": "exact",
+      "rationale": "材質の未入力は木材とみなす。個別確認は行っていない。"
+    },
+    {
+      "id": "CH04",
+      "kind": "concept_rename",
+      "source_ids": [
+        "task.heat"
+      ],
+      "target_ids": [
+        "task.heat"
+      ],
+      "relation": "same_concept",
+      "rationale": "名称変更は要件で承認済み。対象・所属・入口条件を保持する。"
+    },
+    {
+      "id": "CH05",
+      "kind": "concept_retirement",
+      "source_ids": [
+        "legacy.unused"
+      ],
+      "target_ids": [],
+      "relation": "retired",
+      "rationale": "現revisionに所属する設備・入口なし。要件で整理を承認済み。"
+    },
+    {
+      "id": "CH06",
+      "kind": "entry_change",
+      "source_ids": [
+        "entry.measure"
+      ],
+      "target_ids": [
+        "entry.measure"
+      ],
+      "relation": "landing_page",
+      "rationale": "既存URLは総合一覧を表示するため、表示成功とする。旧用途条件は引き継がない。"
+    }
+  ]
+}

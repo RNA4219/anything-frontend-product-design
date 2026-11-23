@@ -1,0 +1,54 @@
+{
+  "id": "R04-R2-S03",
+  "url": "https://learn.microsoft.com/en-us/sharepoint/create-and-manage-terms",
+  "title": "Create and manage terms in a term set",
+  "authors": [
+    "Microsoft"
+  ],
+  "source_type": "公式運用資料",
+  "version": "Last updated 2024-05-28; live page observed 2026-11-23; immutable upstream revision unavailable",
+  "doi": null,
+  "retrieved_at": "2026-11-23T08:28:44.566Z",
+  "sha256": "c086fd1fc368f0bfa2c9a6fa14547ee0642102cb544ea3be79906be3587a3a11",
+  "hash_target": "選択抜粋Markdown全体のUTF-8 bytes（メタデータ含む）。原HTML/PDF全文または原サイトのrevision hashではない。",
+  "locator": [
+    {
+      "web": "Copy term; Web L69",
+      "local_line": 13
+    },
+    {
+      "web": "Reuse term; Web L99",
+      "local_line": 16
+    },
+    {
+      "web": "Deprecate term; Web L118",
+      "local_line": 19
+    },
+    {
+      "web": "Merge term; Web L108",
+      "local_line": 22
+    }
+  ],
+  "web_ref": "turn526706532view2",
+  "verified_claims": [
+    "S03-F1",
+    "S03-F2"
+  ],
+  "limits": [
+    "全文未保存。短い抜粋のみ。変更可能な公式ページでimmutable revisionは未取得。",
+    "製品/組織の運用記述であり一般的なユーザー成果の実験ではない。"
+  ],
+  "source_edges": [],
+  "acquisition": {
+    "script": "fetch.py",
+    "script_result": "FAIL_DNS",
+    "fallback": "standard Web open/click of public original; selected excerpts",
+    "raw_html_or_pdf_saved": false,
+    "proxy_used": false,
+    "login_performed": false
+  },
+  "novel_against_known_sources": true,
+  "quoted_word_count": 24,
+  "source_id": "R04-R2-S03",
+  "publication": "Original metadata and bounded paraphrases; third-party raw excerpts are private and not redistributed."
+}

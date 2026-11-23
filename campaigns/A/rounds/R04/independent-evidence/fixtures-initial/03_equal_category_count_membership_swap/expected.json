@@ -1,0 +1,81 @@
+{
+  "decision": "NOT_EVALUATED",
+  "rationale": "対象数・分類別件数が同じでも、どの対象に付与されたかの交換を特定する。",
+  "status": "COMPARED",
+  "exit_code": 0,
+  "differences": {
+    "concepts": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "records": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": [
+        {
+          "id": "H-fern",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "use-study"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "use-loan"
+            ]
+          }
+        },
+        {
+          "id": "H-moss",
+          "field": "concept_ids",
+          "before": {
+            "present": true,
+            "value": [
+              "use-loan"
+            ]
+          },
+          "after": {
+            "present": true,
+            "value": [
+              "use-study"
+            ]
+          }
+        }
+      ]
+    },
+    "entries": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    }
+  },
+  "counts": {
+    "concepts": {
+      "before": 2,
+      "after": 2
+    },
+    "records": {
+      "before": 2,
+      "after": 2
+    },
+    "entries": {
+      "before": 2,
+      "after": 2
+    }
+  },
+  "input_warnings": [],
+  "references_not_in_snapshot": [],
+  "unexamined_fields": [],
+  "unavailable_checks": [
+    "source_truth",
+    "whole_inventory_completeness",
+    "semantic_equivalence",
+    "change_authorization",
+    "runtime_findability",
+    "human_effectiveness"
+  ]
+}

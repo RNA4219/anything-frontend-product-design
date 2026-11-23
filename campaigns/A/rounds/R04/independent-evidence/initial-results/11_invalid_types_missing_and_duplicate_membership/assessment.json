@@ -1,0 +1,16 @@
+{
+  "case_id": "11_invalid_types_missing_and_duplicate_membership",
+  "matched_expectations": true,
+  "exit_code": 2,
+  "mismatches": [],
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+    "--before",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/11_invalid_types_missing_and_duplicate_membership/before.json",
+    "--after",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/11_invalid_types_missing_and_duplicate_membership/after.json",
+    "--output",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/11_invalid_types_missing_and_duplicate_membership/actual.json"
+  ]
+}
