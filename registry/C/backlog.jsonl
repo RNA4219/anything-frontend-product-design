@@ -1,0 +1,13 @@
+{"issue_id": "C-001", "priority": 0, "title": "Native control, availability, modal focus and UI state contracts", "status": "OPEN", "planned_round": 1, "owner": "C"}
+{"issue_id": "C-002", "priority": 1, "title": "Reflow, overflow ownership, keyboard order and input modality", "status": "OPEN", "planned_round": 2, "owner": "C"}
+{"issue_id": "C-003", "priority": 1, "title": "Semantic token dependency, themes and system preferences", "status": "OPEN", "planned_round": 3, "owner": "C"}
+{"issue_id": "C-004", "priority": 1, "title": "Async result notification and stable component identity", "status": "OPEN", "planned_round": 4, "owner": "C"}
+{"issue_id": "C-005", "priority": 2, "title": "Cross-engine and assistive technology manual validation", "status": "OPEN", "planned_round": null, "owner": "C"}
+{"issue_id": "C-006", "priority": 2, "title": "IME composition, hydration and controlled-input browser boundaries", "status": "OPEN", "planned_round": null, "owner": "C"}
+{"issue_id": "C-007", "priority": 3, "title": "Complex composite widgets and virtualization", "status": "OPEN", "planned_round": null, "owner": "C"}
+{"issue_id": "C-X-B01", "priority": 1, "title": "Business recovery and retry idempotency for shared booking fixture", "status": "HANDOFF-B", "planned_round": null, "owner": "B"}
+{"issue_id": "C-X-D01", "priority": 2, "title": "User study and blinded repeated model effectiveness comparison", "status": "HANDOFF-D", "planned_round": null, "owner": "D"}
+{"issue_id": "C-001", "event": "decision", "status": "HOLD", "round": 1, "depends_on": "C-005"}
+{"issue_id": "C-003", "event": "prioritize", "status": "READY", "planned_round": 2, "reason": "Pure graph and build contracts can be tested without browser"}
+{"issue_id": "C-002", "event": "prioritize", "status": "OPEN", "planned_round": 3}
+{"issue_id": "C-008", "priority": 2, "status": "OPEN", "owner": "C", "title": "Expand real browser matrix: pointer/Enter/Space success, Shift+Tab and Escape after invoker deletion", "source": "round-01 critic suite coverage gaps"}

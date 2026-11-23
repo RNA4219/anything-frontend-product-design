@@ -1,0 +1,40 @@
+[
+  {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "modules/ui-engineering-design-system/tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_fixture_and_runtime_errors_do_not_claim_environment_block (test_browser_reporting.ReportingTests.test_fixture_and_runtime_errors_do_not_claim_environment_block) ... ok\ntest_unavailable_setup_is_blocked (test_browser_reporting.ReportingTests.test_unavailable_setup_is_blocked) ... ok\ntest_aria_disabled_has_no_default_behavior_guarantee (test_contracts.ContractTests.test_aria_disabled_has_no_default_behavior_guarantee) ... ok\ntest_candidate_is_consistent (test_contracts.ContractTests.test_candidate_is_consistent) ... ok\ntest_custom_control_requires_explicit_responsibilities (test_contracts.ContractTests.test_custom_control_requires_explicit_responsibilities) ... ok\ntest_custom_dialog_does_not_inherit_native_tabindex_ban (test_contracts.ContractTests.test_custom_dialog_does_not_inherit_native_tabindex_ban) ... ok\ntest_disabled_required_payload_needs_an_explicit_alternative (test_contracts.ContractTests.test_disabled_required_payload_needs_an_explicit_alternative) ... ok\ntest_duplicate_identity (test_contracts.ContractTests.test_duplicate_identity) ... ok\ntest_invalid_structures_do_not_crash_or_pass (test_contracts.ContractTests.test_invalid_structures_do_not_crash_or_pass) ... ok\ntest_malformed_or_unknown_submission_policy_is_rejected (test_contracts.ContractTests.test_malformed_or_unknown_submission_policy_is_rejected) ... ok\ntest_native_disabled_does_not_disable_anchor (test_contracts.ContractTests.test_native_disabled_does_not_disable_anchor) ... ok\ntest_nonmodal_outside_focus_must_be_preserved (test_contracts.ContractTests.test_nonmodal_outside_focus_must_be_preserved) ... ok\ntest_readonly_checkbox_and_select_are_not_readonly_text (test_contracts.ContractTests.test_readonly_checkbox_and_select_are_not_readonly_text) ... ok\ntest_seeded_baseline_detects_nine_distinct_defects (test_contracts.ContractTests.test_seeded_baseline_detects_nine_distinct_defects) ... ok\ntest_string_false_is_not_a_boolean (test_contracts.ContractTests.test_string_false_is_not_a_boolean) ... ok\ntest_textarea_readonly_is_allowed (test_contracts.ContractTests.test_textarea_readonly_is_allowed) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.003s\n\nOK\n",
+    "at": "2026-11-23T09:09:08.995376+00:00"
+  },
+  {
+    "command": [
+      "node",
+      "--test",
+      "modules/ui-engineering-design-system/tests/test_runtime.mjs"
+    ],
+    "exit_code": 0,
+    "stdout": "✔ all declared activation routes share live availability, not a stale closure (2.699373ms)\n✔ unknown or truthy nonboolean availability fails closed (0.276442ms)\n✔ cleanup completes before focus failure when invoker disappeared (0.487484ms)\n✔ nonmodal background work is not interrupted by fallback (0.461129ms)\n✔ valid browser restoration does not need duplicate focus (0.291384ms)\n✔ lost modal focus or explicit next workflow needs a fallback (0.173444ms)\nℹ tests 6\nℹ suites 0\nℹ pass 6\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 192.385491\n",
+    "stderr": "",
+    "at": "2026-11-23T09:09:09.340743+00:00"
+  },
+  {
+    "command": [
+      "python3",
+      "campaigns/C/rounds/01/critic-probes.py"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"command\": \"python3 campaigns/C/rounds/01/critic-probes.py\",\n  \"browser_or_at_executed\": false,\n  \"candidate_declarations_findings\": [],\n  \"malformed_submit_policy_probes\": [\n    {\n      \"submit_policy\": [],\n      \"findings\": [\n        {\n          \"path\": \"components[0].submit_policy\",\n          \"code\": \"STRUCTURE\",\n          \"severity\": \"error\",\n          \"message\": \"Expected a string.\"\n        }\n      ],\n      \"defect_reproduced\": false\n    },\n    {\n      \"submit_policy\": {},\n      \"findings\": [\n        {\n          \"path\": \"components[0].submit_policy\",\n          \"code\": \"STRUCTURE\",\n          \"severity\": \"error\",\n          \"message\": \"Expected a string.\"\n        }\n      ],\n      \"defect_reproduced\": false\n    },\n    {\n      \"submit_policy\": true,\n      \"findings\": [\n        {\n          \"path\": \"components[0].submit_policy\",\n          \"code\": \"STRUCTURE\",\n          \"severity\": \"error\",\n          \"message\": \"Expected a string.\"\n        }\n      ],\n      \"defect_reproduced\": false\n    },\n    {\n      \"submit_policy\": 0,\n      \"findings\": [\n        {\n          \"path\": \"components[0].submit_policy\",\n          \"code\": \"STRUCTURE\",\n          \"severity\": \"error\",\n          \"message\": \"Expected a string.\"\n        }\n      ],\n      \"defect_reproduced\": false\n    },\n    {\n      \"submit_policy\": null,\n      \"findings\": [\n        {\n          \"path\": \"components[0].submit_policy\",\n          \"code\": \"STRUCTURE\",\n          \"severity\": \"error\",\n          \"message\": \"Expected a string.\"\n        }\n      ],\n      \"defect_reproduced\": false\n    },\n    {\n      \"submit_policy\": \"incldue\",\n      \"findings\": [\n        {\n          \"path\": \"components[0].submit_policy\",\n          \"code\": \"SUBMIT_POLICY\",\n          \"severity\": \"error\",\n          \"message\": \"Declare include, omit, or not-applicable; unknown policies cannot pass.\"\n        }\n      ],\n      \"defect_reproduced\": false\n    }\n  ],\n  \"valid_controls\": [\n    {\n      \"separate_serialization\": false,\n      \"findings\": [\n        {\n          \"path\": \"components[0].submit_policy\",\n          \"code\": \"DISABLED_PAYLOAD\",\n          \"severity\": \"error\",\n          \"message\": \"Disabled native controls are omitted from FormData; specify separate serialization if needed.\"\n        }\n      ]\n    },\n    {\n      \"separate_serialization\": true,\n      \"findings\": []\n    }\n  ],\n  \"node_handler_probes\": {\n    \"kind\": \"pure Node execution of extracted application handlers with minimal doubles\",\n    \"browser_or_at_evidence\": false,\n    \"unavailableDidNotExecute\": true,\n    \"confirmedCount\": \"1\",\n    \"staleBefore\": {\n      \"reproduced\": false,\n      \"beforeMarkup\": \"12月10日 14:00\",\n      \"current\": \"R-204: 12月10日 14:00（変更可）\"\n    },\n    \"lostFocusNotDetected\": {\n      \"reproduced\": false,\n      \"suppliedState\": \"body active; invoker usable\"\n    },\n    \"removedInvokerFallback\": true,\n    \"validExternalFocusPreserved\": true,\n    \"limitations\": [\n      \"Native dialog, event scheduling, focus algorithms, keyboard events, layout and AT are not implemented by these doubles.\"\n    ]\n  }\n}\n",
+    "stderr": "",
+    "at": "2026-11-23T09:09:09.495483+00:00"
+  }
+]

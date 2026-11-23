@@ -1,0 +1,29 @@
+{
+  "round": 1,
+  "issues": [
+    "C-001"
+  ],
+  "question": "How can repeated UI components preserve native activation, availability semantics and modal focus across states?",
+  "research_questions": [
+    "Where do authoritative component behavior constraints and implementation experience live?",
+    "Which native and ARIA properties do not automatically enforce behavior?",
+    "When do disabled controls or modal initial focus rules fail in real use?",
+    "Which Art Direction instructions can be referenced rather than duplicated?"
+  ],
+  "evaluation_frozen_before_implementation": true,
+  "rubric": [
+    "Native keyboard activation works through Enter and Space where appropriate",
+    "Unavailable operation cannot execute; readonly and disabled are distinguished",
+    "Modal starts in meaningful focus, contains sequential focus and restores on close or uses logical fallback",
+    "Nonmodal content is not trapped; no unnecessary custom widget introduced",
+    "Business transition policy is treated as input, not invented by C"
+  ],
+  "required_cases": [
+    "normal",
+    "unavailable",
+    "cancel",
+    "invoker-removed",
+    "nonmodal-counterexample"
+  ],
+  "decision": "ACCEPT only for locally tested contract; unsupported AT and browser claims remain HOLD"
+}

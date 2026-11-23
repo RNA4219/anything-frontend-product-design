@@ -1,0 +1,15 @@
+{
+  "source_id": "C-S012",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal",
+  "title": "W3C APG Dialog Modal Pattern",
+  "retrieved_date": "2026-11-23",
+  "records": [
+    {
+      "file": "research/ui-engineering-design-system/round-01/researcher-2.json",
+      "source_id": "S3"
+    }
+  ],
+  "original_download": "unavailable",
+  "reader_capture": "partial",
+  "public_fulltext": false
+}

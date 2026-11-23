@@ -1,0 +1,76 @@
+{
+  "task_id": "booking-change",
+  "kind": "declared-contract-example",
+  "components": [
+    {
+      "component_id": "booking-link",
+      "intent": "navigation",
+      "element": "a",
+      "accessible_name": "予約一覧",
+      "destination": "#bookings"
+    },
+    {
+      "component_id": "change",
+      "intent": "action",
+      "element": "button",
+      "type": "button",
+      "accessible_name": "日程を変更"
+    },
+    {
+      "component_id": "booking-id",
+      "intent": "input",
+      "element": "input",
+      "type": "text",
+      "accessible_name": "予約番号",
+      "availability": "readonly",
+      "submit_policy": "include"
+    },
+    {
+      "component_id": "confirm-unavailable",
+      "intent": "action",
+      "element": "button",
+      "type": "button",
+      "accessible_name": "変更を確定",
+      "availability": "aria-disabled",
+      "execution_paths": [
+        {
+          "name": "click (pointer, Enter, Space)",
+          "guarded": true
+        },
+        {
+          "name": "programmatic command",
+          "guarded": true
+        }
+      ],
+      "unavailable_reason": "候補日時を選択してください"
+    },
+    {
+      "component_id": "edit-dialog",
+      "intent": "dialog",
+      "element": "dialog",
+      "accessible_name": "日程を変更",
+      "mode": "modal",
+      "open_method": "showModal",
+      "close_method": "close",
+      "background_cleanup_independent": true,
+      "initial_focus": "slot select via autofocus",
+      "focus_owner": "browser",
+      "return_fallback": "booking heading when invoker unusable"
+    },
+    {
+      "component_id": "help-dialog",
+      "intent": "dialog",
+      "element": "dialog",
+      "accessible_name": "利用案内",
+      "mode": "nonmodal",
+      "open_method": "show",
+      "close_method": "close",
+      "background_cleanup_independent": true,
+      "initial_focus": "close button",
+      "focus_owner": "browser",
+      "return_fallback": "preserve outside focus",
+      "traps_focus": false,
+      "unconditional_return": false
+    }
+  ]
+}

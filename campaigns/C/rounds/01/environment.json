@@ -1,0 +1,26 @@
+{
+  "local_browser": {
+    "status": "BLOCKED",
+    "attempted_engine": "Chromium /usr/bin/chromium",
+    "sandbox": true,
+    "reason": "OS denied socket() during ProcessSingleton startup"
+  },
+  "connected_browser": {
+    "status": "BLOCKED",
+    "reason": "MCP request timeout during connection"
+  },
+  "cloud_browser": {
+    "status": "BLOCKED",
+    "reason": "Browser URL policy rejected data: protocol for authored fixture",
+    "circumvention_attempted": false
+  },
+  "browser_tests_executed": 0,
+  "screen_reader_tests_executed": 0,
+  "allowed_remaining": [
+    "stdlib contract validation",
+    "Node pure function tests",
+    "static fixture inspection",
+    "independent same-model critique"
+  ],
+  "timestamp": "2026-11-23T08:56:17.518237+00:00"
+}

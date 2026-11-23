@@ -1,0 +1,143 @@
+{
+  "session": "C",
+  "round": 1,
+  "reviewed_at": "2026-11-23T09:09:21.739904+00:00",
+  "reviewer": {
+    "role": "independent Critic/Evaluator task",
+    "independence": "Separate task from author; same model family. Not objective human or cross-model evaluation.",
+    "implementation_edits": false,
+    "registry_edits": false,
+    "author_test_edits": false,
+    "children_spawned": false,
+    "commit_or_push": false
+  },
+  "initial_decision": "REVISE",
+  "current_decision": "NO_OPEN_REPRODUCED_FINDINGS_WITHIN_SCOPE; HOLD_BROWSER_AT",
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "high",
+      "location": "modules/ui-engineering-design-system/checks/contracts.py:37-44,61-68,111-113 (pre-fix)",
+      "symptom": "Malformed submit_policy values are accepted for native-disabled inputs.",
+      "reproduction": "Copy booking-id candidate; set availability to native-disabled and submit_policy to [], {}, true, 0, null, or incldue.",
+      "evidence": "All six returned findings=[] in critic-probe-results.json; valid include without separate serialization correctly rejected.",
+      "impact": "Violates frozen oracle 11 fail-closed; malformed serialization declarations can bypass disabled-value-loss check.",
+      "correction": "Validate submit_policy type and supported values before semantic branching; require policy where appropriate.",
+      "status": "FIXED_IN_FOCUSED_PURE_RECHECK",
+      "recheck": "Six malformed variants rejected; valid include controls preserved."
+    },
+    {
+      "id": "F2",
+      "severity": "medium",
+      "location": "modules/ui-engineering-design-system/tests/browser_contracts.py:34-65,66-69",
+      "symptom": "All non-AssertionError exceptions, including interaction failures after successful startup, become BLOCKED.",
+      "reproduction": "Static control-flow inspection: a locator TimeoutError raised during case execution reaches the blanket Exception handler. No browser runtime reproduction performed.",
+      "evidence": "Source has one blanket exception handler with status BLOCKED across setup and all interactions.",
+      "impact": "Product regression can be mislabeled as environment inability, weakening evidence passed to D.",
+      "correction": "Separate setup/environment failures from loaded-page interaction/script/locator failures; classify the latter FAIL or ERROR with phase/case.",
+      "status": "FIXED_IN_PURE_AND_STATIC_RECHECK",
+      "recheck": "Only setup is BLOCKED; navigation/interaction/unknown produce ERROR_TEST_EXECUTION; phase/case recorded; exit 1 for execution errors. Main not called."
+    },
+    {
+      "id": "F3",
+      "severity": "medium",
+      "location": "modules/ui-engineering-design-system/examples/booking-controls.html:34,53-55,59-63 (pre-fix)",
+      "symptom": "After committing a new slot, reopened dialog still shows the original before date.",
+      "reproduction": "Run actual extracted application script in minimal Node doubles: open, choose December 10, confirm, reopen.",
+      "evidence": "Initial result current=December 10 but fixed beforeMarkup=December 8.",
+      "impact": "Repeated use misrepresents the already committed value; count-only tests miss the stale view.",
+      "correction": "Render current and dialog before value from one committed state.",
+      "status": "FIXED_IN_FOCUSED_PURE_RECHECK",
+      "recheck": "Both fields show December 10 after reopen."
+    },
+    {
+      "id": "F4",
+      "severity": "medium",
+      "location": "modules/ui-engineering-design-system/examples/booking-controls.html:67-70 (pre-fix); C-UI-004 decision rules 5-6",
+      "symptom": "Close handler checks invoker availability but never checks actual restoration result required by the registry.",
+      "reproduction": "Supply body as activeElement while invoker is connected, enabled and visible; invoke actual close handler.",
+      "evidence": "Initial model probe observed no fallback call. This proves a missing branch only, not a UA failure.",
+      "impact": "Implementation does not realize its claimed restoration-result contract when focus is lost despite an available invoker.",
+      "correction": "Observe actual focus, preserve valid restoration/external focus, and attempt a targeted recovery only when needed.",
+      "status": "BRANCH_FIX_CONFIRMED_UA_HOLD",
+      "recheck": "Supplied lost focus rescued; removed invoker fallback and valid external focus preserved in doubles."
+    }
+  ],
+  "commands": [
+    {
+      "command": "python3 campaigns/C/rounds/01/critic-probes.py > campaigns/C/rounds/01/critic-probe-results.json",
+      "exit_code": 1,
+      "meaning": "Initial defects reproduced; original results retained."
+    },
+    {
+      "command": "python3 campaigns/C/rounds/01/critic-probes.py > campaigns/C/rounds/01/recheck.json",
+      "exit_code": 0,
+      "meaning": "Focused recheck after author fixes; no browser or AT execution."
+    },
+    {
+      "command": "Import browser_contracts.py without calling main; check exception_status for four phases",
+      "exit_code": 0,
+      "meaning": "Reporting classifier verified without launching browser or local server."
+    }
+  ],
+  "authored_tests": {
+    "python": 13,
+    "node": 6,
+    "basis": "Existing execution.json inspected, not independently rerun by critic; not substituted for counterexamples."
+  },
+  "unit_decisions": {
+    "C-UI-001": {
+      "decision": "HOLD",
+      "reason": "Actual browser/AT behavior unexecuted; pure probes do not satisfy frozen runtime criteria."
+    },
+    "C-UI-002": {
+      "decision": "HOLD",
+      "reason": "Actual browser/AT behavior unexecuted; pure probes do not satisfy frozen runtime criteria."
+    },
+    "C-UI-003": {
+      "decision": "HOLD",
+      "reason": "Actual browser/AT behavior unexecuted; pure probes do not satisfy frozen runtime criteria."
+    },
+    "C-UI-004": {
+      "decision": "HOLD",
+      "reason": "Actual browser/AT behavior unexecuted; pure probes do not satisfy frozen runtime criteria."
+    }
+  },
+  "source_fidelity": {
+    "result": "No material inversion found in inspected excerpts",
+    "scope": "Stored HTML close algorithm, APG initial and return focus conditions, USWDS #6786/#6703, Adobe #2763; partial reader excerpts only; not a complete standards audit."
+  },
+  "art_direction": {
+    "result": "Referenced anchors exist and topic mappings match",
+    "incremental_value": "Conditional state/guard/serialization/cleanup/focus contracts rather than a new visual system.",
+    "complexity": "No unnecessary framework introduced; unused pure helper success is not HTML integration evidence."
+  },
+  "cross_layer": {
+    "B": "Stale display fix can synchronize existing committed state without inventing new business policy.",
+    "D": "Exception classification affects reliability of acceptance evidence."
+  },
+  "remaining_coverage": [
+    "Successful Enter and pointer confirmation not directly covered by executable browser suite.",
+    "No Shift+Tab case.",
+    "Invoker-removal Escape path not directly covered.",
+    "Background fill/value assertions added but unexecuted; AT exposure still not verified."
+  ],
+  "limitations": [
+    "Browser BLOCKED; AT NOT_RUN. No retries or bypass attempted.",
+    "Minimal Node doubles execute actual handlers but do not implement native dialog, event scheduling, focus algorithms, keyboard events, layout, FormData, or AT.",
+    "No generation effectiveness, cross-model uplift, or production usability claim.",
+    "F2 is direct source control-flow evidence, not an executed browser failure."
+  ],
+  "postfix_reviewed_sha256": {
+    "modules/ui-engineering-design-system/checks/contracts.py": "36779e36faf60cc925f97b7655c2ccc00a58456f6d47c31ef0c6f1ab354a3b50",
+    "modules/ui-engineering-design-system/examples/booking-controls.html": "842e143b36496d3ce121c409da8945a2b56c865b660b9414a3994d6f90bb2e24",
+    "modules/ui-engineering-design-system/tests/browser_contracts.py": "17b118100a907d498d81077868f9b8ad715f170320536e20aa3cfb0d5d7b8cf4"
+  },
+  "artifacts": [
+    "critic.md",
+    "critic-probes.py",
+    "critic-probes.mjs",
+    "critic-probe-results.json",
+    "recheck.json"
+  ]
+}

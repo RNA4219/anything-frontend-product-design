@@ -1,0 +1,138 @@
+{
+  "skill_id": "C-UI-002",
+  "domain": "ui-engineering-design-system",
+  "trigger": "利用不可・読取専用・送信待ち等の状態を持つ操作/入力部品。",
+  "intent": "利用可否と編集可否を送信値まで接続する",
+  "required_inputs": [
+    "canExecute、editable",
+    "理由、解除条件、説明の到達方法、Tab順要件",
+    "serializationPolicy、form owner、name、値、送信経路"
+  ],
+  "decision_rules": [
+    "canExecute、editable、利用不可理由、解除条件、説明への到達方法、Tab順に残す要否、保存/送信する値を上流から受け取る。これらが同じ意味だと仮定せず、各状態についてDOM属性・実行ガード・期待する送信値を一行に対応づける。",
+    "利用不可で、順次フォーカスから外す判断と送信から除外される効果が要件に合う対応要素にはnative disabledを選ぶ。fieldsetによる継承と最初のlegendの例外を含めた実効状態で判断する。属性がfalseという文字列でも存在すれば無効であり、disabledがJSやradio群による値変更まで防ぐとは扱わない。",
+    "利用不可でもTab順での発見性が必要な適合するbuttonではaria-disabled=trueを選択できる。ARIA自体はフォーカス順も実行も変更しないため、通常のフォーカス可能性を保ち、公開するpointer・キー・ショートカット・送信等の実行入口を共通canExecuteで抑止する。説明をポインターだけの経路に閉じない。",
+    "編集不可の値を保持する場合はreadonly対応の入力型等を選ぶ。checkbox/buttonにはreadonlyを効くものとして付けない。表示値・DOM value・送信値を区別し、disabledならentry listから除外、readonlyだけでは除外されないことを期待値に反映する。ただしname、checkedness、submitter等の他の参加条件も満たす必要がある。 対応するreadonlyとnative disabledは制約検証からも外れるため、検証に参加するかを送信期待値と並べて記録する。",
+    "HTML disabledとaria-disabled=falseを矛盾させない（規格上の禁止）。同義のtrueを重ねないことは規格の推奨として扱う。通常の送信を再現するAPI選択はArt Direction G7-05/G7-25へ委任し、ボタンの無効化のみでフォーム全体の全経路を止めたと推定しない。"
+  ],
+  "procedure": [
+    "canExecute、editable、利用不可理由、解除条件、説明への到達方法、Tab順に残す要否、保存/送信する値を上流から受け取る。これらが同じ意味だと仮定せず、各状態についてDOM属性・実行ガード・期待する送信値を一行に対応づける。",
+    "利用不可で、順次フォーカスから外す判断と送信から除外される効果が要件に合う対応要素にはnative disabledを選ぶ。fieldsetによる継承と最初のlegendの例外を含めた実効状態で判断する。属性がfalseという文字列でも存在すれば無効であり、disabledがJSやradio群による値変更まで防ぐとは扱わない。",
+    "利用不可でもTab順での発見性が必要な適合するbuttonではaria-disabled=trueを選択できる。ARIA自体はフォーカス順も実行も変更しないため、通常のフォーカス可能性を保ち、公開するpointer・キー・ショートカット・送信等の実行入口を共通canExecuteで抑止する。説明をポインターだけの経路に閉じない。",
+    "編集不可の値を保持する場合はreadonly対応の入力型等を選ぶ。checkbox/buttonにはreadonlyを効くものとして付けない。表示値・DOM value・送信値を区別し、disabledならentry listから除外、readonlyだけでは除外されないことを期待値に反映する。ただしname、checkedness、submitter等の他の参加条件も満たす必要がある。 対応するreadonlyとnative disabledは制約検証からも外れるため、検証に参加するかを送信期待値と並べて記録する。",
+    "HTML disabledとaria-disabled=falseを矛盾させない（規格上の禁止）。同義のtrueを重ねないことは規格の推奨として扱う。通常の送信を再現するAPI選択はArt Direction G7-05/G7-25へ委任し、ボタンの無効化のみでフォーム全体の全経路を止めたと推定しない。"
+  ],
+  "expected_outputs": [
+    "状態→DOM属性→公開実行経路のガード→検証参加→送信期待値の対応表"
+  ],
+  "dependencies": [
+    "C001-U1",
+    "art-direction/references/g-state-forms.md# g4-17, g6-12, g6-24, g7-05, g7-14, g7-25, g10-13"
+  ],
+  "exceptions": [
+    "GOV.UKのdisabled回避は同設計システムのユーザー理解に関する指針であり、HTML disabledの禁止ではない。",
+    "aria-disabledによる発見性を全コントロールの義務にしない。",
+    "native disabledと独自保存処理は別機構。手組みpayloadにnative FormDataの除外規則が自動適用されるとは仮定しない。"
+  ],
+  "failure_modes": [
+    "aria-disabledでも実行される",
+    "唯一の理由説明にキーボードで届かない",
+    "必要な値をdisabledで送信から落とす",
+    "readonly checkboxを保護済みと判断",
+    "fieldset例外を失う"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "unavailable",
+        "status": "not_executed",
+        "procedure": "選択したnative/ARIA方式でpointer・Enter・Spaceと公開ショートカット/送信入口を試し、canExecute=falseの確定回数0と説明到達を確認。可能→不可→可能も確認。",
+        "falsifier": "どれかの公開入口で実行する、または説明に到達できない。"
+      },
+      {
+        "case": "readonly_payload",
+        "status": "not_executed",
+        "procedure": "同一の参加条件のenabled/readonly/disabledのFormDataを比較する。fieldsetの最初のlegend内外も対象実装で使うとき確認する。",
+        "falsifier": "readonlyとdisabledを同じ送信契約と扱う、適用外readonlyを有効扱いする。",
+        "scope": "frozen rubricのreadonly/disabled区別を具体化。未使用機構の追加ゲートにはしない。"
+      }
+    ],
+    "status": "PARTIAL_BROWSER_BLOCKED",
+    "evidence": [
+      "campaigns/C/rounds/01/revision-execution.json",
+      "campaigns/C/rounds/01/recheck.json",
+      "campaigns/C/rounds/01/environment.json"
+    ]
+  },
+  "source_refs": [
+    {
+      "id": "HTML-DISABLED",
+      "url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#enabling-and-disabling-form-controls:-the-disabled-attribute",
+      "evidence_kind": "HTML Living Standard; normative",
+      "record": "researcher-1.json#/sources/2"
+    },
+    {
+      "id": "HTML-READONLY",
+      "url": "https://html.spec.whatwg.org/multipage/input.html#attr-input-readonly",
+      "evidence_kind": "HTML Living Standard; normative plus explanatory note",
+      "record": "researcher-1.json#/sources/3"
+    },
+    {
+      "id": "ARIA-HTML",
+      "url": "https://www.w3.org/TR/2026/REC-html-aria-20260811/#requirements-for-use-of-aria-attributes-in-place-of-equivalent-html-attributes",
+      "evidence_kind": "W3C Recommendation; normative",
+      "record": "researcher-1.json#/sources/4"
+    },
+    {
+      "id": "ARIA12",
+      "url": "https://www.w3.org/TR/wai-aria-1.2/",
+      "evidence_kind": "W3C Recommendation; normative",
+      "record": "researcher-1.json#/sources/5"
+    },
+    {
+      "id": "R2-S1",
+      "url": "https://design-system.service.gov.uk/components/button/#disabled-buttons",
+      "evidence_kind": "non-normative implementation guidance or author-reported implementation incident",
+      "record": "researcher-2.json#/sources/0"
+    },
+    {
+      "id": "R2-S2",
+      "url": "https://designsystem.digital.gov/components/button/#accessibility-guidance",
+      "evidence_kind": "non-normative implementation guidance or author-reported implementation incident",
+      "record": "researcher-2.json#/sources/1"
+    }
+  ],
+  "confidence": {
+    "source": "primary sources and implementation reports; partial reader captures",
+    "runtime": "unverified",
+    "transfer": "unverified"
+  },
+  "status": "HOLD",
+  "version": "0.1.1",
+  "analysis_unit": "C001-U2",
+  "round": 1,
+  "fact_rule_boundary": "decision_rules are original conditional engineering instructions; source_refs identify normative facts versus guidance",
+  "history": [
+    {
+      "event": "REGISTER",
+      "at": "2026-11-23T08:59:34.429150+00:00",
+      "status": "DRAFT"
+    },
+    {
+      "event": "CRITIC",
+      "status": "REVISE",
+      "findings": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ]
+    },
+    {
+      "event": "DECIDE",
+      "at": "2026-11-23T09:10:05.613722+00:00",
+      "status": "HOLD",
+      "reason": "Browser and assistive-technology verification unavailable; do not convert pure checks into browser acceptance."
+    }
+  ]
+}

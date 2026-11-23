@@ -1,0 +1,6 @@
+{
+  "input_records": 17,
+  "unique_canonical_documents": 17,
+  "duplicate_document_records": 0,
+  "method": "Remove fragments and trailing slash; preserve source-specific section records, do not claim semantic saturation"
+}

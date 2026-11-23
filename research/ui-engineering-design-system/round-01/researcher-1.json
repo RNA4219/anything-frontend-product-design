@@ -1,0 +1,664 @@
+{
+  "schema_version": 1,
+  "issue": "C-001",
+  "round": 1,
+  "researcher": "researcher-1",
+  "strategy": "normative-first; follow actual source hyperlinks to algorithms",
+  "status": "research_complete; implementation_and_AT_unmeasured",
+  "retrieved_date": "2026-11-23",
+  "facts": [
+    {
+      "id": "F1",
+      "claim": "a[href] represents a hyperlink; button type selects activation behavior. Missing/invalid type is Auto with command/commandfor and select-parent exceptions.",
+      "sources": [
+        "HTML-ANCHOR",
+        "HTML-BUTTON"
+      ]
+    },
+    {
+      "id": "F2",
+      "claim": "Native disabled is presence-based, includes a first-legend exception for disabled fieldsets, suppresses user-interaction queued clicks and bars constraint validation; it does not prohibit all programmatic or indirect value changes.",
+      "sources": [
+        "HTML-DISABLED"
+      ]
+    },
+    {
+      "id": "F3",
+      "claim": "Entry-list construction skips disabled fields. readonly is not itself an exclusion; other inclusion rules still apply. readonly does not apply to checkbox/button controls.",
+      "sources": [
+        "HTML-DISABLED",
+        "HTML-READONLY"
+      ]
+    },
+    {
+      "id": "F4",
+      "claim": "ARIA in HTML permits aria-disabled instead of disabled on appropriate buttons with necessary functional scripting; disabled plus aria-disabled=false is prohibited. aria-disabled semantics apply to focusable descendants.",
+      "sources": [
+        "ARIA-HTML",
+        "ARIA12"
+      ]
+    },
+    {
+      "id": "F5",
+      "claim": "showModal activates HTML document blocking/inertness outside the topmost modal dialog and flat-tree descendants. aria-modal describes modal semantics; authors must make the interface operable through modal descendants.",
+      "sources": [
+        "HTML-INERT",
+        "ARIA12"
+      ]
+    },
+    {
+      "id": "F6",
+      "claim": "HTML dialog guidance selects meaningful autofocus; tabindex on dialog is prohibited. Removing open manually bypasses close behavior. Close restoration depends on previous modality/current focus location.",
+      "sources": [
+        "HTML-DIALOG"
+      ]
+    },
+    {
+      "id": "F7",
+      "claim": "WCAG 4.1.2 requires programmatically determinable name/role and appropriate state/value setting/change notification. Its native-control note is limited to that success criterion.",
+      "sources": [
+        "WCAG22"
+      ]
+    }
+  ],
+  "proposed_contract": {
+    "classification": "design proposal derived from sources; not an additional normative standard",
+    "inputs_from_upstream": [
+      "intent",
+      "canExecute",
+      "editable",
+      "availabilityPresentation",
+      "dialogMode",
+      "initialFocusTarget",
+      "returnFocusFallback",
+      "serializationPolicy",
+      "cancelPolicy"
+    ],
+    "output_fields": [
+      "native element and type",
+      "DOM attributes and properties",
+      "execution guard",
+      "focus transitions",
+      "form-data expectations",
+      "falsification cases"
+    ],
+    "rules": [
+      {
+        "id": "R1",
+        "input": "navigation or operation",
+        "action": "Prefer the matching native element; set type=button for non-submit button operations. Do not add duplicate keyboard activation without a single-execution check.",
+        "basis": [
+          "F1",
+          "F7"
+        ],
+        "test_ids": [
+          "T1"
+        ]
+      },
+      {
+        "id": "R2",
+        "input": "unavailable; ordinary disable presentation",
+        "action": "Use native disabled where applicable. Check inherited disabled state and the intended entry-list consequences. Do not mirror redundant/conflicting ARIA.",
+        "basis": [
+          "F2",
+          "F3",
+          "F4"
+        ],
+        "test_ids": [
+          "T2",
+          "T3",
+          "T4"
+        ]
+      },
+      {
+        "id": "R3",
+        "input": "unavailable; explicit requirement to remain discoverable in tab order",
+        "action": "For an appropriate button, use aria-disabled only with a shared canExecute guard on all exposed execution routes. Focus retention is an input choice, not mandatory for all unavailable controls.",
+        "basis": [
+          "F4"
+        ],
+        "test_ids": [
+          "T2",
+          "T8"
+        ]
+      },
+      {
+        "id": "R4",
+        "input": "not editable but value still relevant",
+        "action": "Use readonly only on applicable controls; record display value, current DOM value and submitted data separately. Do not infer business policy from the attribute.",
+        "basis": [
+          "F2",
+          "F3"
+        ],
+        "test_ids": [
+          "T3"
+        ]
+      },
+      {
+        "id": "R5",
+        "input": "modal",
+        "action": "Use connected dialog showModal/close lifecycle, meaningful autofocus and close-event synchronization. Provide upstream logical fallback when invoker cannot receive focus. Cancellation must use upstream policy.",
+        "basis": [
+          "F5",
+          "F6",
+          "F7"
+        ],
+        "test_ids": [
+          "T5",
+          "T6",
+          "T8"
+        ]
+      },
+      {
+        "id": "R6",
+        "input": "nonmodal",
+        "action": "Use nonmodal behavior; do not apply background inertness or a modal focus loop. Do not forcibly restore when the user has moved focus outside a nonmodal dialog.",
+        "basis": [
+          "F5",
+          "F6"
+        ],
+        "test_ids": [
+          "T7"
+        ]
+      }
+    ]
+  },
+  "counterexamples": [
+    {
+      "id": "CE1",
+      "rule_falsified": "All controls become read-only by setting readonly",
+      "case": "input type=checkbox readonly",
+      "sources": [
+        "HTML-READONLY"
+      ]
+    },
+    {
+      "id": "CE2",
+      "rule_falsified": "disabled and readonly have interchangeable form semantics",
+      "case": "A required immutable identifier becomes disabled and disappears from FormData",
+      "sources": [
+        "HTML-DISABLED",
+        "HTML-READONLY"
+      ]
+    },
+    {
+      "id": "CE3",
+      "rule_falsified": "aria-modal=true establishes modal interaction",
+      "case": "Styled panel declares aria-modal but background is still operable",
+      "sources": [
+        "ARIA12",
+        "HTML-INERT"
+      ]
+    },
+    {
+      "id": "CE4",
+      "rule_falsified": "Always focus the first button or first field",
+      "case": "A readonly identifier or close button precedes the intended editable field",
+      "sources": [
+        "HTML-DIALOG"
+      ]
+    },
+    {
+      "id": "CE5",
+      "rule_falsified": "A disabled control cannot change its value",
+      "case": "Script sets value or a peer radio changes its checkedness indirectly",
+      "sources": [
+        "HTML-DISABLED"
+      ]
+    },
+    {
+      "id": "CE6",
+      "rule_falsified": "Every dialog close should focus its invoker",
+      "case": "User moved outside a nonmodal dialog before it closes",
+      "sources": [
+        "HTML-DIALOG"
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "id": "T1",
+      "case": "normal",
+      "steps": "Activate an available native button once with pointer, Enter and Space; count committed actions.",
+      "falsifier": "Any route commits 0 or more than 1 actions, or unexpectedly submits an unrelated form.",
+      "executed": false
+    },
+    {
+      "id": "T2",
+      "case": "unavailable",
+      "steps": "For both native-disabled and explicitly discoverable aria-disabled modes, attempt pointer, Enter, Space and exposed shortcut routes.",
+      "falsifier": "canExecute=false yet any route commits an action.",
+      "executed": false
+    },
+    {
+      "id": "T3",
+      "case": "readonly_payload",
+      "steps": "Compare name/value-matched enabled, readonly and disabled controls with editing and FormData; keep other inclusion conditions equal.",
+      "falsifier": "Readonly remains user-editable, or disabled/readonly are serialized identically contrary to the requested mapping; readonly checkbox is treated as protected.",
+      "executed": false
+    },
+    {
+      "id": "T4",
+      "case": "inherited_disabled",
+      "steps": "Compare a control in the first legend and one outside that legend in a disabled fieldset.",
+      "falsifier": "All descendants are assumed disabled uniformly, or own .disabled is treated as the full effective-state test.",
+      "executed": false
+    },
+    {
+      "id": "T5",
+      "case": "modal_cancel",
+      "steps": "Open modal, verify chosen focus, traverse both directions, cancel using the supported exit, reopen.",
+      "falsifier": "Background page control receives focus/activation, cancellation commits, state remains open after native close, or no meaningful initial focus exists.",
+      "executed": false
+    },
+    {
+      "id": "T6",
+      "case": "invoker_removed",
+      "steps": "Open modal, remove invoker, close modal and inspect actual activeElement.",
+      "falsifier": "Fallback is absent/unusable or focus restoration is reported successful despite failing.",
+      "executed": false
+    },
+    {
+      "id": "T7",
+      "case": "nonmodal_counterexample",
+      "steps": "Open nonmodally, move to a background input, close the dialog.",
+      "falsifier": "Background is inert/trapped or closing steals focus from that input.",
+      "executed": false
+    },
+    {
+      "id": "T8",
+      "case": "state_resynchronization",
+      "steps": "Cycle available→unavailable→available and open→cancel→open.",
+      "falsifier": "Stale handler, DOM attribute, open state or ARIA state disagrees with input policy.",
+      "executed": false
+    }
+  ],
+  "art_direction_overlap": [
+    {
+      "file": "references/e-accessibility.md",
+      "ids": [
+        "E2-01",
+        "E2-02",
+        "E2-03",
+        "E2-04",
+        "E2-05",
+        "E2-06",
+        "E4-08",
+        "E4-09",
+        "E4-10"
+      ],
+      "reuse": "Dialog, keyboard and focus references",
+      "delta": "Explicit modal/nonmodal branching, close-event state synchronization, removed-invoker and nonmodal focus-steal falsification"
+    },
+    {
+      "file": "references/g-state-forms.md",
+      "ids": [
+        "G4-17",
+        "G6-12",
+        "G6-24",
+        "G7-14",
+        "G10-13"
+      ],
+      "reuse": "readonly applicability, native disabled semantics, first-legend exception",
+      "delta": "Availability decision table connected to execution guards and FormData expectations"
+    },
+    {
+      "file": "references/g-state-forms.md",
+      "ids": [
+        "G9-01",
+        "G9-03",
+        "G9-04"
+      ],
+      "reuse": "Button content, type and activation constraints",
+      "delta": "Explicit non-submit type and version-correct Auto exceptions with double-execution check"
+    },
+    {
+      "file": "references/i-components.md",
+      "ids": [
+        "I-09",
+        "I-10",
+        "I-11",
+        "I3-01",
+        "I3-02",
+        "I3-03",
+        "I3-04",
+        "I3-05",
+        "I3-06"
+      ],
+      "reuse": "Library responsibilities, names, focus and CSS states",
+      "delta": "Observable state-to-DOM-to-operation-to-submission/focus contract, independent of library choice"
+    }
+  ],
+  "known": [
+    "Relevant normative sections inspected through primary-source web rendering",
+    "Three real source hyperlink chases performed",
+    "Art Direction overlaps identified without claiming existing rules absent"
+  ],
+  "unknown": [
+    "Supported-browser/AT behavior not measured",
+    "Complete originals unavailable via fetch.py due DNS resolution failures",
+    "Per-query ownership of merged search hits is not exposed by tool"
+  ],
+  "not_searched": [
+    "Comprehensive composite-widget patterns",
+    "Nested dialogs",
+    "Complete Shadow DOM and iframe focus coverage",
+    "Form-associated custom element implementation",
+    "Business cancellation/save policy"
+  ],
+  "reproducibility": {
+    "private_root": "/workspace/scratch/785c8ae49c7b/private-research/C/round-01/researcher-1",
+    "original_fetch_count": 3,
+    "original_fetch_success_count": 0,
+    "original_fetch_failure": "Temporary failure in name resolution",
+    "security_flags_relaxed": false,
+    "search_query_count": 3,
+    "search_batch_count": 1,
+    "search_hit_count": 8,
+    "additional_queries": 0,
+    "query_hit_record": "queries.jsonl; raw exact merged search-response.json",
+    "hit_attribution": "Batch-level only; no fabricated query-to-hit attribution.",
+    "source_link_chases": [
+      {
+        "from": "https://html.spec.whatwg.org/multipage/interactive-elements.html",
+        "tool_ref": "turn171537335view0",
+        "link_id": 97,
+        "to": "https://html.spec.whatwg.org/multipage/interaction.html",
+        "observed_ref": "turn399316900view6"
+      },
+      {
+        "from": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html",
+        "tool_ref": "turn171537335view2",
+        "link_id": 27,
+        "to": "4.10.22.4 Constructing the entry list",
+        "observed_ref": "turn399316900view7"
+      },
+      {
+        "from": "https://www.w3.org/TR/2026/REC-html-aria-20260811/",
+        "tool_ref": "turn171537335view3",
+        "link_id": 124,
+        "to": "https://html.spec.whatwg.org/multipage/form-elements.html",
+        "observed_ref": "turn399316900view8"
+      }
+    ],
+    "actual_fetch_commands": [
+      "python3 /workspace/scratch/785c8ae49c7b/imozuru/skills/imozuru/scripts/fetch.py /workspace/scratch/785c8ae49c7b/private-research/C/round-01/researcher-1/sources html-dialog 'https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element'",
+      "python3 /workspace/scratch/785c8ae49c7b/imozuru/skills/imozuru/scripts/fetch.py /workspace/scratch/785c8ae49c7b/private-research/C/round-01/researcher-1/sources aria-html 'https://www.w3.org/TR/2026/REC-html-aria-20260811/'",
+      "python3 /workspace/scratch/785c8ae49c7b/imozuru/skills/imozuru/scripts/fetch.py /workspace/scratch/785c8ae49c7b/private-research/C/round-01/researcher-1/sources html-inert 'https://html.spec.whatwg.org/multipage/interaction.html#inert'"
+    ],
+    "cost": {
+      "monetary_cost": null,
+      "model_tokens": null,
+      "measured": false,
+      "note": "No cost inferred from elapsed time or tool count."
+    },
+    "stop_reason": "Bounded normative evidence complete through web inspection; original-fetch and implementation/AT gaps explicitly retained; saturation not claimed.",
+    "imozuru_commit": "30c3b59a076ce228f05aa3036809297422f23dee",
+    "art_direction_commit": "f5df625dbc577d6a3ca28e13ef09e39b135b4a6f"
+  },
+  "sources": [
+    {
+      "id": "HTML-DIALOG",
+      "title": "HTML Standard — dialog",
+      "canonical_url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+      "retrieved_date": "2026-11-23",
+      "source_type": "HTML Living Standard; normative algorithms and author guidance",
+      "full_original_fetched": false,
+      "access": "Search tool open/find-rendered excerpts; original HTTP fetch failed DNS for attempted documents",
+      "locations": [
+        {
+          "anchor": "#the-dialog-element",
+          "private_raw": "sources/chase-response-01-web-excerpt.txt",
+          "local_start_line": 54,
+          "local_end_line": 66,
+          "web_start_marker": "L542:",
+          "web_end_marker": "L554:",
+          "sha256": "7377a7f06ff6918d5d2ff1943a10d9fdada84d9faa8b59500ad4c6b72992b909"
+        },
+        {
+          "anchor": "#the-dialog-element",
+          "private_raw": "sources/open-response-03-web-excerpt.txt",
+          "local_start_line": 328,
+          "local_end_line": 337,
+          "web_start_marker": "L600:",
+          "web_end_marker": "L609:",
+          "sha256": "49d0a2b8f3a7d89d2a8871162175dc1b964b36b5dbec5226728d2a43ece69ee8"
+        },
+        {
+          "anchor": "#dialog-focusing-steps",
+          "private_raw": "sources/open-response-03-web-excerpt.txt",
+          "local_start_line": 388,
+          "local_end_line": 399,
+          "web_start_marker": "L959:",
+          "web_end_marker": "L970:",
+          "sha256": "49d0a2b8f3a7d89d2a8871162175dc1b964b36b5dbec5226728d2a43ece69ee8"
+        },
+        {
+          "anchor": "#close-the-dialog",
+          "private_raw": "sources/chase-response-01-web-excerpt.txt",
+          "local_start_line": 149,
+          "local_end_line": 177,
+          "web_start_marker": "L889:",
+          "web_end_marker": "L917:",
+          "sha256": "7377a7f06ff6918d5d2ff1943a10d9fdada84d9faa8b59500ad4c6b72992b909"
+        }
+      ]
+    },
+    {
+      "id": "HTML-INERT",
+      "title": "HTML Standard — inert subtrees",
+      "canonical_url": "https://html.spec.whatwg.org/multipage/interaction.html#inert",
+      "retrieved_date": "2026-11-23",
+      "source_type": "HTML Living Standard; normative",
+      "full_original_fetched": false,
+      "access": "Search tool open/find-rendered excerpts; original HTTP fetch failed DNS for attempted documents",
+      "locations": [
+        {
+          "anchor": "#inert",
+          "private_raw": "sources/open-response-03-web-excerpt.txt",
+          "local_start_line": 261,
+          "local_end_line": 278,
+          "web_start_marker": "L344:",
+          "web_end_marker": "L361:",
+          "sha256": "49d0a2b8f3a7d89d2a8871162175dc1b964b36b5dbec5226728d2a43ece69ee8"
+        },
+        {
+          "anchor": "#modal-dialogs-and-inert-subtrees",
+          "private_raw": "sources/open-response-04-web-excerpt.txt",
+          "local_start_line": 289,
+          "local_end_line": 294,
+          "web_start_marker": "L362:",
+          "web_end_marker": "L367:",
+          "sha256": "b31123bf0333504a1502c476815664b1a6229363e45941ff1ff59b88a3d4f5f8"
+        }
+      ]
+    },
+    {
+      "id": "HTML-DISABLED",
+      "title": "HTML Standard — disabled and form entry list",
+      "canonical_url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#enabling-and-disabling-form-controls:-the-disabled-attribute",
+      "retrieved_date": "2026-11-23",
+      "source_type": "HTML Living Standard; normative",
+      "full_original_fetched": false,
+      "access": "Search tool open/find-rendered excerpts; original HTTP fetch failed DNS for attempted documents",
+      "locations": [
+        {
+          "anchor": "#enabling-and-disabling-form-controls:-the-disabled-attribute",
+          "private_raw": "sources/chase-response-01-web-excerpt.txt",
+          "local_start_line": 337,
+          "local_end_line": 348,
+          "web_start_marker": "L406:",
+          "web_end_marker": "L417:",
+          "sha256": "7377a7f06ff6918d5d2ff1943a10d9fdada84d9faa8b59500ad4c6b72992b909"
+        },
+        {
+          "anchor": null,
+          "private_raw": "sources/open-response-02-web-excerpt.txt",
+          "local_start_line": 118,
+          "local_end_line": 162,
+          "web_start_marker": "L2609:",
+          "web_end_marker": "L2653:",
+          "sha256": "630daf94d5e252d303e232b8b73e65d21d6bf65a8bfcd648f9e81c1637904858",
+          "section": "4.10.22.4 Constructing the entry list",
+          "anchor_status": "Clicked actual source link 27; web response does not expose fragment. Exact section number/title recorded rather than guessing the fragment."
+        }
+      ]
+    },
+    {
+      "id": "HTML-READONLY",
+      "title": "HTML Standard — readonly",
+      "canonical_url": "https://html.spec.whatwg.org/multipage/input.html#attr-input-readonly",
+      "retrieved_date": "2026-11-23",
+      "source_type": "HTML Living Standard; normative plus explanatory note",
+      "full_original_fetched": false,
+      "access": "Search tool open/find-rendered excerpts; original HTTP fetch failed DNS for attempted documents",
+      "locations": [
+        {
+          "anchor": "#attr-input-readonly",
+          "private_raw": "sources/chase-response-01-web-excerpt.txt",
+          "local_start_line": 248,
+          "local_end_line": 253,
+          "web_start_marker": "L2039:",
+          "web_end_marker": "L2044:",
+          "sha256": "7377a7f06ff6918d5d2ff1943a10d9fdada84d9faa8b59500ad4c6b72992b909"
+        }
+      ]
+    },
+    {
+      "id": "ARIA-HTML",
+      "title": "ARIA in HTML, Recommendation 11 August 2026",
+      "canonical_url": "https://www.w3.org/TR/2026/REC-html-aria-20260811/#requirements-for-use-of-aria-attributes-in-place-of-equivalent-html-attributes",
+      "retrieved_date": "2026-11-23",
+      "source_type": "W3C Recommendation; normative",
+      "full_original_fetched": false,
+      "access": "Search tool open/find-rendered excerpts; original HTTP fetch failed DNS for attempted documents",
+      "locations": [
+        {
+          "anchor": "#requirements-for-use-of-aria-attributes-in-place-of-equivalent-html-attributes",
+          "private_raw": "sources/chase-response-01-web-excerpt.txt",
+          "local_start_line": 411,
+          "local_end_line": 423,
+          "web_start_marker": "L452:",
+          "web_end_marker": "L464:",
+          "sha256": "7377a7f06ff6918d5d2ff1943a10d9fdada84d9faa8b59500ad4c6b72992b909"
+        },
+        {
+          "anchor": "#requirements-for-use-of-aria-attributes-in-place-of-equivalent-html-attributes",
+          "private_raw": "sources/open-response-04-web-excerpt.txt",
+          "local_start_line": 313,
+          "local_end_line": 327,
+          "web_start_marker": "L463:",
+          "web_end_marker": "L477:",
+          "sha256": "b31123bf0333504a1502c476815664b1a6229363e45941ff1ff59b88a3d4f5f8"
+        }
+      ]
+    },
+    {
+      "id": "ARIA12",
+      "title": "WAI-ARIA 1.2, Recommendation 6 June 2023",
+      "canonical_url": "https://www.w3.org/TR/wai-aria-1.2/",
+      "retrieved_date": "2026-11-23",
+      "source_type": "W3C Recommendation; normative",
+      "full_original_fetched": false,
+      "access": "Search tool open/find-rendered excerpts; original HTTP fetch failed DNS for attempted documents",
+      "locations": [
+        {
+          "anchor": "#aria-disabled",
+          "private_raw": "sources/open-response-04-web-excerpt.txt",
+          "local_start_line": 36,
+          "local_end_line": 40,
+          "web_start_marker": "L6098:",
+          "web_end_marker": "L6102:",
+          "sha256": "b31123bf0333504a1502c476815664b1a6229363e45941ff1ff59b88a3d4f5f8"
+        },
+        {
+          "anchor": "#aria-modal",
+          "private_raw": "sources/open-response-03-web-excerpt.txt",
+          "local_start_line": 83,
+          "local_end_line": 105,
+          "web_start_marker": "L6523:",
+          "web_end_marker": "L6545:",
+          "sha256": "49d0a2b8f3a7d89d2a8871162175dc1b964b36b5dbec5226728d2a43ece69ee8"
+        }
+      ]
+    },
+    {
+      "id": "WCAG22",
+      "title": "WCAG 2.2, Recommendation 12 December 2024",
+      "canonical_url": "https://www.w3.org/TR/WCAG22/",
+      "retrieved_date": "2026-11-23",
+      "source_type": "W3C Recommendation; normative SC; non-normative accompanying note",
+      "full_original_fetched": false,
+      "access": "Search tool open/find-rendered excerpts; original HTTP fetch failed DNS for attempted documents",
+      "locations": [
+        {
+          "anchor": "#name-role-value",
+          "private_raw": "sources/find-response-01-web-excerpt.txt",
+          "local_start_line": 451,
+          "local_end_line": 460,
+          "web_start_marker": "L1441:",
+          "web_end_marker": "L1450:",
+          "sha256": "9d4a4839ca46e7682bb152168b25e3b8ed7b87dd073bdca9364ccc8712247cd2"
+        },
+        {
+          "anchor": "#keyboard",
+          "private_raw": "sources/search-response-web-excerpt.txt",
+          "local_start_line": 263,
+          "local_end_line": 293,
+          "web_start_marker": "#### Success Criterion 2.1.1 Keyboard",
+          "web_end_marker": "#### Success Criterion 2.1.3 Keyboard",
+          "sha256": "84e3b5e3d37185a3e609f0765ef6760aedc3f128c79fc309420ddf03f982772f"
+        }
+      ]
+    },
+    {
+      "id": "HTML-BUTTON",
+      "title": "HTML Standard — button",
+      "canonical_url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element",
+      "retrieved_date": "2026-11-23",
+      "source_type": "HTML Living Standard; normative",
+      "full_original_fetched": false,
+      "access": "Search tool open/find-rendered excerpts; original HTTP fetch failed DNS for attempted documents",
+      "locations": [
+        {
+          "anchor": "#the-button-element",
+          "private_raw": "sources/open-response-02-web-excerpt.txt",
+          "local_start_line": 172,
+          "local_end_line": 192,
+          "web_start_marker": "L121:",
+          "web_end_marker": "L141:",
+          "sha256": "630daf94d5e252d303e232b8b73e65d21d6bf65a8bfcd648f9e81c1637904858"
+        },
+        {
+          "anchor": "#the-button-element",
+          "private_raw": "sources/open-response-02-web-excerpt.txt",
+          "local_start_line": 234,
+          "local_end_line": 242,
+          "web_start_marker": "L183:",
+          "web_end_marker": "L191:",
+          "sha256": "630daf94d5e252d303e232b8b73e65d21d6bf65a8bfcd648f9e81c1637904858"
+        }
+      ]
+    },
+    {
+      "id": "HTML-ANCHOR",
+      "title": "HTML Standard — a",
+      "canonical_url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element",
+      "retrieved_date": "2026-11-23",
+      "source_type": "HTML Living Standard; normative",
+      "full_original_fetched": false,
+      "access": "Search tool open/find-rendered excerpts; original HTTP fetch failed DNS for attempted documents",
+      "locations": [
+        {
+          "anchor": "#the-a-element",
+          "private_raw": "sources/open-response-04-web-excerpt.txt",
+          "local_start_line": 212,
+          "local_end_line": 228,
+          "web_start_marker": "L175:",
+          "web_end_marker": "L191:",
+          "sha256": "b31123bf0333504a1502c476815664b1a6229363e45941ff1ff59b88a3d4f5f8"
+        }
+      ]
+    }
+  ]
+}

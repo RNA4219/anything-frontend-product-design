@@ -1,0 +1,75 @@
+[
+  {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "modules/ui-engineering-design-system/tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_aria_disabled_has_no_default_behavior_guarantee (test_contracts.ContractTests.test_aria_disabled_has_no_default_behavior_guarantee) ... ok\ntest_candidate_is_consistent (test_contracts.ContractTests.test_candidate_is_consistent) ... ok\ntest_custom_control_requires_explicit_responsibilities (test_contracts.ContractTests.test_custom_control_requires_explicit_responsibilities) ... ok\ntest_custom_dialog_does_not_inherit_native_tabindex_ban (test_contracts.ContractTests.test_custom_dialog_does_not_inherit_native_tabindex_ban) ... ok\ntest_disabled_required_payload_needs_an_explicit_alternative (test_contracts.ContractTests.test_disabled_required_payload_needs_an_explicit_alternative) ... ok\ntest_duplicate_identity (test_contracts.ContractTests.test_duplicate_identity) ... ok\ntest_invalid_structures_do_not_crash_or_pass (test_contracts.ContractTests.test_invalid_structures_do_not_crash_or_pass) ... ok\ntest_native_disabled_does_not_disable_anchor (test_contracts.ContractTests.test_native_disabled_does_not_disable_anchor) ... ok\ntest_nonmodal_outside_focus_must_be_preserved (test_contracts.ContractTests.test_nonmodal_outside_focus_must_be_preserved) ... ok\ntest_readonly_checkbox_and_select_are_not_readonly_text (test_contracts.ContractTests.test_readonly_checkbox_and_select_are_not_readonly_text) ... ok\ntest_seeded_baseline_detects_nine_distinct_defects (test_contracts.ContractTests.test_seeded_baseline_detects_nine_distinct_defects) ... ok\ntest_string_false_is_not_a_boolean (test_contracts.ContractTests.test_string_false_is_not_a_boolean) ... ok\ntest_textarea_readonly_is_allowed (test_contracts.ContractTests.test_textarea_readonly_is_allowed) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.002s\n\nOK\n",
+    "at": "2026-11-23T09:03:33.403112+00:00"
+  },
+  {
+    "command": [
+      "node",
+      "--test",
+      "modules/ui-engineering-design-system/tests/test_runtime.mjs"
+    ],
+    "exit_code": 0,
+    "stdout": "✔ all declared activation routes share live availability, not a stale closure (2.224688ms)\n✔ unknown or truthy nonboolean availability fails closed (0.424678ms)\n✔ cleanup completes before focus failure when invoker disappeared (1.066962ms)\n✔ nonmodal background work is not interrupted by fallback (0.396035ms)\n✔ valid browser restoration does not need duplicate focus (0.417534ms)\n✔ lost modal focus or explicit next workflow needs a fallback (0.262646ms)\nℹ tests 6\nℹ suites 0\nℹ pass 6\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 172.684385\n",
+    "stderr": "",
+    "at": "2026-11-23T09:03:33.704247+00:00"
+  },
+  {
+    "command": [
+      "python3",
+      "modules/ui-engineering-design-system/checks/contracts.py",
+      "modules/ui-engineering-design-system/examples/component-contracts.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"PASS_DECLARATIONS_ONLY\",\n  \"findings\": [],\n  \"limitation\": \"No DOM, event, layout or assistive-technology behavior is verified.\"\n}\n",
+    "stderr": "",
+    "at": "2026-11-23T09:03:33.743465+00:00"
+  },
+  {
+    "command": [
+      "python3",
+      "modules/ui-engineering-design-system/checks/contracts.py",
+      "modules/ui-engineering-design-system/tests/fixtures/component-baseline.json"
+    ],
+    "exit_code": 1,
+    "stdout": "{\n  \"status\": \"FAIL\",\n  \"findings\": [\n    {\n      \"path\": \"components[0].destination\",\n      \"code\": \"DESTINATION\",\n      \"severity\": \"error\",\n      \"message\": \"Navigation requires a destination.\"\n    },\n    {\n      \"path\": \"components[1].type\",\n      \"code\": \"BUTTON_TYPE\",\n      \"severity\": \"error\",\n      \"message\": \"Declare button type to preserve form intent.\"\n    },\n    {\n      \"path\": \"components[2].availability\",\n      \"code\": \"READONLY_TARGET\",\n      \"severity\": \"error\",\n      \"message\": \"readonly does not apply to this control type.\"\n    },\n    {\n      \"path\": \"components[3].execution_paths[1]\",\n      \"code\": \"UNGUARDED_PATH\",\n      \"severity\": \"error\",\n      \"message\": \"Each declared entry point needs a common availability guard.\"\n    },\n    {\n      \"path\": \"components[4].tabindex\",\n      \"code\": \"DIALOG_TABINDEX\",\n      \"severity\": \"error\",\n      \"message\": \"Do not put tabindex on native dialog.\"\n    },\n    {\n      \"path\": \"components[4].open_method\",\n      \"code\": \"DIALOG_OPEN\",\n      \"severity\": \"error\",\n      \"message\": \"Match the native opening method to modality.\"\n    },\n    {\n      \"path\": \"components[4].close_method\",\n      \"code\": \"DIALOG_CLOSE\",\n      \"severity\": \"error\",\n      \"message\": \"Use a close algorithm, not direct open-attribute removal.\"\n    },\n    {\n      \"path\": \"components[4].background_cleanup_independent\",\n      \"code\": \"CLEANUP_OWNERSHIP\",\n      \"severity\": \"error\",\n      \"message\": \"Background cleanup must not depend on invoker existence.\"\n    },\n    {\n      \"path\": \"components[5].mode\",\n      \"code\": \"NONMODAL_FOCUS\",\n      \"severity\": \"error\",\n      \"message\": \"Do not impose modal traps or unconditional return on nonmodal content.\"\n    }\n  ],\n  \"limitation\": \"No DOM, event, layout or assistive-technology behavior is verified.\"\n}\n",
+    "stderr": "",
+    "at": "2026-11-23T09:03:33.785285+00:00"
+  },
+  {
+    "command": [
+      "python3",
+      "-m",
+      "py_compile",
+      "modules/ui-engineering-design-system/tests/browser_contracts.py"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "at": "2026-11-23T09:03:33.823553+00:00"
+  },
+  {
+    "command": [
+      "python3",
+      "/home/agent/.codex/plugins/cache/openai-curated-remote/work-skill-creator/0.1.2/skills/skill-creator/scripts/quick_validate.py",
+      "modules/ui-engineering-design-system"
+    ],
+    "exit_code": 0,
+    "stdout": "Skill is valid!\n",
+    "stderr": "",
+    "at": "2026-11-23T09:03:33.896036+00:00"
+  }
+]
