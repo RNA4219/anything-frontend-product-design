@@ -12,8 +12,8 @@
 | [GU](https://map.gu-global.com/jp/ja/detail/10101270) | スマホ | 終点確認 | 2 | 1 | 1 | 0 | 新宿東南口フラッグス店。新宿3-37-1、月曜11時～21時。 |
 | [紀伊國屋書店](https://store.kinokuniya.co.jp/store/shinjuku-main-store/) | PC | 終点確認 | 1 | 0 | 0 | 0 | 新宿本店。新宿3-17-7、営業時間10時～21時。 |
 | [紀伊國屋書店](https://store.kinokuniya.co.jp/store/shinjuku-main-store/) | スマホ | 終点確認 | 1 | 0 | 0 | 0 | 新宿本店。新宿3-17-7、営業時間10時～21時。 |
-| [スターバックス](https://store.starbucks.co.jp/detail-4456/) | PC | 終点確認 | 1 | 0 | 0 | 0 | 明治安田新宿ビル B1F店。西新宿1-9-1、月～金7時～22時。店舗のお知らせから到達。 |
-| [スターバックス](https://store.starbucks.co.jp/detail-4456/) | スマホ | 終点確認 | 1 | 0 | 0 | 0 | 明治安田新宿ビル B1F店。西新宿1-9-1、月～金7時～22時。店舗のお知らせから到達。 |
+| [スターバックス](https://store.starbucks.co.jp/detail-4456/) | PC | 終点確認 | 1 | 0 | 0 | 0 | 明治安田新宿ビル B1F店。西新宿1-9-1、月～金7時～22時。店舗のお知らせから到達。再訪時に11月28日開店予定と確認。11月23日の観察時点では開店前。[再訪記録](walkthrough/store.md#store-starbucks-stores-desktop) |
+| [スターバックス](https://store.starbucks.co.jp/detail-4456/) | スマホ | 終点確認 | 1 | 0 | 0 | 0 | 明治安田新宿ビル B1F店。西新宿1-9-1、月～金7時～22時。店舗のお知らせから到達。再訪時に11月28日開店予定と確認。11月23日の観察時点では開店前。[再訪記録](walkthrough/store.md#store-starbucks-stores-mobile) |
 | [ビックカメラ](https://www.biccamera.com/bc/i/shop/shoplist/index.jsp) | PC | 未確認 | 0 | 0 | 0 | 0 | この環境では開始画面を確認できなかった。 |
 | [ビックカメラ](https://www.biccamera.com/bc/i/shop/shoplist/shop016.jsp) | スマホ | 終点確認 | 1 | 0 | 0 | 0 | 新宿西口店。西新宿1-5-1、平日・土曜10時～20時30分。 |
 | [ヨドバシカメラ](https://www.yodobashi.com/ec/store/list/) | PC | 未確認 | 0 | 0 | 0 | 0 | この環境では開始画面を確認できなかった。 |
