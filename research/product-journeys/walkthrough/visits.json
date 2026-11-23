@@ -1,0 +1,5664 @@
+[
+  {
+    "id": "mug-hands-desktop",
+    "task": "mug",
+    "brand": "ハンズ",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:42:01.353620+00:00",
+    "start_url": "https://hands.net/",
+    "end_url": "https://hands.net/goods/4964412604408/",
+    "finding": "商品詳細でスヌーピーのマグカップと税込1,540円を確認。",
+    "visual_note": "左に商品画像、右に商品名と価格・購入ボタンが並ぶ。",
+    "evidence": "スヌーピーキーワード マグカップ ハウス 1,540円（税込）",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップ"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "click",
+        "label": "商品を開く スヌーピーキーワード　マグカップ　ハウス"
+      }
+    ],
+    "action_counts": {
+      "click": 2,
+      "text": 1,
+      "key": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:16.908665+00:00",
+        "url": "https://hands.net/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 32,
+          "controls_per_100k_css_px2": 2.6,
+          "text_fragments": 57,
+          "text_box_percent": 14.42,
+          "control_box_percent": 55.53,
+          "media_box_percent": 27.4,
+          "box_union_percent": 62.52,
+          "box_union_with_css_images_percent": 62.51,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 633,
+            "end_y_exclusive": 663,
+            "height_css_px": 30
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:42:25.421890+00:00",
+        "url": "https://hands.net/goods/4964412604408/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 25,
+          "controls_per_100k_css_px2": 2.04,
+          "text_fragments": 42,
+          "text_box_percent": 8.15,
+          "control_box_percent": 17.7,
+          "media_box_percent": 21.46,
+          "box_union_percent": 42.91,
+          "box_union_with_css_images_percent": 42.91,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 773,
+            "end_y_exclusive": 825,
+            "height_css_px": 52
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "mug-hands-mobile",
+    "task": "mug",
+    "brand": "ハンズ",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "unconfirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:47:49.912791+00:00",
+    "start_url": "https://hands.net/",
+    "end_url": "https://hands.net/goods/4964412604408/",
+    "finding": "スヌーピーキーワード マグカップ ハウス 1,540円",
+    "visual_note": "商品画像の下に商品名と税込1,540円、在庫・購入ボタンが縦に並ぶ。",
+    "evidence": "スヌーピーキーワード マグカップ ハウス 1,540円",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "検索を開く"
+      },
+      {
+        "kind": "tap",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップ"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "tap",
+        "label": "マグカップの商品"
+      },
+      {
+        "kind": "scroll",
+        "label": "商品価格の位置へ"
+      }
+    ],
+    "action_counts": {
+      "tap": 3,
+      "text": 1,
+      "key": 1,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:47:42.278568+00:00",
+        "url": "https://hands.net/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 10,
+          "controls_per_100k_css_px2": 3.04,
+          "text_fragments": 28,
+          "text_box_percent": 22.76,
+          "control_box_percent": 57.6,
+          "media_box_percent": 35.64,
+          "box_union_percent": 72.98,
+          "box_union_with_css_images_percent": 72.98,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 557,
+            "end_y_exclusive": 571,
+            "height_css_px": 14
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:47:49.912791+00:00",
+        "url": "https://hands.net/goods/4964412604408/",
+        "screen": "page",
+        "scroll_y_css_px": 467,
+        "metrics": {
+          "visible_controls": 11,
+          "controls_per_100k_css_px2": 3.34,
+          "text_fragments": 21,
+          "text_box_percent": 13.3,
+          "control_box_percent": 28.69,
+          "media_box_percent": 19.88,
+          "box_union_percent": 46.87,
+          "box_union_with_css_images_percent": 46.88,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 345,
+            "end_y_exclusive": 413,
+            "height_css_px": 68
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "mug-loft-desktop",
+    "task": "mug",
+    "brand": "ロフト",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:42:01.446123+00:00",
+    "start_url": "https://www.loft.co.jp/store/",
+    "end_url": "https://www.loft.co.jp/store/g/g408030600373/",
+    "finding": "商品詳細で河内啓 マグカップ 小 ルリ釉と税込3,080円を確認。",
+    "visual_note": "青いマグ画像が左、商品名と価格が右に並ぶ。",
+    "evidence": "河内啓 マグカップ 小 ルリ釉 3,080円",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップ"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "click",
+        "label": "商品を開く 河内啓 マグカップ 小 ルリ釉"
+      }
+    ],
+    "action_counts": {
+      "click": 2,
+      "text": 1,
+      "key": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:10.364402+00:00",
+        "url": "https://www.loft.co.jp/store/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 28,
+          "controls_per_100k_css_px2": 2.28,
+          "text_fragments": 27,
+          "text_box_percent": 3.8,
+          "control_box_percent": 60.35,
+          "media_box_percent": 47.78,
+          "box_union_percent": 62.25,
+          "box_union_with_css_images_percent": 62.24,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 642,
+            "end_y_exclusive": 706,
+            "height_css_px": 64
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:42:30.181283+00:00",
+        "url": "https://www.loft.co.jp/store/g/g408030600373/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 27,
+          "controls_per_100k_css_px2": 2.2,
+          "text_fragments": 46,
+          "text_box_percent": 6.79,
+          "control_box_percent": 40.08,
+          "media_box_percent": 32.39,
+          "box_union_percent": 46.43,
+          "box_union_with_css_images_percent": 46.43,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 225,
+            "end_y_exclusive": 253,
+            "height_css_px": 28
+          }
+        },
+        "measured_pairs": [
+          {
+            "above": "カラーの見出し",
+            "below": "選択中の商品の色名",
+            "gap_css_px": 11
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "mug-loft-mobile",
+    "task": "mug",
+    "brand": "ロフト",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:45:09.229609+00:00",
+    "start_url": "https://www.loft.co.jp/store/",
+    "end_url": "https://www.loft.co.jp/store/g/g408030600373/",
+    "finding": "商品詳細で河内啓 マグカップ 小 ルリ釉 3,080円を確認。",
+    "visual_note": "商品の画像をスクロールした先にカラーと税込3,080円、在庫・購入ボタンが並ぶ。",
+    "evidence": "河内啓 マグカップ 小 ルリ釉 3,080円",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップ"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "tap",
+        "label": "河内啓 マグカップ 小 ルリ釉"
+      },
+      {
+        "kind": "scroll",
+        "label": "価格・サイズを確認する位置へ"
+      }
+    ],
+    "action_counts": {
+      "tap": 2,
+      "text": 1,
+      "key": 1,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:45:02.605222+00:00",
+        "url": "https://www.loft.co.jp/store/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 16,
+          "controls_per_100k_css_px2": 4.86,
+          "text_fragments": 16,
+          "text_box_percent": 8.24,
+          "control_box_percent": 64.2,
+          "media_box_percent": 51.45,
+          "box_union_percent": 68.62,
+          "box_union_with_css_images_percent": 69.45,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 419,
+            "end_y_exclusive": 471,
+            "height_css_px": 52
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:45:09.148254+00:00",
+        "url": "https://www.loft.co.jp/store/g/g408030600373/",
+        "screen": "page",
+        "scroll_y_css_px": 806,
+        "metrics": {
+          "visible_controls": 4,
+          "controls_per_100k_css_px2": 1.22,
+          "text_fragments": 27,
+          "text_box_percent": 15.19,
+          "control_box_percent": 28.28,
+          "media_box_percent": 26.1,
+          "box_union_percent": 43.05,
+          "box_union_with_css_images_percent": 43.05,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 289,
+            "end_y_exclusive": 408,
+            "height_css_px": 119
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "mug-ikea-desktop",
+    "task": "mug",
+    "brand": "IKEA",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "unconfirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:49:25.860475+00:00",
+    "start_url": "https://www.ikea.com/jp/ja/",
+    "end_url": "https://www.ikea.com/jp/ja/p/dinera-mug-dark-grey-10362821/",
+    "finding": "DINERA ディネーラの詳細でマグと価格299円を確認。",
+    "visual_note": "黒いマグの大きな写真の右にDINERA、価格299円、選択項目が並ぶ。",
+    "evidence": "DINERA ディネーラ マグ ¥299",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップ"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "click",
+        "label": "DINERAの商品名または画像"
+      },
+      {
+        "kind": "scroll",
+        "label": "商品価格を確認"
+      }
+    ],
+    "action_counts": {
+      "click": 2,
+      "text": 1,
+      "key": 1,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:49:40.619824+00:00",
+        "url": "https://www.ikea.com/jp/ja/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 28,
+          "controls_per_100k_css_px2": 2.28,
+          "text_fragments": 31,
+          "text_box_percent": 6.09,
+          "control_box_percent": 75.91,
+          "media_box_percent": 1.62,
+          "box_union_percent": 75.99,
+          "box_union_with_css_images_percent": 76.0,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 194,
+            "end_y_exclusive": 266,
+            "height_css_px": 72
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:49:54.373207+00:00",
+        "url": "https://www.ikea.com/jp/ja/p/dinera-mug-dark-grey-10362821/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 30,
+          "controls_per_100k_css_px2": 2.44,
+          "text_fragments": 38,
+          "text_box_percent": 7.06,
+          "control_box_percent": 41.19,
+          "media_box_percent": 2.77,
+          "box_union_percent": 44.39,
+          "box_union_with_css_images_percent": 44.39,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 157,
+            "end_y_exclusive": 221,
+            "height_css_px": 64
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "mug-ikea-mobile",
+    "task": "mug",
+    "brand": "IKEA",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:49:25.862787+00:00",
+    "start_url": "https://www.ikea.com/jp/ja/",
+    "end_url": "https://www.ikea.com/jp/ja/p/dinera-mug-dark-grey-10362821/",
+    "finding": "DINERA ディネーラの詳細でマグと価格299円を確認。",
+    "visual_note": "黒いマグの写真下に色、商品名、299円、購入欄が縦に並ぶ。",
+    "evidence": "DINERA ディネーラ マグ ¥299",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップ"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "tap",
+        "label": "DINERAの商品名または画像"
+      },
+      {
+        "kind": "scroll",
+        "label": "商品価格を確認"
+      }
+    ],
+    "action_counts": {
+      "tap": 2,
+      "text": 1,
+      "key": 1,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:49:40.542390+00:00",
+        "url": "https://www.ikea.com/jp/ja/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 18,
+          "controls_per_100k_css_px2": 5.47,
+          "text_fragments": 20,
+          "text_box_percent": 11.02,
+          "control_box_percent": 74.58,
+          "media_box_percent": 3.51,
+          "box_union_percent": 74.69,
+          "box_union_with_css_images_percent": 74.69,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 48,
+            "end_y_exclusive": 64,
+            "height_css_px": 16
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:49:50.133233+00:00",
+        "url": "https://www.ikea.com/jp/ja/p/dinera-mug-dark-grey-10362821/",
+        "screen": "page",
+        "scroll_y_css_px": 566,
+        "metrics": {
+          "visible_controls": 11,
+          "controls_per_100k_css_px2": 3.34,
+          "text_fragments": 22,
+          "text_box_percent": 13.6,
+          "control_box_percent": 18.27,
+          "media_box_percent": 21.13,
+          "box_union_percent": 46.61,
+          "box_union_with_css_images_percent": 46.6,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 392,
+            "end_y_exclusive": 446,
+            "height_css_px": 54
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "repair-hands-desktop",
+    "task": "repair",
+    "brand": "ハンズ",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:42:25.905642+00:00",
+    "start_url": "https://hands.net/",
+    "end_url": "https://hands.net/search/?q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97",
+    "finding": "誤記検索で0件を確認し、語を修正後に商品リンクを確認。",
+    "visual_note": "検索結果にマグの商品画像と名称が表示されている。",
+    "evidence": "0件確認後、マグカップの商品リンクが表示",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップzqx814"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "click",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップ"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      }
+    ],
+    "action_counts": {
+      "click": 2,
+      "text": 2,
+      "key": 2
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:32.562718+00:00",
+        "url": "https://hands.net/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 32,
+          "controls_per_100k_css_px2": 2.6,
+          "text_fragments": 57,
+          "text_box_percent": 14.42,
+          "control_box_percent": 55.53,
+          "media_box_percent": 27.4,
+          "box_union_percent": 62.52,
+          "box_union_with_css_images_percent": 62.51,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 633,
+            "end_y_exclusive": 663,
+            "height_css_px": 30
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:42:41.660905+00:00",
+        "url": "https://hands.net/search/?q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 26,
+          "controls_per_100k_css_px2": 2.12,
+          "text_fragments": 52,
+          "text_box_percent": 7.16,
+          "control_box_percent": 18.1,
+          "media_box_percent": 4.15,
+          "box_union_percent": 21.96,
+          "box_union_with_css_images_percent": 21.96,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 287,
+            "end_y_exclusive": 356,
+            "height_css_px": 69
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "repair-hands-mobile",
+    "task": "repair",
+    "brand": "ハンズ",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "unconfirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:52:02.715108+00:00",
+    "start_url": "https://hands.net/",
+    "end_url": "https://hands.net/search/?q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97",
+    "finding": "0件を確認後、ロゴからトップへ戻り検索欄を開き、マグカップに修正して商品一覧を確認。",
+    "visual_note": "0件画面からトップへ戻り、検索を開いて再入力。修正後は商品名と価格が縦に並び、画像枠は取得時に白かった。",
+    "evidence": "0件後にマグカップの商品一覧",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "検索を開く"
+      },
+      {
+        "kind": "tap",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップzqx814"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "tap",
+        "label": "ハンズのトップへ戻る"
+      },
+      {
+        "kind": "tap",
+        "label": "検索を開く"
+      },
+      {
+        "kind": "tap",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップ"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "scroll",
+        "label": "修正後の商品一覧を確認"
+      }
+    ],
+    "action_counts": {
+      "tap": 5,
+      "text": 2,
+      "key": 2,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:52:12.723821+00:00",
+        "url": "https://hands.net/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 10,
+          "controls_per_100k_css_px2": 3.04,
+          "text_fragments": 28,
+          "text_box_percent": 22.76,
+          "control_box_percent": 57.6,
+          "media_box_percent": 35.64,
+          "box_union_percent": 72.98,
+          "box_union_with_css_images_percent": 72.98,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 557,
+            "end_y_exclusive": 571,
+            "height_css_px": 14
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:52:22.770405+00:00",
+        "url": "https://hands.net/search/?q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97",
+        "screen": "page",
+        "scroll_y_css_px": 18017,
+        "metrics": {
+          "visible_controls": 18,
+          "controls_per_100k_css_px2": 5.47,
+          "text_fragments": 34,
+          "text_box_percent": 16.42,
+          "control_box_percent": 47.83,
+          "media_box_percent": 23.24,
+          "box_union_percent": 54.78,
+          "box_union_with_css_images_percent": 54.79,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 440,
+            "end_y_exclusive": 460,
+            "height_css_px": 20
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "repair-loft-desktop",
+    "task": "repair",
+    "brand": "ロフト",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:42:30.755601+00:00",
+    "start_url": "https://www.loft.co.jp/store/",
+    "end_url": "https://www.loft.co.jp/store/goods/search.aspx?search=x&q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97&searchbox=1",
+    "finding": "誤記検索で0件を確認し、語を修正後に商品リンクを確認。",
+    "visual_note": "検索語と533件、マグの商品画像が横並びで表示される。",
+    "evidence": "0件確認後、マグカップの商品リンクが表示",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップzqx814"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "click",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップ"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      }
+    ],
+    "action_counts": {
+      "click": 2,
+      "text": 2,
+      "key": 2
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:35.696853+00:00",
+        "url": "https://www.loft.co.jp/store/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 23,
+          "controls_per_100k_css_px2": 1.87,
+          "text_fragments": 27,
+          "text_box_percent": 3.8,
+          "control_box_percent": 58.54,
+          "media_box_percent": 50.65,
+          "box_union_percent": 62.95,
+          "box_union_with_css_images_percent": 62.95,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 642,
+            "end_y_exclusive": 706,
+            "height_css_px": 64
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:42:44.661673+00:00",
+        "url": "https://www.loft.co.jp/store/goods/search.aspx?search=x&q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97&searchbox=1",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 48,
+          "controls_per_100k_css_px2": 3.91,
+          "text_fragments": 92,
+          "text_box_percent": 9.71,
+          "control_box_percent": 36.46,
+          "media_box_percent": 24.49,
+          "box_union_percent": 43.77,
+          "box_union_with_css_images_percent": 43.76,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 389,
+            "end_y_exclusive": 431,
+            "height_css_px": 42
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "repair-loft-mobile",
+    "task": "repair",
+    "brand": "ロフト",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:42:40.504090+00:00",
+    "start_url": "https://www.loft.co.jp/store/",
+    "end_url": "https://www.loft.co.jp/store/goods/search.aspx?search=x&keyword=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97",
+    "finding": "誤記検索で0件を確認し、語を修正後に商品リンクを確認。",
+    "visual_note": "検索語と533件、2列の商品画像と価格が表示される。",
+    "evidence": "0件確認後、マグカップの商品リンクが表示",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップzqx814"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "tap",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップ"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      }
+    ],
+    "action_counts": {
+      "tap": 2,
+      "text": 2,
+      "key": 2
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:52.489918+00:00",
+        "url": "https://www.loft.co.jp/store/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 16,
+          "controls_per_100k_css_px2": 4.86,
+          "text_fragments": 16,
+          "text_box_percent": 8.24,
+          "control_box_percent": 67.11,
+          "media_box_percent": 49.22,
+          "box_union_percent": 68.75,
+          "box_union_with_css_images_percent": 69.57,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 392,
+            "end_y_exclusive": 444,
+            "height_css_px": 52
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:43:03.286371+00:00",
+        "url": "https://www.loft.co.jp/store/goods/search.aspx?search=x&keyword=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 20,
+          "controls_per_100k_css_px2": 6.08,
+          "text_fragments": 36,
+          "text_box_percent": 10.84,
+          "control_box_percent": 42.3,
+          "media_box_percent": 35.06,
+          "box_union_percent": 52.13,
+          "box_union_with_css_images_percent": 52.96,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 304,
+            "end_y_exclusive": 324,
+            "height_css_px": 20
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "repair-ikea-desktop",
+    "task": "repair",
+    "brand": "IKEA",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "precondition_absent",
+    "status": "precondition_absent",
+    "observed_at": "2026-11-23T11:42:41.453005+00:00",
+    "start_url": "https://www.ikea.com/jp/ja/",
+    "end_url": "https://www.ikea.com/jp/ja/search/?q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97zqx814",
+    "finding": "誤記を含む検索でも32件の商品が表示され、0件の前提が成立しなかった。",
+    "visual_note": "誤記を含む検索語に対し32件の結果と複数の商品カードが並ぶ。",
+    "evidence": "",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップzqx814"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      }
+    ],
+    "action_counts": {
+      "click": 1,
+      "text": 1,
+      "key": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:57.383001+00:00",
+        "url": "https://www.ikea.com/jp/ja/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 28,
+          "controls_per_100k_css_px2": 2.28,
+          "text_fragments": 31,
+          "text_box_percent": 6.09,
+          "control_box_percent": 75.91,
+          "media_box_percent": 1.62,
+          "box_union_percent": 75.99,
+          "box_union_with_css_images_percent": 76.0,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 194,
+            "end_y_exclusive": 266,
+            "height_css_px": 72
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:43:02.015133+00:00",
+        "url": "https://www.ikea.com/jp/ja/search/?q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97zqx814",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 54,
+          "controls_per_100k_css_px2": 4.4,
+          "text_fragments": 75,
+          "text_box_percent": 9.26,
+          "control_box_percent": 34.82,
+          "media_box_percent": 2.15,
+          "box_union_percent": 38.61,
+          "box_union_with_css_images_percent": 38.62,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 832,
+            "end_y_exclusive": 900,
+            "height_css_px": 68
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "repair-ikea-mobile",
+    "task": "repair",
+    "brand": "IKEA",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "precondition_absent",
+    "status": "precondition_absent",
+    "observed_at": "2026-11-23T11:42:42.390405+00:00",
+    "start_url": "https://www.ikea.com/jp/ja/",
+    "end_url": "https://www.ikea.com/jp/ja/search/?q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97zqx814",
+    "finding": "誤記を含む検索でも32件の商品が表示され、0件の前提が成立しなかった。",
+    "visual_note": "誤記を含む検索語の下に32件とマグの商品カードが表示される。",
+    "evidence": "",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "マグカップzqx814"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      }
+    ],
+    "action_counts": {
+      "tap": 1,
+      "text": 1,
+      "key": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:55.153339+00:00",
+        "url": "https://www.ikea.com/jp/ja/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 18,
+          "controls_per_100k_css_px2": 5.47,
+          "text_fragments": 20,
+          "text_box_percent": 11.02,
+          "control_box_percent": 74.58,
+          "media_box_percent": 3.51,
+          "box_union_percent": 74.69,
+          "box_union_with_css_images_percent": 74.69,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 48,
+            "end_y_exclusive": 64,
+            "height_css_px": 16
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:43:00.560462+00:00",
+        "url": "https://www.ikea.com/jp/ja/search/?q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97zqx814",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 23,
+          "controls_per_100k_css_px2": 6.99,
+          "text_fragments": 27,
+          "text_box_percent": 11.53,
+          "control_box_percent": 34.92,
+          "media_box_percent": 15.57,
+          "box_union_percent": 40.19,
+          "box_union_with_css_images_percent": 40.19,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 771,
+            "end_y_exclusive": 824,
+            "height_css_px": 53
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-apple-desktop",
+    "task": "reset",
+    "brand": "Apple",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "partial",
+    "observed_at": "2026-11-23T11:42:43.403111+00:00",
+    "start_url": "https://support.apple.com/en-us",
+    "end_url": "https://iforgot.apple.com/",
+    "finding": "再設定リンクを選ぶと iforgot の認証画面へ移ったが、読み込み表示のままで再設定方法は確認できなかった。",
+    "visual_note": "終点は白地に読み込みマークが表示され、操作欄は見えない。",
+    "evidence": "再設定画面が読み込み中",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "Reset Apple Account password"
+      }
+    ],
+    "action_counts": {
+      "click": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:35.642803+00:00",
+        "url": "https://support.apple.com/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 24,
+          "controls_per_100k_css_px2": 1.95,
+          "text_fragments": 25,
+          "text_box_percent": 5.32,
+          "control_box_percent": 19.05,
+          "media_box_percent": 6.03,
+          "box_union_percent": 24.61,
+          "box_union_with_css_images_percent": 24.62,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 573,
+            "end_y_exclusive": 640,
+            "height_css_px": 67
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:42:42.920236+00:00",
+        "url": "https://iforgot.apple.com/",
+        "screen": "loading",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "reset-apple-mobile",
+    "task": "reset",
+    "brand": "Apple",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "partial",
+    "observed_at": "2026-11-23T11:42:39.011896+00:00",
+    "start_url": "https://support.apple.com/en-us",
+    "end_url": "https://iforgot.apple.com/",
+    "finding": "再設定リンクを選ぶと iforgot の認証画面へ移ったが、読み込み表示のままで再設定方法は確認できなかった。",
+    "visual_note": "終点は白地に読み込みマークが表示され、操作欄は見えない。",
+    "evidence": "再設定画面が読み込み中",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Reset Apple Account password"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:35.643814+00:00",
+        "url": "https://support.apple.com/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 11,
+          "controls_per_100k_css_px2": 3.34,
+          "text_fragments": 9,
+          "text_box_percent": 7.09,
+          "control_box_percent": 12.12,
+          "media_box_percent": 13.23,
+          "box_union_percent": 25.23,
+          "box_union_with_css_images_percent": 25.23,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 371,
+            "end_y_exclusive": 413,
+            "height_css_px": 42
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:42:38.960672+00:00",
+        "url": "https://iforgot.apple.com/",
+        "screen": "loading",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "reset-dropbox-desktop",
+    "task": "reset",
+    "brand": "Dropbox",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "partial",
+    "observed_at": "2026-11-23T11:44:28.984008+00:00",
+    "start_url": "https://help.dropbox.com/",
+    "end_url": "https://help.dropbox.com/ja-jp/security/password-reset",
+    "finding": "日本語の「Dropbox パスワードを変更またはリセットする方法」記事に到達。登録メールにアクセスできない場合や忘れた場合の案内リンクが見える。保存画像にはリセット手順本体が写っていないため、手順の確認は未完了。",
+    "visual_note": "記事の見出しと、右側の「Dropbox パスワードをリセットする」を含む目次、下部の注記が表示される。",
+    "evidence": "再設定記事の見出しと目次",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "How do I change or reset my Dropbox password?"
+      }
+    ],
+    "action_counts": {
+      "click": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:44:24.040330+00:00",
+        "url": "https://help.dropbox.com/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 25,
+          "controls_per_100k_css_px2": 2.04,
+          "text_fragments": 26,
+          "text_box_percent": 5.29,
+          "control_box_percent": 8.66,
+          "media_box_percent": 1.71,
+          "box_union_percent": 12.14,
+          "box_union_with_css_images_percent": 12.14,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 382,
+            "end_y_exclusive": 510,
+            "height_css_px": 128
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:44:28.888078+00:00",
+        "url": "https://help.dropbox.com/ja-jp/security/password-reset",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 21,
+          "controls_per_100k_css_px2": 1.71,
+          "text_fragments": 38,
+          "text_box_percent": 14.15,
+          "control_box_percent": 16.64,
+          "media_box_percent": 0.62,
+          "box_union_percent": 23.12,
+          "box_union_with_css_images_percent": 23.12,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 603,
+            "end_y_exclusive": 747,
+            "height_css_px": 144
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-dropbox-mobile",
+    "task": "reset",
+    "brand": "Dropbox",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "partial",
+    "observed_at": "2026-11-23T11:44:27.567686+00:00",
+    "start_url": "https://help.dropbox.com/",
+    "end_url": "https://help.dropbox.com/ja-jp/security/password-reset",
+    "finding": "再設定記事のURLへ移ったが、保存した終点画像は灰色の無地で、記事の見出しや手順を確認できない。",
+    "visual_note": "画面全体が灰色で、文字や操作欄は視認できない。",
+    "evidence": "記事画面を表示できず",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "How do I change or reset my Dropbox password?"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:44:23.241018+00:00",
+        "url": "https://help.dropbox.com/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 14,
+          "controls_per_100k_css_px2": 4.25,
+          "text_fragments": 14,
+          "text_box_percent": 10.74,
+          "control_box_percent": 11.98,
+          "media_box_percent": 2.21,
+          "box_union_percent": 19.23,
+          "box_union_with_css_images_percent": 19.23,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 405,
+            "end_y_exclusive": 485,
+            "height_css_px": 80
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:44:27.496964+00:00",
+        "url": "https://help.dropbox.com/ja-jp/security/password-reset",
+        "screen": "empty",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "reset-netflix-desktop",
+    "task": "reset",
+    "brand": "Netflix",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:48:29.388350+00:00",
+    "start_url": "https://help.netflix.com/en",
+    "end_url": "https://www.netflix.com/jp/loginhelp",
+    "finding": "パスワードのリセット方法としてメールアドレスまたはテキストメッセージ（SMS）を選ぶ画面に到達した。個人情報は入力せず、送信していない。",
+    "visual_note": "白いパネル内にラジオボタン2項目と入力欄があり、メールが初期選択されている。",
+    "evidence": "メールアドレスとSMSの選択肢",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "Get help signing in"
+      }
+    ],
+    "action_counts": {
+      "click": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:48:16.995360+00:00",
+        "url": "https://help.netflix.com/en",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 10,
+          "controls_per_100k_css_px2": 0.81,
+          "text_fragments": 11,
+          "text_box_percent": 3.22,
+          "control_box_percent": 5.2,
+          "media_box_percent": 0.28,
+          "box_union_percent": 6.78,
+          "box_union_with_css_images_percent": 6.78,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 508,
+            "end_y_exclusive": 776,
+            "height_css_px": 268
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:48:29.388350+00:00",
+        "url": "https://www.netflix.com/jp/loginhelp",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 7,
+          "controls_per_100k_css_px2": 0.57,
+          "text_fragments": 12,
+          "text_box_percent": 5.59,
+          "control_box_percent": 4.53,
+          "media_box_percent": 0.48,
+          "box_union_percent": 9.28,
+          "box_union_with_css_images_percent": 9.28,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 843,
+            "end_y_exclusive": 900,
+            "height_css_px": 57
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-netflix-mobile",
+    "task": "reset",
+    "brand": "Netflix",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:48:29.388350+00:00",
+    "start_url": "https://help.netflix.com/en",
+    "end_url": "https://www.netflix.com/jp/loginhelp",
+    "finding": "パスワードのリセット方法としてメールアドレスまたはテキストメッセージ（SMS）を選ぶ画面に到達した。個人情報は入力せず、送信していない。",
+    "visual_note": "白いパネル内にラジオボタン2項目と入力欄があり、メールが初期選択されている。",
+    "evidence": "メールアドレスとSMSの選択肢",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Get help signing in"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:48:16.996370+00:00",
+        "url": "https://help.netflix.com/en",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 10,
+          "controls_per_100k_css_px2": 3.04,
+          "text_fragments": 12,
+          "text_box_percent": 11.84,
+          "control_box_percent": 16.68,
+          "media_box_percent": 0.35,
+          "box_union_percent": 22.01,
+          "box_union_with_css_images_percent": 22.01,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 101,
+            "end_y_exclusive": 323,
+            "height_css_px": 222
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:48:29.388350+00:00",
+        "url": "https://www.netflix.com/jp/loginhelp",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 7,
+          "controls_per_100k_css_px2": 2.13,
+          "text_fragments": 16,
+          "text_box_percent": 20.87,
+          "control_box_percent": 12.7,
+          "media_box_percent": 0.65,
+          "box_union_percent": 30.47,
+          "box_union_with_css_images_percent": 30.47,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 715,
+            "end_y_exclusive": 758,
+            "height_css_px": 43
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-spotify-desktop",
+    "task": "reset",
+    "brand": "Spotify",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:44:33.931815+00:00",
+    "start_url": "https://support.spotify.com/us/",
+    "end_url": "https://support.spotify.com/us/article/reset-password/",
+    "finding": "パスワードを忘れた場合は再設定ページへ進み、アカウントに紐づくメールアドレスを入力して届いたメールの指示に従うと記事に記載されている。入力や送信はしていない。",
+    "visual_note": "手順は番号付きで、緑の再設定ボタンが直下にある。画面下にCookie通知が重なる。",
+    "evidence": "Forgot your password の3手順",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "Manage your account"
+      },
+      {
+        "kind": "click",
+        "label": "Logging In"
+      },
+      {
+        "kind": "click",
+        "label": "How to reset or change your Spotify password"
+      },
+      {
+        "kind": "scroll",
+        "label": "該当する本文へ移動"
+      }
+    ],
+    "action_counts": {
+      "click": 3,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:44:21.874458+00:00",
+        "url": "https://support.spotify.com/us/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 15,
+          "controls_per_100k_css_px2": 1.22,
+          "text_fragments": 16,
+          "text_box_percent": 5.37,
+          "control_box_percent": 22.54,
+          "media_box_percent": 0.66,
+          "box_union_percent": 26.05,
+          "box_union_with_css_images_percent": 26.05,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 72,
+            "end_y_exclusive": 136,
+            "height_css_px": 64
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:44:33.798586+00:00",
+        "url": "https://support.spotify.com/us/article/reset-password/",
+        "screen": "page",
+        "scroll_y_css_px": 526,
+        "metrics": {
+          "visible_controls": 31,
+          "controls_per_100k_css_px2": 2.52,
+          "text_fragments": 61,
+          "text_box_percent": 20.29,
+          "control_box_percent": 14.6,
+          "media_box_percent": 0.55,
+          "box_union_percent": 27.52,
+          "box_union_with_css_images_percent": 27.52,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 878,
+            "end_y_exclusive": 897,
+            "height_css_px": 19
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-spotify-mobile",
+    "task": "reset",
+    "brand": "Spotify",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:44:33.513121+00:00",
+    "start_url": "https://support.spotify.com/us/",
+    "end_url": "https://support.spotify.com/us/article/reset-password/",
+    "finding": "パスワードを忘れた場合は再設定ページへ進み、アカウントに紐づくメールアドレスを入力して届いたメールの指示に従うと記事に記載されている。入力や送信はしていない。",
+    "visual_note": "手順は番号付きで、緑の再設定ボタンが直下にある。画面下にCookie通知が重なる。",
+    "evidence": "Forgot your password の3手順",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Manage your account"
+      },
+      {
+        "kind": "tap",
+        "label": "Logging In"
+      },
+      {
+        "kind": "tap",
+        "label": "How to reset or change your Spotify password"
+      },
+      {
+        "kind": "scroll",
+        "label": "該当する本文へ移動"
+      }
+    ],
+    "action_counts": {
+      "tap": 3,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:44:21.874458+00:00",
+        "url": "https://support.spotify.com/us/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 26,
+          "controls_per_100k_css_px2": 7.9,
+          "text_fragments": 27,
+          "text_box_percent": 14.21,
+          "control_box_percent": 50.35,
+          "media_box_percent": 2.16,
+          "box_union_percent": 57.54,
+          "box_union_with_css_images_percent": 57.54,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 242,
+            "end_y_exclusive": 318,
+            "height_css_px": 76
+          }
+        },
+        "measured_pairs": [
+          {
+            "above": "サポートの見出し",
+            "below": "問い合わせ入力欄",
+            "gap_css_px": 41
+          }
+        ]
+      },
+      "end": {
+        "at": "2026-11-23T11:44:33.343489+00:00",
+        "url": "https://support.spotify.com/us/article/reset-password/",
+        "screen": "page",
+        "scroll_y_css_px": 544,
+        "metrics": {
+          "visible_controls": 12,
+          "controls_per_100k_css_px2": 3.65,
+          "text_fragments": 34,
+          "text_box_percent": 35.78,
+          "control_box_percent": 11.35,
+          "media_box_percent": 1.28,
+          "box_union_percent": 42.31,
+          "box_union_with_css_images_percent": 42.31,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 683,
+            "end_y_exclusive": 729,
+            "height_css_px": 46
+          }
+        },
+        "measured_pairs": [
+          {
+            "above": "パスワードを忘れた場合の見出し",
+            "below": "説明文",
+            "gap_css_px": 16
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "reset-wordpress-desktop",
+    "task": "reset",
+    "brand": "WordPress.com",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "unconfirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:52:42.310798+00:00",
+    "start_url": "https://wordpress.com/support/",
+    "end_url": "https://wordpress.com/support/passwords/",
+    "finding": "公式記事の手順ではログイン画面の「Lost your password?」から、メールアドレスまたはユーザー名を入力してリセットを開始し、届いたリンクから新しいパスワードを作る。情報は入力・送信していない。",
+    "visual_note": "番号付き手順と「Lost password」フォームの例が本文に表示される。",
+    "evidence": "Lost your password の再設定手順",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "Manage your account"
+      },
+      {
+        "kind": "click",
+        "label": "Protect your account with strong passwords"
+      },
+      {
+        "kind": "click",
+        "label": "Recover your account"
+      },
+      {
+        "kind": "click",
+        "label": "reset a lost password"
+      },
+      {
+        "kind": "scroll",
+        "label": "忘れたパスワードの手順へ移動"
+      }
+    ],
+    "action_counts": {
+      "click": 4,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:52:20.871573+00:00",
+        "url": "https://wordpress.com/support/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 28,
+          "controls_per_100k_css_px2": 2.28,
+          "text_fragments": 23,
+          "text_box_percent": 6.76,
+          "control_box_percent": 39.18,
+          "media_box_percent": 22.91,
+          "box_union_percent": 42.79,
+          "box_union_with_css_images_percent": 78.11,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 513,
+            "end_y_exclusive": 629,
+            "height_css_px": 116
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:52:42.310798+00:00",
+        "url": "https://wordpress.com/support/passwords/",
+        "screen": "page",
+        "scroll_y_css_px": 1267,
+        "metrics": {
+          "visible_controls": 19,
+          "controls_per_100k_css_px2": 1.55,
+          "text_fragments": 49,
+          "text_box_percent": 19.48,
+          "control_box_percent": 20.57,
+          "media_box_percent": 10.06,
+          "box_union_percent": 36.83,
+          "box_union_with_css_images_percent": 36.83,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 699,
+            "end_y_exclusive": 725,
+            "height_css_px": 26
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-wordpress-mobile",
+    "task": "reset",
+    "brand": "WordPress.com",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "unconfirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:52:38.111150+00:00",
+    "start_url": "https://wordpress.com/support/",
+    "end_url": "https://wordpress.com/support/passwords/",
+    "finding": "公式記事の手順ではログイン画面の「Lost your password?」から、メールアドレスまたはユーザー名を入力してリセットを開始し、届いたリンクから新しいパスワードを作る。情報は入力・送信していない。",
+    "visual_note": "番号付き手順と「Lost password」フォームの例が本文に表示される。",
+    "evidence": "Lost your password の再設定手順",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Manage your account"
+      },
+      {
+        "kind": "tap",
+        "label": "Protect your account with strong passwords"
+      },
+      {
+        "kind": "tap",
+        "label": "Recover your account"
+      },
+      {
+        "kind": "tap",
+        "label": "reset a lost password"
+      },
+      {
+        "kind": "scroll",
+        "label": "忘れたパスワードの手順へ移動"
+      }
+    ],
+    "action_counts": {
+      "tap": 4,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:52:18.292486+00:00",
+        "url": "https://wordpress.com/support/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 17,
+          "controls_per_100k_css_px2": 5.16,
+          "text_fragments": 15,
+          "text_box_percent": 14.34,
+          "control_box_percent": 45.92,
+          "media_box_percent": 19.94,
+          "box_union_percent": 54.92,
+          "box_union_with_css_images_percent": 82.7,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 549,
+            "end_y_exclusive": 574,
+            "height_css_px": 25
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:52:38.111150+00:00",
+        "url": "https://wordpress.com/support/passwords/",
+        "screen": "page",
+        "scroll_y_css_px": 1505,
+        "metrics": {
+          "visible_controls": 9,
+          "controls_per_100k_css_px2": 2.73,
+          "text_fragments": 37,
+          "text_box_percent": 29.38,
+          "control_box_percent": 38.24,
+          "media_box_percent": 23.04,
+          "box_union_percent": 61.5,
+          "box_union_with_css_images_percent": 61.51,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 123,
+            "end_y_exclusive": 146,
+            "height_css_px": 23
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-ng-desktop",
+    "task": "friday",
+    "brand": "ナショナル・ギャラリー",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:42:21.505447+00:00",
+    "start_url": "https://www.nationalgallery.org.uk/",
+    "end_url": "https://www.nationalgallery.org.uk/",
+    "finding": "National Galleryのホームに金曜は21時までと表示された。",
+    "visual_note": "画像下の黒い案内欄に通常時間と金曜の延長時間が並ぶ。",
+    "evidence": "Friday lates until 9pm",
+    "actions": [],
+    "action_counts": {},
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:31.373973+00:00",
+        "url": "https://www.nationalgallery.org.uk/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 8,
+          "controls_per_100k_css_px2": 0.65,
+          "text_fragments": 6,
+          "text_box_percent": 5.78,
+          "control_box_percent": 2.05,
+          "media_box_percent": 0.61,
+          "box_union_percent": 7.21,
+          "box_union_with_css_images_percent": 7.21,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 692,
+            "end_y_exclusive": 716,
+            "height_css_px": 24
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:42:32.527519+00:00",
+        "url": "https://www.nationalgallery.org.uk/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 8,
+          "controls_per_100k_css_px2": 0.65,
+          "text_fragments": 6,
+          "text_box_percent": 5.78,
+          "control_box_percent": 2.05,
+          "media_box_percent": 0.61,
+          "box_union_percent": 7.21,
+          "box_union_with_css_images_percent": 7.21,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 692,
+            "end_y_exclusive": 716,
+            "height_css_px": 24
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-ng-mobile",
+    "task": "friday",
+    "brand": "ナショナル・ギャラリー",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:42:21.633912+00:00",
+    "start_url": "https://www.nationalgallery.org.uk/",
+    "end_url": "https://www.nationalgallery.org.uk/",
+    "finding": "National Galleryのホームに金曜は21時までと表示された。",
+    "visual_note": "画像の下の黒い案内欄に時刻が表示された。",
+    "evidence": "Friday lates until 9pm",
+    "actions": [],
+    "action_counts": {},
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:31.235773+00:00",
+        "url": "https://www.nationalgallery.org.uk/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 8,
+          "controls_per_100k_css_px2": 2.43,
+          "text_fragments": 14,
+          "text_box_percent": 19.55,
+          "control_box_percent": 9.12,
+          "media_box_percent": 8.95,
+          "box_union_percent": 32.63,
+          "box_union_with_css_images_percent": 32.64,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 648,
+            "end_y_exclusive": 681,
+            "height_css_px": 33
+          }
+        },
+        "measured_pairs": [
+          {
+            "above": "来館案内の見出し",
+            "below": "入館料の案内",
+            "gap_css_px": 16
+          }
+        ]
+      },
+      "end": {
+        "at": "2026-11-23T11:42:31.882437+00:00",
+        "url": "https://www.nationalgallery.org.uk/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 8,
+          "controls_per_100k_css_px2": 2.43,
+          "text_fragments": 14,
+          "text_box_percent": 19.55,
+          "control_box_percent": 9.12,
+          "media_box_percent": 8.95,
+          "box_union_percent": 32.63,
+          "box_union_with_css_images_percent": 32.64,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 648,
+            "end_y_exclusive": 681,
+            "height_css_px": 33
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-vanda-desktop",
+    "task": "friday",
+    "brand": "V&A",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:42:21.658067+00:00",
+    "start_url": "https://www.vam.ac.uk/",
+    "end_url": "https://www.vam.ac.uk/",
+    "finding": "V&A South Kensingtonの金曜閉館は22時と表示された。",
+    "visual_note": "黒いフッターのVisit the V&Aで館別の時刻を並べて表示。",
+    "evidence": "V&A South Kensington Friday 10:00–22:00",
+    "actions": [
+      {
+        "kind": "scroll",
+        "label": "結果を表示"
+      }
+    ],
+    "action_counts": {
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:27.449735+00:00",
+        "url": "https://www.vam.ac.uk/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 10,
+          "controls_per_100k_css_px2": 0.81,
+          "text_fragments": 14,
+          "text_box_percent": 11.73,
+          "control_box_percent": 3.11,
+          "media_box_percent": 98.44,
+          "box_union_percent": 98.44,
+          "box_union_with_css_images_percent": 98.44,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 886,
+            "end_y_exclusive": 900,
+            "height_css_px": 14
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:42:28.536681+00:00",
+        "url": "https://www.vam.ac.uk/",
+        "screen": "page",
+        "scroll_y_css_px": 5852,
+        "metrics": {
+          "visible_controls": 38,
+          "controls_per_100k_css_px2": 3.09,
+          "text_fragments": 103,
+          "text_box_percent": 10.8,
+          "control_box_percent": 3.98,
+          "media_box_percent": 0.0,
+          "box_union_percent": 10.93,
+          "box_union_with_css_images_percent": 10.93,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 237,
+            "end_y_exclusive": 391,
+            "height_css_px": 154
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-vanda-mobile",
+    "task": "friday",
+    "brand": "V&A",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:42:21.659073+00:00",
+    "start_url": "https://www.vam.ac.uk/",
+    "end_url": "https://www.vam.ac.uk/",
+    "finding": "V&A South Kensingtonの金曜閉館は22時と表示された。",
+    "visual_note": "黒いフッターに館別の時刻が2列で表示。",
+    "evidence": "V&A South Kensington Friday 10:00–22:00",
+    "actions": [
+      {
+        "kind": "scroll",
+        "label": "結果を表示"
+      }
+    ],
+    "action_counts": {
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:27.464168+00:00",
+        "url": "https://www.vam.ac.uk/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 5,
+          "controls_per_100k_css_px2": 1.52,
+          "text_fragments": 15,
+          "text_box_percent": 29.31,
+          "control_box_percent": 5.65,
+          "media_box_percent": 0.96,
+          "box_union_percent": 33.01,
+          "box_union_with_css_images_percent": 33.01,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 715,
+            "end_y_exclusive": 750,
+            "height_css_px": 35
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:42:28.534680+00:00",
+        "url": "https://www.vam.ac.uk/",
+        "screen": "page",
+        "scroll_y_css_px": 9110,
+        "metrics": {
+          "visible_controls": 21,
+          "controls_per_100k_css_px2": 6.38,
+          "text_fragments": 62,
+          "text_box_percent": 25.04,
+          "control_box_percent": 8.97,
+          "media_box_percent": 0.0,
+          "box_union_percent": 25.34,
+          "box_union_with_css_images_percent": 25.34,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 200,
+            "end_y_exclusive": 304,
+            "height_css_px": 104
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-british-desktop",
+    "task": "friday",
+    "brand": "大英博物館",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "unconfirmed",
+    "status": "unavailable",
+    "observed_at": "2026-11-23T11:42:21.659073+00:00",
+    "start_url": "https://www.britishmuseum.org/",
+    "end_url": "https://www.britishmuseum.org/",
+    "finding": "開始画面はセキュリティ検証中で館の内容へ到達できなかった。",
+    "visual_note": "検証画面のみ表示。",
+    "evidence": "",
+    "actions": [],
+    "action_counts": {},
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:25.286213+00:00",
+        "url": "https://www.britishmuseum.org/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T11:42:25.420384+00:00",
+        "url": "https://www.britishmuseum.org/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "friday-british-mobile",
+    "task": "friday",
+    "brand": "大英博物館",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:46:33.145305+00:00",
+    "start_url": "https://www.britishmuseum.org/",
+    "end_url": "https://www.britishmuseum.org/",
+    "finding": "British Museumの金曜閉館20時30分を確認。最終入館20時15分とは別に表示。",
+    "visual_note": "黒いフッターのOpening hoursに通常時間・金曜閉館と最終入館が並ぶ。",
+    "evidence": "Fridays: 20.30",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Reject all cookies"
+      },
+      {
+        "kind": "scroll",
+        "label": "金曜の開館時間"
+      }
+    ],
+    "action_counts": {
+      "tap": 1,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:46:39.496015+00:00",
+        "url": "https://www.britishmuseum.org/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 7,
+          "controls_per_100k_css_px2": 2.13,
+          "text_fragments": 77,
+          "text_box_percent": 25.33,
+          "control_box_percent": 11.56,
+          "media_box_percent": 20.35,
+          "box_union_percent": 52.65,
+          "box_union_with_css_images_percent": 52.65,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 0,
+            "end_y_exclusive": 20,
+            "height_css_px": 20
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:46:44.432480+00:00",
+        "url": "https://www.britishmuseum.org/",
+        "screen": "page",
+        "scroll_y_css_px": 10895,
+        "metrics": {
+          "visible_controls": 25,
+          "controls_per_100k_css_px2": 7.6,
+          "text_fragments": 198,
+          "text_box_percent": 26.17,
+          "control_box_percent": 26.4,
+          "media_box_percent": 0.79,
+          "box_union_percent": 40.08,
+          "box_union_with_css_images_percent": 40.08,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 744,
+            "end_y_exclusive": 772,
+            "height_css_px": 28
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-moma-desktop",
+    "task": "friday",
+    "brand": "MoMA",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "unconfirmed",
+    "status": "unavailable",
+    "observed_at": "2026-11-23T11:42:29.420812+00:00",
+    "start_url": "https://www.moma.org/",
+    "end_url": "https://www.moma.org/",
+    "finding": "開始画面がセキュリティ検証中となり、館の内容へ到達できなかった。",
+    "visual_note": "検証画面のみ表示。",
+    "evidence": "",
+    "actions": [],
+    "action_counts": {},
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:33.219993+00:00",
+        "url": "https://www.moma.org/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T11:42:33.777754+00:00",
+        "url": "https://www.moma.org/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "friday-moma-mobile",
+    "task": "friday",
+    "brand": "MoMA",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "partial",
+    "observed_at": "2026-11-23T11:42:29.592369+00:00",
+    "start_url": "https://www.moma.org/",
+    "end_url": "https://www.moma.org/visit/",
+    "finding": "ホームは表示されたが、来館案内へ進んだ先でセキュリティ検証となり時刻を確認できなかった。",
+    "visual_note": "開始画面にPlan your visitが見え、終点は検証画面。",
+    "evidence": "",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Plan your visit"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:40.257724+00:00",
+        "url": "https://www.moma.org/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 1.82,
+          "text_fragments": 23,
+          "text_box_percent": 17.5,
+          "control_box_percent": 9.56,
+          "media_box_percent": 33.42,
+          "box_union_percent": 54.69,
+          "box_union_with_css_images_percent": 54.69,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 514,
+            "end_y_exclusive": 552,
+            "height_css_px": 38
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:42:49.957969+00:00",
+        "url": "https://www.moma.org/visit/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "friday-met-desktop",
+    "task": "friday",
+    "brand": "メトロポリタン美術館",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:46:15.461774+00:00",
+    "start_url": "https://www.metmuseum.org/",
+    "end_url": "https://www.metmuseum.org/plan-your-visit",
+    "finding": "The Met Fifth Avenueの金曜閉館21時を確認。",
+    "visual_note": "Location, Hours and Directionsの右側に曜日別の表が表示。",
+    "evidence": "Friday 10 am–9 pm",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "The Met Fifth Avenue"
+      },
+      {
+        "kind": "scroll",
+        "label": "金曜の開館時間"
+      }
+    ],
+    "action_counts": {
+      "click": 1,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:46:29.185223+00:00",
+        "url": "https://www.metmuseum.org/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 13,
+          "controls_per_100k_css_px2": 1.06,
+          "text_fragments": 18,
+          "text_box_percent": 8.94,
+          "control_box_percent": 4.61,
+          "media_box_percent": 77.88,
+          "box_union_percent": 84.66,
+          "box_union_with_css_images_percent": 84.66,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 848,
+            "end_y_exclusive": 887,
+            "height_css_px": 39
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:46:32.764966+00:00",
+        "url": "https://www.metmuseum.org/plan-your-visit",
+        "screen": "page",
+        "scroll_y_css_px": 1541,
+        "metrics": {
+          "visible_controls": 5,
+          "controls_per_100k_css_px2": 0.41,
+          "text_fragments": 39,
+          "text_box_percent": 8.43,
+          "control_box_percent": 1.88,
+          "media_box_percent": 29.21,
+          "box_union_percent": 38.2,
+          "box_union_with_css_images_percent": 38.2,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 72,
+            "end_y_exclusive": 156,
+            "height_css_px": 84
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-met-mobile",
+    "task": "friday",
+    "brand": "メトロポリタン美術館",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "partial",
+    "observed_at": "2026-11-23T11:42:33.588630+00:00",
+    "start_url": "https://www.metmuseum.org/",
+    "end_url": "https://www.metmuseum.org/",
+    "finding": "The Metの案内へ進んだが、終点画像はフッターで金曜閉館時刻は見えなかった。",
+    "visual_note": "別館の案内と住所が縦に表示された。",
+    "evidence": "",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "The Met Fifth Avenue"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:38.520699+00:00",
+        "url": "https://www.metmuseum.org/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 1.82,
+          "text_fragments": 8,
+          "text_box_percent": 10.06,
+          "control_box_percent": 12.19,
+          "media_box_percent": 59.48,
+          "box_union_percent": 78.65,
+          "box_union_with_css_images_percent": 78.66,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 748,
+            "end_y_exclusive": 782,
+            "height_css_px": 34
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:42:40.662082+00:00",
+        "url": "https://www.metmuseum.org/",
+        "screen": "page",
+        "scroll_y_css_px": 3567,
+        "metrics": {
+          "visible_controls": 18,
+          "controls_per_100k_css_px2": 5.47,
+          "text_fragments": 25,
+          "text_box_percent": 14.81,
+          "control_box_percent": 6.76,
+          "media_box_percent": 17.47,
+          "box_union_percent": 33.87,
+          "box_union_with_css_images_percent": 33.87,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 372,
+            "end_y_exclusive": 476,
+            "height_css_px": 104
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-tnm-desktop",
+    "task": "friday",
+    "brand": "東京国立博物館",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:42:34.582617+00:00",
+    "start_url": "https://www.tnm.jp/",
+    "end_url": "https://www.tnm.jp/modules/r_free_page/index.php?id=113",
+    "finding": "東京国立博物館の開館時間に金・土曜は20時までと表示された。",
+    "visual_note": "開館時間の枠内に通常日と延長日の時刻、入館期限を分けて表示。",
+    "evidence": "金・土曜日 9時30分〜20時00分",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "交通・料金・開館時間"
+      },
+      {
+        "kind": "scroll",
+        "label": "結果を表示"
+      }
+    ],
+    "action_counts": {
+      "click": 1,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:52.597798+00:00",
+        "url": "https://www.tnm.jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 18,
+          "controls_per_100k_css_px2": 1.47,
+          "text_fragments": 15,
+          "text_box_percent": 2.93,
+          "control_box_percent": 3.44,
+          "media_box_percent": 85.56,
+          "box_union_percent": 87.13,
+          "box_union_with_css_images_percent": 87.13,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 774,
+            "end_y_exclusive": 806,
+            "height_css_px": 32
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:42:56.775244+00:00",
+        "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=113",
+        "screen": "page",
+        "scroll_y_css_px": 2183,
+        "metrics": {
+          "visible_controls": 13,
+          "controls_per_100k_css_px2": 1.06,
+          "text_fragments": 27,
+          "text_box_percent": 13.66,
+          "control_box_percent": 2.3,
+          "media_box_percent": 0.48,
+          "box_union_percent": 14.67,
+          "box_union_with_css_images_percent": 14.67,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 198,
+            "end_y_exclusive": 348,
+            "height_css_px": 150
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-tnm-mobile",
+    "task": "friday",
+    "brand": "東京国立博物館",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:49:06.356176+00:00",
+    "start_url": "https://www.tnm.jp/",
+    "end_url": "https://www.tnm.jp/modules/r_free_page/index.php?id=113",
+    "finding": "東京国立博物館の金・土曜の閉館20時を確認。",
+    "visual_note": "開館時間の折り畳みを開くと、通常時間と金・土曜の時間が枠内に表示される。",
+    "evidence": "金・土曜日 9時30分〜20時00分",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "来館案内"
+      },
+      {
+        "kind": "tap",
+        "label": "開館時間"
+      },
+      {
+        "kind": "scroll",
+        "label": "金曜開館時間"
+      }
+    ],
+    "action_counts": {
+      "tap": 2,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:49:15.926644+00:00",
+        "url": "https://www.tnm.jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 1.82,
+          "text_fragments": 12,
+          "text_box_percent": 18.88,
+          "control_box_percent": 8.91,
+          "media_box_percent": 26.53,
+          "box_union_percent": 50.41,
+          "box_union_with_css_images_percent": 50.4,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 413,
+            "end_y_exclusive": 475,
+            "height_css_px": 62
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:49:19.981657+00:00",
+        "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=113",
+        "screen": "page",
+        "scroll_y_css_px": 3470,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 1.82,
+          "text_fragments": 22,
+          "text_box_percent": 38.1,
+          "control_box_percent": 5.85,
+          "media_box_percent": 1.2,
+          "box_union_percent": 40.96,
+          "box_union_with_css_images_percent": 40.96,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 700,
+            "end_y_exclusive": 822,
+            "height_css_px": 122
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-louvre-desktop",
+    "task": "friday",
+    "brand": "ルーヴル美術館",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "partial",
+    "observed_at": "2026-11-23T11:42:41.162841+00:00",
+    "start_url": "https://www.louvre.fr/en",
+    "end_url": "https://www.louvre.fr/en/visit",
+    "finding": "Cookieを拒否して来館案内に進んだが、最終画像では時間帯を確認できなかった。",
+    "visual_note": "Hours & admissionを含む見出し一覧が表示された。",
+    "evidence": "",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "Reject everything, except technical cookies"
+      },
+      {
+        "kind": "click",
+        "label": "Prepare your visit"
+      },
+      {
+        "kind": "click",
+        "label": "Hours & admission"
+      }
+    ],
+    "action_counts": {
+      "click": 3
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:43:00.062711+00:00",
+        "url": "https://www.louvre.fr/en",
+        "screen": "consent",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 4,
+          "controls_per_100k_css_px2": 0.33,
+          "text_fragments": 10,
+          "text_box_percent": 4.41,
+          "control_box_percent": 2.05,
+          "media_box_percent": 11.73,
+          "box_union_percent": 17.36,
+          "box_union_with_css_images_percent": 17.37,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 753,
+            "end_y_exclusive": 900,
+            "height_css_px": 147
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:43:05.826233+00:00",
+        "url": "https://www.louvre.fr/en/visit",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 10,
+          "controls_per_100k_css_px2": 0.81,
+          "text_fragments": 13,
+          "text_box_percent": 3.09,
+          "control_box_percent": 4.59,
+          "media_box_percent": 0.55,
+          "box_union_percent": 6.59,
+          "box_union_with_css_images_percent": 6.59,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 246,
+            "end_y_exclusive": 338,
+            "height_css_px": 92
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-louvre-mobile",
+    "task": "friday",
+    "brand": "ルーヴル美術館",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:42:41.972122+00:00",
+    "start_url": "https://www.louvre.fr/en",
+    "end_url": "https://www.louvre.fr/en/visit",
+    "finding": "ルーヴルは水曜・金曜が9時〜21時と表示された。",
+    "visual_note": "時間のカードに通常日と水・金曜が別行で表示される。",
+    "evidence": "Wednesday and Friday 9:00 A.M. → 9:00 P.M.",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Reject everything, except technical cookies"
+      },
+      {
+        "kind": "tap",
+        "label": "Plan your visit"
+      },
+      {
+        "kind": "tap",
+        "label": "Hours & admission"
+      },
+      {
+        "kind": "scroll",
+        "label": "結果を表示"
+      }
+    ],
+    "action_counts": {
+      "tap": 3,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:48.523398+00:00",
+        "url": "https://www.louvre.fr/en",
+        "screen": "consent",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 4,
+          "controls_per_100k_css_px2": 1.22,
+          "text_fragments": 14,
+          "text_box_percent": 16.13,
+          "control_box_percent": 11.32,
+          "media_box_percent": 0.0,
+          "box_union_percent": 24.38,
+          "box_union_with_css_images_percent": 24.39,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 87,
+            "end_y_exclusive": 135,
+            "height_css_px": 48
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:42:55.335448+00:00",
+        "url": "https://www.louvre.fr/en/visit",
+        "screen": "page",
+        "scroll_y_css_px": 966,
+        "metrics": {
+          "visible_controls": 11,
+          "controls_per_100k_css_px2": 3.34,
+          "text_fragments": 22,
+          "text_box_percent": 14.7,
+          "control_box_percent": 21.05,
+          "media_box_percent": 2.21,
+          "box_union_percent": 31.41,
+          "box_union_with_css_images_percent": 31.41,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 144,
+            "end_y_exclusive": 179,
+            "height_css_px": 35
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-kahaku-desktop",
+    "task": "friday",
+    "brand": "国立科学博物館",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "unconfirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:51:15.106942+00:00",
+    "start_url": "https://www.kahaku.go.jp/",
+    "end_url": "https://www.kahaku.go.jp/riyou/nyukan-annai/",
+    "finding": "国立科学博物館上野本館の通常開館は9時〜17時と表示された。",
+    "visual_note": "入館案内の開館時間欄に通常時間と特別展・期間限定の例外が並ぶ。",
+    "evidence": "開館時間 9:00〜17:00",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "本日開館"
+      },
+      {
+        "kind": "click",
+        "label": "入館案内"
+      },
+      {
+        "kind": "scroll",
+        "label": "開館時間"
+      }
+    ],
+    "action_counts": {
+      "click": 2,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:51:26.142665+00:00",
+        "url": "https://www.kahaku.go.jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 29,
+          "controls_per_100k_css_px2": 2.36,
+          "text_fragments": 32,
+          "text_box_percent": 3.52,
+          "control_box_percent": 10.17,
+          "media_box_percent": 2.62,
+          "box_union_percent": 11.43,
+          "box_union_with_css_images_percent": 11.52,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 107,
+            "end_y_exclusive": 140,
+            "height_css_px": 33
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:51:34.382046+00:00",
+        "url": "https://www.kahaku.go.jp/riyou/nyukan-annai/",
+        "screen": "page",
+        "scroll_y_css_px": 1065,
+        "metrics": {
+          "visible_controls": 16,
+          "controls_per_100k_css_px2": 1.3,
+          "text_fragments": 25,
+          "text_box_percent": 7.78,
+          "control_box_percent": 24.72,
+          "media_box_percent": 0.0,
+          "box_union_percent": 30.48,
+          "box_union_with_css_images_percent": 30.48,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 656,
+            "end_y_exclusive": 735,
+            "height_css_px": 79
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-kahaku-mobile",
+    "task": "friday",
+    "brand": "国立科学博物館",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:42:50.607884+00:00",
+    "start_url": "https://www.kahaku.go.jp/",
+    "end_url": "https://www.kahaku.go.jp/riyou/nyukan-annai/",
+    "finding": "上野本館の入館案内に通常の開館時間9時〜17時が表示された。",
+    "visual_note": "開館時間の見出しの直下に時刻と例外の注記が見える。",
+    "evidence": "開館時間 9:00〜17:00",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "本日開館"
+      },
+      {
+        "kind": "tap",
+        "label": "入館案内"
+      }
+    ],
+    "action_counts": {
+      "tap": 2
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:43:02.030117+00:00",
+        "url": "https://www.kahaku.go.jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 11,
+          "controls_per_100k_css_px2": 3.34,
+          "text_fragments": 16,
+          "text_box_percent": 5.08,
+          "control_box_percent": 18.78,
+          "media_box_percent": 50.05,
+          "box_union_percent": 65.46,
+          "box_union_with_css_images_percent": 65.82,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 530,
+            "end_y_exclusive": 579,
+            "height_css_px": 49
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:43:10.969202+00:00",
+        "url": "https://www.kahaku.go.jp/riyou/nyukan-annai/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 11,
+          "controls_per_100k_css_px2": 3.34,
+          "text_fragments": 18,
+          "text_box_percent": 17.99,
+          "control_box_percent": 13.49,
+          "media_box_percent": 2.25,
+          "box_union_percent": 29.27,
+          "box_union_with_css_images_percent": 29.27,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 499,
+            "end_y_exclusive": 558,
+            "height_css_px": 59
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "store-uniqlo-stores-desktop",
+    "task": "store",
+    "brand": "ユニクロ",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:46:58.179815+00:00",
+    "start_url": "https://map.uniqlo.com/jp/ja/",
+    "end_url": "https://map.uniqlo.com/jp/ja/detail/10101779",
+    "finding": "ユニクロ新宿三丁目店の住所と月曜11時〜21時を確認。",
+    "visual_note": "地図付きダイアログ内に住所と曜日別営業時間が見える。",
+    "evidence": "新宿3-13-3／月曜日 11:00 AM–9:00 PM",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "店舗名・住所・郵便番号"
+      },
+      {
+        "kind": "text",
+        "label": "新宿"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "click",
+        "label": "新宿の店舗"
+      },
+      {
+        "kind": "scroll",
+        "label": "店舗の住所"
+      },
+      {
+        "kind": "scroll",
+        "label": "平日の営業時間"
+      }
+    ],
+    "action_counts": {
+      "click": 2,
+      "text": 1,
+      "key": 1,
+      "scroll": 2
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:47:03.725416+00:00",
+        "url": "https://map.uniqlo.com/jp/ja/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 0.49,
+          "text_fragments": 4,
+          "text_box_percent": 1.2,
+          "control_box_percent": 5.77,
+          "media_box_percent": 0.3,
+          "box_union_percent": 6.45,
+          "box_union_with_css_images_percent": 6.45,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 400,
+            "end_y_exclusive": 900,
+            "height_css_px": 500
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:47:11.578183+00:00",
+        "url": "https://map.uniqlo.com/jp/ja/detail/10101779",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 8,
+          "controls_per_100k_css_px2": 0.65,
+          "text_fragments": 32,
+          "text_box_percent": 6.11,
+          "control_box_percent": 1.11,
+          "media_box_percent": 9.93,
+          "box_union_percent": 16.01,
+          "box_union_with_css_images_percent": 16.01,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 619,
+            "end_y_exclusive": 659,
+            "height_css_px": 40
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "store-uniqlo-stores-mobile",
+    "task": "store",
+    "brand": "ユニクロ",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:46:58.590589+00:00",
+    "start_url": "https://map.uniqlo.com/jp/ja/",
+    "end_url": "https://map.uniqlo.com/jp/ja/detail/10101779",
+    "finding": "ユニクロ新宿三丁目店の住所と月曜11時〜21時を確認。",
+    "visual_note": "店舗詳細の内部をスクロールし住所と曜日別時間を表示。",
+    "evidence": "新宿3-13-3／月曜日 11:00 AM–9:00 PM",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "店舗名・住所・郵便番号"
+      },
+      {
+        "kind": "text",
+        "label": "新宿"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "tap",
+        "label": "新宿の店舗"
+      },
+      {
+        "kind": "scroll",
+        "label": "店舗の住所"
+      },
+      {
+        "kind": "scroll",
+        "label": "平日の営業時間"
+      }
+    ],
+    "action_counts": {
+      "tap": 2,
+      "text": 1,
+      "key": 1,
+      "scroll": 2
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:47:02.913591+00:00",
+        "url": "https://map.uniqlo.com/jp/ja/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 1.82,
+          "text_fragments": 4,
+          "text_box_percent": 3.13,
+          "control_box_percent": 12.44,
+          "media_box_percent": 0.88,
+          "box_union_percent": 13.88,
+          "box_union_with_css_images_percent": 13.88,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 328,
+            "end_y_exclusive": 669,
+            "height_css_px": 341
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:47:10.329627+00:00",
+        "url": "https://map.uniqlo.com/jp/ja/detail/10101779",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 3,
+          "controls_per_100k_css_px2": 0.91,
+          "text_fragments": 37,
+          "text_box_percent": 21.69,
+          "control_box_percent": 1.84,
+          "media_box_percent": 0.17,
+          "box_union_percent": 22.17,
+          "box_union_with_css_images_percent": 22.17,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 67,
+            "end_y_exclusive": 152,
+            "height_css_px": 85
+          }
+        }
+      }
+    },
+    "supplementary_frames": {
+      "address": {
+        "at": "2026-11-23T11:47:09.150551+00:00",
+        "url": "https://map.uniqlo.com/jp/ja/detail/10101779",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 4,
+          "controls_per_100k_css_px2": 1.22,
+          "text_fragments": 9,
+          "text_box_percent": 8.16,
+          "control_box_percent": 2.6,
+          "media_box_percent": 0.93,
+          "box_union_percent": 9.4,
+          "box_union_with_css_images_percent": 9.4,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 637,
+            "end_y_exclusive": 722,
+            "height_css_px": 85
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "store-gu-stores-desktop",
+    "task": "store",
+    "brand": "GU",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:46:44.976236+00:00",
+    "start_url": "https://map.gu-global.com/jp/ja/",
+    "end_url": "https://map.gu-global.com/jp/ja/detail/10101270",
+    "finding": "ジーユー新宿東南口フラッグス店の住所と月曜11時〜21時を確認。",
+    "visual_note": "地図付きダイアログの内部をスクロールすると住所と時間が表示される。",
+    "evidence": "新宿3-37-1／月曜日 11:00 AM–9:00 PM",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "店舗名・住所・郵便番号"
+      },
+      {
+        "kind": "text",
+        "label": "新宿"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "click",
+        "label": "新宿の店舗"
+      },
+      {
+        "kind": "scroll",
+        "label": "店舗の住所"
+      },
+      {
+        "kind": "scroll",
+        "label": "平日の営業時間"
+      }
+    ],
+    "action_counts": {
+      "click": 2,
+      "text": 1,
+      "key": 1,
+      "scroll": 2
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:46:50.534577+00:00",
+        "url": "https://map.gu-global.com/jp/ja/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 0.49,
+          "text_fragments": 4,
+          "text_box_percent": 1.2,
+          "control_box_percent": 5.62,
+          "media_box_percent": 0.19,
+          "box_union_percent": 6.3,
+          "box_union_with_css_images_percent": 6.31,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 400,
+            "end_y_exclusive": 900,
+            "height_css_px": 500
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:46:57.881337+00:00",
+        "url": "https://map.gu-global.com/jp/ja/detail/10101270",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 3,
+          "controls_per_100k_css_px2": 0.24,
+          "text_fragments": 28,
+          "text_box_percent": 6.19,
+          "control_box_percent": 0.55,
+          "media_box_percent": 13.85,
+          "box_union_percent": 20,
+          "box_union_with_css_images_percent": 20.0,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 619,
+            "end_y_exclusive": 659,
+            "height_css_px": 40
+          }
+        }
+      }
+    },
+    "supplementary_frames": {
+      "address": {
+        "at": "2026-11-23T11:46:56.882871+00:00",
+        "url": "https://map.gu-global.com/jp/ja/detail/10101270",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 3,
+          "controls_per_100k_css_px2": 0.24,
+          "text_fragments": 28,
+          "text_box_percent": 6.19,
+          "control_box_percent": 0.55,
+          "media_box_percent": 0.05,
+          "box_union_percent": 6.31,
+          "box_union_with_css_images_percent": 6.31,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 258,
+            "end_y_exclusive": 328,
+            "height_css_px": 70
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "store-gu-stores-mobile",
+    "task": "store",
+    "brand": "GU",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:46:57.347773+00:00",
+    "start_url": "https://map.gu-global.com/jp/ja/",
+    "end_url": "https://map.gu-global.com/jp/ja/detail/10101270",
+    "finding": "ジーユー新宿東南口フラッグス店の住所と月曜11時〜21時を確認。",
+    "visual_note": "地図付き詳細をスクロールし住所と曜日別時間を表示。",
+    "evidence": "新宿3-37-1／月曜日 11:00 AM–9:00 PM",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "店舗名・住所・郵便番号"
+      },
+      {
+        "kind": "text",
+        "label": "新宿"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "tap",
+        "label": "新宿の店舗"
+      },
+      {
+        "kind": "scroll",
+        "label": "店舗の住所"
+      },
+      {
+        "kind": "scroll",
+        "label": "平日の営業時間"
+      }
+    ],
+    "action_counts": {
+      "tap": 2,
+      "text": 1,
+      "key": 1,
+      "scroll": 2
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:47:02.759035+00:00",
+        "url": "https://map.gu-global.com/jp/ja/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 1.82,
+          "text_fragments": 4,
+          "text_box_percent": 3.13,
+          "control_box_percent": 11.99,
+          "media_box_percent": 0.59,
+          "box_union_percent": 13.43,
+          "box_union_with_css_images_percent": 13.43,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 328,
+            "end_y_exclusive": 669,
+            "height_css_px": 341
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:47:10.619168+00:00",
+        "url": "https://map.gu-global.com/jp/ja/detail/10101270",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 3,
+          "controls_per_100k_css_px2": 0.91,
+          "text_fragments": 43,
+          "text_box_percent": 25.79,
+          "control_box_percent": 1.84,
+          "media_box_percent": 0.17,
+          "box_union_percent": 26.27,
+          "box_union_with_css_images_percent": 26.27,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 67,
+            "end_y_exclusive": 152,
+            "height_css_px": 85
+          }
+        }
+      }
+    },
+    "supplementary_frames": {
+      "address": {
+        "at": "2026-11-23T11:47:09.118794+00:00",
+        "url": "https://map.gu-global.com/jp/ja/detail/10101270",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 9,
+          "controls_per_100k_css_px2": 2.73,
+          "text_fragments": 12,
+          "text_box_percent": 10.53,
+          "control_box_percent": 4.75,
+          "media_box_percent": 31.85,
+          "box_union_percent": 40.33,
+          "box_union_with_css_images_percent": 40.33,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 637,
+            "end_y_exclusive": 722,
+            "height_css_px": 85
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "store-kinokuniya-stores-desktop",
+    "task": "store",
+    "brand": "紀伊國屋書店",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:49:06.371904+00:00",
+    "start_url": "https://store.kinokuniya.co.jp/",
+    "end_url": "https://store.kinokuniya.co.jp/store/shinjuku-main-store/?type=details",
+    "finding": "紀伊國屋書店新宿本店の住所と平日10時〜21時を確認。",
+    "visual_note": "店舗詳細情報の表に所在地と曜日別営業時間が表示された。",
+    "evidence": "新宿3-17-7／日〜土・祝 10:00〜21:00",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "新宿本店"
+      },
+      {
+        "kind": "click",
+        "label": "店舗の詳しい情報"
+      },
+      {
+        "kind": "scroll",
+        "label": "新宿本店の住所"
+      },
+      {
+        "kind": "scroll",
+        "label": "新宿本店の営業時間"
+      }
+    ],
+    "action_counts": {
+      "click": 2,
+      "scroll": 2
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:49:14.900381+00:00",
+        "url": "https://store.kinokuniya.co.jp/store/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 16,
+          "controls_per_100k_css_px2": 1.3,
+          "text_fragments": 46,
+          "text_box_percent": 5.44,
+          "control_box_percent": 9.47,
+          "media_box_percent": 0.34,
+          "box_union_percent": 12.27,
+          "box_union_with_css_images_percent": 12.27,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 556,
+            "end_y_exclusive": 691,
+            "height_css_px": 135
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:49:20.553537+00:00",
+        "url": "https://store.kinokuniya.co.jp/store/shinjuku-main-store/?type=details",
+        "screen": "page",
+        "scroll_y_css_px": 682,
+        "metrics": {
+          "visible_controls": 8,
+          "controls_per_100k_css_px2": 0.65,
+          "text_fragments": 37,
+          "text_box_percent": 7.63,
+          "control_box_percent": 2.18,
+          "media_box_percent": 0.34,
+          "box_union_percent": 8.7,
+          "box_union_with_css_images_percent": 8.7,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 197,
+            "end_y_exclusive": 243,
+            "height_css_px": 46
+          }
+        }
+      }
+    },
+    "supplementary_frames": {
+      "address": {
+        "at": "2026-11-23T11:49:19.784511+00:00",
+        "url": "https://store.kinokuniya.co.jp/store/shinjuku-main-store/?type=details",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 10,
+          "controls_per_100k_css_px2": 0.81,
+          "text_fragments": 21,
+          "text_box_percent": 5.57,
+          "control_box_percent": 3.38,
+          "media_box_percent": 21.45,
+          "box_union_percent": 27.75,
+          "box_union_with_css_images_percent": 27.79,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 300,
+            "end_y_exclusive": 331,
+            "height_css_px": 31
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "store-kinokuniya-stores-mobile",
+    "task": "store",
+    "brand": "紀伊國屋書店",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:49:20.440980+00:00",
+    "start_url": "https://store.kinokuniya.co.jp/",
+    "end_url": "https://store.kinokuniya.co.jp/store/shinjuku-main-store/?type=details",
+    "finding": "紀伊國屋書店新宿本店の住所と平日10時〜21時を確認。",
+    "visual_note": "店舗詳細情報の所在地と営業時間は縦に離れているため画像を2枚保存。",
+    "evidence": "新宿3-17-7／日〜土・祝 10:00〜21:00",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "新宿本店"
+      },
+      {
+        "kind": "tap",
+        "label": "店舗の詳しい情報"
+      },
+      {
+        "kind": "scroll",
+        "label": "新宿本店の住所"
+      },
+      {
+        "kind": "scroll",
+        "label": "新宿本店の営業時間"
+      }
+    ],
+    "action_counts": {
+      "tap": 2,
+      "scroll": 2
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:49:35.264286+00:00",
+        "url": "https://store.kinokuniya.co.jp/store/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 10,
+          "controls_per_100k_css_px2": 3.04,
+          "text_fragments": 33,
+          "text_box_percent": 13.41,
+          "control_box_percent": 18.19,
+          "media_box_percent": 1.29,
+          "box_union_percent": 27.91,
+          "box_union_with_css_images_percent": 27.9,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 701,
+            "end_y_exclusive": 761,
+            "height_css_px": 60
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:49:40.343380+00:00",
+        "url": "https://store.kinokuniya.co.jp/store/shinjuku-main-store/?type=details",
+        "screen": "page",
+        "scroll_y_css_px": 899,
+        "metrics": {
+          "visible_controls": 8,
+          "controls_per_100k_css_px2": 2.43,
+          "text_fragments": 33,
+          "text_box_percent": 20.25,
+          "control_box_percent": 7.22,
+          "media_box_percent": 1.29,
+          "box_union_percent": 22.77,
+          "box_union_with_css_images_percent": 22.77,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 115,
+            "end_y_exclusive": 165,
+            "height_css_px": 50
+          }
+        }
+      }
+    },
+    "supplementary_frames": {
+      "address": {
+        "at": "2026-11-23T11:49:39.638676+00:00",
+        "url": "https://store.kinokuniya.co.jp/store/shinjuku-main-store/?type=details",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 9,
+          "controls_per_100k_css_px2": 2.73,
+          "text_fragments": 20,
+          "text_box_percent": 13.98,
+          "control_box_percent": 10.13,
+          "media_box_percent": 42.36,
+          "box_union_percent": 58.25,
+          "box_union_with_css_images_percent": 58.39,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 260,
+            "end_y_exclusive": 318,
+            "height_css_px": 58
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "store-starbucks-stores-desktop",
+    "task": "store",
+    "brand": "スターバックス",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:54:05.440101+00:00",
+    "start_url": "https://store.starbucks.co.jp/",
+    "end_url": "https://store.starbucks.co.jp/detail-12/",
+    "finding": "新宿３丁目店の住所と平日7時〜22時30分を確認。先の明治安田新宿ビルB1F店は観察日時点で未開店だったため別店舗を選んだ。",
+    "visual_note": "終点画像に店舗名・住所・月〜金の営業時間が同時に表示される。",
+    "evidence": "新宿3-11-6／月〜金 07:00〜22:30",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "店舗検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "新宿"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "scroll",
+        "label": "新宿３丁目店の候補"
+      },
+      {
+        "kind": "click",
+        "label": "新宿３丁目店"
+      },
+      {
+        "kind": "click",
+        "label": "詳細"
+      },
+      {
+        "kind": "scroll",
+        "label": "店舗の住所"
+      }
+    ],
+    "action_counts": {
+      "click": 3,
+      "text": 1,
+      "key": 1,
+      "scroll": 2
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:54:12.663048+00:00",
+        "url": "https://store.starbucks.co.jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 17,
+          "controls_per_100k_css_px2": 1.38,
+          "text_fragments": 8,
+          "text_box_percent": 1.0,
+          "control_box_percent": 7.95,
+          "media_box_percent": 0.84,
+          "box_union_percent": 8.28,
+          "box_union_with_css_images_percent": 8.28,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 152,
+            "end_y_exclusive": 286,
+            "height_css_px": 134
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:54:43.296583+00:00",
+        "url": "https://store.starbucks.co.jp/detail-12/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 16,
+          "controls_per_100k_css_px2": 1.3,
+          "text_fragments": 29,
+          "text_box_percent": 4.25,
+          "control_box_percent": 4.82,
+          "media_box_percent": 42.39,
+          "box_union_percent": 49.84,
+          "box_union_with_css_images_percent": 51.0,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 152,
+            "end_y_exclusive": 251,
+            "height_css_px": 99
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "store-starbucks-stores-mobile",
+    "task": "store",
+    "brand": "スターバックス",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "partial",
+    "observed_at": "2026-11-23T11:43:18.418783+00:00",
+    "start_url": "https://store.starbucks.co.jp/",
+    "end_url": "https://store.starbucks.co.jp/detail-4456/",
+    "finding": "選んだ明治安田新宿ビルB1F店は観察日時点では開店前で、営業時間も終点画像には見えない。新宿には他に営業中の店舗があるため、課題の前提は成立する。",
+    "visual_note": "入口に新店案内、終点に開店予定日と住所が見える。平日営業時間は画面外。",
+    "evidence": "2026.11.28 OPEN",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "2026.11.28. 明治安田新宿ビル B1F店"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:43:30.268596+00:00",
+        "url": "https://store.starbucks.co.jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 12,
+          "controls_per_100k_css_px2": 3.65,
+          "text_fragments": 14,
+          "text_box_percent": 8.55,
+          "control_box_percent": 35.6,
+          "media_box_percent": 0.98,
+          "box_union_percent": 36.93,
+          "box_union_with_css_images_percent": 36.93,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 96,
+            "end_y_exclusive": 194,
+            "height_css_px": 98
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:43:34.551064+00:00",
+        "url": "https://store.starbucks.co.jp/detail-4456/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 1.82,
+          "text_fragments": 14,
+          "text_box_percent": 9.36,
+          "control_box_percent": 1.44,
+          "media_box_percent": 0.84,
+          "box_union_percent": 10.29,
+          "box_union_with_css_images_percent": 10.3,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 296,
+            "end_y_exclusive": 608,
+            "height_css_px": 312
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "store-bic-stores-desktop",
+    "task": "store",
+    "brand": "ビックカメラ",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "unconfirmed",
+    "status": "unavailable",
+    "observed_at": "2026-11-23T11:43:24.625401+00:00",
+    "start_url": "https://www.biccamera.com/bc/i/shop/shoplist/index.jsp",
+    "end_url": null,
+    "finding": "開始ページがブラウザの到達不能画面となった。",
+    "visual_note": "ページに到達できない旨の表示。",
+    "evidence": "",
+    "actions": [],
+    "action_counts": {},
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:43:27.864568+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T11:43:27.926945+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "store-bic-stores-mobile",
+    "task": "store",
+    "brand": "ビックカメラ",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "partial",
+    "observed_at": "2026-11-23T11:43:26.517553+00:00",
+    "start_url": "https://www.biccamera.com/bc/i/shop/shoplist/index.jsp",
+    "end_url": null,
+    "finding": "店舗一覧から新宿西口店を選んだ後、店舗詳細が到達不能になった。",
+    "visual_note": "入口に地域別一覧、終点にブラウザの到達不能画面が表示。",
+    "evidence": "",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "新宿西口店 〒160-0023 東京都新宿区西新宿1-5-1 新宿西口ハルク 2F～6F"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:43:35.393390+00:00",
+        "url": "https://www.biccamera.com/bc/i/shop/shoplist/index.jsp",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 65,
+          "controls_per_100k_css_px2": 19.75,
+          "text_fragments": 70,
+          "text_box_percent": 18.6,
+          "control_box_percent": 37.33,
+          "media_box_percent": 8.16,
+          "box_union_percent": 41.39,
+          "box_union_with_css_images_percent": 41.39,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 621,
+            "end_y_exclusive": 682,
+            "height_css_px": 61
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:43:37.336173+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "store-yodobashi-stores-desktop",
+    "task": "store",
+    "brand": "ヨドバシカメラ",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "unconfirmed",
+    "status": "unavailable",
+    "observed_at": "2026-11-23T11:43:28.202906+00:00",
+    "start_url": "https://www.yodobashi.com/ec/store/list/",
+    "end_url": null,
+    "finding": "開始ページがブラウザの到達不能画面となった。",
+    "visual_note": "ページに到達できない旨の表示。",
+    "evidence": "",
+    "actions": [],
+    "action_counts": {},
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:43:31.417648+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T11:43:31.494310+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "store-yodobashi-stores-mobile",
+    "task": "store",
+    "brand": "ヨドバシカメラ",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "unconfirmed",
+    "status": "partial",
+    "observed_at": "2026-11-23T11:43:31.772104+00:00",
+    "start_url": "https://www.yodobashi.com/ec/store/list/",
+    "end_url": null,
+    "finding": "新宿西口本店を一覧で選んだ後、店舗詳細が到達不能になった。",
+    "visual_note": "入口には店舗名・住所と当日の閉店時刻、終点には到達不能画面が表示。",
+    "evidence": "",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "ヨドバシカメラ 新宿西口本店 石井スポーツ ヨドバシ新宿西口店"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:43:37.609364+00:00",
+        "url": "https://www.yodobashi.com/ec/store/list/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 16,
+          "controls_per_100k_css_px2": 4.86,
+          "text_fragments": 19,
+          "text_box_percent": 19.58,
+          "control_box_percent": 47.26,
+          "media_box_percent": 13.62,
+          "box_union_percent": 55.83,
+          "box_union_with_css_images_percent": 55.86,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 162,
+            "end_y_exclusive": 238,
+            "height_css_px": 76
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:43:41.371024+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-gu-desktop",
+    "task": "shirt",
+    "brand": "GU",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "unconfirmed",
+    "status": "unavailable",
+    "observed_at": "2026-11-23T11:42:44.419726+00:00",
+    "start_url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+    "end_url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+    "finding": "アクセス拒否または接続エラーで入口を利用できなかった。",
+    "visual_note": "白地のアクセス拒否画面。",
+    "evidence": "",
+    "actions": [],
+    "action_counts": {},
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:47.513938+00:00",
+        "url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T11:42:47.607832+00:00",
+        "url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-gu-mobile",
+    "task": "shirt",
+    "brand": "GU",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "unconfirmed",
+    "status": "unavailable",
+    "observed_at": "2026-11-23T11:42:45.541519+00:00",
+    "start_url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+    "end_url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+    "finding": "入口でアクセス拒否が表示された。",
+    "visual_note": "終点は白地のアクセス拒否画面。",
+    "evidence": "",
+    "actions": [],
+    "action_counts": {},
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:50.780130+00:00",
+        "url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+        "screen": "empty",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T11:42:56.438760+00:00",
+        "url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-beams-desktop",
+    "task": "shirt",
+    "brand": "BEAMS",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "unconfirmed",
+    "status": "unavailable",
+    "observed_at": "2026-11-23T11:42:48.094730+00:00",
+    "start_url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+    "end_url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+    "finding": "アクセス拒否または接続エラーで入口を利用できなかった。",
+    "visual_note": "白地のアクセス拒否画面。",
+    "evidence": "",
+    "actions": [],
+    "action_counts": {},
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:51.471006+00:00",
+        "url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T11:42:51.740952+00:00",
+        "url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-beams-mobile",
+    "task": "shirt",
+    "brand": "BEAMS",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "unconfirmed",
+    "status": "partial",
+    "observed_at": "2026-11-23T11:42:52.090656+00:00",
+    "start_url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+    "end_url": "https://www.beams.co.jp/item/international_gallery_beams/t-shirt/23040097729/?color=19",
+    "finding": "一覧の商品をタップしたが、遷移後にアクセス拒否となった。",
+    "visual_note": "入口は商品一覧だったが、操作後は白地のアクセス拒否画面。",
+    "evidence": "",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Tシャツの商品を開く"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:43:07.649925+00:00",
+        "url": "https://www.beams.co.jp/category/t-shirt/?sex=M&label=0023",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 30,
+          "controls_per_100k_css_px2": 9.11,
+          "text_fragments": 43,
+          "text_box_percent": 14.11,
+          "control_box_percent": 48.56,
+          "media_box_percent": 23.33,
+          "box_union_percent": 57.27,
+          "box_union_with_css_images_percent": 58.05,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 524,
+            "end_y_exclusive": 555,
+            "height_css_px": 31
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:43:19.727168+00:00",
+        "url": "https://www.beams.co.jp/item/international_gallery_beams/t-shirt/23040097729/?color=19",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-globalwork-desktop",
+    "task": "shirt",
+    "brand": "GLOBAL WORK",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "unconfirmed",
+    "status": "unavailable",
+    "observed_at": "2026-11-23T11:42:57.524347+00:00",
+    "start_url": "https://www.dot-st.com/globalwork/disp/itemlist/?dispNo=001002002002",
+    "end_url": null,
+    "finding": "アクセス拒否または接続エラーで入口を利用できなかった。",
+    "visual_note": "ブラウザーの接続エラー画面。",
+    "evidence": "",
+    "actions": [],
+    "action_counts": {},
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:43:01.370863+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T11:43:07.454387+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-globalwork-mobile",
+    "task": "shirt",
+    "brand": "GLOBAL WORK",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "unconfirmed",
+    "status": "partial",
+    "observed_at": "2026-11-23T11:49:25.863297+00:00",
+    "start_url": "https://www.dot-st.com/globalwork/disp/itemlist/?dispNo=001002002002",
+    "end_url": "https://www.dot-st.com/globalwork/disp/item/1023339/?COLOR_CD=05",
+    "finding": "商品をタップして10秒待った時点で商品情報が描画されず、価格とMを確認できなかった。",
+    "visual_note": "商品選択後に10秒待った画面はヘッダーと告知のみで、商品名・価格・サイズは表示されなかった。",
+    "evidence": "",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Tシャツの商品カード"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:49:34.247583+00:00",
+        "url": "https://www.dot-st.com/globalwork/disp/itemlist/?dispNo=001002002002",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 23,
+          "controls_per_100k_css_px2": 6.99,
+          "text_fragments": 38,
+          "text_box_percent": 10.27,
+          "control_box_percent": 66.54,
+          "media_box_percent": 37.52,
+          "box_union_percent": 68.92,
+          "box_union_with_css_images_percent": 68.93,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 283,
+            "end_y_exclusive": 351,
+            "height_css_px": 68
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:49:44.725173+00:00",
+        "url": "https://www.dot-st.com/globalwork/disp/item/1023339/?COLOR_CD=05",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 9,
+          "controls_per_100k_css_px2": 2.73,
+          "text_fragments": 4,
+          "text_box_percent": 0.41,
+          "control_box_percent": 20.05,
+          "media_box_percent": 12.85,
+          "box_union_percent": 20.86,
+          "box_union_with_css_images_percent": 20.86,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 256,
+            "end_y_exclusive": 844,
+            "height_css_px": 588
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "returns-apple-returns-desktop",
+    "task": "returns",
+    "brand": "Apple",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:43:00.475646+00:00",
+    "start_url": "https://www.apple.com/shop/help",
+    "end_url": "https://www.apple.com/shop/help/returns_refund",
+    "finding": "米国の標準返品は受取日から14暦日。Appleから直接購入した商品が対象で、付属のコードや書類も同梱する案内がある。別途ホリデー返品条件も表示された。",
+    "visual_note": "標準返品の見出しと箇条書きに期間と対象が並び、ホリデー条件と区別されている。",
+    "evidence": "Standard Return Policy の14暦日",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "Learn more about refunds and returns"
+      },
+      {
+        "kind": "scroll",
+        "label": "該当する本文へ移動"
+      }
+    ],
+    "action_counts": {
+      "click": 1,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:55.198776+00:00",
+        "url": "https://www.apple.com/shop/help",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 20,
+          "controls_per_100k_css_px2": 1.63,
+          "text_fragments": 63,
+          "text_box_percent": 14.94,
+          "control_box_percent": 3.56,
+          "media_box_percent": 1.76,
+          "box_union_percent": 17.03,
+          "box_union_with_css_images_percent": 17.03,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 698,
+            "end_y_exclusive": 777,
+            "height_css_px": 79
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:43:00.348716+00:00",
+        "url": "https://www.apple.com/shop/help/returns_refund",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 21,
+          "controls_per_100k_css_px2": 1.71,
+          "text_fragments": 45,
+          "text_box_percent": 19.69,
+          "control_box_percent": 4.01,
+          "media_box_percent": 1.76,
+          "box_union_percent": 21.71,
+          "box_union_with_css_images_percent": 21.71,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 351,
+            "end_y_exclusive": 410,
+            "height_css_px": 59
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "returns-apple-returns-mobile",
+    "task": "returns",
+    "brand": "Apple",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:43:05.599396+00:00",
+    "start_url": "https://www.apple.com/shop/help",
+    "end_url": "https://www.apple.com/shop/help/returns_refund",
+    "finding": "米国の標準返品は受取日から14暦日。Appleから直接購入した商品が対象で、付属のコードや書類も同梱する案内がある。別途ホリデー返品条件も表示された。",
+    "visual_note": "標準返品の見出しと箇条書きに期間と対象が並び、ホリデー条件と区別されている。",
+    "evidence": "Standard Return Policy の14暦日",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Returns & Refunds"
+      },
+      {
+        "kind": "tap",
+        "label": "U.S. Returns & Refunds Policy"
+      },
+      {
+        "kind": "scroll",
+        "label": "該当する本文へ移動"
+      }
+    ],
+    "action_counts": {
+      "tap": 2,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:42:59.926572+00:00",
+        "url": "https://www.apple.com/shop/help",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 13,
+          "controls_per_100k_css_px2": 3.95,
+          "text_fragments": 22,
+          "text_box_percent": 23.78,
+          "control_box_percent": 11.45,
+          "media_box_percent": 0.9,
+          "box_union_percent": 26.88,
+          "box_union_with_css_images_percent": 26.88,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 596,
+            "end_y_exclusive": 670,
+            "height_css_px": 74
+          }
+        },
+        "measured_pairs": [
+          {
+            "above": "ヘルプの見出し",
+            "below": "導入文",
+            "gap_css_px": 13.6
+          }
+        ]
+      },
+      "end": {
+        "at": "2026-11-23T11:43:05.457194+00:00",
+        "url": "https://www.apple.com/shop/help/returns_refund",
+        "screen": "page",
+        "scroll_y_css_px": 533,
+        "metrics": {
+          "visible_controls": 2,
+          "controls_per_100k_css_px2": 0.61,
+          "text_fragments": 34,
+          "text_box_percent": 50.3,
+          "control_box_percent": 0.86,
+          "media_box_percent": 0.06,
+          "box_union_percent": 50.35,
+          "box_union_with_css_images_percent": 50.35,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 732,
+            "end_y_exclusive": 780,
+            "height_css_px": 48
+          }
+        },
+        "measured_pairs": [
+          {
+            "above": "標準返品の見出し",
+            "below": "直後の導入文",
+            "gap_css_px": 0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "returns-ikea-returns-desktop",
+    "task": "returns",
+    "brand": "IKEA",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:45:18.232021+00:00",
+    "start_url": "https://www.ikea.com/us/en/customer-service/",
+    "end_url": "https://www.ikea.com/us/en/customer-service/returns-claims/",
+    "finding": "米国では新品未開封品は365日以内、開封品は180日以内に購入証明とともに返品できる。植物、裁断済み布、特注天板、現状販売品は返品対象外と表示。",
+    "visual_note": "返品ポリシーの本文に期間と購入証明が並び、対象外の商品は太字で示される。",
+    "evidence": "365日・180日と購入証明",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "Learn more"
+      },
+      {
+        "kind": "click",
+        "label": "Accept（Cookie同意）"
+      },
+      {
+        "kind": "scroll",
+        "label": "該当する本文へ移動"
+      }
+    ],
+    "action_counts": {
+      "click": 2,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:45:12.780316+00:00",
+        "url": "https://www.ikea.com/us/en/customer-service/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 29,
+          "controls_per_100k_css_px2": 2.36,
+          "text_fragments": 42,
+          "text_box_percent": 9.7,
+          "control_box_percent": 24.14,
+          "media_box_percent": 8.95,
+          "box_union_percent": 30.83,
+          "box_union_with_css_images_percent": 30.84,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 412,
+            "end_y_exclusive": 484,
+            "height_css_px": 72
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:45:18.064974+00:00",
+        "url": "https://www.ikea.com/us/en/customer-service/returns-claims/",
+        "screen": "page",
+        "scroll_y_css_px": 87,
+        "metrics": {
+          "visible_controls": 16,
+          "controls_per_100k_css_px2": 1.3,
+          "text_fragments": 27,
+          "text_box_percent": 10.79,
+          "control_box_percent": 39.28,
+          "media_box_percent": 36.78,
+          "box_union_percent": 49.38,
+          "box_union_with_css_images_percent": 49.38,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 30,
+            "end_y_exclusive": 249,
+            "height_css_px": 219
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "returns-ikea-returns-mobile",
+    "task": "returns",
+    "brand": "IKEA",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:45:16.607084+00:00",
+    "start_url": "https://www.ikea.com/us/en/customer-service/",
+    "end_url": "https://www.ikea.com/us/en/customer-service/returns-claims/",
+    "finding": "米国では新品未開封品は365日以内、開封品は180日以内に購入証明とともに返品できる。植物、裁断済み布、特注天板、現状販売品は返品対象外と表示。",
+    "visual_note": "返品ポリシーの本文に期間と購入証明が並び、対象外の商品は太字で示される。",
+    "evidence": "365日・180日と購入証明",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Learn more"
+      },
+      {
+        "kind": "tap",
+        "label": "Accept（Cookie同意）"
+      },
+      {
+        "kind": "scroll",
+        "label": "該当する本文へ移動"
+      }
+    ],
+    "action_counts": {
+      "tap": 2,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:45:12.161102+00:00",
+        "url": "https://www.ikea.com/us/en/customer-service/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 14,
+          "controls_per_100k_css_px2": 4.25,
+          "text_fragments": 21,
+          "text_box_percent": 12.63,
+          "control_box_percent": 29.17,
+          "media_box_percent": 10.22,
+          "box_union_percent": 37.67,
+          "box_union_with_css_images_percent": 37.67,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 749,
+            "end_y_exclusive": 810,
+            "height_css_px": 61
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:45:16.513825+00:00",
+        "url": "https://www.ikea.com/us/en/customer-service/returns-claims/",
+        "screen": "page",
+        "scroll_y_css_px": 454,
+        "metrics": {
+          "visible_controls": 4,
+          "controls_per_100k_css_px2": 1.22,
+          "text_fragments": 20,
+          "text_box_percent": 30.58,
+          "control_box_percent": 33.35,
+          "media_box_percent": 33.19,
+          "box_union_percent": 63.76,
+          "box_union_with_css_images_percent": 63.77,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 665,
+            "end_y_exclusive": 725,
+            "height_css_px": 60
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "returns-target-returns-desktop",
+    "task": "returns",
+    "brand": "Target",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:45:17.323791+00:00",
+    "start_url": "https://help.target.com/",
+    "end_url": "https://www.target.com/returns",
+    "finding": "米国ではTargetが販売する大半の商品が90日、レシートのあるTargetブランド商品は365日と表示された。一部商品には別の期間がある。",
+    "visual_note": "返品期間が大きな赤い数字で示され、各数字の下に対象条件が添えられている。",
+    "evidence": "90日とTarget販売の大半の商品",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "Returns & receipts Start a return or find a receipt"
+      }
+    ],
+    "action_counts": {
+      "click": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:45:11.052899+00:00",
+        "url": "https://www.target.com/help",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 29,
+          "controls_per_100k_css_px2": 2.36,
+          "text_fragments": 31,
+          "text_box_percent": 9.15,
+          "control_box_percent": 46.64,
+          "media_box_percent": 2.4,
+          "box_union_percent": 48.42,
+          "box_union_with_css_images_percent": 53.03,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 415,
+            "end_y_exclusive": 449,
+            "height_css_px": 34
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:45:16.986996+00:00",
+        "url": "https://www.target.com/returns",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 20,
+          "controls_per_100k_css_px2": 1.63,
+          "text_fragments": 28,
+          "text_box_percent": 20.19,
+          "control_box_percent": 7.76,
+          "media_box_percent": 0.32,
+          "box_union_percent": 25.88,
+          "box_union_with_css_images_percent": 29.63,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 699,
+            "end_y_exclusive": 743,
+            "height_css_px": 44
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "returns-target-returns-mobile",
+    "task": "returns",
+    "brand": "Target",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:46:02.643069+00:00",
+    "start_url": "https://help.target.com/",
+    "end_url": "https://www.target.com/returns",
+    "finding": "米国ではTargetが販売する大半の商品が90日、レシートのあるTargetブランド商品は365日と表示された。一部商品には別の期間がある。",
+    "visual_note": "返品期間が大きな赤い数字で示され、各数字の下に対象条件が添えられている。",
+    "evidence": "90日とTarget販売の大半の商品",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Returns & receipts Start a return or find a receipt"
+      },
+      {
+        "kind": "scroll",
+        "label": "返品期間の表示へ移動"
+      }
+    ],
+    "action_counts": {
+      "tap": 1,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:45:57.279447+00:00",
+        "url": "https://www.target.com/help",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 14,
+          "controls_per_100k_css_px2": 4.25,
+          "text_fragments": 12,
+          "text_box_percent": 11.92,
+          "control_box_percent": 47.41,
+          "media_box_percent": 3.93,
+          "box_union_percent": 53.82,
+          "box_union_with_css_images_percent": 59.74,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 460,
+            "end_y_exclusive": 494,
+            "height_css_px": 34
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:46:02.576987+00:00",
+        "url": "https://www.target.com/returns",
+        "screen": "page",
+        "scroll_y_css_px": 650,
+        "metrics": {
+          "visible_controls": 7,
+          "controls_per_100k_css_px2": 2.13,
+          "text_fragments": 11,
+          "text_box_percent": 19.13,
+          "control_box_percent": 8.14,
+          "media_box_percent": 1.01,
+          "box_union_percent": 25.85,
+          "box_union_with_css_images_percent": 25.85,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 625,
+            "end_y_exclusive": 729,
+            "height_css_px": 104
+          }
+        },
+        "measured_pairs": [
+          {
+            "above": "90の数字",
+            "below": "対象商品の説明（間にdaysの表記）",
+            "gap_css_px": 32.8
+          },
+          {
+            "above": "90の下のdays",
+            "below": "対象商品の説明",
+            "gap_css_px": 0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "returns-argos-returns-desktop",
+    "task": "returns",
+    "brand": "Argos",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "unconfirmed",
+    "status": "unavailable",
+    "observed_at": "2026-11-23T11:43:10.559778+00:00",
+    "start_url": "https://help.argos.co.uk/",
+    "end_url": "https://help.argos.co.uk/",
+    "finding": "開始URLを開いたが Access Denied が表示され、返品案内を操作できなかった。",
+    "visual_note": "白い画面上部に Access Denied とアクセス拒否の説明が表示される。",
+    "evidence": "開始画面でアクセス拒否",
+    "actions": [],
+    "action_counts": {},
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:43:10.084342+00:00",
+        "url": "https://help.argos.co.uk/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T11:43:10.452816+00:00",
+        "url": "https://help.argos.co.uk/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "returns-argos-returns-mobile",
+    "task": "returns",
+    "brand": "Argos",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:44:42.273557+00:00",
+    "start_url": "https://help.argos.co.uk/",
+    "end_url": "https://help.argos.co.uk/help/refunds-&-returns/how-do-i-return-a-home-delivered-item-or-product-i-collected-in-store",
+    "finding": "宅配または店頭受取商品の返品記事に、配送日または受取日から30日と表示された。店頭受取品はArgos店舗に返せる旨も記載。",
+    "visual_note": "受取方法のボタンの下に記事見出しと30日の説明が続く。",
+    "evidence": "配送・受取から30日",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "How do I return a home delivered item, or product I collected in store?"
+      },
+      {
+        "kind": "scroll",
+        "label": "該当する本文へ移動"
+      }
+    ],
+    "action_counts": {
+      "tap": 1,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:44:38.178193+00:00",
+        "url": "https://help.argos.co.uk/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 10,
+          "controls_per_100k_css_px2": 3.04,
+          "text_fragments": 15,
+          "text_box_percent": 14.85,
+          "control_box_percent": 42.48,
+          "media_box_percent": 1.7,
+          "box_union_percent": 48.38,
+          "box_union_with_css_images_percent": 48.38,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 319,
+            "end_y_exclusive": 354,
+            "height_css_px": 35
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:44:42.199946+00:00",
+        "url": "https://help.argos.co.uk/help/refunds-&-returns/how-do-i-return-a-home-delivered-item-or-product-i-collected-in-store",
+        "screen": "page",
+        "scroll_y_css_px": 551,
+        "metrics": {
+          "visible_controls": 5,
+          "controls_per_100k_css_px2": 1.52,
+          "text_fragments": 25,
+          "text_box_percent": 32.79,
+          "control_box_percent": 22.52,
+          "media_box_percent": 0.0,
+          "box_union_percent": 47.61,
+          "box_union_with_css_images_percent": 47.61,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 348,
+            "end_y_exclusive": 400,
+            "height_css_px": 52
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "returns-jl-returns-desktop",
+    "task": "returns",
+    "brand": "John Lewis",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "unconfirmed",
+    "status": "unavailable",
+    "observed_at": "2026-11-23T11:43:14.069992+00:00",
+    "start_url": "https://www.johnlewis.com/customer-services",
+    "end_url": null,
+    "finding": "開始URLへの接続で HTTP/2 プロトコルエラーが発生し、返品条件を確認できなかった。",
+    "visual_note": "Edgeの接続エラー画面が表示される。",
+    "evidence": "開始画面の接続エラー",
+    "actions": [],
+    "action_counts": {},
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:43:13.638160+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T11:43:13.978821+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "returns-jl-returns-mobile",
+    "task": "returns",
+    "brand": "John Lewis",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "unconfirmed",
+    "status": "partial",
+    "observed_at": "2026-11-23T11:43:23.492309+00:00",
+    "start_url": "https://www.johnlewis.com/customer-services",
+    "end_url": "https://www.johnlewis.com/customer-services",
+    "finding": "顧客サービス画面で Returns & refunds を選んだが、返品期限や適用条件を表示できなかった。",
+    "visual_note": "顧客サービスの選択肢が縦に並び、返品の項目が枠で囲まれている。",
+    "evidence": "顧客サービスの返品項目",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Returns & refunds"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:43:21.238412+00:00",
+        "url": "https://www.johnlewis.com/customer-services",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 14,
+          "controls_per_100k_css_px2": 4.25,
+          "text_fragments": 14,
+          "text_box_percent": 15.95,
+          "control_box_percent": 32.51,
+          "media_box_percent": 3.65,
+          "box_union_percent": 43.47,
+          "box_union_with_css_images_percent": 43.47,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 288,
+            "end_y_exclusive": 346,
+            "height_css_px": 58
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:43:23.419366+00:00",
+        "url": "https://www.johnlewis.com/customer-services",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 14,
+          "controls_per_100k_css_px2": 4.25,
+          "text_fragments": 14,
+          "text_box_percent": 15.95,
+          "control_box_percent": 32.51,
+          "media_box_percent": 3.65,
+          "box_union_percent": 43.47,
+          "box_union_with_css_images_percent": 43.47,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 288,
+            "end_y_exclusive": 346,
+            "height_css_px": 58
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "returns-lego-returns-desktop",
+    "task": "returns",
+    "brand": "LEGO",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "unconfirmed",
+    "status": "unavailable",
+    "observed_at": "2026-11-23T11:45:18.637321+00:00",
+    "start_url": "https://www.lego.com/en-us/service",
+    "end_url": "https://www.lego.com/en-us/service",
+    "finding": "開始URLにアクセスしたところブロック画面となり、返品案内に進めなかった。",
+    "visual_note": "赤い×印と「Sorry, you have been blocked」が中央に表示される。",
+    "evidence": "開始画面でアクセス拒否",
+    "actions": [],
+    "action_counts": {},
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:45:18.454300+00:00",
+        "url": "https://www.lego.com/en-us/service",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T11:45:18.561617+00:00",
+        "url": "https://www.lego.com/en-us/service",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "returns-lego-returns-mobile",
+    "task": "returns",
+    "brand": "LEGO",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "unconfirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:50:04.278412+00:00",
+    "start_url": "https://www.lego.com/en-us/service",
+    "end_url": "https://www.lego.com/en-us/service/help-topics/article/deliveries-returns-and-cancellations",
+    "finding": "米国向け案内では荷物を受け取った日から90日以内に無料で返品できる。ギフトカード、Pick a Brick、Minifigure Factory、Create a Minifigureは返品対象外と記載。",
+    "visual_note": "Returns見出しの下に90日の本文があり、米国向け手続きと返品対象外が続く。",
+    "evidence": "受取日から90日と対象外商品",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Continue"
+      },
+      {
+        "kind": "tap",
+        "label": "Reject All"
+      },
+      {
+        "kind": "tap",
+        "label": "Deliveries, Returns & Cancellations"
+      },
+      {
+        "kind": "scroll",
+        "label": "返品期間の本文へ移動"
+      }
+    ],
+    "action_counts": {
+      "tap": 3,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:49:52.683651+00:00",
+        "url": "https://www.lego.com/en-us/service",
+        "screen": "site_choice",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 4,
+          "controls_per_100k_css_px2": 1.22,
+          "text_fragments": 15,
+          "text_box_percent": 10.91,
+          "control_box_percent": 6.11,
+          "media_box_percent": 0.75,
+          "box_union_percent": 16.16,
+          "box_union_with_css_images_percent": 16.16,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 3,
+            "end_y_exclusive": 47,
+            "height_css_px": 44
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:50:04.278412+00:00",
+        "url": "https://www.lego.com/en-us/service/help-topics/article/deliveries-returns-and-cancellations",
+        "screen": "page",
+        "scroll_y_css_px": 793,
+        "metrics": {
+          "visible_controls": 11,
+          "controls_per_100k_css_px2": 3.34,
+          "text_fragments": 36,
+          "text_box_percent": 35.23,
+          "control_box_percent": 16.35,
+          "media_box_percent": 3.29,
+          "box_union_percent": 44.63,
+          "box_union_with_css_images_percent": 44.63,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 512,
+            "end_y_exclusive": 555,
+            "height_css_px": 43
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "shirt-gap-desktop",
+    "task": "shirt",
+    "brand": "Gap",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:43:02.838746+00:00",
+    "start_url": "https://www.gap.com/browse/men/t-shirts?cid=5225",
+    "end_url": "https://www.gap.com/browse/product.do?pid=1185662032&vid=1&pcid=5225&cid=5225",
+    "finding": "Tシャツの商品詳細で価格とMサイズの選択肢を確認。",
+    "visual_note": "左に着用画像、右に商品名・価格とサイズ選択欄が並ぶ。",
+    "evidence": "$49.95 / Size Size Guide XS S M",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "Tシャツの商品を開く"
+      }
+    ],
+    "action_counts": {
+      "click": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:43:15.928387+00:00",
+        "url": "https://www.gap.com/browse/men/t-shirts?cid=5225",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 28,
+          "controls_per_100k_css_px2": 2.28,
+          "text_fragments": 23,
+          "text_box_percent": 3.22,
+          "control_box_percent": 33.74,
+          "media_box_percent": 22.14,
+          "box_union_percent": 34.63,
+          "box_union_with_css_images_percent": 34.63,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 623,
+            "end_y_exclusive": 737,
+            "height_css_px": 114
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:43:23.965015+00:00",
+        "url": "https://www.gap.com/browse/product.do?pid=1185662032&vid=1&pcid=5225&cid=5225",
+        "screen": "page",
+        "scroll_y_css_px": 184,
+        "metrics": {
+          "visible_controls": 18,
+          "controls_per_100k_css_px2": 1.47,
+          "text_fragments": 42,
+          "text_box_percent": 3.25,
+          "control_box_percent": 66.97,
+          "media_box_percent": 63.6,
+          "box_union_percent": 69.28,
+          "box_union_with_css_images_percent": 70.06,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 0,
+            "end_y_exclusive": 52,
+            "height_css_px": 52
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "shirt-gap-mobile",
+    "task": "shirt",
+    "brand": "Gap",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "previous_status": "confirmed",
+    "status": "confirmed",
+    "observed_at": "2026-11-23T11:45:10.512280+00:00",
+    "start_url": "https://www.gap.com/browse/men/t-shirts?cid=5225",
+    "end_url": "https://www.gap.com/browse/product.do?pid=1185662032&vid=1&pcid=5225&cid=5225",
+    "finding": "商品詳細でWaffle Henley T-Shirt $49.95 / Size Mを確認。",
+    "visual_note": "着用画像の下に$49.95、色、サイズの選択肢が縦に表示され、Mが見える。",
+    "evidence": "Waffle Henley T-Shirt $49.95 / Size M",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Tシャツ商品"
+      },
+      {
+        "kind": "scroll",
+        "label": "価格・サイズを確認する位置へ"
+      }
+    ],
+    "action_counts": {
+      "tap": 1,
+      "scroll": 1
+    },
+    "frames": {
+      "start": {
+        "at": "2026-11-23T11:45:06.295498+00:00",
+        "url": "https://www.gap.com/browse/men/t-shirts?cid=5225",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 22,
+          "controls_per_100k_css_px2": 6.68,
+          "text_fragments": 19,
+          "text_box_percent": 6.52,
+          "control_box_percent": 59.32,
+          "media_box_percent": 41.29,
+          "box_union_percent": 62.39,
+          "box_union_with_css_images_percent": 62.39,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 622,
+            "end_y_exclusive": 714,
+            "height_css_px": 92
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T11:45:10.251609+00:00",
+        "url": "https://www.gap.com/browse/product.do?pid=1185662032&vid=1&pcid=5225&cid=5225",
+        "screen": "page",
+        "scroll_y_css_px": 750,
+        "metrics": {
+          "visible_controls": 11,
+          "controls_per_100k_css_px2": 3.34,
+          "text_fragments": 35,
+          "text_box_percent": 8.06,
+          "control_box_percent": 25.91,
+          "media_box_percent": 17.89,
+          "box_union_percent": 31.72,
+          "box_union_with_css_images_percent": 34.64,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 502,
+            "end_y_exclusive": 573,
+            "height_css_px": 71
+          }
+        }
+      }
+    }
+  }
+]
