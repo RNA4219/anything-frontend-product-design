@@ -1,0 +1,17 @@
+{
+  "source_id": "A-REF-237",
+  "title": "Understanding SC 3.1.4 Abbreviations (Level AAA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/abbreviations",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/abbreviations",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/abbreviations",
+  "response_sha256": "3e71df0b7853cda68963bb4f1ab1a0fa188b93224be70887f227f5fe22c65773",
+  "used_by": [
+    "A-IU-206"
+  ]
+}

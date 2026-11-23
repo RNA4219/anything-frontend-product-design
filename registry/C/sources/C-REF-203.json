@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-203",
+  "title": "Combo box",
+  "url": "https://designsystem.digital.gov/components/combo-box/",
+  "canonical_url": "https://designsystem.digital.gov/components/combo-box/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/combo-box/",
+  "response_sha256": "fd9fe15c2d43ec241281265a7994ed23d2bc24035494fdf366c186dfb7a0f8b3",
+  "used_by": [
+    "C-UI-201"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/combo-box/#usability-guidance-combo-box"
+}

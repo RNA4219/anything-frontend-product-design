@@ -1,0 +1,26 @@
+{
+  "source_id": "D-REF-211",
+  "title": "Scrutinising usability evaluation: does thinking aloud affect behaviour and mental workload?",
+  "authors": [
+    "Morten Hertzum",
+    "Kristin D. Hansen",
+    "Hans H.K. Andersen"
+  ],
+  "year": 2009,
+  "venue": "Behaviour &amp; Information Technology",
+  "source_type": "research_paper",
+  "publication_type": "journal-article",
+  "doi": "10.1080/01449290701773842",
+  "url": "https://doi.org/10.1080/01449290701773842",
+  "canonical_url": "https://doi.org/10.1080/01449290701773842",
+  "primary_text_url": "https://mortenhertzum.dk/publ/BIT2009.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "時間比較で発話の指示と促し方をそろえる。",
+  "limits": "比較したWeb課題と発話条件に限る。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "D-IU-202"
+  ]
+}

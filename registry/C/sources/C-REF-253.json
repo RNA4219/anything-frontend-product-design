@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-253",
+  "title": "Accordion Pattern (Sections With Show/Hide Functionality)",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/",
+  "response_sha256": "f9ec96a81b9822ddd2af07b1122793fde65914d97caea7e88b50e9a519f10d5e",
+  "used_by": [
+    "C-UI-210"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/#keyboardinteraction"
+}

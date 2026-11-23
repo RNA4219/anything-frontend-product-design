@@ -1,0 +1,17 @@
+{
+  "source_id": "D-REF-256",
+  "title": "Understanding SC 2.4.1 Bypass Blocks (Level A)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks",
+  "response_sha256": "cb807f0bb26bebe4bd2aabb282a3c1a5e22af9e304230d5acd7dee978d048b8d",
+  "used_by": [
+    "D-IU-211"
+  ]
+}

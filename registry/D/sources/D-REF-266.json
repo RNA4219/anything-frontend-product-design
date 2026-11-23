@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-266",
+  "title": "Radio buttons accessibility tests",
+  "url": "https://designsystem.digital.gov/components/radio-buttons/accessibility-tests/",
+  "canonical_url": "https://designsystem.digital.gov/components/radio-buttons/accessibility-tests/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品試験手順",
+  "section": "Keyboard navigation tests",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/radio-buttons/accessibility-tests/",
+  "response_sha256": "f4229e9998e0081c324556748718be77a20f913b7d9fc947c1b909484a35f163",
+  "used_by": [
+    "D-IU-213"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/radio-buttons/accessibility-tests/#keyboard-navigation-tests"
+}

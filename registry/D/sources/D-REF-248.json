@@ -1,0 +1,17 @@
+{
+  "source_id": "D-REF-248",
+  "title": "Understanding SC 1.3.3 Sensory Characteristics (Level A)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics",
+  "response_sha256": "ce1e8dd64ceff9a2fa8484f4f4ef61579e379e743c9ee268abfde1e0fa238bcf",
+  "used_by": [
+    "D-IU-210"
+  ]
+}

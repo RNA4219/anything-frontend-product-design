@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-264",
+  "title": "Site alert",
+  "url": "https://designsystem.digital.gov/components/site-alert/",
+  "canonical_url": "https://designsystem.digital.gov/components/site-alert/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/site-alert/",
+  "response_sha256": "1a030d6638412e4af1145f0de5cae990eb4397c2ad787b19b3d24d2469013a3e",
+  "used_by": [
+    "B-IU-211"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/site-alert/#usability-guidance-site-alert"
+}

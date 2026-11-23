@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-223",
+  "title": "Search",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/search/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/search/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/search/guidelines",
+  "response_sha256": "d086e62a54affa53abc785dfb154be1edaf3910ddf52aad87380437c4b46da98",
+  "used_by": [
+    "A-IU-204"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/search/guidelines#behaviors"
+}

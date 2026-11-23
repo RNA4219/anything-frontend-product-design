@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-225",
+  "title": "Ask users for Passwords",
+  "url": "https://design-system.service.gov.uk/patterns/passwords/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/passwords/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/passwords/",
+  "response_sha256": "63a88fb28398f452415c31b8fe05d29814f9c8abc463c0a7bdee3fd83baa381c",
+  "used_by": [
+    "B-IU-205"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/passwords/#when-to-use-this-pattern"
+}

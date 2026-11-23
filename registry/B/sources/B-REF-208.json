@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-208",
+  "title": "Collecting personal information from users",
+  "url": "https://www.gov.uk/service-manual/design/collecting-personal-information-from-users",
+  "canonical_url": "https://www.gov.uk/service-manual/design/collecting-personal-information-from-users",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Do not collect information you do not need",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/design/collecting-personal-information-from-users",
+  "response_sha256": "e6cc1be318a80788df6c8fa63dafba77198bd49d3d42d4ca9d6826b613f6fa08",
+  "used_by": [
+    "B-IU-202"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/design/collecting-personal-information-from-users#do-not-collect-information-you-do-not-need"
+}

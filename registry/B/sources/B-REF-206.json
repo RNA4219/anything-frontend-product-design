@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-206",
+  "title": "Ask users for Names",
+  "url": "https://design-system.service.gov.uk/patterns/names/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/names/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/names/",
+  "response_sha256": "0d668321c08bb7db80ee51f909432dc02715f69e57db76415e3742707bd04e6b",
+  "used_by": [
+    "B-IU-202"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/names/#when-to-use-this-pattern"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-216",
+  "title": "Understanding users who do not use digital services",
+  "url": "https://www.gov.uk/service-manual/user-research/understanding-users-who-dont-use-digital-services",
+  "canonical_url": "https://www.gov.uk/service-manual/user-research/understanding-users-who-dont-use-digital-services",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Find out why people do not use your digital service",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/user-research/understanding-users-who-dont-use-digital-services",
+  "response_sha256": "9e0fdc2f550201e1eb519247feb1f408c6dd4bc462dbe69700e6e851745773a9",
+  "used_by": [
+    "D-IU-203"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/user-research/understanding-users-who-dont-use-digital-services#find-out-why-people-do-not-use-your-digital-service"
+}

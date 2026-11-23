@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-223",
+  "title": "Button group",
+  "url": "https://designsystem.digital.gov/components/button-group/",
+  "canonical_url": "https://designsystem.digital.gov/components/button-group/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/button-group/",
+  "response_sha256": "5f5fb40ed402dbd97a224d4578722960a9c0a7481a1cc4e69063e36cd8e9e96c",
+  "used_by": [
+    "C-UI-205"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/button-group/#usability-guidance-default-button-group"
+}

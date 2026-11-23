@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-263",
+  "title": "Footer",
+  "url": "https://designsystem.digital.gov/components/footer/",
+  "canonical_url": "https://designsystem.digital.gov/components/footer/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/footer/",
+  "response_sha256": "5bd1b23ad97a19204e6595e8538b40f9cae60997d0c8b744911a7fda02477fed",
+  "used_by": [
+    "A-IU-210"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/footer/#usability-guidance-footer"
+}

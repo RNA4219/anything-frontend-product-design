@@ -1,0 +1,84 @@
+{
+  "skill_id": "C-UI-201",
+  "domain": "ui-engineering-design-system",
+  "trigger": "検索付きの候補リストを実装する場合",
+  "intent": "入力候補の移動と選択の確定を分ける",
+  "required_inputs": [
+    "候補",
+    "入力値",
+    "フォーカスと提出値"
+  ],
+  "decision_rules": [
+    "入力値、キーボードで注目している候補、確定した値を別に持つ。離脱やEscapeで何を保持するかを決める。"
+  ],
+  "procedure": [
+    "入力値、キーボードで注目している候補、確定した値を別に持つ。離脱やEscapeで何を保持するかを決める。",
+    "候補を矢印で移動してEscape、Enter、Tabで抜け、表示値と提出値を各経路で確認する。"
+  ],
+  "expected_outputs": [
+    "移動・確定・取消ごとの提出値"
+  ],
+  "dependencies": [],
+  "exceptions": [
+    "短い固定リストでは標準の選択部品やラジオボタンも比較する。"
+  ],
+  "failure_modes": [
+    "矢印で通過した候補がそのまま提出される"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "入力候補の移動と選択の確定を分ける",
+        "status": "not_executed",
+        "procedure": "候補を矢印で移動してEscape、Enter、Tabで抜け、表示値と提出値を各経路で確認する。",
+        "falsifier": "矢印で通過した候補がそのまま提出される"
+      }
+    ],
+    "status": "PLANNED",
+    "evidence": []
+  },
+  "source_refs": [
+    {
+      "id": "C-REF-201",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
+      "record": "registry/C/sources/C-REF-201.json",
+      "registry_source_id": "C-REF-201",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-202",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/",
+      "record": "registry/C/sources/C-REF-202.json",
+      "registry_source_id": "C-REF-202",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-203",
+      "url": "https://designsystem.digital.gov/components/combo-box/",
+      "record": "registry/C/sources/C-REF-203.json",
+      "registry_source_id": "C-REF-203",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-204",
+      "url": "https://design-system.service.gov.uk/components/select/",
+      "record": "registry/C/sources/C-REF-204.json",
+      "registry_source_id": "C-REF-204",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-205",
+      "url": "https://www.carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines",
+      "record": "registry/C/sources/C-REF-205.json",
+      "registry_source_id": "C-REF-205",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    }
+  ],
+  "confidence": {
+    "source_support": "各出典の指定箇所を参照。複数資料から組み立てた設計判断。",
+    "transfer": "検索付きの候補リストを実装する場合",
+    "limits": "短い固定リストでは標準の選択部品やラジオボタンも比較する。"
+  },
+  "status": "DRAFT",
+  "version": "0.1.0"
+}

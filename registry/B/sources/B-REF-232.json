@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-232",
+  "title": "Ask users for Equality information",
+  "url": "https://design-system.service.gov.uk/patterns/equality-information/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/equality-information/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/equality-information/",
+  "response_sha256": "305feff2c3c1217dbe562addd9ef6b588c1b482eaf7a998dc605fc7b763c4a30",
+  "used_by": [
+    "B-IU-206"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/equality-information/#when-to-use-this-pattern"
+}

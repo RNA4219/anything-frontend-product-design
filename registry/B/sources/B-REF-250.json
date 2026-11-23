@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-250",
+  "title": "Structuring forms",
+  "url": "https://www.gov.uk/service-manual/design/form-structure",
+  "canonical_url": "https://www.gov.uk/service-manual/design/form-structure",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Design your forms for the format they’ll appear in",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/design/form-structure",
+  "response_sha256": "ee78a21040ef8ac7b024c6d0fb876b397e0af2b42ada03468fae975754224763",
+  "used_by": [
+    "B-IU-208"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/design/form-structure#design-your-forms-for-the-format-theyll-appear-in"
+}

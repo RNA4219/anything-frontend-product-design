@@ -1,0 +1,21 @@
+{
+  "source_id": "D-REF-275",
+  "title": "User research with candidates on filtering and sorting courses",
+  "authors": [
+    "Department for Education"
+  ],
+  "year": 2025,
+  "publisher": "Department for Education",
+  "url": "https://becoming-a-teacher.design-history.education.gov.uk/find-teacher-training/filtering-and-sorting-ur/",
+  "canonical_url": "https://becoming-a-teacher.design-history.education.gov.uk/find-teacher-training/filtering-and-sorting-ur/",
+  "source_type": "primary_product_research",
+  "evidence_kind": "調査実施者による公開記録",
+  "section": "Pain points / Research participants / Methodology / Summary of insights",
+  "design_application": "絞り込み条件の適用・解除と、現在選択中の条件が分かるかを別々に記録する。試作は教員養成課程の候補者10人に評価してもらった。",
+  "limits": "スマホ8人、PC2人。参加者の課題とプロトタイプに限られ、端末別の優劣は推定できない。",
+  "read_status": "該当箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "D-IU-214"
+  ]
+}

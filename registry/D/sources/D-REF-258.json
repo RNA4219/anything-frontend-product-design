@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-258",
+  "title": "Captions/Subtitles",
+  "url": "https://www.w3.org/WAI/media/av/captions/",
+  "canonical_url": "https://www.w3.org/WAI/media/av/captions/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Does My Media Need Captions?",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/media/av/captions/",
+  "response_sha256": "ff74555e6f15f6ae843d46db075384ebe2f8a57ce92f3960fe1d66a68d573441",
+  "used_by": [
+    "D-IU-212"
+  ],
+  "section_url": "https://www.w3.org/WAI/media/av/captions/#checklist"
+}

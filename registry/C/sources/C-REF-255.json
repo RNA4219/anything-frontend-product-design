@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-255",
+  "title": "Accordion",
+  "url": "https://design-system.service.gov.uk/components/accordion/",
+  "canonical_url": "https://design-system.service.gov.uk/components/accordion/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/accordion/",
+  "response_sha256": "ac737f27d606469b149ae05d3cf065649493e6cc07b9e153c5740551cafd1df2",
+  "used_by": [
+    "C-UI-210"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/accordion/#how-it-works"
+}

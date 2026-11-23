@@ -1,0 +1,91 @@
+{
+  "skill_id": "C-UI-207",
+  "domain": "ui-engineering-design-system",
+  "trigger": "ラベルや用語の補足をホバーで表示する場合",
+  "intent": "補足情報をポインター以外でも確認できるようにする",
+  "required_inputs": [
+    "補足本文",
+    "表示契機",
+    "閉じる経路"
+  ],
+  "decision_rules": [
+    "フォーカスでも表示し、本文を読み切るまで保持し、閉じる操作を用意する。操作部品を含む補足はツールチップ以外の構造を選ぶ。"
+  ],
+  "procedure": [
+    "フォーカスでも表示し、本文を読み切るまで保持し、閉じる操作を用意する。操作部品を含む補足はツールチップ以外の構造を選ぶ。",
+    "ポインターを補足へ移す、Escapeで閉じる、タッチで対象を確認する3経路を試す。"
+  ],
+  "expected_outputs": [
+    "表示・保持・消去を試した操作結果"
+  ],
+  "dependencies": [],
+  "exceptions": [
+    "必須の指示をホバーだけに置かない。タッチにホバーがないことを入力条件に含める。"
+  ],
+  "failure_modes": [
+    "ポインターを説明へ移しただけで説明が消える"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "補足情報をポインター以外でも確認できるようにする",
+        "status": "not_executed",
+        "procedure": "ポインターを補足へ移す、Escapeで閉じる、タッチで対象を確認する3経路を試す。",
+        "falsifier": "ポインターを説明へ移しただけで説明が消える"
+      }
+    ],
+    "status": "PLANNED",
+    "evidence": []
+  },
+  "source_refs": [
+    {
+      "id": "C-REF-235",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus",
+      "record": "registry/C/sources/C-REF-235.json",
+      "registry_source_id": "C-REF-235",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    },
+    {
+      "id": "C-REF-236",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/",
+      "record": "registry/C/sources/C-REF-236.json",
+      "registry_source_id": "C-REF-236",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-237",
+      "url": "https://designsystem.digital.gov/components/tooltip/",
+      "record": "registry/C/sources/C-REF-237.json",
+      "registry_source_id": "C-REF-237",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-238",
+      "url": "https://www.carbondesignsystem.com/building-blocks/core/components/tooltip/guidelines",
+      "record": "registry/C/sources/C-REF-238.json",
+      "registry_source_id": "C-REF-238",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-239",
+      "url": "https://www.carbondesignsystem.com/building-blocks/core/components/toggletip/guidelines",
+      "record": "registry/C/sources/C-REF-239.json",
+      "registry_source_id": "C-REF-239",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-240",
+      "url": "https://www.carbondesignsystem.com/building-blocks/core/components/popover/guidelines",
+      "record": "registry/C/sources/C-REF-240.json",
+      "registry_source_id": "C-REF-240",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    }
+  ],
+  "confidence": {
+    "source_support": "各出典の指定箇所を参照。複数資料から組み立てた設計判断。",
+    "transfer": "ラベルや用語の補足をホバーで表示する場合",
+    "limits": "必須の指示をホバーだけに置かない。タッチにホバーがないことを入力条件に含める。"
+  },
+  "status": "DRAFT",
+  "version": "0.1.0"
+}

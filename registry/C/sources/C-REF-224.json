@@ -1,0 +1,30 @@
+{
+  "source_id": "C-REF-224",
+  "title": "Enhanced Area Cursors: Reducing Fine Pointing Demands for People with Motor Impairments",
+  "authors": [
+    "Leah Findlater",
+    "Alex Jansen",
+    "Kristen Shinohara",
+    "Morgan Dixon",
+    "Peter Kamb",
+    "Joshua Rakita",
+    "Jacob O. Wobbrock"
+  ],
+  "year": 2010,
+  "venue": "Proceedings of the 23nd annual ACM symposium on User interface software and technology",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/1866029.1866055",
+  "url": "https://doi.org/10.1145/1866029.1866055",
+  "canonical_url": "https://doi.org/10.1145/1866029.1866055",
+  "primary_text_url": "https://faculty.washington.edu/wobbrock/pubs/uist-10.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "近接する小さい対象を選択する際の訂正動作と選択成績を調べる。",
+  "limits": "拡張カーソルを使う選択実験に限る。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "C-UI-205"
+  ]
+}

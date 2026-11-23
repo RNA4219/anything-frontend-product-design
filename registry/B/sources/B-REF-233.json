@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-233",
+  "title": "Ask users for National Insurance numbers",
+  "url": "https://design-system.service.gov.uk/patterns/national-insurance-numbers/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/national-insurance-numbers/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/national-insurance-numbers/",
+  "response_sha256": "6b7ee4f418b53954b13b04a9c05b4a984bcace49019762f835c1faa2729c1bed",
+  "used_by": [
+    "B-IU-206"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/national-insurance-numbers/#when-to-use-this-pattern"
+}

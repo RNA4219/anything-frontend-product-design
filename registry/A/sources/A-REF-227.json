@@ -1,0 +1,25 @@
+{
+  "source_id": "A-REF-227",
+  "title": "SNIF-ACT: A Cognitive Model of User Navigation on the World Wide Web",
+  "authors": [
+    "Wai-Tat Fu",
+    "Peter Pirolli"
+  ],
+  "year": 2007,
+  "venue": "Human–Computer Interaction",
+  "source_type": "research_paper",
+  "publication_type": "journal-article",
+  "doi": "10.1080/07370020701638806",
+  "url": "https://doi.org/10.1080/07370020701638806",
+  "canonical_url": "https://doi.org/10.1080/07370020701638806",
+  "primary_text_url": "https://www.peterpirolli.com/Professional/About_Me_files/FuPirolli%20HCI%20SNIF-ACT%20%28final%29.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "リンクのラベルと利用者の目標との関連を、表示位置と合わせて比較する。",
+  "limits": "初見タスクのナビゲーションモデル。再訪時には既知の位置も働く。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "A-IU-204"
+  ]
+}

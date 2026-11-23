@@ -1,0 +1,17 @@
+{
+  "source_id": "D-REF-254",
+  "title": "Understanding SC 2.4.13 Focus Appearance (Level AAA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance",
+  "response_sha256": "b5c04ac45dfedbb309f1fc0d9c555b74d12e1e6014945e63a73e4d7890b530d4",
+  "used_by": [
+    "D-IU-211"
+  ]
+}

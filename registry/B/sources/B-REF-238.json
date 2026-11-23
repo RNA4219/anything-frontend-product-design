@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-238",
+  "title": "Designing good questions",
+  "url": "https://www.gov.uk/service-manual/design/designing-good-questions",
+  "canonical_url": "https://www.gov.uk/service-manual/design/designing-good-questions",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Ask questions that users understand",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/design/designing-good-questions",
+  "response_sha256": "2ed911de2432c5fac69bde4708cbe07e98f377bbca84b4be22432c0657796829",
+  "used_by": [
+    "B-IU-206"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/design/designing-good-questions#ask-questions-that-users-understand"
+}

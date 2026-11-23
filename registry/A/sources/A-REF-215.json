@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-215",
+  "title": "Pages – Hub page",
+  "url": "https://service-manual.nhs.uk/design-system/patterns/hub-page",
+  "canonical_url": "https://service-manual.nhs.uk/design-system/patterns/hub-page",
+  "publisher": "NHS England",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://service-manual.nhs.uk/design-system/patterns/hub-page",
+  "response_sha256": "0b2281462f3231537c91a8e6c5ec9fd5c3b50b64702ea9c71a6d6b157e016533",
+  "used_by": [
+    "A-IU-203"
+  ],
+  "section_url": "https://service-manual.nhs.uk/design-system/patterns/hub-page#when-to-use-this-pattern"
+}

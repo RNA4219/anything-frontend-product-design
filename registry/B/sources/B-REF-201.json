@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-201",
+  "title": "Ask users for Addresses",
+  "url": "https://design-system.service.gov.uk/patterns/addresses/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/addresses/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Address lookup",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/addresses/",
+  "response_sha256": "e6e82dfc709a4ac12902da84efdc829857b7361d27d2e9a3fe01400b92e1b1c0",
+  "used_by": [
+    "B-IU-201"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/addresses/#address-lookup"
+}

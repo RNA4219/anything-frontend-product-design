@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-228",
+  "title": "Language selector",
+  "url": "https://designsystem.digital.gov/components/language-selector/",
+  "canonical_url": "https://designsystem.digital.gov/components/language-selector/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use the language selector with two languages component",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/language-selector/",
+  "response_sha256": "ab5e3b98165ab601af9d3b74533078757b3848d09dc42eae9753299344f7d224",
+  "used_by": [
+    "A-IU-205"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/language-selector/#when-to-use-the-language-selector-with-two-languages"
+}

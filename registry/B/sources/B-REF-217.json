@@ -1,0 +1,17 @@
+{
+  "source_id": "B-REF-217",
+  "title": "Content guide – Numbers, measurements, dates and time",
+  "url": "https://service-manual.nhs.uk/content/numbers-measurements-dates-time",
+  "canonical_url": "https://service-manual.nhs.uk/content/numbers-measurements-dates-time",
+  "publisher": "NHS England",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Using numerals at the start of a sentence",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://service-manual.nhs.uk/content/numbers-measurements-dates-time",
+  "response_sha256": "7567fb897ce151321963b869b091c1adb99dc05a789030beff2944a51746e5ef",
+  "used_by": [
+    "B-IU-203"
+  ]
+}

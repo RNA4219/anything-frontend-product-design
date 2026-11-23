@@ -1,0 +1,17 @@
+{
+  "source_id": "D-REF-250",
+  "title": "Understanding SC 2.4.3 Focus Order (Level A)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-order",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-order",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-order",
+  "response_sha256": "4fd5d933090da4d67c41e04b96e7a38f39f338b4c27835e827475e0a9a870cf1",
+  "used_by": [
+    "D-IU-211"
+  ]
+}

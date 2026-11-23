@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-257",
+  "title": "Cognitive Accessibility Design Pattern: Clearly Identify Controls and Their Use",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p05-clear-controls/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p05-clear-controls/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p05-clear-controls/",
+  "response_sha256": "a58901720891e91dfd40ca1176312f9d6a4562d3c626464c30adbf4f235ec440",
+  "used_by": [
+    "C-UI-210"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p05-clear-controls/#whattodo"
+}

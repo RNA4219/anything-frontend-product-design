@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-267",
+  "title": "Keep a record",
+  "url": "https://designsystem.digital.gov/patterns/complete-a-complex-form/keep-a-record/",
+  "canonical_url": "https://designsystem.digital.gov/patterns/complete-a-complex-form/keep-a-record/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/patterns/complete-a-complex-form/keep-a-record/",
+  "response_sha256": "f6c6a2c074cd08bee09d723fc9b74dcc7b598759126bc72d57eb246a5c8078f1",
+  "used_by": [
+    "B-IU-212"
+  ],
+  "section_url": "https://designsystem.digital.gov/patterns/complete-a-complex-form/keep-a-record/#guidance"
+}

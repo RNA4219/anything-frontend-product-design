@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-234",
+  "title": "Sex",
+  "url": "https://designsystem.digital.gov/patterns/create-a-user-profile/sex/",
+  "canonical_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/sex/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/sex/",
+  "response_sha256": "970cad5253a90fc8bdb5a93936647b1fe4c9aa85c95a3097544ff2c0efd3e4fa",
+  "used_by": [
+    "B-IU-206"
+  ],
+  "section_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/sex/#guidance"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-274",
+  "title": "Help users to Complete multiple tasks",
+  "url": "https://design-system.service.gov.uk/patterns/complete-multiple-tasks/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/complete-multiple-tasks/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/complete-multiple-tasks/",
+  "response_sha256": "c669e0cb8c081b0999d8b0b17bbdddbf740a784d0b32a8b71f1ec732f187bd3b",
+  "used_by": [
+    "A-IU-212"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/complete-multiple-tasks/#when-to-use-this-pattern"
+}

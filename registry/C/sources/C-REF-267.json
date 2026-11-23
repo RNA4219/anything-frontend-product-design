@@ -1,0 +1,17 @@
+{
+  "source_id": "C-REF-267",
+  "title": "Understanding SC 3.3.1 Error Identification (Level A)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification",
+  "response_sha256": "dea28cd2b11f7a8bb1bd373c8c2547e6e6c16d5ea5d6a3459a0a1edea3bd943b",
+  "used_by": [
+    "C-UI-212"
+  ]
+}

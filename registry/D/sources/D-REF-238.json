@@ -1,0 +1,17 @@
+{
+  "source_id": "D-REF-238",
+  "title": "Documenting Accessibility Support for Uses of a Web Technology",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/documenting-accessibility-support",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/documenting-accessibility-support",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Documenting Accessibility Support for Uses of a Web Technology",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/documenting-accessibility-support",
+  "response_sha256": "67392726f969b01fba46d99c08b41b85c4d3cdff4c12b0eb536ea143f2df815d",
+  "used_by": [
+    "D-IU-208"
+  ]
+}

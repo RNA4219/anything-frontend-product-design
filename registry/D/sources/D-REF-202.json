@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-202",
+  "title": "Measuring user satisfaction",
+  "url": "https://www.gov.uk/service-manual/measuring-success/measuring-user-satisfaction",
+  "canonical_url": "https://www.gov.uk/service-manual/measuring-success/measuring-user-satisfaction",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Set up your service to measure user satisfaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/measuring-success/measuring-user-satisfaction",
+  "response_sha256": "ec834ba1ebbd2e5b5d7515934732d6fa5a14917251ebcc72e123b8a0fd7b27ae",
+  "used_by": [
+    "D-IU-201"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/measuring-success/measuring-user-satisfaction#set-up-your-service-to-measure-user-satisfaction"
+}

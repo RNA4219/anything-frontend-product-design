@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-218",
+  "title": "Cognitive Accessibility Design Pattern: Avoid Too Much Content",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p03-manageable-quantity/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p03-manageable-quantity/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p03-manageable-quantity/",
+  "response_sha256": "36fa9149a2a9ecfde8aa39c1235090a8e34348c8747301851716427df7b9de30",
+  "used_by": [
+    "A-IU-203"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p03-manageable-quantity/#whattodo"
+}

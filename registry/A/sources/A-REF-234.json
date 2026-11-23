@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-234",
+  "title": "Preferred language",
+  "url": "https://designsystem.digital.gov/patterns/select-a-language/language-preferences/",
+  "canonical_url": "https://designsystem.digital.gov/patterns/select-a-language/language-preferences/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/patterns/select-a-language/language-preferences/",
+  "response_sha256": "0990b26554df83efe605c8db5d86e5f2f58ad16c3a5952783c2962c33f3803a3",
+  "used_by": [
+    "A-IU-205"
+  ],
+  "section_url": "https://designsystem.digital.gov/patterns/select-a-language/language-preferences/#guidance"
+}

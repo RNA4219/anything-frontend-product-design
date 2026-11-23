@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-247",
+  "title": "Cognitive Accessibility Design Pattern: Make it easy to find the most important actions and information on the page",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p04-page-important/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p04-page-important/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p04-page-important/",
+  "response_sha256": "6dcc1f65abd9f8d17631499d66f55082877daab2abe4521749e2e405f22eb9c2",
+  "used_by": [
+    "A-IU-207"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p04-page-important/#whattodo"
+}

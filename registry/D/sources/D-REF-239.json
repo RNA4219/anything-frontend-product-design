@@ -1,0 +1,27 @@
+{
+  "source_id": "D-REF-239",
+  "title": "Guidelines Are Only Half of the Story: Accessibility Problems Encountered by Blind Users on the Web",
+  "authors": [
+    "Christopher Power",
+    "André Freire",
+    "Helen Petrie",
+    "David Swallow"
+  ],
+  "year": 2012,
+  "venue": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/2207676.2207736",
+  "url": "https://doi.org/10.1145/2207676.2207736",
+  "canonical_url": "https://doi.org/10.1145/2207676.2207736",
+  "primary_text_url": "https://pure.york.ac.uk/portal/en/publications/guidelines-are-only-half-of-the-story-accessibility-problems-enco/",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "達成基準の点検に加えて、盲ユーザーが課題中に遭遇した問題を個別に記録する。",
+  "limits": "WCAG 2.0と対象16サイトでの研究。現在版の網羅率には外挿しない。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "D-IU-208"
+  ]
+}

@@ -1,0 +1,3060 @@
+[
+  {
+    "id": "friday-artic-desktop",
+    "series": "new",
+    "brand": "Art Institute of Chicago",
+    "task": "friday",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:33:57.059356+00:00",
+    "start_url": "https://www.artic.edu/",
+    "end_url": "https://www.artic.edu/",
+    "previous_status": null,
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "入口がセキュリティ検証画面になり、館の内容を確認できない。",
+    "visual_note": "白地に検証中の表示。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:34:01.007222+00:00",
+        "url": "https://www.artic.edu/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:34:01.125024+00:00",
+        "url": "https://www.artic.edu/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "friday-artic-mobile",
+    "series": "new",
+    "brand": "Art Institute of Chicago",
+    "task": "friday",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:35:31.170776+00:00",
+    "start_url": "https://www.artic.edu/",
+    "end_url": "https://www.artic.edu/",
+    "previous_status": null,
+    "status": "confirmed",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "See all hours"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "finding": "開館時間一覧に金〜日曜は11時〜17時と表示された。",
+    "visual_note": "ホームのSee all hoursを開くと曜日別の表が出る。",
+    "evidence": "Fri–Sun 11–5",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:35:36.140864+00:00",
+        "url": "https://www.artic.edu/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 7,
+          "controls_per_100k_css_px2": 2.13,
+          "text_fragments": 13,
+          "text_box_percent": 15.8,
+          "control_box_percent": 6.6,
+          "media_box_percent": 2.27,
+          "box_union_percent": 20.26,
+          "box_union_with_css_images_percent": 88.65,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 675,
+            "end_y_exclusive": 702,
+            "height_css_px": 27
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:35:43.406753+00:00",
+        "url": "https://www.artic.edu/",
+        "screen": "page",
+        "scroll_y_css_px": 232,
+        "metrics": {
+          "visible_controls": 1,
+          "controls_per_100k_css_px2": 0.3,
+          "text_fragments": 13,
+          "text_box_percent": 5.35,
+          "control_box_percent": 0.74,
+          "media_box_percent": 0.08,
+          "box_union_percent": 5.6,
+          "box_union_with_css_images_percent": 5.6,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 443,
+            "end_y_exclusive": 472,
+            "height_css_px": 29
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-british-desktop",
+    "series": "revisit",
+    "brand": "大英博物館",
+    "task": "friday",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:33:18.970972+00:00",
+    "start_url": "https://www.britishmuseum.org/",
+    "end_url": "https://www.britishmuseum.org/",
+    "previous_status": "unavailable",
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "入口がセキュリティ検証画面で、館の情報を確認できない。",
+    "visual_note": "白地に検証中の表示。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:22.615139+00:00",
+        "url": "https://www.britishmuseum.org/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:33:22.734410+00:00",
+        "url": "https://www.britishmuseum.org/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "friday-kyohaku-desktop",
+    "series": "new",
+    "brand": "京都国立博物館",
+    "task": "friday",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:41:37.136000+00:00",
+    "start_url": "https://www.kyohaku.go.jp/",
+    "end_url": "https://www.kyohaku.go.jp/jp/visit/info/",
+    "previous_status": null,
+    "status": "confirmed",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "拒否する"
+      },
+      {
+        "kind": "click",
+        "label": "ご利用案内"
+      },
+      {
+        "kind": "click",
+        "label": "休館日・開館時間・観覧料"
+      },
+      {
+        "kind": "scroll",
+        "label": "平常展示の開館時間を読む"
+      }
+    ],
+    "action_counts": {
+      "click": 3,
+      "scroll": 1
+    },
+    "finding": "京都国立博物館の平常展示開催期間は金曜20時までと表示。特別展期間・庭園のみの期間は平常展示を休止する。",
+    "visual_note": "平常展示の会期と開館時間を同じ画面に表示し、入館締切19時30分と区別している。",
+    "evidence": "平常展示開催期間の金曜 9:30〜20:00",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:41:46.588751+00:00",
+        "url": "https://www.kyohaku.go.jp/jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 18,
+          "controls_per_100k_css_px2": 1.47,
+          "text_fragments": 21,
+          "text_box_percent": 5.0,
+          "control_box_percent": 82.05,
+          "media_box_percent": 69.98,
+          "box_union_percent": 83.31,
+          "box_union_with_css_images_percent": 83.31,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 0,
+            "end_y_exclusive": 39,
+            "height_css_px": 39
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:41:53.341863+00:00",
+        "url": "https://www.kyohaku.go.jp/jp/visit/info/",
+        "screen": "page",
+        "scroll_y_css_px": 2932,
+        "metrics": {
+          "visible_controls": 14,
+          "controls_per_100k_css_px2": 1.14,
+          "text_fragments": 33,
+          "text_box_percent": 13.7,
+          "control_box_percent": 3.63,
+          "media_box_percent": 1.72,
+          "box_union_percent": 16.96,
+          "box_union_with_css_images_percent": 16.96,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 0,
+            "end_y_exclusive": 39,
+            "height_css_px": 39
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-kyohaku-mobile",
+    "series": "new",
+    "brand": "京都国立博物館",
+    "task": "friday",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:35:43.794384+00:00",
+    "start_url": "https://www.kyohaku.go.jp/",
+    "end_url": "https://www.kyohaku.go.jp/jp/",
+    "previous_status": null,
+    "status": "confirmed",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "拒否する"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "finding": "京都国立博物館のホームに毎週金曜日は20時まで開館と表示された。",
+    "visual_note": "夜間開館の画像内に金曜20時までの案内がある。",
+    "evidence": "毎週金曜日は20時まで開館",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:35:52.864432+00:00",
+        "url": "https://www.kyohaku.go.jp/jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 9,
+          "controls_per_100k_css_px2": 2.73,
+          "text_fragments": 14,
+          "text_box_percent": 13.62,
+          "control_box_percent": 86.7,
+          "media_box_percent": 57.2,
+          "box_union_percent": 87.57,
+          "box_union_with_css_images_percent": 87.58,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 711,
+            "end_y_exclusive": 730,
+            "height_css_px": 19
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:35:59.827590+00:00",
+        "url": "https://www.kyohaku.go.jp/jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 9,
+          "controls_per_100k_css_px2": 2.73,
+          "text_fragments": 5,
+          "text_box_percent": 3.28,
+          "control_box_percent": 79.04,
+          "media_box_percent": 57.2,
+          "box_union_percent": 79.13,
+          "box_union_with_css_images_percent": 79.14,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 595,
+            "end_y_exclusive": 665,
+            "height_css_px": 70
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-louvre-desktop",
+    "series": "revisit",
+    "brand": "ルーヴル美術館",
+    "task": "friday",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:33:19.006657+00:00",
+    "start_url": "https://www.louvre.fr/en",
+    "end_url": "https://www.louvre.fr/en/visit",
+    "previous_status": "partial",
+    "status": "partial",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "Reject everything, except technical cookies"
+      },
+      {
+        "kind": "click",
+        "label": "Prepare your visit"
+      }
+    ],
+    "action_counts": {
+      "click": 2
+    },
+    "finding": "来館案内へ進んだが、時間の見出しは表示されても時間帯は読めなかった。",
+    "visual_note": "HOURS & ADMISSIONなどの見出しだけが並ぶ。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:25.971745+00:00",
+        "url": "https://www.louvre.fr/en",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 13,
+          "controls_per_100k_css_px2": 1.06,
+          "text_fragments": 19,
+          "text_box_percent": 4.43,
+          "control_box_percent": 6.96,
+          "media_box_percent": 0.66,
+          "box_union_percent": 9.95,
+          "box_union_with_css_images_percent": 9.96,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 765,
+            "end_y_exclusive": 841,
+            "height_css_px": 76
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:33:37.640586+00:00",
+        "url": "https://www.louvre.fr/en/visit",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 10,
+          "controls_per_100k_css_px2": 0.81,
+          "text_fragments": 13,
+          "text_box_percent": 3.09,
+          "control_box_percent": 4.59,
+          "media_box_percent": 0.55,
+          "box_union_percent": 6.59,
+          "box_union_with_css_images_percent": 6.59,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 246,
+            "end_y_exclusive": 338,
+            "height_css_px": 92
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-met-mobile",
+    "series": "revisit",
+    "brand": "メトロポリタン美術館",
+    "task": "friday",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:33:19.007425+00:00",
+    "start_url": "https://www.metmuseum.org/",
+    "end_url": "https://www.metmuseum.org/plan-your-visit",
+    "previous_status": "partial",
+    "status": "confirmed",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "The Met Fifth Avenue"
+      },
+      {
+        "kind": "scroll",
+        "label": "営業時間の表示"
+      }
+    ],
+    "action_counts": {
+      "tap": 1,
+      "scroll": 1
+    },
+    "finding": "The Met Fifth Avenueの金曜閉館は21時と表示された。",
+    "visual_note": "住所の下に曜日別の時間表がある。",
+    "evidence": "Friday 10 am–9 pm",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:24.286427+00:00",
+        "url": "https://www.metmuseum.org/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 1.82,
+          "text_fragments": 8,
+          "text_box_percent": 10.06,
+          "control_box_percent": 12.19,
+          "media_box_percent": 59.48,
+          "box_union_percent": 78.65,
+          "box_union_with_css_images_percent": 78.66,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 748,
+            "end_y_exclusive": 782,
+            "height_css_px": 34
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:33:31.404797+00:00",
+        "url": "https://www.metmuseum.org/plan-your-visit",
+        "screen": "page",
+        "scroll_y_css_px": 2287,
+        "metrics": {
+          "visible_controls": 2,
+          "controls_per_100k_css_px2": 0.61,
+          "text_fragments": 33,
+          "text_box_percent": 18.15,
+          "control_box_percent": 2.48,
+          "media_box_percent": 15.45,
+          "box_union_percent": 34.66,
+          "box_union_with_css_images_percent": 34.66,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 261,
+            "end_y_exclusive": 312,
+            "height_css_px": 51
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-moma-desktop",
+    "series": "revisit",
+    "brand": "MoMA",
+    "task": "friday",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:33:19.008947+00:00",
+    "start_url": "https://www.moma.org/",
+    "end_url": "https://www.moma.org/",
+    "previous_status": "unavailable",
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "入口がセキュリティ検証画面で、館の情報を確認できない。",
+    "visual_note": "白地に検証中の表示。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:22.971323+00:00",
+        "url": "https://www.moma.org/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:33:23.282432+00:00",
+        "url": "https://www.moma.org/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "friday-moma-mobile",
+    "series": "revisit",
+    "brand": "MoMA",
+    "task": "friday",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:33:23.160433+00:00",
+    "start_url": "https://www.moma.org/",
+    "end_url": "https://www.moma.org/visit/",
+    "previous_status": "partial",
+    "status": "partial",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Plan your visit"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "finding": "ホームからPlan your visitを選ぶと検証画面になり、金曜の時刻を確認できない。",
+    "visual_note": "開始画面に来館案内ボタン、終点は検証画面。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:42.077578+00:00",
+        "url": "https://www.moma.org/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 1.82,
+          "text_fragments": 23,
+          "text_box_percent": 17.5,
+          "control_box_percent": 9.56,
+          "media_box_percent": 33.42,
+          "box_union_percent": 54.69,
+          "box_union_with_css_images_percent": 54.69,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 514,
+            "end_y_exclusive": 552,
+            "height_css_px": 38
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:33:56.752940+00:00",
+        "url": "https://www.moma.org/visit/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "friday-tate-desktop",
+    "series": "new",
+    "brand": "Tate Modern",
+    "task": "friday",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:33:45.220616+00:00",
+    "start_url": "https://www.tate.org.uk/",
+    "end_url": null,
+    "previous_status": null,
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "入口がブラウザの到達不能画面になった。",
+    "visual_note": "画面に応答時間超過の表示。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:34:07.257384+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": null,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:34:16.107191+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "friday-tate-mobile",
+    "series": "new",
+    "brand": "Tate Modern",
+    "task": "friday",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:35:31.157328+00:00",
+    "start_url": "https://www.tate.org.uk/",
+    "end_url": "https://www.tate.org.uk/",
+    "previous_status": null,
+    "status": "partial",
+    "actions": [],
+    "action_counts": {},
+    "finding": "ホームに入れたが、Cookie選択画面が重なりTate Modernの金曜時刻は見えない。",
+    "visual_note": "ホームの上にCookie選択画面が表示されている。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:35:36.991575+00:00",
+        "url": "https://www.tate.org.uk/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 1.82,
+          "text_fragments": 10,
+          "text_box_percent": 17.86,
+          "control_box_percent": 9.79,
+          "media_box_percent": 33.36,
+          "box_union_percent": 56.05,
+          "box_union_with_css_images_percent": 56.05,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 316,
+            "end_y_exclusive": 368,
+            "height_css_px": 52
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:35:42.091370+00:00",
+        "url": "https://www.tate.org.uk/",
+        "screen": "consent",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 4,
+          "controls_per_100k_css_px2": 1.22,
+          "text_fragments": 23,
+          "text_box_percent": 27.65,
+          "control_box_percent": 12.28,
+          "media_box_percent": 0.0,
+          "box_union_percent": 38.53,
+          "box_union_with_css_images_percent": 38.53,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 815,
+            "end_y_exclusive": 844,
+            "height_css_px": 29
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-tobikan-desktop",
+    "series": "new",
+    "brand": "東京都美術館",
+    "task": "friday",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:35:31.170776+00:00",
+    "start_url": "https://www.tobikan.jp/",
+    "end_url": "https://www.tobikan.jp/",
+    "previous_status": null,
+    "status": "confirmed",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "利用案内"
+      },
+      {
+        "kind": "scroll",
+        "label": "営業時間の表示"
+      }
+    ],
+    "action_counts": {
+      "click": 1,
+      "scroll": 1
+    },
+    "finding": "東京都美術館は通常17時30分まで。特別展・企画展開催中の金曜日は20時までと条件付きで表示。",
+    "visual_note": "フッターに通常時間と金曜延長の条件、入館期限が別々に表示。",
+    "evidence": "通常 9:30〜17:30／特別展・企画展開催中の金曜 9:30〜20:00",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:35:36.045831+00:00",
+        "url": "https://www.tobikan.jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 31,
+          "controls_per_100k_css_px2": 2.52,
+          "text_fragments": 39,
+          "text_box_percent": 5.35,
+          "control_box_percent": 62.8,
+          "media_box_percent": 61.93,
+          "box_union_percent": 64.63,
+          "box_union_with_css_images_percent": 73.12,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 61,
+            "end_y_exclusive": 71,
+            "height_css_px": 10
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:35:38.650291+00:00",
+        "url": "https://www.tobikan.jp/",
+        "screen": "page",
+        "scroll_y_css_px": 3077,
+        "metrics": {
+          "visible_controls": 50,
+          "controls_per_100k_css_px2": 4.07,
+          "text_fragments": 63,
+          "text_box_percent": 12.51,
+          "control_box_percent": 15.14,
+          "media_box_percent": 7.16,
+          "box_union_percent": 27.99,
+          "box_union_with_css_images_percent": 57.72,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 770,
+            "end_y_exclusive": 800,
+            "height_css_px": 30
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "friday-tobikan-mobile",
+    "series": "new",
+    "brand": "東京都美術館",
+    "task": "friday",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:40:44.727163+00:00",
+    "start_url": "https://www.tobikan.jp/",
+    "end_url": "https://www.tobikan.jp/",
+    "previous_status": null,
+    "status": "confirmed",
+    "actions": [
+      {
+        "kind": "scroll",
+        "label": "フッターの開館時間を読む"
+      }
+    ],
+    "action_counts": {
+      "scroll": 1
+    },
+    "finding": "東京都美術館の通常閉館は17時30分。特別展・企画展開催中の金曜日は20時までと表示。",
+    "visual_note": "フッターに通常時間と金曜延長の条件が続き、最終入館を別記している。",
+    "evidence": "通常 9:30〜17:30／特別展・企画展開催中の金曜 9:30〜20:00",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:40:51.562411+00:00",
+        "url": "https://www.tobikan.jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 7,
+          "controls_per_100k_css_px2": 2.13,
+          "text_fragments": 31,
+          "text_box_percent": 13.5,
+          "control_box_percent": 6.81,
+          "media_box_percent": 9.05,
+          "box_union_percent": 22.96,
+          "box_union_with_css_images_percent": 72.07,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 55,
+            "end_y_exclusive": 230,
+            "height_css_px": 175
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:40:52.251505+00:00",
+        "url": "https://www.tobikan.jp/",
+        "screen": "page",
+        "scroll_y_css_px": 3210,
+        "metrics": {
+          "visible_controls": 20,
+          "controls_per_100k_css_px2": 6.08,
+          "text_fragments": 27,
+          "text_box_percent": 28.66,
+          "control_box_percent": 12.22,
+          "media_box_percent": 4.85,
+          "box_union_percent": 38.09,
+          "box_union_with_css_images_percent": 82.13,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 813,
+            "end_y_exclusive": 844,
+            "height_css_px": 31
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "store-bic-stores-desktop",
+    "series": "revisit",
+    "brand": "ビックカメラ",
+    "task": "store",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:33:23.641962+00:00",
+    "start_url": "https://www.biccamera.com/bc/i/shop/shoplist/index.jsp",
+    "end_url": null,
+    "previous_status": "unavailable",
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "店舗一覧の入口がブラウザの到達不能画面になった。",
+    "visual_note": "到達できない旨の表示。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:27.182610+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:33:27.255600+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "store-bic-stores-mobile",
+    "series": "revisit",
+    "brand": "ビックカメラ",
+    "task": "store",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:33:27.503757+00:00",
+    "start_url": "https://www.biccamera.com/bc/i/shop/shoplist/index.jsp",
+    "end_url": null,
+    "previous_status": "partial",
+    "status": "partial",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "新宿西口店"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "finding": "店舗一覧から新宿西口店を選んだが、店舗詳細が到達不能となった。",
+    "visual_note": "入口は店舗一覧、終点はブラウザの到達不能画面。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:37.309603+00:00",
+        "url": "https://www.biccamera.com/bc/i/shop/shoplist/index.jsp",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 65,
+          "controls_per_100k_css_px2": 19.75,
+          "text_fragments": 70,
+          "text_box_percent": 18.6,
+          "control_box_percent": 37.33,
+          "media_box_percent": 8.16,
+          "box_union_percent": 41.39,
+          "box_union_with_css_images_percent": 41.39,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 621,
+            "end_y_exclusive": 682,
+            "height_css_px": 61
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:33:44.242264+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "store-starbucks-stores-mobile",
+    "series": "revisit",
+    "brand": "スターバックス",
+    "task": "store",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:35:31.063559+00:00",
+    "start_url": "https://store.starbucks.co.jp/",
+    "end_url": "https://store.starbucks.co.jp/detail-18/",
+    "previous_status": "partial",
+    "status": "confirmed",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "店舗検索欄"
+      },
+      {
+        "kind": "text",
+        "label": "新宿"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "tap",
+        "label": "四谷３丁目店"
+      },
+      {
+        "kind": "scroll",
+        "label": "営業時間の表示"
+      }
+    ],
+    "action_counts": {
+      "tap": 2,
+      "text": 1,
+      "key": 1,
+      "scroll": 1
+    },
+    "finding": "四谷３丁目店は東京都新宿区四谷2-14-4、月〜金は7時〜21時と表示された。",
+    "visual_note": "店舗詳細の同じ画面内に住所と曜日別営業時間がある。",
+    "evidence": "新宿区四谷2-14-4／月〜金 07:00〜21:00",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:35:42.249331+00:00",
+        "url": "https://store.starbucks.co.jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 12,
+          "controls_per_100k_css_px2": 3.65,
+          "text_fragments": 14,
+          "text_box_percent": 8.55,
+          "control_box_percent": 35.6,
+          "media_box_percent": 0.98,
+          "box_union_percent": 36.93,
+          "box_union_with_css_images_percent": 36.93,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 96,
+            "end_y_exclusive": 194,
+            "height_css_px": 98
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:35:57.119452+00:00",
+        "url": "https://store.starbucks.co.jp/detail-18/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 1.82,
+          "text_fragments": 16,
+          "text_box_percent": 6.52,
+          "control_box_percent": 1.44,
+          "media_box_percent": 0.84,
+          "box_union_percent": 7.46,
+          "box_union_with_css_images_percent": 7.46,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 158,
+            "end_y_exclusive": 602,
+            "height_css_px": 444
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "store-yodobashi-stores-desktop",
+    "series": "revisit",
+    "brand": "ヨドバシカメラ",
+    "task": "store",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:33:37.978263+00:00",
+    "start_url": "https://www.yodobashi.com/ec/store/list/",
+    "end_url": null,
+    "previous_status": "unavailable",
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "店舗一覧の入口がブラウザの到達不能画面になった。",
+    "visual_note": "到達できない旨の表示。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:41.129192+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:33:41.188049+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "store-yodobashi-stores-mobile",
+    "series": "revisit",
+    "brand": "ヨドバシカメラ",
+    "task": "store",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:33:41.582877+00:00",
+    "start_url": "https://www.yodobashi.com/ec/store/list/",
+    "end_url": null,
+    "previous_status": "partial",
+    "status": "partial",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "新宿西口本店"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "finding": "店舗一覧から新宿西口本店を選んだが、店舗詳細が到達不能となった。",
+    "visual_note": "一覧の店舗表示から移動すると到達不能画面になった。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:47.552357+00:00",
+        "url": "https://www.yodobashi.com/ec/store/list/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 16,
+          "controls_per_100k_css_px2": 4.86,
+          "text_fragments": 19,
+          "text_box_percent": 19.63,
+          "control_box_percent": 47.31,
+          "media_box_percent": 13.62,
+          "box_union_percent": 55.88,
+          "box_union_with_css_images_percent": 55.92,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 162,
+            "end_y_exclusive": 238,
+            "height_css_px": 76
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:33:55.640321+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "mug-muji-desktop",
+    "series": "new",
+    "brand": "無印良品",
+    "task": "mug",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:33:16.741363+00:00",
+    "start_url": "https://www.muji.com/jp/ja/store/cmdty/section/S200140205",
+    "end_url": null,
+    "previous_status": null,
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "入口は接続エラーで表示されなかった。",
+    "visual_note": "ブラウザーにページ到達不可の表示。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:20.920746+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:33:31.052584+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "mug-muji-mobile",
+    "series": "new",
+    "brand": "無印良品",
+    "task": "mug",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:33:26.302032+00:00",
+    "start_url": "https://www.muji.com/jp/ja/store/cmdty/section/S200140205",
+    "end_url": "https://www.muji.com/content/maintenance_s_20261111.html",
+    "previous_status": null,
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "保守案内が表示され、商品一覧へ進めなかった。",
+    "visual_note": "無印良品の保守案内が中央に表示された。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:32.000573+00:00",
+        "url": "https://www.muji.com/content/maintenance_s_20261111.html",
+        "screen": "maintenance",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:33:42.086614+00:00",
+        "url": "https://www.muji.com/content/maintenance_s_20261111.html",
+        "screen": "maintenance",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "mug-nitori-desktop",
+    "series": "new",
+    "brand": "ニトリ",
+    "task": "mug",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:33:30.822858+00:00",
+    "start_url": "https://www.nitori-net.jp/ec/cat/Tableware/GlassMugPot/GlassMugPotMug/1/",
+    "end_url": null,
+    "previous_status": null,
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "入口は接続エラーで表示されなかった。",
+    "visual_note": "ブラウザーにページ到達不可の表示。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:35.168374+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:33:45.324708+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "mug-nitori-mobile",
+    "series": "new",
+    "brand": "ニトリ",
+    "task": "mug",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:35:12.305531+00:00",
+    "start_url": "https://www.nitori-net.jp/ec/cat/Tableware/GlassMugPot/GlassMugPotMug/1/",
+    "end_url": "https://www.nitori-net.jp/ec/product/8967696s/",
+    "previous_status": null,
+    "status": "confirmed",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "商品を開く ニトリ\nマグカップ リンヌ (美濃焼) レトロな雰囲気\n499 円\n(52)"
+      },
+      {
+        "kind": "scroll",
+        "label": "価格まで移動"
+      }
+    ],
+    "action_counts": {
+      "tap": 1,
+      "scroll": 1
+    },
+    "finding": "商品詳細でマグカップ リンヌ レッドと499円を確認。",
+    "visual_note": "赤いマグ画像の下にカラーと499円、数量欄が表示された。",
+    "evidence": "マグカップ リンヌ レッド(美濃焼) 499円",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:35:07.337281+00:00",
+        "url": "https://www.nitori-net.jp/ec/cat/Tableware/GlassMugPot/GlassMugPotMug/1/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 20,
+          "controls_per_100k_css_px2": 6.08,
+          "text_fragments": 33,
+          "text_box_percent": 10.34,
+          "control_box_percent": 48.25,
+          "media_box_percent": 21.07,
+          "box_union_percent": 54.88,
+          "box_union_with_css_images_percent": 54.88,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 317,
+            "end_y_exclusive": 361,
+            "height_css_px": 44
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:35:12.196442+00:00",
+        "url": "https://www.nitori-net.jp/ec/product/8967696s/",
+        "screen": "page",
+        "scroll_y_css_px": 455,
+        "metrics": {
+          "visible_controls": 12,
+          "controls_per_100k_css_px2": 3.65,
+          "text_fragments": 20,
+          "text_box_percent": 5.14,
+          "control_box_percent": 11.49,
+          "media_box_percent": 26.65,
+          "box_union_percent": 41.91,
+          "box_union_with_css_images_percent": 41.91,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 294,
+            "end_y_exclusive": 343,
+            "height_css_px": 49
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "shirt-beams-desktop",
+    "series": "revisit",
+    "brand": "BEAMS",
+    "task": "shirt",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:33:11.758380+00:00",
+    "start_url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+    "end_url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+    "previous_status": "unavailable",
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "入口でアクセス拒否が表示された。",
+    "visual_note": "白地のアクセス拒否画面。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:15.997838+00:00",
+        "url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:33:16.082928+00:00",
+        "url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-beams-mobile",
+    "series": "revisit",
+    "brand": "BEAMS",
+    "task": "shirt",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:33:11.766787+00:00",
+    "start_url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+    "end_url": "https://www.beams.co.jp/item/international_gallery_beams/t-shirt/23040097729/?color=19",
+    "previous_status": "partial",
+    "status": "partial",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "商品を開く 【BLACK FRIDAY対象】〈MEN〉VEILA...\n¥42,900 ¥38,610 [10%OFF]"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "finding": "一覧の商品選択後、アクセス拒否画面になった。",
+    "visual_note": "入口の一覧から商品を選ぶと白地のアクセス拒否が表示された。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:25.828550+00:00",
+        "url": "https://www.beams.co.jp/category/t-shirt/?sex=M&label=0023",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 30,
+          "controls_per_100k_css_px2": 9.11,
+          "text_fragments": 43,
+          "text_box_percent": 14.11,
+          "control_box_percent": 48.56,
+          "media_box_percent": 23.33,
+          "box_union_percent": 57.27,
+          "box_union_with_css_images_percent": 58.05,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 524,
+            "end_y_exclusive": 555,
+            "height_css_px": 31
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:33:41.383852+00:00",
+        "url": "https://www.beams.co.jp/item/international_gallery_beams/t-shirt/23040097729/?color=19",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-globalwork-desktop",
+    "series": "revisit",
+    "brand": "GLOBAL WORK",
+    "task": "shirt",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:33:11.767787+00:00",
+    "start_url": "https://www.dot-st.com/globalwork/disp/itemlist/?dispNo=001002002002",
+    "end_url": null,
+    "previous_status": "unavailable",
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "入口は接続エラーで表示されなかった。",
+    "visual_note": "ブラウザーにページ到達不可の表示。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:15.942828+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:33:26.052528+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-globalwork-mobile",
+    "series": "revisit",
+    "brand": "GLOBAL WORK",
+    "task": "shirt",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:33:11.776126+00:00",
+    "start_url": "https://www.dot-st.com/globalwork/disp/itemlist/?dispNo=001002002002",
+    "end_url": "https://www.dot-st.com/globalwork/disp/item/1023339/?COLOR_CD=05",
+    "previous_status": "partial",
+    "status": "partial",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "商品を開く マイニチ多機能クルーTシャツ/長袖/1023339\n\n¥2,990税込\n\n     5.0 (13件)\nキャンペーン\nポイントアップ"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "finding": "商品選択後7秒待った時点で詳細の価格とサイズを確認できなかった。",
+    "visual_note": "商品選択後、ヘッダーとセール告知のみが見えた。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:20.302740+00:00",
+        "url": "https://www.dot-st.com/globalwork/disp/itemlist/?dispNo=001002002002",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 23,
+          "controls_per_100k_css_px2": 6.99,
+          "text_fragments": 44,
+          "text_box_percent": 11.2,
+          "control_box_percent": 66.53,
+          "media_box_percent": 33.28,
+          "box_union_percent": 68.92,
+          "box_union_with_css_images_percent": 68.92,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 283,
+            "end_y_exclusive": 351,
+            "height_css_px": 68
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:33:30.508250+00:00",
+        "url": "https://www.dot-st.com/globalwork/disp/item/1023339/?COLOR_CD=05",
+        "screen": "loading",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-gu-desktop",
+    "series": "revisit",
+    "brand": "GU",
+    "task": "shirt",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:33:11.876913+00:00",
+    "start_url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+    "end_url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+    "previous_status": "unavailable",
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "入口でアクセス拒否が表示された。",
+    "visual_note": "白地のアクセス拒否画面。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:16.255121+00:00",
+        "url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:33:16.395602+00:00",
+        "url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-gu-mobile",
+    "series": "revisit",
+    "brand": "GU",
+    "task": "shirt",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:33:16.310722+00:00",
+    "start_url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+    "end_url": "https://www.gu-global.com/jp/ja/products/E361524-000/00?colorDisplayCode=15",
+    "previous_status": "unavailable",
+    "status": "partial",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "商品を開く MEN, XS-3XL\nソフトコットンクルーネックT(長袖)\n¥1,290\n\nアプリ会員特別価格\n¥990 11/26まで\n\nユニセックス\n\n4.6\n(214)"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "finding": "商品選択後7秒待った時点で詳細の価格とサイズを確認できなかった。",
+    "visual_note": "商品選択後、GUヘッダーのみが見えた。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:27.712253+00:00",
+        "url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 14,
+          "controls_per_100k_css_px2": 4.25,
+          "text_fragments": 34,
+          "text_box_percent": 15.24,
+          "control_box_percent": 73.17,
+          "media_box_percent": 33.68,
+          "box_union_percent": 78.09,
+          "box_union_with_css_images_percent": 78.09,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 230,
+            "end_y_exclusive": 286,
+            "height_css_px": 56
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:33:35.507234+00:00",
+        "url": "https://www.gu-global.com/jp/ja/products/E361524-000/00?colorDisplayCode=15",
+        "screen": "loading",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-hm-desktop",
+    "series": "new",
+    "brand": "H&M",
+    "task": "shirt",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:33:35.889577+00:00",
+    "start_url": "https://www2.hm.com/en_us/men/products/t-shirts-and-tanks.html",
+    "end_url": "https://www2.hm.com/en_us/men/products/t-shirts-and-tanks.html",
+    "previous_status": null,
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "入口でアクセス拒否が表示された。",
+    "visual_note": "白地のアクセス拒否画面。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:40.948582+00:00",
+        "url": "https://www2.hm.com/en_us/men/products/t-shirts-and-tanks.html",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:33:41.022507+00:00",
+        "url": "https://www2.hm.com/en_us/men/products/t-shirts-and-tanks.html",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-hm-mobile",
+    "series": "new",
+    "brand": "H&M",
+    "task": "shirt",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:33:41.326912+00:00",
+    "start_url": "https://www2.hm.com/en_us/men/products/t-shirts-and-tanks.html",
+    "end_url": "https://www2.hm.com/en_us/productpage.1352887004.html",
+    "previous_status": null,
+    "status": "partial",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Accept All"
+      },
+      {
+        "kind": "tap",
+        "label": "商品を開く "
+      }
+    ],
+    "action_counts": {
+      "tap": 2
+    },
+    "finding": "一覧の商品選択後にアクセス拒否が表示された。",
+    "visual_note": "同意画面を操作し商品を選んだ後、アクセス拒否が表示された。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:52.136455+00:00",
+        "url": "https://www2.hm.com/en_us/men/products/t-shirts-and-tanks.html",
+        "screen": "consent",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 1.82,
+          "text_fragments": 24,
+          "text_box_percent": 31.0,
+          "control_box_percent": 16.43,
+          "media_box_percent": 1.65,
+          "box_union_percent": 44.02,
+          "box_union_with_css_images_percent": 44.03,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 75,
+            "end_y_exclusive": 115,
+            "height_css_px": 40
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:33:59.967416+00:00",
+        "url": "https://www2.hm.com/en_us/productpage.1352887004.html",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-zara-desktop",
+    "series": "new",
+    "brand": "ZARA",
+    "task": "shirt",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:33:41.723570+00:00",
+    "start_url": "https://www.zara.com/jp/ja/man-tshirts-plain-l865.html",
+    "end_url": "https://www.zara.com/jp/ja/man-tshirts-plain-l865.html",
+    "previous_status": null,
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "入口でアクセス拒否が表示された。",
+    "visual_note": "白地のアクセス拒否画面。",
+    "evidence": "",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:46.133871+00:00",
+        "url": "https://www.zara.com/jp/ja/man-tshirts-plain-l865.html",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:33:46.350129+00:00",
+        "url": "https://www.zara.com/jp/ja/man-tshirts-plain-l865.html",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "shirt-zara-mobile",
+    "series": "new",
+    "brand": "ZARA",
+    "task": "shirt",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:43:08.062984+00:00",
+    "start_url": "https://www.zara.com/jp/ja/man-tshirts-plain-l865.html",
+    "end_url": "https://www.zara.com/jp/ja/%E3%83%98%E3%82%99%E3%83%BC%E3%82%B7%E3%83%83%E3%82%AF%E3%82%B9%E3%83%AA%E3%83%A0%E3%83%95%E3%82%A3%E3%83%83%E3%83%88-%E3%83%AD%E3%83%B3%E3%82%AF%E3%82%99%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%95%E3%82%99t%E3%82%B7%E3%83%A3%E3%83%84-p06019340.html",
+    "previous_status": null,
+    "status": "confirmed",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "ベーシックスリムフィット ロングスリーブTシャツ"
+      },
+      {
+        "kind": "tap",
+        "label": "クッキーのお知らせを閉じる"
+      },
+      {
+        "kind": "scroll",
+        "label": "商品価格とサイズ操作まで移動"
+      },
+      {
+        "kind": "tap",
+        "label": "サイズ一覧を開く"
+      }
+    ],
+    "action_counts": {
+      "tap": 3,
+      "scroll": 1
+    },
+    "finding": "同じ商品詳細の価格2,990円を中間画面で、サイズ一覧のM (JP M)を終点で確認。",
+    "visual_note": "中間画面は着用写真の下に商品名と2,990円、終点はサイズ一覧が前面に開きM (JP M)が見える。終点では価格は画面外。",
+    "evidence": "ベーシックスリムフィット ロングスリーブTシャツ 2,990円（price.png）／M (JP M)（end.png）",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:42:40.149013+00:00",
+        "url": "https://www.zara.com/jp/ja/man-tshirts-plain-l865.html",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 23,
+          "controls_per_100k_css_px2": 6.99,
+          "text_fragments": 18,
+          "text_box_percent": 4.98,
+          "control_box_percent": 64.78,
+          "media_box_percent": 57.07,
+          "box_union_percent": 65.8,
+          "box_union_with_css_images_percent": 65.8,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 740,
+            "end_y_exclusive": 775,
+            "height_css_px": 35
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:42:50.717041+00:00",
+        "url": "https://www.zara.com/jp/ja/%E3%83%98%E3%82%99%E3%83%BC%E3%82%B7%E3%83%83%E3%82%AF%E3%82%B9%E3%83%AA%E3%83%A0%E3%83%95%E3%82%A3%E3%83%83%E3%83%88-%E3%83%AD%E3%83%B3%E3%82%AF%E3%82%99%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%95%E3%82%99t%E3%82%B7%E3%83%A3%E3%83%84-p06019340.html",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 6,
+          "controls_per_100k_css_px2": 1.82,
+          "text_fragments": 7,
+          "text_box_percent": 2.61,
+          "control_box_percent": 24.67,
+          "media_box_percent": 0.0,
+          "box_union_percent": 25.69,
+          "box_union_with_css_images_percent": 25.69,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 103,
+            "end_y_exclusive": 133,
+            "height_css_px": 30
+          }
+        }
+      }
+    },
+    "supplementary_frames": {
+      "price": {
+        "at": "2026-11-23T13:42:49.477973+00:00",
+        "url": "https://www.zara.com/jp/ja/%E3%83%98%E3%82%99%E3%83%BC%E3%82%B7%E3%83%83%E3%82%AF%E3%82%B9%E3%83%AA%E3%83%A0%E3%83%95%E3%82%A3%E3%83%83%E3%83%88-%E3%83%AD%E3%83%B3%E3%82%AF%E3%82%99%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%95%E3%82%99t%E3%82%B7%E3%83%A3%E3%83%84-p06019340.html",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 8,
+          "controls_per_100k_css_px2": 2.43,
+          "text_fragments": 10,
+          "text_box_percent": 3.87,
+          "control_box_percent": 69.07,
+          "media_box_percent": 64.23,
+          "box_union_percent": 72.72,
+          "box_union_with_css_images_percent": 72.72,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 737,
+            "end_y_exclusive": 796,
+            "height_css_px": 59
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-adobe-desktop",
+    "series": "new",
+    "brand": "Adobe",
+    "task": "reset",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:34:29.898546+00:00",
+    "start_url": "https://helpx.adobe.com/support.html",
+    "end_url": "https://helpx.adobe.com/support.html",
+    "previous_status": null,
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "公式サポートの開始URLでAccess Deniedが表示され、再設定案内へ進めなかった。",
+    "visual_note": "白地の上部にアクセス拒否の文言がある。",
+    "evidence": "アクセス拒否",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:34:27.207093+00:00",
+        "url": "https://helpx.adobe.com/support.html",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:34:29.836134+00:00",
+        "url": "https://helpx.adobe.com/support.html",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "reset-adobe-mobile",
+    "series": "new",
+    "brand": "Adobe",
+    "task": "reset",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:38:38.392086+00:00",
+    "start_url": "https://helpx.adobe.com/support.html",
+    "end_url": "https://helpx.adobe.com/account/individual/sign-in-and-security/security-and-recovery/reset-adobe-password.html",
+    "previous_status": null,
+    "status": "confirmed",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "United States"
+      },
+      {
+        "kind": "tap",
+        "label": "Change or reset your password"
+      },
+      {
+        "kind": "scroll",
+        "label": "再設定の手順へ移動"
+      }
+    ],
+    "action_counts": {
+      "tap": 2,
+      "scroll": 1
+    },
+    "finding": "忘れたパスワードを再設定するには、Adobeのアカウント画面で「Get help signing in」を選ぶと記事に記載されている。情報は入力・送信していない。",
+    "visual_note": "地域を選んだ後、再設定記事の見出しと最初の手順が表示される。",
+    "evidence": "Get help signing in の手順",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:38:30.724736+00:00",
+        "url": "https://helpx.adobe.com/support.html",
+        "screen": "region_prompt",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 3,
+          "controls_per_100k_css_px2": 0.91,
+          "text_fragments": 9,
+          "text_box_percent": 10.23,
+          "control_box_percent": 1.85,
+          "media_box_percent": 0.15,
+          "box_union_percent": 11.49,
+          "box_union_with_css_images_percent": 40.14,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 605,
+            "end_y_exclusive": 844,
+            "height_css_px": 239
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:38:38.392086+00:00",
+        "url": "https://helpx.adobe.com/account/individual/sign-in-and-security/security-and-recovery/reset-adobe-password.html",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 9,
+          "controls_per_100k_css_px2": 2.73,
+          "text_fragments": 19,
+          "text_box_percent": 22.94,
+          "control_box_percent": 6.76,
+          "media_box_percent": 15.04,
+          "box_union_percent": 41.63,
+          "box_union_with_css_images_percent": 41.75,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 319,
+            "end_y_exclusive": 388,
+            "height_css_px": 69
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-apple-desktop",
+    "series": "revisit",
+    "brand": "Apple",
+    "task": "reset",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:35:27.130147+00:00",
+    "start_url": "https://support.apple.com/en-us",
+    "end_url": "https://support.apple.com/",
+    "previous_status": "partial",
+    "status": "partial",
+    "actions": [],
+    "action_counts": {},
+    "finding": "サポートの再設定入口は表示されたが、今回の操作では画面遷移できず、方法は確認できなかった。",
+    "visual_note": "製品アイコンの並びと再設定への案内がある。",
+    "evidence": "Apple Supportの入口",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:35:21.730140+00:00",
+        "url": "https://support.apple.com/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 24,
+          "controls_per_100k_css_px2": 1.95,
+          "text_fragments": 25,
+          "text_box_percent": 5.46,
+          "control_box_percent": 19.1,
+          "media_box_percent": 6.03,
+          "box_union_percent": 24.63,
+          "box_union_with_css_images_percent": 24.63,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 573,
+            "end_y_exclusive": 640,
+            "height_css_px": 67
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:35:27.005692+00:00",
+        "url": "https://support.apple.com/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 24,
+          "controls_per_100k_css_px2": 1.95,
+          "text_fragments": 25,
+          "text_box_percent": 5.46,
+          "control_box_percent": 19.1,
+          "media_box_percent": 6.03,
+          "box_union_percent": 24.63,
+          "box_union_with_css_images_percent": 24.63,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 573,
+            "end_y_exclusive": 640,
+            "height_css_px": 67
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-apple-mobile",
+    "series": "revisit",
+    "brand": "Apple",
+    "task": "reset",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:35:26.563777+00:00",
+    "start_url": "https://support.apple.com/en-us",
+    "end_url": "https://support.apple.com/",
+    "previous_status": "partial",
+    "status": "partial",
+    "actions": [],
+    "action_counts": {},
+    "finding": "サポートの再設定入口は表示されたが、今回の操作では画面遷移できず、方法は確認できなかった。",
+    "visual_note": "製品アイコンの並びと再設定への案内がある。",
+    "evidence": "Apple Supportの入口",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:35:21.078177+00:00",
+        "url": "https://support.apple.com/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 11,
+          "controls_per_100k_css_px2": 3.34,
+          "text_fragments": 9,
+          "text_box_percent": 7.25,
+          "control_box_percent": 12.3,
+          "media_box_percent": 13.23,
+          "box_union_percent": 25.41,
+          "box_union_with_css_images_percent": 25.41,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 372,
+            "end_y_exclusive": 413,
+            "height_css_px": 41
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:35:26.484928+00:00",
+        "url": "https://support.apple.com/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 11,
+          "controls_per_100k_css_px2": 3.34,
+          "text_fragments": 9,
+          "text_box_percent": 7.25,
+          "control_box_percent": 12.3,
+          "media_box_percent": 13.23,
+          "box_union_percent": 25.41,
+          "box_union_with_css_images_percent": 25.41,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 372,
+            "end_y_exclusive": 413,
+            "height_css_px": 41
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-dropbox-desktop",
+    "series": "revisit",
+    "brand": "Dropbox",
+    "task": "reset",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:38:49.261506+00:00",
+    "start_url": "https://help.dropbox.com/",
+    "end_url": "https://help.dropbox.com/ja-jp/security/password-reset",
+    "previous_status": "partial",
+    "status": "confirmed",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "Reset password"
+      },
+      {
+        "kind": "click",
+        "label": "How to change or reset your Dropbox password - Dropbox Help"
+      },
+      {
+        "kind": "click",
+        "label": "Cookie通知を拒否または閉じる"
+      },
+      {
+        "kind": "scroll",
+        "label": "パスワード再設定手順へ移動"
+      }
+    ],
+    "action_counts": {
+      "click": 3,
+      "scroll": 1
+    },
+    "finding": "ログイン画面で登録メールを入力して続行し、「パスワードを忘れた場合」を選んでメールを送信すると、再設定リンクが届くと記事に記載されている。情報は入力・送信していない。",
+    "visual_note": "Cookie通知を閉じた記事に番号付きの再設定手順が表示される。",
+    "evidence": "ログイン画面からの再設定手順",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:38:33.765203+00:00",
+        "url": "https://help.dropbox.com/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 25,
+          "controls_per_100k_css_px2": 2.04,
+          "text_fragments": 26,
+          "text_box_percent": 5.29,
+          "control_box_percent": 8.66,
+          "media_box_percent": 1.71,
+          "box_union_percent": 12.14,
+          "box_union_with_css_images_percent": 12.14,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 382,
+            "end_y_exclusive": 510,
+            "height_css_px": 128
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:38:49.261506+00:00",
+        "url": "https://help.dropbox.com/ja-jp/security/password-reset",
+        "screen": "page",
+        "scroll_y_css_px": 644,
+        "metrics": {
+          "visible_controls": 19,
+          "controls_per_100k_css_px2": 1.55,
+          "text_fragments": 53,
+          "text_box_percent": 18.22,
+          "control_box_percent": 15.34,
+          "media_box_percent": 0.52,
+          "box_union_percent": 23.93,
+          "box_union_with_css_images_percent": 23.93,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 505,
+            "end_y_exclusive": 557,
+            "height_css_px": 52
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-dropbox-mobile",
+    "series": "revisit",
+    "brand": "Dropbox",
+    "task": "reset",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:35:36.156280+00:00",
+    "start_url": "https://help.dropbox.com/",
+    "end_url": "https://help.dropbox.com/ja-jp/search-results",
+    "previous_status": "partial",
+    "status": "partial",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Reset password"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "finding": "Reset passwordから検索結果へ進み、Dropboxパスワードの再設定記事の候補が表示された。本文までは到達していない。",
+    "visual_note": "最初の検索結果に対象記事があり、画面下部にCookie通知が重なる。",
+    "evidence": "再設定記事の検索結果",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:35:23.704447+00:00",
+        "url": "https://help.dropbox.com/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 14,
+          "controls_per_100k_css_px2": 4.25,
+          "text_fragments": 14,
+          "text_box_percent": 10.74,
+          "control_box_percent": 11.98,
+          "media_box_percent": 2.21,
+          "box_union_percent": 19.23,
+          "box_union_with_css_images_percent": 19.23,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 405,
+            "end_y_exclusive": 485,
+            "height_css_px": 80
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:35:36.041824+00:00",
+        "url": "https://help.dropbox.com/ja-jp/search-results",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 12,
+          "controls_per_100k_css_px2": 3.65,
+          "text_fragments": 29,
+          "text_box_percent": 13.62,
+          "control_box_percent": 15.08,
+          "media_box_percent": 21.17,
+          "box_union_percent": 43.81,
+          "box_union_with_css_images_percent": 43.81,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 162,
+            "end_y_exclusive": 233,
+            "height_css_px": 71
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-github-desktop",
+    "series": "new",
+    "brand": "GitHub",
+    "task": "reset",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:41:19.449707+00:00",
+    "start_url": "https://docs.github.com/",
+    "end_url": "https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/updating-your-github-access-credentials",
+    "previous_status": null,
+    "status": "confirmed",
+    "actions": [
+      {
+        "kind": "click",
+        "label": "認証"
+      },
+      {
+        "kind": "click",
+        "label": "アカウント セキュリティ"
+      },
+      {
+        "kind": "click",
+        "label": "アクセスの資格情報を更新する"
+      },
+      {
+        "kind": "click",
+        "label": "アクセスの資格情報を更新する"
+      },
+      {
+        "kind": "scroll",
+        "label": "新しいパスワードの手順へ移動"
+      }
+    ],
+    "action_counts": {
+      "click": 4,
+      "scroll": 1
+    },
+    "finding": "新しいパスワードの要求は専用ページへ進み、アカウントに紐づくメールアドレスを入力してリセットメールを送ると案内される。使用できるのはプライマリまたはバックアップのメールアドレス。情報は入力・送信していない。",
+    "visual_note": "記事の「新しいパスワードをリクエストする」に番号付き手順とメールアドレスの条件が表示される。",
+    "evidence": "新しいパスワードの要求手順",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:41:06.845157+00:00",
+        "url": "https://docs.github.com/ja",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 30,
+          "controls_per_100k_css_px2": 2.44,
+          "text_fragments": 40,
+          "text_box_percent": 12.92,
+          "control_box_percent": 22.63,
+          "media_box_percent": 0.18,
+          "box_union_percent": 30.35,
+          "box_union_with_css_images_percent": 30.35,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 482,
+            "end_y_exclusive": 592,
+            "height_css_px": 110
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:41:19.449707+00:00",
+        "url": "https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/updating-your-github-access-credentials",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 37,
+          "controls_per_100k_css_px2": 3.01,
+          "text_fragments": 54,
+          "text_box_percent": 21.81,
+          "control_box_percent": 22.57,
+          "media_box_percent": 0.29,
+          "box_union_percent": 36.3,
+          "box_union_with_css_images_percent": 36.3,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 458,
+            "end_y_exclusive": 511,
+            "height_css_px": 53
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-github-mobile",
+    "series": "new",
+    "brand": "GitHub",
+    "task": "reset",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:35:54.859879+00:00",
+    "start_url": "https://docs.github.com/",
+    "end_url": "https://docs.github.com/ja/authentication",
+    "previous_status": null,
+    "status": "partial",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "認証"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "finding": "GitHub Docsの「認証」へ進んだが、未ログイン時のパスワード再設定手順には到達していない。",
+    "visual_note": "認証ドキュメントの見出しと概要、記事一覧が表示される。",
+    "evidence": "認証ドキュメントの入口",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:35:47.413823+00:00",
+        "url": "https://docs.github.com/ja",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 12,
+          "controls_per_100k_css_px2": 3.65,
+          "text_fragments": 18,
+          "text_box_percent": 19.15,
+          "control_box_percent": 25.46,
+          "media_box_percent": 0.45,
+          "box_union_percent": 39.52,
+          "box_union_with_css_images_percent": 39.52,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 579,
+            "end_y_exclusive": 694,
+            "height_css_px": 115
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:35:54.798515+00:00",
+        "url": "https://docs.github.com/ja/authentication",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 12,
+          "controls_per_100k_css_px2": 3.65,
+          "text_fragments": 17,
+          "text_box_percent": 15.98,
+          "control_box_percent": 11.0,
+          "media_box_percent": 0.76,
+          "box_union_percent": 24.06,
+          "box_union_with_css_images_percent": 24.06,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 547,
+            "end_y_exclusive": 603,
+            "height_css_px": 56
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-google-desktop",
+    "series": "new",
+    "brand": "Google",
+    "task": "reset",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:39:45.345412+00:00",
+    "start_url": "https://support.google.com/",
+    "end_url": "https://support.google.com/accounts/answer/41078",
+    "previous_status": null,
+    "status": "confirmed",
+    "actions": [
+      {
+        "kind": "text",
+        "label": "reset password"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "click",
+        "label": "パスワードを変更または再設定する\nヘルプ記事 - Google アカウント\n重要: Android 5.1 以降のデバイスをお使いの場合、パスワードを変更してから 24 時間は、出荷時の設定にリセットすることはできません。デバイスを保護する"
+      },
+      {
+        "kind": "scroll",
+        "label": "パスワードの再設定へ移動"
+      }
+    ],
+    "action_counts": {
+      "text": 1,
+      "key": 1,
+      "click": 1,
+      "scroll": 1
+    },
+    "finding": "パスワードの再設定は案内の手順からアカウントを復元し、本人確認の質問とメールを確認する。メールが届かない場合は迷惑メールフォルダなどを確認するよう記載されている。本人情報は入力・送信していない。",
+    "visual_note": "「パスワードの再設定」見出しの下に復元へのリンクとメールが届かない場合の案内がある。",
+    "evidence": "パスワードの再設定とアカウント復元の手順",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:39:33.522067+00:00",
+        "url": "https://support.google.com/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 19,
+          "controls_per_100k_css_px2": 1.55,
+          "text_fragments": 16,
+          "text_box_percent": 2.54,
+          "control_box_percent": 25.54,
+          "media_box_percent": 4.37,
+          "box_union_percent": 26.61,
+          "box_union_with_css_images_percent": 57.4,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 0,
+            "end_y_exclusive": 143,
+            "height_css_px": 143
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:39:45.345412+00:00",
+        "url": "https://support.google.com/accounts/answer/41078",
+        "screen": "page",
+        "scroll_y_css_px": 1058,
+        "metrics": {
+          "visible_controls": 10,
+          "controls_per_100k_css_px2": 0.81,
+          "text_fragments": 43,
+          "text_box_percent": 15.94,
+          "control_box_percent": 9.91,
+          "media_box_percent": 5.57,
+          "box_union_percent": 26.01,
+          "box_union_with_css_images_percent": 26.01,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": null,
+            "end_y_exclusive": null,
+            "height_css_px": 0
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-google-mobile",
+    "series": "new",
+    "brand": "Google",
+    "task": "reset",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:39:46.116397+00:00",
+    "start_url": "https://support.google.com/",
+    "end_url": "https://support.google.com/accounts/answer/41078",
+    "previous_status": null,
+    "status": "confirmed",
+    "actions": [
+      {
+        "kind": "text",
+        "label": "reset password"
+      },
+      {
+        "kind": "key",
+        "label": "Enter"
+      },
+      {
+        "kind": "tap",
+        "label": "パスワードを変更または再設定する\nヘルプ記事 - Google アカウント\n重要: Android 5.1 以降のデバイスをお使いの場合、パスワードを変更してから 24 時間は、出荷時の設定にリセットすることはできません。デバイスを保護する"
+      },
+      {
+        "kind": "scroll",
+        "label": "パスワードの再設定へ移動"
+      }
+    ],
+    "action_counts": {
+      "text": 1,
+      "key": 1,
+      "tap": 1,
+      "scroll": 1
+    },
+    "finding": "パスワードの再設定は案内の手順からアカウントを復元し、本人確認の質問とメールを確認する。メールが届かない場合は迷惑メールフォルダなどを確認するよう記載されている。本人情報は入力・送信していない。",
+    "visual_note": "「パスワードの再設定」見出しの下に復元へのリンクとメールが届かない場合の案内がある。",
+    "evidence": "パスワードの再設定とアカウント復元の手順",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:39:32.765810+00:00",
+        "url": "https://support.google.com/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 14,
+          "controls_per_100k_css_px2": 4.25,
+          "text_fragments": 12,
+          "text_box_percent": 8.01,
+          "control_box_percent": 62.98,
+          "media_box_percent": 3.64,
+          "box_union_percent": 65.97,
+          "box_union_with_css_images_percent": 65.97,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 271,
+            "end_y_exclusive": 320,
+            "height_css_px": 49
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:39:46.116397+00:00",
+        "url": "https://support.google.com/accounts/answer/41078",
+        "screen": "page",
+        "scroll_y_css_px": 1527,
+        "metrics": {
+          "visible_controls": 10,
+          "controls_per_100k_css_px2": 3.04,
+          "text_fragments": 51,
+          "text_box_percent": 48.69,
+          "control_box_percent": 19.48,
+          "media_box_percent": 0.84,
+          "box_union_percent": 54.19,
+          "box_union_with_css_images_percent": 54.18,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 372,
+            "end_y_exclusive": 407,
+            "height_css_px": 35
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-microsoft-desktop",
+    "series": "new",
+    "brand": "Microsoft",
+    "task": "reset",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:35:45.503592+00:00",
+    "start_url": "https://support.microsoft.com/",
+    "end_url": "https://support.microsoft.com/ja-jp/",
+    "previous_status": null,
+    "status": "partial",
+    "actions": [],
+    "action_counts": {},
+    "finding": "Microsoftサポートトップは表示されたが、今回の自動操作は画面要素の切り替え中に停止し、再設定手順には進めなかった。",
+    "visual_note": "サポートのトップ画面に製品別の選択肢が並ぶ。",
+    "evidence": "サポートトップ",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:35:44.758379+00:00",
+        "url": "https://support.microsoft.com/ja-jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 27,
+          "controls_per_100k_css_px2": 2.2,
+          "text_fragments": 65,
+          "text_box_percent": 12.62,
+          "control_box_percent": 28.5,
+          "media_box_percent": 7.31,
+          "box_union_percent": 34.87,
+          "box_union_with_css_images_percent": 34.88,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 145,
+            "end_y_exclusive": 199,
+            "height_css_px": 54
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:35:45.387223+00:00",
+        "url": "https://support.microsoft.com/ja-jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 27,
+          "controls_per_100k_css_px2": 2.2,
+          "text_fragments": 65,
+          "text_box_percent": 12.62,
+          "control_box_percent": 28.5,
+          "media_box_percent": 7.31,
+          "box_union_percent": 34.87,
+          "box_union_with_css_images_percent": 34.88,
+          "flat_band": {
+            "strip_x": [
+              342,
+              1023
+            ],
+            "start_y": 145,
+            "end_y_exclusive": 199,
+            "height_css_px": 54
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "reset-microsoft-mobile",
+    "series": "new",
+    "brand": "Microsoft",
+    "task": "reset",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:35:56.328281+00:00",
+    "start_url": "https://support.microsoft.com/",
+    "end_url": "https://support.microsoft.com/ja-jp/accounts-billing/manage/microsoft-account-help",
+    "previous_status": null,
+    "status": "partial",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Microsoft アカウント"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "finding": "Microsoftアカウントのヘルプを開いた。サインインできない場合の案内はあるが、再設定方法の手順を終点画像で確認できなかった。",
+    "visual_note": "アカウントのヘルプ見出しと、パスワード・個人情報に関する説明が表示される。",
+    "evidence": "Microsoftアカウントのヘルプ",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:35:48.267665+00:00",
+        "url": "https://support.microsoft.com/ja-jp/",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 12,
+          "controls_per_100k_css_px2": 3.65,
+          "text_fragments": 17,
+          "text_box_percent": 25.56,
+          "control_box_percent": 46.84,
+          "media_box_percent": 18.17,
+          "box_union_percent": 66.51,
+          "box_union_with_css_images_percent": 66.49,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 72,
+            "end_y_exclusive": 111,
+            "height_css_px": 39
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:35:56.200567+00:00",
+        "url": "https://support.microsoft.com/ja-jp/accounts-billing/manage/microsoft-account-help",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 7,
+          "controls_per_100k_css_px2": 2.13,
+          "text_fragments": 48,
+          "text_box_percent": 40.12,
+          "control_box_percent": 7.76,
+          "media_box_percent": 0.75,
+          "box_union_percent": 46.48,
+          "box_union_with_css_images_percent": 46.48,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 406,
+            "end_y_exclusive": 444,
+            "height_css_px": 38
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "returns-argos-returns-desktop",
+    "series": "revisit",
+    "brand": "Argos",
+    "task": "returns",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:34:09.905476+00:00",
+    "start_url": "https://help.argos.co.uk/",
+    "end_url": "https://help.argos.co.uk/",
+    "previous_status": "unavailable",
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "開始URLでAccess Deniedが表示され、返品条件を確認できなかった。",
+    "visual_note": "白地の上部にアクセス拒否の文言が表示される。",
+    "evidence": "アクセス拒否",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:34:07.257384+00:00",
+        "url": "https://help.argos.co.uk/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:34:09.851709+00:00",
+        "url": "https://help.argos.co.uk/",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "returns-jl-returns-desktop",
+    "series": "revisit",
+    "brand": "John Lewis",
+    "task": "returns",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:34:02.816395+00:00",
+    "start_url": "https://www.johnlewis.com/customer-services",
+    "end_url": null,
+    "previous_status": "unavailable",
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "開始URLでHTTP/2プロトコルエラーとなり、返品条件を確認できなかった。",
+    "visual_note": "Edgeのページ到達エラーが中央に表示される。",
+    "evidence": "接続エラー",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:33:59.764530+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:34:02.484677+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "returns-jl-returns-mobile",
+    "series": "revisit",
+    "brand": "John Lewis",
+    "task": "returns",
+    "mode": "mobile",
+    "viewport_css_px": [
+      390,
+      844
+    ],
+    "observed_at": "2026-11-23T13:34:10.774657+00:00",
+    "start_url": "https://www.johnlewis.com/customer-services",
+    "end_url": null,
+    "previous_status": "partial",
+    "status": "partial",
+    "actions": [
+      {
+        "kind": "tap",
+        "label": "Returns & refunds"
+      }
+    ],
+    "action_counts": {
+      "tap": 1
+    },
+    "finding": "顧客サービスからReturns & refundsを選んだ後、HTTP/2プロトコルエラーとなり、返品条件を確認できなかった。",
+    "visual_note": "入口は選択肢が縦に並び、終点はEdgeの到達エラー。",
+    "evidence": "返品案内への接続エラー",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:34:05.828304+00:00",
+        "url": "https://www.johnlewis.com/customer-services",
+        "screen": "page",
+        "scroll_y_css_px": 0,
+        "metrics": {
+          "visible_controls": 11,
+          "controls_per_100k_css_px2": 3.34,
+          "text_fragments": 11,
+          "text_box_percent": 13.09,
+          "control_box_percent": 30.57,
+          "media_box_percent": 2.43,
+          "box_union_percent": 38.73,
+          "box_union_with_css_images_percent": 38.73,
+          "flat_band": {
+            "strip_x": [
+              98,
+              292
+            ],
+            "start_y": 236,
+            "end_y_exclusive": 294,
+            "height_css_px": 58
+          }
+        }
+      },
+      "end": {
+        "at": "2026-11-23T13:34:10.661229+00:00",
+        "url": null,
+        "screen": "browser_error",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  },
+  {
+    "id": "returns-lego-returns-desktop",
+    "series": "revisit",
+    "brand": "LEGO",
+    "task": "returns",
+    "mode": "desktop",
+    "viewport_css_px": [
+      1365,
+      900
+    ],
+    "observed_at": "2026-11-23T13:34:08.872758+00:00",
+    "start_url": "https://www.lego.com/en-us/service",
+    "end_url": "https://www.lego.com/en-us/service",
+    "previous_status": "unavailable",
+    "status": "unavailable",
+    "actions": [],
+    "action_counts": {},
+    "finding": "開始URLでアクセスがブロックされ、返品案内を確認できなかった。",
+    "visual_note": "白い画面に大きな赤い×印とブロックの説明がある。",
+    "evidence": "アクセス拒否",
+    "frames": {
+      "start": {
+        "at": "2026-11-23T13:34:06.163931+00:00",
+        "url": "https://www.lego.com/en-us/service",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      },
+      "end": {
+        "at": "2026-11-23T13:34:08.788353+00:00",
+        "url": "https://www.lego.com/en-us/service",
+        "screen": "access_check",
+        "scroll_y_css_px": 0,
+        "metrics": null
+      }
+    }
+  }
+]

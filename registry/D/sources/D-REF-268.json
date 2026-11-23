@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-268",
+  "title": "Date picker accessibility tests",
+  "url": "https://designsystem.digital.gov/components/date-picker/accessibility-tests/",
+  "canonical_url": "https://designsystem.digital.gov/components/date-picker/accessibility-tests/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品試験手順",
+  "section": "Keyboard navigation tests",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/date-picker/accessibility-tests/",
+  "response_sha256": "4f07e1bf0392cedaa2457e4bf0ffd1ea0ab89e4d4fac572d911ce4f52b24d04a",
+  "used_by": [
+    "D-IU-213"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/date-picker/accessibility-tests/#keyboard-navigation-tests"
+}

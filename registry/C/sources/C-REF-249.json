@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-249",
+  "title": "Disclosure (Show/Hide) Pattern",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+  "response_sha256": "c34cbd09e131e1775328d04c999fa953a705654cb2cc35169a62450f8fcd6111",
+  "used_by": [
+    "C-UI-209"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/#keyboardinteraction"
+}

@@ -1,0 +1,104 @@
+metric_id,source_id,task,kind,measure,value,unit,denominator,locator
+study-madrid-01,study-madrid,開館時間と無料入館の条件を探す,first_click,最初の行き先に来館案内（Visit）を選んだ人数,7,people,7,"Task 1: Hours Buried, Free Entry Missed"
+study-madrid-02,study-madrid,開館時間と無料入館の条件を探す,difficulty,基本の開館時間を探すのに苦労した人数,3,people,7,The Results
+study-madrid-03,study-madrid,開館時間と無料入館の条件を探す,error,土曜夜も無料と気付かなかった人数,4,people,7,Task 1
+study-madrid-04,study-madrid,名画コレクションを探索する,discovery_miss,画像を拡大して鑑賞する機能を発見しなかった人数,2,people,7,The Results
+study-madrid-05,study-madrid,企画展と常設展に入れる券を選ぶ,difficulty,券の選択時に困惑や不満を表した人数,7,people,7,Task 3: The Ticket Page Lost Everyone
+study-washington-01,study-washington,来館案内から館内を紹介するページを探す,discovery_miss,スマホ群で「Explore the Campus」をリンクと認識できなかった人数,4,people,4,Plan Your Visit ページの調査結果
+study-muji-01,study-muji,返品規約を見つける,completion,PCで規約に到達した人数,2,people,3,"p.18, Task Takeaways"
+study-muji-02,study-muji,返品規約を見つける,completion,PCの後、モバイルで規約に到達した人数,2,people,3,"p.18, Task Takeaways"
+study-muji-03,study-muji,返品規約を見つける,time,モバイルで到達した1人目の個別所要時間,30,seconds,1,"p.19, Find Return Policy"
+study-muji-04,study-muji,返品規約を見つける,time,モバイルで到達した2人目の個別所要時間,26,seconds,1,"p.19, Find Return Policy"
+study-muji-05,study-muji,20米ドル未満の万年筆を探す,time,モバイルで到達した1人目の個別所要時間,54,seconds,1,"p.19, Look For Item"
+study-muji-06,study-muji,20米ドル未満の万年筆を探す,time,モバイルで到達した2人目の個別所要時間,36,seconds,1,"p.19, Look For Item"
+study-muji-07,study-muji,20米ドル未満の万年筆を探す,time,モバイルで到達した3人目の個別所要時間,15,seconds,1,"p.19, Look For Item"
+study-muji-08,study-muji,税と配送を含む注文額を調べる,completion,PCで完了した人数,2,people,3,"p.18, Task Takeaways"
+study-muji-09,study-muji,税と配送を含む注文額を調べる,completion,モバイルで完了した人数,2,people,3,"p.18, Task Takeaways"
+study-ikea-01,study-ikea,割引クーポンを探す,first_click,最初にOffersを選んだ人数,6,people,8,"Key Finding 3, Issue（PDF p.25）"
+study-ikea-02,study-ikea,割引クーポンを探す,discovery_miss,クーポンの場所を特定できなかった人数,3,people,8,"Key Finding 3, Issue"
+study-ikea-03,study-ikea,割引クーポンを探す,assistance,クーポンページに着いた5人のうち途中で支援を受けた人数,3,people,5,"Key Finding 3, Issue"
+study-ikea-04,study-ikea,買い物かごから注文手続きに進む,difficulty,注文を開始する手順が分からなかった人数,4,people,8,"Key Finding 1, Issue（PDF p.19）"
+study-nordstrom-01,study-nordstrom,絞り込みで商品を探す,layout_shift,フィルターの位置変化に遭遇した人数,9,people,9,"Finding 3.1, Frequency"
+study-nordstrom-02,study-nordstrom,絞り込みで商品を探す,error,複数条件の選択を完了できなかった人数,1,people,9,"Finding 3.1, Frequency"
+study-nordstrom-03,study-nordstrom,同じ商品を2点入れる,error,2点目が追加されると思い「In Your Bag」を押した人数,4,people,9,"Finding 4・Task 6, Frequency"
+study-nordstrom-04,study-nordstrom,後で買う商品を保存し、買い物かごに戻す,completion,保存してから買い物かごに移せた人数,4,people,9,"Finding 2.2, Frequency"
+study-economic-01,study-economic,担当する問い合わせ先メールを探す,completion,課題の情報を正しく特定した人数,4,people,7,"Table 2, Task 1（成功セルを集計）"
+study-economic-02,study-economic,地理用語2つの違いを調べる,completion,課題の情報を正しく特定した人数,5,people,7,"Table 2, Task 2（成功セルを集計）"
+study-economic-03,study-economic,統計表を印刷する方法を探す,completion,課題の情報を正しく特定した人数,5,people,7,"Table 2, Task 3（成功セルを集計）"
+study-economic-04,study-economic,製造業データの公開日を探す,completion,課題の情報を正しく特定した人数,5,people,7,"Table 2, Task 4（成功セルを集計）"
+study-economic-05,study-economic,表を給与額で並べ替える手順を探す,completion,課題の情報を正しく特定した人数,6,people,7,"Table 2, Task 5（成功セルを集計）"
+study-economic-06,study-economic,経済センサスの統計表を探す,completion,課題の情報を正しく特定した人数,5,people,7,"Table 2, Task 6（成功セルを集計）"
+study-economic-07,study-economic,地域のスポーツ用品店の事業所当たり売上を調べる方法を探す,completion,課題の情報を正しく特定した人数,0,people,7,"Table 2, Task 7（成功セルを集計）"
+study-economic-08,study-economic,2002年と2007年の統計を比較できるか調べる,completion,課題の情報を正しく特定した人数,1,people,7,"Table 2, Task 8（成功セルを集計）"
+study-economic-09,study-economic,産業分類コードの変更箇所を探す,completion,課題の情報を正しく特定した人数,3,people,7,"Table 2, Task 9（成功セルを集計）"
+study-economic-10,study-economic,2007年の調査方法を探す,completion,課題の情報を正しく特定した人数,5,people,7,"Table 2, Task 10（成功セルを集計）"
+study-economic-11,study-economic,地域のスポーツ用品店の事業所当たり売上を調べる方法を探す,backtrack,7人が押した「戻る」の合計,21,clicks,7,"§3.1, Task 7"
+study-economic-12,study-economic,2002年と2007年の統計を比較できるか調べる,backtrack,7人が押した「戻る」の合計,40,clicks,7,"§3.1, Task 8"
+study-build-01,study-build,DCの警察職員数と給与総額を特定,completion,原典の成功判定に該当した人数,5,people,9,"Table 3, Task 1"
+study-build-02,study-build,DCの警察職員数と給与総額を特定,time,成功と記録した試行の平均所要時間,379,seconds,5,"Table 4, Task 1（分秒を秒に換算）"
+study-build-03,study-build,表から州別の職員数を比較,completion,原典の成功判定に該当した人数,8,people,9,"Table 3, Task 3"
+study-build-04,study-build,表から州別の職員数を比較,time,成功と記録した試行の平均所要時間,241,seconds,8,"Table 4, Task 3（分秒を秒に換算）"
+study-build-05,study-build,オレゴンの病院職員数を2年で比較,completion,原典の成功判定に該当した人数,7,people,9,"Table 3, Task 4"
+study-build-06,study-build,オレゴンの病院職員数を2年で比較,time,成功と記録した試行の平均所要時間,172,seconds,7,"Table 4, Task 4（分秒を秒に換算）"
+study-build-07,study-build,表を作成してExcel形式でダウンロード,completion,原典の成功判定に該当した人数,9,people,9,"Table 3, Task 5"
+study-build-08,study-build,表を作成してExcel形式でダウンロード,time,成功と記録した試行の平均所要時間,156,seconds,9,"Table 4, Task 5（分秒を秒に換算）"
+study-build-09,study-build,調査を発送した月を特定,completion,原典の成功判定に該当した人数,4,people,9,"Table 3, Task 6"
+study-build-10,study-build,調査を発送した月を特定,time,成功と記録した試行の平均所要時間,252,seconds,4,"Table 4, Task 6（分秒を秒に換算）"
+study-build-11,study-build,郡政府の回答率を特定,completion,原典の成功判定に該当した人数,2,people,9,"Table 3, Task 7"
+study-build-12,study-build,郡政府の回答率を特定,time,成功と記録した試行の平均所要時間,180,seconds,2,"Table 4, Task 7（分秒を秒に換算）"
+study-build-13,study-build,指定のE-4調査票を探す,completion,原典の成功判定に該当した人数,6,people,9,"Table 3, Task 8"
+study-build-14,study-build,指定のE-4調査票を探す,time,成功と記録した試行の平均所要時間,178,seconds,6,"Table 4, Task 8（分秒を秒に換算）"
+study-build-15,study-build,DCの警察職員数と給与総額を特定,backtrack,9人が押した「戻る」の合計,34,clicks,9,"§3.1, Task 1"
+study-build-16,study-build,調査を発送した月を特定,backtrack,9人が押した「戻る」の合計,27,clicks,9,"§3.1, Task 6"
+study-build-17,study-build,指定のE-4調査票を探す,backtrack,9人が押した「戻る」の合計,34,clicks,9,"§3.1, Task 8"
+study-regional-01,study-regional,北マリアナ諸島で調査員の身元確認方法を探す,completion,視線計測群で正しく完了した人数,1,people,8,"Table 3, Task 2"
+study-regional-02,study-regional,北マリアナ諸島で調査員の身元確認方法を探す,time,視線計測群の全試行の平均時間（失敗も含む）,315,seconds,8,"Table 5, Task 2, Avg. All / Average（分秒を秒に換算）"
+study-regional-03,study-regional,北マリアナ諸島で調査員の身元確認方法を探す,completion,JAWS利用群で正しく完了した人数,1,people,5,"Table 4, Task 2"
+study-regional-04,study-regional,北マリアナ諸島で調査員の身元確認方法を探す,time,JAWS利用群の全試行の平均時間（失敗も含む）,621,seconds,5,"Table 6, Task 2, Avg. All / Average（分秒を秒に換算）"
+study-regional-05,study-regional,ダラス事務所の担当者の電話番号を探す,completion,視線計測群で正しく完了した人数,6,people,8,"Table 3, Task 4"
+study-regional-06,study-regional,ダラス事務所の担当者の電話番号を探す,time,視線計測群の全試行の平均時間（失敗も含む）,134,seconds,8,"Table 5, Task 4, Avg. All / Average（分秒を秒に換算）"
+study-regional-07,study-regional,ダラス事務所の担当者の電話番号を探す,completion,JAWS利用群で正しく完了した人数,5,people,5,"Table 4, Task 4"
+study-regional-08,study-regional,ダラス事務所の担当者の電話番号を探す,time,JAWS利用群の全試行の平均時間（失敗も含む）,301,seconds,5,"Table 6, Task 4, Avg. All / Average（分秒を秒に換算）"
+study-regional-09,study-regional,シャーロット事務所への道順を探す,completion,視線計測群で正しく完了した人数,7,people,8,"Table 3, Task 6"
+study-regional-10,study-regional,シャーロット事務所への道順を探す,time,視線計測群の全試行の平均時間（失敗も含む）,119,seconds,8,"Table 5, Task 6, Avg. All / Average（分秒を秒に換算）"
+study-regional-11,study-regional,シャーロット事務所への道順を探す,completion,JAWS利用群で正しく完了した人数,1,people,5,"Table 4, Task 6"
+study-regional-12,study-regional,シャーロット事務所への道順を探す,time,JAWS利用群の全試行の平均時間（失敗も含む）,338,seconds,5,"Table 6, Task 6, Avg. All / Average（分秒を秒に換算）"
+study-regional-13,study-regional,ボストン事務所で資料閲覧の予約が必要か調べる,completion,視線計測群で正しく完了した人数,7,people,8,"Table 3, Task 7"
+study-regional-14,study-regional,ボストン事務所で資料閲覧の予約が必要か調べる,time,視線計測群の全試行の平均時間（失敗も含む）,199,seconds,8,"Table 5, Task 7, Avg. All / Average（分秒を秒に換算）"
+study-regional-15,study-regional,ボストン事務所で資料閲覧の予約が必要か調べる,completion,JAWS利用群で正しく完了した人数,1,people,4,"Table 4, Task 7"
+study-regional-16,study-regional,ボストン事務所で資料閲覧の予約が必要か調べる,time,JAWS利用群の全試行の平均時間（失敗も含む）,294,seconds,4,"Table 6, Task 7, Avg. All / Average（分秒を秒に換算）"
+study-regional-17,study-regional,ロサンゼルス事務所長の名前と電話番号を探す,completion,視線計測群で正しく完了した人数,4,people,8,"Table 3, Task 9"
+study-regional-18,study-regional,ロサンゼルス事務所長の名前と電話番号を探す,time,視線計測群の全試行の平均時間（失敗も含む）,85,seconds,8,"Table 5, Task 9, Avg. All / Average（分秒を秒に換算）"
+study-regional-19,study-regional,ロサンゼルス事務所長の名前と電話番号を探す,completion,JAWS利用群で正しく完了した人数,1,people,4,"Table 4, Task 9"
+study-regional-20,study-regional,ロサンゼルス事務所長の名前と電話番号を探す,time,JAWS利用群の全試行の平均時間（失敗も含む）,193,seconds,4,"Table 6, Task 9, Avg. All / Average（分秒を秒に換算）"
+study-complex-01,study-complex,指定されたリンクを探して押す,time,低複雑性の画面における平均探索時間,4.2,seconds,,"Results, Search Response Time"
+study-complex-02,study-complex,指定されたリンクを探して押す,time,高複雑性の画面における平均探索時間,7.3,seconds,,"Results, Search Response Time"
+study-density-01,study-density,単語のまとまりから指定語を探す,time,低密度配置の平均探索時間,3.125,seconds,24,"Experiment 1, Table 1（msから秒に換算）"
+study-density-02,study-density,単語のまとまりから指定語を探す,time,低・高混合配置の平均探索時間,5.753,seconds,24,"Experiment 1, Table 1（msから秒に換算）"
+study-density-03,study-density,単語のまとまりから指定語を探す,time,高密度配置の平均探索時間,7.925,seconds,24,"Experiment 1, Table 1（msから秒に換算）"
+industry-blender-video-01,industry-blender-video,レビュー件数が条件を満たすブレンダーを選ぶ,error,動画17件のうちレビュー非表示で大きく遅延または未完了,12,people,17,小売サイトの例・Figure 1
+industry-bypass-first-01,industry-bypass-first,ByPassで既存アカウントのパスワードを変更,time,成功までの所要時間中央値,43.5,seconds,,論文456頁 表1、6.1節
+industry-bypass-first-02,industry-bypass-first,ByPassで既存アカウントのパスワードを変更,repeat,パスワード再生成ボタンの平均クリック回数。変更失敗の再試行数ではない,4.7,clicks,,論文458頁 6.1節
+industry-fallback-longitudinal-01,industry-fallback-longitudinal,メールを使ったパスワード再設定,time,成功した再設定の所要時間の中央値、全呼戻し時期を統合,31,seconds,,PDF 9頁 表3・4.2節
+industry-fallback-longitudinal-02,industry-fallback-longitudinal,SMSを使ったパスワード再設定,time,成功した再設定の所要時間の中央値、全呼戻し時期を統合,52,seconds,,PDF 9頁 表3・4.2節
+industry-fallback-longitudinal-03,industry-fallback-longitudinal,メールを使ったパスワード再設定,completion,全呼戻し時期を統合した再設定成功率,100,percent,,PDF 9頁 表3
+industry-live-click-01,industry-live-click,5サイトのホームから各目的を探す,time,実サイト群の研究全体所要時間の中央値,11.7,minutes,68,Study Results 表1
+industry-live-click-02,industry-live-click,5サイトのホームから各目的を探す,time,画像群の研究全体所要時間の中央値,9,minutes,62,Study Results 表1
+industry-live-click-03,industry-live-click,IKEAの注文追跡先,first_click,実サイト群で初回にログインをクリック,6,percent,68,Other Differences / IKEA
+industry-product-click-01,industry-product-click,Dellで条件に合うPCを探す,first_click,実サイト群で最初に15インチの画面サイズ絞り込みを選択,69,percent,52,表3 Dell Screen size filter
+industry-product-click-02,industry-product-click,Dellで条件に合うPCを探す,first_click,画像群で最初に15インチの画面サイズ絞り込みを選択,71,percent,49,表3 Dell Screen size filter
+industry-product-click-03,industry-product-click,HPで条件に合うPCを探す,first_click,実サイト群で上部画面サイズ絞り込みを最初に選択,29,percent,,HP screen size filters
+industry-target-tree-01,industry-target-tree,14商品を階層から探す,time,14項目と各質問を含む平均時間,17,minutes,50,The Tree Test / Setup
+industry-target-tree-02,industry-target-tree,Wrangler男性用リバーシブルベルトを探す,completion,正しい分類を選んだ割合,100,percent,50,The Tree Test / Analysis
+industry-target-tree-03,industry-target-tree,Wildkin Kaleidoscopeリュックを探す,completion,正しい分類を選んだ割合,2,percent,50,The Tree Test / Analysis
+touch-children-01,touch-children,自動切替後の前標的位置へのタッチ,error,記録したholdoverのうち子どもによる割合,96,percent,,Touch Interactions
+touch-elderly-01,touch-elderly,小型端末で30ピクセル標的をタップ,error,試行中に標的外へ1回以上タップした割合,39,percent,,5.1 Tapping
+touch-elderly-02,touch-elderly,小型端末で50ピクセル標的をタップ,error,試行中に標的外へ1回以上タップした割合,6.5,percent,,5.1 Tapping
+touch-elderly-03,touch-elderly,1つの小標的を選択,retry,第2週の参加者P12が成功までに触れた回数の事例,32,attempts,,Figure 7 caption
+touch-game-01,touch-game,位置補正あり／なしの円標的タップ,error,位置補正に伴う誤り率の相対低下,7.79,percent,,Abstract; Results
+touch-google-01,touch-google,未学習の英文を重心方式で転記,error,提出英文の平均単語誤り率,5.28,percent,,Table 4 Study 3
+touch-google-02,touch-google,未学習の英文をヒートマップ方式で転記,error,提出英文の平均単語誤り率,3.6,percent,,Table 4 Study 3
+touch-physicians-01,touch-physicians,グループ作成と医師の追加,completion,5人中の完了者割合,80,percent,5,Table 3
+touch-physicians-02,touch-physicians,他の医師を探し症例の相談を行う,completion,5人中の完了者割合,80,percent,5,Table 3
+touch-physicians-03,touch-physicians,グループ作成と医師の追加,time,参加者5人の所要時間中央値,6,minutes,5,Table 4
+touch-physicians-04,touch-physicians,症例データの入力,time,参加者5人の所要時間中央値。模擬患者への面接を含む,16,minutes,5,Table 4

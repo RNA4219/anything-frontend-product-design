@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-266",
+  "title": "Contact a service",
+  "url": "https://design-system.dwp.gov.uk/patterns/contact-a-service",
+  "canonical_url": "https://design-system.dwp.gov.uk/patterns/contact-a-service",
+  "publisher": "Department for Work and Pensions",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Principles",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.dwp.gov.uk/patterns/contact-a-service",
+  "response_sha256": "a68dc8a2fa4c8a2987d548106dce22e93acc471f125f01259ff8e635d517adb8",
+  "used_by": [
+    "A-IU-210"
+  ],
+  "section_url": "https://design-system.dwp.gov.uk/patterns/contact-a-service#principles"
+}

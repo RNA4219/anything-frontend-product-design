@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-231",
+  "title": "Communicating Value and Limits for Range Widgets",
+  "url": "https://www.w3.org/WAI/ARIA/apg/practices/range-related-properties/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/practices/range-related-properties/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Using aria-valuemin, aria-valuemax and aria-valuenow",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/practices/range-related-properties/",
+  "response_sha256": "1be62430ad0a708b8f81ed20b4b03f00f4237a1cfb7c84d2600d43c4146a61d8",
+  "used_by": [
+    "C-UI-206"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/practices/range-related-properties/#usingaria-valuemin,aria-valuemaxandaria-valuenow"
+}

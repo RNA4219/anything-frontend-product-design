@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-219",
+  "title": "Managing user research data and participant privacy",
+  "url": "https://www.gov.uk/service-manual/user-research/managing-user-research-data-participant-privacy",
+  "canonical_url": "https://www.gov.uk/service-manual/user-research/managing-user-research-data-participant-privacy",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "User research and the General Data Protection Regulation (GDPR)",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/user-research/managing-user-research-data-participant-privacy",
+  "response_sha256": "c580d4c92d9fd6241a83ae7454001253a568497c2eec8fe015a7106ec0090a99",
+  "used_by": [
+    "D-IU-204"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/user-research/managing-user-research-data-participant-privacy#user-research-and-the-general-data-protection-regulation-gdpr"
+}

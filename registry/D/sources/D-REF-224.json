@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-224",
+  "title": "Measuring the success of your service",
+  "url": "https://www.gov.uk/service-manual/measuring-success/measuring-the-success-of-your-service",
+  "canonical_url": "https://www.gov.uk/service-manual/measuring-success/measuring-the-success-of-your-service",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Measuring transactions",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/measuring-success/measuring-the-success-of-your-service",
+  "response_sha256": "d4442c10771949d18fb5b07ef58cef56958e40f09577f072882fbf9fb6fc666e",
+  "used_by": [
+    "D-IU-205"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/measuring-success/measuring-the-success-of-your-service#measuring-transactions"
+}

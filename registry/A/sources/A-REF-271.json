@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-271",
+  "title": "Pages – Start page",
+  "url": "https://service-manual.nhs.uk/design-system/patterns/start-page",
+  "canonical_url": "https://service-manual.nhs.uk/design-system/patterns/start-page",
+  "publisher": "NHS England",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How to use a start page",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://service-manual.nhs.uk/design-system/patterns/start-page",
+  "response_sha256": "6d2fb796d15496fdf7350c5d459243e0dbc33d2948e591a50c57a0a7a4ae9ee8",
+  "used_by": [
+    "A-IU-211"
+  ],
+  "section_url": "https://service-manual.nhs.uk/design-system/patterns/start-page#how-to-use-a-start-page"
+}

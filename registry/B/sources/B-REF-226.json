@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-226",
+  "title": "Password input",
+  "url": "https://design-system.service.gov.uk/components/password-input/",
+  "canonical_url": "https://design-system.service.gov.uk/components/password-input/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/password-input/",
+  "response_sha256": "4c06e7b637ae914a454b348f501845185cdc4eccfca0a625f5db83cda405a01e",
+  "used_by": [
+    "B-IU-205"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/password-input/#how-it-works"
+}
