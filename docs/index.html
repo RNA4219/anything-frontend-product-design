@@ -1575,6 +1575,7 @@ function setMode(value) {
 // All buffers come from the embedded soundtrack. Creating the context requires a player gesture.
 const soundBank = JSON.parse(byId("soundBank").textContent);
 const mix = { enabled: true, music: 42, effects: 65, voice: 95 };
+const voiceDelaySeconds = 1;
 try {
   const saved = JSON.parse(localStorage.getItem("suisosen.sound.v1")) || {};
   if (typeof saved.enabled === "boolean") mix.enabled = saved.enabled;
@@ -1585,14 +1586,20 @@ let context, buses, musicNode, voiceNode, effectNode;
 let audioPage = "",
   sequence = 0,
   musicSequence = 0,
+  voiceStartsAt = 0,
   voicesPending = false,
   spoke = false;
 const decoded = new Map();
 function meters() {
   if (!context) return;
+  const now = context.currentTime;
   for (const k of ["music", "effects", "voice"]) {
-    const relative = k === "music" && voicesPending && mix.voice > 0 ? 0.47 : 1;
-    buses[k].gain.setTargetAtTime(mix.enabled ? (relative * mix[k]) / 100 : 0, context.currentTime, 0.065);
+    const gain = buses[k].gain;
+    const level = mix.enabled ? mix[k] / 100 : 0;
+    const duck = k === "music" && voiceNode && mix.voice > 0;
+    if (k === "music") gain.cancelScheduledValues(now);
+    if (!duck || now < voiceStartsAt) gain.setTargetAtTime(level, now, 0.065);
+    if (duck) gain.setTargetAtTime(level * 0.47, Math.max(now, voiceStartsAt), 0.065);
   }
 }
 function rememberMix() {
@@ -1629,12 +1636,12 @@ function stopSource(node) {
   } catch {}
   node.disconnect();
 }
-function newSource(buffer, bus, loop = false) {
+function newSource(buffer, bus, { loop = false, when = 0 } = {}) {
   const node = context.createBufferSource();
   node.buffer = buffer;
   node.loop = loop;
   node.connect(buses[bus]);
-  node.start();
+  node.start(when);
   return node;
 }
 function clearPageSound() {
@@ -1653,7 +1660,7 @@ async function ensureMusic() {
   try {
     const buffer = await bufferFor("music");
     if (token !== musicSequence || !reader.open || !mix.enabled || musicNode) return;
-    musicNode = newSource(buffer, "music", true);
+    musicNode = newSource(buffer, "music", { loop: true });
   } catch {
     if (reader.open) setStatus("BGMを読み込めませんでした");
   }
@@ -1701,6 +1708,7 @@ function playPageSound(key, skip, withEffect = true) {
   if (!mix.enabled || skip || !context || !reader.open) return;
   const token = sequence,
     clip = soundBank.lines[key];
+  voiceStartsAt = context.currentTime + voiceDelaySeconds;
   if (withEffect && clip?.cue && mix.effects > 0) {
     bufferFor(clip.cue)
       .then((b) => {
@@ -1710,7 +1718,6 @@ function playPageSound(key, skip, withEffect = true) {
   }
   if (!clip || clip.text !== scenes[key].line || mix.voice === 0) return;
   voicesPending = true;
-  meters();
   const finish = (heard) => {
     if (token !== sequence) return;
     voicesPending = false;
@@ -1720,8 +1727,9 @@ function playPageSound(key, skip, withEffect = true) {
   };
   bufferFor(key)
     .then((b) => {
-      if (token !== sequence || !reader.open || !mix.enabled || !mix.voice) return;
-      voiceNode = newSource(b, "voice");
+      if (token !== sequence || !voicesPending || !reader.open || !mix.enabled || !mix.voice) return;
+      voiceNode = newSource(b, "voice", { when: voiceStartsAt });
+      meters();
       voiceNode.onended = () => {
         voiceNode.disconnect();
         voiceNode = null;
