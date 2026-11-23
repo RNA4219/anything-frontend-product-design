@@ -145,7 +145,12 @@ class InventoryComparisonTests(unittest.TestCase):
                 originals = [before.read_bytes(), after.read_bytes()]
                 output = before if mode == 'same_path' else folder / 'result.json'
                 if mode == 'symlink':
-                    output.symlink_to(after)
+                    try:
+                        output.symlink_to(after)
+                    except OSError as error:
+                        if getattr(error, 'winerror', None) == 1314:
+                            self.skipTest('Windows でシンボリックリンクを作成する権限が必要')
+                        raise
                 elif mode == 'hardlink':
                     output.hardlink_to(before)
                 run = subprocess.run([sys.executable, str(MODULE / 'checks/compare_inventory.py'),
