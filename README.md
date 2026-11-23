@@ -2,30 +2,43 @@
 
 フロントエンドを作るときに、「利用者が何を選び、どう操作し、何をもって完了とするか」を決めるスキルです。たとえば画像を書き出す画面なら、保存ボタンの見た目に加えて、ダウンロードした画像が直前のプレビューと一致するところまで確かめます。
 
-## 動く作例「かさね印刷室」
+## 動く作例『水葬線』
 
-**[ブラウザーで試し刷りする](https://rna4219.github.io/anything-frontend-product-design/)** · [単体HTMLを保存する](https://rna4219.github.io/anything-frontend-product-design/#download) · [ソースを読む](docs/index.html)
+**[『水葬線』を開く](https://rna4219.github.io/anything-frontend-product-design/)** · [単体HTMLの保存へ](https://rna4219.github.io/anything-frontend-product-design/#download) · [序章の台本を読む](examples/suisosen/prologue.ks)
 
-[![かさね印刷室の操作画面。瀬戸内海の夕景を朱と群青で刷った見本の隣に、図案、インク、版ずれ、PNG保存の操作が並ぶ。](assets/kasane-preview.webp)](https://rna4219.github.io/anything-frontend-product-design/)
+[![『水葬線』。湖に沈んだ駅を背に、赤い襟巻きの水守澪が振り返る。左に作品名と「序章をプレイ」のボタンがある。](assets/suisosen-preview.webp)](https://rna4219.github.io/anything-frontend-product-design/)
 
-最初は「夕凪」が朱と群青で表示されます。「山稜」→「桜と青緑」→「PNGを保存」と選ぶと、その配色の山並みを **1440 × 960 px** の画像にできます。版ずれを0〜12 pxの範囲で変えると、二色目の輪郭が右へずれます。ダウンロードしたHTMLはオフラインでも使えます。
+湖底の駅に、十二年前に亡くした妹から電話がかかってくる。架空の短編伝奇ADVの作品サイトです。「序章をプレイ」を開き、全文を表示して台詞を送ると、赤い灯を振るか、受話器を握るかを選べます。どちらの結末からも選択の直前に戻れます。台詞と作品紹介は差し替え用の仮稿です。
 
-Chromeでは、この手順がPC幅で3クリック、スマートフォン幅のタッチエミュレーションで3タップでした。390 × 844 CSS pxの画面では、図案の選択欄をコンパクトにすると保存ボタンの上端が867 pxから782 pxに上がり、初期画面内に収まりました。320 px幅でも横スクロールは発生しませんでした。
+### 序章の遊び方
 
-### 4つのスキルをどう組み合わせたか
-
-| 使ったスキル | この作例で決めたこと |
+| したいこと | 操作 |
 | --- | --- |
-| [Anything Frontend Product Design](SKILL.md) | 「別の図案と配色を選んで保存する」を課題に設定。ダウンロードしたPNGをブラウザーで読み戻し、寸法と全画素がプレビューに一致することを確認した。 |
-| [Anything Frontend Art Direction](https://github.com/RNA4219/anything-frontend-art-direction) | 印刷工房のガイドにある色版の重なりと版ずれの図を手がかりに、紙色の上に二つの色版を別々に描画。大きな一枚を見せる縦一列の案と比べ、PCでは刷り上がりと色の選択肢を同時に見られる左右配置を採用した。[参照した印刷ガイド、6ページ](https://web.faa.illinois.edu/app/uploads/sites/6/2021/05/riso_print_guide.pdf#page=6) |
-| [Motion Atlas](https://github.com/RNA4219/motion-atlas) | [Geometric wipes](https://github.com/RNA4219/motion-atlas/blob/8cff76041b06a30d7f4b4b9f79979b8e30512f60/src/cinema.js)の直線ワイプを図案の切り替えに応用。220ミリ秒で次の見本を見せる。インクと版ずれは即時反映し、端末の「視差効果を減らす」設定では図案も即時に切り替える。 |
-| [unslop](https://github.com/heydamir/unslop) | 紙とインクに視線が集まるように操作面を無彩色に寄せ、選択状態には輪郭とチェックを併用。スマートフォンでは図案名と小見本を横に並べ、保存までの縦の距離を縮めた。 |
+| 自分の速さで読む | 本文をクリック／タップ。表示途中の1回目はその台詞の全文表示、表示後の1回で次へ進む。キーボードでは Enter・Space・→ で送り、← で一つ戻る。分岐では Tab と Enter で選ぶ。 |
+| 読み返す | 「履歴」で今回通った台詞を確認。「既読スキップ」は、次が未読のときと選択肢で止まる。「オート」も選択肢で待つ。 |
+| 選択の前に保存する | 「セーブ・ロード」で3つの栞から保存先を選ぶ。ロードすると台詞と選択履歴が戻る。同じブラウザーで再訪すると、作品ページから直前の場面を再開できる。 |
+| オフラインで遊ぶ | 作品情報の「単体HTMLを保存」で `suisosen.html` を保存して開く。3枚の絵とプレイヤーを収録。保存先のブラウザーやファイルの場所によって、栞の保管先は変わる。 |
 
-### 同じ作例を依頼するプロンプト
+### 4つのスキルを1つずつ、2周使った記録
 
-> Anything Frontend Product Design、Anything Frontend Art Direction、Motion Atlas、unslopを使って、二色刷りの版画を作るWebアプリを単体HTMLで作ってください。図案は夕凪・山稜・波紋の3種類。インクを選ぶと紙の上の重なりが変わり、版ずれを1 pxずつ調整できるようにしてください。表示中の絵を1440 × 960 pxのPNGで保存できることを完了条件にします。マウス、タッチ、キーボードで操作し、保存した画像とプレビューを照合してください。
+| 順番 | 1周目で作ったもの | 2周目に実画面で変えたこと |
+| --- | --- | --- |
+| 1. [Product Design](SKILL.md) | 「初見で序章を起動し、選んだ結末を読める」を完了条件にした。台詞送り、分岐、終幕、栞からの復帰をつないだ。 | Enterで分岐へ進むとフォーカスが本文の外に抜けた。最初の選択肢に移し、履歴は直近の発言が見える位置から開くようにした。 |
+| 2. [Art Direction](https://github.com/RNA4219/anything-frontend-art-direction) | 『魔法使いの夜』PC版の物語紹介で、雨の街と赤い傘が一枚に収まる構図を観察。『水葬線』では青い湖面を題名の余白に取り、赤い襟巻きを人物の目印にした。DGXのMOSS-Imageで主人公、水没駅、業務電話の3枚を生成した。[参照した公式画面](https://www.typemoon.com/products/mahoyo/story.html) · [MOSS-Image](https://openmoss.ai/MOSS-Image/) | 390px幅で片目が画面外に切れた。スマートフォンでは画像の表示位置を右へ寄せ、両目を入れた。画面幅に合わせて駅の風景も個別に切り取った。[390px幅の実画面](assets/suisosen-mobile.webp) |
+| 3. [Motion Atlas](https://github.com/RNA4219/motion-atlas) | タイトルに[Soft enter](https://github.com/RNA4219/motion-atlas/blob/8cff76041b06a30d7f4b4b9f79979b8e30512f60/src/cinema.js)を応用。台詞の途中で押すと、その台詞を一度で表示する。 | 背景が変わるときだけ、直前の絵を340msで透過する2層構成にした。既読スキップ時は即時切替。端末の「動きを減らす」設定では、タイトル・背景・文字送りをすべて即時表示にした。 |
+| 4. [unslop](https://github.com/heydamir/unslop) | 操作の主役を「序章をプレイ」に絞り、下端の細い路線と終電時刻をこの作品の地紋にした。 | 外部リンクに見える矢印を取り、入口を切符の切り取り線で仕上げた。スマートフォンの読書画面を全面に広げ、6個の補助操作を2段にそろえた。 |
 
-別の製品に使うときは、題材と完了条件を一緒に置き換えます。たとえば予約変更なら、「空き枠を選んで確定し、再読み込み後も新しい日時が表示される」が完了条件です。[予約変更の共通課題](tests/fixtures/booking-change.md)
+Chromeで文字を即時表示にした場合、初見から片方の終幕まで **7操作**（起動1・台詞送り4・選択1・台詞送り1）。390 × 844 CSS pxでは起動ボタンの上端が566px、高さが52px、直前の紹介文との余白が18px。320px幅でも横スクロールは0pxだった。マウス・キーボードとタッチエミュレーションで操作し、保存したHTMLは通信を無効にして終幕まで確認した。
+
+### 台本を差し替える
+
+[序章の台本](examples/suisosen/prologue.ks)で、各ラベルの本文、話者、背景、選択先を編集します。台詞末尾の `[p]` がページ送り、`[link]` が分岐です。ラベル名はセーブ位置にも使います。変更後はリポジトリのルートで `python examples/suisosen/sync_scenario.py` を実行すると[配布HTML](docs/index.html)に反映されます。`--check` で同期状態だけを確認できます。プレイヤーは吉里吉里／KAGのページ待ち・リンク・栞を参照したブラウザー実装で、この台本用のタグを解釈します。[KAG3 タグリファレンス](https://krkrz.github.io/krkr2doc/kag3doc/contents/Tags.html)
+
+同じ手順で作例を依頼するときは、利用者の最初の操作と、最後に画面で確認できる結果を指定します。
+
+> 架空の伝奇ADVの公式サイトと、2通りの結末まで読める序章を単体HTMLで作ってください。Product Design、Art Direction、Motion Atlas、unslopの順に1つずつ使い、2周してください。1周目は「起動 → 台詞送り → 分岐 → 終幕」を通し、2周目は390px幅の実画面とキーボードで見つけた問題を直してください。画像はDGXのMOSS-Imageで生成し、紹介文と台詞は仮稿として分離してください。
+
+
 
 ## 自分のプロダクトで使う
 
@@ -46,4 +59,4 @@ Chromeでは、この手順がPC幅で3クリック、スマートフォン幅�
 
 ## ライセンス
 
-このリポジトリのコードと作例は[MIT License](LICENSE)で配布します。参照したunslopの作者はDamir Sokolovskyで、スキルのライセンスは[CC BY 4.0](https://github.com/heydamir/unslop/blob/main/LICENSE)です。作例に内蔵する欧文書体BaskervvilleはSIL Open Font License 1.1で配布され、著作権表示とライセンス全文を単体HTMLに収録しています。第三者の原典には各資料の条件が適用されます。
+このリポジトリのコードと作例は[MIT License](LICENSE)で配布します。参照したunslopの作者はDamir Sokolovskyで、スキルのライセンスは[CC BY 4.0](https://github.com/heydamir/unslop/blob/main/LICENSE)です。作例は端末の書体を利用します。第三者の原典には各資料の条件が適用されます。
