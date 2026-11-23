@@ -26,7 +26,7 @@ def main():
     phase = 'setup'
     case = None
     try:
-        from playwright.sync_api import sync_playwright
+        from playwright.sync_api import expect, sync_playwright
         root = Path(__file__).resolve().parents[1] / 'examples'
         server = ThreadingHTTPServer(('127.0.0.1', 0), partial(SimpleHTTPRequestHandler, directory=str(root)))
         threading.Thread(target=server.serve_forever, daemon=True).start()
@@ -53,7 +53,7 @@ def main():
                 assert page.locator('#count').inner_text() == '0'
                 page.locator('#slot').press('Escape')
                 assert not page.locator('#edit').is_visible()
-                assert page.evaluate('document.activeElement.id') == 'open'
+                expect(page.locator('#open')).to_be_focused()
             evidence['cases'].append({'id':'keyboard-unavailable-cancel','result':'PASS'})
             case = 'confirm-and-reopen-cancel'
             page.locator('#open').click(); page.locator('#slot').select_option('12月10日 14:00')
@@ -68,7 +68,7 @@ def main():
                 page.keyboard.press('Tab')
                 assert page.evaluate('document.activeElement === document.body || document.querySelector("#edit").contains(document.activeElement)')
             page.locator('summary').click(); page.locator('#remove-opener').click(); page.locator('#cancel').click()
-            assert page.evaluate('document.activeElement.id') == 'bookings'
+            expect(page.locator('#bookings')).to_be_focused()
             assert page.locator('#outside').is_enabled()
             page.locator('#outside').fill('background restored')
             assert page.locator('#outside').input_value() == 'background restored'

@@ -22,18 +22,30 @@ def canonical(url):
 
 def check(root=ROOT):
     errors, units, sources, seen = [], [], {}, set()
+    source_urls = {}
+    aliases = {}
     for file in sorted((root / 'registry/C/sources').glob('*.json')):
         try:
-            item = json.loads(file.read_text())
+            item = json.loads(file.read_text(encoding='utf-8'))
+            source_id = item['source_id']
+            if source_id != file.stem:
+                errors.append(f'{file}: source id differs from filename')
             key = canonical(item['url'])
-            if key in sources:
+            source_urls[source_id] = key
+            if 'canonical_source_id' in item:
+                aliases[source_id] = item['canonical_source_id']
+            elif key in sources:
                 errors.append(f'{file}: duplicate canonical source {key}')
-            sources[key] = item['source_id']
+            else:
+                sources[key] = source_id
         except (ValueError, KeyError, TypeError) as exc:
             errors.append(f'{file}: malformed source: {exc}')
+    for alias, target in aliases.items():
+        if not isinstance(target, str) or target != sources.get(source_urls[alias]):
+            errors.append(f'{alias}: alias must identify the primary source for the same URL')
     for file in sorted((root / 'registry/C/skills').glob('*.json')):
         try:
-            item = json.loads(file.read_text())
+            item = json.loads(file.read_text(encoding='utf-8'))
             units.append(item)
             missing = REQUIRED - item.keys()
             if missing:
@@ -55,18 +67,25 @@ def check(root=ROOT):
                 if not isinstance(item[field], list):
                     errors.append(f'{sid}: {field} must be a list')
             for ref in item['source_refs']:
-                if canonical(ref['url']) not in sources:
+                registry_id = ref['registry_source_id']
+                if source_urls.get(registry_id) != canonical(ref['url']):
                     errors.append(f'{sid}: source not registered: {ref["url"]}')
-                source_file, pointer = ref['record'].split('#', 1)
+                source_file, fragment, pointer = ref['record'].partition('#')
                 path = (root / source_file).resolve()
                 if not path.is_relative_to(root.resolve()) or not path.is_file():
                     errors.append(f'{sid}: missing research record: {source_file}')
                     continue
-                selected = json.loads(path.read_text())
-                for part in pointer.strip('/').split('/'):
-                    part = part.replace('~1', '/').replace('~0', '~')
-                    selected = selected[int(part)] if isinstance(selected, list) else selected[part]
-                if selected.get('id') != ref['id']:
+                selected = json.loads(path.read_text(encoding='utf-8'))
+                if fragment:
+                    for part in pointer.strip('/').split('/'):
+                        part = part.replace('~1', '/').replace('~0', '~')
+                        selected = selected[int(part)] if isinstance(selected, list) else selected[part]
+                    record_id = selected['id']
+                else:
+                    if path != (root / 'registry/C/sources' / f'{registry_id}.json').resolve():
+                        errors.append(f'{sid}: whole-record reference must point to its registered source')
+                    record_id = selected['source_id']
+                if record_id != ref['id']:
                     errors.append(f'{sid}: source id and record pointer disagree: {ref["id"]}')
                 if canonical(selected.get('canonical_url', selected.get('url', ''))) != canonical(ref['url']):
                     errors.append(f'{sid}: source URL and research record disagree: {ref["id"]}')
