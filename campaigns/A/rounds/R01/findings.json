@@ -1,0 +1,201 @@
+{
+  "review_id": "A-R01-independent-critic",
+  "reviewer": "same-family model in a separate thread; not a human or objective ground truth",
+  "scope": "SESSION A product-information-architecture only",
+  "initial_checker_sha256": "20a5e944a6feafdfe38c7ea0abbf586172fd3aad446d725297a68e98b32da67c",
+  "rechecked_checker_sha256": "5f6054b1799dbfb7bba9f2d6f2f490821d9a12d7bbcad7884a6d0c6e6b39f597",
+  "method": "Read candidate instructions, references, contract and checker; verify a targeted sample of primary sources; author new synthetic cases without copying the candidate test fixtures; run the actual CLI before and after parent fixes. No candidate skill, public repository, or git changes were made by the critic.",
+  "findings": [
+    {
+      "id": "R01-C01",
+      "severity_at_discovery": "high",
+      "category": "information_architecture",
+      "status": "resolved_after_independent_recheck",
+      "location": [
+        "checks/validate_plan.py:274-276 and 302-318 in the initial checker",
+        "references/information-architecture.md:A06 and A07",
+        "references/plan-contract.md:goal_routes"
+      ],
+      "symptom": "The initial checker returned PASS when the mandatory label-printing capability existed only on a screen with no entry and no incoming navigation, while the declared reachable goal destination contained the goal ID and required information IDs but no capability.",
+      "basis": "A goal route is meant to reach a decision destination that supports the goal. Initial checks independently proved that a kept feature existed somewhere and that a goal-tagged screen was reachable, without joining these claims. This is a graph/ID relation available to a structural checker, not a claim about human label comprehension.",
+      "impact": "A mandatory task can be counted as reachable even though the capability needed to perform it is outside every declared route.",
+      "correction": "Require the must-goal destination to own a kept capability that serves the goal and its role. If a future contract permits non-screen capabilities, represent that exception explicitly instead of inferring it from a goal label.",
+      "reproduction": {
+        "fixture": "counterexamples/ce01_unreachable_capability",
+        "command": "python3 session-A/modules/product-information-architecture/checks/validate_plan.py --brief private/review/R01/counterexamples/ce01_unreachable_capability/brief.json --plan private/review/R01/counterexamples/ce01_unreachable_capability/plan.json",
+        "before": {
+          "status": "PASS",
+          "exit_code": 0,
+          "issues": [],
+          "evidence": "counterexamples/ce01_unreachable_capability/actual.json"
+        },
+        "after": {
+          "status": "FAIL",
+          "exit_code": 1,
+          "issue_codes": [
+            "ROUTE_CAPABILITY_MISSING"
+          ],
+          "evidence": "counterexamples/ce01_unreachable_capability/recheck.json"
+        },
+        "positive_control": "counterexamples/control_live_reachable: PASS before and after"
+      },
+      "remaining_limit": "The new relation check cannot prove the capability is implemented or that its description actually fulfils the goal. Those remain explicitly manual/implementation checks."
+    },
+    {
+      "id": "R01-C02",
+      "severity_at_discovery": "high",
+      "category": "function",
+      "status": "resolved_after_independent_recheck",
+      "location": [
+        "checks/validate_plan.py:70-84 and 94-109 in the initial checker",
+        "references/feature-context.md:section 3"
+      ],
+      "symptom": "An existing available mandatory feature could be immediately merged into a proposed/planned feature and receive PASS. Current replacement availability was checked for remove/defer retirement but skipped for merge.",
+      "basis": "The independent brief requires today's label-printing capability and explicitly rejects a roadmap as a current substitute. Its new canonical feature has lifecycle=proposed and availability=planned. feature-context section 3 also says a roadmap is not a current replacement.",
+      "impact": "Changing the disposition spelling can bypass protection of an already provided mandatory outcome, even when all names, scopes and roles match.",
+      "correction": "For a merge that replaces a current capability, check canonical availability using the same current/partial/unconfirmed distinction as retirement. Preserve a conditional future rollout as a conditional plan, without representing it as current delivery.",
+      "reproduction": {
+        "fixture": "counterexamples/ce02_planned_merge_replacement",
+        "command": "python3 session-A/modules/product-information-architecture/checks/validate_plan.py --brief private/review/R01/counterexamples/ce02_planned_merge_replacement/brief.json --plan private/review/R01/counterexamples/ce02_planned_merge_replacement/plan.json",
+        "before": {
+          "status": "PASS",
+          "exit_code": 0,
+          "issues": [],
+          "evidence": "counterexamples/ce02_planned_merge_replacement/actual.json"
+        },
+        "after": {
+          "status": "HOLD",
+          "exit_code": 1,
+          "issue_codes": [
+            "MERGE_NOT_CURRENT"
+          ],
+          "evidence": "counterexamples/ce02_planned_merge_replacement/recheck.json"
+        },
+        "positive_control": "counterexamples/control_current_merge_replacement: PASS before and after"
+      },
+      "remaining_limit": "The checker consumes declared availability; it does not verify a deployed product or the truth of evidence descriptions."
+    },
+    {
+      "id": "R01-C03",
+      "severity_at_discovery": "low",
+      "category": "information_architecture",
+      "status": "resolved_by_documentation_alignment",
+      "location": [
+        "references/goals-and-features.md:A02 Decision Rules, A03 Output Contract and Verification in initial review",
+        "references/feature-context.md:section 2 in initial review",
+        "checks/validate_plan.py:193-205 and tests/test_validate.py:test_merge_chain_and_dependency_on_an_alias_are_valid"
+      ],
+      "symptom": "Prose required a direct/one-hop relation to a kept canonical feature, while the checker and an existing positive test accepted non-cyclic merge chains.",
+      "basis": "The independent f_live -> f_middle -> f_last chain passed. It ends at a kept feature and does not by itself lose a capability; the reproduced issue is a contradictory contract, not evidence that chains are inherently harmful.",
+      "impact": "Authors and reviewers can disagree about whether the same valid chain is permitted.",
+      "correction": "Choose one contract and make prose and tests agree. Preserving the existing non-cyclic resolution behavior and revising the direct-target language is sufficient.",
+      "reproduction": {
+        "fixture": "counterexamples/ce03_indirect_canonical_chain",
+        "command": "python3 session-A/modules/product-information-architecture/checks/validate_plan.py --brief private/review/R01/counterexamples/ce03_indirect_canonical_chain/brief.json --plan private/review/R01/counterexamples/ce03_indirect_canonical_chain/plan.json",
+        "before": {
+          "status": "PASS",
+          "exit_code": 0,
+          "evidence": "counterexamples/ce03_indirect_canonical_chain/actual.json"
+        },
+        "after": {
+          "status": "PASS",
+          "exit_code": 0,
+          "evidence": "counterexamples/ce03_indirect_canonical_chain/recheck.json"
+        }
+      },
+      "remaining_limit": "No user-task failure from a non-cyclic chain was demonstrated.",
+      "documentation_recheck": {
+        "result": "all inspected definitions now permit non-cyclic resolution to keep",
+        "locations": [
+          "references/goals-and-features.md:82,147,155,169",
+          "references/feature-context.md:32",
+          "references/plan-contract.md:34,97"
+        ]
+      }
+    },
+    {
+      "id": "R01-C04",
+      "severity_at_discovery": "high",
+      "category": "information_architecture",
+      "status": "resolved_after_independent_recheck",
+      "location": [
+        "checks/validate_plan.py:264-266 in the initial checker",
+        "references/information-architecture.md:A07 Procedure 5",
+        "references/plan-contract.md:screens"
+      ],
+      "symptom": "A supervisor-only all-shipment capability and its primary information could be placed unconditionally on a screen accessible to both the supervisor and ordinary shipping staff. The feature's authorized role list was not expanded, yet the initial checker returned PASS.",
+      "basis": "The initial FEATURE_ROLE check only required a nonempty role intersection. The screen information contract has no per-role visibility field. A07 explicitly requires separate screens or a blocking handoff when conditional information permissions cannot be represented.",
+      "impact": "A plan can expose restricted information through a shared screen while passing the claimed structural permission checks. This finding concerns the plan; no deployed authorization bypass was tested or asserted.",
+      "correction": "Under the current unconditioned screen contract, require each screen's roles to be contained in the roles of each placed capability. Use separate role views, or introduce and validate an explicit conditional binding in a future contract.",
+      "reproduction": {
+        "fixture": "counterexamples/ce04_mixed_role_screen_leak",
+        "command": "python3 session-A/modules/product-information-architecture/checks/validate_plan.py --brief private/review/R01/counterexamples/ce04_mixed_role_screen_leak/brief.json --plan private/review/R01/counterexamples/ce04_mixed_role_screen_leak/plan.json",
+        "before": {
+          "status": "PASS",
+          "exit_code": 0,
+          "issues": [],
+          "evidence": "counterexamples/ce04_mixed_role_screen_leak/actual.json"
+        },
+        "after": {
+          "status": "FAIL",
+          "exit_code": 1,
+          "issue_codes": [
+            "FEATURE_ROLE"
+          ],
+          "evidence": "counterexamples/ce04_mixed_role_screen_leak/recheck.json"
+        }
+      },
+      "remaining_limit": "Screen-role validation cannot verify backend authorization or information-level policies that are absent from the input."
+    }
+  ],
+  "test_summary": {
+    "initial_candidate_suite": {
+      "tests": 47,
+      "result": "all passed"
+    },
+    "rechecked_candidate_suite": {
+      "tests": 48,
+      "result": "all passed",
+      "log": "tests-recheck.txt"
+    },
+    "independent_cases": 4,
+    "independent_positive_controls": 2,
+    "initial_observations": "counterexamples/initial-observations.json",
+    "recheck_observations": "counterexamples/recheck-observations.json",
+    "fixtures_modified_for_recheck": false
+  },
+  "handoffs": [
+    {
+      "scope": "B/C/D",
+      "status": "not_evaluated_as_A_defect",
+      "topic": "実際の認証・認可、予約変更、監査ファイルの生成、通知配信、保存・競合・失敗時動作",
+      "reason": "Aの静的配置計画では実装完了を証明できない。匿名案の採点では未実装をAの欠陥として加点・減点しない。"
+    }
+  ],
+  "limitations": [
+    "This is a separate-thread review by a same-family model, not a human usability study or an objective benchmark.",
+    "Primary-source review is targeted sampling, not verification of every cited bibliography entry.",
+    "The parent applied candidate fixes after the critic reported the initial findings; before and after checker hashes and observations are kept separate."
+  ],
+  "artifact_findings": [
+    {
+      "id": "R01-Q-F6",
+      "severity": "low",
+      "status": "open_in_immutable_submission",
+      "category": "information_architecture",
+      "location": [
+        "arm-Q/plan.json:goal_routes[goal_id=g_change].target_screen",
+        "arm-Q/preview.html:#s_change_target"
+      ],
+      "symptom": "The declared decision destination has only R-204; both comparison records are at the preceding selection screen.",
+      "basis": "Frozen F6 asks for discrimination of R-204 and R-205 at the decision destination; evaluation maps that term to declared target_screen.",
+      "impact": "Fails strict destination-to-artifact correspondence. Does not demonstrate inability to select the correct reservation or human usability harm.",
+      "correction": "Map g_change.target_screen to s_my_reservations, the actual selection destination. The later confirmation screen may remain.",
+      "reproduction": {
+        "method": "Read g_change target_screen and extract the matching HTML section; contrast with the source selection section",
+        "evidence": "arm-artifact-checks.json:arms.Q.goal_change_route and arms.Q.target_text"
+      },
+      "limit": "If F6 is interpreted over the full selection flow rather than the declared destination, Q also passes; this sensitivity is recorded in evaluation.json."
+    }
+  ]
+}

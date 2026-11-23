@@ -1,0 +1,225 @@
+{
+  "skill_id": "B-IU-004",
+  "domain": "interaction-ux-flow",
+  "trigger": [
+    "完了した変更を戻す操作を設計する",
+    "可逆性を誤操作防止の根拠として選ぶ"
+  ],
+  "intent": "戻せる対象と成立条件を先に定め、受付・失敗・期限切れ・競合で回復完了を偽らない。",
+  "required_inputs": [
+    "対象ID、復元したい状態、元操作との対応、現在の状態と必要な前状態。",
+    "局所Undoでは必要な前状態。期限がある契約なら有効期限と時刻判定、同時更新があり得る契約なら対象revisionまたは同等の競合条件を用意する。単純な局所編集へ期限やrevisionを無条件必須にしない。具体値は適用先の契約。",
+    "外部補償では対応する効果、残存効果、権限、開始可否、終端成功/失敗/部分結果、結果照会手段、再試行条件。",
+    "失敗・期限切れ・競合で実行できる次の手段と問い合わせ用参照。存在しなければ未提供と記す。"
+  ],
+  "decision_rules": [
+    {
+      "if": "外部作用がなく必要な前状態を保持する",
+      "then": "局所Undoを候補にでき、分散補償の全条件を課さない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-T301"
+      ],
+      "source_locations": [
+        "B-T301:L85-L91"
+      ],
+      "verification_cases": [
+        "U01"
+      ]
+    },
+    {
+      "if": "局所offerの期限到達または対象revision競合",
+      "then": "このofferの復元を行わず、現在状態と制限を示す。競合解決等の別経路は確認できた場合のみ提示する。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-T301"
+      ],
+      "source_locations": [
+        "task.md:Reversible archive",
+        "B-T301:L41"
+      ],
+      "verification_cases": [
+        "U02",
+        "U03"
+      ]
+    },
+    {
+      "if": "補償受付のみ確認または応答喪失",
+      "then": "pending/unknownを保持して同じ操作を照合する。受付から回復完了へ飛ばさない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-T305"
+      ],
+      "source_locations": [
+        "B-T305:L360-L361",
+        "B-IU-001"
+      ],
+      "verification_cases": [
+        "U04",
+        "U07"
+      ]
+    },
+    {
+      "if": "補償が失敗または宣言範囲だけ成功",
+      "then": "実際に確認できた効果と残存影響を示し、参照・次の手段を残す。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-T301",
+        "B-T303"
+      ],
+      "source_locations": [
+        "B-T301:L53-L58,L74,L80",
+        "B-T303:L235-L241,L314-L315"
+      ],
+      "verification_cases": [
+        "U05",
+        "U06"
+      ]
+    },
+    {
+      "if": "補償処理中の再操作またはoffer期限到達",
+      "then": "再操作は新しい補償にしない。期限到達だけで既存操作の照会経路を破棄しない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S104",
+        "B-T201"
+      ],
+      "source_locations": [
+        "B-IU-001",
+        "B-IU-002",
+        "task.md:Reversible archive"
+      ],
+      "verification_cases": [
+        "U08",
+        "U09"
+      ]
+    }
+  ],
+  "procedure": [
+    "表示だけの巻戻し、外部作用のない局所編集の復帰、実データのrestore、完了後の業務補償を区別し、何を戻し、何が戻らないかを書く。実行中の取消はB-IU-003へ接続する。",
+    "外部作用がなく、必要な前状態を保持する編集では、局所snapshotまたは逆操作を候補にできる。自動保存・共同編集・API更新・通知などがある場合は、その作用が局所復帰だけで戻るとは扱わない。",
+    "回復操作を始める前に、その契約で必要な対象同一性、期限、権限、現在状態と競合条件を確かめる。今回の局所archive fixtureではnow < deadlineかつ対象revision一致を条件とし、期限到達後は同じofferから復元要求を送らない。競合では新しい状態を黙って上書きしない。",
+    "外部補償の受付は処理中として扱う。結果が未確認なら元の識別と照合経路を保持し、B-IU-001で結果を確認する。連打や応答喪失で別補償を新規開始せず、再送する場合はB-IU-002と実契約の安全条件に従う。",
+    "成功を確認した場合も、宣言された範囲に限って回復結果を伝え、契約で残る影響を示す。失敗や部分結果では既知の実状態と回復済み範囲を分け、参照と実行可能な次の行動を残す。失敗だけから元の全影響が無変化とも全復元とも推測しない。",
+    "開始offerの期限と開始済み補償の結果照会を別に扱う。今回のfixtureではoffer期限後も同じ操作の結果確認を続けられる。実APIの結果保持期限が別にある場合はその契約を適用する。"
+  ],
+  "expected_outputs": [
+    "回復する対象と残存影響、開始条件、終端証拠と失敗時の導線",
+    "代表タスクの実行記録と未検証範囲"
+  ],
+  "dependencies": [
+    "B-IU-001: 非同期または結果未確認 — 受付・未知・終端結果と照合を既存単位へ委任する。",
+    "B-IU-002: 再送・連打・再接続がある — 同じ操作と新しい意図の識別を再実装しない。",
+    "B-IU-003: 実行途中の取消も提示する — 取消と完了後の回復の対象を分ける。",
+    "適用先の回復契約: 常時 — 対象・作用・期限・競合・結果の真偽の根拠。純粋局所Undoでは外部APIを必須にしない。"
+  ],
+  "exceptions": [
+    "同期の応答が実際の復元完了を保証する場合、別のpollを一律に必須化しない。",
+    "now < deadlineは固定fixtureの条件であり、全サービスの期限境界を定義しない。",
+    "対象製品に期限延長/保持停止等の別契約があるなら確認して使う。今回の失効offerをそのまま有効扱いしない。",
+    "世代番号、復元後ストレージ階層、保持日数、料金、operation名はCloud Storage固有であり共通定数にしない。",
+    "期限や同時更新がない純粋局所編集には、期限付きofferやrevision管理を追加の必須条件にしない。今回のarchive fixtureにある条件を維持する。"
+  ],
+  "failure_modes": [
+    "見た目だけ戻り実データや外部効果が残る。",
+    "補償受付・失敗・未知状態で「元に戻しました」と出る。",
+    "別項目または新しいrevisionを古いsnapshotで上書きする。",
+    "期限後に同じofferを実行するか、期限とともに開始済み操作の参照を消す。",
+    "失敗から全影響未変更と推測し、部分補償や残存効果を隠す。"
+  ],
+  "verification": {
+    "criteria": [
+      "U01",
+      "U02",
+      "U03",
+      "U04",
+      "U05",
+      "U06",
+      "U07",
+      "U08",
+      "U09"
+    ],
+    "evidence": [
+      "campaigns/B/rounds/02/task-flow-results.json",
+      "campaigns/B/rounds/02/branch-regressions-revised.json",
+      "campaigns/B/rounds/02/independent/review.json"
+    ],
+    "limitations": [
+      "Executed fixture cases and independent DOM events only; not production API, browser rendering, assistive tech or human efficacy.",
+      "R02 uses deliberate fault controls, not generated baseline/candidate arms.",
+      "E01 regression and E02 source-wording repair are exploratory findings separate from the predeclared 16 cases."
+    ]
+  },
+  "source_refs": [
+    "B-T301",
+    "B-T303",
+    "B-T304",
+    "B-T305",
+    "B-S104",
+    "B-T205",
+    "B-T201"
+  ],
+  "confidence": {
+    "source_support": "Normative WCAG, separately marked informative explanations and official design/service guidance. Legacy Win7 material is historical context only.",
+    "transfer": "Accepted conditional guidance after independent source, fault-control and task-event checks; no causal human-usability claim.",
+    "limits": [
+      "実サービスの復元範囲、権限、期限、部分成功、競合制御は未提示。製品への適用判定にのみ影響する。",
+      "B-T304 L402のdelete/cancel混同とL406/L426のdone不整合は状態規則の根拠から除外。",
+      "局所snapshotの完全性や原子的revision確認は未実装・未試験。"
+    ]
+  },
+  "status": "ACCEPT",
+  "version": "0.2.0",
+  "introduced_round": 1,
+  "updated_round": 2,
+  "analysis_ref": "campaigns/B/rounds/02/analysis.md",
+  "analysis_sha256": "a1153db012dc0de318cb7891e459f881928b9d8918f18b52eae9e74a45c2a97d",
+  "source_facts": [
+    {
+      "id": "004-F1",
+      "kind": "official_architecture_guidance",
+      "fact": "補償は並行変更を考慮する業務固有処理であり、開始前の全状態への復元を必ずしも意味しない。補償自身が失敗し、記録・再開・手動回復が必要な場合がある。",
+      "refs": [
+        "B-T301:L41-L58,L64-L80"
+      ]
+    },
+    {
+      "id": "004-F2",
+      "kind": "product_specific_fact",
+      "fact": "Cloud Storageのsoft delete復元は新しい世代を作り、managed folder IAMの復元は保証せず、OBJECT_FINALIZEを発生させる。保持設定・期限・親資源等の条件がある。",
+      "refs": [
+        "B-T303:L205,L212,L219-L243,L314-L315"
+      ]
+    },
+    {
+      "id": "004-F3",
+      "kind": "product_specific_fact",
+      "fact": "Cloud Storage一括復元は非同期であり、HTTP 200やoperation IDの返却後に失敗し得る。",
+      "refs": [
+        "B-T304:L344-L345",
+        "B-T305:L360-L361"
+      ]
+    },
+    {
+      "id": "004-F4",
+      "kind": "prior_round_records_only",
+      "fact": "既存B-S104では取消受付と終端結果を分け、既存B-T205では返金のpending/failedと残存手数料等を記録している。今回再取得していない。",
+      "refs": [
+        "R01:B-S104",
+        "R01:B-T205"
+      ]
+    }
+  ],
+  "parent_decisions": [
+    "Local Undo does not universally require a deadline or revision identifier; only applicable contract conditions are required.",
+    "Fixed fixture prerequisites are not attributed to WCAG. Product constants and disputed source passages are excluded."
+  ],
+  "history": [
+    {
+      "round": 1,
+      "status": "HOLD",
+      "reason": "No dedicated compensation/reversal validation yet."
+    }
+  ],
+  "accepted_round": 2
+}

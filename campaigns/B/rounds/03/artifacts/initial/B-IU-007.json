@@ -1,0 +1,364 @@
+{
+  "skill_id": "B-IU-007",
+  "domain": "interaction-ux-flow",
+  "trigger": [
+    "編集画面を閉じた後、再読込後、session失効後に保存taskへ戻る。",
+    "復帰時にaccount変更、権限変更、pending operation、保存recordの欠落・失効を見つける。",
+    "以前のaccount/taskで発行したreadまたはoperation照会の応答が遅れて届く。"
+  ],
+  "intent": "同じ作業の入力・段階・送信済み操作の参照を保ちながら、現在のactor、対象、capabilityに合う復帰先へ戻し、別accountへの混入と新規副作用の誤発生を防ぐ。",
+  "required_inputs": [
+    "現在のtrusted actor/account/tenant、認証の有効・失効・未解決、変化を検知する呼出側の契約。保存record内の自己申告値は代用しない。",
+    "現在の対象に対するresource read、operation lookup、edit/submitなど必要なcapability。認証成功と各capabilityを別入力として扱う。",
+    "復帰するtaskの意図、安定したresource ID、元のowner/contextとの検証済み対応。これを確定できない場合の適切な復帰経路。",
+    "保持できる未送信draft、作業段階、最終確認したresourceとreview済み内容。保存・表示・保持期間・秘密情報の扱いは適用先/Cの契約。",
+    "実際に送った証拠、存在する元operation ID/照合参照、対象・payload・同一intentとの対応、既知の結果。未送信、ID喪失、照会record欠落を別状態として受け取る。",
+    "B-IU-001/002が使う正本照会、結果意味、保持窓、再試行/再送可能条件と残る照合経路。",
+    "非同期応答のowner、resource、operation、発行時contextと現在viewの対応を判定するdata-layer契約。具体的なepoch/counter/Reactの採用は指定しない。",
+    "現在の入力・条件が旧reviewの判断内容を変えるかを判定する適用先の依存関係。該当する場合はB-IU-006とB-IU-008へ渡す。"
+  ],
+  "decision_rules": [
+    {
+      "id": "007-D01",
+      "if": "現在のactorと対象bindingが一致し、必要な閲覧能力があり、保存内容が確実に未送信のdraftである",
+      "then": "入力と作業段階を未送信として復帰する。resourceの観測値と区別し、復帰だけではwriteを発生させない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-T401",
+        "B-T402"
+      ],
+      "source_locations": [
+        "B-T401:L45–L50",
+        "task.md:acceptance1"
+      ],
+      "verification_cases": [
+        "R01"
+      ]
+    },
+    {
+      "id": "007-D02",
+      "if": "保存taskの検証済みownerとtrusted current account/tenantが不一致である",
+      "then": "新しいaccountとして旧taskのprivate resource/operationを照会する前に復帰を止める。旧入力・operation IDを新accountのtaskとして表示せず、契約上の適切なaccountへの復帰経路を示す。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-T402",
+        "B-T403"
+      ],
+      "source_locations": [
+        "B-T402:12.2.2,12.2.3,12.4.2",
+        "B-T403:L484–L485",
+        "task.md:acceptance3"
+      ],
+      "verification_cases": [
+        "R03"
+      ],
+      "limitation": "これはBのquery/display条件であり、フロントエンドguardがサーバー認可を証明するとはしない。"
+    },
+    {
+      "id": "007-D03",
+      "if": "認証が失効・未解決で、private taskの復帰に現在identityを確認できない",
+      "then": "保持契約の範囲で意図・入力・元操作参照を内部に保ち、認証待ちと業務結果の状態を分ける。再認証後に同一account/bindingと必要capabilityを再確認し、許された元taskの復帰または照会へ戻す。認証完了だけではsubmitしない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S201",
+        "B-T401",
+        "B-T403"
+      ],
+      "source_locations": [
+        "B-S201:2.2.5",
+        "B-T401:L35–L50",
+        "B-T403:L512,L520,L523",
+        "task.md:acceptance4"
+      ],
+      "verification_cases": [
+        "R04"
+      ],
+      "scope_note": "fixtureでの採用理由はtaskの復帰要件。2.2.5自体はAAAである。"
+    },
+    {
+      "id": "007-D04",
+      "if": "同じaccountで再認証できたが、現在のedit/submit capabilityが拒否または未確認である",
+      "then": "当該writeを開始しない。許可されたread/保持/次の行動だけを提供し、以前のcanEditやreviewを現在権限に流用しない。権限状態だけから元operationの失敗・取消を断定しない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-T403"
+      ],
+      "source_locations": [
+        "B-T403:L484–L485,L520",
+        "task.md:acceptance4",
+        "cases.json:R05"
+      ],
+      "verification_cases": [
+        "R05"
+      ]
+    },
+    {
+      "id": "007-D05",
+      "if": "元intentに対応するoperationが送信済みまたは結果未確認で、現在の照会権限がある",
+      "then": "B-IU-001/002へ元のoperation ID・対象・内容を渡して照合する。復帰のたびに新しいoperationを作らず、再送可否も既存の契約条件に従う。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S104",
+        "B-T201",
+        "B-T403"
+      ],
+      "source_locations": [
+        "B-IU-001:required_inputs,decision_rules",
+        "B-IU-002:decision_rules",
+        "task.md:acceptance2,4"
+      ],
+      "verification_cases": [
+        "R02",
+        "R04"
+      ]
+    },
+    {
+      "id": "007-D06",
+      "if": "未確定の元operationについて保存/回復recordが見つからない、照会missになる、または保持窓が切れた",
+      "then": "未適用・未送信の証拠へ変換せず、B-IU-001/002の未解決状態と残る照合経路を維持する。新規operationの自動発行をしない。既に別証拠で確定した結果がある場合は、それをrecord欠落だけで取り消さない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-T402",
+        "B-T201"
+      ],
+      "source_locations": [
+        "B-T402:L534–L537",
+        "B-IU-001:exceptions",
+        "B-IU-002:keys/retention decision",
+        "task.md:acceptance8"
+      ],
+      "verification_cases": [
+        "R10"
+      ]
+    },
+    {
+      "id": "007-D07",
+      "if": "遅延応答のcontextが現在account/task/viewの採用条件を満たさない",
+      "then": "現在viewへprivate dataや旧snapshotを適用しない。ただしowner/target/operationへ正しく結び付く確定結果まで無効とはしない。その結果は元operationの結果として権限・保持契約に従って扱い、現在のresource観測と分ける。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S303",
+        "B-T402"
+      ],
+      "source_locations": [
+        "B-S303:L380–L424",
+        "task.md:acceptance7",
+        "B-IU-001"
+      ],
+      "verification_cases": [
+        "R09"
+      ],
+      "implementation_boundary": "応答のview採否とserver side effect/結果証跡の有効性は別。cleanupやrequest世代は唯一の方式ではない。"
+    },
+    {
+      "id": "007-D08",
+      "if": "復帰時の現在resourceが、旧reviewの対象・金額・効果等に関わる事実を変更している",
+      "then": "draftを保ったままB-IU-008へ渡し、B-IU-006のreview無効化を当該変更範囲へ適用する。認証成功や最新readだけで旧approvalを新しい内容へ付け替えない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S205"
+      ],
+      "source_locations": [
+        "B-IU-006:review invalidation",
+        "task.md:acceptance5,6"
+      ],
+      "verification_cases": [
+        "R07"
+      ]
+    },
+    {
+      "id": "007-D09",
+      "if": "WCAG 2.2 SC 2.2.5を適合対象として採用している",
+      "then": "認証済みsessionの失効後、再認証してデータを失わず活動を続けられることを要求として扱う。AAAと明示し、Understandingの例を唯一の保存/再認証方式にしない。",
+      "basis": "source_requirement",
+      "source_refs": [
+        "B-S201",
+        "B-T401"
+      ],
+      "source_locations": [
+        "B-S201:2.2.5/L837–L844",
+        "B-T401:L2,L20,L53–L59"
+      ],
+      "verification_cases": [
+        "R04"
+      ],
+      "limitation": "R04のfixture合格だけでWCAG適合を証明しない。AA一般義務とは主張しない。"
+    }
+  ],
+  "procedure": [
+    "保存taskを開く前に、意図・owner/対象binding・未送信draft・送信済みoperation参照を区別する。local recordの存在を現在のidentityや権限の根拠にしない。",
+    "呼出側のtrusted current identityを受け取り、元taskとaccount/tenant/対象が一致するか確認する。既知の不一致では旧taskのprivate queryと表示を始めない。適切な復帰先を案内する。",
+    "認証が失効/未解決なら、契約が許す意図・入力・作業段階・元操作参照を内部に保持して認証へつなぐ。認証待ちは元操作の成功/失敗/取消を意味しない。",
+    "再認証後は同一identity/bindingと、これから行うread・lookup・writeの現在capabilityを再確認する。再認証成功だけで編集を許可せず、各requestのサーバー側認可は引き続き必要とする。",
+    "確実に未送信なら、draftを未送信と示して再開する。送信済みまたは結果未確認なら、元のoperation参照でB-IU-001/002の照合に戻す。単に復帰したことを新規submitの意思として扱わない。",
+    "照会miss・record欠落・保持期限切れなら、その観測と元の副作用を切り離し、契約上の照合手段か未解決状態を示す。存在しないID、成功、未適用を補完しない。",
+    "現在resourceを読めたら最終観測値として扱い、draftと混ぜない。旧reviewの意味に影響する変化はB-IU-008へ渡し、既存B-IU-006に沿って必要な再判断へ進む。",
+    "応答を現在viewへ反映する時にも現在contextとの対応を確認する。別account/旧taskへの応答を現在viewに表示しない。元operationの正しく対応した結果は別事実として権限・保持契約に従って扱う。",
+    "復帰状態、許可された次の行動、元operationの結果、現在resourceの観測状況を別々に出力し、R01–R05/R09/R10の固定ケースでquery対象・write回数・表示内容を観測する。"
+  ],
+  "expected_outputs": [
+    "復帰する意図・対象・owner/current actorの対応、認証待ち/不一致/能力拒否/復帰可能の判断と利用可能な次の行動。",
+    "未送信draftと作業段階、元operation参照と確定/未確定結果、最終観測resourceを混同しないtask状態。",
+    "権限と保持契約に沿うprivate dataの表示条件、現在viewへの遅延応答採用条件。",
+    "固定ケースの観測計画と未実行状態。後続実行では実際のquery対象、operation ID、write回数、保持入力を証跡にする。"
+  ],
+  "dependencies": [
+    {
+      "ref": "B-IU-001",
+      "when": "送信済み操作の結果を照合する、または照会できない",
+      "need": "受付/未知/終端/業務結果と最終観測値の区別。結果確定の意味を再実装しない。"
+    },
+    {
+      "ref": "B-IU-002",
+      "when": "同じintentの回復・再試行を扱う",
+      "need": "元操作識別、内容一致、保持窓、未適用が確実な例外、新しいintentとの区別。"
+    },
+    {
+      "ref": "B-IU-005",
+      "when": "復帰した入力を修正する",
+      "need": "同一processの入力再利用と本質性/セキュリティ/情報無効の例外。"
+    },
+    {
+      "ref": "B-IU-006 and B-IU-008",
+      "when": "復帰後の事実が旧reviewの意味を変える",
+      "need": "必要な判断だけを無効化し、比較・修正・再確定へつなぐ。"
+    },
+    {
+      "ref": "C / application authentication and storage contracts",
+      "when": "常時",
+      "need": "trusted runtime identity/capability、対象binding、保存/表示/失効、実サーバー認可とUI実装。Bのfixture入力は本番の保証ではない。"
+    },
+    {
+      "ref": "https://github.com/RNA4219/anything-frontend-art-direction/blob/main/references/g-state-forms.md#g-06",
+      "when": "古いreadの適用を実装する",
+      "need": "既知のstale response対処への導線。React依存、cleanup方式、counter追加をBの新規規範にしない。"
+    }
+  ],
+  "exceptions": [
+    "2.2.5はAAA。今回の復帰要件はtaskで採用した業務要件でもあり、AA全般の保存義務とはしない。Understandingはinformativeで、例の別windowや一時server保存を必須にしない。",
+    "保存範囲・保持期限・秘密情報・権限喪失後の表示はC/適用先の契約に従う。無期限保存、平文保存、全入力の一律再入力のいずれもこの単位から要求しない。",
+    "認証済みでもread/lookup/writeの権限は独立する。write拒否だけで許されたreadまで禁止する一般規則にしない。",
+    "accountに依存しない公開情報や純粋ローカル作業に、private taskと同じ認証分岐を無条件追加しない。",
+    "未送信または元要求未適用が確実なら、その確定した事実を表示できる。record欠落や通信エラーだけからは導かない。",
+    "単一の権威ある応答が元operation結果と現在resourceの両方を必要範囲で返すなら、追加の二重照会を要求しない。今回のfixtureは別の事実を返すためlookup/loadを分ける。",
+    "古い応答を現在viewから除外しても、対応の取れた元operationの確定結果を一般に破棄・無効化しない。別accountへ表示できるという意味でもない。",
+    "同じ入力で別の新しい実行を利用者が明示した場合はB-IU-002の新intent判断へ渡す。同じ値であることだけで元操作に統合しない。"
+  ],
+  "failure_modes": [
+    "復帰直後にwriteが出る、またはdraftが『保存済み』と表示される：未送信/観測済み/送信済みの区別が欠けている。",
+    "Aで保存した内容やoperation IDがBのtaskに表示され、BでAのprivate queryを出す：current identity/bindingをquery前に検査していない。",
+    "再認証しただけで編集できる：authenticationと現在write capabilityを同一視している。",
+    "session失効で元操作を失敗扱いにし、新IDで送る：認証状態と業務結果を混同している。",
+    "照会recordの期限切れやstorage欠落を未送信にする：回復情報の存在と副作用の有無を同一視している。",
+    "account切替後に旧応答が画面を再充填する：応答適用時のcurrent context照合がない。",
+    "旧応答をviewに採用しなかっただけで元操作を取消済み/無効とする：表示採否をserver結果の証明へ拡張している。",
+    "trustedなfixture入力とfrontend guardの合格を本番認証/認可/保存の保証として報告する：BとC/サーバーの証拠境界を越えている。"
+  ],
+  "verification": {
+    "criteria": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R09",
+      "R10"
+    ],
+    "evidence": [],
+    "limitations": [
+      "13 local fixture cases are implemented; independent source/negative-control/DOM review pending.",
+      "No production identity/storage security, HTTP adapter, related-resource transaction, assistive-technology or human efficacy validation.",
+      "This fixture combines resource read and operation lookup under canRead; split capabilities when the real service distinguishes them."
+    ]
+  },
+  "source_refs": [
+    "B-S201",
+    "B-T401",
+    "B-T402",
+    "B-T403",
+    "B-S303",
+    "B-S101",
+    "B-S104",
+    "B-T201",
+    "B-S205"
+  ],
+  "confidence": {
+    "source_support": "Official standards/API guidance with AAA, HTTP vs resource.etag, and informative-document scope retained.",
+    "transfer": "Conditional synthesis extending prior concepts; independent validation pending.",
+    "limits": [
+      "trusted identity/capability、task bindingの具体schema・鮮度・失効event。",
+      "別account・権限喪失時のdraft保持/表示、秘密情報の分類、保持期間。",
+      "operation/resultの照会窓と期限切れ後の照合route。",
+      "UnderstandingのG105/G181/F12、詳細Storage Standard、OWASPの関連認証資料。",
+      "実identity provider、server認可、ブラウザ保存、AT、人の理解度。"
+    ]
+  },
+  "status": "DRAFT",
+  "version": "0.1.0",
+  "introduced_round": 3,
+  "analysis_ref": "campaigns/B/rounds/03/analysis.md",
+  "analysis_sha256": "10b8d5906e20de29d789435f568f752e169e6f89b286ef5cf49c7988a94a3fb6",
+  "source_facts": [
+    {
+      "id": "007-F01",
+      "kind": "normative",
+      "fact": "WCAG 2.2 SC 2.2.5はLevel AAAで、認証済みsessionの失効後に再認証してデータを失わず活動を継続できることを要求する。",
+      "source_refs": [
+        "B-S201"
+      ],
+      "source_locations": [
+        "2.2.5; web L837–L844; R03 capture local132–139"
+      ],
+      "scope_limit": "AA全般の義務、保存方式、account分離、任意期間の保持はこのSCが定めているとはしない。"
+    },
+    {
+      "id": "007-F02",
+      "kind": "informative_explanation",
+      "fact": "Understandingは非規範的説明であり、情報と作業段階へ復帰するcheckout例、内容を保ったまま再認証後に送信できるemail例を示す。十分技法は唯一の方法ではない。",
+      "source_refs": [
+        "B-T401"
+      ],
+      "source_locations": [
+        "web L2,L35–L59; local7,40–64"
+      ],
+      "scope_limit": "例の時刻、別window、一時server保存を共通必須条件に変えない。2.2.1等の他基準も別途適用される。"
+    },
+    {
+      "id": "007-F03",
+      "kind": "normative_storage_scope",
+      "fact": "HTML Web Storageはwindow/origin等に対応する保存域を定め、localStorageにpathname別の制限はない。policyにより取得が拒否されることや保存データの自動削除も記述する。",
+      "source_refs": [
+        "B-T402"
+      ],
+      "source_locations": [
+        "12.2.2 web L391–L408; 12.2.3 L439–L454; 12.3.1 L534–L537; 12.4.2 L571–L574"
+      ],
+      "scope_limit": "保存がaccount境界や現権限・server結果の証拠でないというBの結論は設計推論。個別アプリの削除・認証手順をこの標準が定めているとはしない。"
+    },
+    {
+      "id": "007-F04",
+      "kind": "official_security_guidance",
+      "fact": "OWASPは認証済みでも未認可の場合を区別し、権限変更をsession管理の境界として扱う。session期限はserver側で強制し、期限切れ後は無効化と再認証が必要と説明する。",
+      "source_refs": [
+        "B-T403"
+      ],
+      "source_locations": [
+        "web L484–L485,L512,L520,L523; local181–182,209,217,220"
+      ],
+      "scope_limit": "Bはsession protocolを実装しない。timeout例の具体値を業務期限に転用しない。"
+    }
+  ],
+  "relationship_to_existing": {
+    "type": "formalizes_or_refines_existing_concepts",
+    "references": [
+      "B-IU-001",
+      "B-IU-002",
+      "B-IU-005",
+      "B-IU-006",
+      "campaigns/B/existing-pr-overlap.json"
+    ],
+    "existing_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/2",
+    "additional_value": "query前の既知account mismatch、同account再認証後のcapability失効、保存record欠落、応答適用時のcurrent contextを条件化して固定ケースに結ぶ。draft/reopen自体は新原則ではない。"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Session B Instruction Unit",
+  "type": "object",
+  "required": ["skill_id", "domain", "trigger", "intent", "required_inputs", "decision_rules", "procedure", "expected_outputs", "dependencies", "exceptions", "failure_modes", "verification", "source_refs", "confidence", "status", "version"],
+  "properties": {
+    "skill_id": {"type": "string", "pattern": "^B-IU-[0-9]{3}$"},
+    "domain": {"const": "interaction-ux-flow"},
+    "trigger": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "intent": {"type": "string", "minLength": 1},
+    "required_inputs": {"type": "array", "minItems": 1},
+    "decision_rules": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["if", "then", "basis", "source_refs"]}},
+    "procedure": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "expected_outputs": {"type": "array", "minItems": 1},
+    "dependencies": {"type": "array"},
+    "exceptions": {"type": "array"},
+    "failure_modes": {"type": "array", "minItems": 1},
+    "verification": {"type": "object", "required": ["criteria", "evidence", "limitations"]},
+    "source_refs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "confidence": {"type": "object", "required": ["source_support", "transfer", "limits"]},
+    "status": {"enum": ["DRAFT", "ACCEPT", "REVISE", "HOLD", "REJECT"]},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"}
+  }
+}

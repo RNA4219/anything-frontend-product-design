@@ -1,0 +1,20 @@
+[
+  {
+    "id": "control_mandatory_capabilities_separate_stages",
+    "expected_semantic_result": "PASS",
+    "regression_class": "positive_control",
+    "baseline_status": "PASS",
+    "baseline_codes": [],
+    "candidate_status": "PASS",
+    "candidate_codes": []
+  },
+  {
+    "id": "ce_mandatory_capability_isolated",
+    "expected_semantic_result": "FAIL",
+    "regression_class": "existing_gap",
+    "baseline_status": "PASS",
+    "baseline_codes": [],
+    "candidate_status": "PASS",
+    "candidate_codes": []
+  }
+]

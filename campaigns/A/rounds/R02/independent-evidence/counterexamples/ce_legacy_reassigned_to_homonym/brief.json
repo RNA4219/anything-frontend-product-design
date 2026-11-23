@@ -1,0 +1,171 @@
+{
+  "case_id": "independent-manual-catalogue",
+  "roles": [
+    {
+      "id": "engineer",
+      "label": "設計担当者"
+    }
+  ],
+  "goals": [
+    {
+      "id": "g_choose",
+      "role": "engineer",
+      "outcome": "D-17とD-42を比較して高電圧用のD-42を選ぶ",
+      "priority": "must",
+      "needed_information": [
+        "manual_id",
+        "title",
+        "voltage",
+        "revision"
+      ]
+    },
+    {
+      "id": "g_resume",
+      "role": "engineer",
+      "outcome": "最近開いたD-17を再開する",
+      "priority": "should",
+      "needed_information": [
+        "manual_id",
+        "title"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "r_choose",
+      "goal_ids": [
+        "g_choose"
+      ],
+      "mandatory": true,
+      "statement": "同名資料をIDと適用条件で比較する"
+    },
+    {
+      "id": "r_resume",
+      "goal_ids": [
+        "g_resume"
+      ],
+      "mandatory": false,
+      "statement": "D-17の再開と新規選択を区別する"
+    }
+  ],
+  "feature_requests": [
+    {
+      "id": "f_catalogue",
+      "label": "資料を探す",
+      "object": "manual",
+      "outcome": "choose-manual",
+      "roles": [
+        "engineer"
+      ],
+      "goal_ids": [
+        "g_choose"
+      ],
+      "requirement_ids": [
+        "r_choose"
+      ],
+      "dependencies": [],
+      "mandatory": true,
+      "scope": "all-approved-manuals",
+      "lifecycle": "existing",
+      "availability": "available",
+      "context_constraints": [
+        "staff-account"
+      ],
+      "evidence_refs": [
+        "e_task"
+      ]
+    },
+    {
+      "id": "f_recent",
+      "label": "最近の資料",
+      "object": "manual",
+      "outcome": "resume-manual",
+      "roles": [
+        "engineer"
+      ],
+      "goal_ids": [
+        "g_resume"
+      ],
+      "requirement_ids": [
+        "r_resume"
+      ],
+      "dependencies": [],
+      "mandatory": false,
+      "scope": "my-recent-manuals",
+      "lifecycle": "existing",
+      "availability": "available",
+      "context_constraints": [
+        "staff-account"
+      ],
+      "evidence_refs": [
+        "e_task"
+      ]
+    }
+  ],
+  "visual_intent": {
+    "id": "existing-manual-system",
+    "constraints": [
+      "既存の視覚方針を保持する"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "e_task",
+      "kind": "requirement",
+      "statement": "この合成課題に含む2資料と条件",
+      "coverage": "この合成課題のみ",
+      "coverage_status": "verified"
+    },
+    {
+      "id": "e_search",
+      "kind": "unknown",
+      "statement": "検索scopeと索引網羅性は未確認",
+      "coverage": "検索サービス",
+      "coverage_status": "unknown"
+    }
+  ],
+  "content": {
+    "manuals": [
+      {
+        "id": "D-17",
+        "title": "結線手順",
+        "voltage": "低電圧",
+        "revision": "B",
+        "canonical_url": "/manuals/D-17"
+      },
+      {
+        "id": "D-42",
+        "title": "結線手順",
+        "voltage": "高電圧",
+        "revision": "C",
+        "canonical_url": "/manuals/D-42"
+      }
+    ],
+    "memberships": {
+      "安全": [
+        "D-17",
+        "D-42"
+      ],
+      "結線": [
+        "D-17",
+        "D-42"
+      ]
+    },
+    "current_search": {
+      "query": "高電圧",
+      "scope": "unknown",
+      "filters": {
+        "status": "recent"
+      },
+      "result_count": 0,
+      "index_coverage": "unknown"
+    },
+    "legacy_entries": [
+      {
+        "path": "/manuals/wiring",
+        "target_manual_id": "D-17",
+        "must_preserve": true
+      }
+    ]
+  }
+}

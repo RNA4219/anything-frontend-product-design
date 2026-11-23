@@ -1,0 +1,22 @@
+{
+  "id": "R01-R1-S04",
+  "title": "Define user needs",
+  "url": "https://www.gov.uk/guidance/define-user-needs",
+  "kind": "official_guidance",
+  "locator": "Why define needs; What good looks like; How to apply",
+  "short_quote": "be defined through lightweight checks",
+  "claim": "Affected users include support, operations and integrating teams. Trace technical choices to their needs and consider change impacts. Small, well-understood changes warrant lightweight checks.",
+  "limits": "Technology Code of Practice guidance updated 29 October 2026. Role-and-scope feature equivalence is a derived product-design rule, not a direct assertion of this source.",
+  "sha256": "96f1a93f2c51d1813dc6fa893f883e5adce4005512450646dc3caed2741f7301",
+  "acquisition": {
+    "method": "web_run extracted original passage fallback",
+    "imozuru_fetch": "FAIL_DNS",
+    "original_html_downloaded": false,
+    "full_original_archive": false,
+    "relevant_passages_verified": true
+  },
+  "publication_safety": "Metadata and short quotation only; retained source text stays private.",
+  "source_id": "R01-R1-S04",
+  "canonical_url": "https://www.gov.uk/guidance/define-user-needs",
+  "verified_in_current_round": true
+}

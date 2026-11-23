@@ -1,0 +1,119 @@
+{
+  "review_id": "B-R01-implementation-copy-review",
+  "created_at": "2026-11-23T07:03:45.575868+00:00",
+  "verdict": "REVISE",
+  "verdict_scope": "Exploratory display/copy review of generated artifacts; not a change to v4 requirements or scores.",
+  "C04_disposition": "Separate inspection has now been performed; it found one medium semantic issue in each arm. Therefore controller score alone remains insufficient.",
+  "method": {
+    "runtime": "jsdom 26.1.0",
+    "event_execution": "Actual input change and button click events using the original HTML/module bodies; imports supplied by the test runtime; real generated flow and mock modules used.",
+    "scenarios": [
+      "normal",
+      "lost",
+      "rejected",
+      "cancellation",
+      "race"
+    ],
+    "arm_count": 2,
+    "completed_cases": 10,
+    "runtime_errors": 0,
+    "files_stable_for_all_cases": true,
+    "source_hashes": {
+      "baseline": {
+        "flow.mjs": "016adcd05b934bb19ac465dcc89040ac725eb1a19af793d9b0ab0f7b03dc7a03",
+        "index.html": "acf35e8b214463af19d27f5608a95fe00dd203ae3ec7f01e7028a977592febde",
+        "mock-service.mjs": "16494da2695d5e8d41066eff3459d34bf8299536f20a38c8457de53449eb2b1f"
+      },
+      "candidate": {
+        "flow.mjs": "c46f9c9e63d6199efcf0010e6545d1d70b170082399018607f4b475893f63bd1",
+        "index.html": "41721d66cd9fc9d7a40a4e493a413d4841e4eb14eedda8bd7c0ff2ad6499c916",
+        "mock-service.mjs": "204fee67d54972a40de9451fe92a72d17a145a61a82199c7c4d202c647396041",
+        "app.mjs": "f221fc876f656f6335a84423ff13225e385ed99390128d35809f397b7de3af18"
+      }
+    },
+    "trace": "Full views, extracted displayed fields, visible text excluding hidden ancestors, service call times and results, final file hashes."
+  },
+  "defects": [
+    {
+      "id": "B-R01-EXP-001",
+      "severity": "medium",
+      "kind": "generated_implementation_copy",
+      "arm": "baseline",
+      "file": "campaigns/B/rounds/01/artifacts/baseline/index.html",
+      "location": "lines85–94 static booking label/badge; flow.mjs lines146/187 reinforce reservation-retention wording",
+      "symptom": "結果未確認の画面で、旧日時を「確定済みの予約」「確定済み」と表示し続け、最後に確認した値であることを予約カード上で限定していない。",
+      "evidence": [
+        {
+          "file": "campaigns/B/rounds/01/independent/dom-baseline-lost.json",
+          "stage": "backend_completed_before_ui_check",
+          "ui_phase": "unknown",
+          "ui_date": "2026-12-08T14:00",
+          "booking_label": "確定済みの予約",
+          "badge": "確定済み",
+          "service_observation": {
+            "status": "succeeded",
+            "currentDate": "2026-12-10T14:00"
+          }
+        },
+        "Actual lost-response scenario: service reports succeeded at 2026-12-10T14:00 while the unchanged UI card shows 2026-12-08T14:00 as confirmed. The status text correctly states uncertainty, creating conflicting confidence cues rather than fixing the card."
+      ],
+      "impact": "旧予約が現在も有効であるとの判断を誘う。データを保持する処理自体は適切だが、その知識の時点を説明できていない。",
+      "fix": "未確定状態ではカードを「最後に確認した予約日時」へ変更し、現在の予約状態は未確認と明示する。旧値を表示し続けることとサーバー上の予約保持を区別する。",
+      "scope_note": "Exploratory semantic finding under the already-declared outcome-truthfulness concern; no frozen score penalty added."
+    },
+    {
+      "id": "B-R01-EXP-002",
+      "severity": "medium",
+      "kind": "generated_implementation_copy",
+      "arm": "candidate",
+      "file": "campaigns/B/rounds/01/artifacts/candidate/flow.mjs",
+      "location": "applyOutcome succeeded branch; message containing 取消要求よりも変更完了が先行しました",
+      "symptom": "取消を試みた後の成功から、変更完了が取消要求の送信より先だったという時系列まで断定する。",
+      "evidence": [
+        {
+          "file": "campaigns/B/rounds/01/independent/dom-candidate-race.json",
+          "stage": "race_checked_success",
+          "visible_message": "変更成功を確認しました。取消要求よりも変更完了が先行しました。表示日時が今回確認できた予約日時です。",
+          "cancel_start": 1795417331426,
+          "backend_status_at_cancel": "pending",
+          "backend_mutations_at_cancel": 0,
+          "backend_ready_at": 1795417331522,
+          "request_preceded_ready_by_ms": 96
+        },
+        "The cancellation request starts while the mock operation is pending with mutationCount 0, before readyAt. Later lookup succeeds, but the DOM says completion preceded the cancellation request."
+      ],
+      "impact": "正しい最終結果に、観測から導けない原因・順序の説明を加える。利用者が取消依頼を送った事実を誤解する。",
+      "fix": "「取消が成立する前に変更が完了しました」または「取消を依頼しましたが、変更成功を確認しました」など、確認できた結果に限定する。要求送信より前に完了したと述べるには個別の時刻証拠が必要。",
+      "scope_note": "Exploratory semantic finding; behavior scores are unchanged. Do not edit the frozen raw arm to erase it."
+    }
+  ],
+  "observations": [
+    "Both arms show unknown after transport loss and provide check recovery; both reach verified success via real controls.",
+    "Both arms distinguish cancellation acceptance from terminal cancellation and preserve successful completion in the normal demo race.",
+    "Candidate clearly labels old data as last-known and explicitly says the current server state is not guaranteed while unresolved.",
+    "Baseline separates prior/requested dates in the detail panel, but the top booking card remains unqualified.",
+    "Hidden finished-panel text was excluded from visible-text assessment; hidden copy was not misclassified as a user-facing defect."
+  ],
+  "evidence_files": [
+    "campaigns/B/rounds/01/independent/dom-copy-results.json",
+    "campaigns/B/rounds/01/independent/dom-baseline-cancellation.json",
+    "campaigns/B/rounds/01/independent/dom-baseline-lost.json",
+    "campaigns/B/rounds/01/independent/dom-baseline-normal.json",
+    "campaigns/B/rounds/01/independent/dom-baseline-race.json",
+    "campaigns/B/rounds/01/independent/dom-baseline-rejected.json",
+    "campaigns/B/rounds/01/independent/dom-candidate-cancellation.json",
+    "campaigns/B/rounds/01/independent/dom-candidate-lost.json",
+    "campaigns/B/rounds/01/independent/dom-candidate-normal.json",
+    "campaigns/B/rounds/01/independent/dom-candidate-race.json",
+    "campaigns/B/rounds/01/independent/dom-candidate-rejected.json"
+  ],
+  "limitations": [
+    "No actual browser rendering, layout, screenshots, accessibility-tree validation, keyboard navigation, or user comprehension study.",
+    "Local mock side effects are observed, not production backend guarantees.",
+    "Module import injection is a jsdom harness accommodation; scripts were not loaded through a real web server.",
+    "Source hash stability was checked before/after every final rerun; candidate was rerun after its builder final-update notice.",
+    "Observational findings were not added as retroactive pass/fail conditions to the frozen behavioral suite.",
+    "Same-model separate task context does not establish objective validation.",
+    "Critic did not modify either arm or public files."
+  ]
+}

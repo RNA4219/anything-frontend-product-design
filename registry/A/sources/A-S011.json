@@ -1,0 +1,12 @@
+{
+  "source_id": "A-S011",
+  "title": "— David Kieras — Task Analysis and the Design of Functionality（第2版向け公開原稿、刊行年未確定）",
+  "url": "https://web.eecs.umich.edu/~kieras/docs/TA_Modeling/TaskAnalysisV2.pdf",
+  "canonical_url": "https://web.eecs.umich.edu/~kieras/docs/TA_Modeling/TaskAnalysisV2.pdf",
+  "original_id": "S11",
+  "provenance": "inherited-index",
+  "verified_in_current_round": false,
+  "rights": "Link and original paraphrase only; no third-party full text redistributed.",
+  "content_sha256": null,
+  "notes": "- **URL**: [David Kieras — Task Analysis and the Design of Functionality（第2版向け公開原稿、刊行年未確定）](https://web.eecs.umich.edu/~kieras/docs/TA_Modeling/TaskAnalysisV2.pdf)\n- **該当箇所**: Introduction; The Critical Role of Task Analysis and Design of Functionality; Task properties of both types of systems; Level of detail; high-level GOMS と ECAD事例。PDF pp.1–5, 10–11, 15–21。Web抽出 L112–118, L158–168, L653–663, L721–743, L935–949。\n- **確認日 / 種別**: 2026-11-23 / 本人・研究者によるハンドブック原稿。方法論、既存研究、事例を含む。\n- **原典の主張** (author_guidance): Kierasは、ユーザーが達成する仕事を理解してからシステム要件と機能を選ぶよう提案する。全体システム、操作者の役割、個別タスクを区別し、機能設計を具体的なUI操作の設計と分けて扱う。\n- **制約・版・未確認**: 単一の新規実験の報告ではない。高水準のタスクモデルから画面数やメニュー構造が一意に決まるとは述べていない。CMU読書リストと著者の旧索引は1997年版だが、今回読んだV2は第2版向け原稿で2003年文献を含むため、1997年版と同一版扱いしない。正確な刊行年と最終版との一致は未確定。\n- **接続する原則**: A01, A03, A07。原則のProcedure/JSON契約は、別に明記した本Skillの導出。"
+}

@@ -1,0 +1,85 @@
+{
+  "scope": "Limited recheck of initial E01 and E02; no new optional coverage",
+  "verdict": "ACCEPT",
+  "initialModuleHash": "3c38c312ce87e6b5ac84d532042344744737792fe4775cd6d9744ac597105c07",
+  "revisedModuleHash": "668a67ab761a2c021a8ea3d1afb51c134a8a350a8e135fe1dd8f9743be8b5b40",
+  "htmlHash": "d93571557e22bb4742cc743b4ad2a3fb8d319393cfbfdf451f48601a328ce1a4",
+  "frozenTestHashUnchanged": true,
+  "codeDiffLimitedToInactiveErrorPruning": true,
+  "case": {
+    "id": "B-R02-E01",
+    "pass": true,
+    "invalidShipping": {
+      "application": {
+        "phase": "editing",
+        "draft": {
+          "name": "Aki",
+          "email": "old@example.test",
+          "delivery": "shipping",
+          "address": ""
+        },
+        "effective": {
+          "name": "Aki",
+          "email": "old@example.test",
+          "delivery": "shipping",
+          "address": ""
+        },
+        "errors": {
+          "address": "入力内容を確認してください。"
+        },
+        "formError": "",
+        "operationId": null,
+        "reference": null,
+        "canSubmit": false,
+        "canCheck": false
+      },
+      "dom": {
+        "addressHidden": false,
+        "reviewHidden": true,
+        "errors": "address: 入力内容を確認してください。"
+      },
+      "submitCalls": 0
+    },
+    "afterBranchChange": {
+      "application": {
+        "phase": "review",
+        "draft": {
+          "name": "Aki",
+          "email": "old@example.test",
+          "delivery": "pickup",
+          "address": ""
+        },
+        "effective": {
+          "name": "Aki",
+          "email": "old@example.test",
+          "delivery": "pickup"
+        },
+        "errors": {},
+        "formError": "",
+        "operationId": null,
+        "reference": null,
+        "canSubmit": true,
+        "canCheck": false
+      },
+      "dom": {
+        "addressHidden": true,
+        "reviewHidden": false,
+        "errors": ""
+      },
+      "submitCalls": 0
+    }
+  },
+  "wording": {
+    "id": "B-R02-E02",
+    "pass": true,
+    "threeExceptionsPreserved": true,
+    "exploratoryRuleMarkedAsInference": true,
+    "exploratoryCaseIdsSeparate": true
+  },
+  "referenceHash": "cdf91d1031315180c5a436e01deb7e4efeb7e8cea84a5726b604f5bc6a755998",
+  "registry006Hash": "4bd8cb9a6e9f9678eb25b7589be7b18a6bef16be4b411c33c2dba7dc46012afc",
+  "limits": [
+    "jsdom event execution, not a real browser, visual, assistive-technology, or human test.",
+    "The frozen suite and independent negative controls were executed against the initial candidate. In this limited recheck they were not rerun. Parent-reported revised 16/16 and exploratory 3/3 are not relabelled as independently executed."
+  ]
+}

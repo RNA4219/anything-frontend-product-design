@@ -1,0 +1,7 @@
+{
+  "status": "BLOCKED",
+  "browser": "Chromium",
+  "sandbox_requested": true,
+  "observation": "Sandboxed Chromium launch failed before opening either generated page. No screenshots or rendered-layout assertions were made.",
+  "impact": "HTML structure may be checked, but browser rendering and human task completion remain unverified."
+}

@@ -1,0 +1,279 @@
+{
+  "case_id": "regional-facility-service",
+  "roles": [
+    {
+      "id": "member",
+      "label": "施設利用者"
+    },
+    {
+      "id": "staff",
+      "label": "施設運営担当"
+    }
+  ],
+  "goals": [
+    {
+      "id": "g_change",
+      "role": "member",
+      "outcome": "自分の工作室予約を識別して変更対象を選ぶ",
+      "priority": "must",
+      "needed_information": [
+        "reservation_id",
+        "room",
+        "date",
+        "status"
+      ]
+    },
+    {
+      "id": "g_audit",
+      "role": "staff",
+      "outcome": "年次の監査対象となる施設全体の予約記録を取り出す",
+      "priority": "must",
+      "needed_information": [
+        "facility",
+        "period",
+        "record_scope"
+      ]
+    },
+    {
+      "id": "g_notice",
+      "role": "member",
+      "outcome": "予約時間が変わった時に通知を受け取る",
+      "priority": "should",
+      "needed_information": []
+    }
+  ],
+  "requirements": [
+    {
+      "id": "r_change",
+      "goal_ids": [
+        "g_change"
+      ],
+      "mandatory": true,
+      "statement": "利用済みと変更可能な予約を区別できる"
+    },
+    {
+      "id": "r_audit",
+      "goal_ids": [
+        "g_audit"
+      ],
+      "mandatory": true,
+      "statement": "年1回の監査で施設全体の記録を取り出せる。月次ログの利用率は0%"
+    },
+    {
+      "id": "r_notice",
+      "goal_ids": [
+        "g_notice"
+      ],
+      "mandatory": false,
+      "statement": "通知利用状況は計測が任意のため未観測の利用者を含む"
+    }
+  ],
+  "feature_requests": [
+    {
+      "id": "f_mine",
+      "label": "予約",
+      "object": "reservation",
+      "outcome": "select-change-target",
+      "roles": [
+        "member"
+      ],
+      "goal_ids": [
+        "g_change"
+      ],
+      "requirement_ids": [
+        "r_change"
+      ],
+      "dependencies": [],
+      "mandatory": true,
+      "scope": "self",
+      "evidence_refs": [
+        "e_contract"
+      ],
+      "lifecycle": "existing",
+      "availability": "available",
+      "context_constraints": [
+        "mobile-supported"
+      ]
+    },
+    {
+      "id": "f_my_bookings",
+      "label": "予約一覧",
+      "object": "reservation",
+      "outcome": "select-change-target",
+      "roles": [
+        "member"
+      ],
+      "goal_ids": [
+        "g_change"
+      ],
+      "requirement_ids": [
+        "r_change"
+      ],
+      "dependencies": [],
+      "mandatory": false,
+      "scope": "self",
+      "evidence_refs": [
+        "e_missing"
+      ],
+      "lifecycle": "existing",
+      "availability": "available",
+      "context_constraints": [
+        "mobile-supported"
+      ]
+    },
+    {
+      "id": "f_audit",
+      "label": "記録出力",
+      "object": "reservation",
+      "outcome": "export-records",
+      "roles": [
+        "staff"
+      ],
+      "goal_ids": [
+        "g_audit"
+      ],
+      "requirement_ids": [
+        "r_audit"
+      ],
+      "dependencies": [
+        "f_all_records"
+      ],
+      "mandatory": true,
+      "scope": "facility-all",
+      "evidence_refs": [
+        "e_contract"
+      ],
+      "lifecycle": "existing",
+      "availability": "available",
+      "context_constraints": [
+        "staff-account"
+      ]
+    },
+    {
+      "id": "f_all_records",
+      "label": "予約記録",
+      "object": "reservation",
+      "outcome": "read-records",
+      "roles": [
+        "staff"
+      ],
+      "goal_ids": [
+        "g_audit"
+      ],
+      "requirement_ids": [
+        "r_audit"
+      ],
+      "dependencies": [],
+      "mandatory": false,
+      "scope": "facility-all",
+      "evidence_refs": [
+        "e_missing"
+      ],
+      "lifecycle": "existing",
+      "availability": "available",
+      "context_constraints": [
+        "staff-account"
+      ]
+    },
+    {
+      "id": "f_team_records",
+      "label": "予約記録",
+      "object": "reservation",
+      "outcome": "read-records",
+      "roles": [
+        "staff"
+      ],
+      "goal_ids": [
+        "g_audit"
+      ],
+      "requirement_ids": [],
+      "dependencies": [],
+      "mandatory": false,
+      "scope": "assigned-room-only",
+      "evidence_refs": [
+        "e_missing"
+      ],
+      "lifecycle": "existing",
+      "availability": "available",
+      "context_constraints": [
+        "staff-account"
+      ]
+    },
+    {
+      "id": "f_notify",
+      "label": "変更通知",
+      "object": "notification",
+      "outcome": "receive-booking-change",
+      "roles": [
+        "member"
+      ],
+      "goal_ids": [
+        "g_notice"
+      ],
+      "requirement_ids": [
+        "r_notice"
+      ],
+      "dependencies": [],
+      "mandatory": false,
+      "scope": "self",
+      "evidence_refs": [
+        "e_missing"
+      ],
+      "lifecycle": "existing",
+      "availability": "available",
+      "context_constraints": [
+        "mobile-supported"
+      ]
+    }
+  ],
+  "visual_intent": {
+    "id": "facility-editorial-v1",
+    "constraints": [
+      "既存の配色・書体・余白は維持。Aは情報の配置責務だけ判断する。"
+    ]
+  },
+  "content": {
+    "reservations": [
+      {
+        "id": "R-204",
+        "room": "工作室",
+        "date": "12月8日 14:00",
+        "status": "確定・変更可"
+      },
+      {
+        "id": "R-205",
+        "room": "工作室",
+        "date": "11月10日 14:00",
+        "status": "利用済み"
+      }
+    ]
+  },
+  "constraints": [
+    "利用者は携帯電話のみを所有する場合があり、別PCでの代替を前提にできない。",
+    "機能数とナビ項目を減らしたい。監査は必須。通知の利用率は不明。",
+    "以下のscopeはアクセス対象の識別子であり、名称の類似では同一化できない。"
+  ],
+  "evidence": [
+    {
+      "id": "e_contract",
+      "kind": "requirement",
+      "statement": "施設監査の年次提出と利用者本人の予約識別は依頼で確定。",
+      "coverage": "all stated roles; no telemetry",
+      "coverage_status": "verified"
+    },
+    {
+      "id": "e_telemetry",
+      "kind": "observation",
+      "statement": "計測に同意した利用者の直近30日間のみを記録。監査0回、通知2%。",
+      "coverage": "opt-in subset; excludes annual audit period; unknown denominator for all users",
+      "coverage_status": "partial"
+    },
+    {
+      "id": "e_missing",
+      "kind": "unknown",
+      "statement": "通知が不要か、代替が全利用者に使用可能かは未確認。",
+      "coverage": "unknown",
+      "coverage_status": "unknown"
+    }
+  ]
+}

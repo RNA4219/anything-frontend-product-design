@@ -1,0 +1,112 @@
+{
+  "id": "R03-R2-S02",
+  "url": "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/scheibehenne-jcr2010.pdf",
+  "title": "Can There Ever Be Too Many Options? A Meta-Analytic Review of Choice Overload",
+  "authors": [
+    "Benjamin Scheibehenne",
+    "Rainer Greifeneder",
+    "Peter M. Todd"
+  ],
+  "source_type": "original_meta_analysis",
+  "version": "Journal of Consumer Research 37(3), 409–425 (2010), university-hosted article copy",
+  "doi": "10.1086/651235",
+  "retrieved_at": "2026-11-23",
+  "sha256": "24d51f78b80d4762a19f5d80b6187a54b932d070c9bac71051bce83ba42023ef",
+  "locator": {
+    "web_ref": "turn770785878view0",
+    "verified_passages": [
+      {
+        "claim_id": "S02-C1",
+        "locator": "PDF p409 Abstract; Web L8–16"
+      },
+      {
+        "claim_id": "S02-C2",
+        "locator": "PDF p409 Abstract; Web L11–16"
+      },
+      {
+        "claim_id": "S02-C3",
+        "locator": "PDF p412 Method; Web L295–312"
+      },
+      {
+        "claim_id": "S02-C4",
+        "locator": "PDF p410–411; Web L135–166, L226–230"
+      }
+    ],
+    "local_quotes": [
+      {
+        "line": 11,
+        "text": "virtually zero but considerable variance between studies."
+      },
+      {
+        "line": 14,
+        "text": "more choices may instead facilitate"
+      },
+      {
+        "line": 17,
+        "text": "choice and increase satisfaction."
+      },
+      {
+        "line": 20,
+        "text": "there is no exact definition of"
+      }
+    ]
+  },
+  "verified_claims": [
+    {
+      "claim_id": "S02-C1",
+      "text": "公刊・未公刊の50実験63条件のメタ分析では全体平均の効果がほぼゼロで、研究間のばらつきが大きかった。",
+      "locator": "PDF p409 Abstract; Web L8–16",
+      "claim_type": "meta_analysis_result"
+    },
+    {
+      "claim_id": "S02-C2",
+      "text": "著者は効果がない研究と、選択肢が多い方が選択や満足を支える研究の存在を報告する。平均ゼロは全条件で無効果を意味しない。",
+      "locator": "PDF p409 Abstract; Web L11–16",
+      "claim_type": "meta_analysis_result_with_explicit_interpretation"
+    },
+    {
+      "claim_id": "S02-C3",
+      "text": "対象は候補数を操作した無作為化実験で、相関・定性研究はメタ分析に含めていない。評価変数は選択・満足等で、画面密度の一般尺度ではない。",
+      "locator": "PDF p412 Method; Web L295–312",
+      "claim_type": "method_and_limit"
+    },
+    {
+      "claim_id": "S02-C4",
+      "text": "論文は「多すぎる」候補数の厳密な定義がないと記し、直接比較や選好の明確さを候補集合の利点を検討する論点として挙げる。",
+      "locator": "PDF p410–411; Web L135–166, L226–230",
+      "claim_type": "authors_conceptual_discussion"
+    }
+  ],
+  "limits": [
+    "2010年までの証拠・モデルの結果。2015メタ分析による調整要因の扱いと併読する。",
+    "ほぼゼロの全体平均から、特定課題の削減効果なしを結論しない。",
+    "同時比較の利点の説明は論考・引用紹介であり、この論文が密度の高いUIと低いUIを実験比較したわけではない。",
+    "本文は一部実験の近似的な非有意報告を効果量ゼロとして扱った方法も明記する（Web L366–370）。本ラウンドでは精密効果量を再利用しない。"
+  ],
+  "source_edges": [
+    {
+      "from": "R03-R2-S01",
+      "to": "R03-R2-S02",
+      "relation": "backward_reference_followed",
+      "source_locator": "S01 PDF p358 References / Web L2071–2073",
+      "action": "参考文献の題名を検索し、大学公開PDFを開いて著者・題名・DOIを照合した。",
+      "query_log": "PRIVATE_CHECKPOINT/research/R03/researcher-2/queries-input.json",
+      "target_locator": "S02 PDF p409 / Web L0–16",
+      "verified": true,
+      "limit": "S01参考文献の開始頁408と原著開始頁409に差があり、書誌は原著409–425を採用。"
+    }
+  ],
+  "acquisition": {
+    "imozuru_fetch": "FAIL_DNS",
+    "method": "public web tool extraction fallback, scoped short fragments",
+    "original_html_downloaded": false,
+    "original_pdf_downloaded": false,
+    "full_original_archive": false,
+    "relevant_passages_verified": true,
+    "raw_web_trace_directory": "PRIVATE_CHECKPOINT/research/R03/researcher-2/web"
+  },
+  "publication": "原文断片とツール取得記録はprivate。公開する場合は独自要約・URL・短い引用に限る。",
+  "source_id": "R03-R2-S02",
+  "verified_in_current_round": "R03",
+  "canonical_url": "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/scheibehenne-jcr2010.pdf"
+}

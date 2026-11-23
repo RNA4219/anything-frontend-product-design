@@ -1,0 +1,70 @@
+{
+  "source_id": "B-S205",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/check-answers/",
+  "title": "GOV.UK Design System: Check answers",
+  "type": "official service design pattern guidance",
+  "authority": "GOV.UK Design System team",
+  "capture_kind": "FULL",
+  "sha256": "81ce6c749a7a8b10d8964ff5d8d1e0288be17ab3ddae506ed4a88e1cda8f62ba",
+  "locator": [
+    {
+      "section": "When to use this pattern",
+      "source_lines": "L390–L396",
+      "local_lines": "618–624"
+    },
+    {
+      "section": "Make the page easy to understand / Let users go back and change their answers",
+      "source_lines": "L410–L430",
+      "local_lines": "638–658"
+    }
+  ],
+  "observed_facts": [
+    "中小規模の取引では完了確認画面直前の1つの回答確認ページを推奨する。非常に大きい複数区分の取引では区分末の確認が有用な場合があるが、ユーザーテストを求める。",
+    "各セクションから変更でき、変更画面に既入力をあらかじめ入れ、変更後は残り全部のフローをやり直さず確認ページへ戻す。",
+    "変更によって追加質問が必要になったら、確認ページに戻る前に質問する。関連する区分だけを見せ、最終送信操作の意味を明らかにする。"
+  ],
+  "limitations": [
+    "状態管理の依存グラフ、料金・在庫等の再検証、変更前の確認証跡失効を直接規定しない。これらは適用時の推論。",
+    "パターンに書かれた期待効果を対象fixtureで測定した結果として扱わない。",
+    "FULLはwebツール抽出のL0–L459をすべて保存した意味であり、raw HTMLではない。"
+  ],
+  "upstream_refs": [
+    {
+      "url": "https://design-system.service.gov.uk/patterns/confirmation-pages/",
+      "relationship": "navigation link observed; already covered by R01 B-S105, not reacquired"
+    },
+    {
+      "url": null,
+      "observed_domain": "dwpdigital.blog.gov.uk",
+      "parent_url": "https://design-system.service.gov.uk/patterns/check-answers/",
+      "observed_link_id": 44,
+      "relationship": "Research on this pattern links to a Carer’s Allowance article; exact target not resolved, no empirical claim adopted"
+    }
+  ],
+  "capture_file": "B-S205-govuk-check-answers.web.txt",
+  "capture_storage": "Private research archive",
+  "checked_at": "2026-11-23T07:15:18.361967+00:00",
+  "introduced_round": 2,
+  "redistribution": "Original captured text remains private. This public record contains original paraphrases, URLs and section locators only.",
+  "url": "https://design-system.service.gov.uk/patterns/check-answers/",
+  "section": [
+    {
+      "section": "When to use this pattern",
+      "source_lines": "L390–L396",
+      "local_lines": "618–624"
+    },
+    {
+      "section": "Make the page easy to understand / Let users go back and change their answers",
+      "source_lines": "L410–L430",
+      "local_lines": "638–658"
+    }
+  ],
+  "read_status": "FULL: exact web-extracted text saved privately; not raw HTML",
+  "capture_sha256": "81ce6c749a7a8b10d8964ff5d8d1e0288be17ab3ddae506ed4a88e1cda8f62ba",
+  "source_file_name": "B-S205-govuk-check-answers.web.txt",
+  "limits": [
+    "状態管理の依存グラフ、料金・在庫等の再検証、変更前の確認証跡失効を直接規定しない。これらは適用時の推論。",
+    "パターンに書かれた期待効果を対象fixtureで測定した結果として扱わない。",
+    "FULLはwebツール抽出のL0–L459をすべて保存した意味であり、raw HTMLではない。"
+  ]
+}

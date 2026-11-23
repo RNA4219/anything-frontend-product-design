@@ -1,0 +1,211 @@
+{
+  "round": "R02",
+  "evaluated_at": "2026-11-23T07:43:56.721000+00:00",
+  "evaluator_role": "independent critic/evaluator",
+  "rubric_path": "inspected-snapshot/campaigns/A/rounds/R02/rubric.json",
+  "rubric_sha256": "785c1267f6bed97731ecaad19de7f2012e2fdcb56b359c8a47f733b0d8425e2d",
+  "rubric_unchanged": true,
+  "protocol": "evaluation-policy-frozen.json",
+  "blinding": {
+    "labels": [
+      "K",
+      "M"
+    ],
+    "arm_map_read": false,
+    "private_evaluation_read": false,
+    "limit": "Directory labels were anonymized; content may reveal treatment. Full assessor masking is not claimed."
+  },
+  "same_task": "training-catalogue-navigation",
+  "unit_of_observation": "同系モデル別スレッドの各arm1回の設計成果物",
+  "artifact_evidence": "plan.json、design.md、preview.htmlのソース。ブラウザー再試行なし。",
+  "arms": {
+    "K": {
+      "scores": [
+        {
+          "id": "N1",
+          "criterion": "同じ資料の複数入口・カテゴリ所属を別の独立正本にせずIDを保持する",
+          "score": 1,
+          "reason": "対象IDと正本URLを維持し、安全/入社時などは同じ正本への参照。HTMLの反復表示を独立正本と扱っていない。",
+          "evidence": [
+            "arms/K/plan.json#/decision_notes/5",
+            "arms/K/plan.json#/decision_notes/6",
+            "arms/K/design.md §4 正本・分類・比較情報",
+            "arms/K/preview.html #catalogue の分類タグと #course-C-101"
+          ]
+        },
+        {
+          "id": "N2",
+          "criterion": "特定範囲・有効な絞込・索引範囲に限った0件を全体不存在と結論しない",
+          "score": 1,
+          "reason": "my-enrollments・配属変更・online・0件・索引unknownを保持。全公開研修の不存在を結論せず、検索語/形式を解除した全公開比較先と登録済み内の復帰先を分ける。",
+          "evidence": [
+            "arms/K/plan.json#/decision_notes/7",
+            "arms/K/plan.json#/decision_notes/8",
+            "arms/K/preview.html #enrolled-zero",
+            "arms/K/design.md §5 0件の解釈と復帰先"
+          ]
+        },
+        {
+          "id": "N3",
+          "criterion": "旧入口の目的・対象範囲を保つか、提供終了/不明を明示する。同名の別対象へ無言置換しない",
+          "score": 1,
+          "reason": "旧/training/basicをC-101に対応させ、同名C-202へ置換しない。実転送は未確認と分ける。",
+          "evidence": [
+            "arms/K/plan.json#/decision_notes/10",
+            "arms/K/plan.json#/unresolved のu_legacy",
+            "arms/K/preview.html #legacy-entry"
+          ]
+        },
+        {
+          "id": "N4",
+          "criterion": "実際に比較・選択する場所とgoal_routesの到達先、必要情報の配置が一致する",
+          "score": 1,
+          "reason": "g_chooseのtarget=s_catalogue。対応するHTMLの比較表に3件があり、C-101とC-202のID/title/audience/date/formatを展開せず参照できるソース構造。詳細の識別ラベルと同じ対象の着地が対応する。",
+          "evidence": [
+            "arms/K/plan.json#/goal_routes/0",
+            "arms/K/plan.json#/screens のs_catalogue",
+            "arms/K/preview.html #catalogue の比較表",
+            "arm-source-checks.json#/K/required_values_in_target_rows"
+          ]
+        },
+        {
+          "id": "N5",
+          "criterion": "プロセスの途中画面へ不要な独立入口を強制せず、必要な探索入口は理由付きで提供する",
+          "score": 1,
+          "reason": "申込完了を独立した製品メニューへ追加しない。通常の探索と再開には理由付き入口を残す。レビュー用目次を製品メニューと明確に区別している。",
+          "evidence": [
+            "arms/K/plan.json#/decision_notes/13",
+            "arms/K/design.md §5 ナビゲーションと申込完了",
+            "arms/K/preview.html header の主要な行先/設計レビュー用の目次"
+          ]
+        },
+        {
+          "id": "N6",
+          "criterion": "到達グラフの成立、ラベル理解、検索網羅性、実装動作、人の発見を区別する",
+          "score": 1,
+          "reason": "情報対応の机上照合、HTMLソース、未実施の描画/実操作/検索/転送/認可/利用者評価を明記。available入力、索引unknown、blocking=falseの意味をそれぞれ限定し、規格適合や人の成功を宣言しない。",
+          "evidence": [
+            "arms/K/plan.json#/decision_notes/4",
+            "arms/K/plan.json#/decision_notes/15",
+            "arms/K/plan.json#/decision_notes/16",
+            "arms/K/design.md §7–8",
+            "arms/K/preview.html #verification"
+          ]
+        }
+      ],
+      "total": 6,
+      "maximum": 6,
+      "hard_failures": [],
+      "observed_structure": "独立再実行でbaseline checkerと修正版checkerの両方PASS。これは構造のみ。",
+      "visual_intent": "learning-editorial-existing ID保持。既存資産未提供につき実意匠の再現は未確認。",
+      "remaining_limits": [
+        "実際の検索・条件解除・正本URL/旧URL転送・学習再開は未実装/未検証。",
+        "HTMLの描画・端末別表示・キーボード・支援技術の関連付けは確認していない。",
+        "受講者のラベル理解・到達/選択成功率・所要時間・選好は未評価。"
+      ]
+    },
+    "M": {
+      "scores": [
+        {
+          "id": "N1",
+          "criterion": "同じ資料の複数入口・カテゴリ所属を別の独立正本にせずIDを保持する",
+          "score": 1,
+          "reason": "C-101/C-202/C-303を対象IDごとの正本として保持。カテゴリはIDへの参照、表示の反復はビューと明記する。",
+          "evidence": [
+            "arms/M/plan.json#/decision_notes/3",
+            "arms/M/plan.json#/decision_notes/4",
+            "arms/M/design.md §3 対象・属性・状態・分類",
+            "arms/M/preview.html #s_catalogue の分類タグ/正本URL"
+          ]
+        },
+        {
+          "id": "N2",
+          "criterion": "特定範囲・有効な絞込・索引範囲に限った0件を全体不存在と結論しない",
+          "score": 1,
+          "reason": "限定された検索0件と索引未知を保持し、全体不存在を否定。全公開・条件なしの復帰先がC-101/C-202の同時比較を保つ理由を示す。",
+          "evidence": [
+            "arms/M/plan.json#/decision_notes/7",
+            "arms/M/plan.json#/decision_notes/8",
+            "arms/M/design.md §6 0件で言えること・言えないこと",
+            "arms/M/preview.html #s_enrolled_empty"
+          ]
+        },
+        {
+          "id": "N3",
+          "criterion": "旧入口の目的・対象範囲を保つか、提供終了/不明を明示する。同名の別対象へ無言置換しない",
+          "score": 1,
+          "reason": "旧/training/basicの入社時研修という意味を保持しC-101へ対応。C-202や汎用カテゴリへの置換を禁止し、実転送を未実装とする。",
+          "evidence": [
+            "arms/M/plan.json#/decision_notes/5",
+            "arms/M/plan.json#/unresolved のu_legacy",
+            "arms/M/design.md §5 旧ブックマーク",
+            "arms/M/preview.html #legacy-entry"
+          ]
+        },
+        {
+          "id": "N4",
+          "criterion": "実際に比較・選択する場所とgoal_routesの到達先、必要情報の配置が一致する",
+          "score": 1,
+          "reason": "g_chooseのtarget=s_catalogueで、同じHTML節の表に3件と必須5項目がある。選択後のC-202詳細を比較判断のtargetと混同せず、リンクのIDと着地が一致する。",
+          "evidence": [
+            "arms/M/plan.json#/goal_routes/0",
+            "arms/M/plan.json#/screens のs_catalogue",
+            "arms/M/preview.html #s_catalogue の比較表",
+            "arm-source-checks.json#/M/required_values_in_target_rows"
+          ]
+        },
+        {
+          "id": "N5",
+          "criterion": "プロセスの途中画面へ不要な独立入口を強制せず、必要な探索入口は理由付きで提供する",
+          "score": 1,
+          "reason": "申込完了は処理結果として引き継ぎ、独立メニューを設けない。全公開/登録済みの2入口には新規選択/再開という目的を付ける。",
+          "evidence": [
+            "arms/M/plan.json#/decision_notes/6",
+            "arms/M/plan.json#/decision_notes/10",
+            "arms/M/design.md §5 申込完了の位置",
+            "arms/M/preview.html の各主要移動nav"
+          ]
+        },
+        {
+          "id": "N6",
+          "criterion": "到達グラフの成立、ラベル理解、検索網羅性、実装動作、人の発見を区別する",
+          "score": 1,
+          "reason": "ソース上の対応と実操作・人評価を分離。検索索引、再開、旧入口、認可、意匠/アクセシビリティに未確認事項を残し、静的プレビューのdisabled操作を成功扱いしない。",
+          "evidence": [
+            "arms/M/plan.json#/decision_notes/14",
+            "arms/M/plan.json#/decision_notes/15",
+            "arms/M/design.md §8–9",
+            "arms/M/preview.html footerと #resume-note"
+          ]
+        }
+      ],
+      "total": 6,
+      "maximum": 6,
+      "hard_failures": [],
+      "observed_structure": "独立再実行でbaseline checkerと修正版checkerの両方PASS。これは構造のみ。",
+      "visual_intent": "learning-editorial-existing ID保持。既存資産未提供につき実意匠の再現は未確認。",
+      "remaining_limits": [
+        "実際の検索・条件解除・正本URL/旧URL転送・学習再開は未実装/未検証。",
+        "HTMLの描画・端末別表示・キーボード・支援技術の関連付けは確認していない。",
+        "受講者のラベル理解・到達/選択成功率・所要時間・選好は未評価。"
+      ]
+    }
+  },
+  "comparison": {
+    "K_total": 6,
+    "M_total": 6,
+    "K_minus_M": 0,
+    "criterion_differences": [],
+    "conclusion": "この固定課題と6基準では差を観測しなかった。改善効果も同等性も実証していない。",
+    "not_supported": [
+      "人の成功率・時間・選好の改善",
+      "統計的または客観的な優越",
+      "Skill全体の効果",
+      "実装やWCAGへの適合"
+    ]
+  },
+  "cross_checks": "arm-source-checks.json",
+  "counterexamples": "counterexamples-results.json",
+  "correction_check": "correction-check/results.json",
+  "no_new_criteria_added": true
+}

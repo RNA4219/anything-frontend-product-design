@@ -1,0 +1,150 @@
+{
+  "round": 2,
+  "new_sources": 10,
+  "reused_existing": [
+    "B-S104",
+    "B-T205"
+  ],
+  "duplicate_new_records": 0,
+  "records": [
+    {
+      "researcher": "researcher1",
+      "source_ids": [
+        "B-S201",
+        "B-S202",
+        "B-S203",
+        "B-S204",
+        "B-S205"
+      ],
+      "finding_count": 8,
+      "source_hashes_verified": true,
+      "tool_runs": [
+        {
+          "tool": "local documentation read",
+          "status": "OK with resolved path",
+          "details": "README.md read; requested top-level SKILL.md missing. rg discovered skills/imozuru/SKILL.md, which was read along with documented CLI interfaces."
+        },
+        {
+          "tool": "fetch.py",
+          "command": "python3 tooling:imozuru/skills/imozuru/scripts/fetch.py private-evidence:round02/researcher1/sources w3c-wcag22-normative https://www.w3.org/TR/WCAG22/",
+          "status": "FAIL",
+          "exit_code": 1,
+          "reason": "Temporary failure in name resolution",
+          "evidence": "fetch-log.jsonl",
+          "note": "one current direct acquisition attempted; no network guard disabled"
+        },
+        {
+          "tool": "web tool",
+          "status": "OK fallback",
+          "calls": 6,
+          "operations": {
+            "search_queries": 3,
+            "open": 9,
+            "find": 10,
+            "click": 2
+          },
+          "evidence": "tool-output/*.txt",
+          "note": "Only official W3C and GOV.UK domains used as evidence. 8 search hits returned by one batched search; the tool returned an unpartitioned union, so no per-query attribution is fabricated."
+        },
+        {
+          "tool": "digest.py add",
+          "command": "python3 tooling:imozuru/skills/imozuru/scripts/digest.py add private-evidence:round02/researcher1 --round 2 --by researcher1 < private-evidence:round02/researcher1/queries-input.json",
+          "status": "OK",
+          "exit_code": 0,
+          "records": 3,
+          "hits": 10,
+          "evidence": "queries.jsonl",
+          "note": "One truthful batched-search union record plus two actual backward-reference records."
+        },
+        {
+          "tool": "chain.py",
+          "status": "NOT_RUN",
+          "reason": "Sources are standards and service-design pages, not papers. Documented non-paper backward linking was used instead; no invented CLI. Prior OpenAlex429 is a known contract limitation, not a fresh measured result."
+        },
+        {
+          "tool": "hashlib.sha256",
+          "status": "OK",
+          "note": "Hashes computed over the exact saved captures. All capture paths and hashes checked at completion."
+        },
+        {
+          "tool": "implementation/UI testing",
+          "status": "NOT_RUN",
+          "reason": "Parent owns tests and adoption; all verification items are proposals."
+        }
+      ],
+      "costs": {
+        "amount": null,
+        "measured": false
+      }
+    },
+    {
+      "researcher": "researcher2",
+      "source_ids": [
+        "B-T301",
+        "B-T302",
+        "B-T303",
+        "B-T304",
+        "B-T305"
+      ],
+      "finding_count": 7,
+      "source_hashes_verified": true,
+      "tool_runs": [
+        {
+          "tool": "exec_command",
+          "action": "read contract, README and resolved skills/imozuru/SKILL.md",
+          "result": "read; top-level SKILL.md absent and located via rg"
+        },
+        {
+          "tool": "digest.py --help",
+          "result": "failed: script treats --help as topic path; no artifact changed"
+        },
+        {
+          "tool": "fetch.py",
+          "command": "python3 tooling/imozuru/skills/imozuru/scripts/fetch.py private/B/round02/researcher2/sources microsoft-2026-compensating-transaction https://learn.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction",
+          "result": "FAIL DNS Errno -3; direct network tested once; fetch-log.jsonl records failure"
+        },
+        {
+          "tool": "web.system1_search_query",
+          "queries": 3,
+          "hits": 5,
+          "result": "official source discovery; exact title/URL list preserved as ledger input; bundled query result association manually grouped by query topic"
+        },
+        {
+          "tool": "web.open/find/click",
+          "result": "5 official documents retrieved as extracted text; original raw tool result JSON saved in tool-output; all source texts are private"
+        },
+        {
+          "tool": "web.click",
+          "action": "B-T304 link 33 -> B-T305",
+          "result": "actual reference traversal, captured turn174995417view3; full relevant text later retrieved; ledger record 4"
+        },
+        {
+          "tool": "digest.py add",
+          "command": "python3 tooling/imozuru/skills/imozuru/scripts/digest.py add private/B/round02/researcher2 --round 2 --by r02_research_alternative < private/B/round02/researcher2/tool-output/query-input.json",
+          "result": "4 records, 6 hits (3 search records + 1 reference edge) appended"
+        },
+        {
+          "tool": "chain.py",
+          "result": "help read only; no research traversal requested through OpenAlex because these are product docs. No invented link-chasing CLI."
+        },
+        {
+          "tool": "build_captures.py",
+          "result": "merge exact web line text, detect gaps/conflicts, SHA-256 actual bytes; source-local line locators mapped"
+        },
+        {
+          "tool": "report.py --check",
+          "result": "PASS exit 0: all 5 short quotes match exact captured source lines; this is evidence-integrity checking, not application testing."
+        }
+      ],
+      "costs": {
+        "amount": null,
+        "measured": false
+      }
+    }
+  ],
+  "limits": [
+    "Source text retrieval is not a product API execution.",
+    "Windows 7 confirmation guide is explicitly legacy; no current-platform rule or measured efficacy inferred.",
+    "Contradictory Cloud Storage delete/cancel wording excluded from adopted guarantees."
+  ]
+}

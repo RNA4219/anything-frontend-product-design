@@ -1,0 +1,176 @@
+{
+  "K": {
+    "level": "JSON and HTML source only",
+    "file_hashes_match": true,
+    "duplicate_html_ids": [],
+    "broken_internal_anchors": [],
+    "g_choose_target": "s_catalogue",
+    "required_values_in_target_rows": [
+      {
+        "course_id": "C-101",
+        "matching_rows": 1,
+        "five_required_values_in_row": true
+      },
+      {
+        "course_id": "C-202",
+        "matching_rows": 1,
+        "five_required_values_in_row": true
+      },
+      {
+        "course_id": "C-303",
+        "matching_rows": 1,
+        "five_required_values_in_row": true
+      }
+    ],
+    "plan_screen_ids": [
+      "s_catalogue",
+      "s_course_101",
+      "s_course_202",
+      "s_course_303",
+      "s_enrolled",
+      "s_enrolled_zero",
+      "s_learning_101"
+    ],
+    "html_screen_ids": [
+      "s_catalogue",
+      "s_course_101",
+      "s_course_202",
+      "s_course_303",
+      "s_enrolled",
+      "s_enrolled_zero",
+      "s_learning_101"
+    ],
+    "validator_results": {
+      "baseline": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 2,
+          "features": 2,
+          "kept_features": 2,
+          "screens": 7,
+          "navigation_edges": 19
+        }
+      },
+      "corrected_candidate": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "navigation_context": false,
+          "search_coverage": false,
+          "legacy_entry_identity": false,
+          "rendered_goal_location": false,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 2,
+          "features": 2,
+          "kept_features": 2,
+          "screens": 7,
+          "navigation_edges": 19
+        }
+      }
+    },
+    "not_tested": [
+      "rendering",
+      "click behavior",
+      "programmatic accessibility relationships",
+      "real URL routing",
+      "search coverage",
+      "human usability"
+    ]
+  },
+  "M": {
+    "level": "JSON and HTML source only",
+    "file_hashes_match": true,
+    "duplicate_html_ids": [],
+    "broken_internal_anchors": [],
+    "g_choose_target": "s_catalogue",
+    "required_values_in_target_rows": [
+      {
+        "course_id": "C-101",
+        "matching_rows": 1,
+        "five_required_values_in_row": true
+      },
+      {
+        "course_id": "C-202",
+        "matching_rows": 1,
+        "five_required_values_in_row": true
+      },
+      {
+        "course_id": "C-303",
+        "matching_rows": 1,
+        "five_required_values_in_row": true
+      }
+    ],
+    "plan_screen_ids": [
+      "s_catalogue",
+      "s_course_c101",
+      "s_course_c202",
+      "s_course_c303",
+      "s_enrolled",
+      "s_enrolled_empty"
+    ],
+    "html_screen_ids": [
+      "s_catalogue",
+      "s_course_c101",
+      "s_course_c202",
+      "s_course_c303",
+      "s_enrolled",
+      "s_enrolled_empty"
+    ],
+    "validator_results": {
+      "baseline": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 2,
+          "features": 2,
+          "kept_features": 2,
+          "screens": 6,
+          "navigation_edges": 16
+        }
+      },
+      "corrected_candidate": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "navigation_context": false,
+          "search_coverage": false,
+          "legacy_entry_identity": false,
+          "rendered_goal_location": false,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 2,
+          "features": 2,
+          "kept_features": 2,
+          "screens": 6,
+          "navigation_edges": 16
+        }
+      }
+    },
+    "not_tested": [
+      "rendering",
+      "click behavior",
+      "programmatic accessibility relationships",
+      "real URL routing",
+      "search coverage",
+      "human usability"
+    ]
+  }
+}

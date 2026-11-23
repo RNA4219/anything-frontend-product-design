@@ -1,0 +1,22 @@
+{
+  "suite": "B-R02-exploratory-branch-error-regressions",
+  "module": "campaigns/B/rounds/02/artifacts/initial/task-flows.mjs",
+  "total": 3,
+  "passed": 2,
+  "results": [
+    {
+      "id": "E01-inactive-error",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    },
+    {
+      "id": "E02-reactivated-required-answer",
+      "pass": true
+    },
+    {
+      "id": "E03-unrelated-active-error-preserved",
+      "pass": true
+    }
+  ],
+  "origin": "Independent critic found nonapplicable hidden address error blocking review; separate from frozen 16-case scoring."
+}

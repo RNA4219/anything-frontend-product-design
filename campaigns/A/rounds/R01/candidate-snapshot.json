@@ -1,0 +1,19 @@
+{
+  "frozen_at": "2026-11-23T06:48:31.771948+00:00",
+  "files": {
+    "SKILL.md": "1f4cd04a639fb26498ec892b7188930d09d24080b1a2cc238d539ed26fa32b2d",
+    "checks/validate_plan.py": "20a5e944a6feafdfe38c7ea0abbf586172fd3aad446d725297a68e98b32da67c",
+    "references/disclosure-and-verification.md": "a275f76285b9c476140a15793e6188c26ca8f4ebb2d6cc31f9b653411a793872",
+    "references/feature-context.md": "7be032c969c8e328cfd3cf1937bf57dd098bcbe4c9bbf15d0407f97a1c124fc6",
+    "references/goals-and-features.md": "6a51cc69edc1a041bccd6f270d1b390d1b4e55c336e9d271057122bdc20b3a3f",
+    "references/information-architecture.md": "c7b254390f3b05162d93fa4e5371b40221d24e09240f7f9da5e2493809fabfbb",
+    "references/plan-contract.md": "360e357edc33cd57daf033379f43d7c2eff86324fabba0557ce81dbd0b5692a0",
+    "references/sources.md": "a5e2dce251f5587c12da052c11ce9b50af18ed5ed1342735e8a5f975787e69c6"
+  },
+  "excludes": [
+    "tests",
+    "rubric",
+    "other arm outputs"
+  ],
+  "role": "candidate skill snapshot"
+}

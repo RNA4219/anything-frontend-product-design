@@ -1,0 +1,115 @@
+{
+  "checker": "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/validate_plan.py",
+  "checker_sha256": "20a5e944a6feafdfe38c7ea0abbf586172fd3aad446d725297a68e98b32da67c",
+  "author": "independent same-family model critic",
+  "observations": [
+    {
+      "name": "control_live_reachable",
+      "expected_status": "PASS",
+      "explanation": "既存必須機能は入口画面に配置される。",
+      "actual_status": "PASS",
+      "exit_code": 0,
+      "issues": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/validate_plan.py",
+        "--brief",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/control_live_reachable/brief.json",
+        "--plan",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/control_live_reachable/plan.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/control_live_reachable/actual.json"
+      ]
+    },
+    {
+      "name": "ce01_unreachable_capability",
+      "expected_status": "FAIL_or_HOLD",
+      "explanation": "必須機能は入口も辺もない画面にしか配置されない。到達先の目標IDと情報IDだけは存在する。",
+      "actual_status": "PASS",
+      "exit_code": 0,
+      "issues": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/validate_plan.py",
+        "--brief",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce01_unreachable_capability/brief.json",
+        "--plan",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce01_unreachable_capability/plan.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce01_unreachable_capability/actual.json"
+      ]
+    },
+    {
+      "name": "ce02_planned_merge_replacement",
+      "expected_status": "FAIL_or_HOLD",
+      "explanation": "提供中の必須機能を提供予定の機能へ即時merge。remove/deferだけにある現提供検査を通らない。",
+      "actual_status": "PASS",
+      "exit_code": 0,
+      "issues": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/validate_plan.py",
+        "--brief",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce02_planned_merge_replacement/brief.json",
+        "--plan",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce02_planned_merge_replacement/plan.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce02_planned_merge_replacement/actual.json"
+      ]
+    },
+    {
+      "name": "control_current_merge_replacement",
+      "expected_status": "PASS",
+      "explanation": "同じ機能の正本が現在提供され、必須成果も維持される。",
+      "actual_status": "PASS",
+      "exit_code": 0,
+      "issues": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/validate_plan.py",
+        "--brief",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/control_current_merge_replacement/brief.json",
+        "--plan",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/control_current_merge_replacement/plan.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/control_current_merge_replacement/actual.json"
+      ]
+    },
+    {
+      "name": "ce03_indirect_canonical_chain",
+      "expected_status": "FAIL_or_documented_exception",
+      "explanation": "A02/A03本文はkeep正本へ直接・一段で対応を要求するが、間接merge鎖を許すか確認する。",
+      "actual_status": "PASS",
+      "exit_code": 0,
+      "issues": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/validate_plan.py",
+        "--brief",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce03_indirect_canonical_chain/brief.json",
+        "--plan",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce03_indirect_canonical_chain/plan.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce03_indirect_canonical_chain/actual.json"
+      ]
+    },
+    {
+      "name": "ce04_mixed_role_screen_leak",
+      "expected_status": "FAIL_or_HOLD",
+      "explanation": "権限を変えていない監督者専用機能と全出荷情報を、発送担当にも開放した画面へ条件なしに配置する。",
+      "actual_status": "PASS",
+      "exit_code": 0,
+      "issues": [],
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/validate_plan.py",
+        "--brief",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce04_mixed_role_screen_leak/brief.json",
+        "--plan",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce04_mixed_role_screen_leak/plan.json",
+        "--output",
+        "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce04_mixed_role_screen_leak/actual.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "skill_id": "A-IU-008",
+  "domain": "product-information-architecture",
+  "trigger": "折りたたみ、詳細ページ、別タブ、ウィザード、hover表示、初期表示の削減を提案するとき。提供する作業のtargetを決めた後は、優先度にかかわらず必ず点検する。",
+  "intent": "判断必須情報を隠さず、補足を段階的に開示する",
+  "required_inputs": [
+    "各goalのneeded_informationと、target画面で行う判断。",
+    "情報の実例、条件による必要性、利用頻度、役割・権限。",
+    "secondaryへ移したい理由と、その情報へ到達する手段。",
+    "goal/role/needed_information、提供・延期の明示、対応するfeatures/screens/goal_routes。",
+    "対象・判断時点・適用条件と根拠、判断を変える具体値、補助説明。",
+    "現在のvisibility、参照に要する操作、判断場所の実表示または未確認状態。",
+    "必要情報ID、値の根拠、取得・計測状態、適用条件と対象範囲。",
+    "値または適用状態の違いが選択・棄却・着手可否を変えるか。",
+    "role・秘匿条件、既存の表示案、データ取得責任と残件。"
+  ],
+  "decision_rules": [
+    "その画面での判断・達成に必要な情報はprimaryにする。クリック・展開・hover・別画面への移動なしで参照できることを求める。",
+    "primaryはスクロールを許容する。全情報が常に最初の表示範囲へ収まることや、固定表示を意味しない。",
+    "補足であり、その判断に使わなくても達成できる情報だけをsecondary候補にする。",
+    "低頻度の情報でも、必要な場面では判断必須ならその場面のtargetでprimaryにする。",
+    "後の作業で初めて必要な情報を後の段階へ置くことと、任意の補足を隠すことを区別する。",
+    "機能が存在すると気づくための入口を隠す案は、情報量削減と別に発見可能性を検討する。hoverすれば分かると仮定しない。",
+    "必要性は当該role・対象・判断時点・有効条件に限定する。needed_informationをprimaryに要求するのは本Skillの契約で、GOV.UKが全面的に開示を禁止した規範ではない。",
+    "宣言済みgoal_routesは優先度にかかわらず能力とneeded_informationを照合する候補とする。文章だけにある提供宣言と実際の判断場所は、現在の契約では意味照合を残す。",
+    "条件が不明なら非該当は未確定。不明な値を0/falseへ変換しない規則は意味保持からのSkill導出で、HL7が一般UIへ定めた表示規則ではない。",
+    "必要な情報項目が存在することと、値が既知で判断が成立することを分ける。primaryという記録だけで後者を証明しない。"
+  ],
+  "procedure": [
+    "1. 各target画面について「必要情報ID／判断との関係／現在のvisibility／参照に必要な操作」を作業表にする。",
+    "2. goalのneeded_informationを表へ突き合わせ、欠落またはsecondaryのものを特定する。",
+    "3. 必須情報が別画面にしかない場合は、その場へ提示するか、比較等を担当する適切なtargetを作り、経路も更新する。",
+    "4. secondary候補ごとに、その情報を読まずに判断できる具体例を検討する。判断が変わりうるならprimaryへ戻す。",
+    "5. 補足への入口に内容が分かるラベルを提案する。展開UIの挙動・キーボード操作等はB/Cへ引き渡す。",
+    "6. 初期／二次の区分が多段化した場合、役割・判断・分類を再点検する。段数を固定上限へ合わせるために必要情報を削らない。",
+    "7. A06で宣言した全goal_routesの経路を再確認し、A09でprimaryに残す情報の構造を整理する。",
+    "goalのpriorityと、この計画で作業を提供する判断を分ける。提供を明示したshould/couldも、実際の判断場所・role・そのgoalを担うkeep正本・needed_informationを照合する。共通支援機能のkeepだけから、任意goal全体の提供を推定しない。",
+    "role・対象・判断時点・適用条件を明示し、条件が有効な場面で選択・棄却を変える具体値、適合条件、期限等をneeded_informationと対応させ、当該判断場所のprimaryへ置く。条件を判定するために必要な値も判定前に参照可能にし、適用判定後にしか読めない循環を作らない。条件不明は非該当とせずU02へ渡す。",
+    "具体的な判断材料と、その読み方・手順を詳述する補助説明を分ける。説明でも当該判断に不可欠と確定した部分は必要情報に含め、それ以外の少数向け補助説明は内容の分かる入口からの開示候補にする。情報の役割・条件・所在を既存reason/notesへ残す。",
+    "判断に使う情報について、値、入手状態、適用条件を分けて記す。確認済みの0/false、不明、未計測、適切な値を要しないと確認した非該当を同じ空欄や0へ置換しない。欠測理由が分からなければ理由も未確認とし、未計測等の原因を創作しない。",
+    "必要値が不明でも必要情報IDを消さず、条件が有効な判断場所に不明である状態と判断への影響を残す。重要な条件が不明な候補を適合・無料等と確定せず、取得先・担当・問いをunresolvedへ記す。必須達成を妨げる場合はblockingにし、影響しない判断まで一律に止めない。",
+    "非該当には適用条件と根拠を、0には定義・対象範囲に照らした根拠を付ける。説明はbriefのcontent/contexts、information.reason、decision_notesへ残し、必要な区別だけを認可されたroleへ伝える。HL7のコード体系や全欠測理由の画面公開を一般製品へ義務化しない。"
+  ],
+  "expected_outputs": [
+    "`screens.information`に`id/visibility/reason`を記録し、visibilityはprimaryまたはsecondaryを使う。",
+    "宣言したgoal_routesのtargetは、must/should/couldにかかわらず、そのgoalのneeded_informationをprimaryとして提供する。別targetで必要な情報まで全画面へ複製する必要はない。",
+    "根拠不明の必要性はdecision_notesに仮説として書く。必要情報の入手・権限が未解決なら、影響・取得先・担当をunresolvedへ記す。必須達成を妨げる場合にblockingにし、別の確認済み候補で判断を進められる場合はその範囲を明記する。"
+  ],
+  "dependencies": [
+    "A-IU-001"
+  ],
+  "exceptions": [
+    "needed_informationをtargetのprimaryに要求するのは本Skillの契約上の導出で、論文に同じJSON規則があるわけではない。",
+    "「補足」の判定は実タスクで変わる。利用者・業務の確認なしに最適な開示を断定しない。Nielsen記事の段数助言を普遍的上限に変換しない。",
+    "任意作業自体をdeferし理由・影響を明示して提供宣言を残していない場合、その作業の画面・経路・情報を一律に要求しない。must作業と共通の支援機能がkeepでも、任意作業専用機能の延期を取り消さない。",
+    "条件が非該当の補足や、条件が当てはまっても当該判断に不可欠ではない詳しい説明はsecondary候補。後の判断だけで必要な情報は、その後のtargetへ置ける。",
+    "primaryはスクロールを許す。全情報の初期表示、全画面への複製、Detailsの一律禁止、全任意goalへの経路追加を要求しない。",
+    "定義・対象範囲・根拠から0と確認できる値を、不必要に不明へ戻さない。",
+    "適用条件から適切な値を要しないと確認した場合、その値の取得を強制しない。",
+    "欠測理由の存在自体が秘匿対象になりうる。理由の全公開や医療コードの採用を要求せず、権限と判断に必要な意味を保つ。"
+  ],
+  "failure_modes": [
+    "見た目が込み合うという理由で期限・互換性・比較属性を折りたたむ。スクロールするprimaryを「隠れている」と誤判定する。",
+    "補足の区分を利用者の熟練度だけで決める。機能の入口まで消してから「探せば使える」と判断する。"
+  ],
+  "verification": [
+    "宣言した各goal_routeについてtargetの情報ID集合とgoalのneeded_informationを照合し、優先度にかかわらず必要なすべてがprimaryであることを確認する。作業自体を明示的に延期した任意goalには経路を一律要求しない。",
+    "次に実際の参照条件を確認する。属性だけprimaryでも展開操作が必要なら契約と実装が不一致。実装を見ていない場合は構造上の確認までと報告する。",
+    "同じ提供状態でpriorityだけを変える正負例、任意作業延期・共通支援機能の正例、値の意味と条件の独立照合を行う。"
+  ],
+  "source_refs": [
+    "A-S016",
+    "A-S019",
+    "A-S020",
+    "R03-R1-S01",
+    "R03-R1-S02",
+    "R03-R1-S03",
+    "R03-R2-S03"
+  ],
+  "confidence": {
+    "source_support": "R01–R03 bounded source records and independent review; inherited source provenance retained, no claim of full-source archive or universal empirical validity.",
+    "transfer": "Synthetic decision-information task pending",
+    "empirical_skill_effect": "unverified",
+    "task_effect": "One paired synthetic task per round; R03 6/6 versus 6/6 with assignment clue leakage; no improvement inference."
+  },
+  "status": "ACCEPT",
+  "version": "1.1.1",
+  "provenance": {
+    "kind": "inherited",
+    "repository": "RNA4219/anything-frontend-art-direction",
+    "revision": "97b19c29c0b63acfee9ad437f93af081ac0c6ef8",
+    "path": "extensions/A/references/disclosure-and-verification.md",
+    "original_unit": "A08"
+  },
+  "implementation": "modules/product-information-architecture/references/decision-information.md",
+  "history": [
+    {
+      "round": "R01",
+      "action": "migrated_without_novelty_credit",
+      "status": "DRAFT"
+    },
+    {
+      "round": "R03",
+      "action": "conditional_information_refinement",
+      "status": "REVISE",
+      "extractions": [
+        "R03-A-U01",
+        "R03-A-U02"
+      ],
+      "at": "2026-11-23T08:06:03.383864+00:00"
+    },
+    {
+      "round": "R03",
+      "version": "1.1.1",
+      "status": "ACCEPT",
+      "at": "2026-11-23T08:25:37.196539+00:00",
+      "reason": "Bounded independent source/instruction review, adversarial cases and 57-method suite; paired task tie and assignment leakage retained."
+    }
+  ],
+  "acceptance_evidence": [
+    "campaigns/A/rounds/R03/decision.json",
+    "campaigns/A/rounds/R03/independent-evidence/correction-check.json",
+    "campaigns/A/rounds/R03/tests-after-critic.txt"
+  ],
+  "acceptance_scope": "Instruction conditions and bounded structural verification only; source truth, actual UI behavior and human effectiveness require separate evidence."
+}

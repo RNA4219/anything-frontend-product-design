@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>工作室の予約</title>
+<style>
+  body { font: 1rem/1.55 system-ui, sans-serif; margin: 2rem auto; max-width: 40rem; padding-inline: 1rem; }
+  button, select { font: inherit; margin-block: .25rem; }
+  section { border-block-start: 1px solid #888; margin-block-start: 1rem; }
+  :focus-visible { outline: 3px solid #12649a; outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>工作室の予約</h1>
+  <ul>
+    <li><span id="current"></span> <button id="open">R-204 の日時を変更</button></li>
+    <li>R-205 工作室 11月10日 14:00 利用済み</li>
+  </ul>
+  <section id="editor" hidden>
+    <h2>変更する日時</h2>
+    <label for="slot">工作室の空き枠</label>
+    <select id="slot">
+      <option value="10">12月10日 14:00</option>
+      <option value="11">12月11日 14:00</option>
+    </select>
+    <button id="review">変更内容を確認</button>
+  </section>
+  <section id="review-panel" hidden>
+    <h2>確定前の確認</h2>
+    <p id="change"></p>
+    <button id="submit">日時の変更を確定</button>
+  </section>
+  <p id="message" role="status"></p>
+  <button id="lookup" hidden>現在の予約を確認</button>
+  <aside aria-label="試験用記録">
+    <p>試験用記録　R-204 の確定回数 <output id="count"></output></p>
+  </aside>
+</main>
+<script>
+  const params = new URLSearchParams(location.search);
+  const variant = params.get("variant") === "a" ? "a" : "b";
+  const scenario = params.get("scenario") || "normal";
+  const run = params.get("run") || "demo";
+  const storeKey = ["qa-booking", variant, scenario, run].join(":");
+  const original = { day: 8, commits: 0 };
+  const read = () => JSON.parse(sessionStorage.getItem(storeKey)) || original;
+  const byId = (id) => document.getElementById(id);
+  const dayText = (day) => `12月${day}日 14:00`;
+
+  function reflect() {
+    const booking = read();
+    byId("current").textContent = `R-204 工作室 ${dayText(booking.day)} 確定`;
+    byId("count").textContent = booking.commits;
+  }
+
+  byId("open").onclick = () => {
+    byId("editor").hidden = false;
+    byId("review-panel").hidden = true;
+    byId("lookup").hidden = true;
+    byId("message").textContent = "";
+    byId("slot").focus();
+  };
+
+  byId("review").onclick = () => {
+    byId("editor").hidden = true;
+    byId("review-panel").hidden = false;
+    byId("change").textContent =
+      `${dayText(read().day)} から ${dayText(byId("slot").value)} へ変更`;
+    byId("submit").focus();
+  };
+
+  byId("submit").onclick = () => {
+    const day = Number(byId("slot").value);
+    if (scenario === "conflict" && day === 10) {
+      byId("review-panel").hidden = true;
+      if (variant === "a") {
+        byId("message").textContent = "変更できませんでした。";
+        byId("open").focus();
+        return;
+      }
+      byId("message").textContent =
+        `${dayText(day)} は埋まりました。元の予約は ${dayText(read().day)} のままです。別の枠を選んでください。`;
+      byId("editor").hidden = false;
+      byId("slot").querySelector('[value="10"]').disabled = true;
+      byId("slot").value = "11";
+      byId("slot").focus();
+      return;
+    }
+
+    const previous = read();
+    const unchanged = day === previous.day && variant === "b";
+    if (!unchanged) {
+      sessionStorage.setItem(storeKey, JSON.stringify({ day, commits: previous.commits + 1 }));
+    }
+
+    if (scenario === "lost-reply" && previous.commits === 0) {
+      byId("message").textContent = variant === "a"
+        ? "応答がありません。もう一度確定してください。"
+        : "応答がありません。現在の予約を確認してください。";
+      if (variant === "b") {
+        byId("review-panel").hidden = true;
+        byId("open").disabled = true;
+        byId("current").textContent += "（応答を確認中）";
+        byId("lookup").hidden = false;
+        byId("lookup").focus();
+      }
+      return;
+    }
+
+    reflect();
+    byId("review-panel").hidden = true;
+    byId("open").focus();
+    byId("message").textContent = unchanged
+      ? `現在の予約は ${dayText(day)} です。同じ日時のため変更はありません。`
+      : `変更を受け付けました。現在の予約は ${dayText(day)} です。`;
+  };
+
+  byId("lookup").onclick = () => {
+    reflect();
+    byId("lookup").hidden = true;
+    byId("open").disabled = false;
+    byId("open").focus();
+    byId("message").textContent = `現在の予約は ${dayText(read().day)} に確定しています。`;
+  };
+
+  reflect();
+</script>
+</body>
+</html>

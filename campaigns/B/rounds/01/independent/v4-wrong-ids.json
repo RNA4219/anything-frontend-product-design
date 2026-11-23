@@ -1,0 +1,86 @@
+{
+  "suite": "B-R01-flow-trials-v4",
+  "controller": "private/B/round01/critic/probe_flow.mjs",
+  "total": 14,
+  "passed": 12,
+  "failed": 2,
+  "results": [
+    {
+      "id": "T01",
+      "title": "Review has no side effect; acknowledged success updates confirmed data",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\n'R-WRONG' !== 'R-204'\n"
+    },
+    {
+      "id": "T02",
+      "title": "Known rejection preserves previous reservation and entered choice",
+      "pass": true
+    },
+    {
+      "id": "T03",
+      "title": "Lost response cannot authorize a distinct duplicate side effect",
+      "pass": true
+    },
+    {
+      "id": "T04",
+      "title": "Reconciliation confirms result without resubmitting",
+      "pass": true
+    },
+    {
+      "id": "T05",
+      "title": "Pending lookup keeps the intended change unresolved",
+      "pass": true
+    },
+    {
+      "id": "T06",
+      "title": "Cancellation acknowledgement is not a cancelled operation",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'UNRELATED-ID'\n- 'intent-1'\n"
+    },
+    {
+      "id": "T07",
+      "title": "Completion can win a cancellation race",
+      "pass": true
+    },
+    {
+      "id": "T08",
+      "title": "Confirmed cancellation preserves original and new intent gets new identity",
+      "pass": true
+    },
+    {
+      "id": "T09",
+      "title": "Rapid duplicate activation creates one operation",
+      "pass": true
+    },
+    {
+      "id": "T10",
+      "title": "Reconciliation failure keeps recovery available and entered data intact",
+      "pass": true
+    },
+    {
+      "id": "T11",
+      "title": "Editing a reviewed choice requires reviewing the changed choice",
+      "pass": true
+    },
+    {
+      "id": "T12",
+      "title": "Non-authoritative lookup miss does not prove no side effect",
+      "pass": true
+    },
+    {
+      "id": "T13",
+      "title": "Late cancellation acknowledgement cannot overwrite confirmed completion",
+      "pass": true
+    },
+    {
+      "id": "T14",
+      "title": "Late cancellation transport error cannot erase a verified result",
+      "pass": true
+    }
+  ],
+  "limits": [
+    "Synthetic service adapter; no live backend or human participants",
+    "Controller only; rendered text requires separate DOM inspection",
+    "A pass does not prove service implementation semantics"
+  ]
+}

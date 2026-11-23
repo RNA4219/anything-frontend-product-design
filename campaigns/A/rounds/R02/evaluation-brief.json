@@ -1,0 +1,195 @@
+{
+  "case_id": "training-catalogue-navigation",
+  "roles": [
+    {
+      "id": "learner",
+      "label": "受講者"
+    }
+  ],
+  "goals": [
+    {
+      "id": "g_choose",
+      "role": "learner",
+      "outcome": "同名の研修候補を対象ID・受講条件・開催条件で比べて、未受講のC-202を選ぶ",
+      "priority": "must",
+      "needed_information": [
+        "course_id",
+        "title",
+        "audience",
+        "date",
+        "format"
+      ]
+    },
+    {
+      "id": "g_resume",
+      "role": "learner",
+      "outcome": "受講登録済みC-101の学習を再開する",
+      "priority": "should",
+      "needed_information": [
+        "course_id",
+        "enrollment_state"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "r_choose",
+      "goal_ids": [
+        "g_choose"
+      ],
+      "mandatory": true,
+      "statement": "全公開研修からC-101とC-202を比較でき、絞込結果0件を全体不存在と断定しない。"
+    },
+    {
+      "id": "r_resume",
+      "goal_ids": [
+        "g_resume"
+      ],
+      "mandatory": false,
+      "statement": "登録済み研修の再開と、新しい研修の選択を区別する。"
+    }
+  ],
+  "feature_requests": [
+    {
+      "id": "f_catalogue",
+      "label": "研修を探す",
+      "object": "course",
+      "outcome": "choose-course",
+      "roles": [
+        "learner"
+      ],
+      "goal_ids": [
+        "g_choose"
+      ],
+      "requirement_ids": [
+        "r_choose"
+      ],
+      "dependencies": [],
+      "mandatory": true,
+      "scope": "all-published-courses",
+      "lifecycle": "existing",
+      "availability": "available",
+      "context_constraints": [
+        "learner-account"
+      ],
+      "evidence_refs": [
+        "e_task"
+      ]
+    },
+    {
+      "id": "f_enrolled",
+      "label": "登録済み研修",
+      "object": "course",
+      "outcome": "resume-course",
+      "roles": [
+        "learner"
+      ],
+      "goal_ids": [
+        "g_resume"
+      ],
+      "requirement_ids": [
+        "r_resume"
+      ],
+      "dependencies": [],
+      "mandatory": false,
+      "scope": "my-enrollments",
+      "lifecycle": "existing",
+      "availability": "available",
+      "context_constraints": [
+        "learner-account"
+      ],
+      "evidence_refs": [
+        "e_task"
+      ]
+    }
+  ],
+  "visual_intent": {
+    "id": "learning-editorial-existing",
+    "constraints": [
+      "既存意匠は維持。視覚資産は未提供。標準HTMLの情報見取り図を作り、新規意匠を採用済みとは書かない。"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "e_task",
+      "kind": "requirement",
+      "statement": "この合成課題の確定したタスクと全3件の内容",
+      "coverage": "指定ケースの全データと要求だけ",
+      "coverage_status": "verified"
+    },
+    {
+      "id": "e_index",
+      "kind": "unknown",
+      "statement": "検索索引の更新時点・全体網羅性は未確認。",
+      "coverage": "検索サービス",
+      "coverage_status": "unknown"
+    }
+  ],
+  "content": {
+    "courses": [
+      {
+        "id": "C-101",
+        "title": "基礎研修",
+        "audience": "入社時研修",
+        "date": "2026-12-01",
+        "format": "対面",
+        "tags": [
+          "安全",
+          "入社時"
+        ],
+        "enrollment_state": "登録済み",
+        "canonical_url": "/courses/C-101"
+      },
+      {
+        "id": "C-202",
+        "title": "基礎研修",
+        "audience": "配属変更時研修",
+        "date": "2026-12-12",
+        "format": "オンライン",
+        "tags": [
+          "安全",
+          "配属変更"
+        ],
+        "enrollment_state": "未登録",
+        "canonical_url": "/courses/C-202"
+      },
+      {
+        "id": "C-303",
+        "title": "記録管理",
+        "audience": "全受講者",
+        "date": "2026-12-20",
+        "format": "オンライン",
+        "tags": [
+          "運用"
+        ],
+        "enrollment_state": "未登録",
+        "canonical_url": "/courses/C-303"
+      }
+    ],
+    "current_search": {
+      "start": "登録済み研修",
+      "query": "配属変更",
+      "scope": "my-enrollments",
+      "filters": {
+        "format": "online"
+      },
+      "result_count": 0,
+      "index_coverage": "unknown"
+    },
+    "legacy_entries": [
+      {
+        "path": "/training/basic",
+        "target_course_id": "C-101",
+        "meaning": "入社時研修の旧ブックマーク",
+        "must_preserve": true
+      }
+    ],
+    "process_context": "申込完了画面は申し込み処理の結果。独立メニューに置く必要があるとの要求はない。"
+  },
+  "constraints": [
+    "追加取得・API動作は実装対象外。必要な検索範囲と情報上の復帰先だけ設計する。",
+    "カテゴリ所属のためにC-101の独立コピーを作らない。",
+    "同名タイトルを識別子や同等性の証拠にしない。",
+    "構造検査とラベル理解・実装結果を区別する。"
+  ]
+}

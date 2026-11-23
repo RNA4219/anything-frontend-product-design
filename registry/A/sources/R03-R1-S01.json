@@ -1,0 +1,87 @@
+{
+  "id": "R03-R1-S01",
+  "url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components/what-a-component-means",
+  "title": "What a component means",
+  "publisher": "Department for Work and Pensions (DWP), DWP Design System",
+  "source_type": "official_design_guidance",
+  "retrieved_at": "2026-11-23T07:53:23.057Z",
+  "sha256": "762bb3665edefc6acb2d7f29f54b1bc2d9d501dc5ee3b2833b246af453094461",
+  "sha256_scope": "selected Web excerpt file only; not original HTML/PDF",
+  "version": "Undated live official guidance as retrieved; publication date not inferred from crawl time.",
+  "locator": [
+    {
+      "remote": "Content the user can skip; web L363–380",
+      "local_line": 11
+    },
+    {
+      "remote": "Content the user can skip; National Insurance number example; web L373–380",
+      "local_line": 15
+    },
+    {
+      "remote": "Content the user can skip; web L380",
+      "local_line": 19
+    },
+    {
+      "remote": "Answering the user's question; web L320–328",
+      "local_line": 23
+    }
+  ],
+  "verified_claims": [
+    {
+      "claim": "DWPはDetails/Accordion/Tabsを、一部の利用者が安全に読み飛ばせる内容のグループとして説明する。",
+      "locator": "Content the user can skip; web L363–380"
+    },
+    {
+      "claim": "National Insurance numberがない場合の例は、条件が自分に当てはまらない利用者が省略できると記す。条件付き情報そのものの不要性を述べていない。",
+      "locator": "web L373–380"
+    },
+    {
+      "claim": "利用者の問いに答える内容は、その利用者のその時点で真であることを重視する。",
+      "locator": "Answering the user's question; web L320–328"
+    }
+  ],
+  "limits": [
+    "DWPの公式助言。対象人数・比較条件・効果量が示された実験報告ではない。",
+    "当てはまらない人が省略可能という条件を、当てはまる人も情報不要へ読み替えない。",
+    "must/should/couldやprimary/secondaryのJSON契約は指定していない。"
+  ],
+  "source_edges": [
+    {
+      "from_url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components/what-a-component-means",
+      "to_url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components",
+      "relation": "本文の研究・サービスでの観察に関する出所リンクを追跡",
+      "tool": "web.click",
+      "ref": "turn198942826view0",
+      "link_id": 148,
+      "from_locator": "web L286",
+      "result_ref": "turn816678240view0",
+      "verified": true
+    },
+    {
+      "from_url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components/what-a-component-means",
+      "to_url": "https://design-system.service.gov.uk/components/details/",
+      "relation": "本文のContent the user can skip表からDetails公式説明へ追跡",
+      "tool": "web.click",
+      "ref": "turn198942826view0",
+      "link_id": 159,
+      "from_locator": "web L369",
+      "result_ref": "turn816678240view1",
+      "verified": true
+    }
+  ],
+  "acquisition": {
+    "imozuru_fetch": "FAIL_DNS",
+    "fetch_log": "PRIVATE_CHECKPOINT/research/R03/researcher-1/logs/fetch-dwp-component-meaning.json",
+    "method": "selected original wording from Web extraction",
+    "original_html_downloaded": false,
+    "original_pdf_downloaded": false,
+    "full_original_archive": false,
+    "web_refs": [
+      "turn198942826view0"
+    ]
+  },
+  "publication_safety": "Source excerpts remain private. Publish only minimal metadata and original Japanese paraphrases if needed.",
+  "source_id": "R03-R1-S01",
+  "verified_in_current_round": "R03",
+  "canonical_url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components/what-a-component-means"
+}

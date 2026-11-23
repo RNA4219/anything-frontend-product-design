@@ -1,0 +1,17 @@
+{
+  "captured_at": "2026-11-23T06:52:19.833799+00:00",
+  "files": {
+    "SKILL.md": "48ba952dbccc01192b4c52036635cadb6e9787498a44a1726ff88f05ecc1e5e5",
+    "checks/flow-review.md": "791c407873089abafa23c5349d4db89da9baf5877d7451e825508d097b834153",
+    "references/async-outcomes.md": "3c8d532655d192d1250978969c64e44c4b3031275461a1f9fada61ad54a64f80"
+  },
+  "retained_public_copy": "campaigns/B/rounds/01/artifacts/candidate-skill",
+  "retained_file_hashes": {
+    "campaigns/B/rounds/01/artifacts/candidate-skill/SKILL.input.md": "48ba952dbccc01192b4c52036635cadb6e9787498a44a1726ff88f05ecc1e5e5",
+    "campaigns/B/rounds/01/artifacts/candidate-skill/checks/flow-review.md": "791c407873089abafa23c5349d4db89da9baf5877d7451e825508d097b834153",
+    "campaigns/B/rounds/01/artifacts/candidate-skill/references/async-outcomes.md": "3c8d532655d192d1250978969c64e44c4b3031275461a1f9fada61ad54a64f80"
+  },
+  "retained_name_mapping": {
+    "SKILL.md": "SKILL.input.md"
+  }
+}

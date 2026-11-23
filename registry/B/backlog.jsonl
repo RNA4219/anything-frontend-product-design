@@ -1,0 +1,14 @@
+{"issue_id": "B-001", "priority": "P0", "title": "Unknown outcome and safe retry after submission", "domain": "interaction-ux-flow", "status": "ACCEPT", "round": 1}
+{"issue_id": "B-002", "priority": "P0", "title": "Cancel request, confirmed cancellation and truthful Undo", "domain": "interaction-ux-flow", "status": "ACCEPT", "round": 2}
+{"issue_id": "B-003", "priority": "P0", "title": "Form correction without losing entered work", "domain": "interaction-ux-flow", "status": "ACCEPT", "round": 2}
+{"issue_id": "B-004", "priority": "P0", "title": "Review consequential changes and distinguish submission from completion", "domain": "interaction-ux-flow", "status": "ACCEPT", "round": 2}
+{"issue_id": "B-005", "priority": "P1", "title": "Resume interrupted task and handle expired prerequisites", "domain": "interaction-ux-flow", "status": "ACCEPT", "round": 3}
+{"issue_id": "B-006", "priority": "P1", "title": "Resolve stale revisions without silently overwriting user decisions", "domain": "interaction-ux-flow", "status": "ACCEPT", "round": 3}
+{"issue_id": "B-007", "priority": "P1", "title": "Partial batch outcomes and item-scoped recovery", "domain": "interaction-ux-flow", "status": "QUEUED", "round": 4}
+{"issue_id": "B-008", "priority": "P1", "title": "Branch changes invalidate dependent answers only", "domain": "interaction-ux-flow", "status": "PARTIAL", "round": 2, "evidence": "B-IU-006 active answer/error/payload branch; broader task dependencies remain"}
+{"issue_id": "B-X-C01", "priority": "P1", "title": "C handoff: keyboard/focus/live-region component implementation", "domain": "ui-engineering", "status": "DISCOVER", "round": null}
+{"issue_id": "B-X-D01", "priority": "P1", "title": "D handoff: real-user task performance evaluation", "domain": "design-qa", "status": "DISCOVER", "round": null}
+{"issue_id": "B-002-UNDO", "priority": "P0", "title": "Undo scope, expiry and compensation outcome", "domain": "interaction-ux-flow", "status": "ACCEPT", "round": 2, "parent": "B-002"}
+{"issue_id": "B-009", "priority": "P0", "title": "Unverified certainty or causal order in labels and status copy", "domain": "interaction-ux-flow", "status": "ACCEPT", "round": 1, "resolution": "Integrated into B-IU-001/003 and semantic checklist; initial implementations and counterexamples retained"}
+{"issue_id": "B-010", "priority": "P1", "title": "Reconcile module entry with concurrent PR2 after merge-order decision", "domain": "interaction-ux-flow", "status": "HANDOFF", "round": 2, "evidence": "campaigns/B/existing-pr-overlap.json"}
+{"issue_id": "B-011", "priority": "P2", "domain": "interaction-ux-flow", "title": "Resolve excluded Cloud Storage delete/cancel documentation discrepancy before using those semantics", "status": "HOLD", "round": 2, "source_refs": ["B-T304", "B-T305"]}

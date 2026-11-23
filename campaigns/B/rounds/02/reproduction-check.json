@@ -1,0 +1,8 @@
+{
+  "scope": "Parent portability check of original independent harness; not new independent samples",
+  "original_harness_sha256": "1707ed43e2c257a88fe5e90b9497109e83766cefd9cdfdaa23b8019af0175b8a",
+  "portable_harness_sha256": "79f7153c63958819c0f6098a82154d2ae547c8afe6d192f48489c0d52b3ff842",
+  "path_changes_only": true,
+  "exit": 0,
+  "report_kept_private": "Same visible event scenarios as independent R02, on revised model; original independent results retained separately."
+}

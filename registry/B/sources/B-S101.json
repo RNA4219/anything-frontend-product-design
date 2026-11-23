@@ -1,0 +1,103 @@
+{
+  "source_id": "B-S101",
+  "title": "RFC 9110: HTTP Semantics",
+  "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+  "kind": "normative internet standard",
+  "section": "§9.2.2 Idempotent Methods; §15.3.3 202 Accepted; local excerpt lines 7–23 (web L1984–L1994, L3327–L3331)",
+  "read_status": "Multiple saved captures, each with explicit FULL/PARTIAL scope; see capture_history. Original capture fields retained.",
+  "observed_facts": [
+    "202 means accepted for processing, with processing incomplete; the request may or may not later be acted upon.",
+    "The response ought to describe current status and point to or embed a status monitor.",
+    "Automatic retry of non-idempotent methods is discouraged unless semantics are known idempotent or the original request is known unapplied.",
+    "ETagは選択された表現に対するopaqueなvalidatorであり、strong comparisonは非weakのタグ同士を文字単位の一致で判定する。",
+    "If-Matchは対象resourceの現在の表現を条件とし、* は現在の表現の存在を条件にする。通常のrequest検査の後、実行直前に評価する。",
+    "If-Matchが偽なら、その要求のmethodを新たに実行してはならない。既に要求された変更が適用済みと判断できる場合の2xx例外があり、常に412と断定しない。",
+    "§13.1は通常のpreconditionがtarget resourceのvalidatorを比較することと、複数resourceを扱う拡張条件を区別している。"
+  ],
+  "limits": [
+    "HTTP semantics do not establish booking-domain rollback, atomicity, cancellation policy, or safe UI wording.",
+    "Idempotency concerns intended effects, not every logging or revision side effect.",
+    "既存B-S101のR01取得物は変更していない。今回のPARTIAL取得物はETag・precondition節を追加するための別capture。",
+    "任意のETagの時間順序、関連する予約枠の整合性、利用者による承認、具体APIがvalidatorに含める全fieldは規定しない。",
+    "RFCでいうselected representationを任意の業務オブジェクト全体、権限、他のresourceに無条件で拡張しない。"
+  ],
+  "canonical_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+  "capture_sha256": "38f87b85f542b0c7edab21e61f1710dfb90b28976bd9e98adf2e677f2da239d9",
+  "capture_hash_scope": "exact retrieved representation, not necessarily raw webpage",
+  "source_file_name": "ietf-2022-rfc9110-excerpt.md",
+  "checked_at": "2026-11-23T06:43:37.753220+00:00",
+  "round": 1,
+  "redistribution": "Original is retained privately, not committed; this record contains campaign paraphrases and public locators.",
+  "capture_history": [
+    {
+      "round": 1,
+      "file_name": "ietf-2022-rfc9110-excerpt.md",
+      "capture_sha256": "38f87b85f542b0c7edab21e61f1710dfb90b28976bd9e98adf2e677f2da239d9",
+      "read_status": "Relevant sections read; partial web-retrieval excerpt only. Complete original not downloaded.",
+      "section": "§9.2.2 Idempotent Methods; §15.3.3 202 Accepted; local excerpt lines 7–23 (web L1984–L1994, L3327–L3331)",
+      "stored": "private research archive"
+    },
+    {
+      "round": 3,
+      "file_name": "B-S101-rfc9110-conditional.web.txt",
+      "capture_sha256": "20c2ad3a06f81e82c61951f8ca770fb46e7306befa2e8f807b27989877a600e1",
+      "capture_kind": "PARTIAL",
+      "section": [
+        {
+          "section": "8.8.3 ETag; 8.8.3.1 Generation; 8.8.3.2 Comparison",
+          "source_lines": "L1848-L1886",
+          "local_lines": "10-48",
+          "unavailable_lines": []
+        },
+        {
+          "section": "13.1 Preconditions; 13.1.1 If-Match",
+          "source_lines": "L2725-L2760",
+          "local_lines": "51-86",
+          "unavailable_lines": []
+        },
+        {
+          "section": "13.2.1 When to Evaluate; 13.2.2 Precedence",
+          "source_lines": "L2889-L2903",
+          "local_lines": "89-103",
+          "unavailable_lines": []
+        },
+        {
+          "section": "15.5.13 412 Precondition Failed",
+          "source_lines": "L3544-L3546",
+          "local_lines": "106-108",
+          "unavailable_lines": []
+        }
+      ],
+      "stored": "private research archive"
+    }
+  ],
+  "additional_sections": [
+    [
+      {
+        "section": "8.8.3 ETag; 8.8.3.1 Generation; 8.8.3.2 Comparison",
+        "source_lines": "L1848-L1886",
+        "local_lines": "10-48",
+        "unavailable_lines": []
+      },
+      {
+        "section": "13.1 Preconditions; 13.1.1 If-Match",
+        "source_lines": "L2725-L2760",
+        "local_lines": "51-86",
+        "unavailable_lines": []
+      },
+      {
+        "section": "13.2.1 When to Evaluate; 13.2.2 Precedence",
+        "source_lines": "L2889-L2903",
+        "local_lines": "89-103",
+        "unavailable_lines": []
+      },
+      {
+        "section": "15.5.13 412 Precondition Failed",
+        "source_lines": "L3544-L3546",
+        "local_lines": "106-108",
+        "unavailable_lines": []
+      }
+    ]
+  ],
+  "last_extended_at": "2026-11-23T07:48:23.986530+00:00"
+}

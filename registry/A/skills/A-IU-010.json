@@ -1,0 +1,123 @@
+{
+  "skill_id": "A-IU-010",
+  "domain": "product-information-architecture",
+  "trigger": "planの引渡し、レビュー、修正後の報告、構造チェックの実行後。「完了」「検証済み」「使いやすい」等を述べる前。",
+  "intent": "検査できた範囲だけを報告する",
+  "required_inputs": [
+    "入力brief、出力plan、実際に実行したコマンドと結果、実際に読んだ資料、実施した机上確認・ユーザー確認の記録、残件。",
+    "実行記録や観測がなければ「未実施」とする。予定した確認を実施済みにしない。",
+    "判断目的、候補集合、必要属性、比較関係、時間等の条件、visual_intent。",
+    "対象知識と選好の明確さについての根拠または仮定。",
+    "原典の種類・取得範囲、今回実施した確認と観測、未実施事項。",
+    "必要情報ID、値の根拠、取得・計測状態、適用条件と対象範囲。",
+    "値または適用状態の違いが選択・棄却・着手可否を変えるか。",
+    "role・秘匿条件、既存の表示案、データ取得責任と残件。"
+  ],
+  "decision_rules": [
+    "入力整合、構造的参照、意味上の充足、実ユーザーの達成、実装、視覚結果を別の検証範囲として扱う。",
+    "スクリプトのPASSは、その検査で構造的違反を検出しなかったという意味に限定する。業務適合やラベル理解を証明しない。",
+    "blocking=trueの残件があればHOLDとして扱う。検査結果と残件の食い違いは隠さず記録する。",
+    "手動確認しか行っていなければ実行PASSを名乗らない。コマンドの終了コードだけから、出力にない結果を創作しない。",
+    "visual_intent_idの一致は参照先の維持を示すだけで、実装の見た目が維持された証拠にはならない。",
+    "出典に基づく主張、著者の助言、本Skillの導出、今回の実測を区別する。",
+    "必要な情報項目が存在することと、値が既知で判断が成立することを分ける。primaryという記録だけで後者を証明しない。",
+    "熟知度と選好の確定を別に確認する。逆転例は2015論文の概念レビューによる先行研究の説明で、今回の比較UIの実測ではない。",
+    "A09の情報四区分とA10の検証範囲分離を維持する。visual_intent_idの一致は実画面の見た目を確認した証拠ではない。"
+  ],
+  "procedure": [
+    "1. 今回確認した範囲を「入力／参照構造／機能充足／経路・情報／利用者／実装・視覚」に分け、実施・未実施・保留を記す。",
+    "2. 入力featureの一意性、正本、参照ID、必須条件、role別経路、targetのprimary情報を確認する。",
+    "3. 自動検査が必要で実行環境がある場合だけ、契約のコマンドを実行し、対象ファイルと実際の結果を保存・参照する。",
+    "4. 結果が構造上PASSでも、ラベル・業務適合・実データ・端末・権限実装の未検証を残す。",
+    "5. 未解決を契約の形式へ整理する。A外の状態はB、部品・実装上の表現はC、業務上の必須性や許可はproductへ渡す。",
+    "6. blocking残件がある場合は何が決まれば進めるかを書く。任意の改善案と必須達成を阻む事項を混ぜない。",
+    "7. 最終報告では変更内容、採用理由、確認した範囲、未確認・HOLDを具体的に述べる。機能数や画面数だけを成果にしない。",
+    "原典の助言・用語定義・研究結果・著者の論考、Skillへの導出、今回の意味照合・構造検査・表示観察・実利用評価を区別する。メタ分析の元研究重複と訂正文の取得制限を残し、詳細効果量は用いない。構造上primaryでも表示未確認なら開示動作や人の成功を宣言しない。",
+    "宣言した経路の構造検査、値の意味と適用条件、文章だけの任意goal提供宣言を分けて確認する。"
+  ],
+  "expected_outputs": [
+    "planのトップレベルは契約に定義された項目を使い、verification等の独自キーを追加しない。",
+    "実施範囲と未実施事項はdecision_notesへ、解消が必要な問いはunresolvedへ記録する。",
+    "unresolvedには`id/category/owner/impact/blocking/question`を揃える。",
+    "自動検査を実行するときは次を用いる。結果ファイルの生成・内容を観測してから報告する。",
+    "~~~bash",
+    "python3 checks/validate_plan.py --brief brief.json --plan plan.json --output result.json",
+    "~~~",
+    "exit 0/1/2の意味は契約どおりに読む。返された状態と残件を記録し、未実施をPASSへ変換しない。",
+    "このコマンドの記載は実行済みの証拠ではない。"
+  ],
+  "dependencies": [
+    "A-IU-001"
+  ],
+  "exceptions": [
+    "検証範囲を分けて記録する規則は、本Skillと契約の導出であり、外部規格の適合証明ではない。18F資料は現行政府方針として扱わない。",
+    "構造検査が成功しても本Skillの効果は未実証。実ユーザーの作業、実装、表示を観測していない範囲は未検証のまま引き渡す。",
+    "候補が多いことが選択を支える条件もあり、平均がほぼゼロという報告から全条件の無効果を導かない。少ない候補・低密度も単独では良否を決めない。",
+    "2010/2015のメタ分析は元研究が重複し、対象研究・調整変数・モデルも異なる。独立した二回の再現や単純な勝敗として扱わない。",
+    "2015論文に対する2016訂正は検索索引で確認され、本文の直接取得は403。詳細効果量・訂正対象の統計表記を採用せず、原HTML/PDF全文保存済みとしない。"
+  ],
+  "failure_modes": [
+    "JSONが読めるだけで設計全体を検証済みとする。機械的到達性を、利用者が迷わず発見できることと同一視する。",
+    "資料の推奨を今回の利用者試験結果として書く。B/Cへ残した実装課題を解決済みとする。問題を見つけなかったことを問題がない証拠にする。"
+  ],
+  "verification": [
+    "報告の各「確認した」「実行した」「改善した」に対応する記録・観測を指せるか点検する。指せない文は未検証・提案へ書き直す。",
+    "全blocking残件を読み、最終状態がHOLDと整合するか確認する。ユーザー検証未実施を明記しても、実施済みの構造確認は正確に報告する。",
+    "同じ提供状態でpriorityだけを変える正負例、任意作業延期・共通支援機能の正例、値の意味と条件の独立照合を行う。"
+  ],
+  "source_refs": [
+    "A-S001",
+    "A-S003",
+    "A-S004",
+    "A-S012",
+    "R03-R2-S01",
+    "R03-R2-S02",
+    "R03-R2-S03"
+  ],
+  "confidence": {
+    "source_support": "R01–R03 bounded source records and independent review; inherited source provenance retained, no claim of full-source archive or universal empirical validity.",
+    "transfer": "Synthetic decision-information task pending",
+    "empirical_skill_effect": "unverified",
+    "task_effect": "One paired synthetic task per round; R03 6/6 versus 6/6 with assignment clue leakage; no improvement inference."
+  },
+  "status": "ACCEPT",
+  "version": "1.1.1",
+  "provenance": {
+    "kind": "inherited",
+    "repository": "RNA4219/anything-frontend-art-direction",
+    "revision": "97b19c29c0b63acfee9ad437f93af081ac0c6ef8",
+    "path": "extensions/A/references/disclosure-and-verification.md",
+    "original_unit": "A10"
+  },
+  "implementation": "modules/product-information-architecture/references/decision-information.md",
+  "history": [
+    {
+      "round": "R01",
+      "action": "migrated_without_novelty_credit",
+      "status": "DRAFT"
+    },
+    {
+      "round": "R03",
+      "action": "conditional_information_refinement",
+      "status": "REVISE",
+      "extractions": [
+        "R03-A-U03",
+        "R03-A-U02"
+      ],
+      "at": "2026-11-23T08:06:03.383864+00:00"
+    },
+    {
+      "round": "R03",
+      "version": "1.1.1",
+      "status": "ACCEPT",
+      "at": "2026-11-23T08:25:37.196539+00:00",
+      "reason": "Bounded independent source/instruction review, adversarial cases and 57-method suite; paired task tie and assignment leakage retained."
+    }
+  ],
+  "acceptance_evidence": [
+    "campaigns/A/rounds/R03/decision.json",
+    "campaigns/A/rounds/R03/independent-evidence/correction-check.json",
+    "campaigns/A/rounds/R03/tests-after-critic.txt"
+  ],
+  "acceptance_scope": "Instruction conditions and bounded structural verification only; source truth, actual UI behavior and human effectiveness require separate evidence."
+}

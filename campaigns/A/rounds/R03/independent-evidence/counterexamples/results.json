@@ -1,0 +1,123 @@
+{
+  "independence": "Authored without opening test_information_obligations.py; contract and implementation were read.",
+  "cases": [
+    {
+      "id": "control_all_priorities_provided",
+      "kind": "normal",
+      "reason": "全priorityで到達先に能力とprimary情報がある",
+      "expected_candidate": "PASS",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "candidate_codes": [],
+      "as_expected": true
+    },
+    {
+      "id": "ce_should_needed_info_secondary",
+      "kind": "counterexample",
+      "reason": "提供するshould作業の必要情報が詳細展開へ隠れた",
+      "expected_candidate": "FAIL",
+      "baseline_status": "PASS",
+      "candidate_status": "FAIL",
+      "candidate_codes": [
+        "HIDDEN_DECISION_INFORMATION"
+      ],
+      "as_expected": true
+    },
+    {
+      "id": "ce_could_needed_info_absent",
+      "kind": "counterexample",
+      "reason": "提供するcould作業の必要情報がない",
+      "expected_candidate": "FAIL",
+      "baseline_status": "PASS",
+      "candidate_status": "FAIL",
+      "candidate_codes": [
+        "HIDDEN_DECISION_INFORMATION"
+      ],
+      "as_expected": true
+    },
+    {
+      "id": "ce_should_route_without_target_capability",
+      "kind": "counterexample",
+      "reason": "能力は別画面に残るが宣言した判断先にはない",
+      "expected_candidate": "FAIL",
+      "baseline_status": "PASS",
+      "candidate_status": "FAIL",
+      "candidate_codes": [
+        "ROUTE_CAPABILITY_MISSING"
+      ],
+      "as_expected": true
+    },
+    {
+      "id": "control_explicit_defer_shared_enabler",
+      "kind": "normal",
+      "reason": "共用支援のgoal_idsに任意goalが残っても作業全体の提供を推測しない",
+      "expected_candidate": "PASS",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "candidate_codes": [],
+      "as_expected": true
+    },
+    {
+      "id": "limit_undeclared_optional_delivery",
+      "kind": "documented_limit",
+      "reason": "任意goalの文章だけの提供宣言を自動推測しない。PASSは意味的な妥当性ではない",
+      "expected_candidate": "PASS",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "candidate_codes": [],
+      "as_expected": true
+    },
+    {
+      "id": "control_conditional_not_applicable",
+      "kind": "normal",
+      "reason": "非該当場面への全情報強制を避ける。ただし条件の意味は人が照合する",
+      "expected_candidate": "PASS",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "candidate_codes": [],
+      "as_expected": true
+    },
+    {
+      "id": "control_unknown_value_keeps_identity",
+      "kind": "normal",
+      "reason": "未知値の情報IDを残す。primaryに値の状態と判断影響を記述する",
+      "expected_candidate": "PASS",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "candidate_codes": [],
+      "as_expected": true
+    },
+    {
+      "id": "limit_unknown_coerced_to_zero",
+      "kind": "documented_limit",
+      "reason": "値の虚偽・未知とゼロの混同はID/配置checkerでは検知できない",
+      "expected_candidate": "PASS",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "candidate_codes": [],
+      "as_expected": true
+    },
+    {
+      "id": "control_multiple_capabilities_one_goal",
+      "kind": "normal",
+      "reason": "一つのgoalの全能力をtarget一画面へ強制しない",
+      "expected_candidate": "PASS",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "candidate_codes": [],
+      "as_expected": true
+    },
+    {
+      "id": "regression_must_hidden_info",
+      "kind": "regression",
+      "reason": "mustの既存検査を維持する",
+      "expected_candidate": "FAIL",
+      "baseline_status": "FAIL",
+      "candidate_status": "FAIL",
+      "candidate_codes": [
+        "HIDDEN_DECISION_INFORMATION"
+      ],
+      "as_expected": true
+    }
+  ]
+}

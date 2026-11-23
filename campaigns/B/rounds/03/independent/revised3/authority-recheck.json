@@ -1,0 +1,94 @@
+{
+  "id": "RC04-KNOWN-SUCCESS-DOES-NOT-GRANT-CURRENT-AUTHORITY",
+  "scope": "Direct regression risk of the terminal-priority change; not a frozen criterion.",
+  "modulePath": "modules/interaction-ux-flow/examples/resume-and-conflict.mjs",
+  "moduleSha256": "c5130db7bd10a48bb586f30c689a40089deae648c966c372c0bc6e4c95bd41a4",
+  "pass": true,
+  "error": null,
+  "trace": [
+    {
+      "afterSuccess": {
+        "phase": "loading",
+        "message": "観測した状態と今回の変更内容を確認してください。",
+        "draft": {
+          "title": "Private draft"
+        },
+        "lastKnown": {
+          "etag": "old",
+          "values": {
+            "title": "Original"
+          }
+        },
+        "observedResource": null,
+        "operationId": "operation-1",
+        "operationOutcome": null,
+        "operationResult": null,
+        "resourceReadError": "",
+        "canCommit": false,
+        "canReview": false,
+        "canResume": true,
+        "recoveryAction": null
+      },
+      "loads": 1,
+      "lookups": 1,
+      "updates": 1
+    },
+    {
+      "afterCurrentAuthRequired": {
+        "phase": "reauthenticate",
+        "message": "再認証が必要です。保存した作業の成否は、この状態だけでは変わりません。",
+        "draft": null,
+        "lastKnown": null,
+        "observedResource": null,
+        "operationId": null,
+        "operationOutcome": null,
+        "operationResult": null,
+        "resourceReadError": "",
+        "canCommit": false,
+        "canReview": false,
+        "canResume": false,
+        "recoveryAction": null
+      },
+      "loads": 1,
+      "lookups": 1,
+      "updates": 1
+    },
+    {
+      "afterReauth": {
+        "phase": "completed",
+        "message": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+        "draft": {
+          "title": "Private draft"
+        },
+        "lastKnown": {
+          "etag": "old",
+          "values": {
+            "title": "Original"
+          }
+        },
+        "observedResource": {
+          "etag": "old",
+          "values": {
+            "title": "Original"
+          }
+        },
+        "operationId": "operation-1",
+        "operationOutcome": "succeeded",
+        "operationResult": {
+          "etag": "written",
+          "values": {
+            "title": "Private draft"
+          }
+        },
+        "resourceReadError": "",
+        "canCommit": false,
+        "canReview": false,
+        "canResume": true,
+        "recoveryAction": null
+      },
+      "loads": 2,
+      "lookups": 1,
+      "updates": 1
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "origin": "R03 independently authored cases, including one parent hypothesis reproduced by the critic. Limits are archived as evidence, not permanent PASS assertions.",
+  "cases": {
+    "ce_could_needed_info_absent": "FAIL",
+    "ce_mandatory_capability_isolated": "FAIL",
+    "ce_should_needed_info_secondary": "FAIL",
+    "ce_should_route_without_target_capability": "FAIL",
+    "control_all_priorities_provided": "PASS",
+    "control_conditional_not_applicable": "PASS",
+    "control_explicit_defer_shared_enabler": "PASS",
+    "control_mandatory_capabilities_separate_stages": "PASS",
+    "control_multiple_capabilities_one_goal": "PASS",
+    "control_unknown_value_keeps_identity": "PASS",
+    "regression_must_hidden_info": "FAIL"
+  }
+}

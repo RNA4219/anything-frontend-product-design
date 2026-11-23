@@ -1,0 +1,154 @@
+{
+  "source_id": "B-T302",
+  "canonical_url": "https://learn.microsoft.com/en-us/windows/win32/uxguide/mess-confirm",
+  "title": "Confirmations - Win32 apps | Microsoft Learn",
+  "type": "official legacy UX guideline",
+  "authority": "Microsoft Win32 UX Guide",
+  "capture_kind": "PARTIAL",
+  "sha256": "ed358713ccb9a1dbaa8651286f5a1aff9f31d9209e45ab4ae49e42abccd0e014",
+  "locator": [
+    {
+      "section": "Version caveat / Is this the right user interface?",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T302-microsoft-confirmations.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            31,
+            35
+          ],
+          "local_lines": [
+            32,
+            36
+          ],
+          "complete_requested_range": true
+        },
+        {
+          "web_lines": [
+            61,
+            70
+          ],
+          "local_lines": [
+            62,
+            71
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn174995417view1"
+    },
+    {
+      "section": "Unnecessary confirmations / Alternatives",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T302-microsoft-confirmations.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            78,
+            90
+          ],
+          "local_lines": [
+            79,
+            91
+          ],
+          "complete_requested_range": true
+        },
+        {
+          "web_lines": [
+            145,
+            156
+          ],
+          "local_lines": [
+            146,
+            157
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn863588146view1"
+    }
+  ],
+  "observed_facts": [
+    "頻繁な確認は考えず応答する習慣を招くとし、低リスクの定例確認を避けるよう勧めている。",
+    "重大な結果・容易に戻せない操作・利用者が気づきにくい結果などを確認の判断材料に挙げる。",
+    "確認の代替として誤操作を起こしにくい設計、Undo、結果のフィードバックを挙げる。誤りに気づけなければUndoだけでは足りない。"
+  ],
+  "limitations": [
+    "Windows 7向けの旧ガイド。現在の全プラットフォーム規則、WCAG要件、実測されたエラー削減率として扱わない。",
+    "法・安全・セキュリティ関連には例外を明記している。ガイド中の98%例を採用閾値にしない。",
+    "Yes/Noなど旧ボタン表記の細則は今回の一般判断へ転用しない。"
+  ],
+  "upstream_refs": [],
+  "capture_file": "B-T302-microsoft-confirmations.web.txt",
+  "capture_storage": "Private research archive",
+  "checked_at": "2026-11-23T07:15:18.365929+00:00",
+  "introduced_round": 2,
+  "redistribution": "Original captured text remains private. This public record contains original paraphrases, URLs and section locators only.",
+  "url": "https://learn.microsoft.com/en-us/windows/win32/uxguide/mess-confirm",
+  "section": [
+    {
+      "section": "Version caveat / Is this the right user interface?",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T302-microsoft-confirmations.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            31,
+            35
+          ],
+          "local_lines": [
+            32,
+            36
+          ],
+          "complete_requested_range": true
+        },
+        {
+          "web_lines": [
+            61,
+            70
+          ],
+          "local_lines": [
+            62,
+            71
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn174995417view1"
+    },
+    {
+      "section": "Unnecessary confirmations / Alternatives",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T302-microsoft-confirmations.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            78,
+            90
+          ],
+          "local_lines": [
+            79,
+            91
+          ],
+          "complete_requested_range": true
+        },
+        {
+          "web_lines": [
+            145,
+            156
+          ],
+          "local_lines": [
+            146,
+            157
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn863588146view1"
+    }
+  ],
+  "read_status": "PARTIAL: exact web-extracted text saved privately; not raw HTML",
+  "capture_sha256": "ed358713ccb9a1dbaa8651286f5a1aff9f31d9209e45ab4ae49e42abccd0e014",
+  "source_file_name": "B-T302-microsoft-confirmations.web.txt",
+  "limits": [
+    "Windows 7向けの旧ガイド。現在の全プラットフォーム規則、WCAG要件、実測されたエラー削減率として扱わない。",
+    "法・安全・セキュリティ関連には例外を明記している。ガイド中の98%例を採用閾値にしない。",
+    "Yes/Noなど旧ボタン表記の細則は今回の一般判断へ転用しない。"
+  ]
+}

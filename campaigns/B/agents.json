@@ -1,0 +1,114 @@
+[
+  {
+    "task_name": "/root/r01_research_primary",
+    "round": 1,
+    "role": "Researcher-1",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r01_research_alternative",
+    "round": 1,
+    "role": "Researcher-2",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r01_baseline_builder",
+    "round": 1,
+    "role": "Baseline task builder",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r01_analyst",
+    "round": 1,
+    "role": "Analyst / sankai",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r01_candidate_builder",
+    "round": 1,
+    "role": "Candidate task builder",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r01_critic",
+    "round": 1,
+    "role": "Critic / Evaluator",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r02_research_primary",
+    "round": 2,
+    "role": "Researcher-1",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r02_research_alternative",
+    "round": 2,
+    "role": "Researcher-2",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r02_analyst",
+    "round": 2,
+    "role": "Analyst / sankai",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r02_critic",
+    "round": 2,
+    "role": "Critic / Evaluator",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r03_research_primary",
+    "round": 3,
+    "role": "Researcher-1",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r03_research_alternative",
+    "round": 3,
+    "role": "Researcher-2",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r03_analyst",
+    "round": 3,
+    "role": "Analyst / sankai",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r03_critic",
+    "round": 3,
+    "role": "Critic / Evaluator",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  }
+]

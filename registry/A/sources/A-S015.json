@@ -1,0 +1,12 @@
+{
+  "source_id": "A-S015",
+  "title": "— Joanna McGrenere, Ronald M. Baecker, and Kellogg S. Booth（2002）— An Evaluation of a Multiple Interface Design Solution for Bloated Software",
+  "url": "https://www.dgp.toronto.edu/~joanna/papers/JMcGrenere_CHI_2002.pdf",
+  "canonical_url": "https://www.dgp.toronto.edu/~joanna/papers/JMcGrenere_CHI_2002.pdf",
+  "original_id": "S15",
+  "provenance": "inherited-index",
+  "verified_in_current_round": false,
+  "rights": "Link and original paraphrase only; no third-party full text redistributed.",
+  "content_sha256": null,
+  "notes": "- **URL**: [Joanna McGrenere, Ronald M. Baecker, and Kellogg S. Booth（2002）— An Evaluation of a Multiple Interface Design Solution for Bloated Software](https://www.dgp.toronto.edu/~joanna/papers/JMcGrenere_CHI_2002.pdf)\n- **該当箇所**: Quantitative Results; Approach to Using Two Interfaces; Limitations and Constraints; Conclusions and Future Work。PDF pp.5–8。Web抽出 L386–438, L643–657, L688–710。\n- **確認日 / 種別**: 2026-11-23 / 論文・測定あり。ACM CHI 2002の著者公開採択原稿。Toronto/UBCの研究。\n- **原典の主張** (empirical_observation): 20人で個人用UIと全機能UIの切替を現場評価した。ログのある19人のうち14人はPersonal利用期間の半分以上を個人用UIで過ごした。一方、個人化に必要な時間を不満として途中でやめた利用者もいた。\n- **制約・版・未確認**: 一つのアプリでの評価で、長期の再現確認と利用順のカウンターバランスに制約がある。主観的な学習容易性等を客観的タスク時間の改善に置き換えない。カナダの研究。\n- **接続する原則**: A03, A08。原則のProcedure/JSON契約は、別に明記した本Skillの導出。"
+}

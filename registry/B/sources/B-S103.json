@@ -1,0 +1,24 @@
+{
+  "source_id": "B-S103",
+  "title": "AIP-151: Long-running operations",
+  "url": "https://google.aip.dev/151",
+  "kind": "official approved API design guidance",
+  "section": "Guidance; Errors; local lines 52–55, 100–104 (web L45–L48, L93–L97)",
+  "read_status": "Complete web-tool text extraction (L0–L117), not raw HTML; relevant sections read. Direct fetch failed.",
+  "observed_facts": [
+    "The pattern returns an operation token/resource that clients can use to track progress and retrieve the result.",
+    "Errors preventing startup are immediate error responses; execution failures go in Operation.error; nonterminal errors may occur in metadata.",
+    "The guidance explicitly links to the google.longrunning operations.proto primary definition."
+  ],
+  "limits": [
+    "An approved Google API guideline is not a universal mandate for every backend.",
+    "A nonterminal warning is not evidence of terminal failure or rollback; service-specific metadata remains necessary."
+  ],
+  "canonical_url": "https://google.aip.dev/151",
+  "capture_sha256": "4083b5b12b47d8517f88de2570adf24ad0af673d5dfa8ff857b5d1d0f4ebd39c",
+  "capture_hash_scope": "exact retrieved representation, not necessarily raw webpage",
+  "source_file_name": "google-aip151-web-extract.md",
+  "checked_at": "2026-11-23T06:43:37.754100+00:00",
+  "round": 1,
+  "redistribution": "Original is retained privately, not committed; this record contains campaign paraphrases and public locators."
+}

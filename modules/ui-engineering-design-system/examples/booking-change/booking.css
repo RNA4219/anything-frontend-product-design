@@ -1,0 +1,175 @@
+@layer tokens, layout, components;
+
+@layer tokens {
+  :root {
+    color-scheme: light dark;
+    --booking-surface: Canvas;
+    --booking-text: CanvasText;
+    --booking-line: ButtonBorder;
+    --booking-control: ButtonFace;
+    --booking-on-control: ButtonText;
+    --booking-action: CanvasText;
+    --booking-on-action: Canvas;
+    --booking-focus: LinkText;
+    --booking-font: system-ui, sans-serif;
+    --booking-padding: 1rem;
+    --booking-gap: 0.75rem;
+    --booking-target-size: 2.75rem;
+    --booking-measure: 42rem;
+  }
+}
+
+@layer layout {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--booking-surface);
+    color: var(--booking-text);
+    font-family: var(--booking-font);
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  main,
+  footer {
+    max-inline-size: var(--booking-measure);
+    margin-inline: auto;
+    padding: var(--booking-padding);
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: 1.3;
+    margin-block: 0 var(--booking-gap);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    margin-block: 0 var(--booking-gap);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--booking-gap);
+    margin-block-start: var(--booking-gap);
+  }
+}
+
+@layer components {
+  button {
+    max-inline-size: 100%;
+    min-block-size: var(--booking-target-size);
+    padding: var(--booking-gap);
+    border: 1px solid var(--booking-line);
+    background: var(--booking-control);
+    color: var(--booking-on-control);
+    font: inherit;
+    text-align: start;
+  }
+
+  button.primary {
+    background: var(--booking-action);
+    color: var(--booking-on-action);
+  }
+
+  button[aria-disabled="true"],
+  button:disabled {
+    border-style: dashed;
+    background: var(--booking-control);
+    color: var(--booking-on-control);
+    cursor: wait;
+  }
+
+  button:disabled {
+    cursor: default;
+  }
+
+  :focus-visible,
+  [tabindex="-1"]:focus {
+    outline: 2px solid var(--booking-focus);
+    outline-offset: 2px;
+  }
+
+  .reservations {
+    padding-inline-start: var(--booking-padding);
+  }
+
+  .reservations li + li {
+    margin-block-start: var(--booking-padding);
+  }
+
+  fieldset {
+    min-inline-size: 0;
+    margin: 0;
+    border: 1px solid var(--booking-line);
+    padding: var(--booking-gap);
+  }
+
+  legend {
+    padding-inline: 0.5rem;
+    font-weight: 600;
+  }
+
+  .slot {
+    display: flex;
+    align-items: center;
+    gap: var(--booking-gap);
+    min-block-size: var(--booking-target-size);
+    padding-inline: var(--booking-gap);
+    border: 1px solid var(--booking-line);
+  }
+
+  .slot + .slot {
+    margin-block-start: var(--booking-gap);
+  }
+
+  .slot input {
+    flex: 0 0 auto;
+    margin: 0;
+  }
+
+  .slot:has(:focus-visible) {
+    outline: 2px solid var(--booking-focus);
+    outline-offset: 2px;
+  }
+
+  .dates {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.5rem var(--booking-gap);
+    margin: 0;
+  }
+
+  .dates dd {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .notice,
+  #booking-status:not(:empty) {
+    border-inline-start: 2px solid var(--booking-line);
+    padding-inline-start: var(--booking-gap);
+  }
+
+  #booking-status:empty {
+    margin: 0;
+  }
+}

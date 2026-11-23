@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-11-23T07:03:11.464578+00:00",
+  "reason": "Independent DOM counterexample: a pending backend received cancel before completing; generated copy nevertheless claimed completion preceded request.",
+  "changed": [
+    "candidate-revised/flow.mjs message only",
+    "B-IU-003 conditional rule",
+    "async reference and semantic checklist"
+  ],
+  "original_retained": true,
+  "flow_sha256": "7bf06885b487a3229c76c99f5a04aa3ad1f5091392a38984601f1834b688e14a",
+  "status": "ACCEPT",
+  "verification": "campaigns/B/rounds/01/independent/candidate-revised-copy-recheck.json"
+}

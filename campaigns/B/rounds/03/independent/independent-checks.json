@@ -1,0 +1,235 @@
+{
+  "created_at": "2026-11-23T08:10:14.745769+00:00",
+  "initial_candidate": [
+    {
+      "original_path": "modules/interaction-ux-flow/examples/resume-and-conflict.mjs",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/resume-and-conflict.mjs",
+      "sha256": "342471207d315e3d307232d1be7b0b796cf8d139dcdf22140d60f5a68103719b",
+      "actual_sha256": "342471207d315e3d307232d1be7b0b796cf8d139dcdf22140d60f5a68103719b",
+      "snapshot_hash_matches": true
+    },
+    {
+      "original_path": "modules/interaction-ux-flow/examples/resume-and-conflict.html",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/resume-and-conflict.html",
+      "sha256": "fb10fccac3ab6e788e17e212e82b5306cbc970884a90998cc3cb4ddb120db2a7",
+      "actual_sha256": "fb10fccac3ab6e788e17e212e82b5306cbc970884a90998cc3cb4ddb120db2a7",
+      "snapshot_hash_matches": true
+    },
+    {
+      "original_path": "modules/interaction-ux-flow/references/resume-and-conflict.md",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/resume-and-conflict.md",
+      "sha256": "b025e9bdaaa365cd5daabe1a96cc36ccf38787af905a9e7a7f04316613dc4491",
+      "actual_sha256": "b025e9bdaaa365cd5daabe1a96cc36ccf38787af905a9e7a7f04316613dc4491",
+      "snapshot_hash_matches": true
+    },
+    {
+      "original_path": "registry/B/skills/B-IU-007.json",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/B-IU-007.json",
+      "sha256": "315997657470ecca1d691168632476da3e63cb05f619222138a49801cd846700",
+      "actual_sha256": "315997657470ecca1d691168632476da3e63cb05f619222138a49801cd846700",
+      "snapshot_hash_matches": true
+    },
+    {
+      "original_path": "registry/B/skills/B-IU-008.json",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/B-IU-008.json",
+      "sha256": "7cfd3bfa832dc6df341bdb31e799b2f0ff11f56be92ad8f230eb3d81b1c5c3ae",
+      "actual_sha256": "7cfd3bfa832dc6df341bdb31e799b2f0ff11f56be92ad8f230eb3d81b1c5c3ae",
+      "snapshot_hash_matches": true
+    }
+  ],
+  "test_freeze": {
+    "path": "modules/interaction-ux-flow/tests/test_resume_conflict.mjs",
+    "expected_sha256": "f2f52bfe67da04a680299ed771581b25b6e0004325cfea6128f7b34c5e68289f",
+    "actual_sha256": "f2f52bfe67da04a680299ed771581b25b6e0004325cfea6128f7b34c5e68289f",
+    "matches": true,
+    "limits": "Byte equality verified; timestamp is not independently attested."
+  },
+  "source_integrity": [
+    {
+      "source_id": "B-S101",
+      "path": "PRIVATE_CAPTURE/B/round03/researcher1/sources/B-S101-rfc9110-conditional.web.txt",
+      "actual_sha256": "20c2ad3a06f81e82c61951f8ca770fb46e7306befa2e8f807b27989877a600e1",
+      "researcher_sha256": "20c2ad3a06f81e82c61951f8ca770fb46e7306befa2e8f807b27989877a600e1",
+      "matches_researcher": true,
+      "matches_canonical_record": true,
+      "capture_kind": "PARTIAL"
+    },
+    {
+      "source_id": "B-S302",
+      "path": "PRIVATE_CAPTURE/B/round03/researcher1/sources/B-S302-google-calendar-conditional.web.txt",
+      "actual_sha256": "4c4b44f2f12223c7b4afbde59bd6292b88d8486c982c656418a17c228c1afff3",
+      "researcher_sha256": "4c4b44f2f12223c7b4afbde59bd6292b88d8486c982c656418a17c228c1afff3",
+      "matches_researcher": true,
+      "matches_canonical_record": true,
+      "capture_kind": "PARTIAL"
+    },
+    {
+      "source_id": "B-S303",
+      "path": "PRIVATE_CAPTURE/B/round03/researcher1/sources/B-S303-react-useeffect-race.web.txt",
+      "actual_sha256": "9fdd0a60dea4765f31b7cdcc792d5e54f4fb8dbf972b31f2cbd892c013f467b9",
+      "researcher_sha256": "9fdd0a60dea4765f31b7cdcc792d5e54f4fb8dbf972b31f2cbd892c013f467b9",
+      "matches_researcher": true,
+      "matches_canonical_record": true,
+      "capture_kind": "PARTIAL"
+    },
+    {
+      "source_id": "B-S301",
+      "path": "PRIVATE_CAPTURE/B/round03/researcher1/sources/B-S301-google-aip154.original.md",
+      "actual_sha256": "63d1f35de6f7ee0f37a5e285effb64445eb4cb52b368cd45144c14f59580ef13",
+      "researcher_sha256": "63d1f35de6f7ee0f37a5e285effb64445eb4cb52b368cd45144c14f59580ef13",
+      "matches_researcher": true,
+      "matches_canonical_record": true,
+      "capture_kind": "FULL"
+    },
+    {
+      "source_id": "B-S201",
+      "path": "PRIVATE_CAPTURE/B/round03/researcher2/sources/B-S201-wcag22-reauth.web.txt",
+      "actual_sha256": "4db80cd707ac0d8829e0c4ef57db72e9566cc0f56e84243855c0643234b0e47e",
+      "researcher_sha256": "4db80cd707ac0d8829e0c4ef57db72e9566cc0f56e84243855c0643234b0e47e",
+      "matches_researcher": true,
+      "matches_canonical_record": true,
+      "capture_kind": "PARTIAL"
+    },
+    {
+      "source_id": "B-T401",
+      "path": "PRIVATE_CAPTURE/B/round03/researcher2/sources/B-T401-understanding-reauth.web.txt",
+      "actual_sha256": "a05f7b955c1353d788d6a0029adf23c9df45de9052972d7206f8be991c49560c",
+      "researcher_sha256": "a05f7b955c1353d788d6a0029adf23c9df45de9052972d7206f8be991c49560c",
+      "matches_researcher": true,
+      "matches_canonical_record": true,
+      "capture_kind": "PARTIAL"
+    },
+    {
+      "source_id": "B-T402",
+      "path": "PRIVATE_CAPTURE/B/round03/researcher2/sources/B-T402-whatwg-webstorage.web.txt",
+      "actual_sha256": "1b05a355f466afd0e8235c4ce0ef238e712ff221ed3ef65b0686b9d8642c1040",
+      "researcher_sha256": "1b05a355f466afd0e8235c4ce0ef238e712ff221ed3ef65b0686b9d8642c1040",
+      "matches_researcher": true,
+      "matches_canonical_record": true,
+      "capture_kind": "PARTIAL"
+    },
+    {
+      "source_id": "B-T403",
+      "path": "PRIVATE_CAPTURE/B/round03/researcher2/sources/B-T403-owasp-session-management.web.txt",
+      "actual_sha256": "82ed5b8c656013009d82cda7e9e85e4d00c5b730367dbd967da9cd08c8d0062d",
+      "researcher_sha256": "82ed5b8c656013009d82cda7e9e85e4d00c5b730367dbd967da9cd08c8d0062d",
+      "matches_researcher": true,
+      "matches_canonical_record": true,
+      "capture_kind": "PARTIAL"
+    },
+    {
+      "source_id": "B-S104",
+      "path": "PRIVATE_CAPTURE/B/round01/researcher1/sources/google-2025-operations.proto",
+      "actual_sha256": "5d2e7f9eeb55b8417b50e0a536a092babd32d26e4fbeb7099c6cdcda6e16db9c",
+      "matches_canonical_record": true,
+      "capture_kind": "Complete original UTF-8 file obtained through GitHub connector; relevant sections read; reached through AIP-151 reference link.",
+      "previous_round_dependency": true
+    },
+    {
+      "source_id": "B-T201",
+      "path": "PRIVATE_CAPTURE/B/round01/researcher2/sources/B-T201-stripe-advanced-errors.web.md",
+      "actual_sha256": "2f7fe1c23b9eee51d1301a9fe0cd40e6cbc769f6297903f83b049d8dd9f05d3f",
+      "matches_canonical_record": true,
+      "capture_kind": "full_web_text: all 97 lines of the retrieved Markdown representation (L0–L96); not raw HTTP/HTML; relevant sections read",
+      "previous_round_dependency": true
+    },
+    {
+      "source_id": "B-S205",
+      "path": "PRIVATE_CAPTURE/B/round02/researcher1/sources/B-S205-govuk-check-answers.web.txt",
+      "actual_sha256": "81ce6c749a7a8b10d8964ff5d8d1e0288be17ab3ddae506ed4a88e1cda8f62ba",
+      "matches_canonical_record": true,
+      "capture_kind": "FULL",
+      "previous_round_dependency": true
+    }
+  ],
+  "negative_controls": [
+    {
+      "id": "N01-REMOVE-ACCOUNT-GUARD",
+      "mutant_path": "campaigns/B/rounds/03/independent/negative-controls/N01-REMOVE-ACCOUNT-GUARD.mjs",
+      "mutant_sha256": "66dc572f747d997405ae8b0162b8c89df15993459551f1e71161233ab1d2da31",
+      "base_sha256": "342471207d315e3d307232d1be7b0b796cf8d139dcdf22140d60f5a68103719b",
+      "expected_detecting_cases": [
+        "R03",
+        "R09"
+      ],
+      "failed_cases": [
+        "R03",
+        "R09"
+      ],
+      "all_targets_detected": true,
+      "returncode": 1,
+      "result_path": "campaigns/B/rounds/03/independent/negative-controls/N01-REMOVE-ACCOUNT-GUARD.json",
+      "result_sha256": "bc19293ce2955a394677db814862d43371f1b65c5edfddb2eb35c65b722f46fa",
+      "interpretation": "Purpose-built fault injection. Not a baseline or a measurement of skill efficacy."
+    },
+    {
+      "id": "N02-IGNORE-REQUEST-EPOCH",
+      "mutant_path": "campaigns/B/rounds/03/independent/negative-controls/N02-IGNORE-REQUEST-EPOCH.mjs",
+      "mutant_sha256": "9a696355b3519fd470a910b022fe7f7def7490267200947e95762cf426427de3",
+      "base_sha256": "342471207d315e3d307232d1be7b0b796cf8d139dcdf22140d60f5a68103719b",
+      "expected_detecting_cases": [
+        "R08"
+      ],
+      "failed_cases": [
+        "R08"
+      ],
+      "all_targets_detected": true,
+      "returncode": 1,
+      "result_path": "campaigns/B/rounds/03/independent/negative-controls/N02-IGNORE-REQUEST-EPOCH.json",
+      "result_sha256": "97f28e6d21b71eafea1da014d1e1fa3b6402d9c0b240296de290d72b304fe2a6",
+      "interpretation": "Purpose-built fault injection. Not a baseline or a measurement of skill efficacy."
+    },
+    {
+      "id": "N03-OPERATION-RESULT-OVERWRITES-CURRENT",
+      "mutant_path": "campaigns/B/rounds/03/independent/negative-controls/N03-OPERATION-RESULT-OVERWRITES-CURRENT.mjs",
+      "mutant_sha256": "88efee70f1bf0985cd7d06927438a810e70455c20976313cc7fb9ed93ba55f68",
+      "base_sha256": "342471207d315e3d307232d1be7b0b796cf8d139dcdf22140d60f5a68103719b",
+      "expected_detecting_cases": [
+        "R11",
+        "R12"
+      ],
+      "failed_cases": [
+        "R11",
+        "R12"
+      ],
+      "all_targets_detected": true,
+      "returncode": 1,
+      "result_path": "campaigns/B/rounds/03/independent/negative-controls/N03-OPERATION-RESULT-OVERWRITES-CURRENT.json",
+      "result_sha256": "44b6707ab4c7a339926cd62581d229350b35d7c3357625da2a5c07fb4b0fa19b",
+      "interpretation": "Purpose-built fault injection. Not a baseline or a measurement of skill efficacy."
+    },
+    {
+      "id": "N04-READ-ERROR-ERASES-SUCCESS",
+      "mutant_path": "campaigns/B/rounds/03/independent/negative-controls/N04-READ-ERROR-ERASES-SUCCESS.mjs",
+      "mutant_sha256": "39131e4f384866030577add9592e9b708f7af74c1136863aa8ab6fa8cff778ce",
+      "base_sha256": "342471207d315e3d307232d1be7b0b796cf8d139dcdf22140d60f5a68103719b",
+      "expected_detecting_cases": [
+        "R12"
+      ],
+      "failed_cases": [
+        "R12"
+      ],
+      "all_targets_detected": true,
+      "returncode": 1,
+      "result_path": "campaigns/B/rounds/03/independent/negative-controls/N04-READ-ERROR-ERASES-SUCCESS.json",
+      "result_sha256": "d96037c3e6b8568ec78716ae25ae73b6590f1723067145a8966fcd906fb848a0",
+      "interpretation": "Purpose-built fault injection. Not a baseline or a measurement of skill efficacy."
+    }
+  ],
+  "registry_checker": {
+    "returncode": 0,
+    "report": {
+      "units": 8,
+      "sources": 27,
+      "statuses": {
+        "ACCEPT": 6,
+        "DRAFT": 2
+      },
+      "errors": [],
+      "limits": "Checks registry structure and referenced files, not whether prose or empirical claims are true."
+    },
+    "stderr": "",
+    "scope": "Structure/reference integrity only, not factual truth or usability."
+  },
+  "scope": "Original candidate snapshot and exact frozen suite. Supplementary exploratory cases remain separate."
+}

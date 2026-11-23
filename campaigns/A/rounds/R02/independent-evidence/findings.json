@@ -1,0 +1,70 @@
+{
+  "round": "R02",
+  "reviewed_at": "2026-11-23T07:43:56.721000+00:00",
+  "role": "independent critic/evaluator",
+  "review_outcome": "No blocking defect found within the bounded review; two nonblocking scope-description issues corrected.",
+  "blocker_count": 0,
+  "open_findings": [],
+  "resolved_findings": [
+    {
+      "id": "R02-C01",
+      "severity": "low",
+      "blocking": false,
+      "category": "implementation",
+      "status": "resolved_by_parent_and_limited_recheck",
+      "location": [
+        "inspected-snapshot/modules/product-information-architecture/checks/validate_plan.py::validate return checks_available"
+      ],
+      "symptom": "初回結果はhuman_usability=falseを持つ一方、検索網羅性・旧入口の対象同一性・実際の判断場所・リンク文脈の未検査が機械可読の結果に現れなかった。6つの意味上の誤案も構造PASSになる。",
+      "basis": [
+        "plan-contract.mdのPASS限定",
+        "navigation-evidence.mdのグラフ・意味・検索・実装・人評価の区別",
+        "固定rubric N6",
+        "counterexamples-results.json"
+      ],
+      "impact": "Skill本文を省略して結果JSONだけを扱う後続工程では、context_and_retirement=trueの範囲を広く受け取り、意味上の確認まで完了したと誤解する余地がある。構造検査そのものの回帰ではない。",
+      "correction": "親がchecks_availableへnavigation_context/search_coverage/legacy_entry_identity/rendered_goal_location=falseを追加。意味判断を自動化したとは扱わず、既存欄での意味照合を維持する。",
+      "reproduction": {
+        "fixture": "counterexamples/ce_unknown_scope_means_global_absence/",
+        "command": "python3 inspected-snapshot/modules/product-information-architecture/checks/validate_plan.py --brief counterexamples/ce_unknown_scope_means_global_absence/brief.json --plan counterexamples/ce_unknown_scope_means_global_absence/plan.json",
+        "initial_actual": "PASS。意味判定はN2違反。",
+        "post_correction": "PASSのままだが4つの未検査フラグがfalse。意味判定は変化しない。",
+        "record": "correction-check/results.json"
+      },
+      "resolution_evidence": "6つの意味反例に対し、修正版が4フラグをfalseとして返すことを限定再実行した。"
+    },
+    {
+      "id": "R02-C02",
+      "severity": "low",
+      "blocking": false,
+      "category": "information_architecture",
+      "status": "resolved_by_parent_and_limited_recheck",
+      "location": [
+        "inspected-snapshot/modules/product-information-architecture/references/plan-contract.md:58",
+        "inspected-snapshot/modules/product-information-architecture/references/navigation-evidence.md:48",
+        "inspected-snapshot/modules/product-information-architecture/checks/validate_plan.py:295–296"
+      ],
+      "symptom": "同名短ラベルはHOLDという初回の説明は、同じfrom・共有role・異なるto画面IDという実際の検出条件を省略していた。同じ画面テンプレートの別recordに向かう2つの裸の「詳細」はPASSになる。",
+      "basis": [
+        "ce_same_screen_distinct_recordsの実行結果",
+        "checkerのto不一致条件",
+        "新規refの期待対象・粒度の条件"
+      ],
+      "impact": "画面IDが同じ場合の別対象へのリンクにも、衝突検査が必ずHOLDを返すと誤読しうる。レコード粒度の意味は現在の契約で検査しないため、説明を狭める必要がある。",
+      "correction": "親がcontractとnavigation-evidenceの両方へ検出条件を明記。同じscreenの別record/variant、創作文脈等は未検査と記し、手動の意味照合を残した。新schemaや検査回避の例外追加は行わない。",
+      "reproduction": {
+        "fixture": "counterexamples/ce_same_screen_distinct_records/",
+        "command": "python3 inspected-snapshot/modules/product-information-architecture/checks/validate_plan.py --brief counterexamples/ce_same_screen_distinct_records/brief.json --plan counterexamples/ce_same_screen_distinct_records/plan.json",
+        "initial_actual": "baseline/currentともPASS。独立意味判定は選択時文脈不足。",
+        "record": "correction-check/results.json"
+      },
+      "resolution_evidence": "修正版2文書の具体的なfrom/role/to条件と、同一screen別recordの未検査記述を読み直した。"
+    }
+  ],
+  "limits": [
+    "意味上の反例6件はcheckerで検出できない。これは修正版でも明示した限界であり、恒久PASSを要求する受入条件ではない。",
+    "C適合、B状態遷移、実検索、旧URLの実動作、人の探索成功をAから断定しない。",
+    "初回fixture/snapshotと修正後の限定再確認を別保存した。",
+    "既存50 unittest methods（8 subcases追加を含む）の成功は親からの報告であり、このreviewerがunittest全体を独立再実行したとは記載しない。"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "branch": "session-b/interaction-evolution-20261123",
+  "base_sha": "3d02174a69676afa8e0b02f4062cc6ecb636d300",
+  "round1_commit": "11265cccef22ceed7e11c34915f433868523cdeb",
+  "round1_tree": "4d8b125e25417c5c08169a5c5d77acad3137967e",
+  "draft_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/5",
+  "local_checkpoint_before_api_publish": "a7c792b6fdd5a8df581e9dffe09d7d170ac44d7e",
+  "tree_equality_verified": true,
+  "main_merged": false,
+  "round2_commit": "fa9732b07230111481c36f207dcba31ea4dba4da",
+  "round2_local_checkpoint_before_api_publish": "bfd1a2514a461a652fc1f5ba3f8577c5ba3e910b"
+}

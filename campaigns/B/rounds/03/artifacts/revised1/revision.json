@@ -1,0 +1,40 @@
+{
+  "revised_at": "2026-11-23T08:11:02.193175+00:00",
+  "findings": [
+    "F1",
+    "F2",
+    "F3"
+  ],
+  "status": "PARENT_REPAIRED_INDEPENDENT_RECHECK_PENDING",
+  "fixed_initial": {
+    "passed": 13,
+    "total": 13
+  },
+  "fixed_revised": {
+    "passed": 13,
+    "total": 13
+  },
+  "exploratory_initial": {
+    "passed": 0,
+    "total": 2
+  },
+  "exploratory_revised": {
+    "passed": 2,
+    "total": 2
+  },
+  "copy": "Changed unconditional unsent label to current submission-state text; DOM recheck pending.",
+  "files": [
+    {
+      "path": "modules/interaction-ux-flow/examples/resume-and-conflict.mjs",
+      "sha256": "8a08e09d10659e436e2425d698e103c851a5880ed31d686856a411204882e716"
+    },
+    {
+      "path": "modules/interaction-ux-flow/examples/resume-and-conflict.html",
+      "sha256": "84a92808062a8f903e2a64a9cb33041b367f9fcaff0102297cf6ce3f39779a9f"
+    },
+    {
+      "path": "modules/interaction-ux-flow/references/resume-and-conflict.md",
+      "sha256": "2ea9a35b1b21e9e7c8cfa0a3deb62adeaa3bce73e8e2c17496a4dfed6fb9179e"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "source_id": "A-S009",
+  "title": "— Global header — IBM Carbon Design System",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/patterns/global-header",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/patterns/global-header",
+  "original_id": "S09",
+  "provenance": "inherited-index",
+  "verified_in_current_round": false,
+  "rights": "Link and original paraphrase only; no third-party full text redistributed.",
+  "content_sha256": null,
+  "notes": "- **URL**: [Global header — IBM Carbon Design System](https://www.carbondesignsystem.com/building-blocks/core/patterns/global-header)\n- **該当箇所**: Header and panel persistence / Task hierarchy / Navigation: Local / Organizational schemes\n- **確認日 / 種別**: 2026-11-23 / official_pattern\n- **原典の主張** (author_guidance): global/localの持続範囲とsystem/productのタスク範囲を区別し、一連の仕事を完了する領域をまとめる。\n- **制約・版・未確認**: IBM製品群の文脈。具体的なブランド/位置指定は移植しない。無制限に増える対象をshellへ列挙しない。\n- **接続する原則**: A06。原則のProcedure/JSON契約は、別に明記した本Skillの導出。"
+}

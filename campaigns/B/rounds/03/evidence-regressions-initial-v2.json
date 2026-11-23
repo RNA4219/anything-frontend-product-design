@@ -1,0 +1,25 @@
+{
+  "suite": "B-R03-exploratory-evidence",
+  "total": 3,
+  "passed": 0,
+  "results": [
+    {
+      "id": "E01",
+      "name": "Known success survives reopen and expired operation record",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ null\n- 'succeeded'\n"
+    },
+    {
+      "id": "E02",
+      "name": "Older pending lookup cannot erase newly known success",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ null\n- 'succeeded'\n"
+    },
+    {
+      "id": "E03",
+      "name": "Lookup transport failure cannot erase concurrently confirmed success",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ null\n- 'succeeded'\n"
+    }
+  ]
+}

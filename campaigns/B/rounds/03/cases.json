@@ -1,0 +1,62 @@
+{
+  "round": 3,
+  "frozen_at": "2026-11-23T07:43:39.154265+00:00",
+  "before_candidate": true,
+  "cases": [
+    {
+      "id": "R01",
+      "expected": "An unsent draft resumes without any write and remains distinct from observed server values"
+    },
+    {
+      "id": "R02",
+      "expected": "A pending operation resumes by its original operation ID without a new mutation"
+    },
+    {
+      "id": "R03",
+      "expected": "A known account mismatch neither queries nor displays another account task data"
+    },
+    {
+      "id": "R04",
+      "expected": "Expired authentication preserves the intent internally and queries it after validated same-account reauthentication"
+    },
+    {
+      "id": "R05",
+      "expected": "Successful reauthentication does not imply write permission"
+    },
+    {
+      "id": "R06",
+      "expected": "Server precondition mismatch preserves the newer server state and entered draft"
+    },
+    {
+      "id": "R07",
+      "expected": "Refreshing server facts does not silently authorize overwriting the refreshed revision"
+    },
+    {
+      "id": "R08",
+      "expected": "A late older read cannot overwrite a more recent accepted read; opaque tags are not ordered"
+    },
+    {
+      "id": "R09",
+      "expected": "An old-account response cannot repopulate the view after account switching"
+    },
+    {
+      "id": "R10",
+      "expected": "A missing or expired operation record stays unresolved and never triggers a fresh operation automatically"
+    },
+    {
+      "id": "R11",
+      "expected": "Confirmed operation result and subsequently observed resource state remain distinct"
+    },
+    {
+      "id": "R12",
+      "expected": "Failure to read the current resource does not erase a separately verified operation success"
+    },
+    {
+      "id": "R13",
+      "expected": "After explicit current review, a valid conditional edit changes the intended resource once"
+    }
+  ],
+  "comparison": "Conditional state/task example and independent fault controls, not a generated efficacy experiment",
+  "input_contract": "Session identity/capability inputs come from the caller established authentication system. A locally saved record is not authority. Opaque revision tags support equality, not ordering.",
+  "observation_contract": "Operation lookup returns the outcome snapshot of that operation. Separate resource reads report the last observed current state; this fixture needs both only because neither alone reports both facts."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "ce_legacy_reassigned_to_homonym",
+  "expected_machine": {
+    "baseline": "PASS",
+    "candidate": "PASS"
+  },
+  "expected_semantic": "SEMANTIC_DEFECT",
+  "independent_basis": "旧入口はD-17と明記されmust_preserve=true。題名一致で別対象D-42へ置換できない。",
+  "rubric_ids": [
+    "N3"
+  ],
+  "evidence_level": "synthetic design / HTML source only; no rendered UI, operation, C conformance or human result"
+}

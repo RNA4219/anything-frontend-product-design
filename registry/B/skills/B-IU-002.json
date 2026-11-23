@@ -1,0 +1,171 @@
+{
+  "skill_id": "B-IU-002",
+  "domain": "interaction-ux-flow",
+  "trigger": [
+    "B-001: 安全な同一操作の再試行と、同じ入力による新しい利用者意図を分ける。"
+  ],
+  "intent": "安全な同一操作の再試行と、同じ入力による新しい利用者意図を分ける。",
+  "required_inputs": [
+    "対象API・版・HTTPメソッド・操作の副作用と冪等性契約。",
+    "元の操作ID/キー、入力、対象、保持窓を判断できる時点情報。欠落時は欠落として扱う。",
+    "API固有のキー範囲、内容一致、保持/失効、実行開始境界、エラー再試行規則。",
+    "利用者の意図が元要求の回復か、新しい実行か。"
+  ],
+  "decision_rules": [
+    {
+      "if": "APIが同じ操作の再送を安全に扱う契約を持つ",
+      "then": "その識別・内容・保持窓・エラー条件を満たす経路だけで再試行する。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S102",
+        "B-T201",
+        "B-T202",
+        "B-T204",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "RFC上の冪等メソッド、または実際の要求意味が冪等と判明",
+      "then": "APIの条件に従って再送を検討できる。HTTPレスポンスの一致や全ログ副作用の一致は必要条件でない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S102",
+        "B-T201",
+        "B-T202",
+        "B-T204",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "キー喪失、保持期間超過、内容変更、保証不明",
+      "then": "未確認の副作用要求を新しい操作として自動送信せず、元結果を照合する。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S102",
+        "B-T201",
+        "B-T202",
+        "B-T204",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "500/409等の応答を受ける",
+      "then": "対象APIの実行開始・同時実行・応答保存規則を確認する。全エラーを一律に再送可/不可としない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S102",
+        "B-T201",
+        "B-T202",
+        "B-T204",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "再読込、別SDK呼出し、プロセス再起動後に元操作を回復",
+      "then": "元操作の識別を引き継ぎ、毎回新しいキーで別操作を開始しない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S102",
+        "B-T201",
+        "B-T202",
+        "B-T204",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "利用者が同一設定の新しい出力等を明示している",
+      "then": "新しい操作として扱う。入力一致のみで重複にまとめない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S102",
+        "B-T201",
+        "B-T202",
+        "B-T204",
+        "B-T206"
+      ]
+    }
+  ],
+  "procedure": [
+    "同一の操作を回復するのか、新しい処理を始めるのかを区別する。",
+    "対象APIの版、再送の安全性、キーの適用範囲、保持期限、内容一致を確認する。",
+    "安全条件がそろう場合だけ同じ識別子と内容を使う。満たさなければ結果確認へ進める。",
+    "再読込・再接続をまたいで操作の対応を保つ。保存方法はデータの機密性と寿命に合わせる。",
+    "連打、キー喪失、期限超過、内容変更、新規の同一入力を別々に検証する。"
+  ],
+  "expected_outputs": [
+    "状態・操作・遷移条件・保持データの表",
+    "結果を確定する証拠と回復経路",
+    "正常・異常・境界条件の試験と未検証事項"
+  ],
+  "dependencies": [
+    "B-IU-001: 元結果の照合・未知状態の表示。",
+    "対象APIが保証する同一操作識別と保持条件。クライアントのボタン無効化だけでは代用できない。"
+  ],
+  "exceptions": [
+    "元要求の未適用が確実なら、対象契約に従って再送できる。",
+    "HTTPメソッド自体の冪等性が十分な操作にキーを必須化しない。",
+    "Stripe v1の24時間は製品/版固有。v2の期間を含め、実API契約なしに一般期間を採用しない。",
+    "Stripe v1は500を含む保存応答を再生するが、v2は更新応答を返し得る。安全性を同じHTTP応答の再生と同一視しない。",
+    "RFC §9.2.2の非冪等要求の自動再試行は条件付きSHOULD NOT、プロキシはMUST NOT。対象と強度を混同しない。"
+  ],
+  "failure_modes": [
+    "Retryのたびに新しいキーを生成して重複作成する。",
+    "古いキーを永久に安全と思い込む。",
+    "入力一致だけで別の利用者操作を抑制する。",
+    "500が再生され続けるため成功済みの業務結果へ到達できない。",
+    "ボタン無効化を唯一の重複防止策とする。"
+  ],
+  "verification": {
+    "criteria": [
+      "T03",
+      "T08",
+      "T09",
+      "T12",
+      "policy replay boundaries (separate tests)"
+    ],
+    "evidence": [
+      "campaigns/B/rounds/01/candidate-revised-trials.json",
+      "campaigns/B/rounds/01/recovery-policy-results.json",
+      "campaigns/B/rounds/01/independent/public-independent-review-summary.json"
+    ],
+    "limitations": [
+      "Executed synthetic controllers, decision adapter and generated DOM only; real backend, rendered browser, keyboard/AT and human comprehension unverified.",
+      "One same-model generation per arm; both scored 14/14. No causal efficacy gain demonstrated.",
+      "Initial candidate copy defect revised after independent DOM observation; original arm and all trial versions retained."
+    ]
+  },
+  "source_refs": [
+    "B-S101",
+    "B-S102",
+    "B-T201",
+    "B-T202",
+    "B-T204",
+    "B-T206"
+  ],
+  "confidence": {
+    "source_support": "Primary standards and official API/service guidance; scope and edition preserved.",
+    "transfer": "Accepted as conditional executable guidance within tested contracts; general usability benefit is not established.",
+    "limits": [
+      "実サービスのキー方式・保持期間・再起動時の保存・同時実行時の範囲は利用先で確認する。",
+      "別端末・長期オフラインでの操作識別は未検証。",
+      "retry間隔/回数やbackoffは今回の抽出で普遍値を定義しない。"
+    ]
+  },
+  "status": "ACCEPT",
+  "version": "0.1.0",
+  "introduced_round": 1,
+  "analysis_ref": "campaigns/B/rounds/01/analysis.md",
+  "accepted_round": 1,
+  "relationship_to_existing": {
+    "artifact": "https://github.com/RNA4219/anything-frontend-product-design/pull/2",
+    "revision": "f66e7954f2a59a59dad861901b9270076c2fc691",
+    "type": "formalizes_or_refines_existing_concept",
+    "additional_value": "Formal conditional unit with positive safe-replay controls, contract expiry counterexample and explicit service-version limits."
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "round": "R03",
+  "role": "independent_critic_evaluator",
+  "scored_at": "2026-11-23T08:21:24.398071+00:00",
+  "evaluation_type": "fixed rubric static source review with assignment-cue leakage",
+  "rubric_frozen_at": "2026-11-23T07:21:42.329328+00:00",
+  "criteria_unchanged": true,
+  "scale": "0/1 per criterion",
+  "opened_paths_scope": [
+    "private/evaluation/R03/blind/W",
+    "private/evaluation/R03/blind/Z",
+    "private/evaluation/R03/blind/snapshot.json",
+    "private/evaluation/R03/common",
+    "campaigns/A/rounds/R03/rubric.json",
+    "campaigns/A/rounds/R03/eligibility-oracle.json"
+  ],
+  "allocation_mapping_opened": false,
+  "blinding_status": "compromised by artifact path, explicitly acknowledged before final scores",
+  "arms": {
+    "W": {
+      "criteria": [
+        {
+          "id": "D1",
+          "criterion": "利用する判断で必要な条件・比較情報を、その判断場所で展開なしに参照できる",
+          "score": 1,
+          "locations": [
+            "preview.html:17-70",
+            "plan.json:screens[s_compare].information"
+          ],
+          "observation": "P-100/P-200/P-300の候補ID、人数上限、年間上限、年総額、契約期間と基準を同じ表のdetails外に置く。各必要IDはprimary。"
+        },
+        {
+          "id": "D2",
+          "criterion": "should/couldであっても提供する作業では必要情報を隠さない。延期した作業と区別する",
+          "score": 1,
+          "locations": [
+            "preview.html:86-105",
+            "design.md:26-33",
+            "plan.json:goal_routes[g_review_cancel]"
+          ],
+          "observation": "shouldの解約条件確認を今回提供する作業として保持し、CT-75・30日・次回更新日未確認・返金なしを展開不要の領域に置く。延期と混同しない。"
+        },
+        {
+          "id": "D3",
+          "criterion": "不明・未計測・該当なし・ゼロを区別し、不明な重要条件を確定値として扱わない",
+          "score": 1,
+          "locations": [
+            "preview.html:41-46,62-74,91-104",
+            "design.md:44-65",
+            "plan.json:unresolved[u_p200_quota,u_contract_renewal]"
+          ],
+          "observation": "P-100不適合、P-200未確認ゆえ判断保留、P-300適合が事前oracleと一致。次回更新日を作らず期限日付は未確定。未知原因も推測していない。"
+        },
+        {
+          "id": "D4",
+          "criterion": "比較・反復処理・初回理解の課題に応じて密度と開示を決め、普遍的要素数制限を作らない",
+          "score": 1,
+          "locations": [
+            "design.md:20,67-78,90-100",
+            "preview.html:20-70"
+          ],
+          "observation": "初回向け用語説明と同時比較表を組み合わせ、反復での候補別往復を避ける意図を説明。3候補と必要属性を保持し、要素数・カード数の万能上限を作らない。"
+        },
+        {
+          "id": "D5",
+          "criterion": "適用条件が非該当の補足は開示候補にでき、全情報の常時表示を強制しない",
+          "score": 1,
+          "locations": [
+            "preview.html:76-83",
+            "design.md:67-78"
+          ],
+          "observation": "今回の選択条件を変えない2つの補足題名だけを内容の分かるsummaryから開示。本文未提供を明記し、必要値や全情報の一律開示を強制しない。"
+        },
+        {
+          "id": "D6",
+          "criterion": "設計意図・構造検査・表示検査・実利用結果を分けて報告し、既存visual_intentを保つ",
+          "score": 1,
+          "locations": [
+            "design.md:102-145",
+            "preview.html:8,110",
+            "plan.json:visual_intent_id,decision_notes"
+          ],
+          "observation": "existing-team-adminを維持し、標準HTMLのみ。自作の構造・ソース照合を公式checker、ブラウザー描画、実操作、アクセシビリティ、実利用と分け、未実施を明記する。"
+        }
+      ],
+      "score": 6,
+      "maximum": 6,
+      "hard_failure_count": 0,
+      "hard_failures": [],
+      "hard_failure_checks": [
+        {
+          "criterion": "判断に必須の既知条件を落として不適合候補を適合として示す",
+          "detected": false,
+          "basis": "既知条件とP-100不適合を維持。P-200保留、P-300適合が事前oracleと一致。"
+        },
+        {
+          "criterion": "不明値・未検証条件を確定値と捏造",
+          "detected": false,
+          "basis": "年間上限と更新日の未知を保持し、具体的期限日を作らない。"
+        },
+        {
+          "criterion": "Aの設計情報整理でB/Cの状態遷移や認可の実装成功を宣言",
+          "detected": false,
+          "basis": "購入・解約・認可等の未実装/未検証を設計と分けて報告する。"
+        }
+      ]
+    },
+    "Z": {
+      "criteria": [
+        {
+          "id": "D1",
+          "criterion": "利用する判断で必要な条件・比較情報を、その判断場所で展開なしに参照できる",
+          "score": 1,
+          "locations": [
+            "preview.html:17-82",
+            "plan.json:screens[s_plan_compare].information"
+          ],
+          "observation": "P-100/P-200/P-300と必要な人数・年間上限・年総額・期間・比較基準を同じ表のdetails外へ配置。必要IDもprimaryで保持する。"
+        },
+        {
+          "id": "D2",
+          "criterion": "should/couldであっても提供する作業では必要情報を隠さない。延期した作業と区別する",
+          "score": 1,
+          "locations": [
+            "preview.html:96-112",
+            "design.md:5-11,24-36",
+            "plan.json:goal_routes[g_review_cancel]"
+          ],
+          "observation": "shouldの現契約条件確認を提供する。CT-75・30日・未確認の更新日・返金なし・期限判定に不足する情報を常時展開の領域に置き、deferしていない。"
+        },
+        {
+          "id": "D3",
+          "criterion": "不明・未計測・該当なし・ゼロを区別し、不明な重要条件を確定値として扱わない",
+          "score": 1,
+          "locations": [
+            "preview.html:24,44-49,72-82,101-112",
+            "design.md:38-64",
+            "plan.json:unresolved[u_p200_quota,u_ct75_renewal]"
+          ],
+          "observation": "oracleの不適合／未確認／適合の区別と一致。P-200の上限をゼロや無制限にせず、CT-75の期限を創作しない。既知条件を捏造・改変しない。"
+        },
+        {
+          "id": "D4",
+          "criterion": "比較・反復処理・初回理解の課題に応じて密度と開示を決め、普遍的要素数制限を作らない",
+          "score": 1,
+          "locations": [
+            "design.md:66-75,86-94",
+            "preview.html:24-81"
+          ],
+          "observation": "初回説明、反復比較、同時参照を別に扱い、比較表を選んだ理由と未測定の効果を明記。全3候補と属性を維持し、普遍的要素数制限は置かない。"
+        },
+        {
+          "id": "D5",
+          "criterion": "適用条件が非該当の補足は開示候補にでき、全情報の常時表示を強制しない",
+          "score": 1,
+          "locations": [
+            "preview.html:86-93",
+            "design.md:66-75"
+          ],
+          "observation": "比較条件に影響しない補足2件をdetailsに置き、本文・リンク先未提供を保持する。必要条件は開示内へ移さず、全情報常時表示の規則を課していない。"
+        },
+        {
+          "id": "D6",
+          "criterion": "設計意図・構造検査・表示検査・実利用結果を分けて報告し、既存visual_intentを保つ",
+          "score": 1,
+          "locations": [
+            "design.md:21,96-125",
+            "plan.json:visual_intent_id,decision_notes",
+            "preview.html:1-122"
+          ],
+          "observation": "視覚意図existing-team-adminと標準HTML制約を保持。自作チェック・ソース確認、公式checker、描画、操作、認可、アクセシビリティ、人の評価の範囲を分ける。"
+        }
+      ],
+      "score": 6,
+      "maximum": 6,
+      "hard_failure_count": 0,
+      "hard_failures": [],
+      "hard_failure_checks": [
+        {
+          "criterion": "判断に必須の既知条件を落として不適合候補を適合として示す",
+          "detected": false,
+          "basis": "既知条件とP-100不適合を維持。P-200保留、P-300適合が事前oracleと一致。"
+        },
+        {
+          "criterion": "不明値・未検証条件を確定値と捏造",
+          "detected": false,
+          "basis": "年間上限と更新日の未知を保持し、具体的期限日を作らない。"
+        },
+        {
+          "criterion": "Aの設計情報整理でB/Cの状態遷移や認可の実装成功を宣言",
+          "detected": false,
+          "basis": "購入・解約・認可等の未実装/未検証を設計と分けて報告する。"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "各armは1回、同じモデル系列の独立スレッドによる合成課題。反復試行・人による評価ではない。",
+    "HTMLソースの静的確認だけであり、描画、スクロール時の収まり、操作、読み上げ、認可、実APIは未実行。",
+    "独立にJSON/HTMLのハッシュ・情報ID・details祖先・アンカーを照合したが、arm自身が申告する過去の自作チェックの実行ログはこの匿名資料に含まれない。",
+    "baseline/candidateのフォルダーとunblinding.jsonは開いていない。ただしZ/design.md:136のbaseline/input/product-ia/SKILL.mdが割当手掛かりを漏らし、完全な盲検は成立していない。Wの追加reference名からも推測が可能。",
+    "この固定briefには確認済みゼロ、未計測の確定理由、条件成立が変化する別場面のデータはない。D3/D5の点は今回の未知値と補足開示での充足に限り、全境界の実証を意味しない。",
+    "両案6点は固定D1–D6で差を観測しなかったことを示す。実用上の完全同等、一般的な品質PASS、Skillの改善効果または無効果を証明しない。",
+    "共通の詳細なbrief・契約が両案へ与えられているため今回の課題は差を検出しにくい可能性があるが、これは推測であり測定された感度ではない。"
+  ],
+  "source_check": "blind-source-check.json",
+  "comparison": {
+    "W_score": 6,
+    "Z_score": 6,
+    "W_minus_Z": 0,
+    "hard_failure_difference": 0,
+    "conclusion": "固定基準による得点差は0。両案が今回の情報義務を満たすことを静的資料で確認した。Skillの効果向上を観測したとは報告しない。"
+  }
+}

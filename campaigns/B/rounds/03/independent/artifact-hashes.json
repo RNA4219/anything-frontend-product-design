@@ -1,0 +1,54 @@
+{
+  "initial_candidate": [
+    {
+      "original_path": "modules/interaction-ux-flow/examples/resume-and-conflict.mjs",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/resume-and-conflict.mjs",
+      "sha256": "342471207d315e3d307232d1be7b0b796cf8d139dcdf22140d60f5a68103719b",
+      "actual_sha256": "342471207d315e3d307232d1be7b0b796cf8d139dcdf22140d60f5a68103719b",
+      "snapshot_hash_matches": true
+    },
+    {
+      "original_path": "modules/interaction-ux-flow/examples/resume-and-conflict.html",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/resume-and-conflict.html",
+      "sha256": "fb10fccac3ab6e788e17e212e82b5306cbc970884a90998cc3cb4ddb120db2a7",
+      "actual_sha256": "fb10fccac3ab6e788e17e212e82b5306cbc970884a90998cc3cb4ddb120db2a7",
+      "snapshot_hash_matches": true
+    },
+    {
+      "original_path": "modules/interaction-ux-flow/references/resume-and-conflict.md",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/resume-and-conflict.md",
+      "sha256": "b025e9bdaaa365cd5daabe1a96cc36ccf38787af905a9e7a7f04316613dc4491",
+      "actual_sha256": "b025e9bdaaa365cd5daabe1a96cc36ccf38787af905a9e7a7f04316613dc4491",
+      "snapshot_hash_matches": true
+    },
+    {
+      "original_path": "registry/B/skills/B-IU-007.json",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/B-IU-007.json",
+      "sha256": "315997657470ecca1d691168632476da3e63cb05f619222138a49801cd846700",
+      "actual_sha256": "315997657470ecca1d691168632476da3e63cb05f619222138a49801cd846700",
+      "snapshot_hash_matches": true
+    },
+    {
+      "original_path": "registry/B/skills/B-IU-008.json",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/B-IU-008.json",
+      "sha256": "7cfd3bfa832dc6df341bdb31e799b2f0ff11f56be92ad8f230eb3d81b1c5c3ae",
+      "actual_sha256": "7cfd3bfa832dc6df341bdb31e799b2f0ff11f56be92ad8f230eb3d81b1c5c3ae",
+      "snapshot_hash_matches": true
+    }
+  ],
+  "reviewed_supporting_files": {
+    "modules/interaction-ux-flow/SKILL.md": "94441b4e58666602a1d41a9f12dfe5950dc45febdaa68cf53355a6c9a5788303",
+    "campaigns/B/rounds/03/task.md": "71c8459f575fd14638103aa637213acc29ef7cfd603760c2d653c0e0cde51642",
+    "campaigns/B/rounds/03/cases.json": "fa02e71d1419a1b50ae9501fd0c95485f63338bfbe69c401462305a92d18105b",
+    "campaigns/B/rounds/03/test-freeze.json": "150eb1e9da19629d740b2a0dd459d91e3311cb2e99f8fb4ef709bf488afc159d",
+    "modules/interaction-ux-flow/tests/test_resume_conflict.mjs": "f2f52bfe67da04a680299ed771581b25b6e0004325cfea6128f7b34c5e68289f",
+    "campaigns/B/rounds/03/analysis.md": "b880c3d84c99ffd46db4849cb0a5c12fd8d6929232de8683d07e6fd499ae9f35"
+  },
+  "test_freeze": {
+    "path": "modules/interaction-ux-flow/tests/test_resume_conflict.mjs",
+    "expected_sha256": "f2f52bfe67da04a680299ed771581b25b6e0004325cfea6128f7b34c5e68289f",
+    "actual_sha256": "f2f52bfe67da04a680299ed771581b25b6e0004325cfea6128f7b34c5e68289f",
+    "matches": true,
+    "limits": "Byte equality verified; timestamp is not independently attested."
+  }
+}

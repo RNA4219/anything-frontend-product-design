@@ -1,0 +1,14 @@
+{"url": "https://www.w3.org/TR/2026/NOTE-wcag-em-2-20260723/", "name": "em", "status": "OK", "at": "2026-11-23T06:23:34+00:00", "file": "em.md"}
+{"url": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/", "name": "wcag", "status": "OK", "at": "2026-11-23T06:23:40+00:00", "file": "wcag.md"}
+{"url": "https://design-system.service.gov.uk/patterns/validation/", "name": "gov-v", "status": "FAIL", "at": "2026-11-23T06:23:43+00:00", "reason": "壁に当たった（page not found）"}
+{"url": "https://design-system.service.gov.uk/patterns/problem-with-the-service-pages/", "name": "gov-e", "status": "OK", "at": "2026-11-23T06:23:47+00:00", "file": "gov-e.md"}
+{"url": "https://www.gov.uk/service-manual/measuring-success/usability-benchmarking-a-website-or-whole-service", "name": "gov-b", "status": "OK", "at": "2026-11-23T06:23:51+00:00", "file": "gov-b.md"}
+{"url": "https://www.dialogdesign.dk/tekster/cue8/CUE-8_UPA.pdf", "name": "cue", "status": "OK", "at": "2026-11-23T06:25:48+00:00", "file": "cue.txt"}
+{"url": "https://www.dialogdesign.dk/tekster/cue8/CUE-8_JUS.pdf", "name": "cue-jus", "status": "OK", "at": "2026-11-23T06:26:06+00:00", "file": "cue-jus.txt"}
+{"url": "https://mortenhertzum.dk/publ/BIT2014.pdf", "name": "ee", "status": "OK", "at": "2026-11-23T06:26:41+00:00", "file": "ee.txt"}
+{"url": "https://www.yorku.ca/mack/RN-Counterbalancing.html", "name": "order", "status": "OK", "at": "2026-11-23T06:26:46+00:00", "file": "order.md"}
+{"url": "https://design-system.service.gov.uk/patterns/confirmation-pages/", "name": "gov-confirm", "status": "OK", "at": "2026-11-23T06:26:52+00:00", "file": "gov-confirm.md"}
+{"url": "https://www.dialogdesign.dk/tekster/cue8/cue-8instr.pdf", "name": "cue-instructions", "status": "OK", "at": "2026-11-23T06:32:22+00:00", "file": "cue-instructions.txt"}
+{"name":"gov-v","file":"gov-v.html","url":"https://design-system.service.gov.uk/patterns/validation/","status":"OK","at":"2026-11-23T06:29:15.2945607Z","method":"curl HTTP 200; article title, section and length checked","sha256":"e3135cdfe2bd78f3aa7e7432be38a8e9418dcde201e6c8085fbe418c6228d1da"}
+{"name":"gov-e-example","file":"gov-e-example.njk","url":"https://raw.githubusercontent.com/alphagov/govuk-design-system/57357510e401fc0a0b125e09ae064c8e82b70c92/src/patterns/problem-with-the-service-pages/offline-support-link/index.njk","status":"OK","at":"2026-11-23T06:33:02.9722172Z","method":"curl; template content verified","sha256":"6115df87c983d5df60ec32936642fa46f1b5a7fe0f3a15494f051378c7a558f2"}
+{"name":"gov-e-example-license","file":"gov-e-example-LICENSE","url":"https://raw.githubusercontent.com/alphagov/govuk-design-system/57357510e401fc0a0b125e09ae064c8e82b70c92/LICENSE","status":"OK","at":"2026-11-23T06:33:04.2526887Z","method":"curl; Crown Copyright and MIT terms verified","sha256":"9d27c37cd2ea4305d75fceb0ae3a1dd30c3715ac0450572cba7071250505b2d2"}

@@ -1,0 +1,55 @@
+{
+  "id": "R02-R2-S01",
+  "url": "https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository",
+  "canonical_url": "https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository",
+  "title": "Renaming a repository",
+  "publisher": "GitHub",
+  "source_type": "official_product_documentation",
+  "retrieved_at": "2026-11-23",
+  "sha256": "137719d8db85fa8b220babee7157d63989be5a205ab01f48695733cf2dcf4e35",
+  "locator": {
+    "web_ref": "turn475801247view0",
+    "web_lines": [
+      {
+        "claim_id": "S01-C1",
+        "text": "GitHubのリポジトリ改名では既存Web情報とGit操作に転送がある一方、PagesのURLとActions呼出しには別の扱いがある。",
+        "locator": "Web L20-L37"
+      },
+      {
+        "claim_id": "S01-C2",
+        "text": "改名前の名前で新しいリポジトリを作ると、改名後への転送は機能しなくなる。",
+        "locator": "Web L39-L41"
+      }
+    ],
+    "local_line_anchors": {
+      "20": 30,
+      "41": 51
+    }
+  },
+  "verified_claims": [
+    {
+      "claim_id": "S01-C1",
+      "text": "GitHubのリポジトリ改名では既存Web情報とGit操作に転送がある一方、PagesのURLとActions呼出しには別の扱いがある。",
+      "locator": "Web L20-L37"
+    },
+    {
+      "claim_id": "S01-C2",
+      "text": "改名前の名前で新しいリポジトリを作ると、改名後への転送は機能しなくなる。",
+      "locator": "Web L39-L41"
+    }
+  ],
+  "limits": [
+    "GitHubの改名仕様であり、全サービスの移行保証ではない。転送維持の利用者効果・移行失敗率・現行プロジェクトの旧入口動作は測定していない。"
+  ],
+  "source_edges": [],
+  "acquisition": {
+    "imozuru_fetch": "FAIL_DNS",
+    "method": "public web tool text extraction fallback",
+    "original_html_downloaded": false,
+    "full_original_archive": false,
+    "relevant_passages_verified": true
+  },
+  "publication": "公開可能なのはURL・独自要約・必要最小限の短い引用。原文抜粋と取得ログはprivateに保持。",
+  "source_id": "R02-R2-S01",
+  "verified_in_current_round": "R02"
+}

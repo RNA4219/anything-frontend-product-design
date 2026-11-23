@@ -1,0 +1,24 @@
+{
+  "source_id": "B-T201",
+  "title": "Advanced error handling",
+  "url": "https://docs.stripe.com/error-low-level",
+  "kind": "official-primary",
+  "section": "Network errors; Server errors; POST requests; Sending idempotency keys",
+  "read_status": "full_web_text: all 97 lines of the retrieved Markdown representation (L0–L96); not raw HTTP/HTML; relevant sections read",
+  "observed_facts": [
+    "API v1では通信復旧だけでは元の処理成否が分からず、同一キー・同一パラメータで最初の24時間に再試行する。",
+    "500は副作用が発生した可能性を含む不確定結果。v1では同じキーで500応答が再生され、オブジェクト取得・管理画面・webhookで照合する。",
+    "保持窓を越えて成否不明なら旧キー・新キーのどちらでも盲目的に反復しない。別SDK呼出し・プロセス再起動をまたぐ再試行では操作のキーを永続化する。"
+  ],
+  "limits": [
+    "このページはv1応答再生契約を説明する。v2は異なる再生動作・30日の窓と明記され、24時間を一般化しない。",
+    "予約R-204のサーバーが同じ契約を持つ証拠ではない。fixtureへの適用は推論。"
+  ],
+  "canonical_url": "https://docs.stripe.com/error-low-level",
+  "capture_sha256": "2f7fe1c23b9eee51d1301a9fe0cd40e6cbc769f6297903f83b049d8dd9f05d3f",
+  "capture_hash_scope": "exact retrieved representation, not necessarily raw webpage",
+  "source_file_name": "B-T201-stripe-advanced-errors.web.md",
+  "checked_at": "2026-11-23T06:43:37.755006+00:00",
+  "round": 1,
+  "redistribution": "Original is retained privately, not committed; this record contains campaign paraphrases and public locators."
+}

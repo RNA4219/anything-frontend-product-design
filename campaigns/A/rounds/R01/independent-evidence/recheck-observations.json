@@ -1,0 +1,156 @@
+{
+  "checker_sha256": "5f6054b1799dbfb7bba9f2d6f2f490821d9a12d7bbcad7884a6d0c6e6b39f597",
+  "observations": [
+    {
+      "name": "ce01_unreachable_capability",
+      "exit_code": 1,
+      "actual": {
+        "status": "FAIL",
+        "issues": [
+          {
+            "code": "ROUTE_CAPABILITY_MISSING",
+            "location": "g_label",
+            "symptom": "Decision destination needs a kept capability that actually serves this goal and role",
+            "category": "function",
+            "severity": "error"
+          }
+        ],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 1,
+          "features": 1,
+          "kept_features": 1,
+          "screens": 2,
+          "navigation_edges": 0
+        }
+      }
+    },
+    {
+      "name": "ce02_planned_merge_replacement",
+      "exit_code": 1,
+      "actual": {
+        "status": "HOLD",
+        "issues": [
+          {
+            "code": "MERGE_NOT_CURRENT",
+            "location": "features.f_live",
+            "symptom": "Proposed or unknown availability is not a current replacement for existing users",
+            "category": "function",
+            "severity": "hold"
+          }
+        ],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 1,
+          "features": 2,
+          "kept_features": 1,
+          "screens": 1,
+          "navigation_edges": 0
+        }
+      }
+    },
+    {
+      "name": "ce03_indirect_canonical_chain",
+      "exit_code": 0,
+      "actual": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 1,
+          "features": 3,
+          "kept_features": 1,
+          "screens": 1,
+          "navigation_edges": 0
+        }
+      }
+    },
+    {
+      "name": "ce04_mixed_role_screen_leak",
+      "exit_code": 1,
+      "actual": {
+        "status": "FAIL",
+        "issues": [
+          {
+            "code": "FEATURE_ROLE",
+            "location": "screens.s_home",
+            "symptom": "Screen exposes a capability to a role outside its declared audience: f_live",
+            "category": "information_architecture",
+            "severity": "error"
+          },
+          {
+            "code": "FEATURE_ROLE",
+            "location": "screens.s_home",
+            "symptom": "Screen exposes a capability to a role outside its declared audience: f_all",
+            "category": "information_architecture",
+            "severity": "error"
+          }
+        ],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 2,
+          "features": 2,
+          "kept_features": 2,
+          "screens": 1,
+          "navigation_edges": 0
+        }
+      }
+    },
+    {
+      "name": "control_current_merge_replacement",
+      "exit_code": 0,
+      "actual": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 1,
+          "features": 2,
+          "kept_features": 1,
+          "screens": 1,
+          "navigation_edges": 0
+        }
+      }
+    },
+    {
+      "name": "control_live_reachable",
+      "exit_code": 0,
+      "actual": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 1,
+          "features": 1,
+          "kept_features": 1,
+          "screens": 1,
+          "navigation_edges": 0
+        }
+      }
+    }
+  ]
+}

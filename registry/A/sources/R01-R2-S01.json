@@ -1,0 +1,18 @@
+{
+  "id": "R01-R2-S01",
+  "title": "Feature comparison between new Outlook and classic Outlook",
+  "url": "https://support.microsoft.com/en-us/outlook/getstarted/feature-comparison-between-new-outlook-and-classic-outlook",
+  "kind": "official_product_capability_matrix",
+  "locator": "Last updated September 23, 2026; Key Definitions; Account support; App framework; Extensibility; Teams integration. Web L127-L144, L174-L200, L257-L270, L405-L407.",
+  "short_quote": "Not all features and capabilities will be listed.",
+  "claim": "Microsoftは新旧版の機能をavailable / partially available / upcoming / revised等に区別する。アカウント・契約条件があり、同名の機能でも範囲が異なる。一方Teams会議の旧アドインは非対応でも機能は新クライアントに内蔵される。",
+  "limits": "これは製品仕様の時点比較であり利用者への因果効果の実験ではない。表は非網羅的と明記され、partialから特定タスクの不能を自動推定できない。仕様更新時は再確認する。",
+  "sha256": "b105f7c2f29cd2b86e149075ac2de8cb0589f7e5c78cd3eadafd01e6bf8f90f5",
+  "retrieved_at": "2026-11-23",
+  "acquisition": "Web tool text extraction after imozuru fetch.py DNS failure; original HTML not acquired",
+  "redistribution": "Do not commit raw source or retrieval transcript; use source URL, own rules, bounded quotation only",
+  "is_full_original": false,
+  "source_id": "R01-R2-S01",
+  "canonical_url": "https://support.microsoft.com/en-us/outlook/getstarted/feature-comparison-between-new-outlook-and-classic-outlook",
+  "verified_in_current_round": true
+}

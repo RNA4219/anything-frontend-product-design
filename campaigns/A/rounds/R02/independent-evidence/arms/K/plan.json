@@ -1,0 +1,753 @@
+{
+  "schema_version": "1.1",
+  "case_id": "training-catalogue-navigation",
+  "visual_intent_id": "learning-editorial-existing",
+  "features": [
+    {
+      "id": "f_catalogue",
+      "label": "研修を探す",
+      "disposition": "keep",
+      "target": null,
+      "object": "course",
+      "outcome": "choose-course",
+      "roles": [
+        "learner"
+      ],
+      "goal_ids": [
+        "g_choose"
+      ],
+      "requirement_ids": [
+        "r_choose"
+      ],
+      "dependencies": [],
+      "reason": "全公開研修からC-101とC-202を共通属性で比較し、C-202を選ぶため。入力のmandatory=true、lifecycle=existing、availability=availableを維持する。e_taskは課題条件の確定であり実装動作の観測ではない。",
+      "priority": "required",
+      "priority_basis": "mustのg_chooseとmandatoryのr_choose/f_catalogueに直接対応する。対象範囲が登録済み研修だけでは未登録のC-202を選べない。",
+      "scope": "all-published-courses",
+      "context_constraints": [
+        "learner-account"
+      ],
+      "evidence_refs": [
+        "e_task"
+      ]
+    },
+    {
+      "id": "f_enrolled",
+      "label": "登録済み研修",
+      "disposition": "keep",
+      "target": null,
+      "object": "course",
+      "outcome": "resume-course",
+      "roles": [
+        "learner"
+      ],
+      "goal_ids": [
+        "g_resume"
+      ],
+      "requirement_ids": [
+        "r_resume"
+      ],
+      "dependencies": [],
+      "reason": "登録済みC-101の学習再開を支える既存機能として保持する。入力のmandatory=false、lifecycle=existing、availability=availableを維持する。f_catalogueとはoutcomeとscopeが異なるためmergeしない。",
+      "priority": "high",
+      "priority_basis": "shouldのg_resumeを延期せず保持する。新しい研修を探す行為と混同すると再開対象を取り違えるため入口を分ける。頻度・利用率は未提供で数値順位は作らない。",
+      "scope": "my-enrollments",
+      "context_constraints": [
+        "learner-account"
+      ],
+      "evidence_refs": [
+        "e_task"
+      ]
+    }
+  ],
+  "screens": [
+    {
+      "id": "s_catalogue",
+      "title": "研修を探す（全公開研修）",
+      "purpose": "全公開研修を対象ID・対象条件・開催条件で比較し、今回選ぶ研修C-202を判断する。",
+      "goal_ids": [
+        "g_choose"
+      ],
+      "feature_ids": [
+        "f_catalogue"
+      ],
+      "roles": [
+        "learner"
+      ],
+      "entry_for": [
+        "learner"
+      ],
+      "information": [
+        {
+          "id": "course_id",
+          "visibility": "primary",
+          "reason": "同名のC-101とC-202を別対象として識別する。"
+        },
+        {
+          "id": "title",
+          "visibility": "primary",
+          "reason": "探している研修名との対応を確認する。"
+        },
+        {
+          "id": "audience",
+          "visibility": "primary",
+          "reason": "入社時研修と配属変更時研修の対象条件を比較する。"
+        },
+        {
+          "id": "date",
+          "visibility": "primary",
+          "reason": "開催日を比較する。"
+        },
+        {
+          "id": "format",
+          "visibility": "primary",
+          "reason": "対面とオンラインの開催形式を比較する。"
+        },
+        {
+          "id": "enrollment_state",
+          "visibility": "primary",
+          "reason": "登録済み研修の再開と未登録研修の選択を区別する。受講履歴とは同一視しない。"
+        },
+        {
+          "id": "search_scope",
+          "visibility": "primary",
+          "reason": "all-published-coursesであり、登録済みだけの集合ではないことを示す。"
+        },
+        {
+          "id": "active_query",
+          "visibility": "primary",
+          "reason": "この比較用の復帰先では検索語なしと明示する。"
+        },
+        {
+          "id": "active_filters",
+          "visibility": "primary",
+          "reason": "この比較用の復帰先では形式を含む絞込なしと明示し、C-101とC-202を同時に残す。"
+        },
+        {
+          "id": "result_count",
+          "visibility": "primary",
+          "reason": "支給された全3件の静的例であると明示し、実検索の件数とは区別する。"
+        },
+        {
+          "id": "tags",
+          "visibility": "secondary",
+          "reason": "安全・入社時・配属変更・運用は同一正本への分類属性。補足の分類一覧から確認できる。"
+        }
+      ]
+    },
+    {
+      "id": "s_enrolled_zero",
+      "title": "登録済み研修：現在の検索結果0件",
+      "purpose": "限定された検索0件の意味を読み、見直す範囲または条件を判断する。",
+      "goal_ids": [
+        "g_choose",
+        "g_resume"
+      ],
+      "feature_ids": [
+        "f_enrolled"
+      ],
+      "roles": [
+        "learner"
+      ],
+      "entry_for": [
+        "learner"
+      ],
+      "information": [
+        {
+          "id": "search_scope",
+          "visibility": "primary",
+          "reason": "入力のmy-enrollmentsをそのまま示す。"
+        },
+        {
+          "id": "active_query",
+          "visibility": "primary",
+          "reason": "入力の検索語「配属変更」をそのまま示す。"
+        },
+        {
+          "id": "active_filters",
+          "visibility": "primary",
+          "reason": "入力のformat=onlineを「オンライン」と示す。"
+        },
+        {
+          "id": "result_count",
+          "visibility": "primary",
+          "reason": "入力の0件を保持し、全体不存在へ拡張しない。"
+        },
+        {
+          "id": "index_coverage",
+          "visibility": "primary",
+          "reason": "e_indexによる索引対象・更新時点のunknownを明示する。"
+        },
+        {
+          "id": "recovery_destinations",
+          "visibility": "primary",
+          "reason": "全公開研修を条件なしで見る入口と、登録済み研修の条件を解除する入口を区別する。"
+        }
+      ]
+    },
+    {
+      "id": "s_enrolled",
+      "title": "登録済み研修",
+      "purpose": "自分の登録済み研修から、学習を再開するC-101を選ぶ。",
+      "goal_ids": [
+        "g_resume"
+      ],
+      "feature_ids": [
+        "f_enrolled"
+      ],
+      "roles": [
+        "learner"
+      ],
+      "entry_for": [
+        "learner"
+      ],
+      "information": [
+        {
+          "id": "course_id",
+          "visibility": "primary",
+          "reason": "同名のC-101とC-202を別対象として識別する。"
+        },
+        {
+          "id": "title",
+          "visibility": "primary",
+          "reason": "探している研修名との対応を確認する。"
+        },
+        {
+          "id": "audience",
+          "visibility": "primary",
+          "reason": "入社時研修と配属変更時研修の対象条件を比較する。"
+        },
+        {
+          "id": "date",
+          "visibility": "primary",
+          "reason": "開催日を比較する。"
+        },
+        {
+          "id": "format",
+          "visibility": "primary",
+          "reason": "対面とオンラインの開催形式を比較する。"
+        },
+        {
+          "id": "enrollment_state",
+          "visibility": "primary",
+          "reason": "登録済み研修の再開と未登録研修の選択を区別する。受講履歴とは同一視しない。"
+        },
+        {
+          "id": "search_scope",
+          "visibility": "primary",
+          "reason": "my-enrollmentsだけを扱うことを明示する。"
+        },
+        {
+          "id": "active_query",
+          "visibility": "primary",
+          "reason": "条件解除後の静的例は検索語なしである。"
+        },
+        {
+          "id": "active_filters",
+          "visibility": "primary",
+          "reason": "条件解除後の静的例は形式指定なしである。"
+        },
+        {
+          "id": "result_count",
+          "visibility": "primary",
+          "reason": "支給データから登録済みと分かるC-101の1件を表示する。検索APIの観測ではない。"
+        },
+        {
+          "id": "resume_destination",
+          "visibility": "primary",
+          "reason": "再開の対象IDを選択時点で表示し、研修詳細へのリンクと区別する。"
+        }
+      ]
+    },
+    {
+      "id": "s_course_101",
+      "title": "C-101 基礎研修（入社時研修）",
+      "purpose": "選択した同一対象C-101の対象条件・開催条件を確認する。",
+      "goal_ids": [
+        "g_choose"
+      ],
+      "feature_ids": [
+        "f_catalogue"
+      ],
+      "roles": [
+        "learner"
+      ],
+      "entry_for": [
+        "learner"
+      ],
+      "information": [
+        {
+          "id": "course_id",
+          "visibility": "primary",
+          "reason": "同名のC-101とC-202を別対象として識別する。"
+        },
+        {
+          "id": "title",
+          "visibility": "primary",
+          "reason": "探している研修名との対応を確認する。"
+        },
+        {
+          "id": "audience",
+          "visibility": "primary",
+          "reason": "入社時研修と配属変更時研修の対象条件を比較する。"
+        },
+        {
+          "id": "date",
+          "visibility": "primary",
+          "reason": "開催日を比較する。"
+        },
+        {
+          "id": "format",
+          "visibility": "primary",
+          "reason": "対面とオンラインの開催形式を比較する。"
+        },
+        {
+          "id": "enrollment_state",
+          "visibility": "primary",
+          "reason": "登録済み研修の再開と未登録研修の選択を区別する。受講履歴とは同一視しない。"
+        },
+        {
+          "id": "tags",
+          "visibility": "secondary",
+          "reason": "正本に付く分類属性として補足欄で確認する。"
+        }
+      ]
+    },
+    {
+      "id": "s_course_202",
+      "title": "C-202 基礎研修（配属変更時研修）",
+      "purpose": "選択した同一対象C-202の対象条件・開催条件を確認する。",
+      "goal_ids": [
+        "g_choose"
+      ],
+      "feature_ids": [
+        "f_catalogue"
+      ],
+      "roles": [
+        "learner"
+      ],
+      "entry_for": [
+        "learner"
+      ],
+      "information": [
+        {
+          "id": "course_id",
+          "visibility": "primary",
+          "reason": "同名のC-101とC-202を別対象として識別する。"
+        },
+        {
+          "id": "title",
+          "visibility": "primary",
+          "reason": "探している研修名との対応を確認する。"
+        },
+        {
+          "id": "audience",
+          "visibility": "primary",
+          "reason": "入社時研修と配属変更時研修の対象条件を比較する。"
+        },
+        {
+          "id": "date",
+          "visibility": "primary",
+          "reason": "開催日を比較する。"
+        },
+        {
+          "id": "format",
+          "visibility": "primary",
+          "reason": "対面とオンラインの開催形式を比較する。"
+        },
+        {
+          "id": "enrollment_state",
+          "visibility": "primary",
+          "reason": "登録済み研修の再開と未登録研修の選択を区別する。受講履歴とは同一視しない。"
+        },
+        {
+          "id": "tags",
+          "visibility": "secondary",
+          "reason": "正本に付く分類属性として補足欄で確認する。"
+        }
+      ]
+    },
+    {
+      "id": "s_course_303",
+      "title": "C-303 記録管理（全受講者）",
+      "purpose": "選択した同一対象C-303の対象条件・開催条件を確認する。",
+      "goal_ids": [
+        "g_choose"
+      ],
+      "feature_ids": [
+        "f_catalogue"
+      ],
+      "roles": [
+        "learner"
+      ],
+      "entry_for": [
+        "learner"
+      ],
+      "information": [
+        {
+          "id": "course_id",
+          "visibility": "primary",
+          "reason": "同名のC-101とC-202を別対象として識別する。"
+        },
+        {
+          "id": "title",
+          "visibility": "primary",
+          "reason": "探している研修名との対応を確認する。"
+        },
+        {
+          "id": "audience",
+          "visibility": "primary",
+          "reason": "入社時研修と配属変更時研修の対象条件を比較する。"
+        },
+        {
+          "id": "date",
+          "visibility": "primary",
+          "reason": "開催日を比較する。"
+        },
+        {
+          "id": "format",
+          "visibility": "primary",
+          "reason": "対面とオンラインの開催形式を比較する。"
+        },
+        {
+          "id": "enrollment_state",
+          "visibility": "primary",
+          "reason": "登録済み研修の再開と未登録研修の選択を区別する。受講履歴とは同一視しない。"
+        },
+        {
+          "id": "tags",
+          "visibility": "secondary",
+          "reason": "正本に付く分類属性として補足欄で確認する。"
+        }
+      ]
+    },
+    {
+      "id": "s_learning_101",
+      "title": "C-101 基礎研修：学習再開先の情報配置",
+      "purpose": "再開対象が登録済みC-101であることを確認し、既存学習機能へ引き渡す。",
+      "goal_ids": [
+        "g_resume"
+      ],
+      "feature_ids": [
+        "f_enrolled"
+      ],
+      "roles": [
+        "learner"
+      ],
+      "entry_for": [],
+      "information": [
+        {
+          "id": "course_id",
+          "visibility": "primary",
+          "reason": "再開対象をC-101に固定し、C-202と取り違えない。"
+        },
+        {
+          "id": "title",
+          "visibility": "primary",
+          "reason": "対象IDと研修名を併記する。"
+        },
+        {
+          "id": "enrollment_state",
+          "visibility": "primary",
+          "reason": "登録済みである入力条件を再開対象と併記する。"
+        },
+        {
+          "id": "resume_context",
+          "visibility": "primary",
+          "reason": "学習の再開位置・実URLは未提供。静的な引継ぎ箇所であり再開完了を表さない。"
+        }
+      ]
+    }
+  ],
+  "navigation": [
+    {
+      "from": "s_catalogue",
+      "to": "s_enrolled",
+      "label": "登録済み研修",
+      "roles": [
+        "learner"
+      ],
+      "kind": "global",
+      "rationale": "学習再開の共通入口。my-enrollmentsの条件なし一覧へ進む。検索条件の復元・解除動作はBへ引き渡す。"
+    },
+    {
+      "from": "s_enrolled_zero",
+      "to": "s_catalogue",
+      "label": "研修を探す（全公開研修）",
+      "roles": [
+        "learner"
+      ],
+      "kind": "global",
+      "rationale": "新しい研修を探す共通入口。到達先はall-published-coursesの条件なし比較一覧で、learner-accountを前提とする。"
+    },
+    {
+      "from": "s_enrolled_zero",
+      "to": "s_enrolled",
+      "label": "登録済み研修",
+      "roles": [
+        "learner"
+      ],
+      "kind": "global",
+      "rationale": "学習再開の共通入口。my-enrollmentsの条件なし一覧へ進む。検索条件の復元・解除動作はBへ引き渡す。"
+    },
+    {
+      "from": "s_enrolled",
+      "to": "s_catalogue",
+      "label": "研修を探す（全公開研修）",
+      "roles": [
+        "learner"
+      ],
+      "kind": "global",
+      "rationale": "新しい研修を探す共通入口。到達先はall-published-coursesの条件なし比較一覧で、learner-accountを前提とする。"
+    },
+    {
+      "from": "s_course_101",
+      "to": "s_catalogue",
+      "label": "研修を探す（全公開研修）",
+      "roles": [
+        "learner"
+      ],
+      "kind": "global",
+      "rationale": "新しい研修を探す共通入口。到達先はall-published-coursesの条件なし比較一覧で、learner-accountを前提とする。"
+    },
+    {
+      "from": "s_course_101",
+      "to": "s_enrolled",
+      "label": "登録済み研修",
+      "roles": [
+        "learner"
+      ],
+      "kind": "global",
+      "rationale": "学習再開の共通入口。my-enrollmentsの条件なし一覧へ進む。検索条件の復元・解除動作はBへ引き渡す。"
+    },
+    {
+      "from": "s_course_202",
+      "to": "s_catalogue",
+      "label": "研修を探す（全公開研修）",
+      "roles": [
+        "learner"
+      ],
+      "kind": "global",
+      "rationale": "新しい研修を探す共通入口。到達先はall-published-coursesの条件なし比較一覧で、learner-accountを前提とする。"
+    },
+    {
+      "from": "s_course_202",
+      "to": "s_enrolled",
+      "label": "登録済み研修",
+      "roles": [
+        "learner"
+      ],
+      "kind": "global",
+      "rationale": "学習再開の共通入口。my-enrollmentsの条件なし一覧へ進む。検索条件の復元・解除動作はBへ引き渡す。"
+    },
+    {
+      "from": "s_course_303",
+      "to": "s_catalogue",
+      "label": "研修を探す（全公開研修）",
+      "roles": [
+        "learner"
+      ],
+      "kind": "global",
+      "rationale": "新しい研修を探す共通入口。到達先はall-published-coursesの条件なし比較一覧で、learner-accountを前提とする。"
+    },
+    {
+      "from": "s_course_303",
+      "to": "s_enrolled",
+      "label": "登録済み研修",
+      "roles": [
+        "learner"
+      ],
+      "kind": "global",
+      "rationale": "学習再開の共通入口。my-enrollmentsの条件なし一覧へ進む。検索条件の復元・解除動作はBへ引き渡す。"
+    },
+    {
+      "from": "s_learning_101",
+      "to": "s_catalogue",
+      "label": "研修を探す（全公開研修）",
+      "roles": [
+        "learner"
+      ],
+      "kind": "global",
+      "rationale": "新しい研修を探す共通入口。到達先はall-published-coursesの条件なし比較一覧で、learner-accountを前提とする。"
+    },
+    {
+      "from": "s_learning_101",
+      "to": "s_enrolled",
+      "label": "登録済み研修",
+      "roles": [
+        "learner"
+      ],
+      "kind": "global",
+      "rationale": "学習再開の共通入口。my-enrollmentsの条件なし一覧へ進む。検索条件の復元・解除動作はBへ引き渡す。"
+    },
+    {
+      "from": "s_enrolled_zero",
+      "to": "s_catalogue",
+      "label": "全公開研修を条件なしで見る",
+      "roles": [
+        "learner"
+      ],
+      "kind": "contextual",
+      "rationale": "0件の文脈から範囲をall-published-coursesへ広げ、検索語とオンライン指定を解除した比較一覧へ復帰する情報上の関係。検索や解除処理の実装済みを意味しない。"
+    },
+    {
+      "from": "s_enrolled_zero",
+      "to": "s_enrolled",
+      "label": "登録済み研修の検索条件を解除して見る",
+      "roles": [
+        "learner"
+      ],
+      "kind": "local",
+      "rationale": "my-enrollmentsを保ったまま検索語と形式条件を解除する案。支給データのC-101が見える静的例に対応する。"
+    },
+    {
+      "from": "s_catalogue",
+      "to": "s_course_101",
+      "label": "C-101 基礎研修（入社時研修）の詳細",
+      "roles": [
+        "learner"
+      ],
+      "kind": "contextual",
+      "rationale": "同じ行のID・対象・日付・対面・登録済みを選択文脈とし、正本/courses/C-101へ対応する。HTMLの#course-C-101は同一対象の静的見本。"
+    },
+    {
+      "from": "s_catalogue",
+      "to": "s_course_202",
+      "label": "C-202 基礎研修（配属変更時研修）の詳細",
+      "roles": [
+        "learner"
+      ],
+      "kind": "contextual",
+      "rationale": "同じ行のID・対象・日付・オンライン・未登録を選択文脈とし、正本/courses/C-202へ対応する。HTMLの#course-C-202は同一対象の静的見本。"
+    },
+    {
+      "from": "s_catalogue",
+      "to": "s_course_303",
+      "label": "C-303 記録管理（全受講者）の詳細",
+      "roles": [
+        "learner"
+      ],
+      "kind": "contextual",
+      "rationale": "同じ行のC-303を選び、正本/courses/C-303へ対応する。HTMLの#course-C-303は同一対象の静的見本。"
+    },
+    {
+      "from": "s_enrolled",
+      "to": "s_course_101",
+      "label": "C-101 基礎研修（入社時研修）の詳細",
+      "roles": [
+        "learner"
+      ],
+      "kind": "contextual",
+      "rationale": "登録済み一覧から同じC-101の条件を確認する別入口。正本データを複製しない。"
+    },
+    {
+      "from": "s_enrolled",
+      "to": "s_learning_101",
+      "label": "C-101 基礎研修の学習を再開",
+      "roles": [
+        "learner"
+      ],
+      "kind": "contextual",
+      "rationale": "登録済みC-101の行から同一対象の既存学習機能へ向かう情報上の導線。HTMLは引継ぎ先の情報配置だけで、実URL・再開位置・学習処理は未確認。"
+    }
+  ],
+  "goal_routes": [
+    {
+      "goal_id": "g_choose",
+      "start_screen": "s_enrolled_zero",
+      "target_screen": "s_catalogue",
+      "notes": "learnerが現在の限定検索0件から「全公開研修を条件なしで見る」で到達する。f_catalogueとcourse_id/title/audience/date/formatを同じ判断場所に置き、C-101とC-202を比較してC-202を選ぶ設計。s_catalogue自体も認可条件を伴う入口。選択の保存や申込完了を目標へ追加しない。"
+    },
+    {
+      "goal_id": "g_resume",
+      "start_screen": "s_enrolled",
+      "target_screen": "s_learning_101",
+      "notes": "learnerが登録済みC-101の行でIDと登録状態を確認し、「C-101 基礎研修の学習を再開」で同一対象の既存学習機能へ進む設計。現在の0件からは先にs_enrolled_zero→s_enrolledで条件を解除する。再開先の実URL・位置・処理はB/Cへの引継ぎであり、実再開は未確認。"
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "u_index",
+      "category": "implementation",
+      "owner": "C",
+      "impact": "e_indexはunknown。絞込結果0件から全公開研修の不存在や索引の完全性を判定できない。",
+      "blocking": false,
+      "question": "実装時に索引の対象属性・公開範囲・更新時点を確認し、検索範囲表示と復帰先が対応するか確認する。今回の追加取得・API実装は対象外。"
+    },
+    {
+      "id": "u_search_restore",
+      "category": "interaction",
+      "owner": "B",
+      "impact": "範囲切替・検索語と形式条件の解除は情報設計だけ。静的リンクでは検索処理や復帰状態を検証できない。",
+      "blocking": false,
+      "question": "全公開研修へ戻る際にqueryとformatを解除し、登録済み内の解除ではscopeを維持する状態遷移を設計する。戻る操作・失敗時表示も実装段階で確認する。"
+    },
+    {
+      "id": "u_resume",
+      "category": "interaction",
+      "owner": "B",
+      "impact": "f_enrolledは入力上availableだが、既存学習機能の実URL・再開位置は未提供。g_resumeの実行完了は未確認。",
+      "blocking": false,
+      "question": "登録済みC-101から既存の学習再開先へ同一IDを渡す仕様を確認する。再開位置を創作せず、実装時に認可と開始結果を確認する。"
+    },
+    {
+      "id": "u_legacy",
+      "category": "implementation",
+      "owner": "C",
+      "impact": "旧/training/basicからC-101への対応は設計として保持するが、実リダイレクトと認可処理は未実施。",
+      "blocking": false,
+      "question": "learner-accountの条件下で旧ブックマークが/courses/C-101へ着く実装を確認する。C-202への同名転送や独立コピーを認めない。"
+    },
+    {
+      "id": "u_conditions",
+      "category": "function",
+      "owner": "product",
+      "impact": "対象条件としてaudienceは確定しているが、個人の受講資格・追加前提・受講履歴は未提供。未登録を未受講履歴の証明には使えない。",
+      "blocking": false,
+      "question": "実申込の判断に追加条件がある場合は取得する。今回のg_chooseは依頼で指定された未受講C-202の比較選択として扱い、個人への受講可否や履歴は断定しない。"
+    },
+    {
+      "id": "u_visual",
+      "category": "visual",
+      "owner": "C",
+      "impact": "learning-editorial-existingの視覚資産が未提供のため、既存意匠を実装上維持できたかは未確認。",
+      "blocking": false,
+      "question": "既存Art Directionの資産を受領後、比較項目と情報順序を保ったまま適用する。標準HTMLの見取り図を新規意匠の採用結果にしない。"
+    },
+    {
+      "id": "u_render",
+      "category": "implementation",
+      "owner": "C",
+      "impact": "ブラウザー描画は環境上未実施。狭い画面、キーボード、読み上げ、認可、実リンク着地は未確認。",
+      "blocking": false,
+      "question": "実装段階で表の読み順、行とリンクの関連、必要属性の表示、端末別の収まり、認可された入口を確認する。ARIAやアクセシビリティ適合を本資料から宣言しない。"
+    },
+    {
+      "id": "u_understanding",
+      "category": "information_architecture",
+      "owner": "D",
+      "impact": "ラベル理解、探索成功率、所要時間、選好を利用者で評価していない。",
+      "blocking": false,
+      "question": "受講者に0件からC-202を選ぶ課題、C-101を再開する課題、旧ブックマークの期待対象を確認する課題を実施する。各結果を分けて記録する。"
+    }
+  ],
+  "decision_notes": [
+    "入力固定: 2026-11-23（環境日付）に支給されたcommon/brief.json、task.md、共有plan-contract.md（1.1）と指定product-ia Skillおよび必要なreferencesを読む。revisionは未提供。外部情報・他案・評価結果は判断に使っていない。",
+    "A01/A02: learner（受講者）→g_choose（must）→r_choose（mandatory=true）→f_catalogue（keep/required）。同名候補を対象ID・受講条件・開催条件で比べて、依頼で指定された未受講C-202を選ぶ。needed_informationはcourse_id/title/audience/date/formatで、すべてs_catalogueのprimary。",
+    "A01/A02: learner→g_resume（should）→r_resume（mandatory=false）→f_enrolled（keep/high）。受講登録済みC-101の学習再開を保持する。course_id/enrollment_stateはs_enrolledおよびs_learning_101のprimary。実再開の完了は検証していない。",
+    "A03/A04: f_catalogueとf_enrolledはいずれもexisting/available、learner-accountが条件、dependencies=[]。objectとroleは同じでもchoose-courseとresume-course、all-published-coursesとmy-enrollmentsが異なるため別keepとする。削除・統合・延期は行わず、retirementは不要。",
+    "証拠: e_taskはkind=requirement、coverage_status=verified、指定ケースの全3件と要求の範囲だけ。実ユーザー観測・動作確認ではない。e_indexはkind=unknown、coverage_status=unknown、検索サービスの索引更新時点・網羅性は未確認のまま。",
+    "A05: 対象はcourse、正本キーはC-101/C-202/C-303。title/audience/date/formatは属性、enrollment_stateは本人と研修の関係、選択と再開は異なる行為。tagsは多重所属を許す分類属性で、独立コピーや別featureを作らない。",
+    "分類と正本: 安全={C-101,C-202}、入社時={C-101}、配属変更={C-202}、運用={C-303}。C-101は安全と入社時と登録済み一覧から同じ/courses/C-101を参照する。C-202の正本は/courses/C-202、C-303は/courses/C-303。同名の基礎研修を統合・同等視しない。",
+    "A05/A06: 現在のstart=登録済み研修、query=配属変更、scope=my-enrollments、filters.format=online、result_count=0、index_coverage=unknownをs_enrolled_zeroに保持する。この0件はその条件での入力結果であり、全研修不存在の根拠ではない。",
+    "復帰先: 全公開研修を条件なしで見る→s_catalogue（all-published-courses、queryなし、formatを含む絞込なし）。登録済み研修の検索条件を解除して見る→s_enrolled（my-enrollmentsを保持、queryなし、format指定なし）。C-101/C-202の比較時はオンライン指定を残さない。検索範囲と復帰先だけを設計し、索引取得やAPI検索を実装しない。",
+    "A06: globalは研修を探す（全公開研修）と登録済み研修。query/formatは各scopeのlocalな検索条件であり独立global項目にはしない。対象別詳細とC-101再開はcontextual。learner以外のrole・機能を追加せず、全画面・経路でlearner-accountを前提とする。認可実装は未確認。",
+    "旧入口: /training/basicは入社時研修の旧ブックマークでtarget_course_id=C-101、must_preserve=true。対応先はs_course_101と/courses/C-101のみ。同名C-202への再割当てや分類用のC-101独立コピーを作らない。旧入口は詳細正本への別入口であり新たな独立メニューやfeatureではない。",
+    "A06/A07: 比較・選択の判断場所とg_chooseのtargetはs_catalogue。詳細リンクを選ぶ前に同じ行のID・title・audience・date・format・enrollment_stateを参照でき、リンク文言もIDと対象条件を含む。到着後の説明だけを選択時の識別根拠にはしない。",
+    "A08/A09: s_catalogueの必須比較情報は展開不要の表にする。tagsは補足として展開可能な別欄。primaryはスクロールを許容し、全端末で常に画面内へ収まるとは主張しない。独立カテゴリへ候補を隔離する案、全項目を詳細だけに置く案は採用しない。",
+    "プロセス境界: 申込完了画面は申込処理の結果であり、独立global入口を要求しない。申込操作・完了・学習処理・APIは新規実装対象外。必要な前段条件や状態遷移はBへ引き渡し、静的HTMLで完了表示を作らない。",
+    "visual_intent_id=learning-editorial-existingを保持する。制約原文: 既存意匠は維持。視覚資産は未提供。標準HTMLの情報見取り図を作り、新規意匠を採用済みとは書かない。新規配色・書体・構図・大きなCSSは導入しない。",
+    "A10: 入力と計画、HTMLソースの机上照合だけを実施する。共有checker・unittest・ブラウザー描画・実操作・実URL/旧URL転送・API・利用者評価・独立評価は未実施。PASS、効果検証済み、実行完了とは報告しない。静的HTMLの同一文書内リンクは情報の対応を示す。",
+    "引継ぎ: B=検索の範囲切替/条件解除/戻り状態/学習再開と申込の前段条件、C=認可/正本URL/旧URL転送/端末表示/アクセシビリティ/既存意匠、D=ラベル理解と代表タスク評価、product=実申込に追加条件がある場合の情報。unresolvedのblocking=falseは今回の情報設計作成を止めないという意味で、製品リリース可能を意味しない。"
+  ]
+}

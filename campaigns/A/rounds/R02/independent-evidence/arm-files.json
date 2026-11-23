@@ -1,0 +1,15 @@
+{
+  "ids": [
+    "K",
+    "M"
+  ],
+  "file_hashes": {
+    "M/plan.json": "1bcb19be0865cfc055de098442bc0c3a1a2a2fa0a3b0c19618e6b880bc9900a7",
+    "M/preview.html": "7204f931fbb879407626028d1d97fd7151cdc5633215bc483cd3f211a73e70ff",
+    "M/design.md": "b93ec8e45a7bf641a81a32a20b03c8dc4dea0d2cf5383aa82a027300dcdc25f8",
+    "K/plan.json": "c992201c7e1cccc5d9f201170af3e41ea5574035b49245b1a05e6a3eded51b81",
+    "K/preview.html": "23f739a37103536d82fcb18a28d6b40c0b5a7fbe0bc535f984a9e78d9705997f",
+    "K/design.md": "1ba62dbefd78905c3c998aa9a276152a1fc0fa873fea081a1a5b66c62d00b128"
+  },
+  "blinding": "Directory labels anonymized; content may still reveal treatment; no human/objective inference"
+}

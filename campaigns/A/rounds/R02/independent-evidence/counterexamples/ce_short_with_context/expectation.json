@@ -1,0 +1,14 @@
+{
+  "id": "ce_short_with_context",
+  "expected_machine": {
+    "baseline": "FAIL",
+    "candidate": "HOLD"
+  },
+  "expected_semantic": "CONTEXT_SUPPORTS_DESIGN_PENDING_C_AND_HUMAN",
+  "independent_basis": "選択場所の同一liにIDと適用条件があり、文字列衝突だけでは意味の曖昧さは確定しない。HTMLソース上の対応に限る。",
+  "rubric_ids": [
+    "N4",
+    "N6"
+  ],
+  "evidence_level": "synthetic design / HTML source only; no rendered UI, operation, C conformance or human result"
+}

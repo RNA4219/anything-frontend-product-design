@@ -1,0 +1,12 @@
+{
+  "source_id": "A-S001",
+  "title": "— 6.2 Requirements Management — NASA Systems Engineering Handbook",
+  "url": "https://www.nasa.gov/reference/6-2-requirements-management/",
+  "canonical_url": "https://www.nasa.gov/reference/6-2-requirements-management",
+  "original_id": "S01",
+  "provenance": "inherited-index",
+  "verified_in_current_round": false,
+  "rights": "Link and original paraphrase only; no third-party full text redistributed.",
+  "content_sha256": null,
+  "notes": "- **URL**: [6.2 Requirements Management — NASA Systems Engineering Handbook](https://www.nasa.gov/reference/6-2-requirements-management/)\n- **該当箇所**: 6.2.1.2.3 Conduct Expectations and Requirements Traceability / 6.2.1.2.4\n- **確認日 / 種別**: 2026-11-23 / official_method\n- **原典の主張** (author_guidance): 親要件と子要件を双方向に追跡し、親要件の未充足、追跡漏れ、受け入れ可能な自己導出要件、過剰要件を区別する。\n- **制約・版・未確認**: システム要件管理の方法。UI機能の自動削除アルゴリズムではない。元の審査制度を小さなUI変更へ一律追加しない。\n- **接続する原則**: A02, A03。原則のProcedure/JSON契約は、別に明記した本Skillの導出。"
+}

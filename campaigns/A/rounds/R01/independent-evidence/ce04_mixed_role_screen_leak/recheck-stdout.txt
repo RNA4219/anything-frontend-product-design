@@ -1,0 +1,31 @@
+{
+  "status": "FAIL",
+  "issues": [
+    {
+      "code": "FEATURE_ROLE",
+      "location": "screens.s_home",
+      "symptom": "Screen exposes a capability to a role outside its declared audience: f_live",
+      "category": "information_architecture",
+      "severity": "error"
+    },
+    {
+      "code": "FEATURE_ROLE",
+      "location": "screens.s_home",
+      "symptom": "Screen exposes a capability to a role outside its declared audience: f_all",
+      "category": "information_architecture",
+      "severity": "error"
+    }
+  ],
+  "checks_available": {
+    "contract_version": "1.1",
+    "context_and_retirement": true,
+    "human_usability": false
+  },
+  "counts": {
+    "goals": 2,
+    "features": 2,
+    "kept_features": 2,
+    "screens": 1,
+    "navigation_edges": 0
+  }
+}

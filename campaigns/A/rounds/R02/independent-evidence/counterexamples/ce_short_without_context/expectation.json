@@ -1,0 +1,13 @@
+{
+  "id": "ce_short_without_context",
+  "expected_machine": {
+    "baseline": "FAIL",
+    "candidate": "HOLD"
+  },
+  "expected_semantic": "SEMANTIC_DEFECT",
+  "independent_basis": "選択時に区別する情報がなく、どちらがD-42かを決められない。HOLDは合格ではない。",
+  "rubric_ids": [
+    "N4"
+  ],
+  "evidence_level": "synthetic design / HTML source only; no rendered UI, operation, C conformance or human result"
+}

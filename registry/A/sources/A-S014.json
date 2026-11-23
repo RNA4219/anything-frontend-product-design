@@ -1,0 +1,12 @@
+{
+  "source_id": "A-S014",
+  "title": "— Joanna McGrenere and Gale Moore（2000）— Are We All In the Same “Bloat”?",
+  "url": "https://www.dgp.toronto.edu/~joanna/papers/gi_2000_bloat.pdf",
+  "canonical_url": "https://www.dgp.toronto.edu/~joanna/papers/gi_2000_bloat.pdf",
+  "original_id": "S14",
+  "provenance": "inherited-index",
+  "verified_in_current_round": false,
+  "rights": "Link and original paraphrase only; no third-party full text redistributed.",
+  "content_sha256": null,
+  "notes": "- **URL**: [Joanna McGrenere and Gale Moore（2000）— Are We All In the Same “Bloat”?](https://www.dgp.toronto.edu/~joanna/papers/gi_2000_bloat.pdf)\n- **該当箇所**: §3 Methods; §4 Quantitative Method; §5 Qualitative Method; §7 Bringing it All Together: Directions for Design。PDF pp.3–6, 9。Web抽出 L284–303, L504–524, L894–946。\n- **確認日 / 種別**: 2026-11-23 / 論文・測定あり。Graphics Interface 2000の著者公開採択原稿。Torontoの研究。\n- **原典の主張** (empirical_observation): Word利用者53人の質問紙と聞き取りで、使っていない機能をすべて除去したいという回答は少数で、新しい機能を発見したい利用者もいた。著者は多数の人が使わない機能と、個人が使わず望まない機能を区別している。\n- **制約・版・未確認**: 利用情報は自己申告で操作ログではない。一つのアプリの利用者調査。削除の閾値はアプリに依存すると著者も限定している。カナダの研究であり米国機関の研究とは区別する。\n- **接続する原則**: A03。原則のProcedure/JSON契約は、別に明記した本Skillの導出。"
+}

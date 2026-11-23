@@ -1,0 +1,89 @@
+{
+  "source_id": "B-S204",
+  "canonical_url": "https://design-system.service.gov.uk/components/error-message/",
+  "title": "GOV.UK Design System: Error message",
+  "type": "official service design component guidance",
+  "authority": "GOV.UK Design System team",
+  "capture_kind": "PARTIAL",
+  "sha256": "106c29227c18018f6e91fcbcb1bc132222a439285bdb9ae3d3fa7a85719159e3",
+  "locator": [
+    {
+      "section": "When to use / When not to use / How it works",
+      "source_lines": "L132–L155",
+      "local_lines": "143–166"
+    },
+    {
+      "section": "preserving passing and failing answers",
+      "source_lines": "L155–L160",
+      "local_lines": "200–205"
+    },
+    {
+      "section": "error summary",
+      "source_lines": "L185–L185",
+      "local_lines": "230–230"
+    },
+    {
+      "section": "clear and consistent messages",
+      "source_lines": "L322–L344",
+      "local_lines": "231–253"
+    }
+  ],
+  "observed_facts": [
+    "入力検証エラー時に正しい回答・誤った回答をともに保持し、フォーム項目を消さないことを指示する。",
+    "問題のあった箇所と修正方法を伝え、項目付近と概要に同じ文言を使う。",
+    "資格不適合、権限不足、容量不足その他ユーザーが直せないサービスの問題には入力エラー表示を流用せず、問題と次の対応を説明するページへ進める。"
+  ],
+  "limitations": [
+    "GOV.UK政府サービス向けガイドラインであり、WCAG規範と同じ権威ではない。",
+    "日本語文言の理解度、対象アプリでの効果、focus実装は検証していない。focus等の具体実装はCへの課題で、Bへ拡張しない。",
+    "個別サービスの秘密情報をどう保持表示するかは、この一般入力保持文だけから決めない。"
+  ],
+  "upstream_refs": [
+    {
+      "url": "https://design-system.service.gov.uk/components/error-summary/",
+      "relationship": "link observed; search hit captured, not adopted/acquired as a main source; UI implementation scope C"
+    },
+    {
+      "url": null,
+      "parent_url": "https://design-system.service.gov.uk/components/error-message/",
+      "observed_link_id": 48,
+      "relationship": "Validation pattern link observed; target not followed or independently resolved in this assignment"
+    }
+  ],
+  "capture_file": "B-S204-govuk-error-message.web.txt",
+  "capture_storage": "Private research archive",
+  "checked_at": "2026-11-23T07:15:18.361716+00:00",
+  "introduced_round": 2,
+  "redistribution": "Original captured text remains private. This public record contains original paraphrases, URLs and section locators only.",
+  "url": "https://design-system.service.gov.uk/components/error-message/",
+  "section": [
+    {
+      "section": "When to use / When not to use / How it works",
+      "source_lines": "L132–L155",
+      "local_lines": "143–166"
+    },
+    {
+      "section": "preserving passing and failing answers",
+      "source_lines": "L155–L160",
+      "local_lines": "200–205"
+    },
+    {
+      "section": "error summary",
+      "source_lines": "L185–L185",
+      "local_lines": "230–230"
+    },
+    {
+      "section": "clear and consistent messages",
+      "source_lines": "L322–L344",
+      "local_lines": "231–253"
+    }
+  ],
+  "read_status": "PARTIAL: exact web-extracted text saved privately; not raw HTML",
+  "capture_sha256": "106c29227c18018f6e91fcbcb1bc132222a439285bdb9ae3d3fa7a85719159e3",
+  "source_file_name": "B-S204-govuk-error-message.web.txt",
+  "limits": [
+    "GOV.UK政府サービス向けガイドラインであり、WCAG規範と同じ権威ではない。",
+    "日本語文言の理解度、対象アプリでの効果、focus実装は検証していない。focus等の具体実装はCへの課題で、Bへ拡張しない。",
+    "個別サービスの秘密情報をどう保持表示するかは、この一般入力保持文だけから決めない。"
+  ]
+}

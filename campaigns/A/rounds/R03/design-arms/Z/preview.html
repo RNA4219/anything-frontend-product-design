@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>チーム向けプラン比較・現契約の解約条件</title>
+</head>
+<body>
+<header>
+  <h1>チーム向けプラン比較・現契約の解約条件</h1>
+  <p>対象：自組織の契約担当者（buyer）。契約担当者アカウント（buyer-account）で読む情報の構成案です。</p>
+  <p>合成ケースの固定入力を使った情報見取り図です。申込み・契約変更・解約の処理は行いません。</p>
+</header>
+<main>
+  <section id="s_plan_compare" data-feature-id="f_plans" data-goal-id="g_select" data-role="buyer" data-scope="own-organization" data-context="buyer-account">
+    <h2>プラン比較</h2>
+    <p data-information="qualification_status"><strong>確定した条件に適合する候補：P-300（Team Pro）</strong>。P-100は人数不足、P-200は年間上限が未確認のため判定保留です。</p>
+    <h3>今回の必要条件</h3>
+    <ul>
+      <li data-information="required_seats">利用人数：12人</li>
+      <li data-information="required_annual_usage">年間使用量：900,000件（90万件）</li>
+      <li data-information="annual_budget_yen">予算：年総額130,000円以内（税込・12か月総額）</li>
+    </ul>
+    <p>人数上限は利用できる人数、年間上限は1年間に使用できる件数です。年総額は12か月分の合計で比較します。未確認は値が不明な状態で、ゼロ・無制限・条件適合を意味しません。</p>
+    <table>
+      <caption>3候補の比較。上限・年総額・契約期間を同じ表で確認できます。</caption>
+      <thead>
+        <tr data-information="plan_id">
+          <th scope="col">比較項目</th>
+          <th scope="col">今回の基準</th>
+          <th scope="col">P-100<br>Team</th>
+          <th scope="col">P-200<br>Team Plus</th>
+          <th scope="col">P-300<br>Team Pro</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-information="seat_limit">
+          <th scope="row">人数上限</th>
+          <td>12人以上</td>
+          <td>10人<br><strong>不適合：2人不足</strong></td>
+          <td>20人<br>適合</td>
+          <td>20人<br>適合</td>
+        </tr>
+        <tr data-information="annual_quota">
+          <th scope="row">年間上限</th>
+          <td>900,000件以上</td>
+          <td>1,000,000件<br>適合</td>
+          <td data-information="annual_quota_status"><strong>未確認</strong><br>この条件の判定は保留</td>
+          <td>1,200,000件<br>適合</td>
+        </tr>
+        <tr data-information="annual_total">
+          <th scope="row">年総額</th>
+          <td>130,000円以内</td>
+          <td>96,000円<br>予算内</td>
+          <td>110,000円<br>予算内</td>
+          <td>120,000円<br>予算内</td>
+        </tr>
+        <tr data-information="price_basis">
+          <th scope="row">価格の基準</th>
+          <td>同じ基準で比較</td>
+          <td>税込・12か月総額</td>
+          <td>税込・12か月総額</td>
+          <td>税込・12か月総額</td>
+        </tr>
+        <tr data-information="commitment">
+          <th scope="row">契約期間</th>
+          <td>期間の許容条件は指定なし</td>
+          <td>12か月</td>
+          <td>12か月</td>
+          <td>12か月</td>
+        </tr>
+        <tr data-information="qualification_status">
+          <th scope="row">人数・年間使用量・予算の総合判定</th>
+          <td>3条件をすべて満たす</td>
+          <td><strong>不適合</strong><br>12人での利用条件を満たさない</td>
+          <td><strong>判定保留</strong><br>年間上限の確認が必要</td>
+          <td><strong>適合</strong><br>3条件を満たすことを確認できる</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>P-300は20人まで、年間1,200,000件まで、年総額120,000円です。12人・年間900,000件・年総額130,000円以内の3条件を満たします。契約期間は12か月です。</p>
+    <p>P-200の価格は予算内ですが、年間900,000件を使用できるかは未確認です。年間上限が確認できるまでは適合候補として確定できません。</p>
+    <nav aria-label="プラン比較から確認できる関連情報">
+      <p><a href="#s_cancel_conditions">現契約 CT-75 の解約条件</a></p>
+    </nav>
+    <details data-information="supplementary_information">
+      <summary>補足資料：請求書の宛名テンプレート・ヘルプ改訂履歴</summary>
+      <ul>
+        <li>請求書の宛名テンプレートの説明</li>
+        <li>過去バージョンのヘルプ改訂履歴</li>
+      </ul>
+      <p>この2項目は比較条件に影響しない補足情報として配置しています。本文・リンク先は入力に含まれていません。</p>
+    </details>
+  </section>
+
+  <section id="s_cancel_conditions" data-feature-id="f_cancel_info" data-goal-id="g_review_cancel" data-role="buyer" data-scope="own-organization" data-context="buyer-account">
+    <h2>現契約 CT-75 の解約条件</h2>
+    <p>現在の契約の条件を確認する領域です。比較候補のP-100・P-200・P-300とは別の契約情報です。</p>
+    <dl>
+      <dt>現在の契約ID</dt>
+      <dd data-information="contract_id">CT-75</dd>
+      <dt>必要な事前通知日数</dt>
+      <dd data-information="notice_days">30日</dd>
+      <dt>次回更新日</dt>
+      <dd data-information="next_renewal_date"><strong data-information="next_renewal_date_status">未確認</strong></dd>
+      <dt>返金条件</dt>
+      <dd data-information="refund_rule">途中解約による返金なし</dd>
+      <dt>通知期限の判断</dt>
+      <dd data-information="deadline_status">次回更新日が未確認のため、通知期限の具体的な日付と、現在が期限内かどうかは判定できません。</dd>
+    </dl>
+    <h3>期限判断に不足している情報</h3>
+    <p data-information="missing_information"><strong>CT-75の次回更新日を確認する必要があります。</strong>30日という通知日数だけでは期限の日付を確定できません。</p>
+    <nav aria-label="プラン比較への移動">
+      <p><a href="#s_plan_compare">3候補のプラン比較へ戻る</a></p>
+    </nav>
+  </section>
+</main>
+<footer>
+  <p>提供範囲：条件の比較と解約条件の確認。架空の固定入力を使用しています。</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "id": "R01-R2-S02",
+  "title": "New app for IOS — Sonos Staff response, May 8 2024",
+  "url": "https://en.community.sonos.com/controllers-music-services-228995/new-app-for-ios-6892152",
+  "kind": "first_party_staff_support_record",
+  "locator": "Sonos Staff Jamie A, May 8 2024, reply. Web L64-L75.",
+  "short_quote": "Sleep timers are currently unavailable in the Sonos App but will be added at a future date.",
+  "claim": "新アプリでsleep timerが使えないという問い合わせにSonosスタッフが2024-05-08、未提供と今後追加予定を回答し、Windows/macOSアプリを暫定代替として案内した。",
+  "limits": "1件の本人問い合わせとスタッフ回答。利用率、低頻度、全利用者の損害、原因が機能簡素化だったことは示さない。現状の欠陥とは扱わない。PCを持たない利用者への代替不能は本Skill側の条件付き推論。",
+  "sha256": "b2438b7d5031f99c2fd6a3bbbdfd923ba5756bc4265b7e7dfcb579ffe92a2623",
+  "retrieved_at": "2026-11-23",
+  "acquisition": "Web tool text extraction after imozuru fetch.py DNS failure; original HTML not acquired",
+  "redistribution": "Do not commit raw source or retrieval transcript; use source URL, own rules, bounded quotation only",
+  "is_full_original": false,
+  "source_id": "R01-R2-S02",
+  "canonical_url": "https://en.community.sonos.com/controllers-music-services-228995/new-app-for-ios-6892152",
+  "verified_in_current_round": true
+}

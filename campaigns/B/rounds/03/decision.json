@@ -1,0 +1,122 @@
+{
+  "round": 3,
+  "ended_at": "2026-11-23T08:22:05.260076+00:00",
+  "status": "COMPLETE",
+  "investigated": [
+    "B-005",
+    "B-006"
+  ],
+  "agents": [
+    {
+      "task_name": "/root/r03_research_primary",
+      "round": 3,
+      "role": "Researcher-1",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    },
+    {
+      "task_name": "/root/r03_research_alternative",
+      "round": 3,
+      "role": "Researcher-2",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    },
+    {
+      "task_name": "/root/r03_analyst",
+      "round": 3,
+      "role": "Analyst / sankai",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    },
+    {
+      "task_name": "/root/r03_critic",
+      "round": 3,
+      "role": "Critic / Evaluator",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    }
+  ],
+  "new_source_ids": [
+    "B-S301",
+    "B-S302",
+    "B-S303",
+    "B-T401",
+    "B-T402",
+    "B-T403"
+  ],
+  "extended_source_ids": [
+    "B-S101",
+    "B-S201"
+  ],
+  "duplicate_canonical_records_prevented": 2,
+  "instruction_units": {
+    "ACCEPT": [
+      "B-IU-007",
+      "B-IU-008"
+    ]
+  },
+  "tests": {
+    "fixed_initial": {
+      "passed": 13,
+      "total": 13
+    },
+    "fixed_final": {
+      "passed": 13,
+      "total": 13
+    },
+    "independent_negative_controls": {
+      "detected": 4,
+      "total": 4
+    },
+    "independent_representative_dom_initial_and_revised1": {
+      "passed": 8,
+      "total": 8
+    },
+    "independent_exploratory_dom_initial": {
+      "passed": 0,
+      "total": 2
+    },
+    "independent_exploratory_dom_revised1": {
+      "passed": 2,
+      "total": 2
+    },
+    "independent_final_focused": {
+      "passed": 4,
+      "total": 4
+    },
+    "parent_exploratory_v3_initial": {
+      "passed": 1,
+      "total": 4
+    },
+    "parent_exploratory_v3_final": {
+      "passed": 4,
+      "total": 4
+    }
+  },
+  "decision": "ACCEPT after original findings F1/F2/F3 and repair-introduced F4 were resolved. Known operation evidence and current authority remain separate.",
+  "comparison_limit": "Fixed test score unchanged. Exploratory and fault-control results are separate evidence; no generated baseline or human efficacy claim.",
+  "next": [
+    "B-007"
+  ],
+  "cost": {
+    "amount": null,
+    "currency": null,
+    "measured": false,
+    "reason": "Token/billing telemetry unavailable"
+  },
+  "execution": {
+    "subagents_recovered": true,
+    "ci": "NOT_EXECUTED",
+    "real_browser": "NOT_EXECUTED",
+    "dom": "EXECUTED"
+  },
+  "evidence": [
+    "campaigns/B/rounds/03/independent/verdict.json",
+    "campaigns/B/rounds/03/revision.json",
+    "campaigns/B/rounds/03/evidence-regressions-revised3.json"
+  ]
+}

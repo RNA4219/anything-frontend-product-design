@@ -1,0 +1,27 @@
+{
+  "suite": "B-R03-exploratory-evidence-v3",
+  "total": 4,
+  "passed": 4,
+  "results": [
+    {
+      "id": "E01",
+      "name": "Known success survives reopen and expired operation record",
+      "pass": true
+    },
+    {
+      "id": "E02",
+      "name": "Older pending lookup cannot erase newly known success",
+      "pass": true
+    },
+    {
+      "id": "E03",
+      "name": "Lookup transport failure cannot erase concurrently confirmed success",
+      "pass": true
+    },
+    {
+      "id": "E04",
+      "name": "Known success does not override current reauthentication requirement",
+      "pass": true
+    }
+  ]
+}

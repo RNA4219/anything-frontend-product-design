@@ -1,0 +1,23 @@
+{
+  "branch": "campaign/A-product-ia-evolution-20261123",
+  "draft_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/6",
+  "checkpoints": [
+    {
+      "round": "R01",
+      "local_commit": "4132d1aefed2a278bb1e168bfb308928eca00a03",
+      "published_commit": "453fbca892fd305fa2589bd9e1132b9718c74739",
+      "tree": "6675fbac8fa14c4fa9521adb9564c606c0fa5f28",
+      "tree_identity_verified": true,
+      "method": "GitHub Git-data API after git HTTPS push had no credentials"
+    },
+    {
+      "round": "R02",
+      "local_commit": "c1233c666202a0bd254b42cfc84a5ea0952a3802",
+      "published_commit": "e8c59931e7005f0a4dc52c84949c62dd1eefe2c4",
+      "tree": "3c7418f931313d5ec833d1f833b91845527cac4b",
+      "tree_identity_verified": true,
+      "method": "GitHub Git-data API with expected branch head"
+    }
+  ],
+  "automatic_merge": false
+}

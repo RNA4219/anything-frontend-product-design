@@ -1,0 +1,14 @@
+{
+  "id": "ce_hard_error_dominates_label_hold",
+  "expected_machine": {
+    "baseline": "FAIL",
+    "candidate": "FAIL"
+  },
+  "expected_semantic": "STRUCTURAL_AND_SEMANTIC_DEFECT",
+  "independent_basis": "同名ラベルのHOLDへ変更しても必要情報不足のerrorを相殺しない。",
+  "rubric_ids": [
+    "N4",
+    "N6"
+  ],
+  "evidence_level": "synthetic design / HTML source only; no rendered UI, operation, C conformance or human result"
+}

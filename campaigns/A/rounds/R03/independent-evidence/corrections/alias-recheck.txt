@@ -1,0 +1,6 @@
+test_mandatory_alias_uses_the_reachable_canonical_capability (test_information_independent.IndependentInformationTests.test_mandatory_alias_uses_the_reachable_canonical_capability) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK

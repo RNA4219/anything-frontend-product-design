@@ -1,0 +1,36 @@
+{
+  "campaign_id": "AFPD-A-20261123",
+  "session_id": "A",
+  "domain": "product-information-architecture",
+  "base_sha": "3d02174a69676afa8e0b02f4062cc6ecb636d300",
+  "branch": "campaign/A-product-ia-evolution-20261123",
+  "reference_art_direction_sha": "f5df625dbc577d6a3ca28e13ef09e39b135b4a6f",
+  "prior_A_reference_sha": "97b19c29c0b63acfee9ad437f93af081ac0c6ef8",
+  "max_rounds": 12,
+  "max_concurrent_total": 3,
+  "status": "RUNNING",
+  "completed_rounds": [
+    "R01",
+    "R02",
+    "R03"
+  ],
+  "next_round": "R04",
+  "cost": {
+    "currency": null,
+    "actual_amount": null,
+    "reason": "Provider billing is not exposed; do not report zero cost."
+  },
+  "published_paths": [
+    "modules/product-information-architecture/",
+    "registry/A/",
+    "campaigns/A/"
+  ],
+  "startup": {
+    "issues": 0,
+    "prs": 0,
+    "history_checked": true,
+    "subagent_mechanism": "collaboration.spawn_agent",
+    "tooling": "imozuru and sankai pinned public revisions"
+  },
+  "checkpoint": "campaigns/A/rounds/R03/decision.json"
+}

@@ -1,0 +1,163 @@
+{
+  "purpose": "限定再確認。初回snapshot/14件結果を上書きしない。意味判断の成否は変更しない。",
+  "manifest": [
+    {
+      "path": "modules/product-information-architecture/checks/validate_plan.py",
+      "sha256": "368b691fc629c5b019dcf009cca4e21883b7c277e963890586630386fd5ece97"
+    },
+    {
+      "path": "modules/product-information-architecture/references/plan-contract.md",
+      "sha256": "59baa5880f86fbb7af46f3ebc9aa652fb6f2aa836f529507cdea0db64dc5efe5"
+    },
+    {
+      "path": "modules/product-information-architecture/references/navigation-evidence.md",
+      "sha256": "13cdea39838cd389e7604fd11a634c63362f737ceb6238ab90cf9b2d21b2cb85"
+    }
+  ],
+  "cases": [
+    {
+      "id": "ce_fabricated_distinct_labels",
+      "result": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "navigation_context": false,
+          "search_coverage": false,
+          "legacy_entry_identity": false,
+          "rendered_goal_location": false,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 2,
+          "features": 2,
+          "kept_features": 2,
+          "screens": 4,
+          "navigation_edges": 3
+        }
+      },
+      "all_four_limits_false": true
+    },
+    {
+      "id": "ce_same_screen_distinct_records",
+      "result": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "navigation_context": false,
+          "search_coverage": false,
+          "legacy_entry_identity": false,
+          "rendered_goal_location": false,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 2,
+          "features": 2,
+          "kept_features": 2,
+          "screens": 5,
+          "navigation_edges": 3
+        }
+      },
+      "all_four_limits_false": true
+    },
+    {
+      "id": "ce_unknown_scope_means_global_absence",
+      "result": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "navigation_context": false,
+          "search_coverage": false,
+          "legacy_entry_identity": false,
+          "rendered_goal_location": false,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 2,
+          "features": 2,
+          "kept_features": 2,
+          "screens": 4,
+          "navigation_edges": 3
+        }
+      },
+      "all_four_limits_false": true
+    },
+    {
+      "id": "ce_legacy_reassigned_to_homonym",
+      "result": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "navigation_context": false,
+          "search_coverage": false,
+          "legacy_entry_identity": false,
+          "rendered_goal_location": false,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 2,
+          "features": 2,
+          "kept_features": 2,
+          "screens": 4,
+          "navigation_edges": 3
+        }
+      },
+      "all_four_limits_false": true
+    },
+    {
+      "id": "ce_duplicate_canonical_by_membership",
+      "result": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "navigation_context": false,
+          "search_coverage": false,
+          "legacy_entry_identity": false,
+          "rendered_goal_location": false,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 2,
+          "features": 2,
+          "kept_features": 2,
+          "screens": 4,
+          "navigation_edges": 3
+        }
+      },
+      "all_four_limits_false": true
+    },
+    {
+      "id": "ce_declared_target_after_real_decision",
+      "result": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "navigation_context": false,
+          "search_coverage": false,
+          "legacy_entry_identity": false,
+          "rendered_goal_location": false,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 2,
+          "features": 2,
+          "kept_features": 2,
+          "screens": 5,
+          "navigation_edges": 4
+        }
+      },
+      "all_four_limits_false": true
+    }
+  ]
+}

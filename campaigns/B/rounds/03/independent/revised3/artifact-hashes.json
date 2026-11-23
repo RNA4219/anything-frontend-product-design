@@ -1,0 +1,12 @@
+{
+  "modules/interaction-ux-flow/examples/resume-and-conflict.mjs": "c5130db7bd10a48bb586f30c689a40089deae648c966c372c0bc6e4c95bd41a4",
+  "modules/interaction-ux-flow/examples/resume-and-conflict.html": "84a92808062a8f903e2a64a9cb33041b367f9fcaff0102297cf6ce3f39779a9f",
+  "modules/interaction-ux-flow/references/resume-and-conflict.md": "3cbb71acf758c17d7d5616146188ffd42ab4ab305b7a39a96de1e90c2591f7be",
+  "registry/B/skills/B-IU-007.json": "af14e14c8fc0c4e0dfe7271a45a247f8f760a9c39a77680d3f827d4754d226ae",
+  "registry/B/skills/B-IU-008.json": "b17174acea3342e51bc4c75f5d7627f4cd852f7ac35b1ffc1db5097628bf2d39",
+  "modules/interaction-ux-flow/tests/test_resume_conflict.mjs": "f2f52bfe67da04a680299ed771581b25b6e0004325cfea6128f7b34c5e68289f",
+  "modules/interaction-ux-flow/tests/test_resume_evidence_regressions.mjs": "720205d10780440f1cd205ccc5028d26d4bb75f50ca10d424ecdedd637d85b80",
+  "campaigns/B/rounds/03/cases.json": "fa02e71d1419a1b50ae9501fd0c95485f63338bfbe69c401462305a92d18105b",
+  "campaigns/B/rounds/03/task.md": "71c8459f575fd14638103aa637213acc29ef7cfd603760c2d653c0e0cde51642",
+  "modules/interaction-ux-flow/SKILL.md": "94441b4e58666602a1d41a9f12dfe5950dc45febdaa68cf53355a6c9a5788303"
+}

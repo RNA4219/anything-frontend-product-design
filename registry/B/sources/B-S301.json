@@ -1,0 +1,56 @@
+{
+  "source_id": "B-S301",
+  "url": "https://google.aip.dev/154",
+  "canonical_url": "https://google.aip.dev/154",
+  "title": "AIP-154: Resource freshness validation",
+  "type": "approved Google API design guidance; not a contract for every Google service",
+  "authority": "Google API Improvement Proposals / aip-dev official source",
+  "section": [
+    {
+      "section": "Guidance: matching, mismatching, missing etag",
+      "source_lines": "original Markdown lines 40-57",
+      "local_lines": "40-57"
+    },
+    {
+      "section": "Strong and weak etags",
+      "source_lines": "original Markdown lines 92-106",
+      "local_lines": "92-106"
+    },
+    {
+      "section": "Changelog: ABORTED mapping",
+      "source_lines": "original Markdown lines 112-121",
+      "local_lines": "112-121"
+    }
+  ],
+  "read_status": "FULL: saved web/tool extraction; not raw HTML",
+  "capture_kind": "FULL",
+  "capture_sha256": "63d1f35de6f7ee0f37a5e285effb64445eb4cb52b368cd45144c14f59580ef13",
+  "source_file_name": "B-S301-google-aip154.original.md",
+  "observed_facts": [
+    "提供されたetagの不一致にはABORTEDを返すが、権限不足など別のエラーが優先し得る。一致しても他の失敗理由が消えるわけではない。",
+    "etagを省略した要求は原則許可する設計指針であり、厳しい整合性要件があるserviceはetag必須を選べる。",
+    "strong/weakのどちらも設計上許容する一方、挙動の文書化を求め、weakにはW/接頭辞を要求する。"
+  ],
+  "limits": [
+    "AIPのresource.etagに関する指針と、RFCのHTTP If-Match強比較を同一仕様として混ぜない。対象APIのエラーと必須性を確認する。",
+    "web表示のUpdated欄は2019-07-24だが本文changelogには2021年の変更があるため、この日付を最新更新の証拠に使わない。",
+    "GitHub公式sourceの完全なMarkdownを取得した。webページのraw HTMLを保存したわけではない。"
+  ],
+  "upstream_refs": [
+    {
+      "url": "https://github.com/aip-dev/google.aip.dev/blob/master/aip/general/0154.md",
+      "relationship": "AIP154 View sourceリンク16を実際にclickし、同じURLをGitHub connectorで取得。全文Markdownとhashを保存。",
+      "trace_capture": "tool-output/find-trace-01.json; tool-output/specific-1.json",
+      "trace_web_ref": "turn429945436view0"
+    },
+    {
+      "url": "https://tools.ietf.org/html/rfc7232#section-2.3",
+      "relationship": "原文L106のRFC7232参照。webリンク18を実際にclickするとRFC Editor infoページへredirect。戻りはrewritten summaryなので規範本文のcapture扱いにはしない。",
+      "trace_capture": "tool-output/final-trace-01.json",
+      "trace_web_ref": "turn787987217view4"
+    }
+  ],
+  "checked_at": "2026-11-23T07:48:23.986530+00:00",
+  "round": 3,
+  "redistribution": "Original text stays private; public record contains original paraphrases, locators and hashes."
+}

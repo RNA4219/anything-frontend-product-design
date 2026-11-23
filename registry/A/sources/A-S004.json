@@ -1,0 +1,12 @@
+{
+  "source_id": "A-S004",
+  "title": "— Make research actionable — 18F",
+  "url": "https://guides.18f.org/ux-guide/research/make-research-actionable/",
+  "canonical_url": "https://guides.18f.org/ux-guide/research/make-research-actionable",
+  "original_id": "S04",
+  "provenance": "inherited-index",
+  "verified_in_current_round": false,
+  "rights": "Link and original paraphrase only; no third-party full text redistributed.",
+  "content_sha256": null,
+  "notes": "- **URL**: [Make research actionable — 18F](https://guides.18f.org/ux-guide/research/make-research-actionable/)\n- **該当箇所**: Insights into action / Making decisions based on the research\n- **確認日 / 種別**: 2026-11-23 / archived_official_method\n- **原典の主張** (author_guidance): 調査からstory・ticketへ追跡し、影響と労力を比較する。サービス提供側の影響や少数者の文脈も検討する。\n- **制約・版・未確認**: 低労力だけの優先や高労力な必須機能の削除を正当化しない。\n- **接続する原則**: A04。原則のProcedure/JSON契約は、別に明記した本Skillの導出。"
+}

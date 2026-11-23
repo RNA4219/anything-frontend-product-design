@@ -1,0 +1,199 @@
+{
+  "skill_id": "B-IU-005",
+  "domain": "interaction-ux-flow",
+  "trigger": [
+    "フォームの自動検証またはサーバーから入力拒否を受ける",
+    "入力拒否とサービス障害の回復フローを設計する"
+  ],
+  "intent": "直せる項目を示し、すでに入力した作業を保って再開できる修正経路を用意する。",
+  "required_inputs": [
+    "検証対象項目と受理条件、確定した入力拒否かどうか、判明している安全な修正案。",
+    "既入力の値と有効性、修正対象、現在のprocessの境界。",
+    "秘密情報等の保持・表示条件。3.3.7の例外に該当する場合は具体的根拠。",
+    "サービス側失敗の場合に実行できる次の行動と参照。"
+  ],
+  "decision_rules": [
+    {
+      "if": "確定した自動検出入力エラー",
+      "then": "該当項目とテキスト説明を示し、既知の修正案は安全・目的の例外付きで提示する。",
+      "basis": "source_requirement",
+      "source_refs": [
+        "B-S201"
+      ],
+      "source_locations": [
+        "B-S201:3.3.1,3.3.3"
+      ],
+      "verification_cases": [
+        "F02"
+      ]
+    },
+    {
+      "if": "通常入力の検証拒否後に修正へ戻る",
+      "then": "正常値と誤入力値を保持し、該当箇所の編集を可能にする。保持をサーバー保存完了と同一視しない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S204"
+      ],
+      "source_locations": [
+        "B-S204:L155-L160",
+        "task.md:Application repair"
+      ],
+      "verification_cases": [
+        "F02"
+      ]
+    },
+    {
+      "if": "サービス/全体の問題または入力では修正不能",
+      "then": "無関係なfieldへのエラー割当てを避け、問題と次の行動を説明する。",
+      "basis": "source_guidance",
+      "source_refs": [
+        "B-S204"
+      ],
+      "source_locations": [
+        "B-S204:L137-L141"
+      ],
+      "verification_cases": [
+        "F05"
+      ]
+    },
+    {
+      "if": "送信結果が未確認",
+      "then": "確定した入力拒否・失敗に変換せず、識別と入力を保持して既存単位で照合する。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S104",
+        "B-T201"
+      ],
+      "source_locations": [
+        "B-IU-001",
+        "B-IU-002"
+      ],
+      "verification_cases": [
+        "F06"
+      ]
+    },
+    {
+      "if": "同じprocessで同じ情報を再入力させる",
+      "then": "3.3.7の自動入力/選択手段または具体的な3例外を適用する。",
+      "basis": "source_requirement",
+      "source_refs": [
+        "B-S201"
+      ],
+      "source_locations": [
+        "B-S201:3.3.7"
+      ],
+      "verification_cases": [
+        "F02",
+        "F03"
+      ]
+    }
+  ],
+  "procedure": [
+    "確定した入力拒否、入力では直せないサービス側問題、結果未確認を区別する。入力拒否では自動検出された問題項目を識別し、エラーをテキストで説明する。",
+    "修正案が既知なら示す。ただし内容のセキュリティまたは目的を危うくする案を無条件に開示しない。この例外をエラー項目の識別・テキスト説明まで省く根拠にはしない。",
+    "通常のフォーム検証エラーでは、GOV.UKの保持方針を適用する候補として正常値と誤入力値の両方を残し、誤入力を編集できるようにする。今回のfixtureでは無関係な値をすべて保持する。秘密情報の表示・保存方法は別契約を確認し、一律の平文再表示や無期限保存にしない。",
+    "同じprocess内で既入力または既提示の情報を再入力させる場合は、自動入力かユーザーが選択できる手段を備える。再入力が本質的、セキュリティ確保に必要、以前の情報が無効という3例外を項目ごとに扱う。",
+    "ユーザーが入力を直しても解決しない問題は、該当しないfieldにエラーを付けず、問題と利用可能な次の行動を説明する。通信失敗などで結果が不明ならB-IU-001/002へ接続し、フォーム値・操作識別を保って照合する。",
+    "修正後は必要な検証を行い、解消したエラーと残るエラーを区別する。入力保持はdraftの保持として扱い、クライアントに値があるだけでサーバー保存や申請完了を主張しない。"
+  ],
+  "expected_outputs": [
+    "エラー対象・修正案・保持入力・復帰先と未確定な結果の照合",
+    "代表タスクの実行記録と未検証範囲"
+  ],
+  "dependencies": [
+    "B-IU-001: 送信の結果未確認 — 未確認を入力拒否へ誤変換しない。",
+    "B-IU-002: 送信を再試行する — 同じ操作の回復と新たな送信を区別する。",
+    "B-IU-006: 修正で確認済みの実効回答が変わる — 新しい回答で確認と確定を結び直す。",
+    "C: 実UIを構築する — エラーへのfocus、DOM関連付け、live announcement、キーボード/AT実装と検証はCの責務。Bは到達可能な修正経路を要求する。"
+  ],
+  "exceptions": [
+    "3.3.3の例外は修正案に掛かり、3.3.1全体を免除しない。",
+    "3.3.7の本質性は単に便利・慣例という意味ではない。除去が機能/情報を根本的に変え、適合する代替がないという定義に照合する。",
+    "3.3.7だけでセッションをまたぐ無期限保持を要求しない。個人情報という理由だけで全項目の再入力を正当化もしない。",
+    "GOV.UKの入力保持は政府サービス向けガイド。WCAG 3.3.1自体に全入力保持義務が書かれているとはしない。"
+  ],
+  "failure_modes": [
+    "一項目の拒否で正常値または誤入力値が消える。",
+    "どの値をどう直すか分からない、または修正できる場所へ戻れない。",
+    "サービス障害を無関係なemail欄等へ割り当てて修正ループにする。",
+    "タイムアウトを入力拒否とし、同じ申請を新規送信する。",
+    "クライアントdraftを保持しただけで保存済み・申請済みと表示する。"
+  ],
+  "verification": {
+    "criteria": [
+      "F02",
+      "F05",
+      "F06 (R01 dependency)"
+    ],
+    "evidence": [
+      "campaigns/B/rounds/02/task-flow-results.json",
+      "campaigns/B/rounds/02/branch-regressions-revised.json",
+      "campaigns/B/rounds/02/independent/review.json"
+    ],
+    "limitations": [
+      "Executed fixture cases and independent DOM events only; not production API, browser rendering, assistive tech or human efficacy.",
+      "R02 uses deliberate fault controls, not generated baseline/candidate arms.",
+      "E01 regression and E02 source-wording repair are exploratory findings separate from the predeclared 16 cases."
+    ]
+  },
+  "source_refs": [
+    "B-S201",
+    "B-S203",
+    "B-S204",
+    "B-S104",
+    "B-T201"
+  ],
+  "confidence": {
+    "source_support": "Normative WCAG, separately marked informative explanations and official design/service guidance. Legacy Win7 material is historical context only.",
+    "transfer": "Accepted conditional guidance after independent source, fault-control and task-event checks; no causal human-usability claim.",
+    "limits": [
+      "検証規則、秘密情報の扱い、保存範囲、入力値の有効性は個別契約。",
+      "日本語の理解度、DOM/focus/AT、実サーバーへの保存は未検証。"
+    ]
+  },
+  "status": "ACCEPT",
+  "version": "0.1.0",
+  "introduced_round": 2,
+  "updated_round": 2,
+  "analysis_ref": "campaigns/B/rounds/02/analysis.md",
+  "analysis_sha256": "a1153db012dc0de318cb7891e459f881928b9d8918f18b52eae9e74a45c2a97d",
+  "source_facts": [
+    {
+      "id": "005-F1",
+      "kind": "normative",
+      "fact": "WCAG 2.2 3.3.1(A)は自動検出された入力エラーの項目識別とテキスト説明を要求する。3.3.3(AA)は既知の修正案を要求し、セキュリティまたは内容目的を危うくする場合を例外とする。",
+      "refs": [
+        "B-S201:L1304-L1311,L1320-L1327"
+      ]
+    },
+    {
+      "id": "005-F2",
+      "kind": "official_design_guidance",
+      "fact": "GOV.UKは入力検証エラーで正常・誤入力の両方を保持し、ユーザーが直せない資格・権限・容量等の問題に入力エラー表示を使わないと案内する。",
+      "refs": [
+        "B-S204:L137-L160"
+      ]
+    },
+    {
+      "id": "005-F3",
+      "kind": "normative",
+      "fact": "WCAG 2.2 3.3.7(A)は同一processでの既入力・既提示情報の再入力に自動入力/選択の代替を要求し、本質性・セキュリティ・情報無効の3例外を列挙する。",
+      "refs": [
+        "B-S201:L1364-L1381,L1942-L1945,L2274-L2277"
+      ]
+    },
+    {
+      "id": "005-F4",
+      "kind": "informative_explanation",
+      "fact": "Understandingはセッション間保存の追加義務を設けず、ブラウザ補完だけでは十分ではないと説明する。PIIに固有の包括的例外も設けていない。",
+      "refs": [
+        "B-S203:L47-L58"
+      ]
+    }
+  ],
+  "parent_decisions": [
+    "Local Undo does not universally require a deadline or revision identifier; only applicable contract conditions are required.",
+    "Fixed fixture prerequisites are not attributed to WCAG. Product constants and disputed source passages are excluded."
+  ],
+  "accepted_round": 2
+}

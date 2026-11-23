@@ -1,0 +1,402 @@
+{
+  "method": "Exploratory DOM examination, not additions to frozen scoring suite",
+  "results": [
+    {
+      "arm": "baseline",
+      "scenario": "rejected",
+      "errors": [],
+      "filesStable": true,
+      "hashes": {
+        "flow.mjs": "016adcd05b934bb19ac465dcc89040ac725eb1a19af793d9b0ab0f7b03dc7a03",
+        "index.html": "acf35e8b214463af19d27f5608a95fe00dd203ae3ec7f01e7028a977592febde",
+        "mock-service.mjs": "16494da2695d5e8d41066eff3459d34bf8299536f20a38c8457de53449eb2b1f"
+      },
+      "phases": [
+        {
+          "stage": "initial",
+          "phase": "editing"
+        },
+        {
+          "stage": "review",
+          "phase": "review"
+        },
+        {
+          "stage": "submit_in_flight",
+          "phase": "pending"
+        },
+        {
+          "stage": "submit_settled",
+          "phase": "failed"
+        },
+        {
+          "stage": "known_rejection",
+          "phase": "failed"
+        }
+      ]
+    },
+    {
+      "arm": "candidate",
+      "scenario": "rejected",
+      "errors": [],
+      "filesStable": true,
+      "hashes": {
+        "flow.mjs": "c46f9c9e63d6199efcf0010e6545d1d70b170082399018607f4b475893f63bd1",
+        "index.html": "41721d66cd9fc9d7a40a4e493a413d4841e4eb14eedda8bd7c0ff2ad6499c916",
+        "mock-service.mjs": "204fee67d54972a40de9451fe92a72d17a145a61a82199c7c4d202c647396041",
+        "app.mjs": "f221fc876f656f6335a84423ff13225e385ed99390128d35809f397b7de3af18"
+      },
+      "phases": [
+        {
+          "stage": "initial",
+          "phase": "editing"
+        },
+        {
+          "stage": "review",
+          "phase": "review"
+        },
+        {
+          "stage": "submit_in_flight",
+          "phase": "pending"
+        },
+        {
+          "stage": "submit_settled",
+          "phase": "failed"
+        },
+        {
+          "stage": "known_rejection",
+          "phase": "failed"
+        }
+      ]
+    },
+    {
+      "arm": "baseline",
+      "scenario": "cancellation",
+      "errors": [],
+      "filesStable": true,
+      "hashes": {
+        "flow.mjs": "016adcd05b934bb19ac465dcc89040ac725eb1a19af793d9b0ab0f7b03dc7a03",
+        "index.html": "acf35e8b214463af19d27f5608a95fe00dd203ae3ec7f01e7028a977592febde",
+        "mock-service.mjs": "16494da2695d5e8d41066eff3459d34bf8299536f20a38c8457de53449eb2b1f"
+      },
+      "phases": [
+        {
+          "stage": "initial",
+          "phase": "editing"
+        },
+        {
+          "stage": "review",
+          "phase": "review"
+        },
+        {
+          "stage": "submit_in_flight",
+          "phase": "pending"
+        },
+        {
+          "stage": "submit_settled",
+          "phase": "pending"
+        },
+        {
+          "stage": "cancel_in_flight",
+          "phase": "cancel_requested"
+        },
+        {
+          "stage": "cancel_acknowledged",
+          "phase": "cancel_requested"
+        },
+        {
+          "stage": "checked_cancellation",
+          "phase": "cancelled"
+        }
+      ]
+    },
+    {
+      "arm": "baseline",
+      "scenario": "normal",
+      "errors": [],
+      "filesStable": true,
+      "hashes": {
+        "flow.mjs": "016adcd05b934bb19ac465dcc89040ac725eb1a19af793d9b0ab0f7b03dc7a03",
+        "index.html": "acf35e8b214463af19d27f5608a95fe00dd203ae3ec7f01e7028a977592febde",
+        "mock-service.mjs": "16494da2695d5e8d41066eff3459d34bf8299536f20a38c8457de53449eb2b1f"
+      },
+      "phases": [
+        {
+          "stage": "initial",
+          "phase": "editing"
+        },
+        {
+          "stage": "review",
+          "phase": "review"
+        },
+        {
+          "stage": "submit_in_flight",
+          "phase": "pending"
+        },
+        {
+          "stage": "submit_settled",
+          "phase": "pending"
+        },
+        {
+          "stage": "before_success_check",
+          "phase": "pending"
+        },
+        {
+          "stage": "checked_success",
+          "phase": "succeeded"
+        }
+      ]
+    },
+    {
+      "arm": "baseline",
+      "scenario": "race",
+      "errors": [],
+      "filesStable": true,
+      "hashes": {
+        "flow.mjs": "016adcd05b934bb19ac465dcc89040ac725eb1a19af793d9b0ab0f7b03dc7a03",
+        "index.html": "acf35e8b214463af19d27f5608a95fe00dd203ae3ec7f01e7028a977592febde",
+        "mock-service.mjs": "16494da2695d5e8d41066eff3459d34bf8299536f20a38c8457de53449eb2b1f"
+      },
+      "phases": [
+        {
+          "stage": "initial",
+          "phase": "editing"
+        },
+        {
+          "stage": "review",
+          "phase": "review"
+        },
+        {
+          "stage": "submit_in_flight",
+          "phase": "pending"
+        },
+        {
+          "stage": "submit_settled",
+          "phase": "pending"
+        },
+        {
+          "stage": "cancel_in_flight",
+          "phase": "cancel_requested"
+        },
+        {
+          "stage": "cancel_acknowledged",
+          "phase": "cancel_requested"
+        },
+        {
+          "stage": "race_checked_success",
+          "phase": "succeeded"
+        }
+      ]
+    },
+    {
+      "arm": "candidate",
+      "scenario": "cancellation",
+      "errors": [],
+      "filesStable": true,
+      "hashes": {
+        "flow.mjs": "c46f9c9e63d6199efcf0010e6545d1d70b170082399018607f4b475893f63bd1",
+        "index.html": "41721d66cd9fc9d7a40a4e493a413d4841e4eb14eedda8bd7c0ff2ad6499c916",
+        "mock-service.mjs": "204fee67d54972a40de9451fe92a72d17a145a61a82199c7c4d202c647396041",
+        "app.mjs": "f221fc876f656f6335a84423ff13225e385ed99390128d35809f397b7de3af18"
+      },
+      "phases": [
+        {
+          "stage": "initial",
+          "phase": "editing"
+        },
+        {
+          "stage": "review",
+          "phase": "review"
+        },
+        {
+          "stage": "submit_in_flight",
+          "phase": "pending"
+        },
+        {
+          "stage": "submit_settled",
+          "phase": "pending"
+        },
+        {
+          "stage": "cancel_in_flight",
+          "phase": "pending"
+        },
+        {
+          "stage": "cancel_acknowledged",
+          "phase": "cancel_requested"
+        },
+        {
+          "stage": "checked_cancellation",
+          "phase": "cancelled"
+        }
+      ]
+    },
+    {
+      "arm": "candidate",
+      "scenario": "race",
+      "errors": [],
+      "filesStable": true,
+      "hashes": {
+        "flow.mjs": "c46f9c9e63d6199efcf0010e6545d1d70b170082399018607f4b475893f63bd1",
+        "index.html": "41721d66cd9fc9d7a40a4e493a413d4841e4eb14eedda8bd7c0ff2ad6499c916",
+        "mock-service.mjs": "204fee67d54972a40de9451fe92a72d17a145a61a82199c7c4d202c647396041",
+        "app.mjs": "f221fc876f656f6335a84423ff13225e385ed99390128d35809f397b7de3af18"
+      },
+      "phases": [
+        {
+          "stage": "initial",
+          "phase": "editing"
+        },
+        {
+          "stage": "review",
+          "phase": "review"
+        },
+        {
+          "stage": "submit_in_flight",
+          "phase": "pending"
+        },
+        {
+          "stage": "submit_settled",
+          "phase": "pending"
+        },
+        {
+          "stage": "cancel_in_flight",
+          "phase": "pending"
+        },
+        {
+          "stage": "cancel_acknowledged",
+          "phase": "cancel_requested"
+        },
+        {
+          "stage": "race_checked_success",
+          "phase": "succeeded"
+        }
+      ]
+    },
+    {
+      "arm": "candidate",
+      "scenario": "normal",
+      "errors": [],
+      "filesStable": true,
+      "hashes": {
+        "flow.mjs": "c46f9c9e63d6199efcf0010e6545d1d70b170082399018607f4b475893f63bd1",
+        "index.html": "41721d66cd9fc9d7a40a4e493a413d4841e4eb14eedda8bd7c0ff2ad6499c916",
+        "mock-service.mjs": "204fee67d54972a40de9451fe92a72d17a145a61a82199c7c4d202c647396041",
+        "app.mjs": "f221fc876f656f6335a84423ff13225e385ed99390128d35809f397b7de3af18"
+      },
+      "phases": [
+        {
+          "stage": "initial",
+          "phase": "editing"
+        },
+        {
+          "stage": "review",
+          "phase": "review"
+        },
+        {
+          "stage": "submit_in_flight",
+          "phase": "pending"
+        },
+        {
+          "stage": "submit_settled",
+          "phase": "pending"
+        },
+        {
+          "stage": "before_success_check",
+          "phase": "pending"
+        },
+        {
+          "stage": "checked_success",
+          "phase": "succeeded"
+        }
+      ]
+    },
+    {
+      "arm": "candidate",
+      "scenario": "lost",
+      "errors": [],
+      "filesStable": true,
+      "hashes": {
+        "flow.mjs": "c46f9c9e63d6199efcf0010e6545d1d70b170082399018607f4b475893f63bd1",
+        "index.html": "41721d66cd9fc9d7a40a4e493a413d4841e4eb14eedda8bd7c0ff2ad6499c916",
+        "mock-service.mjs": "204fee67d54972a40de9451fe92a72d17a145a61a82199c7c4d202c647396041",
+        "app.mjs": "f221fc876f656f6335a84423ff13225e385ed99390128d35809f397b7de3af18"
+      },
+      "phases": [
+        {
+          "stage": "initial",
+          "phase": "editing"
+        },
+        {
+          "stage": "review",
+          "phase": "review"
+        },
+        {
+          "stage": "submit_in_flight",
+          "phase": "pending"
+        },
+        {
+          "stage": "submit_settled",
+          "phase": "unknown"
+        },
+        {
+          "stage": "early_check",
+          "phase": "pending"
+        },
+        {
+          "stage": "backend_completed_before_ui_check",
+          "phase": "pending"
+        },
+        {
+          "stage": "checked_success",
+          "phase": "succeeded"
+        }
+      ]
+    },
+    {
+      "arm": "baseline",
+      "scenario": "lost",
+      "errors": [],
+      "filesStable": true,
+      "hashes": {
+        "flow.mjs": "016adcd05b934bb19ac465dcc89040ac725eb1a19af793d9b0ab0f7b03dc7a03",
+        "index.html": "acf35e8b214463af19d27f5608a95fe00dd203ae3ec7f01e7028a977592febde",
+        "mock-service.mjs": "16494da2695d5e8d41066eff3459d34bf8299536f20a38c8457de53449eb2b1f"
+      },
+      "phases": [
+        {
+          "stage": "initial",
+          "phase": "editing"
+        },
+        {
+          "stage": "review",
+          "phase": "review"
+        },
+        {
+          "stage": "submit_in_flight",
+          "phase": "pending"
+        },
+        {
+          "stage": "submit_settled",
+          "phase": "unknown"
+        },
+        {
+          "stage": "early_check",
+          "phase": "unknown"
+        },
+        {
+          "stage": "backend_completed_before_ui_check",
+          "phase": "unknown"
+        },
+        {
+          "stage": "checked_success",
+          "phase": "succeeded"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No real browser layout, screenshots, accessibility tree, or user comprehension study.",
+    "Node imports use actual host timers and local mock service; no production backend.",
+    "Scenario selection and real input/click handlers are exercised; ES module imports are injected because jsdom does not execute module scripts natively."
+  ],
+  "retention": "Condensed public record; complete private DOM traces retained. Three critical traces are included separately."
+}

@@ -1,0 +1,178 @@
+{
+  "skill_id": "B-IU-001",
+  "domain": "interaction-ux-flow",
+  "trigger": [
+    "B-001: 通信、非同期操作、業務結果、画面上の最終確認値を分け、結果不明から正本への照合経路を保つ。"
+  ],
+  "intent": "通信、非同期操作、業務結果、画面上の最終確認値を分け、結果不明から正本への照合経路を保つ。",
+  "required_inputs": [
+    "副作用を持つ対象操作、業務対象ID、希望内容、最後に確認した値。確認時点・版が分かる場合はその情報も使う。",
+    "観測した要求/応答と、操作ID・照合用ID。未発行・喪失・不明を区別し、存在しないIDを作り足さない。",
+    "APIの受付/終端結果/業務結果の対応、正本の照会経路。未提示なら、その判断は未確定と記録する。"
+  ],
+  "decision_rules": [
+    {
+      "if": "副作用要求の応答が喪失・タイムアウトし、未適用も終端結果も確定しない",
+      "then": "結果未確認を表示する。最終確認値を現在の確定値と断定しない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S102",
+        "B-S103",
+        "B-S104",
+        "B-S105",
+        "B-T201",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "202、operation token、その他の受付だけが返る",
+      "then": "受付と処理中を示す。業務成功への対応が契約で保証されるまで希望値を確定値にしない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S102",
+        "B-S103",
+        "B-S104",
+        "B-S105",
+        "B-T201",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "Operation.done/DONEなど終端フラグを受信",
+      "then": "対象契約のerror/response等を確認して成功・失敗・取消を分ける。結果を返さないサービスもあるため未提供を成功と補完しない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S102",
+        "B-S103",
+        "B-S104",
+        "B-S105",
+        "B-T201",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "非終端metadataエラー、照会エラー、再生された500を受信",
+      "then": "その観測と元の業務結果を分ける。即座に元処理失敗やrollback確定へ変えない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S102",
+        "B-S103",
+        "B-S104",
+        "B-S105",
+        "B-T201",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "画面が元予約の保持を主張する",
+      "then": "有効な元予約を保証する契約または状態照合が必要。画面の旧値や一般的失敗コードだけでは足りない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S102",
+        "B-S103",
+        "B-S104",
+        "B-S105",
+        "B-T201",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "照会していない、または照会できない",
+      "then": "確認中と偽表示せず、結果未確認とする。利用可能な参照情報と次の確認手段を示す。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S102",
+        "B-S103",
+        "B-S104",
+        "B-S105",
+        "B-T201",
+        "B-T206"
+      ]
+    }
+  ],
+  "procedure": [
+    "利用者の目的、対象ID、変更希望と最後に確認した値を記録する。",
+    "通信・受付・処理の終端・業務結果をAPI契約に対応付ける。",
+    "状態ごとに、確実に言える事実・次に選べる操作・照合先を決める。",
+    "結果不明では操作IDと入力を保持し、正本の結果へ照合する。",
+    "正常・応答喪失・照会失敗・受付後の失敗を実行し、表示と実際の副作用を照合する。"
+  ],
+  "expected_outputs": [
+    "状態・操作・遷移条件・保持データの表",
+    "結果を確定する証拠と回復経路",
+    "正常・異常・境界条件の試験と未検証事項"
+  ],
+  "dependencies": [
+    "共通条件: 通信・操作・業務・表示・補償を別に扱う。",
+    "B-IU-002は再送を選ぶ場合、B-IU-003は取消要求が加わる場合に必要。"
+  ],
+  "exceptions": [
+    "未送信または要求未適用が確実な場合は、その確定した不成立を表示できる。通信エラーの型だけから未適用を推測しない。",
+    "同期APIの応答が最終業務結果を保証する場合、別の進捗画面や追加GETを一律必須にしない。",
+    "操作結果の応答そのものが業務結果の正本なら、それで確定できる。必ずoperation照会とresource照会の両方を要求する規則にはしない。",
+    "Google/AIPやBigQueryの状態名はそのAPIに限る。「結果未確認」をgoogle.rpc.UNKNOWNへ機械的に対応させない。"
+  ],
+  "failure_modes": [
+    "タイムアウトだけで変更失敗/元予約維持と表示する。",
+    "202だけで変更完了を表示する。",
+    "done=true/DONEだけで成功を表示する。",
+    "照会していないのに確認中の表示が続く。",
+    "再読込で対象操作・希望入力・結果確認手段が失われる。"
+  ],
+  "verification": {
+    "criteria": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T10",
+      "T12"
+    ],
+    "evidence": [
+      "campaigns/B/rounds/01/candidate-revised-trials.json",
+      "campaigns/B/rounds/01/recovery-policy-results.json",
+      "campaigns/B/rounds/01/independent/public-independent-review-summary.json"
+    ],
+    "limitations": [
+      "Executed synthetic controllers, decision adapter and generated DOM only; real backend, rendered browser, keyboard/AT and human comprehension unverified.",
+      "One same-model generation per arm; both scored 14/14. No causal efficacy gain demonstrated.",
+      "Initial candidate copy defect revised after independent DOM observation; original arm and all trial versions retained."
+    ]
+  },
+  "source_refs": [
+    "B-S101",
+    "B-S102",
+    "B-S103",
+    "B-S104",
+    "B-S105",
+    "B-T201",
+    "B-T206"
+  ],
+  "confidence": {
+    "source_support": "Primary standards and official API/service guidance; scope and edition preserved.",
+    "transfer": "Accepted as conditional executable guidance within tested contracts; general usability benefit is not established.",
+    "limits": [
+      "予約/エクスポートの実API契約、原子性、部分適用、照合経路が未提示。",
+      "状態記録や業務リソースの保持期間・失効後の照合先は未提示。",
+      "日本語文言の理解度、継続照会の頻度、画面通知の効果は未検証。"
+    ]
+  },
+  "status": "ACCEPT",
+  "version": "0.1.0",
+  "introduced_round": 1,
+  "analysis_ref": "campaigns/B/rounds/01/analysis.md",
+  "accepted_round": 1,
+  "relationship_to_existing": {
+    "artifact": "https://github.com/RNA4219/anything-frontend-product-design/pull/2",
+    "revision": "f66e7954f2a59a59dad861901b9270076c2fc691",
+    "type": "formalizes_or_refines_existing_concept",
+    "additional_value": "Separates evidence layers, avoids mandatory dual lookup when one authoritative result suffices, tests semantic inconsistency in badges."
+  }
+}

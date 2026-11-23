@@ -1,0 +1,93 @@
+{
+  "suite": "B-R02-task-flows-v1",
+  "module": "modules/interaction-ux-flow/examples/task-flows.mjs",
+  "total": 16,
+  "passed": 16,
+  "failed": 0,
+  "results": [
+    {
+      "id": "F01",
+      "pass": true,
+      "expected": "Review and change links do not submit an application"
+    },
+    {
+      "id": "F02",
+      "pass": true,
+      "expected": "One server-rejected field preserves every unrelated value and identifies a remedy"
+    },
+    {
+      "id": "F03",
+      "pass": true,
+      "expected": "Changing effective reviewed content requires reviewing the new content"
+    },
+    {
+      "id": "F04",
+      "pass": true,
+      "expected": "An inactive dependent answer is not silently included in the submitted payload"
+    },
+    {
+      "id": "F05",
+      "pass": true,
+      "expected": "Service/global failure is not assigned to an arbitrary field"
+    },
+    {
+      "id": "F06",
+      "pass": true,
+      "expected": "Unknown submission retains its ID and input and does not create a fresh duplicate"
+    },
+    {
+      "id": "F07",
+      "pass": true,
+      "expected": "Repeated confirmation while pending starts only one operation"
+    },
+    {
+      "id": "U01",
+      "pass": true,
+      "expected": "A local reversible archive restores the intended item without a universal confirmation screen"
+    },
+    {
+      "id": "U02",
+      "pass": true,
+      "expected": "At the Undo deadline no restore call is made or success claimed"
+    },
+    {
+      "id": "U03",
+      "pass": true,
+      "expected": "A conflicting revision preserves newer state and does not overwrite it"
+    },
+    {
+      "id": "U04",
+      "pass": true,
+      "expected": "Accepted compensation remains pending rather than restored"
+    },
+    {
+      "id": "U05",
+      "pass": true,
+      "expected": "Failed compensation preserves original-effect truth and a supplied next step/reference"
+    },
+    {
+      "id": "U06",
+      "pass": true,
+      "expected": "Successful compensation describes only its declared scope and residual effects"
+    },
+    {
+      "id": "U07",
+      "pass": true,
+      "expected": "Lost compensation reply remains unknown and recoverable by the same operation"
+    },
+    {
+      "id": "U08",
+      "pass": true,
+      "expected": "Repeated Undo while pending does not create another compensation"
+    },
+    {
+      "id": "U09",
+      "pass": true,
+      "expected": "Offer expiry does not prevent checking an already-started compensation"
+    }
+  ],
+  "limits": [
+    "Synthetic task/service fixture; no real service or human study.",
+    "Deliberate mutants are negative controls, not generated baseline arms."
+  ]
+}

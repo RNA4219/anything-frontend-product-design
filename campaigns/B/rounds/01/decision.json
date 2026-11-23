@@ -1,0 +1,150 @@
+{
+  "round": 1,
+  "ended_at": "2026-11-23T07:06:57.523385+00:00",
+  "status": "COMPLETE",
+  "investigated": [
+    "B-001",
+    "B-002"
+  ],
+  "agents": [
+    {
+      "task_name": "/root/r01_research_primary",
+      "round": 1,
+      "role": "Researcher-1",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    },
+    {
+      "task_name": "/root/r01_research_alternative",
+      "round": 1,
+      "role": "Researcher-2",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    },
+    {
+      "task_name": "/root/r01_baseline_builder",
+      "round": 1,
+      "role": "Baseline task builder",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    },
+    {
+      "task_name": "/root/r01_analyst",
+      "round": 1,
+      "role": "Analyst / sankai",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    },
+    {
+      "task_name": "/root/r01_candidate_builder",
+      "round": 1,
+      "role": "Candidate task builder",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    },
+    {
+      "task_name": "/root/r01_critic",
+      "round": 1,
+      "role": "Critic / Evaluator",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    }
+  ],
+  "new_source_ids": [
+    "B-S101",
+    "B-S102",
+    "B-S103",
+    "B-S104",
+    "B-S105",
+    "B-T201",
+    "B-T202",
+    "B-T203",
+    "B-T204",
+    "B-T205",
+    "B-T206"
+  ],
+  "duplicates_removed": 0,
+  "instruction_units": {
+    "ACCEPT": [
+      "B-IU-001",
+      "B-IU-002",
+      "B-IU-003"
+    ],
+    "HOLD": [
+      "B-IU-004"
+    ]
+  },
+  "tests": {
+    "frozen_suite_current": "v4",
+    "baseline": {
+      "passed": 14,
+      "total": 14
+    },
+    "candidate_initial": {
+      "passed": 14,
+      "total": 14
+    },
+    "candidate_revised": {
+      "passed": 14,
+      "total": 14
+    },
+    "recovery_policy": {
+      "passed": 14,
+      "total": 14
+    },
+    "registry_negative_tests": {
+      "passed": 8,
+      "total": 8
+    },
+    "candidate_builder_tests_reexecuted_by_parent_on_final_build": {
+      "passed": 22,
+      "total": 22
+    },
+    "independent_dom_initial": {
+      "scenarios": 10,
+      "runtime_errors": 0,
+      "semantic_defects": 2
+    },
+    "revised_candidate_dom": {
+      "scenarios": 1,
+      "runtime_errors": 0,
+      "target_defect_resolved": true
+    },
+    "negative_controls": "Safe replay/serialization accepted; wrong ID and stale cancellation detected. False copy requires separate semantic inspection."
+  },
+  "decision": "ACCEPT conditional units 001–003 after specific copy revision; HOLD Undo until R02. Frozen behavior comparison does not show an improvement: both 14/14.",
+  "next": [
+    "B-003",
+    "B-004",
+    "B-002-UNDO"
+  ],
+  "cost": {
+    "amount": null,
+    "currency": null,
+    "measured": false,
+    "reason": "Actual token/billing telemetry unavailable"
+  },
+  "execution": {
+    "subagents_recovered": true,
+    "ci": "NOT_EXECUTED",
+    "browser": "NOT_EXECUTED",
+    "dom": "EXECUTED"
+  },
+  "evidence": [
+    "campaigns/B/rounds/01/baseline-trials.json",
+    "campaigns/B/rounds/01/candidate-trials.json",
+    "campaigns/B/rounds/01/candidate-revised-trials.json",
+    "campaigns/B/rounds/01/recovery-policy-results.json",
+    "campaigns/B/rounds/01/independent/public-independent-review-summary.json"
+  ],
+  "limits": [
+    "Separate contexts use the same model; not an objective or human evaluation.",
+    "v4 contract correction followed observed v3 baseline score; all revisions/justifications retained."
+  ]
+}

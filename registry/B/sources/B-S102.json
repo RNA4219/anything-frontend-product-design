@@ -1,0 +1,24 @@
+{
+  "source_id": "B-S102",
+  "title": "google.rpc.Code canonical enum and official Cloud Run reference",
+  "url": "https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto",
+  "kind": "official API specification source",
+  "section": "Code.DEADLINE_EXCEEDED; local source lines 60–67; Code.UNAVAILABLE lines 170–176; official rendered reference web L136",
+  "read_status": "Complete original UTF-8 file obtained through GitHub connector; relevant sections read and cross-checked against official rendered documentation.",
+  "observed_facts": [
+    "For operations that change system state, DEADLINE_EXCEEDED can be returned even after successful completion, for example when the successful response is delayed.",
+    "UNAVAILABLE documentation warns that non-idempotent operations are not always safe to retry."
+  ],
+  "limits": [
+    "These are canonical gRPC semantics; a concrete booking API must document its corresponding HTTP/client timeout contract.",
+    "A UI state meaning 'outcome unknown' should not be equated with the separate canonical UNKNOWN error enum."
+  ],
+  "canonical_url": "https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto",
+  "capture_sha256": "83a63185b83cf7332196fc5ead0ec91b93ac207fbe91b3d5bc3d72f461b0bb31",
+  "capture_hash_scope": "exact retrieved representation, not necessarily raw webpage",
+  "source_file_name": "google-rpc-code.proto",
+  "checked_at": "2026-11-23T06:43:37.753559+00:00",
+  "round": 1,
+  "redistribution": "Original is retained privately, not committed; this record contains campaign paraphrases and public locators.",
+  "upstream_git_blob_sha": "46b5d75a78aa182e3353744d4fac76aed4d609cb"
+}

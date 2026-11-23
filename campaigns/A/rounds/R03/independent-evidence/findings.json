@@ -1,0 +1,136 @@
+{
+  "round": "R03",
+  "role": "independent_critic_evaluator",
+  "reviewed_at": "2026-11-23T08:17:16.547971+00:00",
+  "scope": "Independent critique before anonymous arm scoring; no public repository edits.",
+  "verdict": "C01-C03 corrected by parent and verified in bounded recheck; no remaining blocker within reviewed scope.",
+  "findings": [
+    {
+      "id": "R03-C01",
+      "severity": "medium",
+      "classification": "pre_existing_structural_detection_gap",
+      "introduced_by_R03": false,
+      "status": "resolved_by_parent_verified",
+      "location": [
+        "modules/product-information-architecture/checks/validate_plan.py:255",
+        "modules/product-information-architecture/checks/validate_plan.py:280-282",
+        "modules/product-information-architecture/checks/validate_plan.py:321-324"
+      ],
+      "symptom": "一つのgoalに明示必須のユーザー向け能力が複数あるとき、一つだけがtargetにあり、別の必須能力は同roleの孤立画面にしかなくてもPASSになる。",
+      "basis": "入力でf_bookingとf_preflightをmandatoryとし、f_preflightにはmandatory要件r_preflightを割当て、f_bookingから依存を宣言した。MISSING_REQUIREMENTはkeepの存在、UNPLACED_FEATUREは画面割当の存在、ROUTE_CAPABILITY_MISSINGはtargetに少なくとも一つの対応能力があることだけを確認する。baselineも同様である。",
+      "impact": "明示必須の照合票表示へ利用者が辿れないのに、goalの構造的な達成条件が全部揃ったと誤って読まれうる。R03のpriority拡張で発生した回帰ではない。",
+      "correction": "今回の狭い変更から分け、必須能力ごとの役割付き到達性は未検査であることと手動照合を明記するか、別の変更で明示必須かつユーザー向け能力の到達性を検査する。全goal関連機能のtarget同居や、共有enablerから任意goalの提供を推定する規則へは拡張しない。",
+      "reproduction": {
+        "command": "python3 /workspace/scratch/10bb09e1845f/private/review/R03/counterexamples/run_mandatory_reachability.py",
+        "negative": "counterexamples/ce_mandatory_capability_isolated",
+        "positive": "counterexamples/control_mandatory_capabilities_separate_stages",
+        "actual": "negativeもpositiveもbaseline/candidate PASS。negativeは必須表示能力が孤立しているため意味上は不成立。",
+        "confound_control": "全能力keep・各画面配置あり・同じmaker role・必須依存参照あり。別段階の正例ではtargetへ同居させず往復経路だけを加えた。"
+      },
+      "gating": "Narrow R03 optional-route correction can be accepted only without claiming comprehensive mandatory-capability reachability.",
+      "original_status": "confirmed",
+      "resolution_evidence": "correction-check.json"
+    },
+    {
+      "id": "R03-C02",
+      "severity": "medium",
+      "classification": "integration_documentation_inconsistency",
+      "introduced_by_R03": "new conditional guidance conflicts with inherited wording",
+      "status": "resolved_by_parent_verified",
+      "location": [
+        "modules/product-information-architecture/references/disclosure-and-verification.md:44",
+        "registry/A/skills/A-IU-008.json:47",
+        "modules/product-information-architecture/references/decision-information.md:33",
+        "registry/A/skills/A-IU-008.json:41"
+      ],
+      "symptom": "旧A08 Expected Outputsは必須情報の入手・権限が未解決なら一律blockingを求めるが、新条件は必須達成を妨げる場合に限りblockingとし、確認済みの別候補で進める場合を許容している。",
+      "basis": "固定evaluation-briefではP-200のannual_quotaは未確認だが、P-300は12席・年90万件・予算13万円を満たす確認済み候補。P-200を未判定としたままP-300の選択を進めることと、全体のHOLDは別である。",
+      "impact": "情報不足の影響範囲を限定するR03の手順と、既存参照・registryの手順で異なるblocking判定を生む。未知候補が一つあるだけで、成立する選択全体を不要に停止させうる。",
+      "correction": "旧2箇所を『未解決事項が当該必須達成を妨げる場合はblocking。別の確認済み候補で進められる場合は範囲と未判定候補を残す』へ揃える。入手・権限の未解決そのものを一律の全体停止条件にしない。",
+      "reproduction": {
+        "input": "campaigns/A/rounds/R03/evaluation-brief.json",
+        "steps": [
+          "P-200の年間上限を未確認のまま残す。P-300の既知条件はそのまま使う。",
+          "旧Expected Outputsを文字どおり適用すると未知の必要属性にblocking=trueを付け、checkerはHOLDになる。",
+          "新decision-information.md §3を適用するとP-200を適合扱いせず、P-300を選べる範囲でnon-blocking残件にできる。"
+        ],
+        "verification_type": "documentary rule conflict; not a claimed user or runtime effect"
+      },
+      "gating": "Align inherited normative wording before reporting a coherent final instruction set.",
+      "original_status": "confirmed",
+      "resolution_evidence": "correction-check.json"
+    },
+    {
+      "id": "R03-C03",
+      "severity": "low",
+      "classification": "stale_verification_scope",
+      "introduced_by_R03": "scope expansion not propagated to every direct instruction",
+      "status": "resolved_by_parent_verified",
+      "location": [
+        "modules/product-information-architecture/references/disclosure-and-verification.md:13,43,53",
+        "registry/A/skills/A-IU-008.json:4,46,67"
+      ],
+      "symptom": "A08のtrigger・Expected Outputs・Verificationにはmustだけを名指した点検が残り、新refとcheckerでは宣言済みshould/couldも検査する。",
+      "basis": "ce_should_needed_info_secondaryはbaseline PASSからcandidate FAILへ変化した。新ref §1.2は全宣言routeを明示するが、旧Verificationは各must goalだけの列挙を指示する。追加手順を併読すれば補完できるため、新checkerの誤判定ではない。",
+      "impact": "直接A08またはregistryのVerificationを読む利用者が、手動でoptional経路の情報検査を省く可能性が残る。",
+      "correction": "当該3種の欄を全宣言goal_routesのtargetに揃える。未宣言optionalへのroute強制は加えない。",
+      "reproduction": {
+        "steps": [
+          "A-IU-008.verificationの最初の項目だけに沿ってgoalを列挙する。",
+          "shouldのg_glazeはその点検対象から漏れる。",
+          "counterexamples/ce_should_needed_info_secondaryをcandidate checkerへ渡すとHIDDEN_DECISION_INFORMATIONでFAILになる。"
+        ],
+        "verification_type": "instruction/checker scope mismatch"
+      },
+      "gating": "Minor integration repair; not a reason to broaden optional-task delivery inference.",
+      "original_status": "confirmed",
+      "resolution_evidence": "correction-check.json"
+    }
+  ],
+  "checks": {
+    "independent_fixtures_authored_before_parent_information_tests": true,
+    "initial_fixture_count": 11,
+    "additional_parent_hypothesis_fixture_count": 2,
+    "initial_candidate_expectations_met": 11,
+    "new_detection_counterexamples": 3,
+    "regression_method_count": 55,
+    "regression_result": "OK",
+    "blind_evaluation": {
+      "W": 6,
+      "Z": 6,
+      "difference": 0,
+      "hard_failures": 0,
+      "blinding": "assignment-cue leakage",
+      "artifact": "blind-evaluation.json"
+    },
+    "source_documents_new_this_round": 6,
+    "source_independence": "3 related government guidance pages; 2 meta-analyses with overlapping underlying studies; 1 HL7 terminology definition. Not six independent empirical validations.",
+    "not_verified": [
+      "human task outcomes",
+      "real API behavior",
+      "browser rendering",
+      "accessibility",
+      "responsive layout"
+    ],
+    "automatic_limits_confirmed": [
+      "information_values",
+      "information_applicability",
+      "optional_goal_delivery",
+      "prose_only_mandatory_or_dynamic_state_conditions"
+    ]
+  },
+  "artifacts": {
+    "review": "review.md",
+    "counterexamples": "counterexamples/results.json",
+    "mandatory_reachability": "counterexamples/mandatory-reachability-results.json",
+    "test_log": "unit-tests.txt"
+  },
+  "reviewed_hashes": {
+    "session-A/modules/product-information-architecture/checks/validate_plan.py": "9d8a9cd0116ced699b636199be9f61021349964012522bef796b2f163b37f243",
+    "session-A/modules/product-information-architecture/references/disclosure-and-verification.md": "78eff5f70e477d71f5dc5d7b2b52372418fb183cde4aae72d75551e5f7219529",
+    "session-A/modules/product-information-architecture/references/decision-information.md": "5966d9a675ad24dc98589efa1e5bde3371f9f4750c9b04ab6674ac75ab0e1731",
+    "session-A/registry/A/skills/A-IU-008.json": "9ebe5a4d416fa84e55811e8baf7c21b241d777ea1b6cb80eb4d1c1cca19c5780"
+  },
+  "final_correction_check": "correction-check.json",
+  "final_verdict": "ACCEPT_BOUNDED_STRUCTURAL_AND_INSTRUCTION_CHANGE"
+}

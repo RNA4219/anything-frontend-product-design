@@ -1,0 +1,218 @@
+{
+  "role": "Researcher-1",
+  "round": "R01",
+  "question": "Safe feature disposition under rare work, dependencies and uncertain demand",
+  "status": "COMPLETE_WITH_ACQUISITION_LIMIT",
+  "proposed_rules": [
+    {
+      "id": "R01-R1-U01",
+      "intent": "Preserve problem, evidence status and affected actors before feature disposition.",
+      "inputs": [
+        "role/outcome/trigger/context",
+        "evidence or labelled assumption",
+        "support and integration stakeholders",
+        "current feature inventory"
+      ],
+      "conditions": [
+        "For a claimed need, separate desired outcome from requested implementation.",
+        "Attach observed/reported/assumed/unknown provenance without converting the latter two into evidence.",
+        "Before removing a capability, check affected support/operations/dependent-team work as well as front-stage usage."
+      ],
+      "exceptions": [
+        "A small, understood edit needs only a proportionate check.",
+        "An unknown need does not automatically block unrelated implementation work; hold only the affected irreversible disposition."
+      ],
+      "failure": "High-volume customer telemetry is mistaken for the complete set of needs and a rare support task disappears.",
+      "test": "Brief contains a customer view, a rare support export and an untested feature request; output must preserve support outcome, distinguish request from need, and mark request evidence as unknown.",
+      "source_ids": [
+        "R01-R1-S01",
+        "R01-R1-S04"
+      ],
+      "novelty": "Inherited goal traceability; new explicit affected-actor coverage and proportionality/evidence-status gates."
+    },
+    {
+      "id": "R01-R1-U02",
+      "intent": "Treat removal and consolidation as a coverage transition.",
+      "inputs": [
+        "capability and affected needs",
+        "replacement or obsolete-need evidence",
+        "existing entry points",
+        "dependent roles/data obligations"
+      ],
+      "conditions": [
+        "For a removal proposal, classify each affected need as ended with evidence, continued through a named replacement, or explicitly outside the proposed service scope.",
+        "For replacement, record how users reach the successor and which preserved constraints it satisfies.",
+        "Flag an unresolved surviving need or broken old entry as a defect, rather than counting fewer features as improvement."
+      ],
+      "exceptions": [
+        "A demonstrably obsolete need can end without a successor.",
+        "A proposed scope reduction is legitimate if the unmet need and decision are explicit; the Skill must not silently treat it as preserved coverage.",
+        "This unit plans IA and capability migration; B/C own transition behavior and data mechanics."
+      ],
+      "failure": "Two screens merge but one role loses a required operation, or a retired bookmarked destination becomes an unexplained dead end.",
+      "test": "Deletion with absent successor fails when a required need survives; obsolete-need evidence permits removal; replacement must cover the role and old-entry disposition.",
+      "source_ids": [
+        "R01-R1-S02",
+        "R01-R1-S04"
+      ],
+      "novelty": "Adds explicit retirement-reason alternatives and legacy-entry transition beyond inherited keep/merge/defer/remove labels."
+    },
+    {
+      "id": "R01-R1-U03",
+      "intent": "Keep uncertain priority decisions reversible and testable.",
+      "inputs": [
+        "candidate outcomes",
+        "baseline when available",
+        "benefit/cost estimates with provenance",
+        "constraints",
+        "assumption ranges or qualitative scenarios"
+      ],
+      "conditions": [
+        "Use estimated inputs only with their assumption status visible.",
+        "Compare plausible scenarios for the inputs that could reverse the ordering.",
+        "If ranking changes across plausible scenarios, record a provisional order and the observation that would resolve it.",
+        "Retain hard requirements separately from optional benefit ranking."
+      ],
+      "exceptions": [
+        "Do not invent numerical ranges without a basis; qualitative scenarios can expose uncertainty.",
+        "Do not require a full economic model for a minor UI choice.",
+        "Hard-requirement protection is inherited from prior requirements rules, not established by the benefits article alone."
+      ],
+      "failure": "An unknown usage estimate becomes zero demand and permanently eliminates a capability; fabricated precision hides a ranking reversal.",
+      "test": "Change only an uncertain benefit estimate so the optional ranking reverses; output should expose uncertainty and a revisit condition, while mandatory coverage stays intact.",
+      "source_ids": [
+        "R01-R1-S03"
+      ],
+      "novelty": "Refines inherited priority rationale with sensitivity and explicit revisit criteria; no new universal score formula."
+    }
+  ],
+  "not_searched": [
+    "Quantitative controlled experiments for these three composite rules",
+    "Long-term impact of capability consolidation",
+    "GOV.UK functional standard full text and healthcare service assessment surfaced in audit query; only snippets seen, not used as sources",
+    "Other national service standards",
+    "User-specific real product telemetry"
+  ],
+  "deduplication": {
+    "against_prior_source_index": true,
+    "prior_count": 20,
+    "new_source_urls": 4,
+    "new_scientific_claim": false,
+    "inherited_rules_not_counted_as_new": [
+      "goal traceability",
+      "rare essential work protection",
+      "evidence vs assumption distinction",
+      "keep/merge/defer/remove framing"
+    ]
+  },
+  "costs": {
+    "actual_amount": null,
+    "currency": null,
+    "billing_available": false,
+    "web_tool_calls": 4,
+    "search_queries": 3,
+    "imozuru_fetch_attempts": 4,
+    "imozuru_fetch_successes": 0,
+    "web_extracts_saved": 4
+  },
+  "next_questions": [
+    "Can merge-equivalence checks preserve permission/scope and prerequisites without disallowing legitimate shared interfaces?",
+    "How should aliases and deprecated destinations preserve findability after taxonomy consolidation?"
+  ],
+  "stopping_reason": "Source passages attached to the new operational questions; source guidance has no empirical effectiveness proof, which remains a verification task. This is not saturation.",
+  "sources": [
+    {
+      "id": "R01-R1-S01",
+      "title": "Learning about users and their needs",
+      "url": "https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs",
+      "kind": "official_guidance",
+      "locator": "Researching / Validating user needs; Linking user needs to user stories",
+      "claim": "Evidence-based needs describe a problem and outcome; implementation-specific user stories remain linked to needs. Research includes support staff and people who have difficulty with the current service.",
+      "limits": "Official service-design guidance, not a controlled comparison. No prevalence threshold or automatic feature-removal rule is supplied.",
+      "sha256": "0e9d88d04aa8b1f79bc36721d493be69036bdc5b6978046f8ace2db90feb3be6",
+      "acquisition": {
+        "method": "web_run extracted original passage fallback",
+        "imozuru_fetch": "FAIL_DNS",
+        "original_html_downloaded": false,
+        "full_original_archive": false,
+        "relevant_passages_verified": true
+      },
+      "publication_safety": "Metadata and short quotation only; retained source text stays private.",
+      "source_id": "R01-R1-S01",
+      "canonical_url": "https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs",
+      "verified_in_current_round": true
+    },
+    {
+      "id": "R01-R1-S02",
+      "title": "Retiring your service",
+      "url": "https://www.gov.uk/service-manual/agile-delivery/retiring-your-service",
+      "kind": "official_guidance",
+      "locator": "Consider user needs; Telling your users; Make a plan to redirect traffic",
+      "claim": "Retirement distinguishes needs that disappear, needs served by a replacement, and needs no longer served by government. Users, direct-entry routes, APIs and assisted channels require transition consideration.",
+      "limits": "Whole-service retirement guidance. Applying its preservation questions to an individual feature is this campaign’s inference. Government-specific notification and domain-retention rules are not transplanted.",
+      "sha256": "e0757a1d6c6b9a856ab619ac06f83e5f7f981afca4bd8e161fbcf60ad5b7b237",
+      "acquisition": {
+        "method": "web_run extracted original passage fallback",
+        "imozuru_fetch": "FAIL_DNS",
+        "original_html_downloaded": false,
+        "full_original_archive": false,
+        "relevant_passages_verified": true
+      },
+      "publication_safety": "Metadata and short quotation only; retained source text stays private.",
+      "source_id": "R01-R1-S02",
+      "canonical_url": "https://www.gov.uk/service-manual/agile-delivery/retiring-your-service",
+      "verified_in_current_round": true
+    },
+    {
+      "id": "R01-R1-S03",
+      "title": "Measuring the benefits of your service",
+      "url": "https://www.gov.uk/service-manual/measuring-success/measuring-service-benefits",
+      "kind": "official_guidance",
+      "locator": "Discovery; Alpha; Show improvement; Scrutinise your assumptions",
+      "claim": "Early estimates may use assumptions. A baseline, alternative solutions, delivery costs and sensitivity to uncertain inputs support comparison; metrics and later observations update the model.",
+      "limits": "Guidance for service investment and benefits. It does not prescribe a feature ranking formula, a numerical confidence threshold, or measured effectiveness for this Skill.",
+      "sha256": "c3e7d4f91979cd96205ef8adc60fb772a8dfa66f4dfea2610ae1dc814f0886b1",
+      "acquisition": {
+        "method": "web_run extracted original passage fallback",
+        "imozuru_fetch": "FAIL_DNS",
+        "original_html_downloaded": false,
+        "full_original_archive": false,
+        "relevant_passages_verified": true
+      },
+      "publication_safety": "Metadata and short quotation only; retained source text stays private.",
+      "source_id": "R01-R1-S03",
+      "canonical_url": "https://www.gov.uk/service-manual/measuring-success/measuring-service-benefits",
+      "verified_in_current_round": true
+    },
+    {
+      "id": "R01-R1-S04",
+      "title": "Define user needs",
+      "url": "https://www.gov.uk/guidance/define-user-needs",
+      "kind": "official_guidance",
+      "locator": "Why define needs; What good looks like; How to apply",
+      "claim": "Affected users include support, operations and integrating teams. Trace technical choices to their needs and consider change impacts. Small, well-understood changes warrant lightweight checks.",
+      "limits": "Technology Code of Practice guidance updated 29 October 2026. Role-and-scope feature equivalence is a derived product-design rule, not a direct assertion of this source.",
+      "sha256": "96f1a93f2c51d1813dc6fa893f883e5adce4005512450646dc3caed2741f7301",
+      "acquisition": {
+        "method": "web_run extracted original passage fallback",
+        "imozuru_fetch": "FAIL_DNS",
+        "original_html_downloaded": false,
+        "full_original_archive": false,
+        "relevant_passages_verified": true
+      },
+      "publication_safety": "Metadata and short quotation only; retained source text stays private.",
+      "source_id": "R01-R1-S04",
+      "canonical_url": "https://www.gov.uk/guidance/define-user-needs",
+      "verified_in_current_round": true
+    }
+  ],
+  "followed_edges": [
+    {
+      "from": "https://www.gov.uk/guidance/define-user-needs",
+      "to": "https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs",
+      "kind": "official_related_guide_link",
+      "method": "web_run click link 37",
+      "observed": true
+    }
+  ]
+}

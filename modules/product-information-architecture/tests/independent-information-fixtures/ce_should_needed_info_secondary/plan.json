@@ -1,0 +1,248 @@
+{
+  "schema_version": "1.1",
+  "case_id": "independent-kiln-workshop",
+  "visual_intent_id": "v_workshop",
+  "features": [
+    {
+      "id": "f_lookup",
+      "label": "試料の選択",
+      "object": "kiln-workshop-batch",
+      "outcome": "select-batch",
+      "roles": [
+        "maker"
+      ],
+      "goal_ids": [
+        "g_book",
+        "g_glaze",
+        "g_export"
+      ],
+      "requirement_ids": [],
+      "dependencies": [],
+      "scope": "assigned-workshop",
+      "context_constraints": [
+        "high-fire"
+      ],
+      "evidence_refs": [
+        "e_synthetic"
+      ],
+      "disposition": "keep",
+      "target": null,
+      "reason": "当該判断またはその共用支援に必要",
+      "priority": "medium",
+      "priority_basis": "予約必須、比較と書き出しは任意の提供作業"
+    },
+    {
+      "id": "f_booking",
+      "label": "枠の予約",
+      "object": "kiln-workshop-batch",
+      "outcome": "book-slot",
+      "roles": [
+        "maker"
+      ],
+      "goal_ids": [
+        "g_book"
+      ],
+      "requirement_ids": [
+        "r_booking"
+      ],
+      "dependencies": [
+        "f_lookup"
+      ],
+      "scope": "assigned-workshop",
+      "context_constraints": [
+        "high-fire"
+      ],
+      "evidence_refs": [
+        "e_synthetic"
+      ],
+      "disposition": "keep",
+      "target": null,
+      "reason": "当該判断またはその共用支援に必要",
+      "priority": "required",
+      "priority_basis": "予約必須、比較と書き出しは任意の提供作業"
+    },
+    {
+      "id": "f_glaze",
+      "label": "試料の比較",
+      "object": "kiln-workshop-batch",
+      "outcome": "compare-glaze",
+      "roles": [
+        "maker"
+      ],
+      "goal_ids": [
+        "g_glaze"
+      ],
+      "requirement_ids": [],
+      "dependencies": [
+        "f_lookup"
+      ],
+      "scope": "assigned-workshop",
+      "context_constraints": [
+        "high-fire"
+      ],
+      "evidence_refs": [
+        "e_synthetic"
+      ],
+      "disposition": "keep",
+      "target": null,
+      "reason": "当該判断またはその共用支援に必要",
+      "priority": "medium",
+      "priority_basis": "予約必須、比較と書き出しは任意の提供作業"
+    },
+    {
+      "id": "f_export",
+      "label": "台帳の書き出し",
+      "object": "kiln-workshop-batch",
+      "outcome": "export-ledger",
+      "roles": [
+        "maker"
+      ],
+      "goal_ids": [
+        "g_export"
+      ],
+      "requirement_ids": [],
+      "dependencies": [
+        "f_lookup"
+      ],
+      "scope": "assigned-workshop",
+      "context_constraints": [
+        "high-fire"
+      ],
+      "evidence_refs": [
+        "e_synthetic"
+      ],
+      "disposition": "keep",
+      "target": null,
+      "reason": "当該判断またはその共用支援に必要",
+      "priority": "medium",
+      "priority_basis": "予約必須、比較と書き出しは任意の提供作業"
+    }
+  ],
+  "screens": [
+    {
+      "id": "s_book",
+      "title": "焼成枠を選ぶ",
+      "purpose": "焼成枠を選ぶ",
+      "goal_ids": [
+        "g_book"
+      ],
+      "feature_ids": [
+        "f_lookup",
+        "f_booking"
+      ],
+      "roles": [
+        "maker"
+      ],
+      "entry_for": [
+        "maker"
+      ],
+      "information": [
+        {
+          "id": "slot_capacity",
+          "visibility": "primary",
+          "reason": "この場面の判断で必要な情報"
+        },
+        {
+          "id": "firing_profile",
+          "visibility": "primary",
+          "reason": "この場面の判断で必要な情報"
+        }
+      ]
+    },
+    {
+      "id": "s_glaze",
+      "title": "釉薬試料の比較対象を選ぶ",
+      "purpose": "釉薬試料の比較対象を選ぶ",
+      "goal_ids": [
+        "g_glaze"
+      ],
+      "feature_ids": [
+        "f_glaze"
+      ],
+      "roles": [
+        "maker"
+      ],
+      "entry_for": [],
+      "information": [
+        {
+          "id": "sample_identity",
+          "visibility": "primary",
+          "reason": "この場面の判断で必要な情報"
+        },
+        {
+          "id": "shrinkage_status",
+          "visibility": "secondary",
+          "reason": "この場面の判断で必要な情報"
+        }
+      ]
+    },
+    {
+      "id": "s_export",
+      "title": "試料台帳の書き出し対象を選ぶ",
+      "purpose": "試料台帳の書き出し対象を選ぶ",
+      "goal_ids": [
+        "g_export"
+      ],
+      "feature_ids": [
+        "f_export"
+      ],
+      "roles": [
+        "maker"
+      ],
+      "entry_for": [],
+      "information": [
+        {
+          "id": "export_scope",
+          "visibility": "primary",
+          "reason": "この場面の判断で必要な情報"
+        }
+      ]
+    }
+  ],
+  "navigation": [
+    {
+      "from": "s_book",
+      "to": "s_glaze",
+      "label": "釉薬試料の比較対象を選ぶ",
+      "roles": [
+        "maker"
+      ],
+      "kind": "contextual",
+      "rationale": "選択中の試料に関する作業へ進む"
+    },
+    {
+      "from": "s_book",
+      "to": "s_export",
+      "label": "試料台帳の書き出し対象を選ぶ",
+      "roles": [
+        "maker"
+      ],
+      "kind": "contextual",
+      "rationale": "選択中の試料に関する作業へ進む"
+    }
+  ],
+  "goal_routes": [
+    {
+      "goal_id": "g_book",
+      "start_screen": "s_book",
+      "target_screen": "s_book",
+      "notes": "提供中の作業の判断場所"
+    },
+    {
+      "goal_id": "g_glaze",
+      "start_screen": "s_book",
+      "target_screen": "s_glaze",
+      "notes": "提供中の作業の判断場所"
+    },
+    {
+      "goal_id": "g_export",
+      "start_screen": "s_book",
+      "target_screen": "s_export",
+      "notes": "提供中の作業の判断場所"
+    }
+  ],
+  "unresolved": [],
+  "decision_notes": [
+    "これは高温焼成の比較場面。各提供作業の判断画面を宣言する。利用者検証・実描画は未実施。"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "purpose": "Portable public DOM harness paths/dependency injection validated by parent",
+  "cases": 10,
+  "runtime_errors": 0,
+  "all_files_stable": true,
+  "new_efficacy_evidence": false,
+  "limits": "Re-execution of the same 10 scenarios; not ten new independent samples."
+}

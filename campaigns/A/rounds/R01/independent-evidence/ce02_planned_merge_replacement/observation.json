@@ -1,0 +1,18 @@
+{
+  "name": "ce02_planned_merge_replacement",
+  "expected_status": "FAIL_or_HOLD",
+  "explanation": "提供中の必須機能を提供予定の機能へ即時merge。remove/deferだけにある現提供検査を通らない。",
+  "actual_status": "PASS",
+  "exit_code": 0,
+  "issues": [],
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/validate_plan.py",
+    "--brief",
+    "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce02_planned_merge_replacement/brief.json",
+    "--plan",
+    "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce02_planned_merge_replacement/plan.json",
+    "--output",
+    "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce02_planned_merge_replacement/actual.json"
+  ]
+}

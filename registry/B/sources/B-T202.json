@@ -1,0 +1,24 @@
+{
+  "source_id": "B-T202",
+  "title": "Idempotent requests",
+  "url": "https://docs.stripe.com/api/idempotent_requests",
+  "kind": "official-primary",
+  "section": "API v1/v2 replay differences, retention, parameter equality, execution boundary",
+  "read_status": "full_web_text: all 24 lines of the retrieved Markdown representation (L0–L23); not raw HTTP/HTML; relevant sections read",
+  "observed_facts": [
+    "v1は実行開始後の最初のHTTP状態・本文を保存し500も再生。v2は成功済み処理を繰り返さず、可能なら失敗・部分失敗を完了へ進め、更新された応答を返す。",
+    "v1は24時間以上経過したキーを削除可能。削除後の同じキーは新規リクエストとして実行される。パラメータが違う同一キーはエラー。",
+    "v1の事前検証失敗・同時実行衝突では実行が開始されず、冪等結果は保存されない。"
+  ],
+  "limits": [
+    "保持期間と応答再生は製品・APIバージョン別の契約。",
+    "同一キーなら永久安全、全エラーは同じ対応、という一般則は導けない。"
+  ],
+  "canonical_url": "https://docs.stripe.com/api/idempotent_requests",
+  "capture_sha256": "f2157cd1120f0eac3e17ea4e07c4dd4d3cf7f8f732a05290b13b1c6a64512490",
+  "capture_hash_scope": "exact retrieved representation, not necessarily raw webpage",
+  "source_file_name": "B-T202-stripe-idempotency.web.md",
+  "checked_at": "2026-11-23T06:43:37.755169+00:00",
+  "round": 1,
+  "redistribution": "Original is retained privately, not committed; this record contains campaign paraphrases and public locators."
+}

@@ -1,0 +1,698 @@
+---
+title: Booking Lifecycle
+description: USP booking lifecycle specification - status transitions, booking schema, operations, webhooks, and post-booking events.
+---
+
+# Booking Lifecycle
+
+**Capability:** `dev.usp-protocol.services.bookings`
+
+The bookings capability defines the **lifecycle of a service booking** from creation through completion. For paid services, it also defines the `actions` array (including payment actions with `payment_context`) and the `confirm-payment` operation.
+
+!!! note "Single-Service Design"
+    USP bookings are single-service by design. Each `POST /bookings` creates exactly one booking for one service at one time slot. Multi-service coordination (e.g., a haircut followed by a color treatment) is handled by the platform issuing separate bookings.
+
+---
+
+## Booking Status Lifecycle
+
+```mermaid
+stateDiagram-v2
+    [*] --> pending
+    pending --> confirmed : auto-confirm or manual approve
+    pending --> requires_action : payment needed
+    pending --> canceled : timeout or cancel
+
+    requires_action --> confirmed : payment confirmed
+    requires_action --> canceled : timeout or cancel
+
+    confirmed --> in_progress : service begins
+    confirmed --> canceled : cancel
+
+    in_progress --> completed : service delivered
+    in_progress --> no_show : client absent
+
+    completed --> [*]
+    no_show --> [*]
+    canceled --> [*]
+```
+
+### Status Descriptions
+
+| Status | Description |
+|--------|-------------|
+| `pending` | Booking created, awaiting confirmation. For `auto` mode, this is transient -- moves to `confirmed` immediately (or `requires_action` if payment is needed). For `manual` mode, remains until business confirms. |
+| `requires_action` | One or more actions in the `actions` array have `status: pending`. Inspect `actions[]` for required tasks (e.g., payment, waiver signing). |
+| `confirmed` | Booking is confirmed and service will proceed at the scheduled time. |
+| `in_progress` | Service is currently being delivered. Transitioned by the business. |
+| `completed` | Service has been delivered. Terminal state. |
+| `no_show` | Client did not attend within the grace period. Terminal state. Business **MAY** charge the no-show fee. |
+| `canceled` | Booking has been canceled. Can be reached from `pending`, `requires_action`, or `confirmed`. Terminal state. |
+
+### Permitted Transitions by Operation
+
+The lifecycle diagram shows which statuses can follow which. It does not say which **operation** is legal from a given status, which is what a platform needs to know whether a call will be accepted. This table is normative.
+
+`Yes` means the business **MUST** accept the call when all other preconditions hold. `No` means it **MUST** reject with `invalid_transition`.
+
+| Current status | `confirm` | `cancel` | `reschedule` | `confirm-payment` | `update` |
+|-------------------|-----------|----------|--------------|-------------------|----------|
+| `pending` | Yes (manual) | Yes | SHOULD | No | Yes |
+| `requires_action` | No | Yes | MAY | Yes | Yes |
+| `confirmed` | Yes (idempotent) | Yes | Yes | No | Yes |
+| `in_progress` | No | No | No | No | Yes |
+| `completed` | No | No | No | No | No |
+| `no_show` | No | No | No | No | No |
+| `canceled` | No | No | No | No | No |
+
+The cells implementations diverge on:
+
+- **`reschedule` from `pending`** is `SHOULD`. A business that does not allow it **MUST** reject with `invalid_transition` rather than silently succeeding.
+- **`reschedule` from `requires_action`** is `MAY`, because an outstanding payment action may be priced against the original slot. A business that allows it **MUST** apply the reschedule price-change rules.
+- **`confirm` from `pending`** is `Yes` only when `confirmation_mode` is `manual`. For an `auto`-mode booking the operation does not apply: a business **MUST** return the current booking unchanged when it is already `confirmed` (idempotent), and **MUST** reject with `invalid_transition` otherwise.
+- **`confirm` from `confirmed`** is idempotent: it **MUST** return the current booking, so a retried confirmation is safe.
+- **`update` on terminal statuses** is `No`. The booking is a historical record; contact and address edits **MUST NOT** be accepted on `completed`, `no_show`, or `canceled` bookings. When the booking questions extension is negotiated, this call-level `invalid_transition` governs and `booking_question_update_not_allowed` is not also returned.
+
+Transitions to `in_progress`, `completed`, and `no_show` are business-initiated and have no platform-facing operation. They surface via `GET /bookings/{booking_id}` and the `booking.updated` webhook.
+
+!!! note "`invalid_transition` is a business outcome, not a protocol error"
+
+    Cancelling an already-canceled booking is a well-formed, authorized request that the business understood. By the [error family test](../errors/index.md), that makes it a business outcome: HTTP `200 OK` with the code in `messages[]`, not a `4xx` Problem Details response.
+
+---
+
+## Booking Schema
+
+The booking object represents a scheduled service instance for a specific buyer at a specific time.
+
+!!! tip "Deployment Mode Differences"
+    In **UCP-Native Mode**, the `payment` field is not present on the booking (payment state is managed by the UCP checkout object). In **Standalone Mode**, the `payment` field is present and `actions` may contain payment action types.
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `id` | string | **Yes** | Unique booking identifier, generated by the business. |
+| `service_id` | string | **Yes** | The booked service. |
+| `service_name` | string | **Yes** | Service display name, captured at booking time (snapshot). |
+| `slot` | object | **Yes** | `{id, start, end, duration}` -- the booked time slot. |
+| `buyer` | Buyer | **Yes** | `{first_name, last_name, email, phone_number}` -- the person making and paying for the booking. |
+| `recipient` | Buyer | No | `{first_name, last_name, email, phone_number}` -- the person receiving the service, when different from the buyer. |
+| `party_size` | integer | **Yes** | Total number of attendees. |
+| `resources` | Array[object] | No | `{id, type, name}` -- specific resources assigned to this booking. |
+| `location` | object | No | `{id, name}` -- specific location for this booking. |
+| `status` | string | **Yes** | Current booking status. See [Status Lifecycle](#booking-status-lifecycle). |
+| `confirmation_mode` | string | Conditional | `auto` or `manual`. The service's confirmation policy at the time the booking was created. **MUST** be present while `status` is `pending` or `requires_action`; **MAY** be omitted afterwards. When present it **MUST** describe the policy in force at creation, not the service's current policy (see Confirmation Mode and Booking History). |
+| `payment` | BookingPayment | Conditional | Payment state. **MUST** be present when `requires_payment` is `true` and `payment_timing` is `at_booking` or `deposit_required`. **MUST** be omitted when `requires_payment` is `false`. |
+| `actions` | Array[Action] | Conditional | Ordered array of pending tasks. **MUST** be present and non-empty when `status` is `requires_action`; **MUST** be absent or empty otherwise. See [Negotiated Extension Actions](#negotiated-extension-actions). |
+| `booking_question_state` | Array[BookingQuestionState] | No | [Booking questions extension](../extensions.md#booking-questions-extension) state for each applicable set. `before_service` sets live here, never in `actions`. Carries only the non-sensitive answer echo. |
+| `notes` | string | No | Buyer-provided special requests or notes. |
+| `booking_url` | string | No | Stable URL where the buyer can view and manage this booking. |
+| `messages` | Array[Message] | No | Soft messages from the business providing context about the booking state. |
+| `dispute` | Dispute | No | Present when a payment dispute has been opened. |
+| `cancellation` | object | No | `{reason, reason_code, canceled_by, fee, refund_amount, canceled_at}` -- present when canceled. `reason` is human-readable; `reason_code` is an open machine-readable vocabulary (well-known value: `checkout_abandoned`). |
+| `created_at` | string | **Yes** | RFC 3339 timestamp of creation. |
+| `updated_at` | string | **Yes** | RFC 3339 timestamp of last modification. |
+| `expires_at` | string | No | RFC 3339 expiration deadline. A business that does not hold slot capacity for a `pending` or `requires_action` booking **MAY** omit `expires_at`. A business that holds slot capacity for an unconfirmed booking **MUST** include it. Advertising the field is a claim the business **MUST** honour (see Booking Expiry). |
+
+### Negotiated Extension Actions
+
+An entry in `actions[]` is one of two kinds, distinguished by whether it carries `config`:
+
+- **Handoff Action** (no `config`): a payment action or any action whose extension is not active in the negotiated intersection. `continue_url` is **REQUIRED**, and the buyer completes the work on the business surface.
+- **Negotiated extension Action** (`config` present): `type` is a reverse-domain Action type declared by an extension active in the negotiated intersection, `id` is **REQUIRED**, and `config` carries the extension-owned processing configuration. `continue_url` is **OPTIONAL** and, when present, is the fallback the declaring extension defines.
+
+These semantics are aligned with UCP's common Action contract. A business **MUST** emit a negotiated extension Action only when its declaring extension is active for the requesting platform, and **MUST** keep the same `type` and `id` while the same work remains outstanding. A platform **MUST NOT** assume the gated effect succeeded because an Action surface closed or a submission returned transport success; the business's later response is authoritative. A platform that cannot satisfy the declaring extension's complete contract uses `continue_url` when present and otherwise leaves the Action unresolved. The booking questions buyer-input Action is described in [Extensions](../extensions.md#booking-questions-extension).
+
+### Confirmation Mode and Booking History
+
+`confirmation_mode` is a historical fact about a booking, not a live read of the service. A business **MAY** change a service's confirmation policy at any time, and doing so **MUST NOT** change the meaning of bookings already taken under the previous policy.
+
+This makes the field unanswerable for some bookings. A business that does not store the policy alongside the booking has only two values available once the booking is confirmed, and both are wrong:
+
+- the service's **current** policy, which is not what the field means, and which silently changes for historical bookings every time the policy changes
+- a fixed `auto`, which misreports every booking the merchant actually approved
+
+The field is therefore **REQUIRED** only while `status` is `pending` or `requires_action` — the states where a business necessarily knows the answer, because the booking is sitting in the flow that policy selected, and the states where the answer is actionable, because the buyer needs to know whether approval is outstanding. Outside those states the field is **OPTIONAL**, and a business that cannot answer truthfully **MUST** omit it.
+
+Platforms **MUST** treat an absent `confirmation_mode` as unknown. A business that does retain the original policy **SHOULD** continue to publish the field on confirmed and completed bookings, where it remains useful for audit and buyer-facing history.
+
+### Booking Expiry
+
+`expires_at` on Booking is an advertised deadline. Omitting it is conformant when the business does not hold slot capacity for that unconfirmed booking. The numbered rules below apply **only** when `expires_at` is present. A business that advertises `expires_at` **MUST** honour it.
+
+When a `pending` or `requires_action` booking that includes `expires_at` reaches that deadline without being resolved:
+
+1. The business **MUST** transition the booking to `status: canceled`.
+2. The business **SHOULD** send a `booking.canceled` webhook.
+3. The expired booking **MUST** remain retrievable via `GET /bookings/{booking_id}` with `status: canceled`.
+4. The business **MUST** release any underlying slot hold.
+
+!!! warning "Hold Alignment"
+    For hold-backed bookings that advertise `expires_at`, the hold's `expires_at` **SHOULD** be aligned with or earlier than the booking's `expires_at` to prevent a race condition where the slot is released but the booking has not yet expired.
+
+!!! note "Terminal path when `expires_at` is omitted"
+    Omitting `expires_at` is conformant when the business holds no capacity for the unconfirmed booking. Combined with a checkout that is abandoned without an explicit `cancel_checkout` (for example the platform times out or walks away), the booking has **no protocol-defined terminal path**: the [cancel-checkout invariant](../deployment-modes/ucp-native.md#cancel-checkout) fires only on an explicit cancel, and the numbered expiry rules above fire only when `expires_at` is advertised. Platforms **SHOULD** call `cancel_checkout` when abandoning a paid checkout. Businesses that omit `expires_at` and that create a booking at `create_checkout` **SHOULD** provide some other terminal path for silent abandonment; otherwise the USP-visible booking may remain in a state from which [permitted transitions](#permitted-transitions-by-operation) still require accepting `confirm`.
+
+---
+
+## Operations
+
+### Create Booking -- `POST /bookings`
+
+Creates a new booking for a service at a specific time slot. Resource selection is encoded in the `slot_id` -- the platform selects resources by choosing the appropriate slot at [availability query](availability.md#query-availability-post-availabilityquery) time.
+
+**Request Fields:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `service_id` | string | **Yes** | The service to book. |
+| `slot_id` | string | **Yes** | The selected time slot. |
+| `hold_id` | string | No | Hold ID from a prior [hold operation](availability.md#hold-slot-post-availabilityholds). |
+| `buyer` | object | **Yes** | Buyer contact information. |
+| `recipient` | object | No | The person receiving the service, when different from the buyer. |
+| `party_size` | integer | No | Number of participants. Default: 1. |
+| `notes` | string | No | Free-text notes for the business. |
+| `post_payment_return_request` | object | No | Platform's return instruction for redirect-based checkout flows. |
+| `booking_question_submissions` | Array[BookingQuestionSubmission] | Conditional | [Booking questions extension](../extensions.md#booking-questions-extension) answers for each applicable in-band set at its live revision. |
+| `booking_question_assessment_token` | string | Conditional | Token from an `eligible` preflight check. **REQUIRED** when the service has an applicable required preflight set. |
+
+!!! tip "Idempotency"
+    - **With a hold:** The business **SHOULD** treat `hold_id` as a natural idempotency key. A second `POST /bookings` with the same `hold_id` **MUST** return the existing booking.
+    - **Without a hold:** Platforms **SHOULD** send an `Idempotency-Key` header. The business **MUST** honor it.
+
+=== "Request (with hold)"
+
+    ```json
+    {
+      "service_id": "svc_massage_001",
+      "slot_id": "slot_20260316_1400",
+      "hold_id": "hold_xyz789",
+      "buyer": {
+        "first_name": "Alice",
+        "last_name": "Williams",
+        "email": "alice@example.com",
+        "phone_number": "+12125551234"
+      },
+      "party_size": 1,
+      "notes": "First time visit"
+    }
+    ```
+
+=== "Request (without hold)"
+
+    ```json
+    {
+      "service_id": "svc_massage_001",
+      "slot_id": "slot_20260316_1400",
+      "buyer": {
+        "first_name": "Alice",
+        "last_name": "Williams",
+        "email": "alice@example.com",
+        "phone_number": "+12125551234"
+      },
+      "party_size": 1,
+      "notes": "First time visit"
+    }
+    ```
+
+=== "Request (booking on behalf of another person)"
+
+    ```json
+    {
+      "service_id": "svc_haircut_kids",
+      "slot_id": "slot_20260316_1600",
+      "hold_id": "hold_abc456",
+      "buyer": {
+        "first_name": "Alice",
+        "last_name": "Williams",
+        "email": "alice@example.com",
+        "phone_number": "+12125551234"
+      },
+      "recipient": {
+        "first_name": "Max",
+        "last_name": "Williams"
+      },
+      "party_size": 1,
+      "notes": "He is 7 years old"
+    }
+    ```
+
+=== "Response (paid service, `at_booking`)"
+
+    ```json
+    {
+      "usp": {
+        "version": "2026-08-20",
+        "capabilities": {
+          "dev.usp-protocol.services.bookings": [
+            { "version": "2026-08-20" }
+          ]
+        }
+      },
+      "booking": {
+        "id": "bkg_456def",
+        "service_id": "svc_massage_001",
+        "service_name": "Deep Tissue Massage",
+        "slot": {
+          "id": "slot_20260316_1400",
+          "start": "2026-03-16T14:00:00-04:00",
+          "end": "2026-03-16T15:00:00-04:00",
+          "duration": "PT60M"
+        },
+        "buyer": {
+          "first_name": "Alice",
+          "last_name": "Williams",
+          "email": "alice@example.com",
+          "phone_number": "+12125551234"
+        },
+        "party_size": 1,
+        "resources": [
+          { "id": "staff_jane", "type": "staff", "name": "Jane Smith" }
+        ],
+        "status": "requires_action",
+        "confirmation_mode": "auto",
+        "payment": {
+          "status": "pending",
+          "timing": "at_booking",
+          "amount": 12000,
+          "currency": "USD",
+          "amount_due": 12000
+        },
+        "actions": [
+          {
+            "type": "payment",
+            "status": "pending",
+            "continue_url": "https://business.example.com/pay/bkg_456def",
+            "expires_at": "2026-03-16T13:10:00-04:00",
+            "message": {
+              "type": "info",
+              "code": "payment_required",
+              "content": "Payment of $120.00 is required to confirm this booking.",
+              "severity": "requires_buyer_input"
+            },
+            "payment_context": {
+              "amount_due": 12000,
+              "currency": "USD",
+              "description": "Deep Tissue Massage - Mar 16, 2:00 PM",
+              "line_items": [
+                {
+                  "label": "Deep Tissue Massage (60 min)",
+                  "amount": 12000,
+                  "quantity": 1,
+                  "item_id": "svc_massage_001"
+                }
+              ],
+              "metadata": {
+                "booking_id": "bkg_456def",
+                "service_id": "svc_massage_001",
+                "service_type": "appointment",
+                "slot_start": "2026-03-16T14:00:00-04:00"
+              }
+            }
+          }
+        ],
+        "created_at": "2026-03-14T22:05:00Z",
+        "updated_at": "2026-03-14T22:05:00Z",
+        "expires_at": "2026-03-16T13:10:00-04:00"
+      }
+    }
+    ```
+
+=== "Response (free service)"
+
+    ```json
+    {
+      "usp": {
+        "version": "2026-08-20",
+        "capabilities": {
+          "dev.usp-protocol.services.bookings": [
+            { "version": "2026-08-20" }
+          ]
+        }
+      },
+      "booking": {
+        "id": "bkg_789ghi",
+        "service_id": "svc_yoga_free",
+        "service_name": "Community Yoga",
+        "slot": {
+          "id": "slot_20260318_1000",
+          "start": "2026-03-18T10:00:00-04:00",
+          "end": "2026-03-18T11:00:00-04:00",
+          "duration": "PT60M"
+        },
+        "buyer": {
+          "first_name": "Alice",
+          "last_name": "Williams",
+          "email": "alice@example.com"
+        },
+        "party_size": 1,
+        "status": "confirmed",
+        "confirmation_mode": "auto",
+        "created_at": "2026-03-14T22:05:00Z",
+        "updated_at": "2026-03-14T22:05:00Z"
+      }
+    }
+    ```
+
+---
+
+### Get Booking -- `GET /bookings/{booking_id}`
+
+Returns the current state of a booking. Same structure as the booking object above.
+
+---
+
+### Update Booking -- `PUT /bookings/{booking_id}`
+
+Updates mutable fields on a booking. Only `buyer`, `recipient`, and `notes` are mutable after creation, plus `booking_question_submissions` when the booking questions extension is negotiated. Omitted fields are left unchanged (partial update semantics).
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `buyer` | object | No | Updated buyer contact information. |
+| `recipient` | object | No | Updated recipient information. |
+| `notes` | string | No | Updated special requests or notes. |
+| `booking_question_submissions` | Array[BookingQuestionSubmission] | No | Booking questions extension answers. Include `action_id` when processing an outstanding buyer-input Action. |
+
+When the booking questions extension is negotiated, update permission for `booking_question_submissions` depends on `status`:
+
+| Booking status | Booking-question submissions |
+|----------------|------------------------------|
+| `pending`, `requires_action` | The business **MUST** accept otherwise-valid submissions for any applicable set. |
+| `confirmed` | The business **MUST** accept submissions for `before_service` sets and **MAY** reject edits to completed `before_confirmation` sets with `booking_question_update_not_allowed`. |
+| `in_progress` | The business **MUST** accept the Update Booking call and **MUST** reject the submission with `booking_question_update_not_allowed`. |
+| `completed`, `no_show`, `canceled` | The Update Booking call itself is rejected with `invalid_transition`; that call-level outcome governs and `booking_question_update_not_allowed` is **NOT** returned. |
+
+```json
+{
+  "booking": {
+    "id": "bkg_456def",
+    "notes": "Please use hypoallergenic products",
+    "buyer": {
+      "first_name": "Alice",
+      "last_name": "Williams",
+      "email": "alice.new@example.com",
+      "phone_number": "+12125551234"
+    },
+    "updated_at": "2026-03-15T10:00:00Z"
+  }
+}
+```
+
+---
+
+### Confirm Booking -- `POST /bookings/{booking_id}/confirm`
+
+Business-initiated confirmation for bookings with `confirmation_mode: manual`. A platform or buyer agent **MUST NOT** call this operation, and a `booking_scoped_credential` **MUST NOT** authorize it. Authentication of the business caller is deployment-defined.
+
+When `confirmation_mode` is `manual` and the booking is `pending`, the business **MUST** transition it to `confirmed`. When `confirmation_mode` is `auto` and the booking is already `confirmed`, the business **MUST** return the current booking unchanged (idempotent). When `confirmation_mode` is `auto` and the booking is not already `confirmed` (including a UCP-Native unpaid booking that remains `pending`), the business **MUST** reject with `invalid_transition` at HTTP `200 OK` in `messages[]`.
+
+!!! note "Absence is not `auto`"
+    `confirmation_mode` is **MUST**-present on exactly the states this endpoint acts on, so a caller always has the field it needs. A platform **MUST NOT** infer the mode from its absence on a booking in another state: absence means the business did not retain the original policy, not that the policy was `auto`.
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `notes` | string | No | Optional message from the business to the buyer. |
+
+```json
+{
+  "booking": {
+    "id": "bkg_456def",
+    "status": "confirmed",
+    "confirmation_mode": "manual",
+    "updated_at": "2026-03-15T09:00:00Z"
+  }
+}
+```
+
+---
+
+### Cancel Booking -- `POST /bookings/{booking_id}/cancel`
+
+Cancels a booking. Eligible from `pending`, `requires_action`, or `confirmed` status. Cancellation fees are applied per the service's [cancellation policy](service-catalog.md#service-policies).
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `reason` | string | No | Human-readable cancellation reason. |
+| `canceled_by` | string | No | Who initiated: `buyer`, `business`, or `system`. Default: `buyer`. |
+
+The response populates `cancellation` on the booking. When a booking is terminalized because its UCP checkout was canceled and it never reached `confirmed`, the USP-visible booking **MUST** carry `cancellation.reason_code: checkout_abandoned` with `canceled_by: system`, and `canceled_at` **MUST NOT** change across reads. See [Cancel Checkout](../deployment-modes/ucp-native.md#cancel-checkout).
+
+```json
+{
+  "booking": {
+    "id": "bkg_456def",
+    "status": "canceled",
+    "cancellation": {
+      "reason": "Schedule conflict",
+      "canceled_by": "buyer",
+      "fee": 0,
+      "refund_amount": 12000,
+      "canceled_at": "2026-03-15T08:30:00Z"
+    },
+    "payment": {
+      "status": "refunded",
+      "timing": "at_booking",
+      "amount": 12000,
+      "currency": "USD",
+      "amount_due": 0,
+      "transaction_id": "txn_abc123"
+    },
+    "updated_at": "2026-03-15T08:30:00Z"
+  }
+}
+```
+
+---
+
+### Reschedule Booking -- `POST /bookings/{booking_id}/reschedule`
+
+Moves a booking to a different time slot. Rescheduling preserves the booking `id` -- this is not a cancel + rebook. The original slot is released and the new slot is occupied.
+
+**Eligible statuses:** see [Permitted Transitions by Operation](#permitted-transitions-by-operation). Rescheduling a `canceled` or terminal-state booking **MUST** be rejected with `invalid_transition`.
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `slot_id` | string | **Yes** | The new slot to reschedule to. |
+| `hold_id` | string | No | Hold ID for the new slot, when business supports holds. |
+
+!!! warning "Reschedule is atomic"
+
+    Acquiring the new slot and releasing the original **MUST** be atomic: either the booking moves and the original is released, or the booking is left entirely unchanged. The original slot **MUST NOT** be released before the new one is secured, because a failure in between leaves the buyer with no booking at all, which is worse than a rejected reschedule.
+
+    When the new slot cannot be secured, the booking stays on its original slot and the business returns:
+
+    | Cause | Code |
+    |---|---|
+    | New slot is taken or not bookable | `slot_unavailable` |
+    | `hold_id` for the new slot has lapsed | `hold_expired` |
+    | New slot lacks capacity for `party_size` | `capacity_exceeded` |
+    | New slot violates the booking window | `booking_window_violated` |
+    | Rescheduling policy limit reached | `reschedule_limit_reached` |
+    | Booking status cannot be rescheduled | `invalid_transition` |
+
+    A failed reschedule **MUST NOT** release a still-valid hold.
+
+!!! warning "Credential Expiry on Reschedule"
+    A `booking_scoped_credential` is issued at creation and its `expires_at` is chosen against the slot the booking occupied then; rescheduling to a later slot does not move it. A business whose credential lifetime is derived from the slot **SHOULD** re-issue on the reschedule response, as a sibling of `booking`, whenever the existing credential would otherwise expire before the new slot. [Section 5.6](#conditional-writes-and-concurrency) already permits re-issuing to the same bound key, and the previous credential **MAY** be left to expire on its own. Without this the platform holds a booking it will stop being able to read, reschedule or cancel *before the appointment occurs* -- it has only a proof of possession, and credentials are issued on creation, not on demand.
+
+!!! note "Price Changes on Reschedule"
+    When slot-level pricing differs between the original and new slot (e.g., rescheduling from off-peak to peak), the business **SHOULD** update `payment.amount`. If additional payment is required, the business **MUST** add a new `payment`-type action to `actions[]`, transitioning the booking to `requires_action`.
+
+---
+
+### Confirm Payment -- `POST /bookings/{booking_id}/confirm-payment`
+
+The universal callback the platform calls after payment succeeds. This completes the payment action in the booking's `actions` array. If no pending actions remain, the booking transitions to `confirmed`.
+
+=== "Request"
+
+    ```json
+    {
+      "payment_result": {
+        "status": "paid",
+        "provider": "stripe",
+        "transaction_id": "txn_abc123",
+        "amount_paid": 12000,
+        "currency": "USD",
+        "order_reference": "ord_xyz789"
+      }
+    }
+    ```
+
+=== "Response"
+
+    ```json
+    {
+      "usp": {
+        "version": "2026-08-20",
+        "capabilities": {
+          "dev.usp-protocol.services.bookings": [
+            { "version": "2026-08-20" }
+          ]
+        }
+      },
+      "booking": {
+        "id": "bkg_456def",
+        "status": "confirmed",
+        "payment": {
+          "status": "paid",
+          "timing": "at_booking",
+          "amount": 12000,
+          "currency": "USD",
+          "amount_due": 0,
+          "transaction_id": "txn_abc123",
+          "order_reference": "ord_xyz789"
+        },
+        "updated_at": "2026-03-14T22:06:00Z"
+      }
+    }
+    ```
+
+**`payment_result` Fields:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `status` | string | **Yes** | `paid` (full amount) or `deposit_paid` (deposit amount). |
+| `provider` | string | No | Payment provider identifier (e.g., `stripe`, `adyen`). Informational. |
+| `transaction_id` | string | **Yes** | Transaction identifier for reconciliation and refund processing. |
+| `amount_paid` | integer | **Yes** | Amount paid in minor currency units. |
+| `currency` | string | **Yes** | ISO 4217 currency code. |
+| `order_reference` | string | No | External order identifier for cross-system reconciliation. |
+
+!!! warning "Confirmations the business cannot complete"
+
+    The platform calls `confirm-payment` after it has collected the payment. Two conditions leave the buyer nothing to act on and no confirmed booking, so they are protocol errors, not business outcomes:
+
+    - [`payment_unverifiable`](../errors/payment-unverifiable.md): the business has no price to check the payment against, for example the booking's service no longer exists or a payable service states no price. This differs from `payment_amount_mismatch`, where the business has a price and the payment disagrees with it.
+    - [`confirmation_failed`](../errors/confirmation-failed.md): the business accepted the payment, but the booking did not reach its post-payment status.
+
+    For either condition the business **MUST** answer `409 Conflict` with the matching Problem Details response. It **MUST NOT** transition the booking to `confirmed`, and **MUST NOT** answer `200 OK` or `500`. A `200` would let a client that checks only the HTTP status treat a paid but unconfirmed booking as confirmed, and a `500` would invite a retry that cannot succeed. The Problem Details `detail` **SHOULD** state that the booking was not confirmed.
+
+    A platform that receives either code **MUST NOT** report the booking to the buyer as confirmed. It **SHOULD** reverse or refund the payment through the checkout system that collected it, and **SHOULD NOT** retry the same request unchanged.
+
+---
+
+## Webhooks
+
+Businesses **SHOULD** notify platforms of state changes via webhooks. Webhook payloads **MUST** be signed.
+
+### Booking Webhooks
+
+| Event | Trigger |
+|-------|---------|
+| `booking.confirmed` | Business confirms (manual mode) or payment completes |
+| `booking.canceled` | Business or system cancels the booking |
+| `booking.rescheduled` | Business reschedules the booking |
+| `booking.reminder` | Upcoming appointment reminder (e.g., 24 hours before) |
+| `booking.completed` | Service has been delivered |
+| `booking.no_show` | Client did not attend within the grace period |
+| `booking.refund_issued` | A full or partial refund has been issued |
+| `booking.dispute_opened` | A dispute or chargeback has been opened |
+| `booking.dispute_resolved` | A dispute has been resolved |
+| `booking.service_started` | Service delivery has begun |
+| `booking.service_updated` | Service details changed during delivery |
+
+**Webhook Payload Schema:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `event` | string | **Yes** | Event type (e.g., `booking.confirmed`). |
+| `event_id` | string | **Yes** | Unique event identifier for idempotent processing. |
+| `booking_id` | string | **Yes** | The booking this event relates to. |
+| `order_id` | string | No | UCP order ID. **SHOULD** be included for UCP-Native Mode bookings. |
+| `timestamp` | string | **Yes** | RFC 3339 timestamp of when the event occurred. |
+| `data` | object | No | Full booking object. **SHOULD** be included for most events. **MAY** be omitted for `reminder` events. |
+
+```json
+{
+  "event": "booking.confirmed",
+  "event_id": "evt_789abc",
+  "booking_id": "bkg_456def",
+  "order_id": "ord_ucp_001",
+  "timestamp": "2026-03-15T09:00:00Z",
+  "data": {
+    "id": "bkg_456def",
+    "service_id": "svc_massage_001",
+    "service_name": "Deep Tissue Massage",
+    "slot": {
+      "id": "slot_20260316_1400",
+      "start": "2026-03-16T14:00:00-04:00",
+      "end": "2026-03-16T15:00:00-04:00",
+      "duration": "PT60M"
+    },
+    "buyer": {
+      "first_name": "Alice",
+      "last_name": "Williams",
+      "email": "alice@example.com"
+    },
+    "party_size": 1,
+    "status": "confirmed",
+    "confirmation_mode": "manual",
+    "created_at": "2026-03-14T22:05:00Z",
+    "updated_at": "2026-03-15T09:00:00Z"
+  }
+}
+```
+
+### Catalog Change Webhooks
+
+Businesses **SHOULD** notify platforms of catalog changes via webhooks. This provides a push-based complement to the pull-based [service catalog feed](service-catalog.md#catalog-feed).
+
+| Event | Trigger |
+|-------|---------|
+| `service.created` | A new service has been added to the catalog |
+| `service.updated` | Service details have changed |
+| `service.deleted` | A service has been permanently removed |
+| `service.suspended` | A service is temporarily unavailable |
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `event` | string | **Yes** | Event type. |
+| `event_id` | string | **Yes** | Unique event identifier. |
+| `service_id` | string | **Yes** | The service this event relates to. |
+| `subscription_id` | string | **Yes** | The subscription that triggered this notification. |
+| `timestamp` | string | **Yes** | RFC 3339 timestamp. |
+| `data` | object | No | Full service object for `created` and `updated` events. |
+
+---
+
+## Post-Booking Lifecycle
+
+After a booking reaches a terminal state (`completed`, `no_show`, `canceled`), additional lifecycle events may occur.
+
+### Refund Tracking
+
+When a refund is issued, the booking's `payment` object **MUST** be updated:
+
+| `payment.status` | Description |
+|-------------------|-------------|
+| `refunded` | Full refund issued. |
+| `partially_refunded` | Partial refund issued (e.g., cancellation fee withheld). |
+
+The business **MUST** send a `booking.refund_issued` webhook when a refund is processed.
+
+### Dispute Resolution
+
+When a payment dispute (chargeback) is opened, the business **SHOULD** update the booking with dispute information and send a `booking.dispute_opened` webhook.
+
+**Dispute Object:**
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `status` | string | **Yes** | `opened`, `under_review`, `resolved_buyer`, or `resolved_business`. |
+| `reason` | string | **Yes** | Machine-readable reason: `service_not_provided`, `quality_issue`, `unauthorized`, `duplicate`. |
+| `opened_at` | string | **Yes** | RFC 3339 timestamp. |
+| `resolved_at` | string | No | Present only when resolved. |
+
+!!! warning "Payment Status During Disputes"
+    Opening a dispute does **NOT** change `payment.status` -- the payment remains `paid` while the dispute is under review. `payment.status` **MAY** change to `refunded` or `partially_refunded` only if the dispute resolves in the buyer's favor.
+
+### Service Delivery Events
+
+For complex services (e.g., multi-step healthcare, ongoing rentals), businesses **MAY** emit intermediate delivery events:
+
+| Event | Trigger |
+|-------|---------|
+| `booking.service_started` | Service delivery has begun (e.g., rental pickup, appointment check-in) |
+| `booking.service_updated` | Service details changed during delivery (e.g., extended rental, additional treatment) |
+
+These events are informational and do not change the booking's primary status.

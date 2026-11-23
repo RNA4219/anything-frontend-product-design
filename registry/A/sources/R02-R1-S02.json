@@ -1,0 +1,69 @@
+{
+  "id": "R02-R1-S02",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context",
+  "title": "Understanding Success Criterion 2.4.4: Link Purpose (In Context)",
+  "publisher": "World Wide Web Consortium (W3C)",
+  "source_type": "official_informative_guidance",
+  "retrieved_at": "2026-11-23T07:14:16Z",
+  "sha256": "fa50ea5a98d6084b691e86899a6dcd3e07fbc3693de8cb1aac786c1c5b680e64",
+  "sha256_scope": "selected web excerpt file only; not original HTML/PDF",
+  "version": "Living informative explanation; fetched 2026-11-23, not normative",
+  "locator": [
+    {
+      "remote": "Intent; web line 39",
+      "local_line": 11
+    }
+  ],
+  "verified_claims": [
+    {
+      "claim": "リンクと着地ページのタイトルの一致・類似を、操作から着地への連続性を保つ良い実践として説明する。",
+      "locator": "Intent; web L38–39"
+    },
+    {
+      "claim": "同じ文・段落・リスト項目・表セル等の文脈やARIAによる関連付けを認める。利用者全員に意図的な謎を残すゲームの例外を挙げる。",
+      "locator": "Intent; web L40–49"
+    }
+  ],
+  "limits": [
+    "Understandingは非規範の公式解説。リンク文言とタイトルの完全一致を合格条件にしない。",
+    "文脈依存の許容は、必要情報を別画面の記憶に委ねる許可ではない。",
+    "UIの文言理解・タスク成功を、この文書だけで実証したとはしない。"
+  ],
+  "source_edges": [
+    {
+      "from_url": "https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways",
+      "to_url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context",
+      "relation": "Previous SCの関連基準リンクを追跡",
+      "tool": "web.click",
+      "ref": "turn558687765view0",
+      "link_id": 3,
+      "result_ref": "turn416754686view2",
+      "verified": true
+    },
+    {
+      "from_url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context",
+      "to_url": "https://www.w3.org/WAI/WCAG22/Techniques/general/G91",
+      "relation": "Sufficient TechniquesのG91を追跡しTestsを読了; 採用3件外の補助ページ",
+      "tool": "web.click",
+      "ref": "turn416754686view2",
+      "link_id": 25,
+      "result_ref": "turn318388470view4",
+      "verified": true
+    }
+  ],
+  "acquisition": {
+    "imozuru_fetch": "FAIL_DNS",
+    "method": "selected original wording from Web extraction",
+    "original_html_downloaded": false,
+    "original_pdf_downloaded": false,
+    "full_original_archive": false,
+    "web_refs": [
+      "turn416754686view2",
+      "turn318388470view3"
+    ]
+  },
+  "publication_safety": "Metadata, original Japanese paraphrase, and short quotation only. Source excerpt stays private.",
+  "source_id": "R02-R1-S02",
+  "verified_in_current_round": "R02",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context"
+}

@@ -1,0 +1,24 @@
+{
+  "source_id": "B-T205",
+  "title": "Refund and cancel payments",
+  "url": "https://docs.stripe.com/refunds",
+  "kind": "official-primary",
+  "section": "Opening conditions; Handle failed refunds; Cancel a refund; Cancel a payment",
+  "read_status": "full_web_text: all 265 lines of the retrieved Markdown representation (L0–L264); not raw HTTP/HTML; relevant sections read",
+  "observed_facts": [
+    "成功済みPaymentIntentは取消できず、refundは別の処理。uncaptured/requires_captureではrefundを直接使えず取消が必要。",
+    "返金はpendingやfailedになり得る。返金しても元の処理手数料やbilling credit grantsが元通りになるわけではない。",
+    "返金取消は支払手段、処理状態、取消窓、Dashboard/APIの利用可能性に依存する。"
+  ],
+  "limits": [
+    "状態・期限・手数料はStripe固有。予約や一般undoの仕様を直接規定しない。",
+    "生の技術資料であり消費者向け金融助言ではない。"
+  ],
+  "canonical_url": "https://docs.stripe.com/refunds",
+  "capture_sha256": "9cbbc88d02eec775449c5a91a1604bfe033432e2789f3c72381de2ee1fca65b5",
+  "capture_hash_scope": "exact retrieved representation, not necessarily raw webpage",
+  "source_file_name": "B-T205-stripe-refunds.web.md",
+  "checked_at": "2026-11-23T06:43:37.755604+00:00",
+  "round": 1,
+  "redistribution": "Original is retained privately, not committed; this record contains campaign paraphrases and public locators."
+}

@@ -1,0 +1,18 @@
+{
+  "id": "R01-R2-S04",
+  "title": "Data Collection — Firefox Source Docs",
+  "url": "https://firefox-source-docs.mozilla.org/contributing/data-collection.html",
+  "kind": "official_engineering_policy",
+  "locator": "Telemetry and Experiments; Web L20-L26, note [2].",
+  "short_quote": "can be disabled during onboarding, in settings, or through various other mechanisms",
+  "claim": "Firefoxの通常Telemetryは既定で有効だが利用開始・設定・組織ポリシー等で無効化できる。計測対象も特定の技術・UI操作に限定され、別の測定系は別制御である。",
+  "limits": "任意計測と対象範囲を示す仕様で、偏りの方向や大きさを測った研究ではない。計測対象外・送信停止の集団ではログ非観測を非利用と同一視できないというのは導出である。",
+  "sha256": "953ca5896fd254f50e3a8add24dbe5f6a59f7d95d50ef906f8af5eeb2d926813",
+  "retrieved_at": "2026-11-23",
+  "acquisition": "Web tool text extraction after imozuru fetch.py DNS failure; original HTML not acquired",
+  "redistribution": "Do not commit raw source or retrieval transcript; use source URL, own rules, bounded quotation only",
+  "is_full_original": false,
+  "source_id": "R01-R2-S04",
+  "canonical_url": "https://firefox-source-docs.mozilla.org/contributing/data-collection.html",
+  "verified_in_current_round": true
+}

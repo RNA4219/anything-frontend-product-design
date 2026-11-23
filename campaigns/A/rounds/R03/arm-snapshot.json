@@ -1,0 +1,17 @@
+{
+  "round": "R03",
+  "created_at": "2026-11-23T08:18:15.721223+00:00",
+  "arms": {
+    "W": {
+      "plan.json": "d8b76fd17b0bd06950a0d614d9b9b153536da4ff4e2f7455ce202b663e3550f6",
+      "design.md": "649ebd690288cd0518acbca0b75f58b2bfdb4aa101bfa8b5e452c4970e15bfb7",
+      "preview.html": "e376bc900b3a5ce2f94c87e0d600ba7e971b9cb198fcbc8d5751b3262d6fd2e2"
+    },
+    "Z": {
+      "plan.json": "410f46ad6445a5e23003d575fc7f7021ddda7459b0fe6f2c882ad53f7583542f",
+      "design.md": "b25d4acd202ee2da49f37bc8213f3b1dd17e68983833627baef24cd708fe9391",
+      "preview.html": "73d91f3593b2906c48676f7119d1bd07f946f088a582d1756efba8956b34b402"
+    }
+  },
+  "blinding": "Labels conceal assignment; instruction-derived differences may still make assignment inferable. Same model family; not independent human evaluation."
+}

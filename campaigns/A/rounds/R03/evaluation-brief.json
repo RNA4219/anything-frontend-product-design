@@ -1,0 +1,189 @@
+{
+  "case_id": "team-plan-decision-information",
+  "roles": [
+    {
+      "id": "buyer",
+      "label": "契約担当者"
+    }
+  ],
+  "goals": [
+    {
+      "id": "g_select",
+      "role": "buyer",
+      "outcome": "12人・年間90万件・年総額13万円以内の確定条件を満たす候補を選ぶ",
+      "priority": "must",
+      "needed_information": [
+        "plan_id",
+        "seat_limit",
+        "annual_quota",
+        "annual_total",
+        "commitment"
+      ]
+    },
+    {
+      "id": "g_review_cancel",
+      "role": "buyer",
+      "outcome": "現在の契約の解約条件と、期限判断に不足している情報を確認する",
+      "priority": "should",
+      "needed_information": [
+        "contract_id",
+        "notice_days",
+        "next_renewal_date",
+        "refund_rule"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "r_select",
+      "goal_ids": [
+        "g_select"
+      ],
+      "mandatory": true,
+      "statement": "上限・年総額・契約期間を同じ場所で比較し、不明な上限を適合済みやゼロと扱わない。"
+    },
+    {
+      "id": "r_cancel",
+      "goal_ids": [
+        "g_review_cancel"
+      ],
+      "mandatory": false,
+      "statement": "今回の案では解約条件の確認を提供する。解約実行の操作は対象外。"
+    }
+  ],
+  "feature_requests": [
+    {
+      "id": "f_plans",
+      "label": "プラン比較",
+      "object": "plan",
+      "outcome": "select-qualified-plan",
+      "roles": [
+        "buyer"
+      ],
+      "goal_ids": [
+        "g_select"
+      ],
+      "requirement_ids": [
+        "r_select"
+      ],
+      "dependencies": [],
+      "mandatory": true,
+      "scope": "own-organization",
+      "lifecycle": "existing",
+      "availability": "available",
+      "context_constraints": [
+        "buyer-account"
+      ],
+      "evidence_refs": [
+        "e_case",
+        "e_missing"
+      ]
+    },
+    {
+      "id": "f_cancel_info",
+      "label": "解約条件",
+      "object": "contract",
+      "outcome": "review-cancellation-conditions",
+      "roles": [
+        "buyer"
+      ],
+      "goal_ids": [
+        "g_review_cancel"
+      ],
+      "requirement_ids": [
+        "r_cancel"
+      ],
+      "dependencies": [],
+      "mandatory": false,
+      "scope": "own-organization",
+      "lifecycle": "existing",
+      "availability": "available",
+      "context_constraints": [
+        "buyer-account"
+      ],
+      "evidence_refs": [
+        "e_case",
+        "e_missing"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e_case",
+      "kind": "requirement",
+      "statement": "合成ケースとして与えた候補条件と提供範囲",
+      "coverage": "本ケースの記載データだけ",
+      "coverage_status": "verified"
+    },
+    {
+      "id": "e_missing",
+      "kind": "unknown",
+      "statement": "P-200の年間上限と現契約の次回更新日は未確認",
+      "coverage": "明記した2項目",
+      "coverage_status": "unknown"
+    }
+  ],
+  "visual_intent": {
+    "id": "existing-team-admin",
+    "constraints": [
+      "視覚資産未提供。標準HTMLで情報構成を示す。独自意匠の採用や既存UI再現を主張しない。"
+    ]
+  },
+  "content": {
+    "requirements": {
+      "seats": 12,
+      "annual_usage": 900000,
+      "annual_budget_yen": 130000
+    },
+    "plans": [
+      {
+        "id": "P-100",
+        "title": "Team",
+        "seat_limit": 10,
+        "annual_quota": 1000000,
+        "annual_total": 96000,
+        "commitment": "12か月",
+        "price_basis": "税込・12か月総額"
+      },
+      {
+        "id": "P-200",
+        "title": "Team Plus",
+        "seat_limit": 20,
+        "annual_quota": null,
+        "annual_quota_status": "未確認",
+        "annual_total": 110000,
+        "commitment": "12か月",
+        "price_basis": "税込・12か月総額"
+      },
+      {
+        "id": "P-300",
+        "title": "Team Pro",
+        "seat_limit": 20,
+        "annual_quota": 1200000,
+        "annual_total": 120000,
+        "commitment": "12か月",
+        "price_basis": "税込・12か月総額"
+      }
+    ],
+    "current_contract": {
+      "contract_id": "CT-75",
+      "notice_days": 30,
+      "next_renewal_date": null,
+      "next_renewal_date_status": "未確認",
+      "refund_rule": "途中解約による返金なし"
+    },
+    "supplementary_information": [
+      "請求書の宛名テンプレートの説明",
+      "過去バージョンのヘルプ改訂履歴"
+    ]
+  },
+  "contexts": [
+    "主タスクは3候補の横断比較。補助タスクは既存契約の条件を読むこと。",
+    "初回利用者にも条件の意味を説明し、繰返し比較で不要な画面往復を強制しない。"
+  ],
+  "constraints": [
+    "購入・解約APIや確認/取消の状態遷移を実装しない。Bへ引き渡す。",
+    "契約条件・価格は架空の固定入力。実在商品や法規則の推定を加えない。",
+    "選択対象を増やしたり不明値を推測で補完しない。"
+  ]
+}

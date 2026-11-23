@@ -1,0 +1,18 @@
+{
+  "round": "R01",
+  "issues": [
+    "A-001",
+    "A-002",
+    "A-006"
+  ],
+  "question": "How can an LLM rationalize features without deleting rare essential work or merging capabilities that differ by role, scope, dependencies or evidence?",
+  "criteria_frozen_before_execution": true,
+  "gates": [
+    "No required outcome loses an executable capability",
+    "No role/scope-unsafe merge",
+    "No unknown evidence becomes observed fact",
+    "Every deletion and deferral has explicit scope, reason and preservation decision",
+    "No changes to Art Direction, root entry or other domains"
+  ],
+  "planned_evaluation": "Paired independent task generation plus deterministic structural and mutation checks; no human usability claim"
+}

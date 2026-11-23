@@ -1,0 +1,102 @@
+{
+  "case_id": "critic-warehouse-labels",
+  "visual_intent": {
+    "id": "warehouse-existing",
+    "constraints": [
+      "既存意匠を維持"
+    ]
+  },
+  "roles": [
+    {
+      "id": "shipper",
+      "label": "発送担当"
+    }
+  ],
+  "goals": [
+    {
+      "id": "g_label",
+      "role": "shipper",
+      "outcome": "今日の発送ラベルを発行する",
+      "priority": "must",
+      "needed_information": [
+        "shipment_id",
+        "destination"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "r_label",
+      "goal_ids": [
+        "g_label"
+      ],
+      "mandatory": true,
+      "statement": "本日の発送で既存のラベル発行能力を維持する"
+    }
+  ],
+  "feature_requests": [
+    {
+      "id": "f_live",
+      "label": "発送ラベル発行",
+      "object": "shipment",
+      "outcome": "print-shipping-label",
+      "roles": [
+        "shipper"
+      ],
+      "goal_ids": [
+        "g_label"
+      ],
+      "requirement_ids": [
+        "r_label"
+      ],
+      "dependencies": [],
+      "mandatory": true,
+      "scope": "assigned-shipments",
+      "context_constraints": [
+        "warehouse-terminal",
+        "assigned-account"
+      ],
+      "evidence_refs": [
+        "e_required"
+      ],
+      "lifecycle": "existing",
+      "availability": "available"
+    },
+    {
+      "id": "f_future",
+      "label": "発送ラベル発行",
+      "object": "shipment",
+      "outcome": "print-shipping-label",
+      "roles": [
+        "shipper"
+      ],
+      "goal_ids": [
+        "g_label"
+      ],
+      "requirement_ids": [
+        "r_label"
+      ],
+      "dependencies": [],
+      "mandatory": false,
+      "scope": "assigned-shipments",
+      "context_constraints": [
+        "warehouse-terminal",
+        "assigned-account"
+      ],
+      "evidence_refs": [
+        "e_required"
+      ],
+      "lifecycle": "existing",
+      "availability": "available"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e_required",
+      "kind": "requirement",
+      "statement": "今日の発送を中断しない。新方式は実際の提供確認まで代替と数えない。",
+      "coverage": "発送担当と本日の発送",
+      "coverage_status": "verified"
+    }
+  ]
+}

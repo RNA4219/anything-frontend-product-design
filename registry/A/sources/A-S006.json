@@ -1,0 +1,12 @@
+{
+  "source_id": "A-S006",
+  "title": "— Card sorting — 18F",
+  "url": "https://guides.18f.org/methods/validate/card-sorting/",
+  "canonical_url": "https://guides.18f.org/methods/validate/card-sorting",
+  "original_id": "S06",
+  "provenance": "inherited-index",
+  "verified_in_current_round": false,
+  "rights": "Link and original paraphrase only; no third-party full text redistributed.",
+  "content_sha256": null,
+  "notes": "- **URL**: [Card sorting — 18F](https://guides.18f.org/methods/validate/card-sorting/)\n- **該当箇所**: How to do it / Open card sort / Closed card sort\n- **確認日 / 種別**: 2026-11-23 / archived_official_method\n- **原典の主張** (author_guidance): 自由分類では利用者のグループ・名称・理由を得る。既存分類への割当にはclosed card sortを用いる。\n- **制約・版・未確認**: 分類の理解は実画面の探索成功やタスク完了を証明しない。普遍的なカテゴリ数上限はない。\n- **接続する原則**: A05, A10。原則のProcedure/JSON契約は、別に明記した本Skillの導出。"
+}

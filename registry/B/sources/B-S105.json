@@ -1,0 +1,25 @@
+{
+  "source_id": "B-S105",
+  "title": "GOV.UK Design System: Confirmation pages",
+  "url": "https://design-system.service.gov.uk/patterns/confirmation-pages/",
+  "kind": "official service-design pattern",
+  "section": "When to use this pattern; How it works; Known gaps; local lines 129–143, 159 (web L122–L136, L152)",
+  "read_status": "Complete web-tool text extraction (L0–L177), not raw HTML; relevant sections and example read. Direct fetch failed.",
+  "observed_facts": [
+    "The pattern is for the end of a transaction and conveys that the transaction was completed.",
+    "It calls for a reference number when one exists, next steps and timing, contact details, and a savable transaction record.",
+    "Its example confirms submission while explaining that registration confirmation or further questions happen later.",
+    "The page explicitly identifies a research gap for transactions that are part of wider user tasks."
+  ],
+  "limits": [
+    "The example demonstrates transaction-scope wording; it does not validate a specific booking-reschedule or cancellation flow.",
+    "The pattern alone does not establish backend completion or prove UX effectiveness in this fixture."
+  ],
+  "canonical_url": "https://design-system.service.gov.uk/patterns/confirmation-pages",
+  "capture_sha256": "4f7c2f2b91e060d38948babeb06772f55d98fe7ce6e7175a9e18fe98e1afab88",
+  "capture_hash_scope": "exact retrieved representation, not necessarily raw webpage",
+  "source_file_name": "govuk-confirmation-pages-web-extract.md",
+  "checked_at": "2026-11-23T06:43:37.754461+00:00",
+  "round": 1,
+  "redistribution": "Original is retained privately, not committed; this record contains campaign paraphrases and public locators."
+}

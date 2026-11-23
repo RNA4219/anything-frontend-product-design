@@ -1,0 +1,89 @@
+{
+  "source_id": "B-S202",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-legal-financial-data",
+  "title": "Understanding SC 3.3.4: Error Prevention (Legal, Financial, Data)",
+  "type": "official informative explanation, not normative success criterion",
+  "authority": "W3C WAI / Accessibility Guidelines Working Group",
+  "capture_kind": "PARTIAL",
+  "sha256": "9d113e8357265b6b5aa88334ac2cb286f4c7dca09075f851d40ec31db3349588",
+  "locator": [
+    {
+      "section": "informative status banner",
+      "source_lines": "L0–L2",
+      "local_lines": "11–13"
+    },
+    {
+      "section": "Intent",
+      "source_lines": "L39–L44",
+      "local_lines": "50–55"
+    },
+    {
+      "section": "Techniques preamble",
+      "source_lines": "L53–L60",
+      "local_lines": "64–71"
+    },
+    {
+      "section": "Sufficient Techniques situations A–C",
+      "source_lines": "L61–L73",
+      "local_lines": "98–110"
+    }
+  ],
+  "observed_facts": [
+    "本文はすべての保存命令や単純な文書・レコードの作成編集への確認要求を意図しないと明記する。大量データ喪失を防ぐ意図を説明する。",
+    "ユーザーが見えて意図的に変更削除できるデータと、直接見えたり操作できたりしないログ等を区別する。",
+    "十分技法の例に、期限を明示した取引の変更取消、送信前の見直し修正、削除データ回復等がある。技法は最小要求を上回りうるし、列挙外の達成法もありうる。"
+  ],
+  "limitations": [
+    "冒頭がinformativeと明示する。Intentや十分技法の例を追加の必須規範へ格上げしない。",
+    "G164/G99等の個別技法ページは未取得。本文のリンク名を観察した範囲に限る。",
+    "取消・復元が任意のサービスで実際に利用できるとは保証しない。"
+  ],
+  "upstream_refs": [
+    {
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "relationship": "SC 3.3.4 link followed via actual web.click (turn574282014view1 link 12 -> turn800224827view4); recorded in queries.jsonl"
+    },
+    {
+      "url": null,
+      "parent_url": "https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-legal-financial-data",
+      "observed_link_id": 19,
+      "relationship": "G164 technique link observed; target not followed or independently resolved"
+    }
+  ],
+  "capture_file": "B-S202-w3c-understanding-334.web.txt",
+  "capture_storage": "Private research archive",
+  "checked_at": "2026-11-23T07:15:18.361165+00:00",
+  "introduced_round": 2,
+  "redistribution": "Original captured text remains private. This public record contains original paraphrases, URLs and section locators only.",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-legal-financial-data",
+  "section": [
+    {
+      "section": "informative status banner",
+      "source_lines": "L0–L2",
+      "local_lines": "11–13"
+    },
+    {
+      "section": "Intent",
+      "source_lines": "L39–L44",
+      "local_lines": "50–55"
+    },
+    {
+      "section": "Techniques preamble",
+      "source_lines": "L53–L60",
+      "local_lines": "64–71"
+    },
+    {
+      "section": "Sufficient Techniques situations A–C",
+      "source_lines": "L61–L73",
+      "local_lines": "98–110"
+    }
+  ],
+  "read_status": "PARTIAL: exact web-extracted text saved privately; not raw HTML",
+  "capture_sha256": "9d113e8357265b6b5aa88334ac2cb286f4c7dca09075f851d40ec31db3349588",
+  "source_file_name": "B-S202-w3c-understanding-334.web.txt",
+  "limits": [
+    "冒頭がinformativeと明示する。Intentや十分技法の例を追加の必須規範へ格上げしない。",
+    "G164/G99等の個別技法ページは未取得。本文のリンク名を観察した範囲に限る。",
+    "取消・復元が任意のサービスで実際に利用できるとは保証しない。"
+  ]
+}

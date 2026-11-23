@@ -1,0 +1,226 @@
+{
+  "review_id": "A-R01-independent-critic",
+  "rubric_id": "A-R01-rubric-v1",
+  "case_id": "regional-facility-service",
+  "case_sha256": "b0c9f1b81b7742d333aff9fbb188bb3d5b88cb3789dfb8f71811f5620bb8b8f7",
+  "case_hash_matches_frozen_rubric": true,
+  "evaluator_kind": "same-family model, separate thread",
+  "is_human_or_objective_ground_truth": false,
+  "blinding": {
+    "labels_used": [
+      "P",
+      "Q"
+    ],
+    "external_arm_mapping_read": false,
+    "limitation": "成果本文が参照Skill名を記しているため、匿名ラベルだけで完全な盲検にはならない。採点は固定基準と提出物の根拠で行った。"
+  },
+  "scoring_interpretation": {
+    "scope": "計画・説明・静的HTMLについて固定された合成課題を評価する。稼働する予約サービスや人の達成率を評価したものではない。",
+    "F6": "decision destination は plan.goal_routes の g_change.target_screen が指す画面として採点する。2件の比較材料が別の選択画面に揃っている事実も別記し、UX上の失敗と混同しない。",
+    "style": "見た目の好み、ブラウザー標準表示、本文の長さ、details使用の好みを欠陥や採点差にしない。",
+    "checker": "両案の構造PASSは補助情報であり、本文・HTMLとの一致は別に確認した。"
+  },
+  "arms": {
+    "P": {
+      "criteria": [
+        {
+          "id": "F1",
+          "score": 1,
+          "basis": "f_mine と f_audit をkeepし、g_change と g_audit の本人／職員経路、必要情報を保持している。",
+          "locations": [
+            "arm-P/plan.json:features[id=f_mine]",
+            "arm-P/plan.json:features[id=f_audit]",
+            "arm-P/plan.json:goal_routes",
+            "arm-P/design.md:sections 2-4"
+          ]
+        },
+        {
+          "id": "F2",
+          "score": 1,
+          "basis": "f_audit の f_all_records 依存を保持し、両者をrequiredとして職員の監査画面に配置する。30日間・監査期間外の0回観測を年次要件の否定に使わない。",
+          "locations": [
+            "arm-P/plan.json:features[id=f_audit].dependencies",
+            "arm-P/plan.json:features[id=f_all_records]",
+            "arm-P/plan.json:screens[id=s_staff_audit]",
+            "arm-P/design.md:section 3"
+          ]
+        },
+        {
+          "id": "F3",
+          "score": 1,
+          "basis": "facility-all の f_all_records と assigned-room-only の f_team_records を別々のkeep機能・画面として保持する。職員という同じroleだけで全施設権限を与えないと明記する。",
+          "locations": [
+            "arm-P/plan.json:features[id=f_all_records,f_team_records]",
+            "arm-P/preview.html:#s_staff_audit",
+            "arm-P/preview.html:#s_staff_assigned",
+            "arm-P/design.md:u_authorization"
+          ]
+        },
+        {
+          "id": "F4",
+          "score": 1,
+          "basis": "通知2%を同意者の部分観測と限定し、未観測者の非利用を推定しない。通知はkeep。再検討は業務終了や対象者が使える代替等の確認を条件にする。",
+          "locations": [
+            "arm-P/plan.json:features[id=f_notify]",
+            "arm-P/design.md:section 1",
+            "arm-P/design.md:section 6 u_notice_coverage"
+          ]
+        },
+        {
+          "id": "F5",
+          "score": 1,
+          "basis": "f_my_bookings を f_mine にmergeし、両入力ID、同じgoal/requirement、self、member、mobile-supportedを保持する。",
+          "locations": [
+            "arm-P/plan.json:features[id=f_mine,f_my_bookings]",
+            "arm-P/design.md:統合を認める条件の比較"
+          ]
+        },
+        {
+          "id": "F6",
+          "score": 1,
+          "basis": "宣言targetのs_member_reservationsにR-204とR-205の予約番号・工作室・異なる日時・異なる状態を並べ、必要情報はdetails外にある。R-204だけに対象確認への入口を置く。",
+          "locations": [
+            "arm-P/plan.json:goal_routes[goal_id=g_change]",
+            "arm-P/preview.html:#s_member_reservations",
+            "arm-P/preview.html:#reservation-r204",
+            "arm-P/preview.html:#reservation-r205",
+            "arm-artifact-checks.json:arms.P"
+          ]
+        }
+      ],
+      "score": 6,
+      "max_score": 6,
+      "hard_fail": {
+        "loss_of_mandatory_feature": false,
+        "scope_expansion": false,
+        "fabricated_user_evidence": false,
+        "basis": "必須機能・依存・scopeを保持し、観測値、仮定、未実施の利用者評価を区別している。静的資料のレビュー用目次を実装の権限付与と誤認しない。"
+      },
+      "checker_status": "PASS",
+      "synthetic_acceptance": "accepted_for_frozen_artifact_criteria_only",
+      "human_usability": "unverified"
+    },
+    "Q": {
+      "criteria": [
+        {
+          "id": "F1",
+          "score": 1,
+          "basis": "本人予約の必須識別と監査出力をkeepし、必要な情報・経路を計画する。R-204の選択は入口で可能で、後続確認先でも識別情報を保つ。",
+          "locations": [
+            "arm-Q/plan.json:features[id=f_mine,f_audit]",
+            "arm-Q/plan.json:goal_routes",
+            "arm-Q/design.md:sections 2-5"
+          ]
+        },
+        {
+          "id": "F2",
+          "score": 1,
+          "basis": "監査と施設全体の記録参照をrequiredで保持し、依存を維持する。年次監査を含まない月次観測の0回を不要性に読み替えない。",
+          "locations": [
+            "arm-Q/plan.json:features[id=f_audit].dependencies",
+            "arm-Q/plan.json:features[id=f_all_records]",
+            "arm-Q/plan.json:screens[id=s_audit_records]",
+            "arm-Q/design.md:観測値を適用できる範囲"
+          ]
+        },
+        {
+          "id": "F3",
+          "score": 1,
+          "basis": "全施設記録と担当室記録を異なるscopeのままkeepし、画面とラベルを分ける。担当室権限から全体権限を推定しない。",
+          "locations": [
+            "arm-Q/plan.json:features[id=f_all_records,f_team_records]",
+            "arm-Q/preview.html:#s_audit_records",
+            "arm-Q/preview.html:#s_team_records",
+            "arm-Q/design.md:同じ画面に置いても、統合しない機能"
+          ]
+        },
+        {
+          "id": "F4",
+          "score": 1,
+          "basis": "通知2%の分母・観測期間・同意者限定を示し、通知不要や代替可能性を未確認とする。既存通知をkeepし、現行受信経路を維持する。",
+          "locations": [
+            "arm-Q/plan.json:features[id=f_notify]",
+            "arm-Q/design.md:観測値を適用できる範囲",
+            "arm-Q/design.md:u_notification_evidence",
+            "arm-Q/preview.html:#s_notifications"
+          ]
+        },
+        {
+          "id": "F5",
+          "score": 1,
+          "basis": "本人予約の2入口をf_mineへ正本化し、f_my_bookingsのIDと対応目標・要件をmergeとして残す。範囲と利用条件の一致も説明している。",
+          "locations": [
+            "arm-Q/plan.json:features[id=f_mine,f_my_bookings]",
+            "arm-Q/design.md:統合できる1組"
+          ]
+        },
+        {
+          "id": "F6",
+          "score": 0,
+          "basis": "宣言targetはs_change_targetで、このsectionの実内容は選択後のR-204だけ。R-205のroom/date/statusはs_my_reservationsにあり、宣言された判断の到達先で2件を照合するという固定基準には一致しない。ただし入口一覧で両件を正しく比較でき、実作業の情報欠落は示していない。",
+          "locations": [
+            "arm-Q/plan.json:goal_routes[goal_id=g_change].target_screen=s_change_target",
+            "arm-Q/preview.html:#s_change_target",
+            "arm-Q/preview.html:#s_my_reservations",
+            "arm-artifact-checks.json:arms.Q.target_text"
+          ],
+          "correction": "g_changeのtarget_screenを実際に変更対象を選ぶs_my_reservationsへ合わせる。選択後の確認画面とそのリンクは維持してよい。"
+        }
+      ],
+      "score": 5,
+      "max_score": 6,
+      "hard_fail": {
+        "loss_of_mandatory_feature": false,
+        "scope_expansion": false,
+        "fabricated_user_evidence": false,
+        "basis": "必須機能・依存・scopeは保持される。F6は判断先の宣言と内容の対応の問題で、必須能力の喪失ではない。未実施の利用者・実機評価を実施済みと主張していない。"
+      },
+      "checker_status": "PASS",
+      "synthetic_acceptance": "revise_goal_destination_mapping",
+      "human_usability": "unverified"
+    }
+  },
+  "comparison": {
+    "strict_frozen_score": {
+      "P": 6,
+      "Q": 5
+    },
+    "hard_failure_count": {
+      "P": 0,
+      "Q": 0
+    },
+    "meaning": "差はF6の宣言された判断先とHTML内容の対応だけである。機能整理、必須依存の保持、scope、欠測の扱いについて優劣は出ていない。",
+    "interpretation_sensitivity": "F6を宣言targetではなく選択フロー全体で読めば、両案とも2件の4情報を展開せず比較できるため6/6の同点になる。この感度を隠してSkillの実用上の優位性を主張しない。",
+    "no_demonstrated_skill_superiority": true,
+    "limits": [
+      "一つの合成課題と一つずつの生成物であり、反復評価・統計検定・人のタスク観察はない。",
+      "同系モデルの別スレッドによる評価であり、モデル系統をまたぐ独立性や客観評価を主張しない。",
+      "成果本文に参照Skillの記載があるため、匿名ラベルの完全盲検効果は保証できない。",
+      "入力にscope、依存、証拠の限界が明示され、両案とも契約1.1を参照している。追加Skillだけの寄与をこの比較で分離できない。",
+      "ローカル描画はsocket権限制約で起動できなかった。確認したのはHTMLソースの要素・内容・リンクと計画の対応であり、画面幅・クリック・読み上げ・人の理解は未確認。",
+      "既存意匠の実画面・CSSが未提供であり、visual_intent_id一致だけで見た目維持を証明できない。両案ともこの限界を明示する。",
+      "checker修正の独立反例は機械検査の欠落を示したもので、匿名生成物の品質差を生んだという因果証拠ではない。"
+    ]
+  },
+  "evidence_files": [
+    "arm-artifact-checks.json",
+    "arm-P-checker.json",
+    "arm-Q-checker.json",
+    "render-attempts.json",
+    "findings.json",
+    "source-audit.json"
+  ],
+  "rubric_sha256": "44bb0c66df14e05eabb7e609a77d884f7f5cf3dad32bbf352d2c7476e6a00ad1",
+  "artifact_sha256": {
+    "P": {
+      "plan.json": "7327c9f765e4bd21ebf0cc2b28812d7331776e0ea6c394e73674303ef1c0819e",
+      "design.md": "761906853cdac515ef5af7efabd4b728c8742376a25862d5e65aaf4d78f6c108",
+      "preview.html": "af840a16a302788c5619124d0d97fcea678aab49eb6986d1a0c9f2ef643dd862"
+    },
+    "Q": {
+      "plan.json": "8ef2ba7997c0edae2274738ef888c27e615149c12d36ee94c492c054a2ab6c3c",
+      "design.md": "f41fb9892f76aa776995b3ed15604ecbacbc8e66a0c14ea92b109c1dafdff037",
+      "preview.html": "ffe18ef2a8758fb8590e6a91b117747de15bf7791ddee860cfb4677b638b7829"
+    }
+  }
+}

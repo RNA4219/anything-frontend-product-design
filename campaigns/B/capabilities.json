@@ -1,0 +1,38 @@
+{
+  "subagent_mechanism": "collaboration.spawn_agent",
+  "concurrent_limit": {
+    "including_parent": 3,
+    "subagents": 2
+  },
+  "tooling": {
+    "imozuru": {
+      "revision": "30c3b59a076ce228f05aa3036809297422f23dee",
+      "form": "instruction skill plus Python CLI helpers",
+      "observed": "fetch.py and chain.py expose usage; digest.py has no argparse --help and treats it as topic path; correct add/build contract read from source"
+    },
+    "sankai": {
+      "revision": "0e2521453ad758cfb680110da0fdddc994d000be",
+      "form": "instruction skill; no separate decomposition CLI",
+      "observed": "decompose/understand/dissolve invoked by analyst, not a fabricated CLI"
+    },
+    "art_direction": {
+      "revision": "f5df625dbc577d6a3ca28e13ef09e39b135b4a6f",
+      "boundary": "Existing D-34..44 cover implementation of optimistic updates; forms reference native HTML. B adds task-level evidence, decisions and recovery contracts."
+    }
+  },
+  "github": {
+    "read": "connector and public git",
+    "write": "GitHub connector; local gh has no login",
+    "branch_created": true
+  },
+  "ci": "not executed; local tests will be reported separately",
+  "private_sources": "third-party originals/excerpts kept outside public checkout",
+  "execution_test_environment": {
+    "node": "available",
+    "playwright_library": "available",
+    "chromium": "installed, sandbox launch failed at process singleton socket creation",
+    "real_browser": "NOT_EXECUTED",
+    "dom_runtime": "jsdom 26 (existing runtime dependency; no visual rendering)",
+    "followup": "C/D real browser, keyboard and assistive-technology coverage"
+  }
+}

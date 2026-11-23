@@ -1,0 +1,23 @@
+{
+  "round": "R02",
+  "status": "ANALYZE",
+  "issues": [
+    "A-003",
+    "A-004",
+    "A-007",
+    "A-008"
+  ],
+  "question": "How should canonical destinations, old entry points, scoped navigation and facet/category choices preserve findability after consolidation?",
+  "known_sources": "A-S001..A-S020 and all R01 sources; avoid rediscovery",
+  "gates": [
+    "Keep task-specific scope visible when labels collide",
+    "Do not duplicate the underlying object for every category or entry path",
+    "Preserve or explicitly retire meaningful legacy destinations",
+    "Treat search availability and zero results as bounded evidence, not proof of absence",
+    "Separate graph reachability from human findability"
+  ],
+  "evaluation_plan": "Fixed synthetic navigation tasks plus independently authored adversarial cases; public contract checker tests; human tree testing remains unrun",
+  "maximum_concurrent_total": 3,
+  "registered_at": "2026-11-23T06:59:06.065846+00:00",
+  "new_sources": 6
+}

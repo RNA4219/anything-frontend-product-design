@@ -1,0 +1,7 @@
+{
+  "frozen_at": "2026-11-23T07:46:54.954027+00:00",
+  "before_candidate": true,
+  "case_count": 13,
+  "file": "modules/interaction-ux-flow/tests/test_resume_conflict.mjs",
+  "sha256": "f2f52bfe67da04a680299ed771581b25b6e0004325cfea6128f7b34c5e68289f"
+}

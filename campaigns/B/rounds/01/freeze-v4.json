@@ -1,0 +1,13 @@
+{
+  "frozen_at": "2026-11-23T06:59:42.296004+00:00",
+  "before_candidate_scored_execution": true,
+  "baseline_v3_already_observed": {
+    "passed": 14,
+    "total": 14
+  },
+  "reason": "Independent critic probes show remaining safe-auto-replay and serialized-cancel false rejection. Changes are justified by the unchanged task contract, not generated-arm failures. Both arms will be scored with identical v4.",
+  "files": {
+    "modules/interaction-ux-flow/tests/run_flow_trials_v4.mjs": "ee855a2e279e313a450e8138daef7b9567cd1e0cb70745e04020d5d80e7ebd0a",
+    "campaigns/B/rounds/01/task.md": "67a8b9d14cc997df40d34efae5d58497ed073cc5403591d67096dbf163c15e4a"
+  }
+}

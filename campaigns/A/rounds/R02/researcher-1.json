@@ -1,0 +1,408 @@
+{
+  "round": "R02",
+  "role": "researcher-1",
+  "question": "正本と複数入口、カテゴリ/ファセット、リンクの手掛かり、選択場所と宣言targetの一致を、どの条件・例外で設計するか。",
+  "search_strategy": {
+    "scope": "formal multiple-ways exceptions; primary faceted-search evaluation",
+    "rounds_completed": 1,
+    "stopped": "合意した1ラウンドと親の停止指示により終了。網羅性・飽和は主張しない。",
+    "queries": [
+      "site:w3.org WCAG 2.2 understanding multiple ways process step exception link purpose",
+      "Yee Swearingen Li Hearst 2003 faceted metadata image search CHI evaluation 32 participants"
+    ],
+    "sources_selected": 3,
+    "known_sources_read": 28,
+    "followed_edges": 3,
+    "child_agents_spawned": 0
+  },
+  "actual_tool_use": {
+    "imozuru_root": "PRIVATE_CHECKPOINT/tooling/imozuru",
+    "read": [
+      "README.md",
+      "skills/imozuru/SKILL.md",
+      "scripts/digest.py usage",
+      "scripts/report.py verification"
+    ],
+    "help": {
+      "fetch": "exit 2; usage shown",
+      "digest": "exit 1; --help interpreted as directory",
+      "report": "exit 1; --help interpreted as directory",
+      "repaired": false
+    },
+    "fetch": {
+      "attempts": 4,
+      "status": "all FAIL_DNS",
+      "log": "fetch-log.jsonl",
+      "detail_logs": "logs/fetch-*.json"
+    },
+    "web": {
+      "calls": 6,
+      "search_queries": 2,
+      "returned_search_hits": 7,
+      "opens": 8,
+      "clicks": 3,
+      "finds": 5,
+      "log": "logs/web-tool-trace.json"
+    },
+    "digest_add": {
+      "status": "PASS",
+      "log": "logs/digest-add.json",
+      "input": "search-input.json",
+      "records_added": 1,
+      "original_queries_in_batch": 2
+    },
+    "report_check": {
+      "status": "PASS",
+      "log": "logs/report-check.json",
+      "quote_count": 5,
+      "limit": "Checks exact quote presence in saved excerpt, not source completeness or inference validity."
+    },
+    "logs": "logs/",
+    "digest_check": {
+      "status": "PASS",
+      "log": "logs/digest-check.json"
+    }
+  },
+  "source_records": [
+    {
+      "id": "R02-R1-S01",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "publisher": "World Wide Web Consortium (W3C)",
+      "source_type": "normative_standard",
+      "retrieved_at": "2026-11-23T07:14:16Z",
+      "sha256": "bf755e1f05beb18e1a8bc4845eba76afaa196645cfb7a32ccfcfd71ac2f2c712",
+      "sha256_scope": "selected web excerpt file only; not original HTML/PDF",
+      "version": "W3C Recommendation 12 December 2024; dated version https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+      "locator": [
+        {
+          "remote": "SC 2.4.5 Multiple Ways; web lines 929–936",
+          "local_line": 11
+        },
+        {
+          "remote": "SC 2.4.4 Link Purpose (In Context); web lines 921–928",
+          "local_line": 14
+        }
+      ],
+      "verified_claims": [
+        {
+          "claim": "SC 2.4.5 (AA)はページ集合内のページの複数探索方法を要求するが、プロセスの途中・結果を例外にする。",
+          "locator": "SC 2.4.5; web L929–936"
+        },
+        {
+          "claim": "SC 2.4.4 (A)はリンク文言単独、またはプログラムで判定可能な文脈との組合せで目的を判断できることを扱う。一般利用者にも曖昧な場合の例外がある。",
+          "locator": "SC 2.4.4; web L921–928"
+        }
+      ],
+      "limits": [
+        "ウェブの規範。全てのアプリ内画面・操作へ2入口を強制する根拠ではない。",
+        "適合性判定はCへ。Aは探索方法とプロセス例外の設計条件を保持する。",
+        "正本ID・旧入口の保持・target_screenという契約形式を規格が指定しているわけではない。"
+      ],
+      "source_edges": [
+        {
+          "from_url": "https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways",
+          "to_url": "https://www.w3.org/TR/WCAG22/",
+          "relation": "Understanding SCの規範リンクを追跡",
+          "tool": "web.click",
+          "ref": "turn558687765view0",
+          "link_id": 12,
+          "result_ref": "turn416754686view1",
+          "verified": true
+        }
+      ],
+      "acquisition": {
+        "imozuru_fetch": "FAIL_DNS",
+        "method": "selected original wording from Web extraction",
+        "original_html_downloaded": false,
+        "original_pdf_downloaded": false,
+        "full_original_archive": false,
+        "web_refs": [
+          "turn416754686view1",
+          "turn682190729view0",
+          "turn682190729view1",
+          "turn318388470view0"
+        ]
+      },
+      "publication_safety": "Metadata, original Japanese paraphrase, and short quotation only. Source excerpt stays private."
+    },
+    {
+      "id": "R02-R1-S02",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context",
+      "title": "Understanding Success Criterion 2.4.4: Link Purpose (In Context)",
+      "publisher": "World Wide Web Consortium (W3C)",
+      "source_type": "official_informative_guidance",
+      "retrieved_at": "2026-11-23T07:14:16Z",
+      "sha256": "fa50ea5a98d6084b691e86899a6dcd3e07fbc3693de8cb1aac786c1c5b680e64",
+      "sha256_scope": "selected web excerpt file only; not original HTML/PDF",
+      "version": "Living informative explanation; fetched 2026-11-23, not normative",
+      "locator": [
+        {
+          "remote": "Intent; web line 39",
+          "local_line": 11
+        }
+      ],
+      "verified_claims": [
+        {
+          "claim": "リンクと着地ページのタイトルの一致・類似を、操作から着地への連続性を保つ良い実践として説明する。",
+          "locator": "Intent; web L38–39"
+        },
+        {
+          "claim": "同じ文・段落・リスト項目・表セル等の文脈やARIAによる関連付けを認める。利用者全員に意図的な謎を残すゲームの例外を挙げる。",
+          "locator": "Intent; web L40–49"
+        }
+      ],
+      "limits": [
+        "Understandingは非規範の公式解説。リンク文言とタイトルの完全一致を合格条件にしない。",
+        "文脈依存の許容は、必要情報を別画面の記憶に委ねる許可ではない。",
+        "UIの文言理解・タスク成功を、この文書だけで実証したとはしない。"
+      ],
+      "source_edges": [
+        {
+          "from_url": "https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways",
+          "to_url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context",
+          "relation": "Previous SCの関連基準リンクを追跡",
+          "tool": "web.click",
+          "ref": "turn558687765view0",
+          "link_id": 3,
+          "result_ref": "turn416754686view2",
+          "verified": true
+        },
+        {
+          "from_url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context",
+          "to_url": "https://www.w3.org/WAI/WCAG22/Techniques/general/G91",
+          "relation": "Sufficient TechniquesのG91を追跡しTestsを読了; 採用3件外の補助ページ",
+          "tool": "web.click",
+          "ref": "turn416754686view2",
+          "link_id": 25,
+          "result_ref": "turn318388470view4",
+          "verified": true
+        }
+      ],
+      "acquisition": {
+        "imozuru_fetch": "FAIL_DNS",
+        "method": "selected original wording from Web extraction",
+        "original_html_downloaded": false,
+        "original_pdf_downloaded": false,
+        "full_original_archive": false,
+        "web_refs": [
+          "turn416754686view2",
+          "turn318388470view3"
+        ]
+      },
+      "publication_safety": "Metadata, original Japanese paraphrase, and short quotation only. Source excerpt stays private."
+    },
+    {
+      "id": "R02-R1-S03",
+      "url": "https://courses.ischool.berkeley.edu/i247/f05/readings/Yee_Flamenco_CHI03.pdf",
+      "title": "Faceted Metadata for Image Search and Browsing",
+      "publisher": "ACM; copy hosted by UC Berkeley",
+      "source_type": "primary_empirical_conference_paper",
+      "retrieved_at": "2026-11-23T07:14:16Z",
+      "sha256": "bd541d15cb75a33c323836b19ea4063decfeebd07110f8807127409e0385cf7d",
+      "sha256_scope": "selected web excerpt file only; not original HTML/PDF",
+      "version": "Ka-Ping Yee, Kirsten Swearingen, Kevin Li, Marti Hearst; CHI 2003; UC Berkeley-hosted PDF",
+      "locator": [
+        {
+          "remote": "Results; web lines 575–584",
+          "local_line": 11
+        },
+        {
+          "remote": "Post-test interface comparison / Table 2; web lines 706–714 (sentence spans 708–709)",
+          "local_line": 14
+        }
+      ],
+      "verified_claims": [
+        {
+          "claim": "32人が35,000美術画像を二つのUIで探索した被験者内比較。先行UIは半数ずつに割り当てた。",
+          "locator": "Participants/Design and Procedure; web L395–460"
+        },
+        {
+          "claim": "Table 2の単純なバラ画像探索はBaseline 15人/FC 16人の選好。FCはタスク時間を短縮せず、処理遅延・5セッションのエラー・Task 2の時間延長が解釈に影響する。",
+          "locator": "Results/Table 2; web L563–599, L618–658, L706–719"
+        },
+        {
+          "claim": "Task 2(a)の全対象取得率はaquatintsで57%対81%、woodcutsで21%対77%。差の一部はBaselineで単数・複数形の両方を問い合わせなかったことによる。",
+          "locator": "Task Satisfaction and Success; web L506–515"
+        }
+      ],
+      "limits": [
+        "美術画像・関心のある学生等・単一セッションの比較。製品全般、モバイル、業務タスクへの一般化は未検証。",
+        "比較UIはカテゴリリンクも備える。ファセット有無だけを単独操作した比較ではない。",
+        "処理速度・語形処理・Task 2の見えるカテゴリ名・時間枠も異なる。支持率を普遍的効果量にしない。"
+      ],
+      "source_edges": [],
+      "acquisition": {
+        "imozuru_fetch": "FAIL_DNS",
+        "method": "selected original wording from Web extraction",
+        "original_html_downloaded": false,
+        "original_pdf_downloaded": false,
+        "full_original_archive": false,
+        "web_refs": [
+          "turn416754686view0",
+          "turn318388470view1",
+          "turn318388470view2"
+        ]
+      },
+      "publication_safety": "Metadata, original Japanese paraphrase, and short quotation only. Source excerpt stays private."
+    }
+  ],
+  "source_edges": [
+    {
+      "from_url": "https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways",
+      "to_url": "https://www.w3.org/TR/WCAG22/",
+      "relation": "Understanding SCの規範リンクを追跡",
+      "tool": "web.click",
+      "ref": "turn558687765view0",
+      "link_id": 12,
+      "result_ref": "turn416754686view1",
+      "verified": true
+    },
+    {
+      "from_url": "https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways",
+      "to_url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context",
+      "relation": "Previous SCの関連基準リンクを追跡",
+      "tool": "web.click",
+      "ref": "turn558687765view0",
+      "link_id": 3,
+      "result_ref": "turn416754686view2",
+      "verified": true
+    },
+    {
+      "from_url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context",
+      "to_url": "https://www.w3.org/WAI/WCAG22/Techniques/general/G91",
+      "relation": "Sufficient TechniquesのG91を追跡しTestsを読了; 採用3件外の補助ページ",
+      "tool": "web.click",
+      "ref": "turn416754686view2",
+      "link_id": 25,
+      "result_ref": "turn318388470view4",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "R02-R1-F01",
+      "revision_of": [
+        "A06"
+      ],
+      "source_ids": [
+        "R02-R1-S01"
+      ],
+      "new_principle": false,
+      "source_facts": [
+        "ページ集合内の複数探索方法には、プロセスの途中・結果という例外がある。"
+      ],
+      "inferred_rules": [
+        "正本の数と入口の数を別に記録する。通常の到達先か、前段の完了を要するプロセス内ページかを経路の条件に残す。",
+        "Aの到達グラフからWCAG適合を自動宣言しない。規格適合の実装・判定はCへ渡す。"
+      ],
+      "applicability": [
+        "ウェブの集合内探索、機能統合後の入口再編、タスク途中への直接到達を設計するとき。"
+      ],
+      "exceptions": [
+        "処理結果・途中ページを、別入口不足だけで欠陥としない。",
+        "複数リンクを増やしただけで複数の探索方法が成立したと自動判定しない。"
+      ],
+      "tests": [
+        "同じkeep正本へカテゴリ入口と検索入口が着く例で、正本を複製していないことを構造確認する。",
+        "確認結果ページを前段なしで開かせる案を反例にし、前提と例外理由が記録されるか確認する。"
+      ],
+      "delta": "既存の正本/複数入口原則を維持し、経路数の一律要求を防ぐ条件をA06へ補う。"
+    },
+    {
+      "id": "R02-R1-F02",
+      "revision_of": [
+        "A06",
+        "A07"
+      ],
+      "source_ids": [
+        "R02-R1-S01",
+        "R02-R1-S02"
+      ],
+      "new_principle": false,
+      "source_facts": [
+        "目的はリンク文言と関連する文脈から識別できる。公式解説はリンクと着地タイトルの連続性を良い実践とする。"
+      ],
+      "inferred_rules": [
+        "選択場所でラベルが示す対象・範囲・行為を、実際の遷移先と宣言したtargetの責務と照合する。ID到達性のみで意味が一致したとしない。",
+        "goalが候補選択で完了するなら、保存後画面等を便宜的にtargetとせず、選択する画面と必要情報を説明する。これは本Skillの契約導出である。"
+      ],
+      "applicability": [
+        "同名の設定・検索・保存ビュー、global/local/contextualのスコープが衝突する入口。"
+      ],
+      "exceptions": [
+        "短いリンク文言でも関連付いた文脈で目的を特定できる場合はある。文字列の完全一致は不要。",
+        "全利用者に意図的に謎を残すリンクの例外を、通常業務の曖昧な入口の免責に使わない。"
+      ],
+      "tests": [
+        "同じ『設定』が組織設定と選択対象設定に向かう例で、選択場所の文脈を含めて違いを判断できるか点検する。",
+        "『研修を比較して選ぶ』と宣言したtargetが、実際には受講後履歴しか示さない計画を反例にし、到達可能でも意味不一致として残す。"
+      ],
+      "delta": "A06の役割別到達性とA07の判断場所を接続する確認項目。新しいデータ契約や意味理解の自動保証は追加しない。"
+    },
+    {
+      "id": "R02-R1-F03",
+      "revision_of": [
+        "A05",
+        "A06"
+      ],
+      "source_ids": [
+        "R02-R1-S03"
+      ],
+      "new_principle": false,
+      "source_facts": [
+        "FCの総合支持と、単純探索の選好・処理時間は同じ結果ではなかった。語形差が検索の取りこぼしに影響した。"
+      ],
+      "inferred_rules": [
+        "カテゴリ/ファセット案は既知対象の単純検索と、複数属性を組み合わせる探索を分けて評価する。",
+        "検索欄の存在や空結果だけで到達可能・対象不存在と確定せず、語形、現在の絞込範囲、対象母集団を確認する。"
+      ],
+      "applicability": [
+        "同じ集合を異なる属性から探すカタログ、カテゴリ/検索/絞込の併用を比較するとき。"
+      ],
+      "exceptions": [
+        "単純検索でも常にファセットが優位、または機能が増えても高速になるとはいえない。",
+        "本研究の結果からカテゴリ数・件数・許容待ち時間の普遍的閾値を作らない。"
+      ],
+      "tests": [
+        "同じ正本集合で『既知タイトル1件』と『複数属性の全候補』を分け、成功/取りこぼし/時間/選好を別々に記録する。",
+        "代表語の単数/複数・別名・絞込範囲を変えてゼロ件の理由を確認する。利用者調査未実施なら効果未確認のままにする。"
+      ],
+      "delta": "A05のカテゴリ/属性区別を再発明せず、比較課題と反例、検索実装による交絡を追加する。"
+    }
+  ],
+  "overlap": {
+    "exact_url_overlap_with_known_28": 0,
+    "conceptual_overlap": [
+      "A05: 同一対象の複数所属・正本、カテゴリ/属性分離",
+      "A06: 役割別入口・作用範囲・構造と発見可能性の区別",
+      "A07: 判断に必要な情報と画面責務"
+    ],
+    "new_principles_claimed": 0,
+    "revision_candidates": [
+      "A06: プロセス例外とCへの適合判定の引継ぎ",
+      "A06/A07: 選択時文脈・実到達先・宣言targetの意味照合",
+      "A05: 単純探索/複数属性探索の別評価と交絡の記録"
+    ],
+    "saturation": {
+      "numerator": null,
+      "denominator": null,
+      "claimed": false,
+      "reason": "限定1ラウンド。異なる役割のR2との集合重複から飽和率を算出しない。"
+    }
+  },
+  "gaps": [
+    "人によるtree test、画面でのラベル理解、実タスク完了は未実施。",
+    "既存・外部入口を廃止/転送する実製品の条件はR2/既存R01資料の担当。",
+    "WCAG2ICTは検索結果に出たが本文を採用していない。非ウェブソフトへの適合性を一般化しない。",
+    "ファセット研究の現行モバイル/業務利用への外的妥当性と、語形・速度等を揃えた比較は未確認。",
+    "選択画面とtarget_screenを一致させるJSON検査は本Skill側の導出。原典に当該フィールドの規定はない。"
+  ],
+  "cost": {
+    "actual_amount": null,
+    "currency": null,
+    "reason": "請求/利用明細がこの環境から提示されていない。実行回数のみ記録し、金額を0としない。"
+  },
+  "status": "completed_bounded_round_with_excerpt_only_evidence",
+  "delivery": "Private metadata and short excerpts only; no public repository edits."
+}

@@ -1,0 +1,214 @@
+{
+  "round": "R01",
+  "role": "Researcher-2",
+  "status": "COMPLETE_WITH_ACQUISITION_LIMIT",
+  "question": "Which concrete conditions make feature removal, merging or deferral fail?",
+  "proposed_rules": [
+    {
+      "id": "R01-R2-U01",
+      "intent": "旧機能の置換は名前ではなく利用条件ごとの成果で同等性を確認する",
+      "inputs": [
+        "source/target capability",
+        "actor and role",
+        "object/data scope",
+        "account/subscription",
+        "device/connectivity constraints",
+        "observable outcome and acceptance conditions"
+      ],
+      "conditions": [
+        "merge/removeを実施する前に同じ利用条件で必要な成果が残るかを照合する",
+        "partially available / upcoming / unknownは該当タスクの同等性証拠にしない",
+        "旧部品が消えても同じ条件で成果が内蔵機能により達成できる場合は重複部品を残す必要はない",
+        "入口の統合と意味の異なる機能の同一化を分け、共通入口の下で役割別の機能差を保ってよい"
+      ],
+      "exceptions": [
+        "対象業務そのものが正式に終了・変更された場合は旧成果の同等維持は不要だが変更根拠を残す",
+        "partialは自動却下ではなく必要サブタスクが範囲内か追加検証する",
+        "製品表が非網羅的なら欠落行だけを未実装と断定しない"
+      ],
+      "failure": "同名の共有機能が個人用・組織用で異なるのに権限または対象集合を落として統合する。逆に実装名が違うだけの同等機能を重複維持する。",
+      "test": "(1)同じexportラベルで個人/組織scopeが違う統合は差を保持しない限りfail。(2)同一役割・scope・成果の旧アドイン→内蔵機能置換はpass。(3)partialでも必要サブタスクが確認済みならpass。",
+      "source_ids": [
+        "R01-R2-S01"
+      ],
+      "novelty": "既知A03の「同名で統合しない」を、partial/upcoming/unknown、部品から成果への対応、入口統合の例外へ具体化。独立した新原理ではなく改訂候補。",
+      "epistemic_status": "engineering_inference_from_official_capability_matrix"
+    },
+    {
+      "id": "R01-R2-U02",
+      "intent": "既存能力の延期と未提供機能の延期を分け、代替経路の利用可能性を確認する",
+      "inputs": [
+        "currently shipped capabilities",
+        "affected cohorts/platforms",
+        "replacement availability now",
+        "required devices/accounts/permissions",
+        "mandatory outcomes and migration constraints"
+      ],
+      "conditions": [
+        "deferが既存利用者の実行可能なタスクを失わせるかを先に調べる",
+        "代替を根拠にremoveするなら、対象利用者の手元のdevice/account/permission/dataで現在到達できるか確認する",
+        "ロードマップの予定を現在の代替として数えない",
+        "情報不足なら不可逆の削除を確定せず、維持案と検証課題を出す"
+      ],
+      "exceptions": [
+        "新規サービスの未契約・未提供範囲は必須目標を残した上で延期可能",
+        "旧提供義務がなくなったことを確認済みなら常に旧経路維持を要求しない"
+      ],
+      "failure": "mobile-onlyの利用条件にPCアプリを代替と記載し、既存の操作を失わせたまま機能数削減を成功扱いする。",
+      "test": "mobile-only / desktop unavailable / required outcomeのfixtureでdesktop代替のremove案をfailにする。全条件を満たす実行可能代替がある別fixtureはpassにする。",
+      "source_ids": [
+        "R01-R2-S02",
+        "R01-R2-S03"
+      ],
+      "novelty": "前回A04の頻度・影響による優先に、既存提供と新規計画の違い、代替の利用条件という欠落を追加。",
+      "epistemic_status": "engineering_inference_from_historical_product_case"
+    },
+    {
+      "id": "R01-R2-U03",
+      "intent": "利用ログの欠落を非利用に変換しない",
+      "inputs": [
+        "evidence type",
+        "collection scope",
+        "observation period",
+        "eligible/exposed population",
+        "instrumentation and opt-out coverage",
+        "known mandatory or qualitative needs"
+      ],
+      "conditions": [
+        "計測の対象・送信可能性・対象人口が不明な件数はunknownとして扱う",
+        "利用が0と観測されても未露出・収集停止・対象外の可能性が残るとき、その理由だけでremoveしない",
+        "未知値を0へ埋めず、判断を変え得る確認事項だけを登録する",
+        "計測を増やすことを自動解決にせず、既存の要件・聞き取り・サポート記録で必要性を補完する"
+      ],
+      "exceptions": [
+        "十分な観測範囲と提供義務の不在が確認できても削除は他の条件を合わせて判断する",
+        "全機能に大規模調査や新規Telemetryの導入を要求しない"
+      ],
+      "failure": "収集無効の組織アカウントを使用率0と解釈して組織向け機能を削除する。",
+      "test": "同じcount=0でもcoverage=unknownとcoverage=verifiedを区別。unknownは非利用根拠として採用不可。使用率が高いが任意の機能を常時必須扱いする逆方向も禁止。",
+      "source_ids": [
+        "R01-R2-S04"
+      ],
+      "novelty": "既知A04の推定/観測区別を欠測機構と分母/露出の条件に拡張。",
+      "epistemic_status": "engineering_inference; bias magnitude not measured"
+    }
+  ],
+  "not_searched": [
+    "Controlled studies comparing complete feature triage policies",
+    "Quantitative prevalence of missing Sonos features among users",
+    "Primary empirical estimates of telemetry selection bias",
+    "Rare but mandatory emergency/admin functions outside these cases",
+    "Long-term results after Outlook migrations"
+  ],
+  "deduplication": {
+    "known_prior_source_count": 20,
+    "new_canonical_sources": 4,
+    "search_url_variants_collapsed": 1,
+    "known_sources_reused_as_new": 0
+  },
+  "costs": {
+    "actual_amount": null,
+    "currency": null,
+    "reason": "Provider usage and price not exposed",
+    "system1_queries": 3,
+    "subagents_spawned": 0
+  },
+  "next_questions": [
+    "How can a schema record mandatory outcome preservation across replacement with a different platform?",
+    "How to distinguish evidence missingness from zero while keeping task input small?",
+    "How to validate entry consolidation without equating capability scopes?"
+  ],
+  "sources": [
+    {
+      "id": "R01-R2-S01",
+      "title": "Feature comparison between new Outlook and classic Outlook",
+      "url": "https://support.microsoft.com/en-us/outlook/getstarted/feature-comparison-between-new-outlook-and-classic-outlook",
+      "kind": "official_product_capability_matrix",
+      "locator": "Last updated September 23, 2026; Key Definitions; Account support; App framework; Extensibility; Teams integration. Web L127-L144, L174-L200, L257-L270, L405-L407.",
+      "claim": "Microsoftは新旧版の機能をavailable / partially available / upcoming / revised等に区別する。アカウント・契約条件があり、同名の機能でも範囲が異なる。一方Teams会議の旧アドインは非対応でも機能は新クライアントに内蔵される。",
+      "limits": "これは製品仕様の時点比較であり利用者への因果効果の実験ではない。表は非網羅的と明記され、partialから特定タスクの不能を自動推定できない。仕様更新時は再確認する。",
+      "sha256": "b105f7c2f29cd2b86e149075ac2de8cb0589f7e5c78cd3eadafd01e6bf8f90f5",
+      "retrieved_at": "2026-11-23",
+      "acquisition": "Web tool text extraction after imozuru fetch.py DNS failure; original HTML not acquired",
+      "redistribution": "Do not commit raw source or retrieval transcript; use source URL, own rules, bounded quotation only",
+      "is_full_original": false,
+      "source_id": "R01-R2-S01",
+      "canonical_url": "https://support.microsoft.com/en-us/outlook/getstarted/feature-comparison-between-new-outlook-and-classic-outlook",
+      "verified_in_current_round": true
+    },
+    {
+      "id": "R01-R2-S02",
+      "title": "New app for IOS — Sonos Staff response, May 8 2024",
+      "url": "https://en.community.sonos.com/controllers-music-services-228995/new-app-for-ios-6892152",
+      "kind": "first_party_staff_support_record",
+      "locator": "Sonos Staff Jamie A, May 8 2024, reply. Web L64-L75.",
+      "claim": "新アプリでsleep timerが使えないという問い合わせにSonosスタッフが2024-05-08、未提供と今後追加予定を回答し、Windows/macOSアプリを暫定代替として案内した。",
+      "limits": "1件の本人問い合わせとスタッフ回答。利用率、低頻度、全利用者の損害、原因が機能簡素化だったことは示さない。現状の欠陥とは扱わない。PCを持たない利用者への代替不能は本Skill側の条件付き推論。",
+      "sha256": "b2438b7d5031f99c2fd6a3bbbdfd923ba5756bc4265b7e7dfcb579ffe92a2623",
+      "retrieved_at": "2026-11-23",
+      "acquisition": "Web tool text extraction after imozuru fetch.py DNS failure; original HTML not acquired",
+      "redistribution": "Do not commit raw source or retrieval transcript; use source URL, own rules, bounded quotation only",
+      "is_full_original": false,
+      "source_id": "R01-R2-S02",
+      "canonical_url": "https://en.community.sonos.com/controllers-music-services-228995/new-app-for-ios-6892152",
+      "verified_in_current_round": true
+    },
+    {
+      "id": "R01-R2-S03",
+      "title": "Release notes — Sonos app updates",
+      "url": "https://support.sonos.com/en/article/release-notes-sonos-app-updates",
+      "kind": "official_product_release_history",
+      "locator": "2024-05-07 redesigned release; 2024-05-14 alarms re-added; 2024-06-04 sleep timer added. Web L788-L805, L843-L851, L875-L884.",
+      "claim": "公式履歴には2024-05-07の全面再設計、05-14のアラーム追加・編集再導入、06-04のsleep timer追加が記録される。今後提供の機能と当日に実行できる機能は異なる。",
+      "limits": "リリースノートは利用者の成功率や原因分析ではない。本文の2026年部分は判断に使わず、2024年の履歴のみ採用。アプリ版・OSで提供時点は異なる。",
+      "sha256": "a0a3e051af02c39f5423619c08dce61a7660ce97812456b0d0ae8d1d81cbab7b",
+      "retrieved_at": "2026-11-23",
+      "acquisition": "Web tool text extraction after imozuru fetch.py DNS failure; original HTML not acquired",
+      "redistribution": "Do not commit raw source or retrieval transcript; use source URL, own rules, bounded quotation only",
+      "is_full_original": false,
+      "source_id": "R01-R2-S03",
+      "canonical_url": "https://support.sonos.com/en/article/release-notes-sonos-app-updates",
+      "verified_in_current_round": true
+    },
+    {
+      "id": "R01-R2-S04",
+      "title": "Data Collection — Firefox Source Docs",
+      "url": "https://firefox-source-docs.mozilla.org/contributing/data-collection.html",
+      "kind": "official_engineering_policy",
+      "locator": "Telemetry and Experiments; Web L20-L26, note [2].",
+      "claim": "Firefoxの通常Telemetryは既定で有効だが利用開始・設定・組織ポリシー等で無効化できる。計測対象も特定の技術・UI操作に限定され、別の測定系は別制御である。",
+      "limits": "任意計測と対象範囲を示す仕様で、偏りの方向や大きさを測った研究ではない。計測対象外・送信停止の集団ではログ非観測を非利用と同一視できないというのは導出である。",
+      "sha256": "953ca5896fd254f50e3a8add24dbe5f6a59f7d95d50ef906f8af5eeb2d926813",
+      "retrieved_at": "2026-11-23",
+      "acquisition": "Web tool text extraction after imozuru fetch.py DNS failure; original HTML not acquired",
+      "redistribution": "Do not commit raw source or retrieval transcript; use source URL, own rules, bounded quotation only",
+      "is_full_original": false,
+      "source_id": "R01-R2-S04",
+      "canonical_url": "https://firefox-source-docs.mozilla.org/contributing/data-collection.html",
+      "verified_in_current_round": true
+    }
+  ],
+  "followed_edges": [
+    {
+      "from_url": "https://support.microsoft.com/en-us/outlook/getstarted/feature-comparison-between-new-outlook-and-classic-outlook",
+      "relation": "linked help article (backward link)",
+      "to_url": "https://support.microsoft.com/en-us/outlook/sharing/about-delegates-allow-someone-to-manage-your-mail-and-calendar-in-outlook",
+      "method": "Web click id 98",
+      "result": "opened; tool reported rewritten summary; not used for exact quotation or detailed capability claims"
+    },
+    {
+      "from_url": "https://en.community.sonos.com/controllers-music-services-228995/new-app-for-ios-6892152",
+      "relation": "staff-linked instructions (backward link)",
+      "to_url": "https://support.sonos.com/en-us/article/set-a-sleep-timer-on-sonos",
+      "method": "Web click id 22; second open after redirect",
+      "result": "opened; tool reported rewritten summary; platform-specific instructions inspected as discovery only"
+    },
+    {
+      "from_url": "https://en.community.sonos.com/controllers-music-services-228995/new-app-for-ios-6892152",
+      "relation": "same vendor historical release cross-check",
+      "to_url": "https://support.sonos.com/en/article/release-notes-sonos-app-updates",
+      "method": "system1 search then open/find",
+      "result": "official release history locates restoration on 2024-06-04; not a direct page citation edge"
+    }
+  ]
+}

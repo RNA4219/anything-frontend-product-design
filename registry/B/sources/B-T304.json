@@ -1,0 +1,152 @@
+{
+  "source_id": "B-T304",
+  "canonical_url": "https://docs.cloud.google.com/storage/docs/use-soft-deleted-objects",
+  "title": "Use soft-deleted objects  |  Cloud Storage  |  Google Cloud Documentation",
+  "type": "official product usage documentation",
+  "authority": "Google Cloud Storage",
+  "capture_kind": "PARTIAL",
+  "sha256": "f6839982cfed82ff157cb66a917067840a2a201a581e5c02927049f1b8406f1e",
+  "locator": [
+    {
+      "section": "Bulk restore soft-deleted objects",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T304-google-use-soft-deleted-objects.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            342,
+            345
+          ],
+          "local_lines": [
+            63,
+            66
+          ],
+          "complete_requested_range": true
+        },
+        {
+          "web_lines": [
+            370,
+            403
+          ],
+          "local_lines": [
+            91,
+            124
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn289466326view2"
+    },
+    {
+      "section": "Example Operation",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T304-google-use-soft-deleted-objects.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            404,
+            430
+          ],
+          "local_lines": [
+            125,
+            151
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn289466326view2"
+    }
+  ],
+  "observed_facts": [
+    "一括復元は非同期で、開始まで1時間以上かかる場合があるとする。これは上限の保証ではない。",
+    "要求成功時にlong-running operationのIDを返し、状態を別途確認する手順を示す。",
+    "L385/L399はcancelを示す一方、L402はdeleteしてcancelと記す。参照先のB-T305はPOST /cancelを示しており記述に不整合がある。",
+    "例には進捗と成功・失敗・スキップ件数があるが、例の外側done:falseと内側done:trueも整合していない。例だけを完了判定仕様にしない。"
+  ],
+  "limitations": [
+    "一括復元の手順資料。受付が完了を保証するとの解釈をしない。",
+    "delete/cancel記述とdone例の不整合は未解消。該当箇所は採用根拠から除外し、正確なメソッド仕様を親が確認する。",
+    "この資料から取消が既に復元済みのオブジェクトを再削除するとは確認できない。"
+  ],
+  "upstream_refs": [
+    {
+      "title": "Use long-running operations",
+      "source_id": "B-T305",
+      "url": "https://docs.cloud.google.com/storage/docs/using-long-running-operations",
+      "observed_at": "web L385/L399/L403, link 33",
+      "followed": true,
+      "tool": "web.click",
+      "tool_result_ref": "turn174995417view3",
+      "query_ledger_record": 4
+    },
+    {
+      "title": "AIP-151 long-running operations",
+      "url": null,
+      "observed_at": "web L345/L402 link 20",
+      "followed": false,
+      "note": "既存B-S104の前ラウンド追跡を利用。今回は再取得しない。",
+      "href_status": "Reference label observed, target href not inspected in this round; no URL asserted."
+    }
+  ],
+  "capture_file": "B-T304-google-use-soft-deleted-objects.web.txt",
+  "capture_storage": "Private research archive",
+  "checked_at": "2026-11-23T07:15:18.366265+00:00",
+  "introduced_round": 2,
+  "redistribution": "Original captured text remains private. This public record contains original paraphrases, URLs and section locators only.",
+  "url": "https://docs.cloud.google.com/storage/docs/use-soft-deleted-objects",
+  "section": [
+    {
+      "section": "Bulk restore soft-deleted objects",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T304-google-use-soft-deleted-objects.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            342,
+            345
+          ],
+          "local_lines": [
+            63,
+            66
+          ],
+          "complete_requested_range": true
+        },
+        {
+          "web_lines": [
+            370,
+            403
+          ],
+          "local_lines": [
+            91,
+            124
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn289466326view2"
+    },
+    {
+      "section": "Example Operation",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T304-google-use-soft-deleted-objects.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            404,
+            430
+          ],
+          "local_lines": [
+            125,
+            151
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn289466326view2"
+    }
+  ],
+  "read_status": "PARTIAL: exact web-extracted text saved privately; not raw HTML",
+  "capture_sha256": "f6839982cfed82ff157cb66a917067840a2a201a581e5c02927049f1b8406f1e",
+  "source_file_name": "B-T304-google-use-soft-deleted-objects.web.txt",
+  "limits": [
+    "一括復元の手順資料。受付が完了を保証するとの解釈をしない。",
+    "delete/cancel記述とdone例の不整合は未解消。該当箇所は採用根拠から除外し、正確なメソッド仕様を親が確認する。",
+    "この資料から取消が既に復元済みのオブジェクトを再削除するとは確認できない。"
+  ]
+}

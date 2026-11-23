@@ -1,0 +1,65 @@
+{
+  "source_id": "B-T402",
+  "url": "https://html.spec.whatwg.org/multipage/webstorage.html",
+  "canonical_url": "https://html.spec.whatwg.org/multipage/webstorage.html",
+  "title": "HTML Standard — 12 Web storage",
+  "type": "normative living standard; introduction explicitly non-normative",
+  "authority": "WHATWG",
+  "section": [
+    {
+      "section": "12.1 Introduction, non-normative",
+      "source_lines": "L44–L83",
+      "local_lines": "49–88"
+    },
+    {
+      "section": "12.2.2 sessionStorage getter",
+      "source_lines": "L391–L408",
+      "local_lines": "407–424"
+    },
+    {
+      "section": "12.2.3 localStorage getter",
+      "source_lines": "L439–L454",
+      "local_lines": "455–470"
+    },
+    {
+      "section": "12.3.1 Expiring stored data",
+      "source_lines": "L534–L537",
+      "local_lines": "550–553"
+    },
+    {
+      "section": "12.4.2 Cross-directory attacks",
+      "source_lines": "L571–L574",
+      "local_lines": "560–563"
+    }
+  ],
+  "read_status": "PARTIAL: saved web/tool extraction; not raw HTML",
+  "capture_kind": "PARTIAL",
+  "capture_sha256": "1b05a355f466afd0e8235c4ce0ef238e712ff221ed3ef65b0686b9d8642c1040",
+  "source_file_name": "B-T402-whatwg-webstorage.web.txt",
+  "observed_facts": [
+    "sessionStorageとlocalStorageの取得はwindowのoriginに対応するstorage areaとして定義される。sessionStorageにはwindowに対応する範囲がある。",
+    "localStorageにはpathname別のアクセス制限がなく、同じhostを共有するauthorはlocal storage objectを共有する。",
+    "保存がpolicyで拒否される場合はSecurityError、値を格納できなければQuotaExceededErrorがあり、user agentによるデータの自動削除も記述されている。",
+    "sessionStorageは補助browsing context作成時にコピーされる場合がある。単にsessionという名前でaccount専用とみなせない。"
+  ],
+  "limits": [
+    "scope定義からログインaccount境界でないと推論する。規範が個別アプリのaccount切替時の削除処理を定義しているわけではない。",
+    "新規実装のAPI選定、実ブラウザ耐久性、XSS防御、Cのstorage設計は今回の範囲外。",
+    "原文tool抽出には欠落があるためPARTIAL。対象ブラウザの現物挙動は未検証。",
+    "保存の存在・不存在は、サーバーの現在値、identity、capability、操作結果の証明ではないというB側の結論はcampaign inference。"
+  ],
+  "upstream_refs": [
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+      "relationship": "B-T403 Web Storage scope link232から実clickして本標準へ到達",
+      "observed_link_id": 232
+    },
+    {
+      "url": "https://storage.spec.whatwg.org/",
+      "relationship": "storage bottle map links observed L399/L447; detailed Storage Standard not separately opened"
+    }
+  ],
+  "checked_at": "2026-11-23T07:48:23.986530+00:00",
+  "round": 3,
+  "redistribution": "Original text stays private; public record contains original paraphrases, locators and hashes."
+}

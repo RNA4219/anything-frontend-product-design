@@ -1,0 +1,15 @@
+{
+  "returncode": 0,
+  "report": {
+    "units": 8,
+    "sources": 27,
+    "statuses": {
+      "ACCEPT": 6,
+      "REVISE": 2
+    },
+    "errors": [],
+    "limits": "Checks registry structure and referenced files, not whether prose or empirical claims are true."
+  },
+  "stderr": "",
+  "scope": "Structure/reference integrity only. Registry metadata remains REVISE until parent records this independent verdict."
+}

@@ -1,0 +1,26 @@
+{
+  "round": 1,
+  "issues": [
+    "B-001",
+    "B-002"
+  ],
+  "frozen_before_candidate": true,
+  "acceptance": [
+    "Every mutation has observable pending, success, known-failure and unknown-outcome behavior",
+    "Retry same logical operation only under verified contract; no duplicate side effect",
+    "Transport abort must not imply business cancellation",
+    "Undo must be supported, have stated scope and truthful success/failure"
+  ],
+  "task_fixtures": [
+    "booking reschedule with fee timeout",
+    "queued CSV export cancellation",
+    "delayed completion from superseded request"
+  ],
+  "evaluation": {
+    "executable": "deterministic adversarial state/event tests",
+    "llm": "fresh context baseline/candidate same prompt, same model, not independent population evidence",
+    "human": "not available"
+  },
+  "critical_gate": "No unresolved P0/P1 defect. All applicable executable assertions pass. Source/rule scope preserved.",
+  "stop_policy": "max 12 rounds or available execution budget; saturation only after 2 completed substantive rounds without meaningful new findings"
+}

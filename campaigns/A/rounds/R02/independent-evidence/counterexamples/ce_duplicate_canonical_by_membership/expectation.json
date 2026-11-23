@@ -1,0 +1,13 @@
+{
+  "id": "ce_duplicate_canonical_by_membership",
+  "expected_machine": {
+    "baseline": "PASS",
+    "candidate": "PASS"
+  },
+  "expected_semantic": "SEMANTIC_DEFECT",
+  "independent_basis": "入力は同じD-17の複数所属。独立して更新するコピーを正本化すると同一対象の正本を増やす。",
+  "rubric_ids": [
+    "N1"
+  ],
+  "evidence_level": "synthetic design / HTML source only; no rendered UI, operation, C conformance or human result"
+}

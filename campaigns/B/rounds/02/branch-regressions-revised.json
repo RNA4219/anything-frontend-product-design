@@ -1,0 +1,21 @@
+{
+  "suite": "B-R02-exploratory-branch-error-regressions",
+  "module": "modules/interaction-ux-flow/examples/task-flows.mjs",
+  "total": 3,
+  "passed": 3,
+  "results": [
+    {
+      "id": "E01-inactive-error",
+      "pass": true
+    },
+    {
+      "id": "E02-reactivated-required-answer",
+      "pass": true
+    },
+    {
+      "id": "E03-unrelated-active-error-preserved",
+      "pass": true
+    }
+  ],
+  "origin": "Independent critic found nonapplicable hidden address error blocking review; separate from frozen 16-case scoring."
+}

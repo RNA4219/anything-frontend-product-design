@@ -1,0 +1,31 @@
+{
+  "saved_at": "2026-11-23T08:05:28.546827+00:00",
+  "purpose": "Initial candidate before independent R03 critic; not efficacy baseline",
+  "files": [
+    {
+      "original_path": "modules/interaction-ux-flow/examples/resume-and-conflict.mjs",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/resume-and-conflict.mjs",
+      "sha256": "342471207d315e3d307232d1be7b0b796cf8d139dcdf22140d60f5a68103719b"
+    },
+    {
+      "original_path": "modules/interaction-ux-flow/examples/resume-and-conflict.html",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/resume-and-conflict.html",
+      "sha256": "fb10fccac3ab6e788e17e212e82b5306cbc970884a90998cc3cb4ddb120db2a7"
+    },
+    {
+      "original_path": "modules/interaction-ux-flow/references/resume-and-conflict.md",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/resume-and-conflict.md",
+      "sha256": "b025e9bdaaa365cd5daabe1a96cc36ccf38787af905a9e7a7f04316613dc4491"
+    },
+    {
+      "original_path": "registry/B/skills/B-IU-007.json",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/B-IU-007.json",
+      "sha256": "315997657470ecca1d691168632476da3e63cb05f619222138a49801cd846700"
+    },
+    {
+      "original_path": "registry/B/skills/B-IU-008.json",
+      "snapshot_path": "campaigns/B/rounds/03/artifacts/initial/B-IU-008.json",
+      "sha256": "7cfd3bfa832dc6df341bdb31e799b2f0ff11f56be92ad8f230eb3d81b1c5c3ae"
+    }
+  ]
+}

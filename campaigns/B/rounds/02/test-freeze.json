@@ -1,0 +1,8 @@
+{
+  "frozen_at": "2026-11-23T07:21:17.819640+00:00",
+  "before_candidate": true,
+  "case_count": 16,
+  "file": "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+  "sha256": "804a03de301db48aaaad3100c162cfdb7171cc0781c73fc1f8d03b99c7538957",
+  "task_scope_unchanged": true
+}

@@ -1,0 +1,18 @@
+{
+  "name": "control_live_reachable",
+  "expected_status": "PASS",
+  "explanation": "既存必須機能は入口画面に配置される。",
+  "actual_status": "PASS",
+  "exit_code": 0,
+  "issues": [],
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/validate_plan.py",
+    "--brief",
+    "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/control_live_reachable/brief.json",
+    "--plan",
+    "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/control_live_reachable/plan.json",
+    "--output",
+    "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/control_live_reachable/actual.json"
+  ]
+}

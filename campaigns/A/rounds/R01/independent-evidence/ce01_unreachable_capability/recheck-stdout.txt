@@ -1,0 +1,24 @@
+{
+  "status": "FAIL",
+  "issues": [
+    {
+      "code": "ROUTE_CAPABILITY_MISSING",
+      "location": "g_label",
+      "symptom": "Decision destination needs a kept capability that actually serves this goal and role",
+      "category": "function",
+      "severity": "error"
+    }
+  ],
+  "checks_available": {
+    "contract_version": "1.1",
+    "context_and_retirement": true,
+    "human_usability": false
+  },
+  "counts": {
+    "goals": 1,
+    "features": 1,
+    "kept_features": 1,
+    "screens": 2,
+    "navigation_edges": 0
+  }
+}

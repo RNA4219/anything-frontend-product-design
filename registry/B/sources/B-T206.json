@@ -1,0 +1,24 @@
+{
+  "source_id": "B-T206",
+  "title": "Manage jobs",
+  "url": "https://docs.cloud.google.com/bigquery/docs/managing-jobs",
+  "kind": "official-primary",
+  "section": "Job states; Cancel a job; API; Repeat jobs",
+  "read_status": "partial_web_text: initial L0–L718 plus a find result containing L872–L976, L1084–L1086, and L1130–L1134; gaps preserved; relevant sections read",
+  "observed_facts": [
+    "RUNNING/PENDINGジョブを取消可能だが、要求時点で完了済み、または取消不能な段階にあると取消は成功しない。",
+    "DONEは完了であり失敗時はerrorResultがある。終端状態を成功・失敗・取消へ解釈するには詳細を確認する必要がある。",
+    "完了ジョブのrepeatは同じjob IDで行えず、同じ設定の新規ジョブを作成する。通信再試行と意図的な再実行を区別する反例になる。"
+  ],
+  "limits": [
+    "今回のfixtureのエクスポート実装とBigQueryが同一だという意味ではない。",
+    "cancel受付後の終端判定は対象APIの実際のstatus/error契約に合わせる。"
+  ],
+  "canonical_url": "https://docs.cloud.google.com/bigquery/docs/managing-jobs",
+  "capture_sha256": "a68a5783cf84eb320f3042c46fa37253076e314bd8605861ced8cc8f8208776a",
+  "capture_hash_scope": "exact retrieved representation, not necessarily raw webpage",
+  "source_file_name": "B-T206-bigquery-managing.web.md",
+  "checked_at": "2026-11-23T06:43:37.755814+00:00",
+  "round": 1,
+  "redistribution": "Original is retained privately, not committed; this record contains campaign paraphrases and public locators."
+}

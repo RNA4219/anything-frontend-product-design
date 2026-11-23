@@ -1,0 +1,137 @@
+{
+  "review_id": "B-R01-critic-v3-recheck",
+  "created_at": "2026-11-23T06:58:01.226822+00:00",
+  "verdict": "REVISE",
+  "suite": "modules/interaction-ux-flow/tests/run_flow_trials_v3.mjs",
+  "suite_sha256": "b8c41e7a76f7c748cdf713d9ccd0b5568a4235a214b777a71e9d183a57655dbd",
+  "scope": "Only v3, frozen task, and independent critic probes. No generated baseline/candidate was read or executed. No suite edits.",
+  "original_findings": [
+    {
+      "id": "B-R01-C01",
+      "status": "PARTIALLY_CLOSED",
+      "closed": "T03/T05/T10/T12 no longer reject user-triggered safe replay merely for submitting twice or canSubmit=true. Guarded safe replay passes 14/14.",
+      "remaining": "T04 line45 still requires total submit calls==1. An immediate bounded retry inside confirm reuses the identical immutable payload/ID, preserves effects==1, but fails only T04 (13/14).",
+      "fix": "Record submit count immediately before check; require check adds no new mutation, and verify same intent/effect count. Do not assume confirm made exactly one network attempt."
+    },
+    {
+      "id": "B-R01-C02",
+      "status": "CLOSED_FOR_REPRODUCED_DEFECT",
+      "evidence": "Wrong bookingId is rejected by T01; wrong cancellation ID by T06. The wrong-ID probe now fails both.",
+      "limits": "These are selected-path assertions; not exhaustive identity/authorization or real-service validation."
+    },
+    {
+      "id": "B-R01-C03",
+      "status": "CLOSED_FOR_REPRODUCED_RACES_WITH_C05_CONDITION",
+      "evidence": "Original race-prone probe fails T13 and T14; guarded counterpart passes 14/14. Both late acknowledgement and late transport-error overwrite are now detected.",
+      "limits": "Other stale lookup/new-operation races remain untested. T13/T14 assume concurrent check is available; see C05."
+    },
+    {
+      "id": "B-R01-C04",
+      "status": "OPEN_SEPARATE_INSPECTION_REQUIRED",
+      "evidence": "False-message probe still passes 14/14. This is expected for a controller-only oracle.",
+      "required_action": "Independently inspect actual implementation/rendered text for unknown/pending/success/failure/cancellation, and retain evidence. Do not close this finding based on v3 score or nonempty message fields."
+    }
+  ],
+  "defects": [
+    {
+      "id": "B-R01-C01",
+      "severity": "high",
+      "file": "modules/interaction-ux-flow/tests/run_flow_trials_v3.mjs",
+      "location": "T04 line45",
+      "symptom": "Automatic same-ID/same-payload safe replay before reconciliation remains falsely rejected.",
+      "evidence": [
+        "probe_auto_replay.mjs wraps only submit to retry once immediately on a transport exception.",
+        "v3-auto-replay.json: 13/14; only T04 fails 2 !== 1.",
+        "The task explicitly deduplicates the same request ID and identical payload for 24 hours."
+      ],
+      "impact": "Valid bounded retry policies are still penalized in the campaign score.",
+      "fix": "Assert no additional submission during check by comparing before/after counts; verify prior attempts are the same intent and one backend effect."
+    },
+    {
+      "id": "B-R01-C05",
+      "severity": "medium",
+      "file": "modules/interaction-ux-flow/tests/run_flow_trials_v3.mjs",
+      "location": "T13 lines93–95; T14 lines101–103",
+      "symptom": "New race trials require check to run concurrently with an unresolved cancellation even when view().canCheck is false.",
+      "evidence": [
+        "task.md specifies available methods and view flags but does not require simultaneous check/cancel execution.",
+        "probe_serialized_cancel.mjs honestly disables canCheck/canCancel while cancel awaits a response and restores check afterwards.",
+        "v3-serialized-cancel.json: 12/14; only T13/T14 fail at the intermediate success assertion before the cancellation response is released.",
+        "The same serialized implementation passes every original sequential path and retains result reconciliation after acknowledgement."
+      ],
+      "impact": "A valid serialization design is misclassified as a stale-response defect. Additional concurrency complexity becomes an unstated acceptance requirement.",
+      "fix": "Condition race branch on whether concurrent check is available. If unavailable, release/reject cancel, await it, then check and require verified completion. If available, retain late-response ordering and final-state preservation assertions. Any pending promises must be released even when assertions fail."
+    }
+  ],
+  "test_results": [
+    {
+      "probe": "v3-original-control",
+      "passed": 12,
+      "total": 14,
+      "failed_ids": [
+        "T13",
+        "T14"
+      ],
+      "evidence": "campaigns/B/rounds/01/independent/v3-original-control.json"
+    },
+    {
+      "probe": "v3-guarded-control",
+      "passed": 14,
+      "total": 14,
+      "failed_ids": [],
+      "evidence": "campaigns/B/rounds/01/independent/v3-guarded-control.json"
+    },
+    {
+      "probe": "v3-safe-replay",
+      "passed": 14,
+      "total": 14,
+      "failed_ids": [],
+      "evidence": "campaigns/B/rounds/01/independent/v3-safe-replay.json"
+    },
+    {
+      "probe": "v3-wrong-ids",
+      "passed": 12,
+      "total": 14,
+      "failed_ids": [
+        "T01",
+        "T06"
+      ],
+      "evidence": "campaigns/B/rounds/01/independent/v3-wrong-ids.json"
+    },
+    {
+      "probe": "v3-untruthful-message",
+      "passed": 14,
+      "total": 14,
+      "failed_ids": [],
+      "evidence": "campaigns/B/rounds/01/independent/v3-untruthful-message.json"
+    },
+    {
+      "probe": "v3-auto-replay",
+      "passed": 13,
+      "total": 14,
+      "failed_ids": [
+        "T04"
+      ],
+      "evidence": "campaigns/B/rounds/01/independent/v3-auto-replay.json"
+    },
+    {
+      "probe": "v3-serialized-cancel",
+      "passed": 12,
+      "total": 14,
+      "failed_ids": [
+        "T13",
+        "T14"
+      ],
+      "evidence": "campaigns/B/rounds/01/independent/v3-serialized-cancel.json"
+    }
+  ],
+  "copy_truthfulness": "Requires separate actual implementation and rendered-DOM inspection; deliberately false text passes this suite. No such inspection occurred in this recheck.",
+  "limitations": [
+    "This is a same-model separate context, not objective or model-independent validation.",
+    "Probes are controller-only negative controls, not complete index.html deliverables.",
+    "C02/C03 closure is limited to the reproduced oracle defects, not all possible identity and race cases.",
+    "No generated implementation or score was read.",
+    "No public/test mutations; added and changed probes only under private/B/round01/critic.",
+    "Parent was informed of residual C01 and new C05 before this report."
+  ]
+}

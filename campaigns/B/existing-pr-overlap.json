@@ -1,0 +1,37 @@
+{
+  "observed_at": "2026-11-23",
+  "pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/2",
+  "head_sha": "f66e7954f2a59a59dad861901b9270076c2fc691",
+  "created_after_session_start": true,
+  "created_at": "2026-11-23T06:38:16Z",
+  "common_path_collision": [
+    "modules/interaction-ux-flow/SKILL.md"
+  ],
+  "relations": [
+    {
+      "skill_id": "B-IU-001",
+      "existing_concept": "Result uncertainty, last confirmed state and reconciliation",
+      "delta": "Separates evidence layers, avoids mandatory dual lookup when one authoritative result suffices, tests semantic inconsistency in badges."
+    },
+    {
+      "skill_id": "B-IU-002",
+      "existing_concept": "Same intent, identity, payload and replay window",
+      "delta": "Formal conditional unit with positive safe-replay controls, contract expiry counterexample and explicit service-version limits."
+    },
+    {
+      "skill_id": "B-IU-003",
+      "existing_concept": "Cancellation deadline and recoverability in the entry workflow",
+      "delta": "Explicit cancellation receipt vs final result, cancellation/completion ordering counterexample and separate compensation boundary."
+    },
+    {
+      "skill_id": "B-IU-006",
+      "existing_concept": "Review, amend, return; low-impact reversible alternative",
+      "delta": "WCAG alternative safeguards and exceptions, affected-input review invalidation and correction-path executable evidence; planned R02 unit."
+    }
+  ],
+  "novelty_policy": "Existing concepts are formalized/refined, not counted as newly discovered design principles. Existing PR is not modified or merged.",
+  "not_imported": [
+    "Third-party original texts"
+  ],
+  "integration": "After deciding merge order, reconcile the shared module entry. Preserve PR2 CLI references, scripts and tests; add conditional routes from this campaign. No common root edits are required by current main route."
+}
