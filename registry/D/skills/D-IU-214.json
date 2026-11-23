@@ -22,7 +22,10 @@
   "source_refs": ["D-REF-273", "D-REF-274", "D-REF-275", "D-REF-276"],
   "product_observations": {
     "dataset": "research/product-journeys/observations.json",
-    "examples": ["reset-netflix-mobile", "friday-british-mobile", "returns-apple-returns-mobile", "repair-loft-mobile", "repair-ikea-mobile"]
+    "examples": ["reset-netflix-mobile", "friday-british-mobile", "returns-apple-returns-mobile", "repair-loft-mobile", "repair-ikea-mobile"],
+    "layout_measurements": "research/product-journeys/spacing/measurements.json",
+    "participant_studies": "research/product-journeys/human-studies/studies.json",
+    "participant_metrics": "research/product-journeys/human-studies/metrics.csv"
   },
   "confidence": {
     "source_support": "実サイトの経路観察と、入力負担・送信操作・フォーム構造・状態表示に関する一次調査を照合した。",

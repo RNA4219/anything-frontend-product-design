@@ -1,0 +1,4671 @@
+[
+  {
+    "observation_id": "friday-british-desktop",
+    "brand": "大英博物館",
+    "mode": "desktop",
+    "start_url": "https://www.britishmuseum.org/",
+    "rendered_url": "https://www.britishmuseum.org/",
+    "observed_at": "2026-11-23T11:28:36.152152+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "challenge"
+  },
+  {
+    "observation_id": "friday-british-mobile",
+    "brand": "大英博物館",
+    "mode": "mobile",
+    "start_url": "https://www.britishmuseum.org/",
+    "rendered_url": "https://www.britishmuseum.org/",
+    "observed_at": "2026-11-23T11:28:36.154182+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 77,
+    "controls": 7,
+    "media_elements": 7,
+    "css_image_elements": 1,
+    "controls_per_100k_css_px2": 2.13,
+    "box_coverage_percent": 52.65,
+    "box_coverage_with_css_images_percent": 52.65,
+    "text_box_percent": 25.33,
+    "control_box_percent": 11.56,
+    "media_box_percent": 20.35,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 0,
+      "end_y_exclusive": 20,
+      "height_css_px": 20
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 0,
+      "right_css_px": 0
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "Welcome to the British Museum",
+        "heading_rect": {
+          "x": 20,
+          "y": 335.6,
+          "w": 350,
+          "h": 68
+        },
+        "target": "Experience cultures across the globe, from the dawn of human",
+        "target_rect": {
+          "x": 20,
+          "y": 416.6,
+          "w": 350,
+          "h": 56
+        },
+        "gap_css_px": 13
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "Home",
+        "left_rect": {
+          "x": 20,
+          "y": 20,
+          "w": 140,
+          "h": 46.2
+        },
+        "right_label": "Menu",
+        "right_rect": {
+          "x": 295.3,
+          "y": 37.2,
+          "w": 74.7,
+          "h": 49
+        },
+        "gap_css_px": 135.3
+      },
+      {
+        "left_label": "Pause video",
+        "left_rect": {
+          "x": 180,
+          "y": 240.6,
+          "w": 50,
+          "h": 50
+        },
+        "right_label": "Audio described version (Opens in new window)",
+        "right_rect": {
+          "x": 250,
+          "y": 240.6,
+          "w": 50,
+          "h": 50
+        },
+        "gap_css_px": 20
+      },
+      {
+        "left_label": "Audio described version (Opens in new window)",
+        "left_rect": {
+          "x": 250,
+          "y": 240.6,
+          "w": 50,
+          "h": 50
+        },
+        "right_label": "Show image caption",
+        "right_rect": {
+          "x": 320,
+          "y": 240.6,
+          "w": 50,
+          "h": 50
+        },
+        "gap_css_px": 20
+      }
+    ],
+    "fixed_or_sticky_candidates": 0
+  },
+  {
+    "observation_id": "friday-louvre-desktop",
+    "brand": "ルーヴル美術館",
+    "mode": "desktop",
+    "start_url": "https://www.louvre.fr/en",
+    "rendered_url": "https://www.louvre.fr/en",
+    "observed_at": "2026-11-23T11:28:45.318792+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "measured",
+    "text_fragments": 10,
+    "controls": 4,
+    "media_elements": 1,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 0.33,
+    "box_coverage_percent": 17.36,
+    "box_coverage_with_css_images_percent": 17.37,
+    "text_box_percent": 4.41,
+    "control_box_percent": 2.05,
+    "media_box_percent": 11.73,
+    "flat_band": {
+      "strip_x": [
+        342,
+        1023
+      ],
+      "start_y": 753,
+      "end_y_exclusive": 900,
+      "height_css_px": 147
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 336,
+      "right_css_px": 336.1
+    },
+    "initial_layer": "cookie_dialog",
+    "vertical_pairs": [],
+    "horizontal_pairs": [
+      {
+        "left_label": "Manage preferences",
+        "left_rect": {
+          "x": 369.3,
+          "y": 632.8,
+          "w": 164.8,
+          "h": 38
+        },
+        "right_label": "Reject everything, except technical cookies",
+        "right_rect": {
+          "x": 542.1,
+          "y": 632.8,
+          "w": 305.4,
+          "h": 38
+        },
+        "gap_css_px": 8.0
+      },
+      {
+        "left_label": "Reject everything, except technical cookies",
+        "left_rect": {
+          "x": 542.1,
+          "y": 632.8,
+          "w": 305.4,
+          "h": 38
+        },
+        "right_label": "Allow all cookies",
+        "right_rect": {
+          "x": 855.5,
+          "y": 632.8,
+          "w": 141.4,
+          "h": 38
+        },
+        "gap_css_px": 8.0
+      }
+    ],
+    "fixed_or_sticky_candidates": 1
+  },
+  {
+    "observation_id": "friday-louvre-mobile",
+    "brand": "ルーヴル美術館",
+    "mode": "mobile",
+    "start_url": "https://www.louvre.fr/en",
+    "rendered_url": "https://www.louvre.fr/en",
+    "observed_at": "2026-11-23T11:28:49.038704+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 14,
+    "controls": 4,
+    "media_elements": 0,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 1.22,
+    "box_coverage_percent": 24.38,
+    "box_coverage_with_css_images_percent": 24.39,
+    "text_box_percent": 16.13,
+    "control_box_percent": 11.32,
+    "media_box_percent": 0.0,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 88,
+      "end_y_exclusive": 138,
+      "height_css_px": 50
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 40,
+      "right_css_px": 40
+    },
+    "initial_layer": "cookie_dialog",
+    "vertical_pairs": [],
+    "horizontal_pairs": [],
+    "fixed_or_sticky_candidates": 1
+  },
+  {
+    "observation_id": "friday-ng-desktop",
+    "brand": "ナショナル・ギャラリー",
+    "mode": "desktop",
+    "start_url": "https://www.nationalgallery.org.uk/",
+    "rendered_url": "https://www.nationalgallery.org.uk/",
+    "observed_at": "2026-11-23T11:28:38.087648+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "measured",
+    "text_fragments": 6,
+    "controls": 8,
+    "media_elements": 4,
+    "css_image_elements": 2,
+    "controls_per_100k_css_px2": 0.65,
+    "box_coverage_percent": 7.21,
+    "box_coverage_with_css_images_percent": 7.21,
+    "text_box_percent": 5.78,
+    "control_box_percent": 2.05,
+    "media_box_percent": 0.61,
+    "flat_band": {
+      "strip_x": [
+        342,
+        1023
+      ],
+      "start_y": 692,
+      "end_y_exclusive": 716,
+      "height_css_px": 24
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 106.5,
+      "right_css_px": 106.5
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "BRINGING PEOPLE AND PAINTINGS TOGETHER",
+        "heading_rect": {
+          "x": 106.5,
+          "y": 716,
+          "w": 1152,
+          "h": 48
+        },
+        "target": "Admission free, donations welcome",
+        "target_rect": {
+          "x": 106.5,
+          "y": 780,
+          "w": 564,
+          "h": 34.6
+        },
+        "gap_css_px": 16
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "button",
+        "left_rect": {
+          "x": 1164.3,
+          "y": 28.4,
+          "w": 24,
+          "h": 24
+        },
+        "right_label": "button",
+        "right_rect": {
+          "x": 1232.5,
+          "y": 28.4,
+          "w": 24,
+          "h": 24
+        },
+        "gap_css_px": 44.2
+      },
+      {
+        "left_label": "Open banner caption",
+        "left_rect": {
+          "x": 1162.3,
+          "y": 644,
+          "w": 32,
+          "h": 32
+        },
+        "right_label": "Pause video",
+        "right_rect": {
+          "x": 1226.5,
+          "y": 644,
+          "w": 32,
+          "h": 32
+        },
+        "gap_css_px": 32.2
+      }
+    ],
+    "fixed_or_sticky_candidates": 1
+  },
+  {
+    "observation_id": "friday-ng-mobile",
+    "brand": "ナショナル・ギャラリー",
+    "mode": "mobile",
+    "start_url": "https://www.nationalgallery.org.uk/",
+    "rendered_url": "https://www.nationalgallery.org.uk/",
+    "observed_at": "2026-11-23T11:28:39.742242+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 14,
+    "controls": 8,
+    "media_elements": 4,
+    "css_image_elements": 2,
+    "controls_per_100k_css_px2": 2.43,
+    "box_coverage_percent": 32.63,
+    "box_coverage_with_css_images_percent": 32.64,
+    "text_box_percent": 19.55,
+    "control_box_percent": 9.12,
+    "media_box_percent": 8.95,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 648,
+      "end_y_exclusive": 681,
+      "height_css_px": 33
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 0,
+      "right_css_px": 0
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "BRINGING PEOPLE AND PAINTINGS TOGETHER",
+        "heading_rect": {
+          "x": 20,
+          "y": 288.4,
+          "w": 350,
+          "h": 55.2
+        },
+        "target": "Admission free, donations welcome",
+        "target_rect": {
+          "x": 20,
+          "y": 359.6,
+          "w": 350,
+          "h": 24.3
+        },
+        "gap_css_px": 16
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "Open banner caption",
+        "left_rect": {
+          "x": 305.8,
+          "y": 241.1,
+          "w": 24,
+          "h": 24
+        },
+        "right_label": "Pause video",
+        "right_rect": {
+          "x": 346,
+          "y": 241.1,
+          "w": 24,
+          "h": 24
+        },
+        "gap_css_px": 16.2
+      }
+    ],
+    "fixed_or_sticky_candidates": 1
+  },
+  {
+    "observation_id": "friday-vanda-desktop",
+    "brand": "V&A",
+    "mode": "desktop",
+    "start_url": "https://www.vam.ac.uk/",
+    "rendered_url": "https://www.vam.ac.uk/",
+    "observed_at": "2026-11-23T11:28:39.907267+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "measured",
+    "text_fragments": 14,
+    "controls": 10,
+    "media_elements": 3,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 0.81,
+    "box_coverage_percent": 98.44,
+    "box_coverage_with_css_images_percent": 98.44,
+    "text_box_percent": 11.73,
+    "control_box_percent": 3.11,
+    "media_box_percent": 98.44,
+    "flat_band": {
+      "strip_x": [
+        342,
+        1023
+      ],
+      "start_y": 886,
+      "end_y_exclusive": 900,
+      "height_css_px": 14
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 0,
+      "right_css_px": 0
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "Constantinople to Istanbul: One City, Two Empires A major UK",
+        "heading_rect": {
+          "x": 147.5,
+          "y": 462,
+          "w": 684.8,
+          "h": 286
+        },
+        "target": "V&A South Kensington",
+        "target_rect": {
+          "x": 181.5,
+          "y": 778,
+          "w": 650.8,
+          "h": 36
+        },
+        "gap_css_px": 30
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "All V&A",
+        "left_rect": {
+          "x": 147.5,
+          "y": 17,
+          "w": 71,
+          "h": 40
+        },
+        "right_label": "Visit us",
+        "right_rect": {
+          "x": 314.3,
+          "y": 21,
+          "w": 58.4,
+          "h": 31
+        },
+        "gap_css_px": 95.8
+      },
+      {
+        "left_label": "Visit us",
+        "left_rect": {
+          "x": 314.3,
+          "y": 21,
+          "w": 58.4,
+          "h": 31
+        },
+        "right_label": "What’s on",
+        "right_rect": {
+          "x": 404.7,
+          "y": 21,
+          "w": 78.5,
+          "h": 31
+        },
+        "gap_css_px": 32.0
+      },
+      {
+        "left_label": "What’s on",
+        "left_rect": {
+          "x": 404.7,
+          "y": 21,
+          "w": 78.5,
+          "h": 31
+        },
+        "right_label": "Collections",
+        "right_rect": {
+          "x": 515.2,
+          "y": 21,
+          "w": 90.5,
+          "h": 31
+        },
+        "gap_css_px": 32.0
+      },
+      {
+        "left_label": "Collections",
+        "left_rect": {
+          "x": 515.2,
+          "y": 21,
+          "w": 90.5,
+          "h": 31
+        },
+        "right_label": "Learn",
+        "right_rect": {
+          "x": 637.6,
+          "y": 21,
+          "w": 46.6,
+          "h": 31
+        },
+        "gap_css_px": 31.9
+      },
+      {
+        "left_label": "Learn",
+        "left_rect": {
+          "x": 637.6,
+          "y": 21,
+          "w": 46.6,
+          "h": 31
+        },
+        "right_label": "Join & Support",
+        "right_rect": {
+          "x": 716.3,
+          "y": 21,
+          "w": 121.2,
+          "h": 31
+        },
+        "gap_css_px": 32.1
+      },
+      {
+        "left_label": "Join & Support",
+        "left_rect": {
+          "x": 716.3,
+          "y": 21,
+          "w": 121.2,
+          "h": 31
+        },
+        "right_label": "Shop",
+        "right_rect": {
+          "x": 869.5,
+          "y": 21,
+          "w": 42,
+          "h": 31
+        },
+        "gap_css_px": 32.0
+      },
+      {
+        "left_label": "Shop",
+        "left_rect": {
+          "x": 869.5,
+          "y": 21,
+          "w": 42,
+          "h": 31
+        },
+        "right_label": "Become a Member",
+        "right_rect": {
+          "x": 1007.3,
+          "y": 21.5,
+          "w": 154.2,
+          "h": 31
+        },
+        "gap_css_px": 95.8
+      },
+      {
+        "left_label": "Become a Member",
+        "left_rect": {
+          "x": 1007.3,
+          "y": 21.5,
+          "w": 154.2,
+          "h": 31
+        },
+        "right_label": "Search the site",
+        "right_rect": {
+          "x": 1177.5,
+          "y": 17,
+          "w": 40,
+          "h": 40
+        },
+        "gap_css_px": 16.0
+      }
+    ],
+    "fixed_or_sticky_candidates": 0
+  },
+  {
+    "observation_id": "friday-vanda-mobile",
+    "brand": "V&A",
+    "mode": "mobile",
+    "start_url": "https://www.vam.ac.uk/",
+    "rendered_url": "https://www.vam.ac.uk/",
+    "observed_at": "2026-11-23T11:28:42.703738+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 15,
+    "controls": 5,
+    "media_elements": 2,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 1.52,
+    "box_coverage_percent": 33.01,
+    "box_coverage_with_css_images_percent": 33.01,
+    "text_box_percent": 29.31,
+    "control_box_percent": 5.65,
+    "media_box_percent": 0.96,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 715,
+      "end_y_exclusive": 750,
+      "height_css_px": 35
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 10,
+      "right_css_px": 10
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "Constantinople to Istanbul: One City, Two Empires A major UK",
+        "heading_rect": {
+          "x": 10,
+          "y": 225,
+          "w": 370,
+          "h": 192
+        },
+        "target": "V&A South Kensington",
+        "target_rect": {
+          "x": 36,
+          "y": 437,
+          "w": 344,
+          "h": 28
+        },
+        "gap_css_px": 20
+      },
+      {
+        "heading": "Admission is free",
+        "heading_rect": {
+          "x": 38,
+          "y": 747,
+          "w": 342,
+          "h": 28
+        },
+        "target": "Some exhibitions and events carry a separate charge",
+        "target_rect": {
+          "x": 38,
+          "y": 785,
+          "w": 342,
+          "h": 36
+        },
+        "gap_css_px": 10
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "All V&A",
+        "left_rect": {
+          "x": 10,
+          "y": 20,
+          "w": 71,
+          "h": 40
+        },
+        "right_label": "Become a Member",
+        "right_rect": {
+          "x": 175.8,
+          "y": 24.5,
+          "w": 154.2,
+          "h": 31
+        },
+        "gap_css_px": 94.8
+      },
+      {
+        "left_label": "Become a Member",
+        "left_rect": {
+          "x": 175.8,
+          "y": 24.5,
+          "w": 154.2,
+          "h": 31
+        },
+        "right_label": "Menu",
+        "right_rect": {
+          "x": 340,
+          "y": 20,
+          "w": 40,
+          "h": 40
+        },
+        "gap_css_px": 10.0
+      }
+    ],
+    "fixed_or_sticky_candidates": 0
+  },
+  {
+    "observation_id": "mug-hands-desktop",
+    "brand": "ハンズ",
+    "mode": "desktop",
+    "start_url": "https://hands.net/",
+    "rendered_url": "https://hands.net/",
+    "observed_at": "2026-11-23T11:29:17.016915+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "measured",
+    "text_fragments": 57,
+    "controls": 32,
+    "media_elements": 22,
+    "css_image_elements": 1,
+    "controls_per_100k_css_px2": 2.6,
+    "box_coverage_percent": 62.52,
+    "box_coverage_with_css_images_percent": 62.51,
+    "text_box_percent": 14.42,
+    "control_box_percent": 55.53,
+    "media_box_percent": 27.4,
+    "flat_band": {
+      "strip_x": [
+        342,
+        1023
+      ],
+      "start_y": 633,
+      "end_y_exclusive": 663,
+      "height_css_px": 30
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 42.5,
+      "right_css_px": 42.5
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "カテゴリ",
+        "heading_rect": {
+          "x": 75.5,
+          "y": 529,
+          "w": 222,
+          "h": 70
+        },
+        "target": "ビューティ・ヘルスケア",
+        "target_rect": {
+          "x": 75.5,
+          "y": 599,
+          "w": 222,
+          "h": 45
+        },
+        "gap_css_px": 0
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "ハンズクラブのご案内",
+        "left_rect": {
+          "x": 665.2,
+          "y": 0,
+          "w": 135.5,
+          "h": 28
+        },
+        "right_label": "ハンズクラブアプリ",
+        "right_rect": {
+          "x": 800.7,
+          "y": 0,
+          "w": 123,
+          "h": 28
+        },
+        "gap_css_px": 0.0
+      },
+      {
+        "left_label": "ハンズクラブアプリ",
+        "left_rect": {
+          "x": 800.7,
+          "y": 0,
+          "w": 123,
+          "h": 28
+        },
+        "right_label": "ご利用ガイド",
+        "right_rect": {
+          "x": 939.8,
+          "y": 0,
+          "w": 87.2,
+          "h": 28
+        },
+        "gap_css_px": 16.1
+      },
+      {
+        "left_label": "ご利用ガイド",
+        "left_rect": {
+          "x": 939.8,
+          "y": 0,
+          "w": 87.2,
+          "h": 28
+        },
+        "right_label": "採用情報",
+        "right_rect": {
+          "x": 1090.9,
+          "y": 0,
+          "w": 64,
+          "h": 28
+        },
+        "gap_css_px": 63.9
+      },
+      {
+        "left_label": "会社概要",
+        "left_rect": {
+          "x": 1026.9,
+          "y": 0,
+          "w": 64,
+          "h": 28
+        },
+        "right_label": "採用情報",
+        "right_rect": {
+          "x": 1090.9,
+          "y": 0,
+          "w": 64,
+          "h": 28
+        },
+        "gap_css_px": 0.0
+      },
+      {
+        "left_label": "ヒントマガジン",
+        "left_rect": {
+          "x": 242.7,
+          "y": 28,
+          "w": 160,
+          "h": 68
+        },
+        "right_label": "店舗情報",
+        "right_rect": {
+          "x": 402.7,
+          "y": 28,
+          "w": 160,
+          "h": 68
+        },
+        "gap_css_px": 0.0
+      },
+      {
+        "left_label": "店舗情報",
+        "left_rect": {
+          "x": 402.7,
+          "y": 28,
+          "w": 160,
+          "h": 68
+        },
+        "right_label": "キャンペーン",
+        "right_rect": {
+          "x": 562.7,
+          "y": 28,
+          "w": 160,
+          "h": 68
+        },
+        "gap_css_px": 0.0
+      },
+      {
+        "left_label": "キャンペーン",
+        "left_rect": {
+          "x": 562.7,
+          "y": 28,
+          "w": 160,
+          "h": 68
+        },
+        "right_label": "HANDS DO （体験・イベント）",
+        "right_rect": {
+          "x": 722.7,
+          "y": 28,
+          "w": 160,
+          "h": 68
+        },
+        "gap_css_px": 0.0
+      },
+      {
+        "left_label": "HANDS DO （体験・イベント）",
+        "left_rect": {
+          "x": 722.7,
+          "y": 28,
+          "w": 160,
+          "h": 68
+        },
+        "right_label": "店舗のイチ押し",
+        "right_rect": {
+          "x": 882.7,
+          "y": 28,
+          "w": 160,
+          "h": 68
+        },
+        "gap_css_px": 0.0
+      },
+      {
+        "left_label": "商品名・型番・JANコードで検索",
+        "left_rect": {
+          "x": 196.5,
+          "y": 110,
+          "w": 794,
+          "h": 36
+        },
+        "right_label": "カート",
+        "right_rect": {
+          "x": 1016.5,
+          "y": 110,
+          "w": 108,
+          "h": 36
+        },
+        "gap_css_px": 26.0
+      },
+      {
+        "left_label": "検索",
+        "left_rect": {
+          "x": 930.5,
+          "y": 110,
+          "w": 62,
+          "h": 36
+        },
+        "right_label": "カート",
+        "right_rect": {
+          "x": 1016.5,
+          "y": 110,
+          "w": 108,
+          "h": 36
+        },
+        "gap_css_px": 24.0
+      },
+      {
+        "left_label": "カート",
+        "left_rect": {
+          "x": 1016.5,
+          "y": 110,
+          "w": 108,
+          "h": 36
+        },
+        "right_label": "ログイン 無料会員登録",
+        "right_rect": {
+          "x": 1134.5,
+          "y": 96,
+          "w": 188,
+          "h": 64
+        },
+        "gap_css_px": 10.0
+      }
+    ],
+    "fixed_or_sticky_candidates": 2
+  },
+  {
+    "observation_id": "mug-hands-mobile",
+    "brand": "ハンズ",
+    "mode": "mobile",
+    "start_url": "https://hands.net/",
+    "rendered_url": "https://hands.net/",
+    "observed_at": "2026-11-23T11:29:17.322955+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 28,
+    "controls": 10,
+    "media_elements": 12,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 3.04,
+    "box_coverage_percent": 72.98,
+    "box_coverage_with_css_images_percent": 72.98,
+    "text_box_percent": 22.76,
+    "control_box_percent": 57.6,
+    "media_box_percent": 35.64,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 557,
+      "end_y_exclusive": 571,
+      "height_css_px": 14
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 0,
+      "right_css_px": 0
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "トピックス",
+        "heading_rect": {
+          "x": 0,
+          "y": 731.8,
+          "w": 390,
+          "h": 32
+        },
+        "target": "キャンペーン 【最大800ポイント】期間中のお買い上げ額に応じてボーナスポイントをプレゼント! 11/29(日)まで!",
+        "target_rect": {
+          "x": 0,
+          "y": 779.8,
+          "w": 390,
+          "h": 308.8
+        },
+        "gap_css_px": 16
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "ネットストア",
+        "left_rect": {
+          "x": 8,
+          "y": 484,
+          "w": 123.4,
+          "h": 52.8
+        },
+        "right_label": "ヒントマガジン",
+        "right_rect": {
+          "x": 132.4,
+          "y": 484,
+          "w": 122.4,
+          "h": 52.8
+        },
+        "gap_css_px": 1.0
+      },
+      {
+        "left_label": "ヒントマガジン",
+        "left_rect": {
+          "x": 132.4,
+          "y": 484,
+          "w": 122.4,
+          "h": 52.8
+        },
+        "right_label": "オリジナル商品",
+        "right_rect": {
+          "x": 255.8,
+          "y": 484,
+          "w": 122.4,
+          "h": 52.8
+        },
+        "gap_css_px": 1.0
+      }
+    ],
+    "fixed_or_sticky_candidates": 2
+  },
+  {
+    "observation_id": "mug-loft-desktop",
+    "brand": "ロフト",
+    "mode": "desktop",
+    "start_url": "https://www.loft.co.jp/store/",
+    "rendered_url": "https://www.loft.co.jp/store/",
+    "observed_at": "2026-11-23T11:29:24.396386+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "measured",
+    "text_fragments": 27,
+    "controls": 22,
+    "media_elements": 11,
+    "css_image_elements": 2,
+    "controls_per_100k_css_px2": 1.79,
+    "box_coverage_percent": 63.18,
+    "box_coverage_with_css_images_percent": 63.18,
+    "text_box_percent": 3.8,
+    "control_box_percent": 58.11,
+    "media_box_percent": 51.31,
+    "flat_band": {
+      "strip_x": [
+        342,
+        1023
+      ],
+      "start_y": 642,
+      "end_y_exclusive": 706,
+      "height_css_px": 64
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 0,
+      "right_css_px": 0
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "お知らせ",
+        "heading_rect": {
+          "x": 20,
+          "y": 683,
+          "w": 1085,
+          "h": 25
+        },
+        "target": "2026.11.09 期間限定 ネットストア10％OFFクーポン配信（最大3回）",
+        "target_rect": {
+          "x": 20,
+          "y": 728,
+          "w": 1085,
+          "h": 12
+        },
+        "gap_css_px": 20
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "ロフトネットストア",
+        "left_rect": {
+          "x": 20,
+          "y": 20,
+          "w": 190,
+          "h": 36
+        },
+        "right_label": "商品名・商品番号・キーワードで検索",
+        "right_rect": {
+          "x": 350,
+          "y": 20,
+          "w": 270,
+          "h": 35
+        },
+        "gap_css_px": 140
+      },
+      {
+        "left_label": "商品名・商品番号・キーワードで検索",
+        "left_rect": {
+          "x": 350,
+          "y": 20,
+          "w": 270,
+          "h": 35
+        },
+        "right_label": "詳細検索",
+        "right_rect": {
+          "x": 626,
+          "y": 20,
+          "w": 70,
+          "h": 35
+        },
+        "gap_css_px": 6
+      },
+      {
+        "left_label": "詳細検索",
+        "left_rect": {
+          "x": 626,
+          "y": 20,
+          "w": 70,
+          "h": 35
+        },
+        "right_label": "ログイン",
+        "right_rect": {
+          "x": 960,
+          "y": 20,
+          "w": 40,
+          "h": 43
+        },
+        "gap_css_px": 264
+      },
+      {
+        "left_label": "ログイン",
+        "left_rect": {
+          "x": 960,
+          "y": 20,
+          "w": 40,
+          "h": 43
+        },
+        "right_label": "会員登録",
+        "right_rect": {
+          "x": 1015,
+          "y": 20,
+          "w": 40,
+          "h": 43
+        },
+        "gap_css_px": 15
+      },
+      {
+        "left_label": "会員登録",
+        "left_rect": {
+          "x": 1015,
+          "y": 20,
+          "w": 40,
+          "h": 43
+        },
+        "right_label": "マイページ",
+        "right_rect": {
+          "x": 1070,
+          "y": 20,
+          "w": 50,
+          "h": 43
+        },
+        "gap_css_px": 15
+      },
+      {
+        "left_label": "マイページ",
+        "left_rect": {
+          "x": 1070,
+          "y": 20,
+          "w": 50,
+          "h": 43
+        },
+        "right_label": "お気に入り",
+        "right_rect": {
+          "x": 1130,
+          "y": 20,
+          "w": 50,
+          "h": 43
+        },
+        "gap_css_px": 10
+      },
+      {
+        "left_label": "お気に入り",
+        "left_rect": {
+          "x": 1130,
+          "y": 20,
+          "w": 50,
+          "h": 43
+        },
+        "right_label": "購入履歴",
+        "right_rect": {
+          "x": 1190,
+          "y": 20,
+          "w": 40,
+          "h": 43
+        },
+        "gap_css_px": 10
+      },
+      {
+        "left_label": "購入履歴",
+        "left_rect": {
+          "x": 1190,
+          "y": 20,
+          "w": 40,
+          "h": 43
+        },
+        "right_label": "ご利用ガイド",
+        "right_rect": {
+          "x": 1240,
+          "y": 20,
+          "w": 60,
+          "h": 43
+        },
+        "gap_css_px": 10
+      },
+      {
+        "left_label": "ご利用ガイド",
+        "left_rect": {
+          "x": 1240,
+          "y": 20,
+          "w": 60,
+          "h": 43
+        },
+        "right_label": "カート",
+        "right_rect": {
+          "x": 1310,
+          "y": 20,
+          "w": 30,
+          "h": 43
+        },
+        "gap_css_px": 10
+      },
+      {
+        "left_label": "コスメ＆ビューティー",
+        "left_rect": {
+          "x": 30,
+          "y": 70,
+          "w": 200.8,
+          "h": 55
+        },
+        "right_label": "ステーショナリー",
+        "right_rect": {
+          "x": 250.8,
+          "y": 70,
+          "w": 200.8,
+          "h": 55
+        },
+        "gap_css_px": 20.0
+      },
+      {
+        "left_label": "ステーショナリー",
+        "left_rect": {
+          "x": 250.8,
+          "y": 70,
+          "w": 200.8,
+          "h": 55
+        },
+        "right_label": "ホーム＆キッチン",
+        "right_rect": {
+          "x": 471.6,
+          "y": 70,
+          "w": 200.8,
+          "h": 55
+        },
+        "gap_css_px": 20.0
+      },
+      {
+        "left_label": "ホーム＆キッチン",
+        "left_rect": {
+          "x": 471.6,
+          "y": 70,
+          "w": 200.8,
+          "h": 55
+        },
+        "right_label": "キャラクター＆バラエティ雑貨",
+        "right_rect": {
+          "x": 692.4,
+          "y": 70,
+          "w": 200.8,
+          "h": 55
+        },
+        "gap_css_px": 20.0
+      }
+    ],
+    "fixed_or_sticky_candidates": 1
+  },
+  {
+    "observation_id": "mug-loft-mobile",
+    "brand": "ロフト",
+    "mode": "mobile",
+    "start_url": "https://www.loft.co.jp/store/",
+    "rendered_url": "https://www.loft.co.jp/store/",
+    "observed_at": "2026-11-23T11:29:27.278074+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 16,
+    "controls": 16,
+    "media_elements": 6,
+    "css_image_elements": 4,
+    "controls_per_100k_css_px2": 4.86,
+    "box_coverage_percent": 68.62,
+    "box_coverage_with_css_images_percent": 69.45,
+    "text_box_percent": 8.24,
+    "control_box_percent": 64.2,
+    "media_box_percent": 51.45,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 419,
+      "end_y_exclusive": 470,
+      "height_css_px": 51
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 0,
+      "right_css_px": 0
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "お知らせ",
+        "heading_rect": {
+          "x": 10,
+          "y": 450.2,
+          "w": 370,
+          "h": 23
+        },
+        "target": "2026.11.09 期間限定 ネットストア10％OFFクーポン配信（最大3回）",
+        "target_rect": {
+          "x": 10,
+          "y": 488.2,
+          "w": 370,
+          "h": 31.2
+        },
+        "gap_css_px": 15
+      },
+      {
+        "heading": "おすすめ特集",
+        "heading_rect": {
+          "x": 10,
+          "y": 574.9,
+          "w": 370,
+          "h": 31
+        },
+        "target": "ロフトベストコスメ2026",
+        "target_rect": {
+          "x": 10,
+          "y": 620.9,
+          "w": 175.8,
+          "h": 131.1
+        },
+        "gap_css_px": 15
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "ロフトネットストア",
+        "left_rect": {
+          "x": 129,
+          "y": 10,
+          "w": 132,
+          "h": 25
+        },
+        "right_label": "お気に入り",
+        "right_rect": {
+          "x": 318,
+          "y": 5,
+          "w": 35,
+          "h": 35
+        },
+        "gap_css_px": 57
+      },
+      {
+        "left_label": "お気に入り",
+        "left_rect": {
+          "x": 318,
+          "y": 5,
+          "w": 35,
+          "h": 35
+        },
+        "right_label": "カート",
+        "right_rect": {
+          "x": 358,
+          "y": 5,
+          "w": 25,
+          "h": 35
+        },
+        "gap_css_px": 5
+      },
+      {
+        "left_label": "商品名・商品番号・キーワードで検索",
+        "left_rect": {
+          "x": 10,
+          "y": 45,
+          "w": 313,
+          "h": 25
+        },
+        "right_label": "詳細検索",
+        "right_rect": {
+          "x": 330,
+          "y": 45,
+          "w": 50,
+          "h": 25
+        },
+        "gap_css_px": 7
+      },
+      {
+        "left_label": "コスメ＆ビューティー",
+        "left_rect": {
+          "x": 50,
+          "y": 80,
+          "w": 110,
+          "h": 32
+        },
+        "right_label": "ステーショナリー",
+        "right_rect": {
+          "x": 181,
+          "y": 80,
+          "w": 88,
+          "h": 32
+        },
+        "gap_css_px": 21
+      },
+      {
+        "left_label": "ステーショナリー",
+        "left_rect": {
+          "x": 181,
+          "y": 80,
+          "w": 88,
+          "h": 32
+        },
+        "right_label": "ホーム＆キッチン",
+        "right_rect": {
+          "x": 290,
+          "y": 80,
+          "w": 88,
+          "h": 32
+        },
+        "gap_css_px": 21
+      },
+      {
+        "left_label": "ロフトベストコスメ2026",
+        "left_rect": {
+          "x": 10,
+          "y": 620.9,
+          "w": 175.8,
+          "h": 131.1
+        },
+        "right_label": "HOLIDAY GIFT COLLECTION",
+        "right_rect": {
+          "x": 204.3,
+          "y": 620.9,
+          "w": 175.8,
+          "h": 131.1
+        },
+        "gap_css_px": 18.5
+      },
+      {
+        "left_label": "WARM STYLE 2026",
+        "left_rect": {
+          "x": 10,
+          "y": 772,
+          "w": 175.8,
+          "h": 72
+        },
+        "right_label": "2027 ダイアリー",
+        "right_rect": {
+          "x": 204.3,
+          "y": 772,
+          "w": 175.8,
+          "h": 72
+        },
+        "gap_css_px": 18.5
+      }
+    ],
+    "fixed_or_sticky_candidates": 0
+  },
+  {
+    "observation_id": "reset-apple-desktop",
+    "brand": "Apple",
+    "mode": "desktop",
+    "start_url": "https://support.apple.com/en-us",
+    "rendered_url": "https://support.apple.com/",
+    "observed_at": "2026-11-23T11:28:55.251025+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "measured",
+    "text_fragments": 25,
+    "controls": 24,
+    "media_elements": 25,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 1.95,
+    "box_coverage_percent": 24.63,
+    "box_coverage_with_css_images_percent": 24.63,
+    "text_box_percent": 5.46,
+    "control_box_percent": 19.1,
+    "media_box_percent": 6.03,
+    "flat_band": {
+      "strip_x": [
+        342,
+        1023
+      ],
+      "start_y": 573,
+      "end_y_exclusive": 640,
+      "height_css_px": 67
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 184.5,
+      "right_css_px": 184.5
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "Apple Support",
+        "heading_rect": {
+          "x": 233.3,
+          "y": 289,
+          "w": 898.3,
+          "h": 68
+        },
+        "target": "Need help? Start here.",
+        "target_rect": {
+          "x": 233.3,
+          "y": 390.6,
+          "w": 898.3,
+          "h": 32
+        },
+        "gap_css_px": 33.6
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "Apple",
+        "left_rect": {
+          "x": 184.5,
+          "y": 0,
+          "w": 30,
+          "h": 44
+        },
+        "right_label": "Store",
+        "right_rect": {
+          "x": 236.1,
+          "y": 0,
+          "w": 46,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "Store",
+        "left_rect": {
+          "x": 236.1,
+          "y": 0,
+          "w": 46,
+          "h": 44
+        },
+        "right_label": "Mac",
+        "right_rect": {
+          "x": 303.7,
+          "y": 0,
+          "w": 39,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "Mac",
+        "left_rect": {
+          "x": 303.7,
+          "y": 0,
+          "w": 39,
+          "h": 44
+        },
+        "right_label": "iPad",
+        "right_rect": {
+          "x": 364.3,
+          "y": 0,
+          "w": 40,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "iPad",
+        "left_rect": {
+          "x": 364.3,
+          "y": 0,
+          "w": 40,
+          "h": 44
+        },
+        "right_label": "iPhone",
+        "right_rect": {
+          "x": 426,
+          "y": 0,
+          "w": 54,
+          "h": 44
+        },
+        "gap_css_px": 21.7
+      },
+      {
+        "left_label": "iPhone",
+        "left_rect": {
+          "x": 426,
+          "y": 0,
+          "w": 54,
+          "h": 44
+        },
+        "right_label": "Watch",
+        "right_rect": {
+          "x": 501.6,
+          "y": 0,
+          "w": 51,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "Watch",
+        "left_rect": {
+          "x": 501.6,
+          "y": 0,
+          "w": 51,
+          "h": 44
+        },
+        "right_label": "Vision",
+        "right_rect": {
+          "x": 574.2,
+          "y": 0,
+          "w": 50,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "Vision",
+        "left_rect": {
+          "x": 574.2,
+          "y": 0,
+          "w": 50,
+          "h": 44
+        },
+        "right_label": "AirPods",
+        "right_rect": {
+          "x": 645.8,
+          "y": 0,
+          "w": 59,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "AirPods",
+        "left_rect": {
+          "x": 645.8,
+          "y": 0,
+          "w": 59,
+          "h": 44
+        },
+        "right_label": "Home",
+        "right_rect": {
+          "x": 726.4,
+          "y": 0,
+          "w": 49,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "Home",
+        "left_rect": {
+          "x": 726.4,
+          "y": 0,
+          "w": 49,
+          "h": 44
+        },
+        "right_label": "Entertainment",
+        "right_rect": {
+          "x": 797,
+          "y": 0,
+          "w": 93,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "Entertainment",
+        "left_rect": {
+          "x": 797,
+          "y": 0,
+          "w": 93,
+          "h": 44
+        },
+        "right_label": "Accessories",
+        "right_rect": {
+          "x": 911.7,
+          "y": 0,
+          "w": 83,
+          "h": 44
+        },
+        "gap_css_px": 21.7
+      },
+      {
+        "left_label": "Accessories",
+        "left_rect": {
+          "x": 911.7,
+          "y": 0,
+          "w": 83,
+          "h": 44
+        },
+        "right_label": "Support",
+        "right_rect": {
+          "x": 1016.3,
+          "y": 0,
+          "w": 60,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "Support",
+        "left_rect": {
+          "x": 1016.3,
+          "y": 0,
+          "w": 60,
+          "h": 44
+        },
+        "right_label": "Search Support",
+        "right_rect": {
+          "x": 1097.9,
+          "y": 0,
+          "w": 31,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      }
+    ],
+    "fixed_or_sticky_candidates": 0
+  },
+  {
+    "observation_id": "reset-apple-mobile",
+    "brand": "Apple",
+    "mode": "mobile",
+    "start_url": "https://support.apple.com/en-us",
+    "rendered_url": "https://support.apple.com/",
+    "observed_at": "2026-11-23T11:28:58.129218+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 9,
+    "controls": 11,
+    "media_elements": 12,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 3.34,
+    "box_coverage_percent": 25.41,
+    "box_coverage_with_css_images_percent": 25.41,
+    "text_box_percent": 7.25,
+    "control_box_percent": 12.3,
+    "media_box_percent": 13.23,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 372,
+      "end_y_exclusive": 413,
+      "height_css_px": 41
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 0,
+      "right_css_px": 0
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "Apple Support",
+        "heading_rect": {
+          "x": 24.4,
+          "y": 271,
+          "w": 341.3,
+          "h": 44
+        },
+        "target": "Need help? Start here.",
+        "target_rect": {
+          "x": 24.4,
+          "y": 344.4,
+          "w": 341.3,
+          "h": 29
+        },
+        "gap_css_px": 29.4
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "Apple",
+        "left_rect": {
+          "x": 0,
+          "y": 0,
+          "w": 49,
+          "h": 48
+        },
+        "right_label": "Search Support",
+        "right_rect": {
+          "x": 246,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "gap_css_px": 197
+      },
+      {
+        "left_label": "Search Support",
+        "left_rect": {
+          "x": 246,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "right_label": "Shopping Bag",
+        "right_rect": {
+          "x": 294,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "gap_css_px": 0
+      },
+      {
+        "left_label": "Shopping Bag",
+        "left_rect": {
+          "x": 294,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "right_label": "Menu",
+        "right_rect": {
+          "x": 342,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "gap_css_px": 0
+      },
+      {
+        "left_label": "iPhone",
+        "left_rect": {
+          "x": 83.5,
+          "y": 413.4,
+          "w": 52.4,
+          "h": 95.6
+        },
+        "right_label": "Mac",
+        "right_rect": {
+          "x": 246.3,
+          "y": 429.8,
+          "w": 68,
+          "h": 79.2
+        },
+        "gap_css_px": 110.4
+      },
+      {
+        "left_label": "iPad",
+        "left_rect": {
+          "x": 89.7,
+          "y": 549,
+          "w": 40,
+          "h": 95.3
+        },
+        "right_label": "Watch",
+        "right_rect": {
+          "x": 256,
+          "y": 550.8,
+          "w": 48.7,
+          "h": 93.5
+        },
+        "gap_css_px": 126.3
+      },
+      {
+        "left_label": "Vision",
+        "left_rect": {
+          "x": 75.7,
+          "y": 687.8,
+          "w": 68,
+          "h": 79.2
+        },
+        "right_label": "AirPods",
+        "right_rect": {
+          "x": 250.6,
+          "y": 684.3,
+          "w": 59.5,
+          "h": 82.6
+        },
+        "gap_css_px": 106.9
+      }
+    ],
+    "fixed_or_sticky_candidates": 0
+  },
+  {
+    "observation_id": "reset-netflix-desktop",
+    "brand": "Netflix",
+    "mode": "desktop",
+    "start_url": "https://help.netflix.com/en",
+    "rendered_url": "https://help.netflix.com/en",
+    "observed_at": "2026-11-23T11:28:49.095177+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "measured",
+    "text_fragments": 11,
+    "controls": 10,
+    "media_elements": 2,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 0.81,
+    "box_coverage_percent": 6.78,
+    "box_coverage_with_css_images_percent": 6.78,
+    "text_box_percent": 3.22,
+    "control_box_percent": 5.2,
+    "media_box_percent": 0.28,
+    "flat_band": {
+      "strip_x": [
+        342,
+        1023
+      ],
+      "start_y": 508,
+      "end_y_exclusive": 776,
+      "height_css_px": 268
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 58.5,
+      "right_css_px": 58.5
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "How can we help?",
+        "heading_rect": {
+          "x": 382.5,
+          "y": 317.6,
+          "w": 600,
+          "h": 50
+        },
+        "target": "Search",
+        "target_rect": {
+          "x": 384.5,
+          "y": 393.6,
+          "w": 596,
+          "h": 42
+        },
+        "gap_css_px": 26
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "Netflix",
+        "left_rect": {
+          "x": 58.5,
+          "y": 17,
+          "w": 88,
+          "h": 32
+        },
+        "right_label": "Help Center",
+        "right_rect": {
+          "x": 179.5,
+          "y": 17,
+          "w": 99,
+          "h": 32
+        },
+        "gap_css_px": 33.0
+      },
+      {
+        "left_label": "Help Center",
+        "left_rect": {
+          "x": 179.5,
+          "y": 17,
+          "w": 99,
+          "h": 32
+        },
+        "right_label": "Join Netflix",
+        "right_rect": {
+          "x": 1099.8,
+          "y": 16,
+          "w": 111.3,
+          "h": 34
+        },
+        "gap_css_px": 821.3
+      },
+      {
+        "left_label": "Join Netflix",
+        "left_rect": {
+          "x": 1099.8,
+          "y": 16,
+          "w": 111.3,
+          "h": 34
+        },
+        "right_label": "Sign in",
+        "right_rect": {
+          "x": 1227.1,
+          "y": 17,
+          "w": 79.4,
+          "h": 32
+        },
+        "gap_css_px": 16.0
+      },
+      {
+        "left_label": "How to sign up for Netflix",
+        "left_rect": {
+          "x": 523.2,
+          "y": 463.6,
+          "w": 184.7,
+          "h": 20
+        },
+        "right_label": "Plans and Pricing",
+        "right_rect": {
+          "x": 716,
+          "y": 463.6,
+          "w": 126.2,
+          "h": 20
+        },
+        "gap_css_px": 8.1
+      }
+    ],
+    "fixed_or_sticky_candidates": 0
+  },
+  {
+    "observation_id": "reset-netflix-mobile",
+    "brand": "Netflix",
+    "mode": "mobile",
+    "start_url": "https://help.netflix.com/en",
+    "rendered_url": "https://help.netflix.com/en",
+    "observed_at": "2026-11-23T11:28:49.613889+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 12,
+    "controls": 10,
+    "media_elements": 2,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 3.04,
+    "box_coverage_percent": 22.01,
+    "box_coverage_with_css_images_percent": 22.01,
+    "text_box_percent": 11.84,
+    "control_box_percent": 16.68,
+    "media_box_percent": 0.35,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 101,
+      "end_y_exclusive": 323,
+      "height_css_px": 222
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 12,
+      "right_css_px": 12.0
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "How can we help?",
+        "heading_rect": {
+          "x": 12,
+          "y": 324.7,
+          "w": 366,
+          "h": 50
+        },
+        "target": "Search",
+        "target_rect": {
+          "x": 14,
+          "y": 400.7,
+          "w": 362,
+          "h": 42
+        },
+        "gap_css_px": 26
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "Netflix",
+        "left_rect": {
+          "x": 12,
+          "y": 17,
+          "w": 17.7,
+          "h": 32
+        },
+        "right_label": "Join Netflix",
+        "right_rect": {
+          "x": 171.3,
+          "y": 16,
+          "w": 111.3,
+          "h": 34
+        },
+        "gap_css_px": 141.6
+      },
+      {
+        "left_label": "Join Netflix",
+        "left_rect": {
+          "x": 171.3,
+          "y": 16,
+          "w": 111.3,
+          "h": 34
+        },
+        "right_label": "Sign in",
+        "right_rect": {
+          "x": 298.6,
+          "y": 17,
+          "w": 79.4,
+          "h": 32
+        },
+        "gap_css_px": 16.0
+      }
+    ],
+    "fixed_or_sticky_candidates": 0
+  },
+  {
+    "observation_id": "reset-spotify-desktop",
+    "brand": "Spotify",
+    "mode": "desktop",
+    "start_url": "https://support.spotify.com/us/",
+    "rendered_url": "https://support.spotify.com/us/",
+    "observed_at": "2026-11-23T11:28:52.480758+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "measured",
+    "text_fragments": 16,
+    "controls": 15,
+    "media_elements": 14,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 1.22,
+    "box_coverage_percent": 26.05,
+    "box_coverage_with_css_images_percent": 26.05,
+    "text_box_percent": 5.37,
+    "control_box_percent": 22.54,
+    "media_box_percent": 0.66,
+    "flat_band": {
+      "strip_x": [
+        342,
+        1023
+      ],
+      "start_y": 72,
+      "end_y_exclusive": 136,
+      "height_css_px": 64
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 48,
+      "right_css_px": 48.0
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "Spotify Support",
+        "heading_rect": {
+          "x": 384.5,
+          "y": 136,
+          "w": 596,
+          "h": 106
+        },
+        "target": "This is a text box where you can ask a question or describe ",
+        "target_rect": {
+          "x": 409.5,
+          "y": 291,
+          "w": 546,
+          "h": 22
+        },
+        "gap_css_px": 49
+      },
+      {
+        "heading": "Browse help articles",
+        "heading_rect": {
+          "x": 384.5,
+          "y": 451,
+          "w": 596,
+          "h": 37
+        },
+        "target": "Payments & billing",
+        "target_rect": {
+          "x": 384.5,
+          "y": 488,
+          "w": 596,
+          "h": 67
+        },
+        "gap_css_px": 0
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "Spotify Support Site",
+        "left_rect": {
+          "x": 48,
+          "y": 18,
+          "w": 131.6,
+          "h": 36
+        },
+        "right_label": "Explore Premium",
+        "right_rect": {
+          "x": 211.6,
+          "y": 12,
+          "w": 127.1,
+          "h": 48
+        },
+        "gap_css_px": 32.0
+      },
+      {
+        "left_label": "Explore Premium",
+        "left_rect": {
+          "x": 211.6,
+          "y": 12,
+          "w": 127.1,
+          "h": 48
+        },
+        "right_label": "Install App",
+        "right_rect": {
+          "x": 362.7,
+          "y": 12,
+          "w": 79.3,
+          "h": 48
+        },
+        "gap_css_px": 24.0
+      },
+      {
+        "left_label": "Install App",
+        "left_rect": {
+          "x": 362.7,
+          "y": 12,
+          "w": 79.3,
+          "h": 48
+        },
+        "right_label": "Change language",
+        "right_rect": {
+          "x": 1089.5,
+          "y": 20,
+          "w": 16,
+          "h": 32
+        },
+        "gap_css_px": 647.5
+      },
+      {
+        "left_label": "Change language",
+        "left_rect": {
+          "x": 1089.5,
+          "y": 20,
+          "w": 16,
+          "h": 32
+        },
+        "right_label": "Sign up",
+        "right_rect": {
+          "x": 1129.5,
+          "y": 12,
+          "w": 55.2,
+          "h": 48
+        },
+        "gap_css_px": 24.0
+      },
+      {
+        "left_label": "Sign up",
+        "left_rect": {
+          "x": 1129.5,
+          "y": 12,
+          "w": 55.2,
+          "h": 48
+        },
+        "right_label": "Log in",
+        "right_rect": {
+          "x": 1208.7,
+          "y": 12,
+          "w": 108.3,
+          "h": 48
+        },
+        "gap_css_px": 24.0
+      }
+    ],
+    "fixed_or_sticky_candidates": 1
+  },
+  {
+    "observation_id": "reset-spotify-mobile",
+    "brand": "Spotify",
+    "mode": "mobile",
+    "start_url": "https://support.spotify.com/us/",
+    "rendered_url": "https://support.spotify.com/us/",
+    "observed_at": "2026-11-23T11:28:55.061756+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 27,
+    "controls": 26,
+    "media_elements": 17,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 7.9,
+    "box_coverage_percent": 57.54,
+    "box_coverage_with_css_images_percent": 57.54,
+    "text_box_percent": 14.21,
+    "control_box_percent": 50.35,
+    "media_box_percent": 2.16,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 242,
+      "end_y_exclusive": 317,
+      "height_css_px": 75
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 16,
+      "right_css_px": 16
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "Spotify Support",
+        "heading_rect": {
+          "x": 16,
+          "y": 108,
+          "w": 358,
+          "h": 71
+        },
+        "target": "This is a text box where you can ask a question or describe ",
+        "target_rect": {
+          "x": 37,
+          "y": 220,
+          "w": 316,
+          "h": 22
+        },
+        "gap_css_px": 41
+      },
+      {
+        "heading": "Browse help articles",
+        "heading_rect": {
+          "x": 16,
+          "y": 385,
+          "w": 358,
+          "h": 32
+        },
+        "target": "Payments & billing",
+        "target_rect": {
+          "x": 16,
+          "y": 417,
+          "w": 358,
+          "h": 67
+        },
+        "gap_css_px": 0
+      },
+      {
+        "heading": "Manage your account",
+        "heading_rect": {
+          "x": 16,
+          "y": 486,
+          "w": 358,
+          "h": 67
+        },
+        "target": "Privacy and social controls",
+        "target_rect": {
+          "x": 72,
+          "y": 834,
+          "w": 188.8,
+          "h": 22
+        },
+        "gap_css_px": 281
+      },
+      {
+        "heading": "Premium plans",
+        "heading_rect": {
+          "x": 16,
+          "y": 555,
+          "w": 358,
+          "h": 67
+        },
+        "target": "Address and verification for Family plan",
+        "target_rect": {
+          "x": 72,
+          "y": 826,
+          "w": 249.3,
+          "h": 44
+        },
+        "gap_css_px": 204
+      },
+      {
+        "heading": "In-app features",
+        "heading_rect": {
+          "x": 16,
+          "y": 624,
+          "w": 358,
+          "h": 67
+        },
+        "target": "Playlists",
+        "target_rect": {
+          "x": 48,
+          "y": 821,
+          "w": 302,
+          "h": 19
+        },
+        "gap_css_px": 130
+      },
+      {
+        "heading": "Playlists",
+        "heading_rect": {
+          "x": 48,
+          "y": 821,
+          "w": 302,
+          "h": 19
+        },
+        "target": "Create and edit playlists",
+        "target_rect": {
+          "x": 72,
+          "y": 840,
+          "w": 174.5,
+          "h": 22
+        },
+        "gap_css_px": 0
+      },
+      {
+        "heading": "Devices & troubleshooting",
+        "heading_rect": {
+          "x": 16,
+          "y": 693,
+          "w": 358,
+          "h": 67
+        },
+        "target": "Spotify on Apple Watch",
+        "target_rect": {
+          "x": 72,
+          "y": 823,
+          "w": 169.5,
+          "h": 22
+        },
+        "gap_css_px": 63
+      },
+      {
+        "heading": "Safety & privacy",
+        "heading_rect": {
+          "x": 16,
+          "y": 762,
+          "w": 358,
+          "h": 67
+        },
+        "target": "Data rights and privacy choices",
+        "target_rect": {
+          "x": 56,
+          "y": 830,
+          "w": 224.1,
+          "h": 22
+        },
+        "gap_css_px": 1
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "Spotify Support Site",
+        "left_rect": {
+          "x": 16,
+          "y": 16,
+          "w": 102.4,
+          "h": 28
+        },
+        "right_label": "Change language",
+        "right_rect": {
+          "x": 173.2,
+          "y": 14,
+          "w": 16,
+          "h": 32
+        },
+        "gap_css_px": 54.8
+      },
+      {
+        "left_label": "Change language",
+        "left_rect": {
+          "x": 173.2,
+          "y": 14,
+          "w": 16,
+          "h": 32
+        },
+        "right_label": "Sign up",
+        "right_rect": {
+          "x": 205.2,
+          "y": 14,
+          "w": 44.9,
+          "h": 32
+        },
+        "gap_css_px": 16.0
+      },
+      {
+        "left_label": "Sign up",
+        "left_rect": {
+          "x": 205.2,
+          "y": 14,
+          "w": 44.9,
+          "h": 32
+        },
+        "right_label": "Log in",
+        "right_rect": {
+          "x": 266,
+          "y": 14,
+          "w": 68,
+          "h": 32
+        },
+        "gap_css_px": 15.9
+      },
+      {
+        "left_label": "Log in",
+        "left_rect": {
+          "x": 266,
+          "y": 14,
+          "w": 68,
+          "h": 32
+        },
+        "right_label": "Open menu",
+        "right_rect": {
+          "x": 350,
+          "y": 6,
+          "w": 24,
+          "h": 48
+        },
+        "gap_css_px": 16
+      }
+    ],
+    "fixed_or_sticky_candidates": 1
+  },
+  {
+    "observation_id": "returns-apple-returns-desktop",
+    "brand": "Apple",
+    "mode": "desktop",
+    "start_url": "https://www.apple.com/shop/help",
+    "rendered_url": "https://www.apple.com/shop/help",
+    "observed_at": "2026-11-23T11:28:27.618434+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "measured",
+    "text_fragments": 63,
+    "controls": 20,
+    "media_elements": 15,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 1.63,
+    "box_coverage_percent": 17.17,
+    "box_coverage_with_css_images_percent": 17.17,
+    "text_box_percent": 15.08,
+    "control_box_percent": 3.59,
+    "media_box_percent": 1.76,
+    "flat_band": {
+      "strip_x": [
+        342,
+        1023
+      ],
+      "start_y": 698,
+      "end_y_exclusive": 777,
+      "height_css_px": 79
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 170.5,
+      "right_css_px": 184.5
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "How can we help?",
+        "heading_rect": {
+          "x": 192.5,
+          "y": 96,
+          "w": 600,
+          "h": 108
+        },
+        "target": "We want you to have the simplest, easiest buying experience ",
+        "target_rect": {
+          "x": 192.5,
+          "y": 217.6,
+          "w": 600,
+          "h": 75
+        },
+        "gap_css_px": 13.6
+      },
+      {
+        "heading": "Help yourself.",
+        "heading_rect": {
+          "x": 852.5,
+          "y": 114,
+          "w": 320,
+          "h": 93
+        },
+        "target": "Check order status, track or change your order, return items",
+        "target_rect": {
+          "x": 852.5,
+          "y": 220.6,
+          "w": 320,
+          "h": 50
+        },
+        "gap_css_px": 13.6
+      },
+      {
+        "heading": "iPhone",
+        "heading_rect": {
+          "x": 192.5,
+          "y": 373.6,
+          "w": 280,
+          "h": 83
+        },
+        "target": "Learn more about iPhones",
+        "target_rect": {
+          "x": 192.5,
+          "y": 714.2,
+          "w": 97.9,
+          "h": 20
+        },
+        "gap_css_px": 257.6
+      },
+      {
+        "heading": "Home",
+        "heading_rect": {
+          "x": 542.5,
+          "y": 373.6,
+          "w": 280,
+          "h": 83
+        },
+        "target": "Learn more about Home",
+        "target_rect": {
+          "x": 542.5,
+          "y": 646.2,
+          "w": 97.9,
+          "h": 20
+        },
+        "gap_css_px": 189.6
+      },
+      {
+        "heading": "Payment & Pricing",
+        "heading_rect": {
+          "x": 892.5,
+          "y": 373.6,
+          "w": 280,
+          "h": 83
+        },
+        "target": "Learn more about payments",
+        "target_rect": {
+          "x": 892.5,
+          "y": 633.2,
+          "w": 97.9,
+          "h": 20
+        },
+        "gap_css_px": 176.6
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "Apple",
+        "left_rect": {
+          "x": 184.5,
+          "y": 0,
+          "w": 30,
+          "h": 44
+        },
+        "right_label": "Store",
+        "right_rect": {
+          "x": 236.1,
+          "y": 0,
+          "w": 46,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "Store",
+        "left_rect": {
+          "x": 236.1,
+          "y": 0,
+          "w": 46,
+          "h": 44
+        },
+        "right_label": "Mac",
+        "right_rect": {
+          "x": 303.7,
+          "y": 0,
+          "w": 39,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "Mac",
+        "left_rect": {
+          "x": 303.7,
+          "y": 0,
+          "w": 39,
+          "h": 44
+        },
+        "right_label": "iPad",
+        "right_rect": {
+          "x": 364.3,
+          "y": 0,
+          "w": 40,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "iPad",
+        "left_rect": {
+          "x": 364.3,
+          "y": 0,
+          "w": 40,
+          "h": 44
+        },
+        "right_label": "iPhone",
+        "right_rect": {
+          "x": 426,
+          "y": 0,
+          "w": 54,
+          "h": 44
+        },
+        "gap_css_px": 21.7
+      },
+      {
+        "left_label": "iPhone",
+        "left_rect": {
+          "x": 426,
+          "y": 0,
+          "w": 54,
+          "h": 44
+        },
+        "right_label": "Watch",
+        "right_rect": {
+          "x": 501.6,
+          "y": 0,
+          "w": 51,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "Watch",
+        "left_rect": {
+          "x": 501.6,
+          "y": 0,
+          "w": 51,
+          "h": 44
+        },
+        "right_label": "Vision",
+        "right_rect": {
+          "x": 574.2,
+          "y": 0,
+          "w": 50,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "Vision",
+        "left_rect": {
+          "x": 574.2,
+          "y": 0,
+          "w": 50,
+          "h": 44
+        },
+        "right_label": "AirPods",
+        "right_rect": {
+          "x": 645.8,
+          "y": 0,
+          "w": 59,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "AirPods",
+        "left_rect": {
+          "x": 645.8,
+          "y": 0,
+          "w": 59,
+          "h": 44
+        },
+        "right_label": "Home",
+        "right_rect": {
+          "x": 726.4,
+          "y": 0,
+          "w": 49,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "Home",
+        "left_rect": {
+          "x": 726.4,
+          "y": 0,
+          "w": 49,
+          "h": 44
+        },
+        "right_label": "Entertainment",
+        "right_rect": {
+          "x": 797,
+          "y": 0,
+          "w": 93,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "Entertainment",
+        "left_rect": {
+          "x": 797,
+          "y": 0,
+          "w": 93,
+          "h": 44
+        },
+        "right_label": "Accessories",
+        "right_rect": {
+          "x": 911.7,
+          "y": 0,
+          "w": 83,
+          "h": 44
+        },
+        "gap_css_px": 21.7
+      },
+      {
+        "left_label": "Accessories",
+        "left_rect": {
+          "x": 911.7,
+          "y": 0,
+          "w": 83,
+          "h": 44
+        },
+        "right_label": "Support",
+        "right_rect": {
+          "x": 1016.3,
+          "y": 0,
+          "w": 60,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      },
+      {
+        "left_label": "Support",
+        "left_rect": {
+          "x": 1016.3,
+          "y": 0,
+          "w": 60,
+          "h": 44
+        },
+        "right_label": "Search apple.com",
+        "right_rect": {
+          "x": 1097.9,
+          "y": 0,
+          "w": 31,
+          "h": 44
+        },
+        "gap_css_px": 21.6
+      }
+    ],
+    "fixed_or_sticky_candidates": 1
+  },
+  {
+    "observation_id": "returns-apple-returns-mobile",
+    "brand": "Apple",
+    "mode": "mobile",
+    "start_url": "https://www.apple.com/shop/help",
+    "rendered_url": "https://www.apple.com/shop/help",
+    "observed_at": "2026-11-23T11:28:27.727868+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 22,
+    "controls": 13,
+    "media_elements": 5,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 3.95,
+    "box_coverage_percent": 29.04,
+    "box_coverage_with_css_images_percent": 29.04,
+    "text_box_percent": 25.52,
+    "control_box_percent": 12.0,
+    "media_box_percent": 0.9,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 602,
+      "end_y_exclusive": 670,
+      "height_css_px": 68
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 0,
+      "right_css_px": 0
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "How can we help?",
+        "heading_rect": {
+          "x": 24.4,
+          "y": 96,
+          "w": 341.3,
+          "h": 96
+        },
+        "target": "We want you to have the simplest, easiest buying experience ",
+        "target_rect": {
+          "x": 24.4,
+          "y": 205.6,
+          "w": 341.3,
+          "h": 125
+        },
+        "gap_css_px": 13.6
+      },
+      {
+        "heading": "Help yourself.",
+        "heading_rect": {
+          "x": 24.4,
+          "y": 330.6,
+          "w": 341.3,
+          "h": 72
+        },
+        "target": "Check order status, track or change your order, return items",
+        "target_rect": {
+          "x": 24.4,
+          "y": 416.2,
+          "w": 341.3,
+          "h": 50
+        },
+        "gap_css_px": 13.6
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "Apple",
+        "left_rect": {
+          "x": 0,
+          "y": 0,
+          "w": 49,
+          "h": 48
+        },
+        "right_label": "Search apple.com",
+        "right_rect": {
+          "x": 246,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "gap_css_px": 197
+      },
+      {
+        "left_label": "Search apple.com",
+        "left_rect": {
+          "x": 246,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "right_label": "Shopping Bag",
+        "right_rect": {
+          "x": 294,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "gap_css_px": 0
+      },
+      {
+        "left_label": "Shopping Bag",
+        "left_rect": {
+          "x": 294,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "right_label": "Menu",
+        "right_rect": {
+          "x": 342,
+          "y": 0,
+          "w": 48,
+          "h": 48
+        },
+        "gap_css_px": 0
+      }
+    ],
+    "fixed_or_sticky_candidates": 1
+  },
+  {
+    "observation_id": "returns-argos-returns-desktop",
+    "brand": "Argos",
+    "mode": "desktop",
+    "start_url": "https://help.argos.co.uk/",
+    "rendered_url": "https://help.argos.co.uk/",
+    "observed_at": "2026-11-23T11:28:34.559973+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "challenge"
+  },
+  {
+    "observation_id": "returns-argos-returns-mobile",
+    "brand": "Argos",
+    "mode": "mobile",
+    "start_url": "https://help.argos.co.uk/",
+    "rendered_url": "https://help.argos.co.uk/",
+    "observed_at": "2026-11-23T11:28:34.850818+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 15,
+    "controls": 12,
+    "media_elements": 10,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 3.65,
+    "box_coverage_percent": 51.01,
+    "box_coverage_with_css_images_percent": 51.01,
+    "text_box_percent": 15.97,
+    "control_box_percent": 42.94,
+    "media_box_percent": 1.65,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 367,
+      "end_y_exclusive": 402,
+      "height_css_px": 35
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 10,
+      "right_css_px": 0
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "HOW CAN WE HELP?",
+        "heading_rect": {
+          "x": 16,
+          "y": 167,
+          "w": 358,
+          "h": 32
+        },
+        "target": "Conduct a search",
+        "target_rect": {
+          "x": 16,
+          "y": 279,
+          "w": 268,
+          "h": 48
+        },
+        "gap_css_px": 80
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "Shop",
+        "left_rect": {
+          "x": 149.3,
+          "y": 10,
+          "w": 35.4,
+          "h": 49
+        },
+        "right_label": "Wishlist",
+        "right_rect": {
+          "x": 254.5,
+          "y": 10,
+          "w": 67.7,
+          "h": 49
+        },
+        "gap_css_px": 69.8
+      },
+      {
+        "left_label": "Account",
+        "left_rect": {
+          "x": 184.7,
+          "y": 10,
+          "w": 69.8,
+          "h": 49
+        },
+        "right_label": "Wishlist",
+        "right_rect": {
+          "x": 254.5,
+          "y": 10,
+          "w": 67.7,
+          "h": 49
+        },
+        "gap_css_px": 0.0
+      },
+      {
+        "left_label": "Wishlist",
+        "left_rect": {
+          "x": 254.5,
+          "y": 10,
+          "w": 67.7,
+          "h": 49
+        },
+        "right_label": "Trolley",
+        "right_rect": {
+          "x": 322.2,
+          "y": 10,
+          "w": 57.8,
+          "h": 49
+        },
+        "gap_css_px": -0.0
+      },
+      {
+        "left_label": "Conduct a search",
+        "left_rect": {
+          "x": 16,
+          "y": 279,
+          "w": 268,
+          "h": 48
+        },
+        "right_label": "Submit Search",
+        "right_rect": {
+          "x": 284,
+          "y": 279,
+          "w": 90,
+          "h": 48
+        },
+        "gap_css_px": 0
+      }
+    ],
+    "fixed_or_sticky_candidates": 0
+  },
+  {
+    "observation_id": "returns-ikea-returns-desktop",
+    "brand": "IKEA",
+    "mode": "desktop",
+    "start_url": "https://www.ikea.com/us/en/customer-service/",
+    "rendered_url": "https://www.ikea.com/us/en/customer-service/",
+    "observed_at": "2026-11-23T11:28:27.742577+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "measured",
+    "text_fragments": 42,
+    "controls": 29,
+    "media_elements": 23,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 2.36,
+    "box_coverage_percent": 30.83,
+    "box_coverage_with_css_images_percent": 30.84,
+    "text_box_percent": 9.7,
+    "control_box_percent": 24.14,
+    "media_box_percent": 8.95,
+    "flat_band": {
+      "strip_x": [
+        342,
+        1023
+      ],
+      "start_y": 412,
+      "end_y_exclusive": 484,
+      "height_css_px": 72
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 48,
+      "right_css_px": 0
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "Planning Tools",
+        "heading_rect": {
+          "x": 80,
+          "y": 544,
+          "w": 252.5,
+          "h": 24
+        },
+        "target": "Create your perfect storage and living room solutions",
+        "target_rect": {
+          "x": 80,
+          "y": 572,
+          "w": 252.5,
+          "h": 44
+        },
+        "gap_css_px": 4
+      },
+      {
+        "heading": "Return or change products",
+        "heading_rect": {
+          "x": 397.5,
+          "y": 544,
+          "w": 252.5,
+          "h": 24
+        },
+        "target": "Find out how to return or exchange your products",
+        "target_rect": {
+          "x": 397.5,
+          "y": 572,
+          "w": 252.5,
+          "h": 44
+        },
+        "gap_css_px": 4
+      },
+      {
+        "heading": "Taskrabbit Assembly",
+        "heading_rect": {
+          "x": 715,
+          "y": 544,
+          "w": 252.5,
+          "h": 24
+        },
+        "target": "Find flexible and affordable ways to get your to-dos done",
+        "target_rect": {
+          "x": 715,
+          "y": 572,
+          "w": 252.5,
+          "h": 44
+        },
+        "gap_css_px": 4
+      },
+      {
+        "heading": "Need an extra part?",
+        "heading_rect": {
+          "x": 1032.5,
+          "y": 544,
+          "w": 252.5,
+          "h": 24
+        },
+        "target": "Order spare or missing parts",
+        "target_rect": {
+          "x": 1032.5,
+          "y": 572,
+          "w": 252.5,
+          "h": 22
+        },
+        "gap_css_px": 4
+      },
+      {
+        "heading": "How can we help you?",
+        "heading_rect": {
+          "x": 48,
+          "y": 739,
+          "w": 731.9,
+          "h": 40.6
+        },
+        "target": "Want to check the status of your order? Want to know how to ",
+        "target_rect": {
+          "x": 48,
+          "y": 787.5,
+          "w": 731.9,
+          "h": 21
+        },
+        "gap_css_px": 8
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "EN US English, Change language or country/region, current la",
+        "left_rect": {
+          "x": 48,
+          "y": 0,
+          "w": 118.6,
+          "h": 48
+        },
+        "right_label": "See previous items",
+        "right_rect": {
+          "x": 309.5,
+          "y": 8,
+          "w": 32,
+          "h": 32
+        },
+        "gap_css_px": 142.9
+      },
+      {
+        "left_label": "See previous items",
+        "left_rect": {
+          "x": 309.5,
+          "y": 8,
+          "w": 32,
+          "h": 32
+        },
+        "right_label": "Early Black Friday deals! Up to 30% off select items.*",
+        "right_rect": {
+          "x": 462.5,
+          "y": 12,
+          "w": 328.4,
+          "h": 24
+        },
+        "gap_css_px": 121.0
+      },
+      {
+        "left_label": "Early Black Friday deals! Up to 30% off select items.*",
+        "left_rect": {
+          "x": 462.5,
+          "y": 12,
+          "w": 328.4,
+          "h": 24
+        },
+        "right_label": "See next items",
+        "right_rect": {
+          "x": 912,
+          "y": 8,
+          "w": 32,
+          "h": 32
+        },
+        "gap_css_px": 121.1
+      },
+      {
+        "left_label": "See next items",
+        "left_rect": {
+          "x": 912,
+          "y": 8,
+          "w": 32,
+          "h": 32
+        },
+        "right_label": "Enter ZIP code",
+        "right_rect": {
+          "x": 1050.2,
+          "y": 0,
+          "w": 130.6,
+          "h": 48
+        },
+        "gap_css_px": 106.2
+      },
+      {
+        "left_label": "Enter ZIP code",
+        "left_rect": {
+          "x": 1050.2,
+          "y": 0,
+          "w": 130.6,
+          "h": 48
+        },
+        "right_label": "Select store",
+        "right_rect": {
+          "x": 1204.9,
+          "y": 0,
+          "w": 112.1,
+          "h": 48
+        },
+        "gap_css_px": 24.1
+      },
+      {
+        "left_label": "IKEA Home",
+        "left_rect": {
+          "x": 48,
+          "y": 73,
+          "w": 98.4,
+          "h": 40
+        },
+        "right_label": "Products",
+        "right_rect": {
+          "x": 186.4,
+          "y": 70,
+          "w": 93.8,
+          "h": 46
+        },
+        "gap_css_px": 40.0
+      },
+      {
+        "left_label": "Products",
+        "left_rect": {
+          "x": 186.4,
+          "y": 70,
+          "w": 93.8,
+          "h": 46
+        },
+        "right_label": "Rooms",
+        "right_rect": {
+          "x": 280.2,
+          "y": 70,
+          "w": 79.3,
+          "h": 46
+        },
+        "gap_css_px": -0.0
+      },
+      {
+        "left_label": "Rooms",
+        "left_rect": {
+          "x": 280.2,
+          "y": 70,
+          "w": 79.3,
+          "h": 46
+        },
+        "right_label": "Deals",
+        "right_rect": {
+          "x": 359.5,
+          "y": 70,
+          "w": 70.3,
+          "h": 46
+        },
+        "gap_css_px": 0.0
+      },
+      {
+        "left_label": "Deals",
+        "left_rect": {
+          "x": 359.5,
+          "y": 70,
+          "w": 70.3,
+          "h": 46
+        },
+        "right_label": "Design & ideas",
+        "right_rect": {
+          "x": 429.8,
+          "y": 70,
+          "w": 134.5,
+          "h": 46
+        },
+        "gap_css_px": 0.0
+      },
+      {
+        "left_label": "Design & ideas",
+        "left_rect": {
+          "x": 429.8,
+          "y": 70,
+          "w": 134.5,
+          "h": 46
+        },
+        "right_label": "Services",
+        "right_rect": {
+          "x": 564.3,
+          "y": 70,
+          "w": 89,
+          "h": 46
+        },
+        "gap_css_px": -0.0
+      },
+      {
+        "left_label": "Services",
+        "left_rect": {
+          "x": 564.3,
+          "y": 70,
+          "w": 89,
+          "h": 46
+        },
+        "right_label": "Search by product",
+        "right_rect": {
+          "x": 693.3,
+          "y": 69,
+          "w": 435.7,
+          "h": 48
+        },
+        "gap_css_px": 40.0
+      },
+      {
+        "left_label": "Search by product",
+        "left_rect": {
+          "x": 693.3,
+          "y": 69,
+          "w": 435.7,
+          "h": 48
+        },
+        "right_label": "Hej! Log in or sign up",
+        "right_rect": {
+          "x": 1181,
+          "y": 73,
+          "w": 40,
+          "h": 40
+        },
+        "gap_css_px": 52.0
+      }
+    ],
+    "fixed_or_sticky_candidates": 1
+  },
+  {
+    "observation_id": "returns-ikea-returns-mobile",
+    "brand": "IKEA",
+    "mode": "mobile",
+    "start_url": "https://www.ikea.com/us/en/customer-service/",
+    "rendered_url": "https://www.ikea.com/us/en/customer-service/",
+    "observed_at": "2026-11-23T11:28:27.744095+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 21,
+    "controls": 14,
+    "media_elements": 15,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 4.25,
+    "box_coverage_percent": 36.7,
+    "box_coverage_with_css_images_percent": 36.7,
+    "text_box_percent": 12.73,
+    "control_box_percent": 27.05,
+    "media_box_percent": 10.22,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 729,
+      "end_y_exclusive": 790,
+      "height_css_px": 61
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 20,
+      "right_css_px": 0
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "Planning Tools",
+        "heading_rect": {
+          "x": 52,
+          "y": 598.5,
+          "w": 285,
+          "h": 24
+        },
+        "target": "Create your perfect storage and living room solutions",
+        "target_rect": {
+          "x": 52,
+          "y": 626.5,
+          "w": 285,
+          "h": 44
+        },
+        "gap_css_px": 4
+      },
+      {
+        "heading": "Return or change products",
+        "heading_rect": {
+          "x": 52,
+          "y": 789.5,
+          "w": 285,
+          "h": 24
+        },
+        "target": "Find out how to return or exchange your products",
+        "target_rect": {
+          "x": 52,
+          "y": 817.5,
+          "w": 285,
+          "h": 44
+        },
+        "gap_css_px": 4
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "EN US English, Change language or country/region, current la",
+        "left_rect": {
+          "x": 20,
+          "y": 0,
+          "w": 47.8,
+          "h": 48
+        },
+        "right_label": "Enter ZIP code",
+        "right_rect": {
+          "x": 147.6,
+          "y": 0,
+          "w": 113.1,
+          "h": 48
+        },
+        "gap_css_px": 79.8
+      },
+      {
+        "left_label": "Enter ZIP code",
+        "left_rect": {
+          "x": 147.6,
+          "y": 0,
+          "w": 113.1,
+          "h": 48
+        },
+        "right_label": "Select store",
+        "right_rect": {
+          "x": 272.7,
+          "y": 0,
+          "w": 97.3,
+          "h": 48
+        },
+        "gap_css_px": 12.0
+      },
+      {
+        "left_label": "IKEA Home",
+        "left_rect": {
+          "x": 20,
+          "y": 68,
+          "w": 80,
+          "h": 32.5
+        },
+        "right_label": "Hej! Log in or sign up",
+        "right_rect": {
+          "x": 210,
+          "y": 64.3,
+          "w": 40,
+          "h": 40
+        },
+        "gap_css_px": 110
+      },
+      {
+        "left_label": "Hej! Log in or sign up",
+        "left_rect": {
+          "x": 210,
+          "y": 64.3,
+          "w": 40,
+          "h": 40
+        },
+        "right_label": "Favorites",
+        "right_rect": {
+          "x": 250,
+          "y": 64.3,
+          "w": 40,
+          "h": 40
+        },
+        "gap_css_px": 0
+      },
+      {
+        "left_label": "Favorites",
+        "left_rect": {
+          "x": 250,
+          "y": 64.3,
+          "w": 40,
+          "h": 40
+        },
+        "right_label": "Shopping bag",
+        "right_rect": {
+          "x": 290,
+          "y": 64.3,
+          "w": 40,
+          "h": 40
+        },
+        "gap_css_px": 0
+      },
+      {
+        "left_label": "Shopping bag",
+        "left_rect": {
+          "x": 290,
+          "y": 64.3,
+          "w": 40,
+          "h": 40
+        },
+        "right_label": "Open the navigation menu",
+        "right_rect": {
+          "x": 330,
+          "y": 64.3,
+          "w": 40,
+          "h": 40
+        },
+        "gap_css_px": 0
+      },
+      {
+        "left_label": "Track & Manage My Order",
+        "left_rect": {
+          "x": 20,
+          "y": 342.5,
+          "w": 135,
+          "h": 148
+        },
+        "right_label": "Services",
+        "right_rect": {
+          "x": 175,
+          "y": 342.5,
+          "w": 135,
+          "h": 148
+        },
+        "gap_css_px": 20
+      },
+      {
+        "left_label": "Services",
+        "left_rect": {
+          "x": 175,
+          "y": 342.5,
+          "w": 135,
+          "h": 148
+        },
+        "right_label": "See next items",
+        "right_rect": {
+          "x": 346,
+          "y": 396.5,
+          "w": 40,
+          "h": 40
+        },
+        "gap_css_px": 36
+      }
+    ],
+    "fixed_or_sticky_candidates": 0
+  },
+  {
+    "observation_id": "shirt-beams-desktop",
+    "brand": "BEAMS",
+    "mode": "desktop",
+    "start_url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+    "rendered_url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+    "observed_at": "2026-11-23T11:29:02.811990+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "challenge"
+  },
+  {
+    "observation_id": "shirt-beams-mobile",
+    "brand": "BEAMS",
+    "mode": "mobile",
+    "start_url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+    "rendered_url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+    "observed_at": "2026-11-23T11:29:05.397544+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 43,
+    "controls": 30,
+    "media_elements": 9,
+    "css_image_elements": 6,
+    "controls_per_100k_css_px2": 9.11,
+    "box_coverage_percent": 57.27,
+    "box_coverage_with_css_images_percent": 58.05,
+    "text_box_percent": 14.11,
+    "control_box_percent": 48.56,
+    "media_box_percent": 23.33,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 524,
+      "end_y_exclusive": 555,
+      "height_css_px": 31
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 0,
+      "right_css_px": 0
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "Tシャツ・カットソー (88)",
+        "heading_rect": {
+          "x": 20,
+          "y": 269.4,
+          "w": 350,
+          "h": 16
+        },
+        "target": "> スタイリングを見る",
+        "target_rect": {
+          "x": 20,
+          "y": 295.4,
+          "w": 350,
+          "h": 10
+        },
+        "gap_css_px": 10
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "メニュー",
+        "left_rect": {
+          "x": 0,
+          "y": 0,
+          "w": 56,
+          "h": 56
+        },
+        "right_label": "お気に入り",
+        "right_rect": {
+          "x": 282,
+          "y": 0,
+          "w": 36,
+          "h": 56
+        },
+        "gap_css_px": 226
+      },
+      {
+        "left_label": "お気に入り",
+        "left_rect": {
+          "x": 282,
+          "y": 0,
+          "w": 36,
+          "h": 56
+        },
+        "right_label": "マイページ",
+        "right_rect": {
+          "x": 318,
+          "y": 0,
+          "w": 36,
+          "h": 56
+        },
+        "gap_css_px": 0
+      },
+      {
+        "left_label": "マイページ",
+        "left_rect": {
+          "x": 318,
+          "y": 0,
+          "w": 36,
+          "h": 56
+        },
+        "right_label": "カート",
+        "right_rect": {
+          "x": 354,
+          "y": 0,
+          "w": 36,
+          "h": 56
+        },
+        "gap_css_px": 0
+      },
+      {
+        "left_label": "タイムライン",
+        "left_rect": {
+          "x": 0,
+          "y": 56,
+          "w": 78,
+          "h": 50
+        },
+        "right_label": "アイテム",
+        "right_rect": {
+          "x": 78,
+          "y": 56,
+          "w": 78,
+          "h": 50
+        },
+        "gap_css_px": 0
+      },
+      {
+        "left_label": "アイテム",
+        "left_rect": {
+          "x": 78,
+          "y": 56,
+          "w": 78,
+          "h": 50
+        },
+        "right_label": "スタイリング",
+        "right_rect": {
+          "x": 156,
+          "y": 56,
+          "w": 78,
+          "h": 50
+        },
+        "gap_css_px": 0
+      },
+      {
+        "left_label": "スタイリング",
+        "left_rect": {
+          "x": 156,
+          "y": 56,
+          "w": 78,
+          "h": 50
+        },
+        "right_label": "閲覧履歴",
+        "right_rect": {
+          "x": 234,
+          "y": 56,
+          "w": 78,
+          "h": 50
+        },
+        "gap_css_px": 0
+      },
+      {
+        "left_label": "閲覧履歴",
+        "left_rect": {
+          "x": 234,
+          "y": 56,
+          "w": 78,
+          "h": 50
+        },
+        "right_label": "検索",
+        "right_rect": {
+          "x": 312,
+          "y": 56,
+          "w": 78,
+          "h": 50
+        },
+        "gap_css_px": 0
+      },
+      {
+        "left_label": "TOP",
+        "left_rect": {
+          "x": 20,
+          "y": 237.4,
+          "w": 19,
+          "h": 14
+        },
+        "right_label": "アイテム",
+        "right_rect": {
+          "x": 62.6,
+          "y": 237.4,
+          "w": 36,
+          "h": 14
+        },
+        "gap_css_px": 23.6
+      },
+      {
+        "left_label": "アイテム",
+        "left_rect": {
+          "x": 62.6,
+          "y": 237.4,
+          "w": 36,
+          "h": 14
+        },
+        "right_label": "Tシャツ・カットソー",
+        "right_rect": {
+          "x": 122.2,
+          "y": 237.4,
+          "w": 90,
+          "h": 14
+        },
+        "gap_css_px": 23.6
+      },
+      {
+        "left_label": "#ヴィンテージ感",
+        "left_rect": {
+          "x": 10,
+          "y": 375.4,
+          "w": 105.8,
+          "h": 27
+        },
+        "right_label": "#上品",
+        "right_rect": {
+          "x": 120.8,
+          "y": 375.4,
+          "w": 50.8,
+          "h": 27
+        },
+        "gap_css_px": 5.0
+      },
+      {
+        "left_label": "#上品",
+        "left_rect": {
+          "x": 120.8,
+          "y": 375.4,
+          "w": 50.8,
+          "h": 27
+        },
+        "right_label": "#機能性素材",
+        "right_rect": {
+          "x": 176.7,
+          "y": 375.4,
+          "w": 83.8,
+          "h": 27
+        },
+        "gap_css_px": 5.1
+      },
+      {
+        "left_label": "#機能性素材",
+        "left_rect": {
+          "x": 176.7,
+          "y": 375.4,
+          "w": 83.8,
+          "h": 27
+        },
+        "right_label": "#グラフィック",
+        "right_rect": {
+          "x": 265.5,
+          "y": 375.4,
+          "w": 94.8,
+          "h": 27
+        },
+        "gap_css_px": 5.0
+      }
+    ],
+    "fixed_or_sticky_candidates": 4
+  },
+  {
+    "observation_id": "shirt-gu-desktop",
+    "brand": "GU",
+    "mode": "desktop",
+    "start_url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+    "rendered_url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+    "observed_at": "2026-11-23T11:29:01.929298+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "challenge"
+  },
+  {
+    "observation_id": "shirt-gu-mobile",
+    "brand": "GU",
+    "mode": "mobile",
+    "start_url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+    "rendered_url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+    "observed_at": "2026-11-23T11:29:02.187517+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "error"
+  },
+  {
+    "observation_id": "store-bic-stores-desktop",
+    "brand": "ビックカメラ",
+    "mode": "desktop",
+    "start_url": "https://www.biccamera.com/bc/i/shop/shoplist/index.jsp",
+    "rendered_url": null,
+    "observed_at": "2026-11-23T11:29:05.702746+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "unavailable"
+  },
+  {
+    "observation_id": "store-bic-stores-mobile",
+    "brand": "ビックカメラ",
+    "mode": "mobile",
+    "start_url": "https://www.biccamera.com/bc/i/shop/shoplist/index.jsp",
+    "rendered_url": "https://www.biccamera.com/bc/i/shop/shoplist/index.jsp",
+    "observed_at": "2026-11-23T11:29:06.352080+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 70,
+    "controls": 65,
+    "media_elements": 5,
+    "css_image_elements": 0,
+    "controls_per_100k_css_px2": 19.75,
+    "box_coverage_percent": 41.39,
+    "box_coverage_with_css_images_percent": 41.39,
+    "text_box_percent": 18.6,
+    "control_box_percent": 37.33,
+    "media_box_percent": 8.16,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 622,
+      "end_y_exclusive": 682,
+      "height_css_px": 60
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 10,
+      "right_css_px": 10
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "ビックカメラ 店舗一覧",
+        "heading_rect": {
+          "x": 14,
+          "y": 164,
+          "w": 362,
+          "h": 27
+        },
+        "target": "北海道",
+        "target_rect": {
+          "x": 313.6,
+          "y": 199,
+          "w": 62.4,
+          "h": 38.5
+        },
+        "gap_css_px": 8
+      },
+      {
+        "heading": "関東エリア",
+        "heading_rect": {
+          "x": 14,
+          "y": 566.7,
+          "w": 362,
+          "h": 54
+        },
+        "target": "池袋本店 〒170-0013 東京都豊島区東池袋1-41-5",
+        "target_rect": {
+          "x": 14,
+          "y": 682.7,
+          "w": 362,
+          "h": 136
+        },
+        "gap_css_px": 62
+      },
+      {
+        "heading": "東京都",
+        "heading_rect": {
+          "x": 14,
+          "y": 629.7,
+          "w": 362,
+          "h": 39
+        },
+        "target": "池袋本店 〒170-0013 東京都豊島区東池袋1-41-5",
+        "target_rect": {
+          "x": 14,
+          "y": 682.7,
+          "w": 362,
+          "h": 136
+        },
+        "gap_css_px": 14
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "お知らせ",
+        "left_rect": {
+          "x": 10,
+          "y": 79.5,
+          "w": 48,
+          "h": 18
+        },
+        "right_label": "お得情報",
+        "right_rect": {
+          "x": 81.5,
+          "y": 79.5,
+          "w": 48,
+          "h": 18
+        },
+        "gap_css_px": 23.5
+      },
+      {
+        "left_label": "お得情報",
+        "left_rect": {
+          "x": 81.5,
+          "y": 79.5,
+          "w": 48,
+          "h": 18
+        },
+        "right_label": "店舗一覧",
+        "right_rect": {
+          "x": 153,
+          "y": 79.5,
+          "w": 48,
+          "h": 18
+        },
+        "gap_css_px": 23.5
+      },
+      {
+        "left_label": "店舗一覧",
+        "left_rect": {
+          "x": 153,
+          "y": 79.5,
+          "w": 48,
+          "h": 18
+        },
+        "right_label": "各種サービス",
+        "right_rect": {
+          "x": 224.5,
+          "y": 79.5,
+          "w": 72,
+          "h": 18
+        },
+        "gap_css_px": 23.5
+      },
+      {
+        "left_label": "各種サービス",
+        "left_rect": {
+          "x": 224.5,
+          "y": 79.5,
+          "w": 72,
+          "h": 18
+        },
+        "right_label": "問い合わせ",
+        "right_rect": {
+          "x": 320,
+          "y": 79.5,
+          "w": 60,
+          "h": 18
+        },
+        "gap_css_px": 23.5
+      },
+      {
+        "left_label": "ネットショップ",
+        "left_rect": {
+          "x": 221,
+          "y": 13,
+          "w": 63,
+          "h": 42.5
+        },
+        "right_label": "企業情報",
+        "right_rect": {
+          "x": 296,
+          "y": 13,
+          "w": 36,
+          "h": 42.5
+        },
+        "gap_css_px": 12
+      },
+      {
+        "left_label": "企業情報",
+        "left_rect": {
+          "x": 296,
+          "y": 13,
+          "w": 36,
+          "h": 42.5
+        },
+        "right_label": "採用情報",
+        "right_rect": {
+          "x": 344,
+          "y": 13,
+          "w": 36,
+          "h": 42.5
+        },
+        "gap_css_px": 12
+      },
+      {
+        "left_label": "近畿エリア",
+        "left_rect": {
+          "x": 14,
+          "y": 222,
+          "w": 90,
+          "h": 21
+        },
+        "right_label": "北海道エリア",
+        "right_rect": {
+          "x": 136,
+          "y": 222,
+          "w": 104,
+          "h": 21
+        },
+        "gap_css_px": 32
+      },
+      {
+        "left_label": "北海道エリア",
+        "left_rect": {
+          "x": 136,
+          "y": 222,
+          "w": 104,
+          "h": 21
+        },
+        "right_label": "北海道",
+        "right_rect": {
+          "x": 313.6,
+          "y": 199,
+          "w": 62.4,
+          "h": 38.5
+        },
+        "gap_css_px": 73.6
+      },
+      {
+        "left_label": "中国エリア",
+        "left_rect": {
+          "x": 14,
+          "y": 251,
+          "w": 90,
+          "h": 21
+        },
+        "right_label": "東北エリア",
+        "right_rect": {
+          "x": 136,
+          "y": 251,
+          "w": 90,
+          "h": 21
+        },
+        "gap_css_px": 32
+      },
+      {
+        "left_label": "東北エリア",
+        "left_rect": {
+          "x": 136,
+          "y": 251,
+          "w": 90,
+          "h": 21
+        },
+        "right_label": "青森",
+        "right_rect": {
+          "x": 313.6,
+          "y": 239.9,
+          "w": 62.4,
+          "h": 23.8
+        },
+        "gap_css_px": 87.6
+      },
+      {
+        "left_label": "四国エリア",
+        "left_rect": {
+          "x": 14,
+          "y": 280,
+          "w": 90,
+          "h": 21
+        },
+        "right_label": "北陸・信越エリア",
+        "right_rect": {
+          "x": 136,
+          "y": 280,
+          "w": 132,
+          "h": 21
+        },
+        "gap_css_px": 32
+      }
+    ],
+    "fixed_or_sticky_candidates": 1
+  },
+  {
+    "observation_id": "store-kinokuniya-stores-desktop",
+    "brand": "紀伊國屋書店",
+    "mode": "desktop",
+    "start_url": "https://store.kinokuniya.co.jp/",
+    "rendered_url": "https://store.kinokuniya.co.jp/store/",
+    "observed_at": "2026-11-23T11:29:07.083948+00:00",
+    "viewport": [
+      1365,
+      900
+    ],
+    "status": "measured",
+    "text_fragments": 46,
+    "controls": 16,
+    "media_elements": 3,
+    "css_image_elements": 1,
+    "controls_per_100k_css_px2": 1.3,
+    "box_coverage_percent": 12.22,
+    "box_coverage_with_css_images_percent": 12.22,
+    "text_box_percent": 5.44,
+    "control_box_percent": 9.42,
+    "media_box_percent": 0.34,
+    "flat_band": {
+      "strip_x": [
+        342,
+        1023
+      ],
+      "start_y": 557,
+      "end_y_exclusive": 692,
+      "height_css_px": 135
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 187.2,
+      "right_css_px": 75.7
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "店舗・劇場をさがす",
+        "heading_rect": {
+          "x": 274.5,
+          "y": 82.7,
+          "w": 213.3,
+          "h": 40
+        },
+        "target": "お近くの店舗",
+        "target_rect": {
+          "x": 564.9,
+          "y": 205,
+          "w": 123.7,
+          "h": 28.8
+        },
+        "gap_css_px": 82.3
+      },
+      {
+        "heading": "北海道",
+        "heading_rect": {
+          "x": 172.5,
+          "y": 395.6,
+          "w": 1020,
+          "h": 25
+        },
+        "target": "札幌本店 10:00〜21:00",
+        "target_rect": {
+          "x": 188.2,
+          "y": 442.3,
+          "w": 121.8,
+          "h": 53
+        },
+        "gap_css_px": 21.7
+      },
+      {
+        "heading": "宮城県",
+        "heading_rect": {
+          "x": 172.5,
+          "y": 531.6,
+          "w": 1020,
+          "h": 25
+        },
+        "target": "仙台店 10:00〜21:00",
+        "target_rect": {
+          "x": 188.2,
+          "y": 578.3,
+          "w": 121.8,
+          "h": 53
+        },
+        "gap_css_px": 21.7
+      },
+      {
+        "heading": "群馬県",
+        "heading_rect": {
+          "x": 172.5,
+          "y": 667.6,
+          "w": 1020,
+          "h": 25
+        },
+        "target": "前橋店 10:00〜21:00",
+        "target_rect": {
+          "x": 188.2,
+          "y": 714.2,
+          "w": 121.8,
+          "h": 53
+        },
+        "gap_css_px": 21.7
+      },
+      {
+        "heading": "埼玉県",
+        "heading_rect": {
+          "x": 172.5,
+          "y": 803.6,
+          "w": 1020,
+          "h": 25
+        },
+        "target": "さいたま新都心店 10:00〜21:00",
+        "target_rect": {
+          "x": 188.2,
+          "y": 850.2,
+          "w": 157.3,
+          "h": 53
+        },
+        "gap_css_px": 21.7
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "札幌本店 10:00〜21:00",
+        "left_rect": {
+          "x": 188.2,
+          "y": 442.3,
+          "w": 121.8,
+          "h": 53
+        },
+        "right_label": "厚別店 10:00〜21:00",
+        "right_rect": {
+          "x": 341.3,
+          "y": 442.3,
+          "w": 121.8,
+          "h": 53
+        },
+        "gap_css_px": 31.3
+      },
+      {
+        "left_label": "厚別店 10:00〜21:00",
+        "left_rect": {
+          "x": 341.3,
+          "y": 442.3,
+          "w": 121.8,
+          "h": 53
+        },
+        "right_label": "小樽店 10:00〜18:30",
+        "right_rect": {
+          "x": 494.4,
+          "y": 442.3,
+          "w": 121.8,
+          "h": 53
+        },
+        "gap_css_px": 31.3
+      },
+      {
+        "left_label": "小樽店 10:00〜18:30",
+        "left_rect": {
+          "x": 494.4,
+          "y": 442.3,
+          "w": 121.8,
+          "h": 53
+        },
+        "right_label": "千歳店 8:00〜20:00",
+        "right_rect": {
+          "x": 647.5,
+          "y": 442.3,
+          "w": 114.8,
+          "h": 53
+        },
+        "gap_css_px": 31.3
+      },
+      {
+        "left_label": "さいたま新都心店 10:00〜21:00",
+        "left_rect": {
+          "x": 188.2,
+          "y": 850.2,
+          "w": 157.3,
+          "h": 49.8
+        },
+        "right_label": "浦和パルコ店 10:00〜21:00",
+        "right_rect": {
+          "x": 376.8,
+          "y": 850.2,
+          "w": 125.3,
+          "h": 49.8
+        },
+        "gap_css_px": 31.3
+      },
+      {
+        "left_label": "浦和パルコ店 10:00〜21:00",
+        "left_rect": {
+          "x": 376.8,
+          "y": 850.2,
+          "w": 125.3,
+          "h": 49.8
+        },
+        "right_label": "イオンモール川口前川店 10:00〜21:00",
+        "right_rect": {
+          "x": 533.4,
+          "y": 850.2,
+          "w": 205.3,
+          "h": 49.8
+        },
+        "gap_css_px": 31.3
+      },
+      {
+        "left_label": "イオンモール川口前川店 10:00〜21:00",
+        "left_rect": {
+          "x": 533.4,
+          "y": 850.2,
+          "w": 205.3,
+          "h": 49.8
+        },
+        "right_label": "川越店 10:00〜20:00",
+        "right_rect": {
+          "x": 770,
+          "y": 850.2,
+          "w": 121.8,
+          "h": 49.8
+        },
+        "gap_css_px": 31.3
+      },
+      {
+        "left_label": "川越店 10:00〜20:00",
+        "left_rect": {
+          "x": 770,
+          "y": 850.2,
+          "w": 121.8,
+          "h": 49.8
+        },
+        "right_label": "入間丸広店 10:00〜20:00",
+        "right_rect": {
+          "x": 923.1,
+          "y": 850.2,
+          "w": 121.8,
+          "h": 49.8
+        },
+        "gap_css_px": 31.3
+      }
+    ],
+    "fixed_or_sticky_candidates": 1
+  },
+  {
+    "observation_id": "store-kinokuniya-stores-mobile",
+    "brand": "紀伊國屋書店",
+    "mode": "mobile",
+    "start_url": "https://store.kinokuniya.co.jp/",
+    "rendered_url": "https://store.kinokuniya.co.jp/store/",
+    "observed_at": "2026-11-23T11:29:09.120721+00:00",
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "measured",
+    "text_fragments": 33,
+    "controls": 10,
+    "media_elements": 3,
+    "css_image_elements": 1,
+    "controls_per_100k_css_px2": 3.04,
+    "box_coverage_percent": 27.91,
+    "box_coverage_with_css_images_percent": 27.9,
+    "text_box_percent": 13.41,
+    "control_box_percent": 18.19,
+    "media_box_percent": 1.29,
+    "flat_band": {
+      "strip_x": [
+        98,
+        292
+      ],
+      "start_y": 701,
+      "end_y_exclusive": 760,
+      "height_css_px": 59
+    },
+    "screen_edge_gaps_px": {
+      "left_css_px": 14.7,
+      "right_css_px": 7.5
+    },
+    "initial_layer": "page",
+    "vertical_pairs": [
+      {
+        "heading": "店舗・劇場をさがす",
+        "heading_rect": {
+          "x": 19.5,
+          "y": 82.7,
+          "w": 351,
+          "h": 32
+        },
+        "target": "店舗・劇場の名前やキーワードで検索",
+        "target_rect": {
+          "x": 19.5,
+          "y": 129.3,
+          "w": 351,
+          "h": 40
+        },
+        "gap_css_px": 14.7
+      },
+      {
+        "heading": "北海道",
+        "heading_rect": {
+          "x": 0,
+          "y": 533.7,
+          "w": 390,
+          "h": 25
+        },
+        "target": "札幌本店 10:00〜21:00",
+        "target_rect": {
+          "x": 15.7,
+          "y": 580.4,
+          "w": 121.8,
+          "h": 53
+        },
+        "gap_css_px": 21.7
+      },
+      {
+        "heading": "宮城県",
+        "heading_rect": {
+          "x": 0,
+          "y": 736.7,
+          "w": 390,
+          "h": 25
+        },
+        "target": "仙台店 10:00〜21:00",
+        "target_rect": {
+          "x": 15.7,
+          "y": 783.4,
+          "w": 121.8,
+          "h": 53
+        },
+        "gap_css_px": 21.7
+      }
+    ],
+    "horizontal_pairs": [
+      {
+        "left_label": "札幌本店 10:00〜21:00",
+        "left_rect": {
+          "x": 15.7,
+          "y": 580.4,
+          "w": 121.8,
+          "h": 53
+        },
+        "right_label": "厚別店 10:00〜21:00",
+        "right_rect": {
+          "x": 168.8,
+          "y": 580.4,
+          "w": 121.8,
+          "h": 53
+        },
+        "gap_css_px": 31.3
+      },
+      {
+        "left_label": "小樽店 10:00〜18:30",
+        "left_rect": {
+          "x": 15.7,
+          "y": 647.4,
+          "w": 121.8,
+          "h": 53
+        },
+        "right_label": "千歳店 8:00〜20:00",
+        "right_rect": {
+          "x": 168.8,
+          "y": 647.4,
+          "w": 114.8,
+          "h": 53
+        },
+        "gap_css_px": 31.3
+      }
+    ],
+    "fixed_or_sticky_candidates": 1
+  }
+]
