@@ -1,0 +1,10 @@
+{
+  "files": {
+    "modules/ui-engineering-design-system/checks/tokens.py": "2f4893e6e491c55952617efeba3d44c93924d11f444da7755c76965c4334dbdb",
+    "modules/ui-engineering-design-system/tests/test_tokens.py": "6a5af0496ae3bb42370f13123a76bdfe65fb48be6e77b2ee67d3167f34775142",
+    "modules/ui-engineering-design-system/references/token-contracts.md": "7f58269bf4f91a3bd5711dc57a70873793465599d62460081d953f181b98ccf6",
+    "modules/ui-engineering-design-system/examples/booking-tokens.json": "899ad51c8361498c3e585c3ff84123746b323654063f6ce37a4d1ea37b81f7d1",
+    "campaigns/C/rounds/02/evaluation-plan.md": "f8e47c6e97e6e43bb70dca8f5e7e0380655dfe3190a99f57a0e7d99c1d4c772e"
+  },
+  "before_independent_critic": true
+}

@@ -1,0 +1,6 @@
+{
+  "registry_records_normalized": 7,
+  "prior_round_source_aliases_resolved": 8,
+  "reason": "Round01 analyst namespaced researcher S1..S8 as R2-S1..R2-S8. Explicit analysis_source_id preserves that label while id matches the cited research record. Source URLs and claims unchanged.",
+  "analysis_artifacts_modified": false
+}

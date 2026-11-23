@@ -1,0 +1,11 @@
+{
+  "base_sha_at_start": "3d02174a69676afa8e0b02f4062cc6ecb636d300",
+  "main_snapshot_merged_into_session_branch": "20f21fb9bb1b4d0921333ca1be683d6b42a60c63",
+  "conflicts": [
+    "modules/ui-engineering-design-system/SKILL.md"
+  ],
+  "resolution": "Preserved inherited component reuse/composition/new component criteria, state/notification and theme handoff, booking specimen and evidence; added conditional contract procedure and explicit distinct evidence scopes. Root shared files were taken unchanged from main.",
+  "inherited_browser_evidence_reexecuted": false,
+  "new_round01_browser_units": "HOLD",
+  "main_changed_by_this_session": false
+}

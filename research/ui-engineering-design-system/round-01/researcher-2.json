@@ -1,0 +1,267 @@
+{
+  "session": "C",
+  "round": 1,
+  "researcher": "researcher-2",
+  "candidate": "C-001",
+  "date": "2026-11-23",
+  "status": "bounded_research_complete_with_raw_fetch_failures",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "GOV.UK Button",
+      "url": "https://design-system.service.gov.uk/components/button/#disabled-buttons",
+      "section": "Disabled buttons; Stop users from accidentally sending information more than once",
+      "reader_file": "reader-open-2.txt",
+      "reader_lines": [
+        354,
+        360
+      ],
+      "web_lines": [
+        247,
+        251
+      ],
+      "reader_sha256": "ce32f28053a6a4a5bbb9f194dca87ae1e6afb9cbce26db5011a6c9c487170e50",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction saved; not byte-identical original",
+      "private_root": "/workspace/scratch/785c8ae49c7b/private-research/C/round-01/researcher-2"
+    },
+    {
+      "id": "S2",
+      "title": "USWDS Button",
+      "url": "https://designsystem.digital.gov/components/button/#accessibility-guidance",
+      "section": "Accessibility guidance; Using the button component",
+      "reader_file": "reader-open-3.txt",
+      "reader_lines": [
+        338,
+        353
+      ],
+      "web_lines": [
+        734,
+        749
+      ],
+      "reader_sha256": "50245a93e7e433bf7ac5d5da5fe73b2a1ccfcec7dc01b377cd8a4a64c6466839",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction saved; not byte-identical original",
+      "private_root": "/workspace/scratch/785c8ae49c7b/private-research/C/round-01/researcher-2"
+    },
+    {
+      "id": "S3",
+      "title": "W3C APG Dialog Modal Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboardinteraction",
+      "section": "Keyboard Interaction Note; WAI-ARIA Roles States and Properties Note",
+      "reader_file": "reader-open-3.txt",
+      "reader_lines": [
+        35,
+        76
+      ],
+      "web_lines": [
+        32,
+        73
+      ],
+      "reader_sha256": "50245a93e7e433bf7ac5d5da5fe73b2a1ccfcec7dc01b377cd8a4a64c6466839",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction saved; not byte-identical original",
+      "private_root": "/workspace/scratch/785c8ae49c7b/private-research/C/round-01/researcher-2"
+    },
+    {
+      "id": "S4",
+      "title": "USWDS PR 6786",
+      "url": "https://github.com/uswds/uswds/pull/6786",
+      "section": "Problem statement; Solution; Testing and review",
+      "reader_file": "reader-open-4.txt",
+      "reader_lines": [
+        48,
+        67
+      ],
+      "web_lines": [
+        156,
+        175
+      ],
+      "reader_sha256": "2853f7b6ef947cfc20256751db8430503a27528f5a6a1f93d703d2462aaf9c9c",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction saved; not byte-identical original",
+      "private_root": "/workspace/scratch/785c8ae49c7b/private-research/C/round-01/researcher-2"
+    },
+    {
+      "id": "S5",
+      "title": "USWDS PR 6703",
+      "url": "https://github.com/uswds/uswds/pull/6703",
+      "section": "Problem statement; Solution; Known Limitations",
+      "reader_file": "reader-open-4.txt",
+      "reader_lines": [
+        222,
+        243
+      ],
+      "web_lines": [
+        165,
+        186
+      ],
+      "reader_sha256": "2853f7b6ef947cfc20256751db8430503a27528f5a6a1f93d703d2462aaf9c9c",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction saved; not byte-identical original",
+      "private_root": "/workspace/scratch/785c8ae49c7b/private-research/C/round-01/researcher-2"
+    },
+    {
+      "id": "S6",
+      "title": "Adobe PR 2763",
+      "url": "https://github.com/adobe/react-spectrum/pull/2763",
+      "section": "Opening description; Test Instructions",
+      "reader_file": "reader-open-4.txt",
+      "reader_lines": [
+        323,
+        341
+      ],
+      "web_lines": [
+        153,
+        171
+      ],
+      "reader_sha256": "2853f7b6ef947cfc20256751db8430503a27528f5a6a1f93d703d2462aaf9c9c",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction saved; not byte-identical original",
+      "private_root": "/workspace/scratch/785c8ae49c7b/private-research/C/round-01/researcher-2"
+    },
+    {
+      "id": "S7",
+      "title": "Adobe August 26 2022 release",
+      "url": "https://react-spectrum.adobe.com/v3/releases/2022-08-26.html",
+      "section": "Fixes",
+      "reader_file": "reader-open-1.txt",
+      "web_lines": [
+        146,
+        169
+      ],
+      "reader_sha256": "4ad2fd9e552fe232357d6651151d20e3b28266dadbf3c333968744cf4b4e8c85",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction saved; not byte-identical original",
+      "private_root": "/workspace/scratch/785c8ae49c7b/private-research/C/round-01/researcher-2"
+    },
+    {
+      "id": "S8",
+      "title": "USWDS Modal",
+      "url": "https://designsystem.digital.gov/components/modal/#latest-updates",
+      "section": "Latest updates 2026-08-18",
+      "reader_file": "reader-open-2.txt",
+      "web_lines": [
+        650,
+        657
+      ],
+      "reader_sha256": "ce32f28053a6a4a5bbb9f194dca87ae1e6afb9cbce26db5011a6c9c487170e50",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction saved; not byte-identical original",
+      "private_root": "/workspace/scratch/785c8ae49c7b/private-research/C/round-01/researcher-2"
+    }
+  ],
+  "proposed_rules": [
+    {
+      "id": "C001-R2-P1",
+      "type": "proposed_rule",
+      "title": "Unavailable-state contract",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "rule": "Specify why unavailable, recovery action, tab discoverability, and activation prevention separately. Choose native disabled or aria-disabled with guarded action from that contract.",
+      "exception": "Native disabled is valid when removal from sequential focus is intentional and explanation remains available. Do not mandate aria-disabled everywhere.",
+      "falsifier": "A focusable aria-disabled button still invokes its action via Enter/Space/pointer; or the only recovery explanation cannot be reached without a mouse."
+    },
+    {
+      "id": "C001-R2-P2",
+      "type": "proposed_rule",
+      "title": "Initial-focus decision and one owner",
+      "sources": [
+        "S3",
+        "S5"
+      ],
+      "rule": "Record task-specific initial target and assign exactly one component responsibility for open-time focus; use trap only for containment if modal owns initial focus.",
+      "exception": "Structured/long content can need static heading focus; destructive confirmation can need least-destructive action; action-only confirmation may use its primary action.",
+      "falsifier": "Opening moves focus twice, repeats the title in target AT, scrolls the introduction away, or defaults to irreversible action without an explicit choice."
+    },
+    {
+      "id": "C001-R2-P3",
+      "type": "proposed_rule",
+      "title": "Modal exit cleanup independent of focus restoration",
+      "sources": [
+        "S3",
+        "S4"
+      ],
+      "rule": "On every actual close path restore page interaction/AT exposure independently of opener lookup, then restore focus to a surviving logical target.",
+      "exception": "With another active modal, restore according to active modal stack rather than globally enabling background.",
+      "falsifier": "Remove invoking element while open, close by button and Escape, and find leaked aria-hidden/inert or keyboard focus lost without a planned fallback."
+    },
+    {
+      "id": "C001-R2-P4",
+      "type": "proposed_rule",
+      "title": "Changing-content focus fallback",
+      "sources": [
+        "S3",
+        "S6"
+      ],
+      "rule": "When focused dialog content is replaced, preserve containment using a documented focusable fallback even if no tabbable child exists.",
+      "exception": "Do not copy a library's dialog-wrapper fallback as a universal initial-focus rule; choose semantics and target-AT behavior.",
+      "falsifier": "Replace all controls with a status panel and observe activeElement becoming document.body or background content reachable."
+    },
+    {
+      "id": "C001-R2-P5",
+      "type": "proposed_rule",
+      "title": "Native semantic choice and library capability ownership",
+      "sources": [
+        "S2",
+        "S5"
+      ],
+      "rule": "Choose semantic element by action versus navigation and explicit button type. For library/custom components list which layer owns keyboard activation, focus entry, containment, and restoration.",
+      "exception": "Do not infer that native button evidence proves universal native dialog compatibility. Existing design-system components can own behavior if verified in integration.",
+      "falsifier": "A non-submit button submits its surrounding form; a styled anchor uses a disabled attribute with no guard; a library and wrapper both claim initial-focus ownership."
+    }
+  ],
+  "found": [
+    "official unavailable-control design guidance",
+    "APG initial/return-focus exceptions",
+    "modal cleanup coupled to missing invoker failure",
+    "duplicate focus owner failure",
+    "focusable but not tabbable fallback implementation"
+  ],
+  "not_found": [
+    "universal requirement to native-disable every unavailable control",
+    "universal first-tabbable initial-focus rule",
+    "successfully fetched raw originals"
+  ],
+  "not_searched": [
+    "local UI reproduction",
+    "cross browser AT matrix",
+    "native dialog compatibility matrix",
+    "complete nested modal lifecycle",
+    "shadow DOM and iframe",
+    "disabled readonly form submission standards"
+  ],
+  "fetch": {
+    "attempted": 5,
+    "success": 0,
+    "failure": 5,
+    "reason": "DNS resolution unavailable",
+    "security_bypass": false,
+    "reader_alternative": "partial tool outputs saved separately; no full raw originals claimed"
+  },
+  "search": {
+    "queries": 9,
+    "tool_calls": 5,
+    "all_returned_hits_recorded": true,
+    "initial_batch_transcribed": true,
+    "per_query_attribution": "unavailable for first two combined batches"
+  },
+  "cost": {
+    "amount": null,
+    "status": "unknown"
+  },
+  "stop_reason": "bounded task; no saturation claim",
+  "public_third_party_fulltext": false,
+  "implementation_changes": false,
+  "git_changes": false
+}

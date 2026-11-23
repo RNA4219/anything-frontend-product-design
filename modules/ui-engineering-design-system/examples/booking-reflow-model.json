@@ -1,0 +1,42 @@
+{
+  "schema": "C-layout-model/1",
+  "kind": "reflow",
+  "context": {
+    "id": "synthetic-state-1",
+    "coordinate_space": "viewport-css-px",
+    "css_width": 320,
+    "css_height": 640,
+    "scroll_direction": "vertical"
+  },
+  "evidence": {
+    "kind": "synthetic_geometry",
+    "ref": "Authored synthetic model; not extracted from reflow-targets.html or a browser"
+  },
+  "inventory_complete": true,
+  "page_overflow": false,
+  "required_ids": [
+    "instructions",
+    "confirm"
+  ],
+  "regions": [
+    {
+      "id": "main",
+      "reflows": true,
+      "exception": null
+    }
+  ],
+  "items": [
+    {
+      "id": "instructions",
+      "region_id": "main",
+      "availability": "present",
+      "evidence_ref": "synthetic retained-item record"
+    },
+    {
+      "id": "confirm",
+      "region_id": "main",
+      "availability": "present",
+      "evidence_ref": "synthetic retained-item record"
+    }
+  ]
+}

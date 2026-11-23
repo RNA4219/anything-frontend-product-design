@@ -1,0 +1,26 @@
+{
+  "source_id": "C-S033",
+  "canonical_source_id": "C-REF-220",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum",
+  "title": "Understanding SC 2.5.8: Target Size (Minimum)",
+  "retrieved_date": "2026-11-23",
+  "records": [
+    {
+      "file": "research/ui-engineering-design-system/round-03/researcher-1.json",
+      "source_id": "C03-R1-S03"
+    }
+  ],
+  "original_download": "unavailable",
+  "reader_capture": "partial",
+  "public_fulltext": false,
+  "repository_source_artifact": {
+    "url": "https://github.com/w3c/wcag/blob/2766fae25fc8286f60181d655115cba054b797e1/understanding/22/target-size-minimum.html",
+    "commit": "2766fae25fc8286f60181d655115cba054b797e1",
+    "bytes": 23872,
+    "git_blob_sha1": "58d7cf1d64072ce4f6dcffb09b3322ed924c0d9a",
+    "sha256": "ede35144e897503a5970d1e33a6bfe6aa3dd1e7476ee47bc1d10e08fa672cfb0",
+    "blob_verified": true,
+    "complete_repository_file": true,
+    "webpage_byte_identity_verified": false
+  }
+}

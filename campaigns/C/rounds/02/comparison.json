@@ -1,0 +1,200 @@
+{
+  "comparison": "authored shallow declaration control, not model-generation effectiveness",
+  "cases": [
+    {
+      "case": "valid-booking-themes",
+      "expected_accept": true,
+      "baseline_accept": true,
+      "candidate_accept": true,
+      "candidate_matches_expectation": true,
+      "diagnostics": []
+    },
+    {
+      "case": "missing-reference",
+      "expected_accept": false,
+      "baseline_accept": true,
+      "candidate_accept": false,
+      "candidate_matches_expectation": true,
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "REFERENCE_MISSING",
+          "path": "missing",
+          "message": "Reference must target a complete existing token",
+          "chain": [
+            "semantic.text",
+            "missing"
+          ],
+          "theme": "dark"
+        },
+        {
+          "kind": "INVALID",
+          "code": "REFERENCE_MISSING",
+          "path": "missing",
+          "message": "Reference must target a complete existing token",
+          "chain": [
+            "semantic.text",
+            "missing"
+          ],
+          "theme": "light"
+        }
+      ]
+    },
+    {
+      "case": "cycle",
+      "expected_accept": false,
+      "baseline_accept": true,
+      "candidate_accept": false,
+      "candidate_matches_expectation": true,
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "REFERENCE_CYCLE",
+          "path": "semantic.surface",
+          "message": "Cyclic token reference",
+          "chain": [
+            "semantic.surface",
+            "semantic.text",
+            "semantic.surface"
+          ],
+          "theme": "dark"
+        },
+        {
+          "kind": "INVALID",
+          "code": "REFERENCE_CYCLE",
+          "path": "semantic.surface",
+          "message": "Cyclic token reference",
+          "chain": [
+            "semantic.surface",
+            "semantic.text",
+            "semantic.surface"
+          ],
+          "theme": "light"
+        }
+      ]
+    },
+    {
+      "case": "type-mismatch",
+      "expected_accept": false,
+      "baseline_accept": true,
+      "candidate_accept": false,
+      "candidate_matches_expectation": true,
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "ALIAS_TYPE",
+          "path": "semantic.text",
+          "message": "Declared alias type differs from resolved target",
+          "chain": [
+            "semantic.text",
+            "palette.ink"
+          ],
+          "theme": "dark"
+        },
+        {
+          "kind": "INVALID",
+          "code": "ALIAS_TYPE",
+          "path": "semantic.text",
+          "message": "Declared alias type differs from resolved target",
+          "chain": [
+            "semantic.text",
+            "palette.ink"
+          ],
+          "theme": "light"
+        }
+      ]
+    },
+    {
+      "case": "theme-only-missing-reference",
+      "expected_accept": false,
+      "baseline_accept": true,
+      "candidate_accept": false,
+      "candidate_matches_expectation": true,
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "REFERENCE_MISSING",
+          "path": "absent",
+          "message": "Reference must target a complete existing token",
+          "chain": [
+            "semantic.text",
+            "absent"
+          ],
+          "theme": "dark"
+        }
+      ]
+    },
+    {
+      "case": "unsupported-construct",
+      "expected_accept": false,
+      "baseline_accept": true,
+      "candidate_accept": false,
+      "candidate_matches_expectation": true,
+      "diagnostics": [
+        {
+          "kind": "UNSUPPORTED",
+          "code": "NODE_CONSTRUCT",
+          "path": "semantic.text",
+          "message": "$ref is not implemented; this is not a DTCG-invalidity judgment",
+          "theme": "dark"
+        },
+        {
+          "kind": "UNSUPPORTED",
+          "code": "NODE_CONSTRUCT",
+          "path": "semantic.text",
+          "message": "$ref is not implemented; this is not a DTCG-invalidity judgment",
+          "theme": "light"
+        }
+      ]
+    },
+    {
+      "case": "name-collision",
+      "expected_accept": false,
+      "baseline_accept": true,
+      "candidate_accept": false,
+      "candidate_matches_expectation": true,
+      "diagnostics": [
+        {
+          "kind": "CONTRACT",
+          "code": "CSS_NAME_COLLISION",
+          "path": "a.b-c",
+          "message": "--booking-a-b-c also represents a-b.c",
+          "theme": "dark"
+        },
+        {
+          "kind": "CONTRACT",
+          "code": "CSS_NAME_COLLISION",
+          "path": "a.b-c",
+          "message": "--booking-a-b-c also represents a-b.c",
+          "theme": "light"
+        }
+      ]
+    },
+    {
+      "case": "required-role-missing",
+      "expected_accept": false,
+      "baseline_accept": true,
+      "candidate_accept": false,
+      "candidate_matches_expectation": true,
+      "diagnostics": [
+        {
+          "kind": "CONTRACT",
+          "code": "ROLE_MISSING",
+          "path": "semantic.missing",
+          "message": "Required role missing after theme merge",
+          "theme": "dark"
+        },
+        {
+          "kind": "CONTRACT",
+          "code": "ROLE_MISSING",
+          "path": "semantic.missing",
+          "message": "Required role missing after theme merge",
+          "theme": "light"
+        }
+      ]
+    }
+  ],
+  "baseline_false_accepts": 7,
+  "candidate_false_accepts": 0,
+  "candidate_false_rejects": 0
+}

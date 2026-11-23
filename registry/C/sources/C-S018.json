@@ -1,0 +1,27 @@
+{
+  "source_id": "C-S018",
+  "url": "https://www.designtokens.org/TR/2025.10/format/",
+  "title": "Design Tokens Format Module 2025.10",
+  "retrieved_date": "2026-11-23",
+  "version": "2025.10, 2025-10-28",
+  "records": [
+    {
+      "file": "research/ui-engineering-design-system/round-02/researcher-1.json",
+      "source_id": "C02-R1-S01"
+    }
+  ],
+  "original_download": "unavailable",
+  "reader_capture": "partial",
+  "public_fulltext": false,
+  "parent_reader_rewritten_summary": true,
+  "repository_source_artifact": {
+    "url": "https://github.com/design-tokens/community-group/blob/882ebd6716abef9a46d8ef5fb12e82009d6cee2e/www/src/pages/TR/2025.10/format/index.html",
+    "commit": "882ebd6716abef9a46d8ef5fb12e82009d6cee2e",
+    "bytes": 355370,
+    "git_blob_sha1": "c5304c8e46672ef21405b8d06251ae2278f8c115",
+    "sha256": "25390d89b0cb732882ef94445b287eaaa4d5e3cade5e3960d62d2d5a4d32da24",
+    "blob_verified": true,
+    "complete_repository_file": true,
+    "webpage_byte_identity_verified": false
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "skill_id": "C-UI-006",
+  "domain": "ui-engineering-design-system",
+  "trigger": "ライト/ダーク等のテーマや密度variantを含む既存tokenセットのビルド。",
+  "intent": "テーマを統合してから意味roleを独立に解決する",
+  "required_inputs": [
+    "基底と順序付きtheme override",
+    "製品所有の必須role/期待型/既存pairing",
+    "merge単位とテーマ/スコープ契約"
+  ],
+  "decision_rules": [
+    "【製品policy】既存の基底トークン、宣言したテーマ一覧、順序付きoverride、必要な意味roleのパスと期待型、既存の面/前景の組を入力として受け取る。必須role一覧やトークン層数は製品契約であり、DTCGの普遍要件として作らない。配色・書体・角丸の新しい選択を加えない。",
+    "【事実＋製品policy】各テーマについて基底から独立した文書を作り、宣言した順序でoverrideを適用した後にaliasを解決する。局所wrapperではグループを再帰的に統合し、トークンを一単位として置換する等、置換単位を事前に固定する。グループ/トークンの形の衝突は拒否する。配列の順序とJSONメンバー挿入順を混同せず、暗黙のlast-write-winsを認めない。このwrapperをDTCG Resolver文書の実装とは呼ばない。",
+    "【推論】合成後の各テーマへU1の型・値・欠落・循環検査を実行し、テーマ間で解決済み値やaliasキャッシュを使い回さない。基底だけの成功でdark等を成功にしない。意図した同一パスの上書きと、生成名・出力先の衝突を別の判定にする。",
+    "【製品policy】各テーマの解決後に必須roleの存在と期待型を確認し、roleのパス・型・解決値・参照先・値の由来を対応づける。同じroleがテーマで別の基底を参照することは許せる。基底のrole継承は宣言したmerge契約が認める場合に成立する。theme内にroleが直接書かれていないだけで欠落としない。",
+    "【推論＋製品policy】全宣言テーマが契約に通った場合にだけU3へ渡す。失敗テーマを省いた部分成果を全テーマ成功と報告しない。literal出力はテーマごとの完全なrole値を生成し、後から基本CSS変数だけを変更すれば意味変数が追従すると説明しない。"
+  ],
+  "procedure": [
+    "【製品policy】既存の基底トークン、宣言したテーマ一覧、順序付きoverride、必要な意味roleのパスと期待型、既存の面/前景の組を入力として受け取る。必須role一覧やトークン層数は製品契約であり、DTCGの普遍要件として作らない。配色・書体・角丸の新しい選択を加えない。",
+    "【事実＋製品policy】各テーマについて基底から独立した文書を作り、宣言した順序でoverrideを適用した後にaliasを解決する。局所wrapperではグループを再帰的に統合し、トークンを一単位として置換する等、置換単位を事前に固定する。グループ/トークンの形の衝突は拒否する。配列の順序とJSONメンバー挿入順を混同せず、暗黙のlast-write-winsを認めない。このwrapperをDTCG Resolver文書の実装とは呼ばない。",
+    "【推論】合成後の各テーマへU1の型・値・欠落・循環検査を実行し、テーマ間で解決済み値やaliasキャッシュを使い回さない。基底だけの成功でdark等を成功にしない。意図した同一パスの上書きと、生成名・出力先の衝突を別の判定にする。",
+    "【製品policy】各テーマの解決後に必須roleの存在と期待型を確認し、roleのパス・型・解決値・参照先・値の由来を対応づける。同じroleがテーマで別の基底を参照することは許せる。基底のrole継承は宣言したmerge契約が認める場合に成立する。theme内にroleが直接書かれていないだけで欠落としない。",
+    "【推論＋製品policy】全宣言テーマが契約に通った場合にだけU3へ渡す。失敗テーマを省いた部分成果を全テーマ成功と報告しない。literal出力はテーマごとの完全なrole値を生成し、後から基本CSS変数だけを変更すれば意味変数が追従すると説明しない。"
+  ],
+  "expected_outputs": [
+    "テーマごとの解決済みrole表とprovenance",
+    "テーマ名・role・パス付きの契約エラー"
+  ],
+  "dependencies": [
+    "C-UI-005",
+    "現行SKILL.md「状態・通知と既存テーマの接続」",
+    "Art Direction references/i-components.md I-01〜03/I-14とreferences/b-visual.md B3-03/05/07/14"
+  ],
+  "exceptions": [
+    "同一パスの明示overrideは意図した置換であり、全重複パス禁止にはしない。",
+    "意味roleの参照先の変更を型不一致と混同しない。同じ型なら別のpalette値への参照が可能。",
+    "必須roleの欠落は製品契約エラーであり、DTCG文書自体の形式不正とは限らない。"
+  ],
+  "failure_modes": [
+    "baseの値をdarkに再使用",
+    "darkだけの循環や型変更を見落とす",
+    "存在する全tokenが解決しただけで欠落roleも完了扱い",
+    "原始色の層数や必須roleを全製品に強制"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "theme-override",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "baseの基底色だけをdarkで上書きし、semantic aliasが各テーマの値に変わることを確認する。",
+        "falsifier": "baseとdarkの値が同じキャッシュから返る。"
+      },
+      {
+        "case": "theme-induced-cycle",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "baseは成功するがoverride後に循環する入力を渡す。",
+        "falsifier": "darkを成功または黙って除外する。"
+      },
+      {
+        "case": "theme-role-coverage",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "全ての存在tokenは解決するが製品必須roleが欠落するテーマを作る。",
+        "falsifier": "テーマ完全性を成功扱いする。"
+      },
+      {
+        "case": "dark-role-repoints",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "同じrole/型を保ち、darkだけ別の有効なpalette tokenへ参照を替える。",
+        "falsifier": "有効な参照先変更を一律拒否、またはbaseの値を再利用。"
+      }
+    ],
+    "status": "PASS_SUPPORTED_SCOPE",
+    "evidence": [
+      "campaigns/C/rounds/02/revision-execution.json",
+      "campaigns/C/rounds/02/recheck.json",
+      "campaigns/C/rounds/02/recheck-results.json",
+      "campaigns/C/rounds/02/comparison.json"
+    ],
+    "accepted_scope": "Independent base-plus-one-override theme merge, graph re-resolution, required role presence/type and provenance; no browser theme/cascade validation.",
+    "visual": "NOT_TESTED"
+  },
+  "source_refs": [
+    {
+      "id": "C02-R1-S02",
+      "url": "https://www.designtokens.org/TR/2025.10/resolver/",
+      "evidence_kind": "Final Community Group Report; not W3C Standard/Recommendation",
+      "record": "research/ui-engineering-design-system/round-02/researcher-1.json#/sources/1",
+      "sections": [
+        {
+          "heading": "5.1 Case sensitivity; 5.2 Enforcing strings",
+          "web_lines": [
+            708,
+            714
+          ]
+        },
+        {
+          "heading": "6 Resolution logic; 6.1 Input validation; 6.2 Ordering; 6.3 Aliases",
+          "web_lines": [
+            715,
+            798
+          ]
+        }
+      ],
+      "registry_source_id": "C-S019"
+    },
+    {
+      "id": "C02-R1-S07",
+      "url": "https://github.com/RNA4219/anything-frontend-art-direction",
+      "evidence_kind": "Local project guidance; not interchange standard",
+      "record": "research/ui-engineering-design-system/round-02/researcher-1.json#/sources/6",
+      "sections": [
+        "#i-01",
+        "#i-02",
+        "#i-03",
+        "#i-04",
+        "#i-05",
+        "#i-06",
+        "#i-14"
+      ],
+      "registry_source_id": "C-S024"
+    },
+    {
+      "id": "R2-S2",
+      "url": "https://styledictionary.com/info/tokens/",
+      "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+      "record": "research/ui-engineering-design-system/round-02/researcher-2.json#/sources/1",
+      "version": "live documentation retrieved 2026-11-23; explicitly describes v4/legacy examples",
+      "section": "Overview note; Referencing / Aliasing; Collision warnings",
+      "registry_source_id": "C-S026"
+    },
+    {
+      "id": "R2-S3",
+      "url": "https://github.com/style-dictionary/style-dictionary/issues/1590",
+      "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+      "record": "research/ui-engineering-design-system/round-02/researcher-2.json#/sources/2",
+      "version": "issue opened 2025-11-04; comments inspected through 2026-10-16; current release support not verified",
+      "section": "Proposal; comments 2026-08-27, 2026-08-28, 2026-08-31, 2026-09-18",
+      "registry_source_id": "C-S027"
+    },
+    {
+      "id": "R2-S5",
+      "url": "https://opensource.adobe.com/spectrum-web-components/tools/styles/",
+      "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+      "record": "research/ui-engineering-design-system/round-02/researcher-2.json#/sources/4",
+      "version": "page badge NPM 1.12.6; retrieved 2026-11-23; examples vary by system",
+      "section": "Global tokens; Color options; Token imports",
+      "registry_source_id": "C-S029"
+    },
+    {
+      "id": "R2-S8",
+      "url": "https://spectrum.adobe.com/page/color",
+      "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+      "record": "research/ui-engineering-design-system/round-02/researcher-2.json#/sources/7",
+      "version": "live documentation retrieved 2026-11-23",
+      "section": "Solid color background with black or white; Two-tone color pairing",
+      "registry_source_id": "C-S031"
+    }
+  ],
+  "confidence": {
+    "source": "primary specifications and tooling reports; partial reader captures",
+    "implementation": "Executed primary and separate-task adversarial tests in supported scope",
+    "transfer": "unverified"
+  },
+  "status": "ACCEPT",
+  "version": "0.1.1",
+  "analysis_unit": "C003-U2",
+  "round": 2,
+  "fact_rule_boundary": "Fact/inference/local policy labels preserved from sankai analysis; not full DTCG conformance",
+  "history": [
+    {
+      "event": "REGISTER",
+      "at": "2026-11-23T09:25:48.001849+00:00",
+      "status": "DRAFT"
+    },
+    {
+      "event": "CRITIC",
+      "status": "REVISE",
+      "findings": [
+        "R02-CR-01",
+        "R02-CR-02",
+        "R02-CR-03"
+      ],
+      "reason": "Resource and CLI exception contracts failed independent probes; fixes await recheck."
+    },
+    {
+      "event": "TRACEABILITY_NORMALIZATION",
+      "reason": "Resolve source record paths from repository root and map decomposition identities to registry identities; no behavioral rule change."
+    },
+    {
+      "event": "DECIDE",
+      "at": "2026-11-23T09:43:45.637135+00:00",
+      "status": "ACCEPT",
+      "accepted_scope": "Independent base-plus-one-override theme merge, graph re-resolution, required role presence/type and provenance; no browser theme/cascade validation.",
+      "remaining": "Browser/AT, rendered accessibility and full DTCG unsupported features remain outside acceptance."
+    }
+  ]
+}

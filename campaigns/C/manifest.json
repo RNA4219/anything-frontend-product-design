@@ -1,0 +1,66 @@
+{
+  "campaign_id": "AFP-C-20261123",
+  "session": "C",
+  "domain": "ui-engineering-design-system",
+  "base_branch": "main",
+  "base_sha": "3d02174a69676afa8e0b02f4062cc6ecb636d300",
+  "branch": "session-c/ui-engineering-20261123",
+  "started_at": "2026-11-23T06:35:57.051905+00:00",
+  "max_rounds": 12,
+  "max_concurrent_subagents": 2,
+  "max_active_including_parent": 3,
+  "rounds_completed": 3,
+  "state": "CHECKPOINTED",
+  "checkpoint": "round-03-decided-next-round-04-registered",
+  "issues_at_start": 0,
+  "prs_at_start": 0,
+  "runtime_cost": {
+    "measured": false,
+    "value": null,
+    "reason": "No token or monetary metering exposed by collaboration tools"
+  },
+  "tools": {
+    "imozuru": {
+      "revision": "30c3b59a076ce228f05aa3036809297422f23dee",
+      "mode": "Skill-guided discovery with actual fetch.py and citation or hyperlink chasing"
+    },
+    "sankai": {
+      "revision": "0e2521453ad758cfb680110da0fdddc994d000be",
+      "mode": "LLM-guided decomposition; no autonomous CLI exists"
+    }
+  },
+  "art_direction_revision": "f5df625dbc577d6a3ca28e13ef09e39b135b4a6f",
+  "constraints": [
+    "No shared main/root README/root SKILL edits",
+    "Only C-owned paths",
+    "No third-party fulltext in public repository",
+    "Draft PR only; no main merge",
+    "No claim of cross-model independence or full accessibility conformance"
+  ],
+  "draft_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/1",
+  "integrated_main_snapshot": "20f21fb9bb1b4d0921333ca1be683d6b42a60c63",
+  "public_base_sha": "4333d097b5699528b5554434b494d8079126ba0f",
+  "public_history_note": "Remote public history was replaced during this session. Only the C delta was rebased onto the current public branch; removed records were not restored.",
+  "active_round": null,
+  "active_subagents": [],
+  "subagents_unique": 12,
+  "subagents_completed": 12,
+  "subagents_failed": 0,
+  "subagents_unrecovered": 0,
+  "instruction_units": 9,
+  "unit_states": {
+    "ACCEPT": 3,
+    "HOLD": 6,
+    "REVISE": 0,
+    "REJECT": 0,
+    "DRAFT": 0
+  },
+  "canonical_sources": 44,
+  "duplicate_source_records": 2,
+  "next_round": 4,
+  "next_round_started": false,
+  "saturated": false,
+  "consecutive_rounds_without_meaningful_improvement": 0,
+  "stop_reason": "Bounded execution checkpoint after three complete cycles; maximum of twelve not reached and coverage not complete",
+  "updated_at": "2026-11-23T10:32:34.821976+00:00"
+}

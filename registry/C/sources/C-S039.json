@@ -1,0 +1,15 @@
+{
+  "source_id": "C-S039",
+  "url": "https://github.com/mozilla-firefox/firefox/blob/main/widget/windows/docs/windows-pointing-device/index.md",
+  "title": "Firefox Windows pointing-device implementation report",
+  "retrieved_date": "2026-11-23",
+  "records": [
+    {
+      "file": "research/ui-engineering-design-system/round-03/researcher-2.json",
+      "source_id": "R2-S5"
+    }
+  ],
+  "original_download": "unavailable",
+  "reader_capture": "partial",
+  "public_fulltext": false
+}

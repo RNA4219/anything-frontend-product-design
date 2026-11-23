@@ -1,0 +1,118 @@
+{
+  "round": 2,
+  "reviewer": "same-model separate-task independent critic",
+  "cost": "unknown",
+  "decision": "REVISE",
+  "visual": "HOLD",
+  "candidate_sha256": "2f4893e6e491c55952617efeba3d44c93924d11f444da7755c76965c4334dbdb",
+  "candidate_snapshot_preserved": true,
+  "evaluation_contract_changed": false,
+  "initial_evidence": "campaigns/C/rounds/02/initial-results.json",
+  "probe_source": "campaigns/C/rounds/02/independent-probes.py",
+  "initial_raw": {
+    "total": 73,
+    "pass": 67,
+    "fail": 6
+  },
+  "adjudicated": {
+    "pass": 68,
+    "actual_failed_probes": 5,
+    "finding_groups": 3
+  },
+  "oracle_corrections": [
+    {
+      "probe_id": "cli-deep-json",
+      "initial_expected": 2,
+      "actual_returncode": 1,
+      "actual_diagnostic": "CONFIG_SHAPE",
+      "decision": "PASS_STRUCTURED_REJECTION",
+      "reason": "Valid deeply nested JSON array may parse successfully; root config rejection with no CSS is a valid outcome. Do not count a parser recursion assumption as product defect."
+    }
+  ],
+  "findings": [
+    {
+      "id": "R02-CR-01",
+      "severity": "medium",
+      "decision": "REVISE",
+      "locations": [
+        "modules/ui-engineering-design-system/checks/tokens.py:194-209",
+        "modules/ui-engineering-design-system/checks/tokens.py:59-67",
+        "modules/ui-engineering-design-system/checks/tokens.py:231-297"
+      ],
+      "probe_ids": [
+        "group-depth-1200",
+        "deep-malformed-value"
+      ],
+      "symptom": "build() leaks RecursionError before bounded group/value diagnostics",
+      "impact": "Structured diagnostic contract fails; no false PASS or CSS corruption observed",
+      "basis": "Local declared limits and build report contract",
+      "fix": "Bound structural traversal before deepcopy/merge; normalize resource failures to structured reports",
+      "reproduce": "python3 campaigns/C/rounds/02/independent-probes.py --out /tmp/c-round02-critic-replay.json"
+    },
+    {
+      "id": "R02-CR-02",
+      "severity": "medium",
+      "decision": "REVISE",
+      "locations": [
+        "modules/ui-engineering-design-system/checks/tokens.py:40-41",
+        "modules/ui-engineering-design-system/checks/tokens.py:213-218",
+        "modules/ui-engineering-design-system/checks/tokens.py:278-297"
+      ],
+      "probe_ids": [
+        "large-integer-serializer"
+      ],
+      "symptom": "Finite 10**5000 accepted by finite() then string serialization leaks ValueError",
+      "impact": "Undeclared numeric resource limit produces unstructured API failure",
+      "basis": "Local finite-number contract; not DTCG invalidity claim",
+      "fix": "Support safely or document and enforce bounded numeric size with structured LIMIT",
+      "reproduce": "python3 campaigns/C/rounds/02/independent-probes.py --out /tmp/c-round02-critic-replay.json"
+    },
+    {
+      "id": "R02-CR-03",
+      "severity": "medium",
+      "decision": "REVISE",
+      "locations": [
+        "modules/ui-engineering-design-system/checks/tokens.py:309-312",
+        "modules/ui-engineering-design-system/checks/tokens.py:315-338"
+      ],
+      "probe_ids": [
+        "cli-invalid-utf8",
+        "cli-oversized-json-integer"
+      ],
+      "symptom": "CLI decode/numeric parse raises uncaught UnicodeDecodeError/ValueError; exit 1 and no JSON stdout",
+      "impact": "Documented parse failure exit 2/report interface not preserved; prior CSS preserved",
+      "basis": "Local CLI exit-code and diagnostic contract",
+      "fix": "Normalize decode/numeric parse exceptions at load boundary; retain existing CSS and exit 2",
+      "reproduce": "python3 campaigns/C/rounds/02/independent-probes.py --out /tmp/c-round02-critic-replay.json"
+    }
+  ],
+  "existing_unit_tests": {
+    "tests": 17,
+    "passed": 17
+  },
+  "sample_css_exact": true,
+  "source_review": {
+    "status": "consistent_with_recorded_research_with_caveats",
+    "fresh_full_original_verification": false,
+    "source_limitations": [
+      "full original fetches failed; reader excerpts",
+      "Color reader rewritten summary",
+      "latest Style Dictionary releases unverified"
+    ],
+    "full_dtcg_claim": false,
+    "visual_success_claim": false
+  },
+  "changes_by_critic": {
+    "implementation": false,
+    "registry": false,
+    "commit": false,
+    "browser_or_server": false
+  },
+  "not_claimed": [
+    "human review",
+    "cross-model review",
+    "hidden holdout",
+    "generation uplift",
+    "rendered accessibility conformance"
+  ]
+}

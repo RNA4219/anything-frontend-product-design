@@ -1,0 +1,19 @@
+{
+  "source_id": "C-S007",
+  "url": "https://www.w3.org/TR/WCAG22",
+  "title": "WCAG 2.2, Recommendation 12 December 2024",
+  "retrieved_date": "2026-11-23",
+  "records": [
+    {
+      "file": "research/ui-engineering-design-system/round-01/researcher-1.json",
+      "source_id": "WCAG22"
+    },
+    {
+      "file": "research/ui-engineering-design-system/round-03/researcher-1.json",
+      "source_id": "WCAG22"
+    }
+  ],
+  "original_download": "unavailable",
+  "reader_capture": "partial",
+  "public_fulltext": false
+}

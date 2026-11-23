@@ -1,0 +1,16 @@
+{
+  "source_id": "C-S027",
+  "url": "https://github.com/style-dictionary/style-dictionary/issues/1590",
+  "title": "Style Dictionary issue #1590: Support for DTCG v2025.10",
+  "retrieved_date": "2026-11-23",
+  "version": "issue opened 2025-11-04; comments inspected through 2026-10-16; current release support not verified",
+  "records": [
+    {
+      "file": "research/ui-engineering-design-system/round-02/researcher-2.json",
+      "source_id": "R2-S3"
+    }
+  ],
+  "original_download": "unavailable",
+  "reader_capture": "partial",
+  "public_fulltext": false
+}

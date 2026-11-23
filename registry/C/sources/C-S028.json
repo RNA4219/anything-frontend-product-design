@@ -1,0 +1,16 @@
+{
+  "source_id": "C-S028",
+  "url": "https://github.com/style-dictionary/style-dictionary/issues/1398",
+  "title": "Style Dictionary issue #1398: Incorrect/unexpected dimension output",
+  "retrieved_date": "2026-11-23",
+  "version": "report opened 2024-11-25 for v4; page observed closed; fixed release not checked",
+  "records": [
+    {
+      "file": "research/ui-engineering-design-system/round-02/researcher-2.json",
+      "source_id": "R2-S4"
+    }
+  ],
+  "original_download": "unavailable",
+  "reader_capture": "partial",
+  "public_fulltext": false
+}

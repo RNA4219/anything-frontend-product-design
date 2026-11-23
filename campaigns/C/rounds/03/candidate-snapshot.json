@@ -1,0 +1,15 @@
+{
+  "phase": "frozen-before-independent-critic",
+  "at": "2026-11-23T10:16:48.471928+00:00",
+  "sha256": {
+    "modules/ui-engineering-design-system/checks/layout.py": "da066ac8c6a2543d5dbfa0c49ccceeef9a3082af7aa0d791b86f3988ec888670",
+    "modules/ui-engineering-design-system/tests/test_layout.py": "1e46dc387195630207f9c9cb6f559000aa58501506c7c7d00b48ee2af96a22ff",
+    "modules/ui-engineering-design-system/references/layout-contracts.md": "288d5cb00e50d448148ac13de2e3dc62a5312264c2a3274cb3349c9c12d96c83",
+    "modules/ui-engineering-design-system/checks/layout-observation-protocol.md": "12005ad6a8dee484676ba9b921fdbf5b7633b8b91fdb7b8b153333a88a26deec",
+    "modules/ui-engineering-design-system/examples/reflow-targets.html": "1f841aec1fb4a066d82b2af3d57d0f4fd2d04804b5b5d87795fb1918f8cbe9bb",
+    "campaigns/C/rounds/03/plan.json": "1790a4f36964e7974061986021d3766a2456e8c75cead7085156571ecf6c9f97",
+    "campaigns/C/rounds/03/evaluation-plan.md": "1fd8e6f1631618237ac3e8f9126d40a470800582eedeb0fd597a2ce4aa81b865",
+    "campaigns/C/rounds/03/compare_models.py": "d95e8b0fd6fc34e99667e96113cf61f73a4e281cfdc793144eb7a336f3f32ecb"
+  },
+  "browser_not_executed": true
+}

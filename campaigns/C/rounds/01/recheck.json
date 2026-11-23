@@ -1,0 +1,128 @@
+{
+  "command": "python3 campaigns/C/rounds/01/critic-probes.py",
+  "browser_or_at_executed": false,
+  "candidate_declarations_findings": [],
+  "malformed_submit_policy_probes": [
+    {
+      "submit_policy": [],
+      "findings": [
+        {
+          "path": "components[0].submit_policy",
+          "code": "STRUCTURE",
+          "severity": "error",
+          "message": "Expected a string."
+        }
+      ],
+      "defect_reproduced": false
+    },
+    {
+      "submit_policy": {},
+      "findings": [
+        {
+          "path": "components[0].submit_policy",
+          "code": "STRUCTURE",
+          "severity": "error",
+          "message": "Expected a string."
+        }
+      ],
+      "defect_reproduced": false
+    },
+    {
+      "submit_policy": true,
+      "findings": [
+        {
+          "path": "components[0].submit_policy",
+          "code": "STRUCTURE",
+          "severity": "error",
+          "message": "Expected a string."
+        }
+      ],
+      "defect_reproduced": false
+    },
+    {
+      "submit_policy": 0,
+      "findings": [
+        {
+          "path": "components[0].submit_policy",
+          "code": "STRUCTURE",
+          "severity": "error",
+          "message": "Expected a string."
+        }
+      ],
+      "defect_reproduced": false
+    },
+    {
+      "submit_policy": null,
+      "findings": [
+        {
+          "path": "components[0].submit_policy",
+          "code": "STRUCTURE",
+          "severity": "error",
+          "message": "Expected a string."
+        }
+      ],
+      "defect_reproduced": false
+    },
+    {
+      "submit_policy": "incldue",
+      "findings": [
+        {
+          "path": "components[0].submit_policy",
+          "code": "SUBMIT_POLICY",
+          "severity": "error",
+          "message": "Declare include, omit, or not-applicable; unknown policies cannot pass."
+        }
+      ],
+      "defect_reproduced": false
+    }
+  ],
+  "valid_controls": [
+    {
+      "separate_serialization": false,
+      "findings": [
+        {
+          "path": "components[0].submit_policy",
+          "code": "DISABLED_PAYLOAD",
+          "severity": "error",
+          "message": "Disabled native controls are omitted from FormData; specify separate serialization if needed."
+        }
+      ]
+    },
+    {
+      "separate_serialization": true,
+      "findings": []
+    }
+  ],
+  "node_handler_probes": {
+    "kind": "pure Node execution of extracted application handlers with minimal doubles",
+    "browser_or_at_evidence": false,
+    "unavailableDidNotExecute": true,
+    "confirmedCount": "1",
+    "staleBefore": {
+      "reproduced": false,
+      "beforeMarkup": "12月10日 14:00",
+      "current": "R-204: 12月10日 14:00（変更可）"
+    },
+    "lostFocusNotDetected": {
+      "reproduced": false,
+      "suppliedState": "body active; invoker usable"
+    },
+    "removedInvokerFallback": true,
+    "validExternalFocusPreserved": true,
+    "limitations": [
+      "Native dialog, event scheduling, focus algorithms, keyboard events, layout and AT are not implemented by these doubles."
+    ]
+  },
+  "browser_reporting_recheck": {
+    "command": "Import browser_contracts.py without calling main; evaluate exception_status for setup/navigation/interaction/unknown; inspect phase and case wiring plus exit branch.",
+    "status": "PASS_PURE_AND_STATIC_ONLY",
+    "observed_statuses": {
+      "setup": "BLOCKED",
+      "navigation": "ERROR_TEST_EXECUTION",
+      "interaction": "ERROR_TEST_EXECUTION",
+      "unknown": "ERROR_TEST_EXECUTION"
+    },
+    "browser_executed": false,
+    "background_fill_assertion_added_but_not_executed": true
+  }
+}

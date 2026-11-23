@@ -1,0 +1,15 @@
+{
+  "source_id": "C-S038",
+  "url": "https://developer.chrome.com/blog/reading-flow",
+  "title": "Use CSS reading-flow for logical sequential focus navigation",
+  "retrieved_date": "2026-11-23",
+  "records": [
+    {
+      "file": "research/ui-engineering-design-system/round-03/researcher-2.json",
+      "source_id": "R2-S4"
+    }
+  ],
+  "original_download": "unavailable",
+  "reader_capture": "partial",
+  "public_fulltext": false
+}

@@ -1,0 +1,561 @@
+{
+  "session": "C",
+  "round": 3,
+  "researcher": "researcher-2",
+  "candidate": "C-002",
+  "date": "2026-11-23",
+  "status": "bounded_research_complete_browser_hold_raw_fetch_failed",
+  "plan": "campaigns/C/rounds/03/plan.json",
+  "plan_changed": false,
+  "strategy": "Official product/browser implementation counterexamples; conditional and measurement contracts, not duplicate WCAG thresholds.",
+  "cost": "unknown",
+  "stop_reason": "bounded subtask completed with five prioritized falsifiers; not saturation",
+  "full_original": false,
+  "sources": [
+    {
+      "id": "R2-S1",
+      "name": "mdn-overflow",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow",
+      "title": "overflow CSS property",
+      "version": "live MDN; last modified 2026-11-16",
+      "section": "Values: hidden / clip; Accessibility",
+      "web_refs": [
+        "turn820443987view5"
+      ],
+      "web_lines": [
+        267,
+        271,
+        383,
+        418,
+        493,
+        527
+      ],
+      "fact": "hidden permits programmatic/focus scrolling; clip does not; absence of scrollbars does not establish access.",
+      "authority": "primary",
+      "kind": "official",
+      "full_original": false,
+      "reader_status": "partial search-reader extraction; not byte-identical original",
+      "reader_file": "sources/mdn-overflow.reader.txt",
+      "reader_sha256": "d4375503839069a9c192a767c603dfbc6b591ee668c10929822747f3444d5b8c",
+      "original_sha256": null,
+      "observed_scope": "published documentation/specification reader excerpt only; browser execution NOT_RUN"
+    },
+    {
+      "id": "R2-S2",
+      "name": "chrome-responsive-table",
+      "url": "https://developer.chrome.com/docs/modern-web-guidance/guides/ui-atoms/responsive-table?hl=en",
+      "title": "Responsive tables",
+      "version": "live browser-vendor guidance; retrieved 2026-11-23; revision not pinned",
+      "section": "Implementation Steps 1–2",
+      "web_refs": [
+        "turn126449323view4"
+      ],
+      "web_lines": [
+        88,
+        97,
+        98,
+        125,
+        130
+      ],
+      "fact": "Guidance places scroll handling on a named, keyboard-focusable table wrapper and preserves cell/header relationships; not a page-wide WCAG exception.",
+      "authority": "primary",
+      "kind": "official",
+      "full_original": false,
+      "reader_status": "partial search-reader extraction; not byte-identical original",
+      "reader_file": "sources/chrome-responsive-table.reader.txt",
+      "reader_sha256": "b18a66abf23ff3e9bea7c0ba2f696cea7ce08bef3b24aad15ee461e1b28febe9",
+      "original_sha256": null,
+      "observed_scope": "published documentation/specification reader excerpt only; browser execution NOT_RUN"
+    },
+    {
+      "id": "R2-S3",
+      "name": "uswds-header-tests",
+      "url": "https://designsystem.digital.gov/components/header/accessibility-tests/",
+      "title": "Header accessibility tests",
+      "version": "observed tests identify USWDS v3.8.1; retrieved 2026-11-23",
+      "section": "Test the header in your project; Zoom magnification tests",
+      "web_refs": [
+        "turn820443987view2",
+        "turn820443987view3"
+      ],
+      "web_lines": [
+        213,
+        386,
+        399,
+        404
+      ],
+      "fact": "Component-isolation results require site-context retesting; header navigation should remain usable at 400% without overlap/cutoff.",
+      "authority": "primary",
+      "kind": "official",
+      "full_original": false,
+      "reader_status": "partial search-reader extraction; not byte-identical original",
+      "reader_file": "sources/uswds-header-tests.reader.txt",
+      "reader_sha256": "5f36aa13fa8067232e104fd7fc894928c448c897d69bae627a7c9f09930ea8a9",
+      "original_sha256": null,
+      "observed_scope": "published documentation/specification reader excerpt only; browser execution NOT_RUN"
+    },
+    {
+      "id": "R2-S4",
+      "name": "chrome-reading-flow",
+      "url": "https://developer.chrome.com/blog/reading-flow",
+      "title": "Use CSS reading-flow for logical sequential focus navigation",
+      "version": "published 2025-05-01; states Chrome 137 availability; current cross-browser support not tested",
+      "section": "reading-flow; reading-order; Interaction with tabindex",
+      "web_refs": [
+        "turn126449323view1",
+        "turn820443987view1"
+      ],
+      "web_lines": [
+        48,
+        50,
+        51,
+        55
+      ],
+      "fact": "Visual and source orders can diverge; reading-flow changes sequential navigation/accessibility ordering in supporting implementations.",
+      "authority": "primary",
+      "kind": "official",
+      "full_original": false,
+      "reader_status": "partial search-reader extraction; not byte-identical original",
+      "reader_file": "sources/chrome-reading-flow.reader.txt",
+      "reader_sha256": "04b3fe5a230034cc17fb98b78c52f00999f6d9c5bb9a99fb6d4af42a18e654e8",
+      "original_sha256": null,
+      "observed_scope": "published documentation/specification reader excerpt only; browser execution NOT_RUN"
+    },
+    {
+      "id": "R2-S5",
+      "name": "mozilla-pointing-devices",
+      "url": "https://github.com/mozilla-firefox/firefox/blob/main/widget/windows/docs/windows-pointing-device/index.md",
+      "title": "Firefox Windows pointing-device implementation report",
+      "version": "live main branch retrieved 2026-11-23; commit/date/browser version unpinned; historical reports not current reproductions",
+      "section": "Selection of Primary Pointing Device; Pointer Media Queries",
+      "web_refs": [
+        "turn126449323view5",
+        "turn820443987view0"
+      ],
+      "web_lines": [
+        495,
+        508,
+        511,
+        523,
+        540,
+        567,
+        569
+      ],
+      "fact": "Primary-device classification is a policy decision; report describes mixed-device ambiguity and historical misclassification paths.",
+      "authority": "primary",
+      "kind": "official",
+      "full_original": false,
+      "reader_status": "partial search-reader extraction; not byte-identical original",
+      "reader_file": "sources/mozilla-pointing-devices.reader.txt",
+      "reader_sha256": "fb2f84584c987a8cf51586edc245ec3ddadbf2720fc99b0406c9c05c4fdc90b5",
+      "original_sha256": null,
+      "observed_scope": "published documentation/specification reader excerpt only; browser execution NOT_RUN"
+    },
+    {
+      "id": "R2-S6",
+      "name": "w3c-mediaqueries4",
+      "url": "https://www.w3.org/TR/mediaqueries-4/",
+      "title": "Media Queries Level 4",
+      "version": "W3C Candidate Recommendation Draft 2026-02-19; work in progress",
+      "section": "7.2–7.3 Interaction Media Features",
+      "web_refs": [
+        "turn107746597view1",
+        "turn111697208view0",
+        "turn111697208view1"
+      ],
+      "web_lines": [
+        894,
+        895,
+        914,
+        916,
+        918,
+        920,
+        925,
+        926
+      ],
+      "fact": "any-* reflects union of pointing capabilities; coarse and fine may both match; it does not establish current input choice or keyboard absence.",
+      "authority": "primary",
+      "kind": "official",
+      "full_original": false,
+      "reader_status": "partial search-reader extraction; not byte-identical original",
+      "reader_file": "sources/w3c-mediaqueries4.reader.txt",
+      "reader_sha256": "7aa7920a12b0a6a5d2d2a87473a67e69684ebba343e8bd2bb07e0ef578243e6e",
+      "original_sha256": null,
+      "observed_scope": "published documentation/specification reader excerpt only; browser execution NOT_RUN"
+    },
+    {
+      "id": "R2-S7",
+      "name": "mdn-boundingrect",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect",
+      "title": "Element: getBoundingClientRect()",
+      "version": "live MDN retrieved 2026-11-23; revision not pinned",
+      "section": "Return value and scrolling",
+      "web_refs": [
+        "turn126449323view6"
+      ],
+      "web_lines": [
+        207,
+        208,
+        211
+      ],
+      "fact": "The result encloses CSS border boxes and is viewport-relative; it is not itself a hit-area proof.",
+      "authority": "primary",
+      "kind": "official",
+      "full_original": false,
+      "reader_status": "partial search-reader extraction; not byte-identical original",
+      "reader_file": "sources/mdn-boundingrect.reader.txt",
+      "reader_sha256": "34c50b943f355d2e364f4250b57a7a985e4127a7fe748fcb389d38482ef942f0",
+      "original_sha256": null,
+      "observed_scope": "published documentation/specification reader excerpt only; browser execution NOT_RUN"
+    },
+    {
+      "id": "R2-S8",
+      "name": "mdn-elementfrompoint",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/elementFromPoint",
+      "title": "Document: elementFromPoint()",
+      "version": "live MDN; last modified 2025-06-03",
+      "section": "Description / Return value",
+      "web_refs": [
+        "turn820443987view4"
+      ],
+      "web_lines": [
+        183,
+        184,
+        186,
+        189
+      ],
+      "fact": "Point query returns topmost element, skips pointer-events:none, returns iframe element for another document, and null outside bounds.",
+      "authority": "primary",
+      "kind": "official",
+      "full_original": false,
+      "reader_status": "partial search-reader extraction; not byte-identical original",
+      "reader_file": "sources/mdn-elementfrompoint.reader.txt",
+      "reader_sha256": "a5dbfed4c3a92d6bea9e4e76d91619aa726ccb09252b41fbe3a4dd81a90b8083",
+      "original_sha256": null,
+      "observed_scope": "published documentation/specification reader excerpt only; browser execution NOT_RUN"
+    },
+    {
+      "id": "R2-S9",
+      "name": "mdn-clippath",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/clipPath",
+      "title": "SVG clipPath",
+      "version": "live MDN; last modified 2025-11-07",
+      "section": "Example: geometry and pointer events",
+      "web_refs": [
+        "turn107746597view0"
+      ],
+      "web_lines": [
+        255,
+        256
+      ],
+      "fact": "Clipping preserves inherent geometry/bounding box while pointer events are not dispatched on clipped regions by default.",
+      "authority": "primary",
+      "kind": "official",
+      "full_original": false,
+      "reader_status": "partial search-reader extraction; not byte-identical original",
+      "reader_file": "sources/mdn-clippath.reader.txt",
+      "reader_sha256": "342ed374b9bbd209913e2ba0542ee2e28d5ec20d474fc942a31698864932fc88",
+      "original_sha256": null,
+      "observed_scope": "published documentation/specification reader excerpt only; browser execution NOT_RUN"
+    },
+    {
+      "id": "R2-S10",
+      "name": "w3c-display4",
+      "url": "https://www.w3.org/TR/css-display-4/",
+      "title": "CSS Display Module Level 4",
+      "version": "live draft retrieved 2026-11-23; revision date not inspected; not an implementation-support assertion",
+      "section": "4 Reading Order",
+      "web_refs": [
+        "turn111697208view2"
+      ],
+      "web_lines": [
+        754,
+        756,
+        770,
+        774,
+        778,
+        823
+      ],
+      "fact": "reading-flow affects speech/sequential navigation order without changing layout or painting order.",
+      "authority": "primary",
+      "kind": "official",
+      "full_original": false,
+      "reader_status": "partial search-reader extraction; not byte-identical original",
+      "reader_file": "sources/w3c-display4.reader.txt",
+      "reader_sha256": "1e8d14d3053c2c1bfaa31e3cf5b70e4dcf6becbc0cb7e22eddb98b6d4c199564",
+      "original_sha256": null,
+      "observed_scope": "published documentation/specification reader excerpt only; browser execution NOT_RUN"
+    }
+  ],
+  "link_hops": [
+    {
+      "from": "R2-S5",
+      "via": "observed link 78",
+      "to": "R2-S6",
+      "executed": true
+    },
+    {
+      "from": "R2-S4",
+      "via": "observed link 9",
+      "to": "R2-S10",
+      "executed": true
+    }
+  ],
+  "units": [
+    {
+      "id": "C002-R2-U1",
+      "title": "隠すことで横スクロールだけを消したページ",
+      "sources": [
+        "R2-S1",
+        "R2-S2"
+      ],
+      "fact": "hidden と clip は到達性が異なる。Chrome資料は表のwrapperに局所scrollを置き、見出し関係とキーボード経路を保持する。",
+      "inference": "ページのoverflow量がゼロでも必要情報・操作の消失を否定できない。表の存在だけではページ全域を例外扱いできない。",
+      "local_policy": "必要情報/操作IDを先に列挙し、狭幅後の各到達経路を記録する。局所例外はregion ID・二次元を要する理由・対象内容・横方向overflowのownerを持つ。ページ本文は別評価する。",
+      "when": "320 CSS px相当の縦読み画面、長いラベル、表/地図など局所二次元領域",
+      "input": [
+        "requiredItems[{id,kind,required}]",
+        "regionId/reason",
+        "layoutViewport CSS px",
+        "document and region scroll dimensions",
+        "overflow computed values",
+        "reachableBy input modality"
+      ],
+      "output": "情報/操作の保持表、region別overflow結果、文書全体の独立結果",
+      "exceptions": [
+        "装飾画像の意図した切抜きは、タスクに必要な情報/操作が失われない根拠があれば別扱い",
+        "必要な二次元構造の例外根拠はResearcher-1のWCAG整理に従う。単なる長文や設定したmin-widthを必要性としない",
+        "hidden自体を全面禁止しない。実際の到達手段を評価する"
+      ],
+      "falsifier": {
+        "id": "retained-action-local-overflow",
+        "procedure": "長い予約名と末尾の必須『変更を確定』操作を幅600pxの子要素に置き、320pxの親にhidden/clip/autoを各適用する案を用意。別案では600px表のみを局所autoにし、本文と操作はreflowさせる。mouse/touch/keyboardごとに全必須項目へ到達できるか確認。",
+        "reject_if": "scrollbar無しだけをPASSとする、必須ラベル/操作が到達不能、表を根拠に本文まで横scroll許可",
+        "execution": "NOT_RUN_BROWSER_BLOCKED"
+      }
+    },
+    {
+      "id": "C002-R2-U2",
+      "title": "視覚順序だけを確認して読順も保証したとする",
+      "sources": [
+        "R2-S4",
+        "R2-S10"
+      ],
+      "fact": "flex/gridの視覚順序とsource順は分離できる。reading-flowはspeech/linear navigationを制御し、描画順を変更しない。Chrome記事は137からの提供を記す。",
+      "inference": "source/visual/focus/ATを同一配列と仮定するvalidatorは偽合格と偽不合格の双方を生む。",
+      "local_policy": "DOM順・視覚順・実際のTab順・対象ATでの読み順を別観測とする。業務上必要な前後関係を保持するか評価し、単純な全配列一致を唯一の判定基準にしない。",
+      "when": "狭幅でgrid placement/order/row-reverse/reading-flowを変える実装",
+      "input": [
+        "task order constraints",
+        "DOM order",
+        "visual order",
+        "sequential focus observations",
+        "AT reading observations",
+        "reading-flow support/effective value"
+      ],
+      "output": "意味上の順序制約ごとの確認結果と未観測領域",
+      "exceptions": [
+        "reading-flowによりsource順と実際の順序が異なっても直ちに不適合としない",
+        "Chrome137の公開情報は他browser/ATの互換性証明ではない",
+        "装飾上の配置差で意味・操作が損なわれないケースもある"
+      ],
+      "falsifier": {
+        "id": "visual-source-order-divergence",
+        "procedure": "予約日時→変更候補→確定のDOMを持つ3領域を狭幅でCSS orderにより並べ替える。通常順とreading-flow使用案を分け、Tab/Shift+Tab、対象ATの順を実測する。",
+        "reject_if": "screenshotだけで順序をPASS、CSS宣言だけでAT結果をPASS、常にDOM順という決めつけ",
+        "execution": "NOT_RUN_BROWSER_BLOCKED"
+      }
+    },
+    {
+      "id": "C002-R2-U3",
+      "title": "部品単体の合格を重なるページに移す",
+      "sources": [
+        "R2-S3"
+      ],
+      "fact": "USWDS headerの記録はv3.8.1。400%で表示・操作が残り重なり/切れがない項目がある一方、単体試験を自サイトで再確認するよう明記する。",
+      "inference": "固定header/footer/通知と内容の合成で、単体合格では見つからない遮蔽が発生しうる。",
+      "local_policy": "zoomの実測viewport、固定層、scroll位置、focus target、必要操作の可視性/操作性を同じ状態で記録する。単体証拠をページ合格へ昇格しない。",
+      "when": "fixed/stickyヘッダー、bottom action bar、cookie banner、notification等がある画面",
+      "input": [
+        "component version",
+        "page context",
+        "zoom and layoutViewport",
+        "overlay state",
+        "scroll/focus sequence",
+        "visible and operable required items"
+      ],
+      "output": "頁内合成時の遮蔽結果、根拠となる観測、未実施ならHOLD",
+      "exceptions": [
+        "固定表示自体を禁止しない。必要な閲覧/操作が保たれることが条件",
+        "focusの完全遮蔽と部分遮蔽のWCAG水準差はArt Direction E-03/E-04へ委任"
+      ],
+      "falsifier": {
+        "id": "fixed-overlay-at-zoom",
+        "procedure": "予約画面に固定上部headerと長い下部通知を同時表示し、狭幅/実zoomで先頭から最終確定までTab移動する。各focus後のscrollとoverlay位置、全必須説明と操作を確認する。",
+        "reject_if": "focusが覆われ操作できない、説明が回復不能に隠れる、部品の過去PASSだけでページPASS",
+        "execution": "NOT_RUN_BROWSER_BLOCKED"
+      }
+    },
+    {
+      "id": "C002-R2-U4",
+      "title": "fine/hoverの一致を入力限定の証拠とする",
+      "sources": [
+        "R2-S5",
+        "R2-S6"
+      ],
+      "fact": "Mozilla実装資料は複数入力のprimary判定の曖昧さを報告する。MQ4ではany-pointerのcoarse/fineが同時一致しうる。any-hoverはhover不能機器の存在やkeyboardの有無を判定しない。",
+      "inference": "fine/hover一致を根拠に対象を縮小したり、必須操作をhover専用にしたりする判断は混在入力で破綻する。",
+      "local_policy": "必要操作は採用する入力経路ごとに到達可能にする。MQの観測値、実際に使った入力、イベントpointerType、接続変更前後を区別する。MQのみからWCAG target例外を導出しない。",
+      "when": "touch+mouse、pen+touch、着脱keyboard、remote+optional mouse",
+      "input": [
+        "pointer/hover/any-pointer/any-hover matches",
+        "actual input type",
+        "available input configuration",
+        "essential actions",
+        "feature fallback"
+      ],
+      "output": "能力queryと利用入力を分離した経路結果",
+      "exceptions": [
+        "hoverは補助的強調や追加の利便性に使える。必須操作の唯一の入口にはしない",
+        "すべての機器を実機網羅したとは主張しない",
+        "Mozilla文書内のSurface/Firefox64-65等の報告は現行欠陥の再現証拠ではない"
+      ],
+      "falsifier": {
+        "id": "mixed-input-switch",
+        "procedure": "touch+mouse状態でany-pointer:fineとcoarseが両方trueの観測を用意。mouseを接続したままtouchで操作し、hoverなしで同じ必須操作へ到達できるか確認。接続変更で見た目/標的が突然変わる場合も記録する。",
+        "reject_if": "fineだけでtouch到達性やtarget例外をPASS、hover一致だけで必須menuをhover専用にする",
+        "execution": "NOT_RUN_BROWSER_BLOCKED"
+      }
+    },
+    {
+      "id": "C002-R2-U5",
+      "title": "外接矩形を実際に押せる領域と同一視する",
+      "sources": [
+        "R2-S7",
+        "R2-S8",
+        "R2-S9"
+      ],
+      "fact": "getBoundingClientRectはCSS border-boxを囲む矩形を返す。clipPathはgeometry/bounding boxを保ちつつclipped領域へのpointer eventsを除外する。elementFromPointは座標のtopmost elementを返す。",
+      "inference": "十分大きいbounding boxでもclip、非矩形、別要素の重なりで実際のhit areaが小さい/消失することがある。",
+      "local_policy": "矩形geometry評価は矩形で実際のtargetと一致する根拠がある場合だけ。非矩形・clip・transform・occlusion・iframe等の未対応条件はHOLD/unsupported。BCRの数値だけで押せる面積を証明しない。",
+      "when": "SVG、clip-path、変形target、重なる透明層、改行inline target、iframe",
+      "input": [
+        "geometryKind",
+        "bounding box CSS px and coordinate space",
+        "clipping and transform state",
+        "occlusion state",
+        "verified activation target relation",
+        "measurement provenance/state/time"
+      ],
+      "output": "geometry-only結果と実hit/activation観測を分離",
+      "exceptions": [
+        "透明でもpointer-events:noneのoverlayはpoint hitから除外されるが、可視性評価は別",
+        "hit-testでchildが返る場合は関連するactivation targetとの関係を確認",
+        "複数点samplingは未検査部分を含む領域全体の証明ではない",
+        "非矩形だけで失敗とせず、未対応モデルによる合否断定を避ける。幾何閾値と例外はResearcher-1へ委任"
+      ],
+      "falsifier": {
+        "id": "bbox-hitarea-mismatch",
+        "procedure": "48×48 CSS pxのSVG rectを半径8pxのclipPathで切る案、同じbuttonの上にpointer-events:autoの透明layerを置く案、noneに変える案を比較。BCR、selected pointsのelementFromPoint、実pointer activationを別々に記録する。",
+        "reject_if": "BCRが大きいだけでPASS、clipやoverlay状態不明でPASS、synthetic coordinatesをbrowser測定として扱う",
+        "execution": "NOT_RUN_BROWSER_BLOCKED"
+      }
+    }
+  ],
+  "reused_art_direction": [
+    {
+      "file": "references/e-accessibility.md",
+      "ids": [
+        "E-02",
+        "E-03",
+        "E-04",
+        "E-07"
+      ],
+      "scope": "Reflow, focus obscuration, target size/spacing exist already."
+    },
+    {
+      "file": "references/visual-composition.md",
+      "lines": [
+        59,
+        65
+      ],
+      "scope": "Narrow-screen semantic relationships, retained action labels, visual/keyboard/reading order exist already."
+    }
+  ],
+  "inherited_booking": {
+    "file": "modules/ui-engineering-design-system/examples/booking-change/booking.css",
+    "already_present": [
+      "overflow-wrap:anywhere",
+      "actions flex-wrap:wrap",
+      "button max-inline-size:100%",
+      "button and slot min-block-size:var(--booking-target-size)",
+      "--booking-target-size:2.75rem",
+      "fieldset min-inline-size:0",
+      "dates grid-template-columns:auto minmax(0,1fr)"
+    ],
+    "not_established_by_css": "No browser-proven 320 CSS px preservation, actual hit-region size, page/overlay behavior or input-method coverage. 2.75rem is a declaration, not an observed 44 CSS px target."
+  },
+  "evidence_contract": {
+    "kinds": [
+      "synthetic geometry",
+      "supplied measurements",
+      "browser layout and activation",
+      "assistive-technology observation"
+    ],
+    "minimum_fields": [
+      "source kind and captured artifact",
+      "component/page state",
+      "CSS-pixel coordinate space",
+      "layout viewport width/height",
+      "zoom mode/value when used",
+      "region identity and scroll owner",
+      "required information/action inventory",
+      "geometry applicability flags",
+      "actual input and environment/version",
+      "unknown/unsupported reasons"
+    ],
+    "policy": "Missing, contradictory, malformed or unsupported observations never become generic accessibility PASS. Pure geometry can receive only a geometry-scoped result. With browser blocked, rendered behavior stays HOLD.",
+    "schema_note": "These fields are a local proposal. They are not mandated as a JSON schema by any cited standard."
+  },
+  "searched_and_found": [
+    "MDN overflow and hit APIs",
+    "Chrome responsive table and reading-flow docs",
+    "USWDS versioned header tests",
+    "Mozilla multi-input implementation report",
+    "MQ4 and CSSDisplay4 followed through observed hyperlinks"
+  ],
+  "not_read_or_verified": [
+    "Full original source bodies via fetch.py (DNS failure)",
+    "Browser and AT behavior",
+    "Current Firefox defects or bug fixes",
+    "Browser interoperability matrix",
+    "Current releases of USWDS/Chrome/Firefox",
+    "All initial search-result bodies",
+    "Map-specific UI implementation",
+    "Target size thresholds/spacing circles and normative exceptions (delegated to Researcher-1)"
+  ],
+  "provenance": {
+    "raw_batch_files": [
+      "raw/initial-search.json",
+      "raw/primary-verification.json",
+      "raw/reader-sections.json",
+      "raw/reader-details.json",
+      "raw/link-hops.json",
+      "raw/hop-verification.json"
+    ],
+    "queries": "queries.jsonl",
+    "fetch": "fetch-attempt.json",
+    "fetch_attempts": 1,
+    "fetch_status": "DNS_FAILURE_ERRNO_MINUS_3",
+    "fetch_retries": 0,
+    "search_attribution": "Queries batched; returned hits merged. All hits retained; per-query attribution unavailable, not reconstructed.",
+    "source_hash_meaning": "SHA256 of private reader-fragment files only, not of full original source.",
+    "private_records": "非公開制御記録・原典断片は研究公開物の外に保存"
+  },
+  "local_snapshot_hashes": {
+    "campaigns/C/rounds/03/plan.json": "1790a4f36964e7974061986021d3766a2456e8c75cead7085156571ecf6c9f97",
+    "modules/ui-engineering-design-system/examples/booking-change/booking.css": "795c73cf01bec6e9d5e6dea7df8a498a8684f9620cdca6cad9d1e9d720673842",
+    "art-direction/references/e-accessibility.md": "9c14f18bcf3e3c1a854536b46366cd6d7c52e99d413f434018e903fe1fb0b729",
+    "art-direction/references/visual-composition.md": "370c04c3491bbb978263b24e20786794c746ea74488d41269655b49f2901aaa8"
+  }
+}

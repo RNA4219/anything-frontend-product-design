@@ -1,0 +1,22 @@
+{"issue_id": "C-001", "priority": 0, "title": "Native control, availability, modal focus and UI state contracts", "status": "OPEN", "planned_round": 1, "owner": "C"}
+{"issue_id": "C-002", "priority": 1, "title": "Reflow, overflow ownership, keyboard order and input modality", "status": "OPEN", "planned_round": 2, "owner": "C"}
+{"issue_id": "C-003", "priority": 1, "title": "Semantic token dependency, themes and system preferences", "status": "OPEN", "planned_round": 3, "owner": "C"}
+{"issue_id": "C-004", "priority": 1, "title": "Async result notification and stable component identity", "status": "OPEN", "planned_round": 4, "owner": "C"}
+{"issue_id": "C-005", "priority": 2, "title": "Cross-engine and assistive technology manual validation", "status": "OPEN", "planned_round": null, "owner": "C"}
+{"issue_id": "C-006", "priority": 2, "title": "IME composition, hydration and controlled-input browser boundaries", "status": "OPEN", "planned_round": null, "owner": "C"}
+{"issue_id": "C-007", "priority": 3, "title": "Complex composite widgets and virtualization", "status": "OPEN", "planned_round": null, "owner": "C"}
+{"issue_id": "C-X-B01", "priority": 1, "title": "Business recovery and retry idempotency for shared booking fixture", "status": "HANDOFF-B", "planned_round": null, "owner": "B"}
+{"issue_id": "C-X-D01", "priority": 2, "title": "User study and blinded repeated model effectiveness comparison", "status": "HANDOFF-D", "planned_round": null, "owner": "D"}
+{"issue_id": "C-001", "event": "decision", "status": "HOLD", "round": 1, "depends_on": "C-005"}
+{"issue_id": "C-003", "event": "prioritize", "status": "READY", "planned_round": 2, "reason": "Pure graph and build contracts can be tested without browser"}
+{"issue_id": "C-002", "event": "prioritize", "status": "OPEN", "planned_round": 3}
+{"issue_id": "C-008", "priority": 2, "status": "OPEN", "owner": "C", "title": "Expand real browser matrix: pointer/Enter/Space success, Shift+Tab and Escape after invoker deletion", "source": "round-01 critic suite coverage gaps"}
+{"issue_id": "C-009", "priority": 2, "status": "OPEN", "owner": "C", "title": "Extend DTCG subset only with additional typed reference and resolver evidence", "source": "round-02: $ref/$root/$extends/composite and type precedence remain outside supported subset"}
+{"issue_id": "C-010", "priority": 1, "status": "HOLD", "owner": "C", "title": "Measure token consumers under nested themes, forced colors and browser color() support", "source": "round-02: pure compiler acceptance does not establish rendering", "depends_on": "C-005"}
+{"issue_id": "C-002", "event": "next_round_registered", "status": "READY", "planned_round": 3, "source": "round-02 coverage review"}
+{"issue_id": "C-003", "event": "decision", "status": "PARTIAL_ACCEPT", "round": 2, "accepted": "bounded static graph/theme/export", "remaining": ["C-009", "C-010"]}
+{"issue_id": "C-011", "priority": 1, "owner": "C", "status": "HOLD", "title": "Validate effective hit area and reflow retention in a real viewport with clipping, overlays, zoom and input changes", "source": "round-03 analysis and model scope", "depends_on": ["C-005"], "required_evidence": ["same-state browser layout and activation", "complete neighbor inventory", "non-excepted required-item retention"]}
+{"issue_id": "C-012", "priority": 2, "owner": "C", "status": "OPEN", "title": "Observe reading-flow order and hybrid input capability across supported browsers and AT", "source": "round-03 primary sources; current compatibility not verified", "depends_on": ["C-005"], "required_evidence": ["DOM/visual/Tab/AT order separately", "actual input device route and capability queries"]}
+{"issue_id": "C-004", "event": "next_plan_registered", "priority": 1, "status": "READY", "planned_round": 4, "plan": "campaigns/C/rounds/04/plan.json", "executed": false, "at": "2026-11-23T10:22:03.548535+00:00"}
+{"issue_id": "C-002", "event": "decision", "status": "HOLD", "round": 3, "model_precheck": "ACCEPT", "depends_on": ["C-005", "C-011", "C-012"], "at": "2026-11-23T10:32:34.821976+00:00"}
+{"issue_id": "C-005", "event": "reprioritize", "status": "HOLD", "priority": 1, "reason": "Runtime and AT evidence gate six units; browser execution unavailable in this session; no workaround retry", "at": "2026-11-23T10:32:34.821976+00:00"}

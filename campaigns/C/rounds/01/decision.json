@@ -1,0 +1,105 @@
+{
+  "round": 1,
+  "issues": [
+    "C-001"
+  ],
+  "decision": "HOLD",
+  "instruction_units": [
+    "C-UI-001",
+    "C-UI-002",
+    "C-UI-003",
+    "C-UI-004"
+  ],
+  "implementation": "REVISED",
+  "reason": "Browser and assistive-technology verification unavailable; do not convert pure checks into browser acceptance.",
+  "subagents": [
+    {
+      "task": "/root/r01_researcher_1",
+      "role": "Researcher-1",
+      "state": "COMPLETED"
+    },
+    {
+      "task": "/root/r01_researcher_2",
+      "role": "Researcher-2",
+      "state": "COMPLETED"
+    },
+    {
+      "task": "/root/r01_analyst",
+      "role": "Analyst",
+      "state": "COMPLETED"
+    },
+    {
+      "task": "/root/r01_critic",
+      "role": "Critic",
+      "state": "COMPLETED"
+    }
+  ],
+  "source_records": 17,
+  "duplicate_canonical_documents": 0,
+  "art_direction_reuse_groups": 4,
+  "tests": {
+    "python": {
+      "passed": 16,
+      "failed": 0
+    },
+    "node_pure": {
+      "passed": 6,
+      "failed": 0
+    },
+    "browser": {
+      "status": "BLOCKED",
+      "executed": 0
+    },
+    "AT": {
+      "status": "NOT_RUN",
+      "executed": 0
+    },
+    "independent_probes": "Initial exit1 reproduced defects; corrected artifact exit0"
+  },
+  "comparison": {
+    "kind": "Seeded adversarial contract, not model baseline",
+    "baseline_findings": 9,
+    "candidate_findings": 0,
+    "causal_generation_effectiveness": "NOT_MEASURED"
+  },
+  "defects": [
+    {
+      "id": "F1",
+      "fix": "Reject malformed/missing/unknown submission policy",
+      "evidence": "recheck.json"
+    },
+    {
+      "id": "F2",
+      "fix": "Separate setup block from post-launch test errors",
+      "evidence": "revision-execution.json"
+    },
+    {
+      "id": "F3",
+      "fix": "Render before date from committed state on each opening",
+      "evidence": "recheck.json"
+    },
+    {
+      "id": "F4",
+      "fix": "Observe actual lost focus before conditional fallback",
+      "evidence": "recheck.json",
+      "browser_occurrence": "NOT_VERIFIED"
+    }
+  ],
+  "next": [
+    "C-003 typed token graph and theme contracts",
+    "C-005 real browser/AT validation"
+  ],
+  "cost": {
+    "measured": false,
+    "amount": null,
+    "reason": "Token and currency usage not exposed"
+  },
+  "control_plane": {
+    "private_artifact_integrity_checks": "PASS",
+    "campaign_budget_gate": "HOLD",
+    "execution_evaluation_promotion": "NOT_CONNECTED",
+    "private_receipts_published": false,
+    "private_experience_record": "PASS"
+  },
+  "at": "2026-11-23T09:10:05.613722+00:00"
+}

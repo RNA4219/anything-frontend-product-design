@@ -1,0 +1,124 @@
+{
+  "skill_id": "C-UI-001",
+  "domain": "ui-engineering-design-system",
+  "trigger": "反復利用する操作・入力部品の作成または既存部品の統合時。",
+  "intent": "意図から標準要素と動作担当を決める",
+  "required_inputs": [
+    "操作の意図と移動先",
+    "フォームへの所属と送信目的",
+    "既存ライブラリと必要な対応環境"
+  ],
+  "decision_rules": [
+    "移動先・操作・入力という意図と、フォーム送信の有無を受け取り、移動には a[href]、操作には button、入力には適合する標準フォーム要素を最初に検討する。非送信操作の button は type=button を明示し、送信操作は対応する type と form owner を記録する。",
+    "標準要素で必要な意味と動作が満たせない場合に、既存ライブラリまたは独自部品を検討する。その場合は不足する機能と、名前・役割・状態、キー起動、フォーム参加、フォーカスを実装する担当を記す。外見の変更だけを独自widget化の根拠にしない。これは本分析の実装提案であり、native dialog 一律必須という規格ではない。",
+    "要素・type・実行ハンドラ・委任する標準動作を一組で出力する。native button の既定起動に keydown 起動を追加するなら、一操作で二重実行しないことを示す。リンクに Space 起動を一律要求せず、a の disabled 属性だけで移動が止まると判断しない。"
+  ],
+  "procedure": [
+    "移動先・操作・入力という意図と、フォーム送信の有無を受け取り、移動には a[href]、操作には button、入力には適合する標準フォーム要素を最初に検討する。非送信操作の button は type=button を明示し、送信操作は対応する type と form owner を記録する。",
+    "標準要素で必要な意味と動作が満たせない場合に、既存ライブラリまたは独自部品を検討する。その場合は不足する機能と、名前・役割・状態、キー起動、フォーム参加、フォーカスを実装する担当を記す。外見の変更だけを独自widget化の根拠にしない。これは本分析の実装提案であり、native dialog 一律必須という規格ではない。",
+    "要素・type・実行ハンドラ・委任する標準動作を一組で出力する。native button の既定起動に keydown 起動を追加するなら、一操作で二重実行しないことを示す。リンクに Space 起動を一律要求せず、a の disabled 属性だけで移動が止まると判断しない。"
+  ],
+  "expected_outputs": [
+    "要素/type/form owner/起動担当の選定記録",
+    "標準機構から外れる場合の理由と不足責務"
+  ],
+  "dependencies": [
+    "art-direction/references/g-state-forms.md# g9-01, g9-03, g9-04",
+    "art-direction/references/i-components.md# i-09, i-10",
+    "C-UI-002（利用可否またはフォーム値があるとき）"
+  ],
+  "exceptions": [
+    "現行HTMLのtype既定はAutoで、command/commandforと親selectの条件がある。USWDSの省略時submitという説明を全HTMLへ一般化しない。",
+    "既存の検証済みライブラリを外すことや、新しいcustom widgetを作ることを必須にしない。"
+  ],
+  "failure_modes": [
+    "見た目だけのbuttonでキー起動不能",
+    "非送信操作でフォーム送信",
+    "keydownとclickで二重実行",
+    "リンクのdisabled属性を実行抑止と誤認"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "normal",
+        "status": "not_executed",
+        "procedure": "buttonをpointer・Enter・Spaceで各1回起動し実行回数1と非意図のsubmitなしを確認する。リンクはEnterと標準の移動操作を確認する。",
+        "falsifier": "実行不能・二重実行・意図しないフォーム送信。"
+      }
+    ],
+    "status": "PARTIAL_BROWSER_BLOCKED",
+    "evidence": [
+      "campaigns/C/rounds/01/revision-execution.json",
+      "campaigns/C/rounds/01/recheck.json",
+      "campaigns/C/rounds/01/environment.json"
+    ]
+  },
+  "source_refs": [
+    {
+      "id": "HTML-ANCHOR",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element",
+      "evidence_kind": "HTML Living Standard; normative",
+      "record": "research/ui-engineering-design-system/round-01/researcher-1.json#/sources/8",
+      "registry_source_id": "C-S009"
+    },
+    {
+      "id": "HTML-BUTTON",
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element",
+      "evidence_kind": "HTML Living Standard; normative",
+      "record": "research/ui-engineering-design-system/round-01/researcher-1.json#/sources/7",
+      "registry_source_id": "C-S008"
+    },
+    {
+      "id": "WCAG22",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "evidence_kind": "W3C Recommendation; normative SC; non-normative accompanying note",
+      "record": "research/ui-engineering-design-system/round-01/researcher-1.json#/sources/6",
+      "registry_source_id": "C-S007"
+    },
+    {
+      "id": "S2",
+      "url": "https://designsystem.digital.gov/components/button/#accessibility-guidance",
+      "evidence_kind": "non-normative implementation guidance or author-reported implementation incident",
+      "record": "research/ui-engineering-design-system/round-01/researcher-2.json#/sources/1",
+      "registry_source_id": "C-S011",
+      "analysis_source_id": "R2-S2"
+    }
+  ],
+  "confidence": {
+    "source": "primary sources and implementation reports; partial reader captures",
+    "runtime": "unverified",
+    "transfer": "unverified"
+  },
+  "status": "HOLD",
+  "version": "0.1.2",
+  "analysis_unit": "C001-U1",
+  "round": 1,
+  "fact_rule_boundary": "decision_rules are original conditional engineering instructions; source_refs identify normative facts versus guidance",
+  "history": [
+    {
+      "event": "REGISTER",
+      "at": "2026-11-23T08:59:34.428688+00:00",
+      "status": "DRAFT"
+    },
+    {
+      "event": "CRITIC",
+      "status": "REVISE",
+      "findings": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ]
+    },
+    {
+      "event": "DECIDE",
+      "at": "2026-11-23T09:10:05.613722+00:00",
+      "status": "HOLD",
+      "reason": "Browser and assistive-technology verification unavailable; do not convert pure checks into browser acceptance."
+    },
+    {
+      "event": "TRACEABILITY_NORMALIZATION",
+      "reason": "Resolve source record paths from repository root and map decomposition identities to registry identities; no behavioral rule change."
+    }
+  ]
+}

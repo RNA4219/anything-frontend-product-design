@@ -1,0 +1,28 @@
+{
+  "source_id": "C-S020",
+  "url": "https://www.designtokens.org/TR/2025.10/color/",
+  "title": "Design Tokens Color Module 2025.10",
+  "retrieved_date": "2026-11-23",
+  "version": "2025.10, 2025-10-28",
+  "records": [
+    {
+      "file": "research/ui-engineering-design-system/round-02/researcher-1.json",
+      "source_id": "C02-R1-S03"
+    }
+  ],
+  "original_download": "unavailable",
+  "reader_capture": "partial",
+  "public_fulltext": false,
+  "reader_rewritten_summary": true,
+  "parent_reader_rewritten_summary": true,
+  "repository_source_artifact": {
+    "url": "https://github.com/design-tokens/community-group/blob/882ebd6716abef9a46d8ef5fb12e82009d6cee2e/www/src/pages/TR/2025.10/color/index.html",
+    "commit": "882ebd6716abef9a46d8ef5fb12e82009d6cee2e",
+    "bytes": 153272,
+    "git_blob_sha1": "1e87a3679b044fc3a53922950d0d7759cec4fbc0",
+    "sha256": "a99088083476d3ad050c00b4499a2861bb668eb19636cf2536bfe625f621ffe1",
+    "blob_verified": true,
+    "complete_repository_file": true,
+    "webpage_byte_identity_verified": false
+  }
+}

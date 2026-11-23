@@ -1,0 +1,25 @@
+{
+  "phase": "revised-before-independent-recheck",
+  "at": "2026-11-23T10:24:51.470164+00:00",
+  "initial_snapshot": "campaigns/C/rounds/03/candidate-snapshot.json",
+  "changed_files": [
+    "modules/ui-engineering-design-system/checks/layout.py",
+    "modules/ui-engineering-design-system/tests/test_layout.py",
+    "modules/ui-engineering-design-system/references/layout-contracts.md"
+  ],
+  "sha256": {
+    "modules/ui-engineering-design-system/checks/layout.py": "453e5e072fee99dcf412ea475aca278094b6405de53e4d0d8f79581e8e237c24",
+    "modules/ui-engineering-design-system/tests/test_layout.py": "767567291288d505cb7c86676f3269908628becf9fb3ea1b0c09ebcb3b08fcb7",
+    "modules/ui-engineering-design-system/references/layout-contracts.md": "bcc101636c5c6d05f8e756de5ed8bb3ebe110adea27fd88c0781c443e258fb16",
+    "modules/ui-engineering-design-system/checks/layout-observation-protocol.md": "12005ad6a8dee484676ba9b921fdbf5b7633b8b91fdb7b8b153333a88a26deec",
+    "modules/ui-engineering-design-system/examples/reflow-targets.html": "1f841aec1fb4a066d82b2af3d57d0f4fd2d04804b5b5d87795fb1918f8cbe9bb",
+    "campaigns/C/rounds/03/plan.json": "1790a4f36964e7974061986021d3766a2456e8c75cead7085156571ecf6c9f97",
+    "campaigns/C/rounds/03/evaluation-plan.md": "1fd8e6f1631618237ac3e8f9126d40a470800582eedeb0fd597a2ce4aa81b865",
+    "campaigns/C/rounds/03/compare_models.py": "d95e8b0fd6fc34e99667e96113cf61f73a4e281cfdc793144eb7a336f3f32ecb"
+  },
+  "parent_tests": {
+    "python": 67,
+    "passed": 67
+  },
+  "browser_executed": false
+}

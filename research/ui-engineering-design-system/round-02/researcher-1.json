@@ -1,0 +1,1262 @@
+{
+  "schema_version": 1,
+  "session": "C",
+  "round": 2,
+  "researcher": "researcher-1",
+  "topic": "DTCG 2025.10 token graph contracts and bounded CSS emission",
+  "date": "2026-11-23",
+  "status": "research_complete_with_limits",
+  "implementation_performed": false,
+  "scope": {
+    "decision": "A small explicitly named subset, not a full DTCG implementation",
+    "supported_proposal": [
+      "single JSON token document",
+      "nested groups with explicit or inherited types",
+      "whole-value curly-brace aliases with chains",
+      "numeric sRGB color objects",
+      "dimension objects using px/rem",
+      "duration objects using ms/s",
+      "finite number tokens if implemented",
+      "deterministic CSS declarations from resolved literals"
+    ],
+    "excluded": [
+      "$extends group extension",
+      "$ref JSON Pointer at token/property level",
+      "external reference fetching",
+      "composite types and aliases nested in composite values",
+      "string interpolation and calc expressions in DTCG values",
+      "full resolver sets/modifiers/resolutionOrder file format unless separately implemented",
+      "color conversions, gamut mapping, none components and non-sRGB spaces",
+      "automatic palette/radius/typography selection",
+      "browser contrast, forced-colors or WCAG conformance claims",
+      "$root reserved token unless explicitly added; do not silently skip it as metadata"
+    ]
+  },
+  "sources": [
+    {
+      "id": "C02-R1-S01",
+      "title": "Design Tokens Format Module 2025.10",
+      "canonical_url": "https://www.designtokens.org/TR/2025.10/format/",
+      "observed_url": "https://www.designtokens.org/tr/2025.10/format/",
+      "version": "2025.10, 2025-10-28",
+      "status": "Final Community Group Report; not W3C Standard/Recommendation",
+      "web_refs": [
+        "turn801041094view0",
+        "turn214485279view1",
+        "turn322962672view0",
+        "turn322962672view1",
+        "turn925795732view0",
+        "turn925795732view1"
+      ],
+      "sections": [
+        {
+          "heading": "5.2.2 Type",
+          "web_lines": [
+            426,
+            441
+          ]
+        },
+        {
+          "heading": "6.4.2 Reference Resolution and Evaluation; 6.4.3 Inheritance Semantics",
+          "web_lines": [
+            738,
+            762
+          ]
+        },
+        {
+          "heading": "6.7.3 Type Inheritance",
+          "web_lines": [
+            1026,
+            1034
+          ]
+        },
+        {
+          "heading": "7.1.1 Curly Brace Syntax; 7.1.2 JSON Pointer Syntax",
+          "web_lines": [
+            1349,
+            1378
+          ]
+        },
+        {
+          "heading": "7.2.2 Chained References; 7.2.3 Circular References",
+          "web_lines": [
+            1439,
+            1468
+          ]
+        },
+        {
+          "heading": "7.4.5 Error Conditions",
+          "web_lines": [
+            1645,
+            1653
+          ]
+        },
+        {
+          "heading": "8.2 Dimension; 8.2.1 Validation",
+          "web_lines": [
+            1727,
+            1759
+          ]
+        },
+        {
+          "heading": "8.5 Duration; 8.5.1 Validation",
+          "web_lines": [
+            1814,
+            1841
+          ]
+        }
+      ],
+      "anchor_status": "Reader exposed exact numbered section titles; fragment destinations were not exposed, so not guessed.",
+      "full_original": false,
+      "retrieval": "fetch.py failed DNS once; web-reader excerpts stored privately"
+    },
+    {
+      "id": "C02-R1-S02",
+      "title": "Design Tokens Resolver Module 2025.10",
+      "canonical_url": "https://www.designtokens.org/TR/2025.10/resolver/",
+      "version": "2025.10, 2025-10-28",
+      "status": "Final Community Group Report; not W3C Standard/Recommendation",
+      "web_refs": [
+        "turn801041094view1",
+        "turn214485279view4"
+      ],
+      "sections": [
+        {
+          "heading": "5.1 Case sensitivity; 5.2 Enforcing strings",
+          "web_lines": [
+            708,
+            714
+          ]
+        },
+        {
+          "heading": "6 Resolution logic; 6.1 Input validation; 6.2 Ordering; 6.3 Aliases",
+          "web_lines": [
+            715,
+            798
+          ]
+        }
+      ],
+      "full_original": false
+    },
+    {
+      "id": "C02-R1-S03",
+      "title": "Design Tokens Color Module 2025.10",
+      "canonical_url": "https://www.designtokens.org/TR/2025.10/color/",
+      "version": "2025.10, 2025-10-28",
+      "status": "Final Community Group Report",
+      "web_refs": [
+        "turn247967821view0",
+        "turn247967821view1"
+      ],
+      "sections": [
+        {
+          "heading": "4.1 Format",
+          "anchor": "#format",
+          "web_lines": [
+            150,
+            160
+          ]
+        },
+        {
+          "heading": "4.1.1 The none keyword",
+          "web_lines": [
+            184,
+            190
+          ]
+        },
+        {
+          "heading": "4.2 Supported Color spaces",
+          "web_lines": [
+            223,
+            277
+          ]
+        },
+        {
+          "heading": "4.2.1.1 Components",
+          "web_lines": [
+            295,
+            301
+          ]
+        }
+      ],
+      "full_original": false,
+      "reader_rewritten_summary": true,
+      "retrieval_caveat": "Reader labels this page as rewritten summary; preserved as reader evidence, not a verbatim original download."
+    },
+    {
+      "id": "C02-R1-S04",
+      "title": "CSS Custom Properties for Cascading Variables Module Level 1",
+      "canonical_url": "https://www.w3.org/TR/2022/CR-css-variables-1-20220616/",
+      "observed_url": "https://www.w3.org/TR/css-variables-1/",
+      "version": "2022-06-16",
+      "status": "W3C Candidate Recommendation Snapshot; not yet Recommendation in observed publication",
+      "web_refs": [
+        "turn801041094view2",
+        "turn322962672view2",
+        "turn322962672view3",
+        "turn322962672view4",
+        "turn247967821view3"
+      ],
+      "sections": [
+        {
+          "heading": "2 Defining Custom Properties",
+          "web_lines": [
+            93,
+            131
+          ]
+        },
+        {
+          "heading": "2.3 Resolving Dependency Cycles",
+          "web_lines": [
+            273,
+            303
+          ]
+        },
+        {
+          "heading": "3 Using Cascading Variables: the var() notation",
+          "web_lines": [
+            442,
+            482
+          ]
+        },
+        {
+          "heading": "3.1 Invalid Variables",
+          "web_lines": [
+            537,
+            558
+          ]
+        }
+      ],
+      "full_original": false
+    },
+    {
+      "id": "C02-R1-S05",
+      "title": "CSS Color Module Level 4",
+      "canonical_url": "https://www.w3.org/TR/css-color-4/",
+      "version": "Observed 2026-11-18",
+      "status": "W3C Candidate Recommendation Draft",
+      "web_refs": [
+        "turn768454564view0",
+        "turn768454564view2"
+      ],
+      "sections": [
+        {
+          "heading": "10.1 Specifying Predefined Colors: the color() function",
+          "web_lines": [
+            1948,
+            1986
+          ]
+        },
+        {
+          "heading": "10.2 The Predefined sRGB Color Space",
+          "web_lines": [
+            2009,
+            2014
+          ]
+        }
+      ],
+      "full_original": false
+    },
+    {
+      "id": "C02-R1-S06",
+      "title": "DTCG Technical Reports index",
+      "canonical_url": "https://www.designtokens.org/technical-reports/",
+      "version": "Observed 2026-11-23",
+      "status": "Official publication index",
+      "web_refs": [
+        "turn801041094search0",
+        "turn768454564view1"
+      ],
+      "sections": [
+        {
+          "heading": "Technical Reports"
+        }
+      ],
+      "full_original": false
+    },
+    {
+      "id": "C02-R1-S07",
+      "title": "Art Direction コンポーネント基盤",
+      "canonical_url": "https://github.com/RNA4219/anything-frontend-art-direction",
+      "local_file": "/workspace/scratch/785c8ae49c7b/art-direction/references/i-components.md",
+      "status": "Local project guidance; not interchange standard",
+      "sections": [
+        "#i-01",
+        "#i-02",
+        "#i-03",
+        "#i-04",
+        "#i-05",
+        "#i-06",
+        "#i-14"
+      ],
+      "full_original": true
+    }
+  ],
+  "proposed_rules": [
+    {
+      "id": "C02-R1-P01",
+      "kind": "fact plus bounded adoption",
+      "rule": "Explicit token type wins. For an untyped whole-token alias use resolved target type; for a literal inherit nearest group type; never infer from value shape. Mark parent-type/alias-target conflicts unresolved until policy is stated.",
+      "sources": [
+        "C02-R1-S01"
+      ],
+      "sections": [
+        "5.2.2",
+        "6.7.3"
+      ],
+      "cases": [
+        "valid-explicit",
+        "valid-group-inheritance",
+        "valid-alias-inference",
+        "invalid-missing-type",
+        "hold-alias-parent-conflict"
+      ]
+    },
+    {
+      "id": "C02-R1-P02",
+      "kind": "fact",
+      "rule": "Curly braces address a complete token, not a component or group. Resolve chains and report missing targets, cycles, malformed aliases and type mismatch.",
+      "sources": [
+        "C02-R1-S01"
+      ],
+      "sections": [
+        "7.1.1",
+        "7.2.2",
+        "7.2.3",
+        "7.4.5"
+      ],
+      "cases": [
+        "valid-chain",
+        "missing-reference",
+        "cycle",
+        "self-cycle",
+        "type-mismatch",
+        "invalid-group-target",
+        "invalid-property-target"
+      ]
+    },
+    {
+      "id": "C02-R1-P03",
+      "kind": "project policy",
+      "rule": "Reject $ref, $extends, composite types and external references with unsupported diagnostics before interpreting their contents. Unsupported is distinct from invalid DTCG. Do not silently ignore unknown semantic constructs.",
+      "sources": [
+        "C02-R1-S01"
+      ],
+      "sections": [
+        "6.4",
+        "7.1.2",
+        "7.3"
+      ],
+      "cases": [
+        "unsupported-property-ref",
+        "unsupported-extension",
+        "unsupported-composite",
+        "unsupported-external-ref"
+      ]
+    },
+    {
+      "id": "C02-R1-P04",
+      "kind": "fact plus subset policy",
+      "rule": "Color values are structured. Numeric sRGB subset requires three numeric components in [0,1], alpha in [0,1] default 1, optional six-digit hex fallback. Other valid spaces or none remain unsupported, not invalid.",
+      "sources": [
+        "C02-R1-S03"
+      ],
+      "sections": [
+        "4.1",
+        "4.1.1",
+        "4.2.1"
+      ],
+      "cases": [
+        "valid-srgb",
+        "invalid-color-string",
+        "invalid-alpha",
+        "invalid-srgb-range",
+        "unsupported-none",
+        "unsupported-p3",
+        "invalid-fallback-hex"
+      ]
+    },
+    {
+      "id": "C02-R1-P05",
+      "kind": "fact",
+      "rule": "Dimension uses numeric value and px/rem unit, including unit at zero. Duration uses numeric value and ms/s. Boolean is not a numeric value. These sections do not state a general nonnegative constraint.",
+      "sources": [
+        "C02-R1-S01"
+      ],
+      "sections": [
+        "8.2",
+        "8.2.1",
+        "8.5",
+        "8.5.1"
+      ],
+      "cases": [
+        "valid-rem",
+        "invalid-zero-no-unit",
+        "invalid-dimension-unit",
+        "valid-seconds",
+        "invalid-boolean-number",
+        "negative-duration-boundary"
+      ]
+    },
+    {
+      "id": "C02-R1-P06",
+      "kind": "fact plus project wrapper policy",
+      "rule": "Resolve aliases after selected theme/source overrides are assembled. A custom themes wrapper may apply the same ordering principle but must not be labeled the DTCG Resolver Module.",
+      "sources": [
+        "C02-R1-S02"
+      ],
+      "sections": [
+        "6.2",
+        "6.3"
+      ],
+      "cases": [
+        "theme-override",
+        "theme-induced-cycle",
+        "theme-type-change"
+      ]
+    },
+    {
+      "id": "C02-R1-P07",
+      "kind": "project policy informed by CSS",
+      "rule": "Give each exported token an injective CSS name. Reject collisions after name transformation. Specify sorting, number formatting, unit handling, selector contract, newline and all-or-nothing emission to make bytes reproducible.",
+      "sources": [
+        "C02-R1-S01",
+        "C02-R1-S04"
+      ],
+      "sections": [
+        "5.1",
+        "CSS 2"
+      ],
+      "cases": [
+        "name-collision",
+        "case-distinct",
+        "css-name-injection",
+        "permuted-json-key-order"
+      ]
+    },
+    {
+      "id": "C02-R1-P08",
+      "kind": "inference",
+      "rule": "Resolved CSS literals can provide deterministic build artifacts but do not preserve future runtime changes to source aliases automatically. Rebuild every declared theme or use an explicitly tested runtime var graph.",
+      "sources": [
+        "C02-R1-S02",
+        "C02-R1-S04"
+      ],
+      "sections": [
+        "Resolver 6.3",
+        "CSS 2.3",
+        "CSS 3"
+      ],
+      "cases": [
+        "theme-override",
+        "runtime-base-override-limit"
+      ]
+    },
+    {
+      "id": "C02-R1-P09",
+      "kind": "fact with test limit",
+      "rule": "CSS custom-property cycles include dependencies inside fallbacks. var fallback only handles guaranteed-invalid/missing values, not present wrong-type values. CSS grammar failure may arise at computed-value time.",
+      "sources": [
+        "C02-R1-S04"
+      ],
+      "sections": [
+        "2.3",
+        "3",
+        "3.1"
+      ],
+      "cases": [
+        "css-fallback-cycle",
+        "css-wrong-type-fallback"
+      ]
+    },
+    {
+      "id": "C02-R1-P10",
+      "kind": "project responsibility boundary",
+      "rule": "Use existing art-direction roles, paired surfaces/foregrounds and theme exports. C validates resolved path/type/coverage and output collisions; it does not invent palette/radius choices or claim visual accessibility from graph checks.",
+      "sources": [
+        "C02-R1-S07",
+        "C02-R1-S04"
+      ],
+      "sections": [
+        "I-01 through I-06",
+        "I-14"
+      ],
+      "cases": [
+        "theme-role-coverage",
+        "rendered-contrast-hold"
+      ]
+    }
+  ],
+  "test_vectors": [
+    {
+      "id": "valid-explicit",
+      "input": {
+        "space": {
+          "$type": "dimension",
+          "$value": {
+            "value": 6,
+            "unit": "px"
+          }
+        }
+      },
+      "expected": "ACCEPT",
+      "resolved": {
+        "space": {
+          "type": "dimension",
+          "value": {
+            "value": 6,
+            "unit": "px"
+          }
+        }
+      }
+    },
+    {
+      "id": "valid-group-inheritance",
+      "input": {
+        "space": {
+          "$type": "dimension",
+          "small": {
+            "$value": {
+              "value": 0.25,
+              "unit": "rem"
+            }
+          }
+        }
+      },
+      "expected": "ACCEPT",
+      "resolved_type": "dimension"
+    },
+    {
+      "id": "valid-alias-inference",
+      "input": {
+        "base": {
+          "$type": "duration",
+          "$value": {
+            "value": 0.2,
+            "unit": "s"
+          }
+        },
+        "semantic": {
+          "$value": "{base}"
+        }
+      },
+      "expected": "ACCEPT",
+      "resolved_type": "duration"
+    },
+    {
+      "id": "valid-chain",
+      "input": {
+        "base": {
+          "$type": "dimension",
+          "$value": {
+            "value": 0.5,
+            "unit": "rem"
+          }
+        },
+        "semantic": {
+          "$value": "{base}"
+        },
+        "control": {
+          "$type": "dimension",
+          "$value": "{semantic}"
+        }
+      },
+      "expected": "ACCEPT",
+      "resolved_value": {
+        "value": 0.5,
+        "unit": "rem"
+      }
+    },
+    {
+      "id": "invalid-missing-type",
+      "input": {
+        "x": {
+          "$value": {
+            "value": 5,
+            "unit": "px"
+          }
+        }
+      },
+      "expected": "INVALID",
+      "reason": "Value shape cannot supply missing type"
+    },
+    {
+      "id": "missing-reference",
+      "input": {
+        "x": {
+          "$type": "dimension",
+          "$value": "{absent}"
+        }
+      },
+      "expected": "INVALID",
+      "diagnostic": "missing reference at x -> absent"
+    },
+    {
+      "id": "self-cycle",
+      "input": {
+        "x": {
+          "$type": "dimension",
+          "$value": "{x}"
+        }
+      },
+      "expected": "INVALID",
+      "diagnostic": "cycle x -> x"
+    },
+    {
+      "id": "cycle",
+      "input": {
+        "x": {
+          "$value": "{y}"
+        },
+        "y": {
+          "$value": "{z}"
+        },
+        "z": {
+          "$value": "{x}"
+        }
+      },
+      "expected": "INVALID",
+      "diagnostic": "cycle x -> y -> z -> x"
+    },
+    {
+      "id": "type-mismatch",
+      "input": {
+        "a": {
+          "$type": "dimension",
+          "$value": {
+            "value": 8,
+            "unit": "px"
+          }
+        },
+        "b": {
+          "$type": "duration",
+          "$value": "{a}"
+        }
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "invalid-group-target",
+      "input": {
+        "g": {
+          "$type": "dimension",
+          "x": {
+            "$value": {
+              "value": 8,
+              "unit": "px"
+            }
+          }
+        },
+        "a": {
+          "$value": "{g}"
+        }
+      },
+      "expected": "INVALID",
+      "reason": "Group is not token"
+    },
+    {
+      "id": "invalid-property-target",
+      "input": {
+        "a": {
+          "$type": "dimension",
+          "$value": {
+            "value": 8,
+            "unit": "px"
+          }
+        },
+        "b": {
+          "$type": "number",
+          "$value": "{a.$value.value}"
+        }
+      },
+      "expected": "INVALID",
+      "reason": "Curly braces cannot access token value property"
+    },
+    {
+      "id": "invalid-malformed-alias",
+      "input": {
+        "a": {
+          "$type": "dimension",
+          "$value": "{base"
+        }
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "unsupported-expression",
+      "input": {
+        "a": {
+          "$type": "dimension",
+          "$value": "calc({base} * 2)"
+        }
+      },
+      "expected": "INVALID_FOR_SUPPORTED_TYPE",
+      "diagnostic": "unsupported expression; do not perform string replacement"
+    },
+    {
+      "id": "unsupported-property-ref",
+      "input": {
+        "a": {
+          "$type": "dimension",
+          "$value": {
+            "value": 8,
+            "unit": "px"
+          }
+        },
+        "b": {
+          "$type": "number",
+          "$ref": "#/a/$value/value"
+        }
+      },
+      "expected": "UNSUPPORTED",
+      "dtcg_status": "document-level pointer syntax described by specification"
+    },
+    {
+      "id": "unsupported-extension",
+      "input": {
+        "base": {
+          "$type": "dimension",
+          "gap": {
+            "$value": {
+              "value": 8,
+              "unit": "px"
+            }
+          }
+        },
+        "dense": {
+          "$extends": "{base}",
+          "gap": {
+            "$value": {
+              "value": 4,
+              "unit": "px"
+            }
+          }
+        }
+      },
+      "expected": "UNSUPPORTED",
+      "dtcg_status": "group extension described by specification"
+    },
+    {
+      "id": "unsupported-composite",
+      "input": {
+        "border": {
+          "$type": "border",
+          "$value": {
+            "color": "{base}",
+            "width": {
+              "value": 1,
+              "unit": "px"
+            },
+            "style": "solid"
+          }
+        }
+      },
+      "expected": "UNSUPPORTED",
+      "note": "Do not claim entire fixture is valid because base is intentionally absent; reject by unsupported type first"
+    },
+    {
+      "id": "unsupported-external-ref",
+      "input": {
+        "a": {
+          "$ref": "other.tokens.json#/a"
+        }
+      },
+      "expected": "UNSUPPORTED",
+      "dtcg_status": "Not evaluated; no network fetching in subset"
+    },
+    {
+      "id": "valid-srgb",
+      "input": {
+        "c": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.125,
+              0.5,
+              0.875
+            ],
+            "alpha": 0.75
+          }
+        }
+      },
+      "expected": "ACCEPT",
+      "possible_css": "color(srgb 0.125 0.5 0.875 / 0.75)"
+    },
+    {
+      "id": "invalid-color-string",
+      "input": {
+        "c": {
+          "$type": "color",
+          "$value": "#123456"
+        }
+      },
+      "expected": "INVALID_2025_10_SHAPE"
+    },
+    {
+      "id": "invalid-alpha",
+      "input": {
+        "c": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [
+              0,
+              0,
+              0
+            ],
+            "alpha": 1.01
+          }
+        }
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "invalid-srgb-range",
+      "input": {
+        "c": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [
+              1.1,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "expected": "INVALID_DTCG_SRGB_RANGE",
+      "note": "CSS Color color() itself permits out-of-gamut components; do not transfer that tolerance to DTCG input"
+    },
+    {
+      "id": "unsupported-none",
+      "input": {
+        "c": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "hsl",
+            "components": [
+              "none",
+              0,
+              100
+            ]
+          }
+        }
+      },
+      "expected": "UNSUPPORTED",
+      "dtcg_status": "valid color shape/none construct"
+    },
+    {
+      "id": "unsupported-p3",
+      "input": {
+        "c": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "display-p3",
+            "components": [
+              0.2,
+              0.4,
+              0.8
+            ]
+          }
+        }
+      },
+      "expected": "UNSUPPORTED",
+      "dtcg_status": "valid color space"
+    },
+    {
+      "id": "invalid-fallback-hex",
+      "input": {
+        "c": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [
+              0,
+              0,
+              0
+            ],
+            "hex": "#0008"
+          }
+        }
+      },
+      "expected": "INVALID",
+      "reason": "DTCG fallback hex is six-digit even though CSS supports other lengths"
+    },
+    {
+      "id": "valid-rem",
+      "input": {
+        "x": {
+          "$type": "dimension",
+          "$value": {
+            "value": 0,
+            "unit": "rem"
+          }
+        }
+      },
+      "expected": "ACCEPT"
+    },
+    {
+      "id": "invalid-zero-no-unit",
+      "input": {
+        "x": {
+          "$type": "dimension",
+          "$value": {
+            "value": 0
+          }
+        }
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "invalid-dimension-unit",
+      "input": {
+        "x": {
+          "$type": "dimension",
+          "$value": {
+            "value": 100,
+            "unit": "%"
+          }
+        }
+      },
+      "expected": "INVALID_NORMATIVE_8_2",
+      "note": "A nonnormative group-extension example happens to use %, but the dimension rule permits px/rem"
+    },
+    {
+      "id": "valid-seconds",
+      "input": {
+        "x": {
+          "$type": "duration",
+          "$value": {
+            "value": 0.15,
+            "unit": "s"
+          }
+        }
+      },
+      "expected": "ACCEPT"
+    },
+    {
+      "id": "invalid-boolean-number",
+      "input": {
+        "x": {
+          "$type": "duration",
+          "$value": {
+            "value": true,
+            "unit": "ms"
+          }
+        }
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "negative-duration-boundary",
+      "input": {
+        "x": {
+          "$type": "duration",
+          "$value": {
+            "value": -1,
+            "unit": "s"
+          }
+        }
+      },
+      "expected": "STRUCTURALLY_TYPED; CONSUMER_CONSTRAINT_UNCHECKED",
+      "note": "No minimum in examined DTCG section. A nonnegative restriction must be labeled project/CSS-property policy"
+    },
+    {
+      "id": "hold-alias-parent-conflict",
+      "input": {
+        "base": {
+          "$type": "duration",
+          "$value": {
+            "value": 1,
+            "unit": "s"
+          }
+        },
+        "g": {
+          "$type": "dimension",
+          "a": {
+            "$value": "{base}"
+          }
+        }
+      },
+      "expected": "HOLD_POLICY_CONFLICT",
+      "note": "§5.2.2 resolves alias type from base; §6.7.3 omits that precedence. Do not assert uniform conformance without documented interpretation"
+    },
+    {
+      "id": "theme-override",
+      "input": {
+        "base": {
+          "palette": {
+            "fg": {
+              "$type": "color",
+              "$value": {
+                "colorSpace": "srgb",
+                "components": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "semantic": {
+            "text": {
+              "$value": "{palette.fg}"
+            }
+          }
+        },
+        "dark_override": {
+          "palette": {
+            "fg": {
+              "$type": "color",
+              "$value": {
+                "colorSpace": "srgb",
+                "components": [
+                  1,
+                  1,
+                  1
+                ]
+              }
+            }
+          }
+        }
+      },
+      "expected": "semantic.text resolves to white after overlay; base-theme semantic.text remains black",
+      "note": "This wrapper is a project fixture, not a DTCG Resolver document"
+    },
+    {
+      "id": "theme-induced-cycle",
+      "input": {
+        "base": {
+          "a": {
+            "$type": "number",
+            "$value": 1
+          },
+          "b": {
+            "$type": "number",
+            "$value": "{a}"
+          }
+        },
+        "theme_override": {
+          "a": {
+            "$type": "number",
+            "$value": "{b}"
+          }
+        }
+      },
+      "expected": "INVALID_IN_THAT_THEME"
+    },
+    {
+      "id": "theme-type-change",
+      "input": {
+        "base": {
+          "a": {
+            "$type": "dimension",
+            "$value": {
+              "value": 8,
+              "unit": "px"
+            }
+          },
+          "b": {
+            "$type": "dimension",
+            "$value": "{a}"
+          }
+        },
+        "theme_override": {
+          "a": {
+            "$type": "duration",
+            "$value": {
+              "value": 8,
+              "unit": "ms"
+            }
+          }
+        }
+      },
+      "expected": "INVALID_TYPE_MISMATCH_IN_THEME"
+    },
+    {
+      "id": "name-collision",
+      "input": {
+        "a-b": {
+          "c": {
+            "$type": "number",
+            "$value": 1
+          }
+        },
+        "a": {
+          "b-c": {
+            "$type": "number",
+            "$value": 2
+          }
+        }
+      },
+      "mapping": "-- + path segments joined with -",
+      "expected": "EXPORT_COLLISION",
+      "reason": "Both map to --a-b-c"
+    },
+    {
+      "id": "case-distinct",
+      "input": {
+        "A": {
+          "$type": "number",
+          "$value": 1
+        },
+        "a": {
+          "$type": "number",
+          "$value": 2
+        }
+      },
+      "expected": "Distinct token and CSS names when case preserved; reject collision if exporter lowercases"
+    },
+    {
+      "id": "css-name-injection",
+      "input": {
+        "x; color:red": {
+          "$type": "number",
+          "$value": 1
+        }
+      },
+      "expected": "EXPORT_UNSUPPORTED_NAME_OR_ESCAPED_MAPPING",
+      "note": "DTCG permits many names that need CSS escaping. Restricted-name rejection is exporter policy, not general DTCG invalidity."
+    },
+    {
+      "id": "permuted-json-key-order",
+      "transformation": "Reverse JSON member insertion order without changing values or declared override array order",
+      "expected": "Identical emitted bytes under chosen stable sorting policy"
+    },
+    {
+      "id": "css-fallback-cycle",
+      "css": ":root { --x: var(--y, var(--x)); --y: 1px; }",
+      "expected": "Cycle dependency includes fallback; browser confirmation still required",
+      "level": "standards reasoning, not executed"
+    },
+    {
+      "id": "css-wrong-type-fallback",
+      "css": ":root { --ink: 12px; } p { color: var(--ink, black); }",
+      "expected": "Fallback does not replace present 12px; color invalid at computed-value time",
+      "level": "standards reasoning, not executed"
+    },
+    {
+      "id": "runtime-base-override-limit",
+      "css": ":root { --base: 8px; --semantic: 8px; } .compact { --base: 4px; }",
+      "expected": "Literal --semantic remains 8px; deterministic compilation does not create runtime dependency",
+      "level": "inference"
+    },
+    {
+      "id": "theme-role-coverage",
+      "input_description": "Required semantic role semantic.text omitted from one declared theme after resolution",
+      "expected": "PROJECT_CONTRACT_ERROR, not automatically a DTCG format error"
+    },
+    {
+      "id": "rendered-contrast-hold",
+      "input_description": "Graph resolves successfully and CSS emits",
+      "expected": "HOLD contrast, actual cascade, forced-colors, unsupported browser features, accessibility conformance"
+    },
+    {
+      "id": "unsupported-root-token",
+      "input": {
+        "g": {
+          "$type": "dimension",
+          "$root": {
+            "$value": {
+              "value": 8,
+              "unit": "px"
+            }
+          }
+        },
+        "a": {
+          "$value": "{g.$root}"
+        }
+      },
+      "expected": "UNSUPPORTED_UNLESS_IMPLEMENTED",
+      "dtcg_status": "Valid reserved root-token construct; generic dollar-prefixed name rejection must not call it invalid DTCG",
+      "sources": [
+        "C02-R1-S01"
+      ],
+      "sections": [
+        "6.2",
+        "6.7.2"
+      ]
+    }
+  ],
+  "conflicts_and_unknowns": [
+    {
+      "topic": "Type resolution",
+      "evidence": "Format §5.2.2 explicitly gives alias target type; §6.7.3 type inheritance list does not include it.",
+      "decision": "Document §5.2.2 policy or HOLD conflicting-parent cases; do not infer type from shape."
+    },
+    {
+      "topic": "JSON Pointer support",
+      "evidence": "§6.6 introductory MAY versus §6.6.2/§7.1.2 MUST; examples differ in target shape.",
+      "decision": "Exclude pointer support and avoid full implementation claim."
+    },
+    {
+      "topic": "Group extension",
+      "evidence": "§6.4.2/3 deep merge and whole-token override coexist with JSON Schema constraint equivalence language.",
+      "decision": "Do not implement by a generic object merge in this round."
+    },
+    {
+      "topic": "Dimension percent example",
+      "evidence": "§6.9.2 nonnormative example uses %; §8.2 restricts px/rem.",
+      "decision": "Use normative type clause; examples are nonnormative under §1."
+    },
+    {
+      "topic": "Precise HTML anchors",
+      "evidence": "Reader click navigation discarded fragment destinations.",
+      "decision": "Exact section titles and web/local line ranges retained; do not invent most anchors."
+    },
+    {
+      "topic": "Color reader fidelity",
+      "evidence": "Web tool marked Color page as rewritten summary.",
+      "decision": "Full original false, exact-original quotations not claimed."
+    },
+    {
+      "topic": "Resource budgets",
+      "evidence": "No assessed finite graph size/recursion budget specified.",
+      "decision": "Any checker depth/token limits are explicit local limits; reject clearly instead of stack overflow."
+    }
+  ],
+  "art_direction_overlap": {
+    "existing": [
+      "I-01 CSS variable color configuration",
+      "I-02 paired surface and foreground roles",
+      "I-03 light/dark Tailwind publication",
+      "I-04 radius scales",
+      "I-05 initial theme colors",
+      "I-06 non-variable classes",
+      "I-14 repeated theme classes"
+    ],
+    "C_addition": [
+      "type/reference/cycle checking",
+      "per-theme resolved contract coverage",
+      "collision-free CSS export names",
+      "deterministic artifact policy",
+      "unsupported construct diagnostics"
+    ],
+    "ownership": "Art Direction chooses expression and visual token meaning; C makes existing choices executable and testable."
+  },
+  "search_audit": {
+    "targeted_queries": 3,
+    "tool_calls_with_search": 2,
+    "returned_hits": 15,
+    "distinct_batch_query_attribution": "unknown for first two simultaneous queries",
+    "complete_hits_private": true,
+    "raw_private_directory": "/workspace/scratch/785c8ae49c7b/private-research/C/round-02/researcher-1",
+    "fetch_attempts": 1,
+    "fetch_status": "FAIL: DNS Temporary failure in name resolution",
+    "fallback": "web-reader excerpts",
+    "full_original": false,
+    "backward_links_followed": [
+      "Format §8.1 -> Color module",
+      "Color -> CSS Color 4",
+      "Format normative rfc6901 -> RFC Editor landing page"
+    ],
+    "unread_or_unimplemented": [
+      "RFC6901 full text not pursued because pointers excluded",
+      "full resolver file validation",
+      "browser runtime",
+      "wide-gamut conversion"
+    ]
+  }
+}

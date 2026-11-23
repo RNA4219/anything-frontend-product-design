@@ -1,0 +1,32 @@
+{
+  "round": 2,
+  "issues": [
+    "C-003"
+  ],
+  "selection_reason": "Token graph contracts and build outputs are testable in this environment; responsive/browser-dependent work follows in round 03. Priority remains P1.",
+  "question": "How do typed token aliases, semantic roles, theme overrides, and CSS emission fail while appearing superficially consistent?",
+  "research_questions": [
+    "Where are current authoritative interchange and variable-resolution contracts maintained?",
+    "Which type, reference, cycle and fallback cases must a consumer reject or explicitly leave unsupported?",
+    "Which semantic role and theme decisions are engineering policy versus requirements of the format?",
+    "How can we compare baseline and candidate using malformed, boundary and valid token graphs?"
+  ],
+  "evaluation_frozen_before_implementation": true,
+  "rubric": [
+    "Resolve a supported acyclic typed alias graph deterministically",
+    "Reject missing targets, cycles, incompatible types and unsupported constructs clearly",
+    "Preserve semantic token roles across all declared themes without choosing a new art direction",
+    "Reject generated CSS name collisions or ambiguous exports",
+    "Never treat successful config resolution as rendered contrast, forced-colors or WCAG conformance"
+  ],
+  "required_cases": [
+    "valid-chain",
+    "missing-reference",
+    "cycle",
+    "type-mismatch",
+    "theme-override",
+    "unsupported-construct",
+    "name-collision"
+  ],
+  "decision": "ACCEPT only narrowly defined tested graph/contract behavior; browser visual effects HOLD; failed probes REVISE"
+}

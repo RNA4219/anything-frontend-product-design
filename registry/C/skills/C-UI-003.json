@@ -1,0 +1,152 @@
+{
+  "skill_id": "C-UI-003",
+  "domain": "ui-engineering-design-system",
+  "trigger": "modal/nonmodalを開閉する部品の統合、取消、再表示、呼出元消滅を扱うとき。",
+  "intent": "モーダル終了処理を復帰先の成否から独立させる",
+  "required_inputs": [
+    "dialogMode",
+    "cancelPolicyと確定結果",
+    "既存の背景状態と所有レイヤー",
+    "利用可能なnative/library API"
+  ],
+  "decision_rules": [
+    "dialogModeと開閉・取消・確定ポリシーを受け取る。native dialogを使う場合は接続済み要素をmodalならshowModal、nonmodalならshowで開く。open属性の手動除去で閉じたことにせず、close等の実際の終了経路とcloseイベントでDOMとアプリ状態を同期する。利用するAPIの配備可否は別途確認する。",
+    "cancel要求と実際のcloseを区別する。取消が阻止されて開いたままなら終了済みにしない。各表示回の結果を識別して、古いreturnValueや前回の確定状態を今回の取消へ流用しない。何を確定/保存するかは渡された業務ポリシーに従う。",
+    "標準modalの背景制限はブラウザへ任せる。既存ライブラリ/独自modalを使う場合は、背景操作の制限・公開状態・キーによる退出を誰が管理するかを決め、aria-modal=trueだけで動作が成立したとは判断しない。",
+    "実際に閉じる全経路で、このmodalが加えたinert/aria-hidden/イベント制約等を元の状態へ戻す処理を、呼出元探索やfocusの成功条件の外で実行する。既存属性を無差別に消さない。残るmodalがある場合はその制限を維持するが、今回の資料はスタック全体の実装を保証しない。",
+    "nonmodalへ背景inertやmodal用Tab循環を適用しない。終了後の行先はU4の条件で判断し、背景の別作業へ移動した利用者からフォーカスを奪わない。"
+  ],
+  "procedure": [
+    "dialogModeと開閉・取消・確定ポリシーを受け取る。native dialogを使う場合は接続済み要素をmodalならshowModal、nonmodalならshowで開く。open属性の手動除去で閉じたことにせず、close等の実際の終了経路とcloseイベントでDOMとアプリ状態を同期する。利用するAPIの配備可否は別途確認する。",
+    "cancel要求と実際のcloseを区別する。取消が阻止されて開いたままなら終了済みにしない。各表示回の結果を識別して、古いreturnValueや前回の確定状態を今回の取消へ流用しない。何を確定/保存するかは渡された業務ポリシーに従う。",
+    "標準modalの背景制限はブラウザへ任せる。既存ライブラリ/独自modalを使う場合は、背景操作の制限・公開状態・キーによる退出を誰が管理するかを決め、aria-modal=trueだけで動作が成立したとは判断しない。",
+    "実際に閉じる全経路で、このmodalが加えたinert/aria-hidden/イベント制約等を元の状態へ戻す処理を、呼出元探索やfocusの成功条件の外で実行する。既存属性を無差別に消さない。残るmodalがある場合はその制限を維持するが、今回の資料はスタック全体の実装を保証しない。",
+    "nonmodalへ背景inertやmodal用Tab循環を適用しない。終了後の行先はU4の条件で判断し、背景の別作業へ移動した利用者からフォーカスを奪わない。"
+  ],
+  "expected_outputs": [
+    "開く→要求→実際のclose→背景復旧→状態同期の経路と担当",
+    "各経路の取消/確定結果"
+  ],
+  "dependencies": [
+    "C-UI-004（フォーカスの選定と復帰）",
+    "art-direction/references/e-accessibility.md# e2-01, e2-02, e2-03, e2-05, e2-06",
+    "art-direction/templates/dialog.html（例。業務ポリシーの既定値ではない）"
+  ],
+  "exceptions": [
+    "closeしていないcancelイベントでは終了後処理を実行しない。",
+    "ほかのmodalや元来必要な非公開状態まで解除しない。",
+    "custom fallbackは対象環境・既存ライブラリの要件を根拠として選び、native dialogの規格上の禁止と取り違えない。"
+  ],
+  "failure_modes": [
+    "openを消してcloseとstate同期を飛ばす",
+    "呼出元がないためaria-hidden/inertが残る",
+    "cancelで確定処理を実行",
+    "nonmodalをtrapする",
+    "別modalの制限まで解除"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "cancel",
+        "status": "not_executed",
+        "procedure": "開く→対応する取消ボタン/Escape→再表示で、取消に確定効果がなく、DOMと状態が一致し、終了時に所有した制限が戻ることを確認。",
+        "falsifier": "取消で確定、古い結果の再利用、閉じた後に背景制限やopen stateが残る。"
+      },
+      {
+        "case": "invoker-removed",
+        "status": "not_executed",
+        "procedure": "開いてから呼出元を削除し、ボタン閉じ/Escapeを各経路で試す。背景の操作と公開状態の復旧をfocus結果と別々に観測する。",
+        "falsifier": "呼出元検索失敗で復旧が飛ぶ。"
+      },
+      {
+        "case": "nonmodal-counterexample",
+        "status": "not_executed",
+        "procedure": "show等でnonmodalを開く→背景inputへ移動→閉じる。",
+        "falsifier": "背景が操作不能、またはそのinputからfocusを奪う。"
+      }
+    ],
+    "status": "PARTIAL_BROWSER_BLOCKED",
+    "evidence": [
+      "campaigns/C/rounds/01/revision-execution.json",
+      "campaigns/C/rounds/01/recheck.json",
+      "campaigns/C/rounds/01/environment.json"
+    ]
+  },
+  "source_refs": [
+    {
+      "id": "HTML-DIALOG",
+      "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+      "evidence_kind": "HTML Living Standard; normative algorithms and author guidance",
+      "record": "research/ui-engineering-design-system/round-01/researcher-1.json#/sources/0",
+      "additional_reader_location": "private-research/C/round-01/researcher-1/sources/open-response-04-web-excerpt.txt:82 (cancel/requestClose); sources/chase-response-01-web-excerpt.txt:149-177 (close algorithm)",
+      "registry_source_id": "C-S001"
+    },
+    {
+      "id": "HTML-INERT",
+      "url": "https://html.spec.whatwg.org/multipage/interaction.html#inert",
+      "evidence_kind": "HTML Living Standard; normative",
+      "record": "research/ui-engineering-design-system/round-01/researcher-1.json#/sources/1",
+      "registry_source_id": "C-S002"
+    },
+    {
+      "id": "ARIA12",
+      "url": "https://www.w3.org/TR/wai-aria-1.2/",
+      "evidence_kind": "W3C Recommendation; normative",
+      "record": "research/ui-engineering-design-system/round-01/researcher-1.json#/sources/5",
+      "registry_source_id": "C-S006"
+    },
+    {
+      "id": "S4",
+      "url": "https://github.com/uswds/uswds/pull/6786",
+      "evidence_kind": "non-normative implementation guidance or author-reported implementation incident",
+      "record": "research/ui-engineering-design-system/round-01/researcher-2.json#/sources/3",
+      "registry_source_id": "C-S013",
+      "analysis_source_id": "R2-S4"
+    },
+    {
+      "id": "S3",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboardinteraction",
+      "evidence_kind": "non-normative implementation guidance or author-reported implementation incident",
+      "record": "research/ui-engineering-design-system/round-01/researcher-2.json#/sources/2",
+      "registry_source_id": "C-S012",
+      "analysis_source_id": "R2-S3"
+    }
+  ],
+  "confidence": {
+    "source": "primary sources and implementation reports; partial reader captures",
+    "runtime": "unverified",
+    "transfer": "unverified"
+  },
+  "status": "HOLD",
+  "version": "0.1.2",
+  "analysis_unit": "C001-U3",
+  "round": 1,
+  "fact_rule_boundary": "decision_rules are original conditional engineering instructions; source_refs identify normative facts versus guidance",
+  "history": [
+    {
+      "event": "REGISTER",
+      "at": "2026-11-23T08:59:34.429379+00:00",
+      "status": "DRAFT"
+    },
+    {
+      "event": "CRITIC",
+      "status": "REVISE",
+      "findings": [
+        "F1",
+        "F2",
+        "F3",
+        "F4"
+      ]
+    },
+    {
+      "event": "DECIDE",
+      "at": "2026-11-23T09:10:05.613722+00:00",
+      "status": "HOLD",
+      "reason": "Browser and assistive-technology verification unavailable; do not convert pure checks into browser acceptance."
+    },
+    {
+      "event": "TRACEABILITY_NORMALIZATION",
+      "reason": "Resolve source record paths from repository root and map decomposition identities to registry identities; no behavioral rule change."
+    }
+  ]
+}

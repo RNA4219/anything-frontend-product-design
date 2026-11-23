@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>予約部品の契約試作</title>
+<style>
+body {font:1rem/1.6 system-ui,sans-serif; margin:1rem; color:#202124; background:#fff}
+main {max-inline-size:44rem; margin-inline:auto}
+button,input,select {font:inherit; padding:.6rem; max-inline-size:100%; box-sizing:border-box}
+button {cursor:pointer} button[aria-disabled=true] {cursor:not-allowed}
+:focus-visible {outline:3px solid #155eef; outline-offset:3px}
+label {display:block; margin-block:1rem .3rem}
+dialog {max-inline-size:min(36rem,calc(100vw - 3rem)); box-sizing:border-box}
+dialog::backdrop {background:#0008}
+.actions {display:flex; flex-wrap:wrap; gap:.8rem; margin-block:1rem}
+output {display:block; overflow-wrap:anywhere}
+</style>
+<main>
+<h1 id="bookings" tabindex="-1">工作室の予約</h1>
+<p>UI部品の検証用。予約データはこのページ内だけの仮データです。</p>
+<p id="current">R-204: 12月8日 14:00（変更可）</p>
+<p>R-205: 11月10日 14:00（利用済み）</p>
+<div class="actions"><button id="open" type="button">日程を変更</button><button id="help-open" type="button">利用案内</button></div>
+<label for="outside">背景のメモ</label><input id="outside" value="編集中のメモ">
+<p id="status" role="status" aria-atomic="true">変更はまだありません。</p>
+<p>実行回数: <output id="count">0</output></p>
+<button id="payload" type="button">フォームの送信値を確認</button><output id="payload-result"></output>
+<form id="sample-form">
+<label for="booking-id">予約番号（読取専用）</label><input id="booking-id" name="bookingId" value="R-204" readonly>
+<label for="archived">過去予約（無効）</label><input id="archived" name="archived" value="R-205" disabled>
+</form>
+<dialog id="edit" aria-labelledby="edit-title">
+<h2 id="edit-title">日程を変更</h2>
+<p id="before">変更前: 12月8日 14:00</p>
+<label for="slot">変更後の日時</label>
+<select id="slot" autofocus><option value="">選択してください</option><option value="12月10日 14:00">12月10日 14:00</option><option value="12月11日 14:00">12月11日 14:00</option></select>
+<p id="reason">候補日時を選択してください。</p>
+<div class="actions"><button id="confirm" type="button" aria-disabled="true" aria-describedby="reason">変更を確定</button><button id="cancel" type="button">取消</button></div>
+<details><summary>境界条件の試験</summary><button id="remove-opener" type="button">起動元を削除</button><label><input id="blocked" type="checkbox">実行不可状態にする</label></details>
+</dialog>
+<dialog id="help" aria-labelledby="help-title"><h2 id="help-title">利用案内</h2><p>これは非モーダルです。背景のメモも編集できます。</p><button id="help-close" type="button">案内を閉じる</button></dialog>
+</main>
+<script type="module">
+import {guardedAction} from './runtime.mjs';
+const $ = id => document.getElementById(id);
+let invoker = null, count = 0, committedSlot = '12月8日 14:00';
+const edit = $('edit'), help = $('help');
+const available = () => Boolean($('slot').value) && !$('blocked').checked;
+function renderAvailability() {
+  $('confirm').setAttribute('aria-disabled', String(!available()));
+  $('reason').textContent = $('blocked').checked ? 'この試験状態では実行できません。チェックを外すと解除されます。' : ($('slot').value ? `変更後: ${$('slot').value}` : '候補日時を選択してください。');
+}
+$('open').addEventListener('click', event => {
+  invoker = event.currentTarget; edit.returnValue = '';
+  $('before').textContent = `変更前: ${committedSlot}`;
+  $('slot').value = ''; $('blocked').checked = false; renderAvailability(); edit.showModal();
+});
+$('slot').addEventListener('change', renderAvailability);
+$('blocked').addEventListener('change', renderAvailability);
+const confirm = guardedAction(available, () => {
+  count++; $('count').textContent = String(count);
+  committedSlot = $('slot').value;
+  $('current').textContent = `R-204: ${committedSlot}（変更可）`;
+  $('status').textContent = `日程を${$('slot').value}に変更しました。`;
+  edit.close('confirmed');
+});
+$('confirm').addEventListener('click', confirm);
+$('cancel').addEventListener('click', () => edit.close('cancelled'));
+edit.addEventListener('close', () => {
+  if (edit.returnValue !== 'confirmed') $('status').textContent = '変更を取り消しました。元の予約は保持されています。';
+  // Native dialog owns background cleanup and normal restoration.
+  const invokerUsable = invoker?.isConnected && !invoker.matches(':disabled') && !invoker.closest('[hidden],[inert]') && invoker.getClientRects().length;
+  const active = document.activeElement;
+  const lost = !active || active === document.body || active.isConnected === false || active === edit || active.closest?.('dialog:not([open])');
+  if (lost) {
+    const target = invokerUsable ? invoker : $('bookings');
+    target.focus();
+    if (document.activeElement !== target) $('bookings').focus();
+  }
+});
+$('remove-opener').addEventListener('click', () => invoker?.remove());
+$('help-open').addEventListener('click', () => {if (!help.open) help.show();});
+$('help-close').addEventListener('click', () => help.close());
+$('payload').addEventListener('click', () => $('payload-result').textContent = JSON.stringify(Object.fromEntries(new FormData($('sample-form')))));
+</script>
+</html>

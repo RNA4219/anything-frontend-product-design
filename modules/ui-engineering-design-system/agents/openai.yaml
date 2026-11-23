@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI Engineering and Design Systems"
+  short_description: "Build and verify UI component behavior contracts"
+  default_prompt: "Use $ui-engineering-design-system to implement the component, state, responsive, and token contracts for this UI."

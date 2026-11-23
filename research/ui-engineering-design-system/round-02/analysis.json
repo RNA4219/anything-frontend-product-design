@@ -1,0 +1,786 @@
+{
+  "method": {
+    "name": "sankai: 分解・理解・溶解",
+    "mechanism": "現行SKILLと3参照に従うLLMの読み分け・意味照合。自動分解CLIなし。",
+    "skill_commit": "0e2521453ad758cfb680110da0fdddc994d000be",
+    "scope": "SESSION C C-003 round-02。analysis.md/jsonのみ作成。実装・登録・commitなし。",
+    "source_snapshot": "研究取得日2026-11-23。現行product-design-c c6124cd13d2093be6059c8b02c86a574f6ce20eb（main更新merge後）。Art Direction f5df625dbc577d6a3ca28e13ef09e39b135b4a6f。",
+    "read": [
+      "sankai/README.md",
+      "sankai/skills/sankai/SKILL.md",
+      "sankai/skills/sankai/references/decompose.md",
+      "sankai/skills/sankai/references/understand.md",
+      "sankai/skills/sankai/references/dissolve.md",
+      "researcher-1.md/json",
+      "researcher-2.md/json",
+      "round-01/analysis.json（schema）",
+      "campaigns/C/rounds/02/plan.json",
+      "modules/ui-engineering-design-system/SKILL.md",
+      "Art Direction SKILL.md / references/i-components.md / references/b-visual.mdの関連ID"
+    ],
+    "normativity": "【事実】はResearcherが位置を特定した原典の内容、【推論】はそこから導いた実装上の含意、【製品policy】は限定検査器や製品に採用する候補。逐語引用ではない。DTCG Final CG ReportをW3C勧告と呼ばない。DTCG 2026 previewを除外。",
+    "evidence_limits": {
+      "complete_raw_downloads": {
+        "attempts": 2,
+        "successes": 0,
+        "failure": "Researcher両名が各1回DNS失敗を記録。reader断片は完全原文ではない。"
+      },
+      "color_reader": "rewritten summary表示あり。完全原文の一致や逐語引用検証を主張しない。",
+      "analyst_additional_searches": 0,
+      "browser_executed": false,
+      "token_probe_executed": false,
+      "registration_executed": false,
+      "source_text_included": "要約と原典位置だけ。第三者全文・raw/非公開制御記録は含めない。",
+      "cost": {
+        "amount": null,
+        "status": "unknown"
+      }
+    },
+    "frozen_plan": {
+      "path": "campaigns/C/rounds/02/plan.json",
+      "read_before_test_recommendation": true,
+      "rubric_unchanged": true,
+      "required_cases": [
+        "valid-chain",
+        "missing-reference",
+        "cycle",
+        "type-mismatch",
+        "theme-override",
+        "unsupported-construct",
+        "name-collision"
+      ],
+      "decision": "実行済みの限定graph/contract挙動のみACCEPT候補。browser visualはHOLD。失敗probeはREVISE。"
+    },
+    "vector_partition": {
+      "researcher_1_vectors": 44,
+      "all_vectors_executed": false,
+      "candidate_examples": [
+        "valid-chain",
+        "missing-reference",
+        "cycle",
+        "type-mismatch",
+        "unsupported-property-ref",
+        "unsupported-extension",
+        "unsupported-composite",
+        "valid-srgb",
+        "invalid-zero-no-unit",
+        "theme-override",
+        "theme-induced-cycle",
+        "theme-role-coverage",
+        "name-collision",
+        "permuted-json-key-order"
+      ],
+      "independent_boundary_candidates": [
+        "self-cycle",
+        "invalid-group-target",
+        "invalid-property-target",
+        "invalid-malformed-alias",
+        "unsupported-expression",
+        "unsupported-external-ref",
+        "invalid-color-string",
+        "invalid-alpha",
+        "invalid-srgb-range",
+        "unsupported-none",
+        "unsupported-p3",
+        "invalid-fallback-hex",
+        "invalid-dimension-unit",
+        "invalid-boolean-number",
+        "negative-duration-boundary",
+        "hold-alias-parent-conflict",
+        "theme-type-change",
+        "case-distinct",
+        "css-name-injection",
+        "unsupported-root-token"
+      ],
+      "independent_additional_candidates": [
+        "unknown-type",
+        "nonfinite-number",
+        "filtered-palette-target",
+        "ancestor-alias-freeze",
+        "shadow-only-focus-in-forced-colors",
+        "single-bundle-unique-theme-scope-and-unsupported-destination"
+      ],
+      "purpose": "44例を全て実装の期待値合わせに使わず、重要境界をCriticの独立入力・独立判定へ残す。partitionは提案で、隠されたholdoutや統計的独立性を主張しない。",
+      "remaining_vectors": "単純な正常値の重複とCSS動作例は参照用。CSS動作例を実行済みbrowser証拠にしない。"
+    },
+    "validation": {
+      "json_parse": "passed",
+      "required_schema": "passed",
+      "source_ref_resolution": "passed",
+      "checks_executed": [
+        "資料読取と原文位置の照合",
+        "JSON encode/decode",
+        "round01必須schema項目と3unitの確認",
+        "原典ID/record位置の存在確認",
+        "独立検査候補IDと44vector数の確認"
+      ],
+      "not_executed": [
+        "token checker",
+        "CSS browser",
+        "contrast",
+        "forced-colors",
+        "WCAG conformance"
+      ]
+    }
+  },
+  "units": [
+    {
+      "unit_id": "C003-U1",
+      "title": "対応範囲を宣言し、型付き参照グラフを検証する",
+      "instructions": [
+        "【製品policy】入力をDTCG 2025.10の限定サブセットとして宣言する。候補は単一JSON内のグループ、全値の波括弧alias、colorの数値sRGB、dimensionのpx/rem、durationのms/s、有限numberである。採用する型ごとに値形とserializerを列挙し、未実装の型を受理しない。全Format/Color/Resolver対応とは表示しない。",
+        "【事実＋製品policy】意味を持つ構文を検出してからグループとトークンを列挙する。未実装の$ref、$extends、$root、複合型、未知$type、外部参照、noneや非sRGB色はunsupportedとして拒否し、メタデータや空グループとして捨てない。原典で合法な構文をDTCG一般の不正と呼ばない。無視できる記述メタデータも明示的な許可リストに限定する。",
+        "【事実＋解釈policy】宣言$type、親グループ型、alias参照先の型を別々に保持し、値の見た目から型を推測しない。非aliasの未明示型は最も近い親型を使う。未明示aliasは§5.2.2の参照先型の扱いを採用候補とし、§6.7.3の継承リストにはこの分岐がないことを残す。親型と参照型が異なる場合は明示$typeを要求する局所契約エラーにし、仕様矛盾を解消したとは主張しない。明示型があるaliasは終端の型と一致させる。",
+        "【事実】波括弧aliasを値全体として解析し、トークンを指す有向辺として扱う。グループやtoken.$value内部への波括弧参照、壊れた構文、欠落対象、自己参照と多段循環、型不一致を拒否する。全トークンを走査し、失敗したテーマ・パス・参照経路を返す。文字列置換で補間やcalcを実装したことにしない。",
+        "【事実＋subset policy】終端値を型別に検証する。dimensionは有限数valueとpx/rem、durationは有限数valueとms/s、numberは有限数のみとしbooleanを数値として通さない。ゼロでも寸法unitを要求する。colorはcolorSpace=srgb、3個の有限数componentsを各0〜1、alphaを0〜1（省略時1）、hexがあれば6桁として確認する。noneと他色空間は未対応、sRGB範囲外や4/8桁fallbackは対応型の形式不正として区別する。",
+        "【製品policy】形式不正、サブセット未対応、製品契約違反、実装資源上限を区別して報告する。数値範囲・トークン数・参照深さに実装上限を設けるなら値を明記する。例外落ちや途中までの受理を成功として返さない。"
+      ],
+      "when": "既存トークン文書の取込、変換、テーマ検査の前段。",
+      "inputs": [
+        "版と対応subset",
+        "型付きトークン文書",
+        "型継承の解釈policy",
+        "資源上限と診断分類"
+      ],
+      "outputs": [
+        "パス・宣言型・実効型・解決値・出典を持つグラフ結果",
+        "失敗分類とテーマ/パス/参照経路"
+      ],
+      "conditions": [
+        "DTCG 2025.10はFinal Community Group ReportでありW3C勧告ではない。DTCG 2026 previewを採用根拠に混ぜない。",
+        "値検証はCSSの利用先プロパティの全制約を検査するものではない。",
+        "未対応型に含まれる別の誤りは未検査でもよいが、unsupportedを全面的な仕様妥当性判定にしない。"
+      ],
+      "exceptions": [
+        "負のduration・dimensionを型一般のDTCG不正としない。非負制約が必要なら利用先または製品の別契約にする。",
+        "§6.9.2の%の例は§8.2のpx/remの規範規則を広げる根拠にしない。",
+        "合法な$rootを通常のドル接頭辞禁止だけで形式不正としない。未知typeの拒否は対応範囲の拒否であり、未知値の合法性までは確定しない。"
+      ],
+      "dependencies": [
+        "researcher-1.jsonのC02-R1-P01〜P05と原典節",
+        "C003-U2：テーマを扱う場合は合成後の各グラフを入力する"
+      ],
+      "reason": "型決定と参照解決を分離し過ぎると、aliasの実効型と終端値の条件が落ちる。このまとまりは入力の意味を確定する仕事であり、見た目やCSS出力方式から独立して検査できる。曖昧入力の明示型要求は原典の逐語要求ではなく、解釈差を隠さない局所方針。",
+      "changeable": [
+        "内部グラフ表現・探索アルゴリズム・言語は同じ成功値と診断条件を保てば変更可能。",
+        "対応型や構文を追加するときは値形・解決規則・反例を追加し、既存のunsupportedを無根拠にacceptへ変えない。"
+      ],
+      "unknowns": [
+        "§5.2.2と§6.7.3の文面差の公式な解消は未確認。",
+        "$ref/$extendsの規範文言の読み合わせと完全実装は範囲外。",
+        "Color資料はreaderが書き換え要約と表示したため、完全原文との逐語照合を保証しない。"
+      ],
+      "source_refs": [
+        {
+          "id": "C02-R1-S01",
+          "url": "https://www.designtokens.org/TR/2025.10/format/",
+          "evidence_kind": "Final Community Group Report; not W3C Standard/Recommendation",
+          "record": "researcher-1.json#/sources/0",
+          "sections": [
+            {
+              "heading": "5.2.2 Type",
+              "web_lines": [
+                426,
+                441
+              ]
+            },
+            {
+              "heading": "6.4.2 Reference Resolution and Evaluation; 6.4.3 Inheritance Semantics",
+              "web_lines": [
+                738,
+                762
+              ]
+            },
+            {
+              "heading": "6.7.3 Type Inheritance",
+              "web_lines": [
+                1026,
+                1034
+              ]
+            },
+            {
+              "heading": "7.1.1 Curly Brace Syntax; 7.1.2 JSON Pointer Syntax",
+              "web_lines": [
+                1349,
+                1378
+              ]
+            },
+            {
+              "heading": "7.2.2 Chained References; 7.2.3 Circular References",
+              "web_lines": [
+                1439,
+                1468
+              ]
+            },
+            {
+              "heading": "7.4.5 Error Conditions",
+              "web_lines": [
+                1645,
+                1653
+              ]
+            },
+            {
+              "heading": "8.2 Dimension; 8.2.1 Validation",
+              "web_lines": [
+                1727,
+                1759
+              ]
+            },
+            {
+              "heading": "8.5 Duration; 8.5.1 Validation",
+              "web_lines": [
+                1814,
+                1841
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C02-R1-S03",
+          "url": "https://www.designtokens.org/TR/2025.10/color/",
+          "evidence_kind": "Final Community Group Report",
+          "record": "researcher-1.json#/sources/2",
+          "sections": [
+            {
+              "heading": "4.1 Format",
+              "anchor": "#format",
+              "web_lines": [
+                150,
+                160
+              ]
+            },
+            {
+              "heading": "4.1.1 The none keyword",
+              "web_lines": [
+                184,
+                190
+              ]
+            },
+            {
+              "heading": "4.2 Supported Color spaces",
+              "web_lines": [
+                223,
+                277
+              ]
+            },
+            {
+              "heading": "4.2.1.1 Components",
+              "web_lines": [
+                295,
+                301
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C02-R1-S06",
+          "url": "https://www.designtokens.org/technical-reports/",
+          "evidence_kind": "Official publication index",
+          "record": "researcher-1.json#/sources/5",
+          "sections": [
+            {
+              "heading": "Technical Reports"
+            }
+          ]
+        },
+        {
+          "id": "R2-S2",
+          "url": "https://styledictionary.com/info/tokens/",
+          "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+          "record": "researcher-2.json#/sources/1",
+          "version": "live documentation retrieved 2026-11-23; explicitly describes v4/legacy examples",
+          "section": "Overview note; Referencing / Aliasing; Collision warnings"
+        },
+        {
+          "id": "R2-S4",
+          "url": "https://github.com/style-dictionary/style-dictionary/issues/1398",
+          "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+          "record": "researcher-2.json#/sources/3",
+          "version": "report opened 2024-11-25 for v4; page observed closed; fixed release not checked",
+          "section": "Description; collaborator comments 2024-11-26 and 2025-01-20"
+        }
+      ],
+      "failure_modes": [
+        "合法な未対応構文を無視して空の成功結果を返す",
+        "alias型を値形から推測する",
+        "循環を途中のキャッシュで隠す",
+        "boolean・unitなしゼロ・無効sRGBを受理する",
+        "負の値を根拠なくDTCG不正と呼ぶ"
+      ],
+      "verification": [
+        {
+          "case": "valid-chain",
+          "status": "not_executed",
+          "partition": "candidate_examples",
+          "procedure": "明示dimension終端→未明示alias→明示dimension aliasを解決し、同じ型と0.5remを得る。",
+          "falsifier": "値・型の相違、元JSON順序による結果の変化。"
+        },
+        {
+          "case": "missing-reference",
+          "status": "not_executed",
+          "partition": "candidate_examples",
+          "procedure": "存在しないトークン参照を入力する。",
+          "falsifier": "成功、欠落パスのない一般エラー。"
+        },
+        {
+          "case": "cycle",
+          "status": "not_executed",
+          "partition": "candidate_examples",
+          "procedure": "3ノード循環を入力する。",
+          "falsifier": "成功、無限再帰、循環経路が不明。"
+        },
+        {
+          "case": "type-mismatch",
+          "status": "not_executed",
+          "partition": "candidate_examples",
+          "procedure": "duration aliasからdimension終端を指す。",
+          "falsifier": "型を無視した受理。"
+        },
+        {
+          "case": "unsupported-construct",
+          "status": "not_executed",
+          "partition": "candidate_examples",
+          "procedure": "未実装$ref・$extends・複合型を入力する。",
+          "falsifier": "黙って無視、DTCG全体の不正と断定。"
+        },
+        {
+          "case": "valid-srgb / invalid-zero-no-unit",
+          "status": "not_executed",
+          "partition": "candidate_examples",
+          "procedure": "数値sRGB正常例とunitなしのdimensionゼロを別々に判定する。",
+          "falsifier": "両方accept、または正常sRGB拒否。"
+        }
+      ]
+    },
+    {
+      "unit_id": "C003-U2",
+      "title": "テーマを統合してから意味roleを独立に解決する",
+      "instructions": [
+        "【製品policy】既存の基底トークン、宣言したテーマ一覧、順序付きoverride、必要な意味roleのパスと期待型、既存の面/前景の組を入力として受け取る。必須role一覧やトークン層数は製品契約であり、DTCGの普遍要件として作らない。配色・書体・角丸の新しい選択を加えない。",
+        "【事実＋製品policy】各テーマについて基底から独立した文書を作り、宣言した順序でoverrideを適用した後にaliasを解決する。局所wrapperではグループを再帰的に統合し、トークンを一単位として置換する等、置換単位を事前に固定する。グループ/トークンの形の衝突は拒否する。配列の順序とJSONメンバー挿入順を混同せず、暗黙のlast-write-winsを認めない。このwrapperをDTCG Resolver文書の実装とは呼ばない。",
+        "【推論】合成後の各テーマへU1の型・値・欠落・循環検査を実行し、テーマ間で解決済み値やaliasキャッシュを使い回さない。基底だけの成功でdark等を成功にしない。意図した同一パスの上書きと、生成名・出力先の衝突を別の判定にする。",
+        "【製品policy】各テーマの解決後に必須roleの存在と期待型を確認し、roleのパス・型・解決値・参照先・値の由来を対応づける。同じroleがテーマで別の基底を参照することは許せる。基底のrole継承は宣言したmerge契約が認める場合に成立する。theme内にroleが直接書かれていないだけで欠落としない。",
+        "【推論＋製品policy】全宣言テーマが契約に通った場合にだけU3へ渡す。失敗テーマを省いた部分成果を全テーマ成功と報告しない。literal出力はテーマごとの完全なrole値を生成し、後から基本CSS変数だけを変更すれば意味変数が追従すると説明しない。"
+      ],
+      "when": "ライト/ダーク等のテーマや密度variantを含む既存tokenセットのビルド。",
+      "inputs": [
+        "基底と順序付きtheme override",
+        "製品所有の必須role/期待型/既存pairing",
+        "merge単位とテーマ/スコープ契約"
+      ],
+      "outputs": [
+        "テーマごとの解決済みrole表とprovenance",
+        "テーマ名・role・パス付きの契約エラー"
+      ],
+      "conditions": [
+        "semantic roleの意味は上流から受け取り、Cが意味名だけを根拠に新配色を創作しない。",
+        "resolverの順序原則を再利用することと完全なsets/modifiers/resolutionOrder形式への適合を区別する。",
+        "未宣言テーマ・入れ子スコープ・端末の自動切替はこの静的グラフ結果の保証範囲に入れない。"
+      ],
+      "exceptions": [
+        "同一パスの明示overrideは意図した置換であり、全重複パス禁止にはしない。",
+        "意味roleの参照先の変更を型不一致と混同しない。同じ型なら別のpalette値への参照が可能。",
+        "必須roleの欠落は製品契約エラーであり、DTCG文書自体の形式不正とは限らない。"
+      ],
+      "dependencies": [
+        "C003-U1",
+        "現行SKILL.md「状態・通知と既存テーマの接続」",
+        "Art Direction references/i-components.md I-01〜03/I-14とreferences/b-visual.md B3-03/05/07/14"
+      ],
+      "reason": "グラフが正しくても、別テーマのキャッシュや欠けたroleで画面の契約が壊れる。統合順序・テーマ独立性・role完全性は同じ仕事として保持する。required manifestやtoken単位置換は製品方針であり、標準の追加義務にしない。",
+      "changeable": [
+        "テーマ数・role名・入力ファイル構成は製品契約に合わせて変更可能。",
+        "別merge方式を採用する場合は置換の単位・順序・欠落の意味を固定し、同じ反例で比較する。"
+      ],
+      "unknowns": [
+        "対象製品のrole一覧・pairing・スコープ・数値制約の具体値は未提示。",
+        "Style Dictionary最新リリースのDTCG対応表とissue修正リリースは未検証。"
+      ],
+      "source_refs": [
+        {
+          "id": "C02-R1-S02",
+          "url": "https://www.designtokens.org/TR/2025.10/resolver/",
+          "evidence_kind": "Final Community Group Report; not W3C Standard/Recommendation",
+          "record": "researcher-1.json#/sources/1",
+          "sections": [
+            {
+              "heading": "5.1 Case sensitivity; 5.2 Enforcing strings",
+              "web_lines": [
+                708,
+                714
+              ]
+            },
+            {
+              "heading": "6 Resolution logic; 6.1 Input validation; 6.2 Ordering; 6.3 Aliases",
+              "web_lines": [
+                715,
+                798
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C02-R1-S07",
+          "url": "https://github.com/RNA4219/anything-frontend-art-direction",
+          "evidence_kind": "Local project guidance; not interchange standard",
+          "record": "researcher-1.json#/sources/6",
+          "sections": [
+            "#i-01",
+            "#i-02",
+            "#i-03",
+            "#i-04",
+            "#i-05",
+            "#i-06",
+            "#i-14"
+          ]
+        },
+        {
+          "id": "R2-S2",
+          "url": "https://styledictionary.com/info/tokens/",
+          "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+          "record": "researcher-2.json#/sources/1",
+          "version": "live documentation retrieved 2026-11-23; explicitly describes v4/legacy examples",
+          "section": "Overview note; Referencing / Aliasing; Collision warnings"
+        },
+        {
+          "id": "R2-S3",
+          "url": "https://github.com/style-dictionary/style-dictionary/issues/1590",
+          "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+          "record": "researcher-2.json#/sources/2",
+          "version": "issue opened 2025-11-04; comments inspected through 2026-10-16; current release support not verified",
+          "section": "Proposal; comments 2026-08-27, 2026-08-28, 2026-08-31, 2026-09-18"
+        },
+        {
+          "id": "R2-S5",
+          "url": "https://opensource.adobe.com/spectrum-web-components/tools/styles/",
+          "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+          "record": "researcher-2.json#/sources/4",
+          "version": "page badge NPM 1.12.6; retrieved 2026-11-23; examples vary by system",
+          "section": "Global tokens; Color options; Token imports"
+        },
+        {
+          "id": "R2-S8",
+          "url": "https://spectrum.adobe.com/page/color",
+          "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+          "record": "researcher-2.json#/sources/7",
+          "version": "live documentation retrieved 2026-11-23",
+          "section": "Solid color background with black or white; Two-tone color pairing"
+        }
+      ],
+      "failure_modes": [
+        "baseの値をdarkに再使用",
+        "darkだけの循環や型変更を見落とす",
+        "存在する全tokenが解決しただけで欠落roleも完了扱い",
+        "原始色の層数や必須roleを全製品に強制"
+      ],
+      "verification": [
+        {
+          "case": "theme-override",
+          "status": "not_executed",
+          "partition": "candidate_examples",
+          "procedure": "baseの基底色だけをdarkで上書きし、semantic aliasが各テーマの値に変わることを確認する。",
+          "falsifier": "baseとdarkの値が同じキャッシュから返る。"
+        },
+        {
+          "case": "theme-induced-cycle",
+          "status": "not_executed",
+          "partition": "candidate_examples",
+          "procedure": "baseは成功するがoverride後に循環する入力を渡す。",
+          "falsifier": "darkを成功または黙って除外する。"
+        },
+        {
+          "case": "theme-role-coverage",
+          "status": "not_executed",
+          "partition": "candidate_examples",
+          "procedure": "全ての存在tokenは解決するが製品必須roleが欠落するテーマを作る。",
+          "falsifier": "テーマ完全性を成功扱いする。"
+        },
+        {
+          "case": "dark-role-repoints",
+          "status": "not_executed",
+          "partition": "candidate_examples",
+          "procedure": "同じrole/型を保ち、darkだけ別の有効なpalette tokenへ参照を替える。",
+          "falsifier": "有効な参照先変更を一律拒否、またはbaseの値を再利用。"
+        }
+      ]
+    },
+    {
+      "unit_id": "C003-U3",
+      "title": "CSS名と出力先を検査し、決定的literalを出力する",
+      "instructions": [
+        "【製品policy】パスのソート、CSS名への写像、大小文字、許容名またはescaping、数値表現、単位、セレクター、改行、出力先を固定する。パスの同一性を保ったまま写像後の名前が一意か調べ、a-b.cとa.b-c等の衝突を元の両パス付きで拒否する。CSS名の制限による拒否をDTCG一般の名前不正としない。",
+        "【製品policy】今回を単一の決定的CSS bundleと生成済み[data-theme=\"id\"] selectorに固定するなら、テーマIDからscopeへの写像を一意にし、出力先は一つの集約jobだけが所有する。この構成ではテーマごとの複数file出力を対応範囲から外し、複数出力先の上書き検査を実装済みとは呼ばない。複数file方式を追加する場合にだけ正規化した出力先衝突を検査し、後のテーマによる無言上書きを拒否する。",
+        "【推論＋製品policy】限定実装はU1/U2で解決した値をliteralとして型別serializerで出力する。dimension/durationは数値と許可unitを一つの値にし、value/unitを別token化したりobjectを文字列化しない。sRGBの数値・alphaを保つcolor(srgb … / …)等、採用する表記を明示し、hexへの丸めや色空間変換を勝手に加えない。全対象の検査後にだけ出力を確定する。",
+        "【事実＋製品policy】reference-preserving出力・export filter・外部CSS変数は未実装なら拒否する。追加実装する場合は、残す全参照が宣言したbundleとscopeで閉じるかを確認し、参照先を出力から落としたら明示的なliteralへ解決するか失敗にする。raw var()/calc()/fallbackを解析しない検査器が、それらを安全と判定してはならない。",
+        "【事実＋推論】CSSのfallbackは存在する不適合な値を利用先の型へ修復する機構ではない。fallback内部もCSSの循環依存に関わり、custom propertyの解決と継承には順序がある。literal出力や静的DTCG解決をCSSカスケードのシミュレーターとして扱わない。",
+        "【製品policy】結果をgraph/type、theme role、name/destination、serializationの検査範囲として返す。rendered contrast、focus visibility、forced-colors、端末設定、入れ子theme、ブラウザ機能対応、WCAG適合は別の観測欄で未検証/HOLDとする。graph成功をvisual成功に変換しない。"
+      ],
+      "when": "検証済みtoken/theme契約をCSS成果物へ変換する直前。",
+      "inputs": [
+        "U1/U2の解決済み全テーマ",
+        "名前写像と数値/色/単位serializer",
+        "scopeと出力先の契約",
+        "必要なら明示的export対象"
+      ],
+      "outputs": [
+        "決定的なCSS文字列または成果物",
+        "元パスと生成名/テーマ/出力先の対応表",
+        "検査済み範囲と未検証visual欄を分けた報告"
+      ],
+      "conditions": [
+        "同じ値・同じoverride順のJSONでメンバー挿入順だけを変えても出力が一致するようにする。",
+        "全対象の検査に失敗したら新規成功artifactを部分的に残さない。既存成果物の削除を指示する意味ではない。",
+        "ブラウザ起動や保護設定の迂回をこの分解の一部として行わない。",
+        "固定single-bundle方式を採用した場合、per-theme destinationフィールドは未対応として拒否するか、公開契約から除外する。任意の値を黙って受理して検査済みにしない。"
+      ],
+      "exceptions": [
+        "大小文字を維持すればAとaは異なるCSS custom propertyである。小文字化を選ぶ場合は写像後の衝突を拒否する。",
+        "literal方針では出力されない基底tokenを解決に使えても、壊れたvar参照は出力しない。",
+        "文字列が決定的であることは、全ブラウザの描画・利用先CSS文法の妥当性を保証しない。"
+      ],
+      "dependencies": [
+        "C003-U1",
+        "C003-U2（複数テーマの場合）",
+        "Art Directionの既存theme/contrast指針",
+        "Dの評価とリリース判定"
+      ],
+      "reason": "名前とファイルの衝突は入力グラフが正常でも発生する。serializerと成果物の対応を一つに保ち、実画面の意味とは切り分けて反証できる。literal採用はruntime参照の責務を限定する実装提案であり、唯一の標準出力ではない。",
+      "changeable": [
+        "CSS名やselector、ファイルの分け方は互換性と一意性を確認して変更可能。",
+        "別serializerやruntime alias方式は型・scope・参照閉包・ブラウザ確認を追加した場合に変更可能。"
+      ],
+      "unknowns": [
+        "対象ブラウザでcolor(srgb …)等が使用できる条件と実際の描画。",
+        "nested theme、透過合成、強制色、表示コントラストの結果。",
+        "CSS数値丸め方と資源上限は実装側で固定する必要がある。"
+      ],
+      "source_refs": [
+        {
+          "id": "C02-R1-S04",
+          "url": "https://www.w3.org/TR/2022/CR-css-variables-1-20220616/",
+          "evidence_kind": "W3C Candidate Recommendation Snapshot; not yet Recommendation in observed publication",
+          "record": "researcher-1.json#/sources/3",
+          "sections": [
+            {
+              "heading": "2 Defining Custom Properties",
+              "web_lines": [
+                93,
+                131
+              ]
+            },
+            {
+              "heading": "2.3 Resolving Dependency Cycles",
+              "web_lines": [
+                273,
+                303
+              ]
+            },
+            {
+              "heading": "3 Using Cascading Variables: the var() notation",
+              "web_lines": [
+                442,
+                482
+              ]
+            },
+            {
+              "heading": "3.1 Invalid Variables",
+              "web_lines": [
+                537,
+                558
+              ]
+            }
+          ]
+        },
+        {
+          "id": "R2-S1",
+          "url": "https://styledictionary.com/reference/utils/references/",
+          "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+          "record": "researcher-2.json#/sources/0",
+          "version": "live documentation retrieved 2026-11-23; package version unpinned",
+          "section": "outputReferencesFilter; outputReferencesTransformed"
+        },
+        {
+          "id": "R2-S3",
+          "url": "https://github.com/style-dictionary/style-dictionary/issues/1590",
+          "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+          "record": "researcher-2.json#/sources/2",
+          "version": "issue opened 2025-11-04; comments inspected through 2026-10-16; current release support not verified",
+          "section": "Proposal; comments 2026-08-27, 2026-08-28, 2026-08-31, 2026-09-18"
+        },
+        {
+          "id": "R2-S4",
+          "url": "https://github.com/style-dictionary/style-dictionary/issues/1398",
+          "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+          "record": "researcher-2.json#/sources/3",
+          "version": "report opened 2024-11-25 for v4; page observed closed; fixed release not checked",
+          "section": "Description; collaborator comments 2024-11-26 and 2025-01-20"
+        },
+        {
+          "id": "R2-S6",
+          "url": "https://www.w3.org/TR/2022/CR-css-variables-1-20220616/",
+          "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+          "record": "researcher-2.json#/sources/5",
+          "version": "W3C Candidate Recommendation Snapshot 2022-06-16",
+          "section": "2.2 Guaranteed-Invalid Values; 2.3 Resolving Dependency Cycles; 3 var(); 3.1 Invalid Variables"
+        },
+        {
+          "id": "R2-S7",
+          "url": "https://www.w3.org/TR/2025/CR-css-color-adjust-1-20251216/",
+          "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+          "record": "researcher-2.json#/sources/6",
+          "version": "W3C Candidate Recommendation Snapshot 2025-12-16",
+          "section": "2 Preferred Color Schemes; 3.1 Properties Affected by Forced Colors Mode"
+        },
+        {
+          "id": "R2-S8",
+          "url": "https://spectrum.adobe.com/page/color",
+          "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+          "record": "researcher-2.json#/sources/7",
+          "version": "live documentation retrieved 2026-11-23",
+          "section": "Solid color background with black or white; Two-tone color pairing"
+        }
+      ],
+      "failure_modes": [
+        "ハイフン結合の衝突を後勝ちで隠す",
+        "テーマファイルの無言上書き",
+        "dimensionを分裂または二重unitにする",
+        "出力から消したpaletteへのvarを残す",
+        "fallbackが型不一致を直すと誤認",
+        "graph成功をWCAG合格として出力"
+      ],
+      "verification": [
+        {
+          "case": "name-collision",
+          "status": "not_executed",
+          "partition": "candidate_examples",
+          "procedure": "a-b.cとa.b-cが同名へ写像される入力を与える。",
+          "falsifier": "両者を一変数へ上書きする。"
+        },
+        {
+          "case": "permuted-json-key-order",
+          "status": "not_executed",
+          "partition": "candidate_examples",
+          "procedure": "値とoverride配列順を保ちJSONメンバーの順だけ変え、CSSバイトを比較する。",
+          "falsifier": "出力順や数値表記が変わる。"
+        },
+        {
+          "case": "dimension-object-split",
+          "status": "not_executed",
+          "partition": "candidate_examples",
+          "procedure": "{value:1,unit:px}の出力を検査する。",
+          "falsifier": "value/unit別変数、object文字列化、単位欠落・二重化。"
+        },
+        {
+          "case": "rendered-contrast-hold",
+          "status": "not_executed",
+          "partition": "candidate_examples",
+          "procedure": "graph正常例のレポートを読み、描画・forced-colors・WCAG欄を確認する。",
+          "falsifier": "未実行のvisual欄にpass/ACCEPTが立つ。"
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    "DTCG全Format/Color/Resolver準拠の主張、DTCG 2026 preview",
+    "未実装$ref/$extends/$root/複合型/未知type/外部参照/none/非sRGBの受理",
+    "新しいpalette・typography・radius・token階層数・普遍role一覧の選択",
+    "一般的な部品再利用・合成・新設とtheme guidanceの重複登録",
+    "CSSカスケード・利用先全プロパティ・入れ子themeのシミュレーション",
+    "ブラウザ・contrast・forced-colors・WCAGの未実行合格",
+    "registry/skill/checker実装、登録、commit、非公開制御記録出力"
+  ],
+  "unresolved": [
+    {
+      "kind": "文面差",
+      "item": "Format §5.2.2のalias参照型と§6.7.3の継承リストが揃わない。",
+      "impact": "未明示aliasで親型と参照型が違うケースに明示$typeを要求する局所policyを候補とし、原典の解釈確定とはしない。"
+    },
+    {
+      "kind": "未取得",
+      "item": "両Researcherの完全原文取得は各1回DNS失敗。Color readerは書き換え要約。",
+      "impact": "reader由来の位置付き研究成果を根拠にするが、完全原文検証済み・未表示箇所まで網羅とはしない。"
+    },
+    {
+      "kind": "未実行",
+      "item": "本分析のtoken実装・CSSブラウザ・contrast・強制色・WCAG試験は未実行。",
+      "impact": "verificationは反証手順案であり、実行結果ではない。"
+    },
+    {
+      "kind": "適用先未提示",
+      "item": "製品role manifest、merge詳細、theme scope、serializerの正確な表記と資源上限。",
+      "impact": "実装前に局所契約として固定する。既存色や意味の再選定は不要。"
+    },
+    {
+      "kind": "範囲外",
+      "item": "$ref/$extends/Resolver全体、最新Style Dictionary対応・歴史的issueの修正版。",
+      "impact": "限定subsetの実装をこれらの完全対応や修正確認へ一般化しない。"
+    }
+  ],
+  "search_comparison": {
+    "researcher_1": {
+      "strategy": "DTCG安定版とCSS規格を優先し、Format→Color→CSSとRFC参照を追跡。",
+      "queries": 3,
+      "search_tool_calls": 2,
+      "returned_hits": 15,
+      "strength": "型・値形・全値参照・規範と例の差・仕様文面差。",
+      "limits": "完全原文なし。Color要約、初回2queryのhit個別帰属不明。"
+    },
+    "researcher_2": {
+      "strategy": "一次tooling docsと歴史的issue、Spectrumのtheme実例から失敗経路を探す。",
+      "queries": 4,
+      "initial_queries": 3,
+      "verification_queries": 1,
+      "all_returned_hits_recorded": false,
+      "retained_verification_hits": 9,
+      "strength": "参照先filter、寸法serializer、意図的overrideと生成名/出力先衝突、scopeの限界。",
+      "limits": "初期結合応答の全hit未保存。最新package再現なし、修正版不明。"
+    },
+    "combined": "規格側で入力の意味と拒否境界を定め、tooling側で正常グラフから出力が壊れる経路を補う。いずれもブラウザ実績ではない。",
+    "conflicts_resolved": [
+      {
+        "topic": "DTCGの対応度",
+        "resolution": "2025.10の限定subsetとし、2026 preview・全Resolver実装を除外。"
+      },
+      {
+        "topic": "overrideとcollision",
+        "resolution": "宣言済み同一パスoverrideを許し、写像後CSS名・出力先衝突は拒否。"
+      },
+      {
+        "topic": "alias型継承",
+        "resolution": "文面差を未解決として保持し、曖昧入力への明示型要求を局所policyにする。"
+      },
+      {
+        "topic": "semantic roles",
+        "resolution": "role一覧は製品所有。themeごとの存在/型を機械検査する増分だけ採用候補。"
+      },
+      {
+        "topic": "CSS出力とfallback",
+        "resolution": "限定literal出力を候補とし、runtime var/calc/fallbackを解析したと主張しない。"
+      }
+    ],
+    "saturation": "未測定。探索件数から飽和や一方の品質優位を主張しない。",
+    "analyst_additional_searches": 0
+  },
+  "duplication_decisions": [
+    {
+      "existing": "現行module「既存部品の再利用・合成・新設」、booking-change例と継承証跡",
+      "decision": "保持。今回のtoken検査に置換・吸収・再登録しない。"
+    },
+    {
+      "existing": "現行module「状態・通知と既存テーマの接続」",
+      "decision": "参照元・利用箇所・pairing・意味共有の一般指示を再利用。増分は型/参照/role完全性と機械的診断。"
+    },
+    {
+      "existing": "Art Direction I-01〜06 / I-14",
+      "decision": "CSS変数、面/前景、light/dark公開、radius、初期色、theme反復は参照再利用。新規は限定subset・graph・名前写像・成果物の検査。"
+    },
+    {
+      "existing": "Art Direction B-01〜04 / B3-03,05,07,11,14",
+      "decision": "コントラスト・端末設定・theme管理は再利用。graphの成功からそれらの実画面成功を導かない。"
+    },
+    {
+      "existing": "round01の部品契約/DOM/フォーカスunit",
+      "decision": "そのまま保持。今回の3unitはtokenビルド契約に限定する。"
+    }
+  ]
+}

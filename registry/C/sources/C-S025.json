@@ -1,0 +1,16 @@
+{
+  "source_id": "C-S025",
+  "url": "https://styledictionary.com/reference/utils/references/",
+  "title": "Style Dictionary: References",
+  "retrieved_date": "2026-11-23",
+  "version": "live documentation retrieved 2026-11-23; package version unpinned",
+  "records": [
+    {
+      "file": "research/ui-engineering-design-system/round-02/researcher-2.json",
+      "source_id": "R2-S1"
+    }
+  ],
+  "original_download": "unavailable",
+  "reader_capture": "partial",
+  "public_fulltext": false
+}

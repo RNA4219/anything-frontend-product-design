@@ -1,0 +1,42 @@
+{
+  "format": "C-token-subset/1",
+  "prefix": "booking",
+  "default_theme": "light",
+  "base": {
+    "palette": {
+      "$type": "color",
+      "paper": {"$value": {"colorSpace": "srgb", "components": [1, 1, 1]}},
+      "ink": {"$value": {"colorSpace": "srgb", "components": [0.1, 0.1, 0.1]}},
+      "boundary": {"$value": {"colorSpace": "srgb", "components": [0.4, 0.4, 0.4]}}
+    },
+    "size": {
+      "$type": "dimension",
+      "gap": {"$value": {"value": 0.75, "unit": "rem"}},
+      "line": {"$value": {"value": 1, "unit": "px"}}
+    },
+    "motion": {
+      "feedback": {"$type": "duration", "$value": {"value": 120, "unit": "ms"}}
+    },
+    "semantic": {
+      "surface": {"$value": "{palette.paper}"},
+      "text": {"$value": "{palette.ink}"},
+      "line": {"$value": "{palette.boundary}"},
+      "controlGap": {"$value": "{size.gap}"}
+    }
+  },
+  "themes": {
+    "light": {},
+    "dark": {
+      "palette": {
+        "paper": {"$value": {"colorSpace": "srgb", "components": [0.08, 0.08, 0.08]}},
+        "ink": {"$value": {"colorSpace": "srgb", "components": [0.95, 0.95, 0.95]}}
+      }
+    }
+  },
+  "roles": {
+    "semantic.surface": "color",
+    "semantic.text": "color",
+    "semantic.line": "color",
+    "semantic.controlGap": "dimension"
+  }
+}

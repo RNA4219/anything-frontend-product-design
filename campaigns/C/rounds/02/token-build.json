@@ -1,0 +1,574 @@
+{
+  "status": "PASS_SUPPORTED_SCOPE",
+  "scope": "bounded token graph, theme role and literal CSS serialization only",
+  "format": "C-token-subset/1",
+  "dtcg_conformance": "NOT_CLAIMED",
+  "limits": {
+    "group_depth": 32,
+    "tokens_per_theme": 10000,
+    "alias_depth": 256,
+    "json_depth": 64,
+    "json_nodes": 250000,
+    "integer_bits": 1024
+  },
+  "diagnostics": [],
+  "themes": {
+    "dark": {
+      "tokens": {
+        "motion.feedback": {
+          "type": "duration",
+          "value": {
+            "value": 120,
+            "unit": "ms"
+          },
+          "declared_type": "duration",
+          "inherited_type": null,
+          "alias_target": null,
+          "chain": [
+            "motion.feedback"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-motion-feedback"
+        },
+        "palette.boundary": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.4,
+              0.4,
+              0.4
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": "color",
+          "alias_target": null,
+          "chain": [
+            "palette.boundary"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-palette-boundary"
+        },
+        "palette.ink": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.95,
+              0.95,
+              0.95
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": "color",
+          "alias_target": null,
+          "chain": [
+            "palette.ink"
+          ],
+          "definition_origin": "theme:dark",
+          "value_origin": "theme:dark",
+          "css_name": "--booking-palette-ink"
+        },
+        "palette.paper": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.08,
+              0.08,
+              0.08
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": "color",
+          "alias_target": null,
+          "chain": [
+            "palette.paper"
+          ],
+          "definition_origin": "theme:dark",
+          "value_origin": "theme:dark",
+          "css_name": "--booking-palette-paper"
+        },
+        "semantic.controlGap": {
+          "type": "dimension",
+          "value": {
+            "value": 0.75,
+            "unit": "rem"
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "size.gap",
+          "chain": [
+            "semantic.controlGap",
+            "size.gap"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-semantic-controlGap"
+        },
+        "semantic.line": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.4,
+              0.4,
+              0.4
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "palette.boundary",
+          "chain": [
+            "semantic.line",
+            "palette.boundary"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-semantic-line"
+        },
+        "semantic.surface": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.08,
+              0.08,
+              0.08
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "palette.paper",
+          "chain": [
+            "semantic.surface",
+            "palette.paper"
+          ],
+          "definition_origin": "base",
+          "value_origin": "theme:dark",
+          "css_name": "--booking-semantic-surface"
+        },
+        "semantic.text": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.95,
+              0.95,
+              0.95
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "palette.ink",
+          "chain": [
+            "semantic.text",
+            "palette.ink"
+          ],
+          "definition_origin": "base",
+          "value_origin": "theme:dark",
+          "css_name": "--booking-semantic-text"
+        },
+        "size.gap": {
+          "type": "dimension",
+          "value": {
+            "value": 0.75,
+            "unit": "rem"
+          },
+          "declared_type": null,
+          "inherited_type": "dimension",
+          "alias_target": null,
+          "chain": [
+            "size.gap"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-size-gap"
+        },
+        "size.line": {
+          "type": "dimension",
+          "value": {
+            "value": 1,
+            "unit": "px"
+          },
+          "declared_type": null,
+          "inherited_type": "dimension",
+          "alias_target": null,
+          "chain": [
+            "size.line"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-size-line"
+        }
+      },
+      "roles": {
+        "semantic.controlGap": {
+          "type": "dimension",
+          "value": {
+            "value": 0.75,
+            "unit": "rem"
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "size.gap",
+          "chain": [
+            "semantic.controlGap",
+            "size.gap"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-semantic-controlGap"
+        },
+        "semantic.line": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.4,
+              0.4,
+              0.4
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "palette.boundary",
+          "chain": [
+            "semantic.line",
+            "palette.boundary"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-semantic-line"
+        },
+        "semantic.surface": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.08,
+              0.08,
+              0.08
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "palette.paper",
+          "chain": [
+            "semantic.surface",
+            "palette.paper"
+          ],
+          "definition_origin": "base",
+          "value_origin": "theme:dark",
+          "css_name": "--booking-semantic-surface"
+        },
+        "semantic.text": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.95,
+              0.95,
+              0.95
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "palette.ink",
+          "chain": [
+            "semantic.text",
+            "palette.ink"
+          ],
+          "definition_origin": "base",
+          "value_origin": "theme:dark",
+          "css_name": "--booking-semantic-text"
+        }
+      }
+    },
+    "light": {
+      "tokens": {
+        "motion.feedback": {
+          "type": "duration",
+          "value": {
+            "value": 120,
+            "unit": "ms"
+          },
+          "declared_type": "duration",
+          "inherited_type": null,
+          "alias_target": null,
+          "chain": [
+            "motion.feedback"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-motion-feedback"
+        },
+        "palette.boundary": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.4,
+              0.4,
+              0.4
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": "color",
+          "alias_target": null,
+          "chain": [
+            "palette.boundary"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-palette-boundary"
+        },
+        "palette.ink": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.1,
+              0.1,
+              0.1
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": "color",
+          "alias_target": null,
+          "chain": [
+            "palette.ink"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-palette-ink"
+        },
+        "palette.paper": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              1,
+              1,
+              1
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": "color",
+          "alias_target": null,
+          "chain": [
+            "palette.paper"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-palette-paper"
+        },
+        "semantic.controlGap": {
+          "type": "dimension",
+          "value": {
+            "value": 0.75,
+            "unit": "rem"
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "size.gap",
+          "chain": [
+            "semantic.controlGap",
+            "size.gap"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-semantic-controlGap"
+        },
+        "semantic.line": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.4,
+              0.4,
+              0.4
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "palette.boundary",
+          "chain": [
+            "semantic.line",
+            "palette.boundary"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-semantic-line"
+        },
+        "semantic.surface": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              1,
+              1,
+              1
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "palette.paper",
+          "chain": [
+            "semantic.surface",
+            "palette.paper"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-semantic-surface"
+        },
+        "semantic.text": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.1,
+              0.1,
+              0.1
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "palette.ink",
+          "chain": [
+            "semantic.text",
+            "palette.ink"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-semantic-text"
+        },
+        "size.gap": {
+          "type": "dimension",
+          "value": {
+            "value": 0.75,
+            "unit": "rem"
+          },
+          "declared_type": null,
+          "inherited_type": "dimension",
+          "alias_target": null,
+          "chain": [
+            "size.gap"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-size-gap"
+        },
+        "size.line": {
+          "type": "dimension",
+          "value": {
+            "value": 1,
+            "unit": "px"
+          },
+          "declared_type": null,
+          "inherited_type": "dimension",
+          "alias_target": null,
+          "chain": [
+            "size.line"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-size-line"
+        }
+      },
+      "roles": {
+        "semantic.controlGap": {
+          "type": "dimension",
+          "value": {
+            "value": 0.75,
+            "unit": "rem"
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "size.gap",
+          "chain": [
+            "semantic.controlGap",
+            "size.gap"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-semantic-controlGap"
+        },
+        "semantic.line": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.4,
+              0.4,
+              0.4
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "palette.boundary",
+          "chain": [
+            "semantic.line",
+            "palette.boundary"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-semantic-line"
+        },
+        "semantic.surface": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              1,
+              1,
+              1
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "palette.paper",
+          "chain": [
+            "semantic.surface",
+            "palette.paper"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-semantic-surface"
+        },
+        "semantic.text": {
+          "type": "color",
+          "value": {
+            "colorSpace": "srgb",
+            "components": [
+              0.1,
+              0.1,
+              0.1
+            ]
+          },
+          "declared_type": null,
+          "inherited_type": null,
+          "alias_target": "palette.ink",
+          "chain": [
+            "semantic.text",
+            "palette.ink"
+          ],
+          "definition_origin": "base",
+          "value_origin": "base",
+          "css_name": "--booking-semantic-text"
+        }
+      }
+    }
+  },
+  "css": "/* C-token-subset/1: resolved literals; rendering unverified. */\n:root,\n[data-theme=\"light\"] {\n  --booking-motion-feedback: 120ms;\n  --booking-palette-boundary: color(srgb 0.4 0.4 0.4 / 1);\n  --booking-palette-ink: color(srgb 0.1 0.1 0.1 / 1);\n  --booking-palette-paper: color(srgb 1 1 1 / 1);\n  --booking-semantic-controlGap: 0.75rem;\n  --booking-semantic-line: color(srgb 0.4 0.4 0.4 / 1);\n  --booking-semantic-surface: color(srgb 1 1 1 / 1);\n  --booking-semantic-text: color(srgb 0.1 0.1 0.1 / 1);\n  --booking-size-gap: 0.75rem;\n  --booking-size-line: 1px;\n}\n\n[data-theme=\"dark\"] {\n  --booking-motion-feedback: 120ms;\n  --booking-palette-boundary: color(srgb 0.4 0.4 0.4 / 1);\n  --booking-palette-ink: color(srgb 0.95 0.95 0.95 / 1);\n  --booking-palette-paper: color(srgb 0.08 0.08 0.08 / 1);\n  --booking-semantic-controlGap: 0.75rem;\n  --booking-semantic-line: color(srgb 0.4 0.4 0.4 / 1);\n  --booking-semantic-surface: color(srgb 0.08 0.08 0.08 / 1);\n  --booking-semantic-text: color(srgb 0.95 0.95 0.95 / 1);\n  --booking-size-gap: 0.75rem;\n  --booking-size-line: 1px;\n}\n",
+  "visual": {
+    "rendered_contrast": "NOT_TESTED",
+    "forced_colors": "NOT_TESTED",
+    "nested_themes": "NOT_TESTED",
+    "browser_support": "NOT_TESTED",
+    "assistive_technology": "NOT_TESTED",
+    "wcag_conformance": "NOT_TESTED"
+  }
+}

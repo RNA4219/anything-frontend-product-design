@@ -1,0 +1,7 @@
+{
+  "input_source_records": 15,
+  "new_canonical_documents": 14,
+  "duplicate_canonical_records_merged": 1,
+  "total_canonical_documents": 31,
+  "strategy": "URL without fragment; exact document path retained; shared URL sources indexed once"
+}

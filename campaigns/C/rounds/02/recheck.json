@@ -1,0 +1,201 @@
+{
+  "round": 2,
+  "reviewer": "same-model separate-task independent critic",
+  "cost": "unknown",
+  "decision": "ACCEPT_TESTED_GRAPH_CONTRACT_SCOPE",
+  "visual_decision": "HOLD",
+  "initial_decision": "REVISE",
+  "initial_evidence_preserved": true,
+  "frozen_evaluation_unchanged": true,
+  "initial_raw": {
+    "total": 73,
+    "pass": 67,
+    "fail": 6
+  },
+  "initial_adjudicated": {
+    "normal": 68,
+    "actual_failed_probes": 5,
+    "finding_groups": 3
+  },
+  "recheck": {
+    "total": 125,
+    "passed": 125,
+    "failed": 0,
+    "original_cases": 73,
+    "additional_cases": 52,
+    "original_case_ids_preserved": true
+  },
+  "findings": [
+    {
+      "finding": "R02-CR-01",
+      "status": "RESOLVED_IN_TESTED_SCOPE",
+      "probes": [
+        "group-depth-1200",
+        "deep-malformed-value",
+        "resolve-deep-1200"
+      ],
+      "result": "Structured LIMIT/JSON_DEPTH with path; no uncaught RecursionError."
+    },
+    {
+      "finding": "R02-CR-02",
+      "status": "RESOLVED_IN_TESTED_SCOPE",
+      "probes": [
+        "large-integer-serializer",
+        "integer-1024-bits-number-1",
+        "integer-1024-bits-number--1",
+        "integer-1025-bits-number-1",
+        "integer-1025-bits-number--1"
+      ],
+      "result": "Documented 1024-bit magnitude bound. Exact positive/negative boundary accepted; excess rejected as LIMIT/INTEGER_SIZE before serialization."
+    },
+    {
+      "finding": "R02-CR-03",
+      "status": "RESOLVED_IN_TESTED_SCOPE",
+      "probes": [
+        "cli-invalid-utf8",
+        "cli-oversized-json-integer",
+        "cli-utf8-truncated",
+        "cli-5001-digits-1",
+        "cli-5001-digits--1"
+      ],
+      "result": "Exit 2, JSON diagnostic, CSS null, input unchanged and previous CSS retained; no traceback."
+    }
+  ],
+  "diagnostic_precedence": {
+    "group-depth-1200": {
+      "old_expected_code": "GROUP_DEPTH",
+      "new_code": "JSON_DEPTH",
+      "kind": "LIMIT",
+      "reason": "Documented input-wide bound runs before recursive group traversal. Both enforce rejection with no CSS; crash/no-report remains failure."
+    },
+    "cli-deep-json": {
+      "initial_expected_exit": 2,
+      "corrected_expected_exit": 1,
+      "new_code": "JSON_DEPTH",
+      "kind": "LIMIT",
+      "reason": "The parser accepts this JSON; post-parse resource rejection uses documented exit 1. Initial oracle correction was recorded before this recheck."
+    }
+  },
+  "boundary_coverage": {
+    "json_depth": [
+      63,
+      64,
+      65
+    ],
+    "json_nodes": [
+      249999,
+      250000,
+      250001
+    ],
+    "integer_bits": [
+      1024,
+      1025
+    ],
+    "integer_signs": [
+      "positive",
+      "negative"
+    ],
+    "integer_types": [
+      "number",
+      "dimension",
+      "duration"
+    ],
+    "float_values": [
+      "max finite positive",
+      "max finite negative",
+      "min subnormal positive",
+      "min subnormal negative",
+      "negative zero"
+    ],
+    "interfaces": [
+      "build",
+      "resolve",
+      "resources",
+      "CLI"
+    ],
+    "parser_failures": [
+      "invalid syntax",
+      "duplicate member",
+      "NaN",
+      "Infinity",
+      "-Infinity",
+      "oversized integer",
+      "invalid/truncated UTF-8",
+      "excess parser nesting",
+      "leading zero"
+    ],
+    "file_contract": [
+      "input bytes unchanged",
+      "prior CSS bytes retained on failure",
+      "CSS replaced on success"
+    ]
+  },
+  "existing_unit_tests": {
+    "command": "python3 -m unittest discover -s modules/ui-engineering-design-system/tests -p test_tokens.py -v",
+    "count": 19,
+    "passed": 19,
+    "exit_code": 0
+  },
+  "sample_css_exact": true,
+  "evidence_integrity": {
+    "independent-probes.py": {
+      "sha256": "ca061113e4845503dd97ed5c36f6bdf13db3557e7eb3a20d20b1b70414abacab",
+      "unchanged": true
+    },
+    "initial-results.json": {
+      "sha256": "fbf784446ce5481254743d336dcb6530c0e8003292783e16c41cee6ff893dfa7",
+      "unchanged": true
+    },
+    "candidate-snapshot.json": {
+      "sha256": "f0f9ca59f65c870d38492b0fa3307cce7f73ce0b192e37fb085fa8cff779da98",
+      "unchanged": true
+    },
+    "critic.md": {
+      "sha256": "1a25f7cc2039cd884be51134187a87444a61c66782336abe2994e009fb40b808",
+      "unchanged": true
+    },
+    "critic.json": {
+      "sha256": "00cb42e773f37784b4f8abd9302455783b900311dd8f0717f868a585a8ea2688",
+      "unchanged": true
+    },
+    "plan.json": {
+      "sha256": "4f098d4be48f7c5c628889db39c35f6056436be236b6801153724377507b86d5",
+      "unchanged": true
+    },
+    "evaluation-plan.md": {
+      "sha256": "f8e47c6e97e6e43bb70dca8f5e7e0380655dfe3190a99f57a0e7d99c1d4c772e",
+      "unchanged": true
+    }
+  },
+  "fixed_candidate_hashes": {
+    "modules/ui-engineering-design-system/checks/tokens.py": "3f327cd1427e029d3ee9823ee999423ee72311088ccf720006ce2d8a05315b7e",
+    "modules/ui-engineering-design-system/tests/test_tokens.py": "0cb3fe81bf0b9d3daf580f92fa3821c6993ab220ef7299a703a540ec591a6693",
+    "modules/ui-engineering-design-system/references/token-contracts.md": "b24b4bc0fce78dcbbee30e2a5b15ab1d958952dd31baf41556a700710361638e",
+    "modules/ui-engineering-design-system/examples/booking-tokens.json": "899ad51c8361498c3e585c3ff84123746b323654063f6ce37a4d1ea37b81f7d1",
+    "modules/ui-engineering-design-system/examples/booking-tokens.css": "98eddb6b0b2cd410529d74c70e331b7cb1231371c3e6949e515c21e381c5ab0c"
+  },
+  "probe_source": "campaigns/C/rounds/02/independent-probes-v2.py",
+  "probe_source_sha256": "5e021c27bf7fb258a80067c57d7110ca80fe160c41a0e2ef656ecb6c375e354c",
+  "results": "campaigns/C/rounds/02/recheck-results.json",
+  "source_policy_review": {
+    "new_limits_explicitly_local": true,
+    "new_limits_classified_as_dtcg_invalid": false,
+    "full_dtcg_conformance_claimed": false,
+    "visual_success_claimed": false,
+    "new_primary_source_retrieval": false
+  },
+  "limitations": [
+    "Finite selected probes, not exhaustive correctness proof",
+    "Input-wide resource limits may reject otherwise syntactically valid JSON/DTCG documents as local LIMIT",
+    "Depth64 resource control is not full token acceptance; supported token/group depth is separately limited to32",
+    "Browser, rendered contrast, forced-colors, nested themes, AT and WCAG remain untested",
+    "No human/cross-model/hidden-holdout evidence",
+    "Artificial control is not a generation-uplift baseline"
+  ],
+  "critic_mutations": {
+    "implementation": false,
+    "registry": false,
+    "commit": false,
+    "browser_or_server": false
+  }
+}

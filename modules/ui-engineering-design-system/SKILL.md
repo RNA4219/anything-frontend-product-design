@@ -12,6 +12,12 @@ description: Web UIの既存部品の再利用・合成・新設、操作と状�
 
 部品の値・取得元、状態・操作・遷移、保持・更新、フォーカス、表示・通知、受入条件を定める。値・無効状態・送信可否は同じ状態から決め、該当する読み込み、空、保留、競合、結果不明、成功を扱う。アクションはbutton、移動はリンク、短い排他的候補はラベル付きの同名radioを候補とし、関連入力はfieldsetとlegendでまとめる。フォーカス移動と通知、重複送信、競合と結果不明からの復旧、トークン変更の波及は[詳細契約](references/contract.md)で確認する。
 
+実装した部品は次の手順で確認する。
+
+- ボタンの利用可否・送信値・ダイアログのフォーカス復帰は[部品の契約](references/component-contracts.md)に沿って定め、[契約例](examples/component-contracts.json)と[ブラウザー試験](tests/browser_contracts.py)で確かめる。
+- トークンは[型・テーマ・CSS出力の契約](references/token-contracts.md)に沿ってテーマごとに参照を解決し、必須ロールと型、変数名の衝突を[検査器](checks/tokens.py)で調べる。採用済みの3件はこの対応範囲に限る。
+- 狭幅や長いラベルでは[リフローと操作領域の契約](references/layout-contracts.md)を使い、必要な操作の到達先を[観測手順](checks/layout-observation-protocol.md)に記録する。モデルの検査と実機・支援技術での観察は別に報告する。
+
 次の13件は検証前の設計案（DRAFT）。該当する操作を選び、利用環境で確かめる。
 
 - [候補・タブ・キー操作](references/choices.md)
