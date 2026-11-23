@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-281",
+  "title": "Help users to – Know that a page is up to date",
+  "url": "https://service-manual.nhs.uk/design-system/patterns/know-that-a-page-is-up-to-date",
+  "canonical_url": "https://service-manual.nhs.uk/design-system/patterns/know-that-a-page-is-up-to-date",
+  "publisher": "NHS England",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://service-manual.nhs.uk/design-system/patterns/know-that-a-page-is-up-to-date",
+  "response_sha256": "1925febf33a3437819d9b248064424aac0fb8e8d87580f3612edc4dd9f662d31",
+  "used_by": [
+    "A-IU-213"
+  ],
+  "section_url": "https://service-manual.nhs.uk/design-system/patterns/know-that-a-page-is-up-to-date#when-to-use-this-pattern"
+}

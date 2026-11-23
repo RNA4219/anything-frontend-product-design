@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-216",
+  "title": "Date of birth",
+  "url": "https://designsystem.digital.gov/patterns/create-a-user-profile/date-of-birth/",
+  "canonical_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/date-of-birth/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/date-of-birth/",
+  "response_sha256": "9e5e52667491e66fe8bcae34e265ad55d365e356bd18c222acc145fcb20983db",
+  "used_by": [
+    "B-IU-203"
+  ],
+  "section_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/date-of-birth/#guidance"
+}

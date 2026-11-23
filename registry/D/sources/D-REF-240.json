@@ -1,0 +1,17 @@
+{
+  "source_id": "D-REF-240",
+  "title": "Understanding SC 1.4.10 Reflow (Level AA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow",
+  "response_sha256": "9c0d03521d14875c0ac64e8a089ad17b764ccc2a499813152118a93c5ef31ff7",
+  "used_by": [
+    "D-IU-209"
+  ]
+}

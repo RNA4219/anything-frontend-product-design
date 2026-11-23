@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-203",
+  "title": "Using performance data to improve your service: an introduction",
+  "url": "https://www.gov.uk/service-manual/measuring-success/using-data-to-improve-your-service-an-introduction",
+  "canonical_url": "https://www.gov.uk/service-manual/measuring-success/using-data-to-improve-your-service-an-introduction",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "What to measure",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/measuring-success/using-data-to-improve-your-service-an-introduction",
+  "response_sha256": "1e531751ce7e69e4993f6e74a888ec9b4212f3e76bf41f9ad4c2ca97b35303d2",
+  "used_by": [
+    "D-IU-201"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/measuring-success/using-data-to-improve-your-service-an-introduction#what-to-measure"
+}

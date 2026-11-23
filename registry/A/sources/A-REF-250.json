@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-250",
+  "title": "Functional Images",
+  "url": "https://www.w3.org/WAI/tutorials/images/functional/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/images/functional/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Example 1: Image used alone as a linked logo",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/images/functional/",
+  "response_sha256": "b756b57009ff97b4d21efd1821c1e0357f30a54f0ed28c009e71e89784cebc85",
+  "used_by": [
+    "A-IU-208"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/images/functional/#example-1-image-used-alone-as-a-linked-logo"
+}

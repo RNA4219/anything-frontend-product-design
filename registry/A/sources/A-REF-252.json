@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-252",
+  "title": "Data visualizations",
+  "url": "https://designsystem.digital.gov/components/data-visualizations/",
+  "canonical_url": "https://designsystem.digital.gov/components/data-visualizations/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "General guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/data-visualizations/",
+  "response_sha256": "5e97c773f286913eebd98a42ad9eec7edf14ed8bc1646983ecd80920587a4e89",
+  "used_by": [
+    "A-IU-208"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/data-visualizations/#general-guidance"
+}

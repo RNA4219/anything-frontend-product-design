@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-261",
+  "title": "Form Instructions",
+  "url": "https://www.w3.org/WAI/tutorials/forms/instructions/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/forms/instructions/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Overall instructions",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/forms/instructions/",
+  "response_sha256": "20f0cd849759ff12a3680662ea24f32225cca06e3ceb061032a4495f6f0d4f15",
+  "used_by": [
+    "C-UI-211"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/forms/instructions/#overall-instructions"
+}

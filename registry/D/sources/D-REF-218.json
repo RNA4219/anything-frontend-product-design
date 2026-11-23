@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-218",
+  "title": "Getting informed consent for user research",
+  "url": "https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research",
+  "canonical_url": "https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "What informed consent is",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research",
+  "response_sha256": "e600b348b63895fe45217df90679d8fd7b6bdf5495b2a7a7565289c8799f79a3",
+  "used_by": [
+    "D-IU-204"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/user-research/getting-users-consent-for-research#what-informed-consent-is"
+}

@@ -1,0 +1,25 @@
+{
+  "source_id": "B-REF-266",
+  "title": "Disruption and Recovery of Computing Tasks: Field Study, Analysis, and Directions",
+  "authors": [
+    "Shamsi T. Iqbal",
+    "Eric Horvitz"
+  ],
+  "year": 2007,
+  "venue": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/1240624.1240730",
+  "url": "https://doi.org/10.1145/1240624.1240730",
+  "canonical_url": "https://doi.org/10.1145/1240624.1240730",
+  "primary_text_url": "https://erichorvitz.com/CHI_2007_Iqbal_Horvitz.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "通知後に元の画面へ戻った時刻と、作業を実際に再開した時刻を区別する。",
+  "limits": "デスクトップの観察研究。アプリ復帰は実作業再開の代理測定。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "B-IU-211"
+  ]
+}

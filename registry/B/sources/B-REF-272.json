@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-272",
+  "title": "Cognitive Accessibility Design Pattern: Let Users Go Back",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p02-back-undo/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p02-back-undo/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p02-back-undo/",
+  "response_sha256": "c9d59a07762cecfef4b1dee81e6c390feb3cfde07cdb5caecfa94ff32673891a",
+  "used_by": [
+    "B-IU-213"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p02-back-undo/#whattodo"
+}

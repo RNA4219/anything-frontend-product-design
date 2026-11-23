@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-216",
+  "title": "Pages – A to Z page",
+  "url": "https://service-manual.nhs.uk/design-system/patterns/a-to-z-page",
+  "canonical_url": "https://service-manual.nhs.uk/design-system/patterns/a-to-z-page",
+  "publisher": "NHS England",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://service-manual.nhs.uk/design-system/patterns/a-to-z-page",
+  "response_sha256": "5e20462b8ce5fedaf325a6df27e36f81f16a35ea846ebe1d213ab0350512c2e7",
+  "used_by": [
+    "A-IU-203"
+  ],
+  "section_url": "https://service-manual.nhs.uk/design-system/patterns/a-to-z-page#when-to-use-this-pattern"
+}

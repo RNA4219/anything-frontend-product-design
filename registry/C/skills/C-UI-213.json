@@ -1,0 +1,77 @@
+{
+  "skill_id": "C-UI-213",
+  "domain": "ui-engineering-design-system",
+  "trigger": "タッチや画面読み上げでアイコン操作を探す場合",
+  "intent": "非視覚の操作で探索と起動を切り分ける",
+  "required_inputs": [
+    "ラベル",
+    "役割",
+    "探索と起動のイベント"
+  ],
+  "decision_rules": [
+    "触れた対象の役割・名前を取得してから起動できるようにする。見えるラベルとアクセス可能な名前を対応させる。"
+  ],
+  "procedure": [
+    "触れた対象の役割・名前を取得してから起動できるようにする。見えるラベルとアクセス可能な名前を対応させる。",
+    "画面を見ずに候補を順に探索し、対象を聞いてから起動できるか、探索中に副作用が発生しないかを確認する。"
+  ],
+  "expected_outputs": [
+    "読み上げから単一の起動に至る操作記録"
+  ],
+  "dependencies": [],
+  "exceptions": [
+    "研究用ジェスチャーを各OSの標準ジェスチャーに優先させない。"
+  ],
+  "failure_modes": [
+    "対象を読み上げるだけの接触で操作が確定する"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "非視覚の操作で探索と起動を切り分ける",
+        "status": "not_executed",
+        "procedure": "画面を見ずに候補を順に探索し、対象を聞いてから起動できるか、探索中に副作用が発生しないかを確認する。",
+        "falsifier": "対象を読み上げるだけの接触で操作が確定する"
+      }
+    ],
+    "status": "PLANNED",
+    "evidence": []
+  },
+  "source_refs": [
+    {
+      "id": "C-REF-268",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name",
+      "record": "registry/C/sources/C-REF-268.json",
+      "registry_source_id": "C-REF-268",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    },
+    {
+      "id": "C-REF-269",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value",
+      "record": "registry/C/sources/C-REF-269.json",
+      "registry_source_id": "C-REF-269",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    },
+    {
+      "id": "C-REF-270",
+      "url": "https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/",
+      "record": "registry/C/sources/C-REF-270.json",
+      "registry_source_id": "C-REF-270",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-271",
+      "url": "https://doi.org/10.1145/1414471.1414487",
+      "record": "registry/C/sources/C-REF-271.json",
+      "registry_source_id": "C-REF-271",
+      "evidence_kind": "学術論文"
+    }
+  ],
+  "confidence": {
+    "source_support": "各出典の指定箇所を参照。複数資料から組み立てた設計判断。",
+    "transfer": "タッチや画面読み上げでアイコン操作を探す場合",
+    "limits": "研究用ジェスチャーを各OSの標準ジェスチャーに優先させない。"
+  },
+  "status": "DRAFT",
+  "version": "0.1.0"
+}

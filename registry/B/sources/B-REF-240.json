@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-240",
+  "title": "Inline loading",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/inline-loading/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/inline-loading/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/inline-loading/guidelines",
+  "response_sha256": "a36fd82825ec5dd53773d8cc392da2219e643dd7b158b352e7be7b910287cdea",
+  "used_by": [
+    "B-IU-207"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/inline-loading/guidelines#behaviors"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-209",
+  "title": "Taking notes and recording user research sessions",
+  "url": "https://www.gov.uk/service-manual/user-research/taking-notes-and-recording-user-research-sessions",
+  "canonical_url": "https://www.gov.uk/service-manual/user-research/taking-notes-and-recording-user-research-sessions",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Privacy and consent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/user-research/taking-notes-and-recording-user-research-sessions",
+  "response_sha256": "035bb22aaa1e74e053e2a326429359eb2bfd8a2225322d313f86fa33180d65b0",
+  "used_by": [
+    "D-IU-202"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/user-research/taking-notes-and-recording-user-research-sessions#privacy-and-consent"
+}

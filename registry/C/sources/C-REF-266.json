@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-266",
+  "title": "Text input",
+  "url": "https://designsystem.digital.gov/components/text-input/",
+  "canonical_url": "https://designsystem.digital.gov/components/text-input/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/text-input/",
+  "response_sha256": "f46a438c0bdedbee53ad5290e5a687f8cd1f3c1c06a24ce0fbe8df9da3108410",
+  "used_by": [
+    "C-UI-212"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/text-input/#usability-guidance-text-input"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-235",
+  "title": "Race and ethnicity",
+  "url": "https://designsystem.digital.gov/patterns/create-a-user-profile/race-and-ethnicity/",
+  "canonical_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/race-and-ethnicity/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/race-and-ethnicity/",
+  "response_sha256": "c90f6ea5079e02a44f88ea28fbb5f9c33bba59d6aff722ce850ca361253efd5b",
+  "used_by": [
+    "B-IU-206"
+  ],
+  "section_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/race-and-ethnicity/#guidance"
+}

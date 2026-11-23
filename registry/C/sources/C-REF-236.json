@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-236",
+  "title": "Tooltip Pattern",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/",
+  "response_sha256": "e6778ad5eba134525a90dffb254841ac50a2f33322c2505bbe733ae2ee8c0808",
+  "used_by": [
+    "C-UI-207"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/#keyboardinteraction"
+}

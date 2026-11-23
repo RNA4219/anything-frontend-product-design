@@ -1,0 +1,17 @@
+{
+  "source_id": "B-REF-204",
+  "title": "Understanding SC 1.3.5 Identify Input Purpose (Level AA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose",
+  "response_sha256": "be2d45b2c535af2377670e581eb24f7fca05be8837d00131a52a1d5f8fc880db",
+  "used_by": [
+    "B-IU-201"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-244",
+  "title": "Cognitive Accessibility Design Pattern: Let Users Control When the Content Moves or Changes",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o8p01-motion/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o8p01-motion/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o8p01-motion/",
+  "response_sha256": "f269bd109840b7138afe3c494a383fc13b34e9d7db8b6b3727e37ec7ff6fcecd",
+  "used_by": [
+    "C-UI-208"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o8p01-motion/#whattodo"
+}

@@ -1,0 +1,17 @@
+{
+  "source_id": "C-REF-209",
+  "title": "Understanding SC 3.2.1 On Focus (Level A)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/on-focus",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/on-focus",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/on-focus",
+  "response_sha256": "7c091de08983bd1ecb36e16413bf688f0696bf7a8cf6ca9358d3b98c88822518",
+  "used_by": [
+    "C-UI-202"
+  ]
+}

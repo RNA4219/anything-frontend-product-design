@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-232",
+  "title": "Three or more languages",
+  "url": "https://designsystem.digital.gov/patterns/select-a-language/three-or-more-languages/",
+  "canonical_url": "https://designsystem.digital.gov/patterns/select-a-language/three-or-more-languages/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/patterns/select-a-language/three-or-more-languages/",
+  "response_sha256": "38f57c43d23742fc721db7ab4fd0385963913a039fc3da36ed396acd37214894",
+  "used_by": [
+    "A-IU-205"
+  ],
+  "section_url": "https://designsystem.digital.gov/patterns/select-a-language/three-or-more-languages/#guidance"
+}

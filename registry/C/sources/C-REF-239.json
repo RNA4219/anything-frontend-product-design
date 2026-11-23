@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-239",
+  "title": "Toggletip",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/toggletip/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/toggletip/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/toggletip/guidelines",
+  "response_sha256": "b9bcba8f5de29f3ffbbfde5421fe62cec09aae57a4a2823f0cf7ead2122addc4",
+  "used_by": [
+    "C-UI-207"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/toggletip/guidelines#behaviors"
+}

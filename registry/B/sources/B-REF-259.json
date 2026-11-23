@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-259",
+  "title": "Interruption pages",
+  "url": "https://design-system.service.gov.uk/patterns/interruption-pages/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/interruption-pages/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/interruption-pages/",
+  "response_sha256": "3db75739f375c03e68129e07423b99a15a8009332e6df580fe2041bbc3ced81e",
+  "used_by": [
+    "B-IU-211"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/interruption-pages/#when-to-use-this-pattern"
+}

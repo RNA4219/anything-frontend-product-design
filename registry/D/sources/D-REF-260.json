@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-260",
+  "title": "Description of Visual Information",
+  "url": "https://www.w3.org/WAI/media/av/description/",
+  "canonical_url": "https://www.w3.org/WAI/media/av/description/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Does My Media Need Description?",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/media/av/description/",
+  "response_sha256": "96f92e95392652f9e8967baf83a74b946b75d8a0373f0eef8b4595e275ed7738",
+  "used_by": [
+    "D-IU-212"
+  ],
+  "section_url": "https://www.w3.org/WAI/media/av/description/#checklist"
+}

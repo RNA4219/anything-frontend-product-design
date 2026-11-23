@@ -1,0 +1,27 @@
+{
+  "source_id": "A-REF-207",
+  "title": "The Perfect Search Engine Is Not Enough: A Study of Orienteering Behavior in Directed Search",
+  "authors": [
+    "Jaime Teevan",
+    "Christine Alvarado",
+    "Mark S. Ackerman",
+    "David R. Karger"
+  ],
+  "year": 2004,
+  "venue": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/985692.985745",
+  "url": "https://doi.org/10.1145/985692.985745",
+  "canonical_url": "https://doi.org/10.1145/985692.985745",
+  "primary_text_url": "https://people.csail.mit.edu/teevan/work/publications/papers/chi04.pdf",
+  "section": "Diary study",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "目的物を再発見する過程で覚えていた場所や周辺の手掛かりを聞く。",
+  "limits": "既知項目を再発見する行動と初回探索を分ける。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "A-IU-201"
+  ]
+}

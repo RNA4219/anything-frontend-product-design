@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-262",
+  "title": "Banner",
+  "url": "https://designsystem.digital.gov/components/banner/",
+  "canonical_url": "https://designsystem.digital.gov/components/banner/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/banner/",
+  "response_sha256": "6ea98f64bac4964787d975ac30ff78a1090d381ad19adb076320a1ce8180c451",
+  "used_by": [
+    "A-IU-210"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/banner/#usability-guidance-default-banner"
+}

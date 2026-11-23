@@ -1,0 +1,25 @@
+{
+  "source_id": "B-REF-275",
+  "title": "Supporting Selective Undo in a Code Editor",
+  "authors": [
+    "YoungSeok Yoon",
+    "Brad A. Myers"
+  ],
+  "year": 2015,
+  "venue": "2015 IEEE/ACM 37th IEEE International Conference on Software Engineering",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1109/icse.2015.43",
+  "url": "https://doi.org/10.1109/icse.2015.43",
+  "canonical_url": "https://doi.org/10.1109/icse.2015.43",
+  "primary_text_url": "https://www.cs.cmu.edu/~NatProg/papers/ICSE15-Azurite-v12-CameraReady.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "特定の編集だけを取り消す場合、残すべき後続編集も検査する。",
+  "limits": "コード編集の研究。取引のサーバー側取消契約には転用できない。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "B-IU-213"
+  ]
+}

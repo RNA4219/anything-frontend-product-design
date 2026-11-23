@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-259",
+  "title": "Transcripts",
+  "url": "https://www.w3.org/WAI/media/av/transcripts/",
+  "canonical_url": "https://www.w3.org/WAI/media/av/transcripts/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Does My Media Need a Transcript?",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/media/av/transcripts/",
+  "response_sha256": "66346b148a90d2985acc2fc08a88949fc973b691f3155450e0604d957136ffae",
+  "used_by": [
+    "D-IU-212"
+  ],
+  "section_url": "https://www.w3.org/WAI/media/av/transcripts/#checklist"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-265",
+  "title": "Checkbox accessibility tests",
+  "url": "https://designsystem.digital.gov/components/checkbox/accessibility-tests/",
+  "canonical_url": "https://designsystem.digital.gov/components/checkbox/accessibility-tests/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品試験手順",
+  "section": "Keyboard navigation tests",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/checkbox/accessibility-tests/",
+  "response_sha256": "af9f1c461af445b772a4e9462bc8f61fad0623e50654946b42d72664a02d4dc6",
+  "used_by": [
+    "D-IU-213"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/checkbox/accessibility-tests/#keyboard-navigation-tests"
+}

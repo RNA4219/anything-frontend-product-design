@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-202",
+  "title": "Find an address",
+  "url": "https://design-system.dwp.gov.uk/patterns/find-an-address",
+  "canonical_url": "https://design-system.dwp.gov.uk/patterns/find-an-address",
+  "publisher": "Department for Work and Pensions",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Principles",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.dwp.gov.uk/patterns/find-an-address",
+  "response_sha256": "b2d3ef0932fd6f6da99cf04e96b39ae92ab8a3eceeb17e78231354d0c88357d8",
+  "used_by": [
+    "B-IU-201"
+  ],
+  "section_url": "https://design-system.dwp.gov.uk/patterns/find-an-address#principles"
+}

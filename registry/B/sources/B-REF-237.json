@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-237",
+  "title": "Ask users for – NHS numbers",
+  "url": "https://service-manual.nhs.uk/design-system/patterns/ask-for-nhs-numbers",
+  "canonical_url": "https://service-manual.nhs.uk/design-system/patterns/ask-for-nhs-numbers",
+  "publisher": "NHS England",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How to use the NHS number pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://service-manual.nhs.uk/design-system/patterns/ask-for-nhs-numbers",
+  "response_sha256": "825fbfc2578d8c353916527100b54f40b242fea165b796be14e33188c6ea4c29",
+  "used_by": [
+    "B-IU-206"
+  ],
+  "section_url": "https://service-manual.nhs.uk/design-system/patterns/ask-for-nhs-numbers#how-to-use-the-nhs-number-pattern"
+}

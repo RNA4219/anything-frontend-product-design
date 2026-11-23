@@ -1,0 +1,25 @@
+{
+  "source_id": "A-REF-220",
+  "title": "Web Page Design: Implications of Memory, Structure and Scent for Information Retrieval",
+  "authors": [
+    "Kevin Larson",
+    "Mary Czerwinski"
+  ],
+  "year": 1998,
+  "venue": "Proceedings of the SIGCHI conference on Human factors in computing systems - CHI '98",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/274644.274649",
+  "url": "https://doi.org/10.1145/274644.274649",
+  "canonical_url": "https://doi.org/10.1145/274644.274649",
+  "primary_text_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/12/chi98_webdesign.pdf",
+  "section": "Results",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "階層の深さと幅を変え、同じ探索課題で比較する。",
+  "limits": "使用した分類・課題に限る。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "A-IU-203"
+  ]
+}

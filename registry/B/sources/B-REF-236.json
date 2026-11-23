@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-236",
+  "title": "Social Security Number",
+  "url": "https://designsystem.digital.gov/patterns/create-a-user-profile/social-security-number/",
+  "canonical_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/social-security-number/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/social-security-number/",
+  "response_sha256": "ff2b4de0772e5ef4219332054cac1fedd1084b5e5b82ec735f68789085dcaad9",
+  "used_by": [
+    "B-IU-206"
+  ],
+  "section_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/social-security-number/#guidance"
+}

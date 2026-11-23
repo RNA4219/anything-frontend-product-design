@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-265",
+  "title": "Notification banner",
+  "url": "https://design-system.service.gov.uk/components/notification-banner/",
+  "canonical_url": "https://design-system.service.gov.uk/components/notification-banner/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/notification-banner/",
+  "response_sha256": "fa659bfb2474f0ad8ef2ade94e889a48334ae55b5a11d72793ba0a370cbe1ada",
+  "used_by": [
+    "B-IU-211"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/notification-banner/#how-it-works"
+}

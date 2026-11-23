@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-201",
+  "title": "How to set performance metrics for your service",
+  "url": "https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service",
+  "canonical_url": "https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Base your metrics on a sound understanding of your service’s purpose",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service",
+  "response_sha256": "72f3634816e64c22cb7b769671a37cdfb07dd0b0010563abfe4c71d4e5c60ffb",
+  "used_by": [
+    "D-IU-201"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service#base-your-metrics-on-a-sound-understanding-of-your-services-purpose"
+}

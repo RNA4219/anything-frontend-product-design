@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-230",
+  "title": "Toggle to Welsh",
+  "url": "https://design-system.dwp.gov.uk/patterns/toggle-to-welsh",
+  "canonical_url": "https://design-system.dwp.gov.uk/patterns/toggle-to-welsh",
+  "publisher": "Department for Work and Pensions",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Principles",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.dwp.gov.uk/patterns/toggle-to-welsh",
+  "response_sha256": "e847a4c04e5963037f5cb03f0fb7099670afed2dbe60ce6f07d4feddb525f995",
+  "used_by": [
+    "A-IU-205"
+  ],
+  "section_url": "https://design-system.dwp.gov.uk/patterns/toggle-to-welsh#principles"
+}

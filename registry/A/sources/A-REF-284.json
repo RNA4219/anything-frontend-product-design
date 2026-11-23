@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-284",
+  "title": "Cognitive Accessibility Design Pattern: Provide Alternative Content for Complex Information and Tasks",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p02-alternative-content/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p02-alternative-content/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p02-alternative-content/",
+  "response_sha256": "539e5d6a272b7eb2c3039a2e71e2454cf091cc8fa1030500006062fa85ff14f7",
+  "used_by": [
+    "A-IU-213"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p02-alternative-content/#whattodo"
+}

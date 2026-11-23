@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-273",
+  "title": "Cognitive Accessibility Design Pattern: Make the Purpose of Your Page Clear",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p01-clear-purpose/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p01-clear-purpose/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p01-clear-purpose/",
+  "response_sha256": "c743ac6a29ba336e57eddce5771f0c9049c2bc0ac6526556b3d6a413922dd370",
+  "used_by": [
+    "A-IU-211"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p01-clear-purpose/#whattodo"
+}

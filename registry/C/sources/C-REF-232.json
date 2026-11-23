@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-232",
+  "title": "Range slider",
+  "url": "https://designsystem.digital.gov/components/range-slider/",
+  "canonical_url": "https://designsystem.digital.gov/components/range-slider/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/range-slider/",
+  "response_sha256": "90cddd86cab0da3a60235f06742e567edefbde286904bd735aec37a1b9e892e8",
+  "used_by": [
+    "C-UI-206"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/range-slider/#usability-guidance-range-slider"
+}

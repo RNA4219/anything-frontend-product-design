@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-260",
+  "title": "File uploader",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/file-uploader/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/file-uploader/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/file-uploader/guidelines",
+  "response_sha256": "ac5ee323394e4cd59b6a993f4796d26a39f57736f144984362a9126c5fe48d6d",
+  "used_by": [
+    "C-UI-211"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/file-uploader/guidelines#behaviors"
+}

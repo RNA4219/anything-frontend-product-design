@@ -1,0 +1,24 @@
+{
+  "source_id": "A-REF-214",
+  "title": "Effective view navigation",
+  "authors": [
+    "George W. Furnas"
+  ],
+  "year": 1997,
+  "venue": "Proceedings of the ACM SIGCHI Conference on Human factors in computing systems",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/258549.258800",
+  "url": "https://doi.org/10.1145/258549.258800",
+  "canonical_url": "https://doi.org/10.1145/258549.258800",
+  "primary_text_url": "https://chi1997.acm.org/proceedings/paper/gwf.html",
+  "section": "View Navigability",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "経路が存在することと、入口で次に進む方向が判断できることを別々に確認する。",
+  "limits": "形式モデルによる議論。実サービスの成功率は別途測る。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "A-IU-202"
+  ]
+}

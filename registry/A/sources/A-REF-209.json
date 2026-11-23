@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-209",
+  "title": "Breadcrumb",
+  "url": "https://designsystem.digital.gov/components/breadcrumb/",
+  "canonical_url": "https://designsystem.digital.gov/components/breadcrumb/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/breadcrumb/",
+  "response_sha256": "1f5ab45471bb789215c808c4090f1fdc3c59f3e49d7a628f8a5a2777e0b455b5",
+  "used_by": [
+    "A-IU-202"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/breadcrumb/#usability-guidance-breadcrumb"
+}

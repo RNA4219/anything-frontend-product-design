@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-246",
+  "title": "Cognitive Accessibility Design Pattern: Use a Clear and Understandable Page Structure",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p03-page-structure/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p03-page-structure/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p03-page-structure/",
+  "response_sha256": "2086606601c284224b7cdd0aa1124b5f39857e0b3bde7a3bff205583df235378",
+  "used_by": [
+    "A-IU-207"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p03-page-structure/#whattodo"
+}
