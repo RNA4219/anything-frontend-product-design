@@ -41,6 +41,10 @@
     "transfer": "部署名や制度名から探せないサービス",
     "limits": "同じ語が地域ごとに別制度を指すときは統合せず範囲を添える。"
   },
+  "product_observations": {
+    "dataset": "research/product-journeys/observations.json",
+    "examples": ["mug-hands-desktop", "mug-ikea-mobile"]
+  },
   "status": "DRAFT",
   "version": "0.1.0"
 }

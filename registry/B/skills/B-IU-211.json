@@ -64,6 +64,10 @@
     "transfer": "重要なお知らせが進行中の操作を中断する場合",
     "limits": "緊急性が低い更新は後から確認できる一覧に残す。"
   },
+  "product_observations": {
+    "dataset": "research/product-journeys/observations.json",
+    "examples": ["friday-louvre-mobile", "friday-louvre-desktop"]
+  },
   "status": "DRAFT",
   "version": "0.1.0"
 }

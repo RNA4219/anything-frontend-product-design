@@ -1,0 +1,21 @@
+{
+  "source_id": "D-REF-273",
+  "title": "Checkout Optimization: 5 Ways to Minimize Form Fields in Checkout",
+  "authors": [
+    "Edward Scott"
+  ],
+  "year": 2024,
+  "publisher": "Baymard Institute",
+  "url": "https://baymard.com/research-articles/checkout-flow-average-form-fields",
+  "canonical_url": "https://baymard.com/research-articles/checkout-flow-average-form-fields",
+  "source_type": "primary_product_research",
+  "evidence_kind": "調査実施者による公開記録",
+  "section": "The Average Checkout Length (In Steps) / Why Form Fields Matter More than Steps",
+  "design_application": "決済フローで画面数と入力欄数を別々に測る。2024年ベンチマークの平均は5.1ステップ、11.3欄。",
+  "limits": "調査対象はECの決済。平均値から他の用件の適正操作数は決められない。",
+  "read_status": "該当箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "D-IU-214"
+  ]
+}
