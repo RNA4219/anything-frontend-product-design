@@ -1,0 +1,23 @@
+{
+  "source_id": "B-T203",
+  "title": "Method: jobs.cancel",
+  "url": "https://docs.cloud.google.com/bigquery/docs/reference/rest/v2/jobs/cancel",
+  "kind": "official-primary",
+  "section": "Cancellation request semantics; Response body",
+  "read_status": "partial_web_text: retained source line numbers show the available ranges; omitted navigation/footer are not reconstructed; relevant sections read",
+  "observed_facts": [
+    "取消要求は即時に戻り、取消が成功したかを確認するにはジョブ状態をpollする必要がある。",
+    "取消済みジョブでも費用が発生し得る。jobId、projectId、場合によってlocationで対象を指定する。"
+  ],
+  "limits": [
+    "BigQueryのジョブ契約。全エクスポートAPIに同じ状態・poll方式を強制する根拠ではない。",
+    "本文はpoll必須とする一方、応答jobフィールドをfinal stateと記す。HTTP成功だけで取消確定と解釈しない。"
+  ],
+  "canonical_url": "https://docs.cloud.google.com/bigquery/docs/reference/rest/v2/jobs/cancel",
+  "capture_sha256": "f9f46f2c6fe3215c7db84e6d61635b114caf868bc81ef05226d1103b34aae25e",
+  "capture_hash_scope": "exact retrieved representation, not necessarily raw webpage",
+  "source_file_name": "B-T203-bigquery-jobs-cancel.web.md",
+  "checked_at": "2026-11-23T06:43:37.755327+00:00",
+  "round": 1,
+  "redistribution": "Original is retained privately, not committed; this record contains campaign paraphrases and public locators."
+}

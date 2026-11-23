@@ -1,0 +1,110 @@
+{
+  "review_id": "B-R01-independent-review-summary",
+  "created_at": "2026-11-23T07:05:29.976064+00:00",
+  "verdict": "ACCEPT",
+  "verdict_scope": "Limited round-1 evidence: reproduced trial-oracle corrections and the revised candidate race-copy fix. Not a claim of general UX effectiveness or comprehensive backend correctness.",
+  "reviewer_independence": "A separate task context using the same model family. This reduces shared task-state exposure but is not objective, human, or different-model validation.",
+  "inspection_sequence": [
+    "Reviewed module, registry, supplied private primary-source captures, frozen task and original trials before inspecting either generated implementation.",
+    "Ran registry checker and Python tests; constructed independent negative controls for the trial oracle.",
+    "Retained original findings and tested separately versioned trial corrections through v4.",
+    "Then inspected both generated arms and exercised their original UI event handlers in a DOM runtime.",
+    "Preserved the original candidate finding and verified a separately saved revision with one focused DOM rerun."
+  ],
+  "source_rule_agreement": {
+    "sources_checked": 11,
+    "capture_hash_matches": 11,
+    "finding": "Core distinctions for acceptance, outcome uncertainty, conditional idempotent retry, and best-effort cancellation agree with the reviewed primary captures. Product/version limits and design inference are explicit.",
+    "art_direction_overlap": "Related cache, input-retention and interaction concerns exist, but no demonstrated harmful duplication was found in the inspected skill and relevant reference entries.",
+    "counterexamples": "Synchronous final results, ordinary local undo, idempotent HTTP methods and task-specific state selection prevent an unconditional expansion of workflow complexity.",
+    "limits": "This validates conditional synthesis against captured material; it does not measure Japanese-language comprehension, production atomicity or user benefit."
+  },
+  "initial_checks": {
+    "registry": "4 units, 11 sources, 0 errors at initial review; DRAFT 3, HOLD 1.",
+    "python_unit_tests": "8 passed."
+  },
+  "trial_oracle_findings": [
+    {
+      "id": "B-R01-C01",
+      "issue": "Safe same-intent replay was rejected by a transport-call-count assumption.",
+      "final_status": "Resolved for reproduced manual and bounded automatic replay cases in v4; both independent probes pass 14/14."
+    },
+    {
+      "id": "B-R01-C02",
+      "issue": "Wrong booking and cancellation identifiers were not detected.",
+      "final_status": "Resolved for reproduced wrong-ID cases; v4 rejects the negative control in T01 and T06."
+    },
+    {
+      "id": "B-R01-C03",
+      "issue": "Sequential cancellation trials did not expose late acknowledgement/error overwriting a verified result.",
+      "final_status": "Resolved for the two reproduced races; the faulty independent controller fails T13/T14."
+    },
+    {
+      "id": "B-R01-C05",
+      "issue": "An intermediate revision imposed concurrent lookup during cancellation even when the implementation disables it.",
+      "final_status": "Resolved for the serialized implementation in v4; independent probe passes 14/14."
+    },
+    {
+      "id": "B-R01-C04",
+      "issue": "Controller checks do not establish truthful rendered copy.",
+      "final_status": "Scope is explicit in v4, and separate DOM inspection was completed. The deliberately false-copy negative control still passes the controller suite, as expected."
+    }
+  ],
+  "dom_observations": {
+    "runtime": "jsdom 26.1.0",
+    "original_cases": 10,
+    "cases_per_arm": 5,
+    "scenarios": [
+      "normal",
+      "response loss",
+      "known rejection",
+      "confirmed cancellation",
+      "completion despite cancellation request"
+    ],
+    "runtime_errors": 0,
+    "source_hash_stability": "All final original-arm runs and the focused revised run had matching before/after source hashes.",
+    "browser_scope": "Actual input change and button click handlers were exercised. ES module imports were injected into the original module bodies because the DOM runtime does not natively execute module scripts."
+  },
+  "generated_implementation_findings": [
+    {
+      "id": "B-R01-EXP-001",
+      "arm": "baseline-original",
+      "severity": "medium",
+      "finding": "During an unconfirmed outcome, the previous booking date remains presented as an unqualified confirmed reservation even after the local service reports the requested change succeeded.",
+      "impact": "The previous confirmed value can be mistaken for the currently valid reservation.",
+      "recommendation": "Label it as the last-confirmed value and distinguish retained display data from current service state.",
+      "status": "Retained in the original comparison artifact; no retroactive score change."
+    },
+    {
+      "id": "B-R01-EXP-002",
+      "arm": "candidate-original",
+      "severity": "medium",
+      "finding": "The completion message inferred that completion preceded cancellation-request submission, although the request began while the operation was still pending.",
+      "impact": "A correct final outcome was combined with an unsupported chronology.",
+      "recommendation": "Describe confirmed success and unconfirmed cancellation without asserting request/completion ordering.",
+      "status": "Resolved in separately saved candidate-revised by a focused actual-event DOM rerun. Original finding and evidence retained."
+    }
+  ],
+  "revision_validation": {
+    "artifact": "campaigns/B/rounds/01/artifacts/candidate-revised",
+    "flow_sha256": "7bf06885b487a3229c76c99f5a04aa3ad1f5091392a38984601f1834b688e14a",
+    "focused_dom_case": "cancellation race",
+    "observed_phase": "succeeded",
+    "observed_date": "2026-12-10T14:00",
+    "unsupported_chronology_removed": true,
+    "errors": 0,
+    "parent_reported_behavioral_result": "v4 14/14; not independently re-scored by critic after the copy-only revision."
+  },
+  "experiment_disclosure": [
+    "Parent reported observing baseline v3 14/14 before creating v4. Candidate was not yet scored at that moment. v4 therefore cannot be described as fully blinded to both arm outcomes.",
+    "Oracle corrections were motivated by independent probes and contract mismatches, with versions preserved.",
+    "Implementation copy observations are separately labelled exploratory findings; they were not added as retroactive frozen-suite scoring requirements.",
+    "The reviewed campaign uses one run per arm, so neither overall effectiveness nor statistical significance is established."
+  ],
+  "remaining_limits": [
+    "No production backend, live service mutation, real-browser screenshot/layout, accessibility-tree validation or human study.",
+    "No exhaustive race-space, persistence, expiry, multi-tab or authorization validation.",
+    "The final acceptance here is bounded to recorded conditions; a controller pass does not prove complete task usability.",
+    "No original primary-source passages are reproduced in this summary."
+  ]
+}

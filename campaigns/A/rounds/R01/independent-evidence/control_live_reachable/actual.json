@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "issues": [],
+  "checks_available": {
+    "contract_version": "1.1",
+    "context_and_retirement": true,
+    "human_usability": false
+  },
+  "counts": {
+    "goals": 1,
+    "features": 1,
+    "kept_features": 1,
+    "screens": 1,
+    "navigation_edges": 0
+  }
+}

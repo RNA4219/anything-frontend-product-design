@@ -1,0 +1,143 @@
+{
+  "source_id": "B-T303",
+  "canonical_url": "https://docs.cloud.google.com/storage/docs/soft-delete",
+  "title": "Soft delete overview  |  Cloud Storage  |  Google Cloud Documentation",
+  "type": "official product documentation",
+  "authority": "Google Cloud Storage",
+  "capture_kind": "FULL",
+  "sha256": "039e84432a7a7b5ed90ee3e867ec81c9e89e01827e1cf9ee779a733f5c1a7c55",
+  "locator": [
+    {
+      "section": "Retention / Properties / Object restores",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T303-google-soft-delete.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            198,
+            243
+          ],
+          "local_lines": [
+            199,
+            244
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn174995417view2"
+    },
+    {
+      "section": "Pricing / Interactions",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T303-google-soft-delete.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            268,
+            274
+          ],
+          "local_lines": [
+            269,
+            275
+          ],
+          "complete_requested_range": true
+        },
+        {
+          "web_lines": [
+            311,
+            315
+          ],
+          "local_lines": [
+            312,
+            316
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn289466326view1"
+    }
+  ],
+  "observed_facts": [
+    "復元可能性は削除時の保持設定に依存し、後から期間を変更しても既存の削除済み資源の保持期間は変わらない。保持期限後の永久削除には別途記載の一時停止機能という例外がある。",
+    "オブジェクト復元は新しいliveコピーと世代を生成する。同名live版の扱い、Standardクラスへの復元など製品固有の結果がある。",
+    "CLI/JSON APIでバケットを復元する経路は空のバケットのみを復元し、内容には別の復元が必要。",
+    "managed folderのIAMポリシーはsoft deleteで復元できない。復元はOBJECT_FINALIZEイベントを発火する。",
+    "soft-deletedオブジェクトには保持中の保存料金が発生する。今回の対象構成の料金額は測定していない。"
+  ],
+  "limitations": [
+    "2026-11-17版Cloud Storageの保証に限定。一般のarchive、Undo、他サービスへ期限・世代・料金を転用しない。",
+    "同名上書きの許否は利用する単体/一括APIとオプションを追加確認する必要がある。",
+    "保持期間の具体日数をUXの共通定数にしない。"
+  ],
+  "upstream_refs": [
+    {
+      "title": "Restore soft-deleted objects",
+      "source_id": "B-T304",
+      "url": "https://docs.cloud.google.com/storage/docs/use-soft-deleted-objects",
+      "observed_at": "web L232/L321 link 16",
+      "followed": false,
+      "note": "同URLは独立検索で取得済み。新たな実リンク追跡としては数えない。"
+    }
+  ],
+  "capture_file": "B-T303-google-soft-delete.web.txt",
+  "capture_storage": "Private research archive",
+  "checked_at": "2026-11-23T07:15:18.366101+00:00",
+  "introduced_round": 2,
+  "redistribution": "Original captured text remains private. This public record contains original paraphrases, URLs and section locators only.",
+  "url": "https://docs.cloud.google.com/storage/docs/soft-delete",
+  "section": [
+    {
+      "section": "Retention / Properties / Object restores",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T303-google-soft-delete.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            198,
+            243
+          ],
+          "local_lines": [
+            199,
+            244
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn174995417view2"
+    },
+    {
+      "section": "Pricing / Interactions",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T303-google-soft-delete.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            268,
+            274
+          ],
+          "local_lines": [
+            269,
+            275
+          ],
+          "complete_requested_range": true
+        },
+        {
+          "web_lines": [
+            311,
+            315
+          ],
+          "local_lines": [
+            312,
+            316
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn289466326view1"
+    }
+  ],
+  "read_status": "FULL: exact web-extracted text saved privately; not raw HTML",
+  "capture_sha256": "039e84432a7a7b5ed90ee3e867ec81c9e89e01827e1cf9ee779a733f5c1a7c55",
+  "source_file_name": "B-T303-google-soft-delete.web.txt",
+  "limits": [
+    "2026-11-17版Cloud Storageの保証に限定。一般のarchive、Undo、他サービスへ期限・世代・料金を転用しない。",
+    "同名上書きの許否は利用する単体/一括APIとオプションを追加確認する必要がある。",
+    "保持期間の具体日数をUXの共通定数にしない。"
+  ]
+}

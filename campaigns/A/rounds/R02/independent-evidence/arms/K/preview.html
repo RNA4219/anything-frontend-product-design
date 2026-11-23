@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>研修カタログの情報見取り図</title>
+</head>
+<body>
+<header>
+  <h1>研修カタログの情報見取り図</h1>
+  <p><strong>標準HTMLの静的例です。</strong> 支給された3件で、比較する情報と行先を示します。リンクはこの文書内の見本へ移動します。検索・条件解除・申込・学習再開・旧URL転送は実行しません。</p>
+  <p>役割：受講者（learner）。利用条件：learner-account。既存の視覚意図 learning-editorial-existing を引き継ぐ設計資料であり、新規意匠の採用結果ではありません。</p>
+  <nav aria-label="主要な行先の見本">
+    <h2>主要な行先</h2>
+    <ul>
+      <li><a href="#catalogue">研修を探す（全公開研修）</a></li>
+      <li><a href="#enrolled">登録済み研修</a></li>
+    </ul>
+  </nav>
+  <nav aria-label="設計レビュー用の目次">
+    <h2>見取り図の目次（製品メニューではありません）</h2>
+    <ul>
+      <li><a href="#enrolled-zero">現在の検索0件と復帰先</a></li>
+      <li><a href="#catalogue">全公開研修の比較一覧</a></li>
+      <li><a href="#enrolled">登録済み研修の一覧</a></li>
+      <li><a href="#legacy-entry">旧ブックマークの対応</a></li>
+      <li><a href="#verification">確認の範囲</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section id="enrolled-zero" data-screen-id="s_enrolled_zero">
+    <h2>登録済み研修：現在の検索結果</h2>
+    <p>開始状態として支給された検索結果の静的例です。</p>
+    <dl>
+      <dt>検索範囲</dt><dd>登録済み研修（my-enrollments）</dd>
+      <dt>検索語</dt><dd>配属変更</dd>
+      <dt>形式条件</dt><dd>オンライン（format=online）</dd>
+      <dt>結果</dt><dd>0件</dd>
+      <dt>索引の対象範囲・更新時点</dt><dd>未確認（index_coverage=unknown）</dd>
+    </dl>
+    <p><strong>現在の検索結果は0件です。</strong> この検索範囲・条件の結果だけでは、全公開研修に該当研修がないとは判断できません。</p>
+    <ul>
+      <li><a href="#catalogue">全公開研修を条件なしで見る</a> — 全公開研修へ範囲を広げ、検索語と形式条件のない比較一覧へ。</li>
+      <li><a href="#enrolled">登録済み研修の検索条件を解除して見る</a> — 登録済みの範囲を保ち、検索語と形式条件のない一覧へ。</li>
+    </ul>
+    <p>上のリンクは、提案する復帰先の静的例へ移動します。</p>
+  </section>
+
+  <hr>
+  <section id="catalogue" data-screen-id="s_catalogue">
+    <h2>研修を探す（全公開研修）</h2>
+    <p>検索範囲：全公開研修（all-published-courses）。検索語：なし。形式などの絞込：なし。</p>
+    <p>支給データの全3件を表示した静的例です。研修ID・対象条件・開催日・形式・登録状態を同じ行で比較できます。</p>
+    <table>
+      <caption>全公開研修の比較一覧（支給された全3件）</caption>
+      <thead><tr><th scope="col">研修ID</th><th scope="col">研修名</th><th scope="col">対象条件</th><th scope="col">開催日</th><th scope="col">形式</th><th scope="col">登録状態</th><th scope="col">対象別の行先</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">C-101</th><td>基礎研修</td><td>入社時研修</td><td><time datetime="2026-12-01">2026-12-01</time></td><td>対面</td><td>登録済み</td><td><a href="#course-C-101" data-canonical-url="/courses/C-101">C-101 基礎研修（入社時研修）の詳細</a></td></tr>
+        <tr><th scope="row">C-202</th><td>基礎研修</td><td>配属変更時研修</td><td><time datetime="2026-12-12">2026-12-12</time></td><td>オンライン</td><td>未登録</td><td><a href="#course-C-202" data-canonical-url="/courses/C-202">C-202 基礎研修（配属変更時研修）の詳細</a></td></tr>
+        <tr><th scope="row">C-303</th><td>記録管理</td><td>全受講者</td><td><time datetime="2026-12-20">2026-12-20</time></td><td>オンライン</td><td>未登録</td><td><a href="#course-C-303" data-canonical-url="/courses/C-303">C-303 記録管理（全受講者）の詳細</a></td></tr>
+      </tbody>
+    </table>
+    <p>「基礎研修」という同名の研修でも、C-101とC-202は別の対象です。詳細に進む前に、上の表で両方の条件を比較できます。</p>
+    <details>
+      <summary>補足：分類タグと同じ研修への入口</summary>
+      <ul>
+        <li>安全：<a href="#course-C-101">C-101 基礎研修（入社時研修）</a>、<a href="#course-C-202">C-202 基礎研修（配属変更時研修）</a></li>
+        <li>入社時：<a href="#course-C-101">C-101 基礎研修（入社時研修）</a></li>
+        <li>配属変更：<a href="#course-C-202">C-202 基礎研修（配属変更時研修）</a></li>
+        <li>運用：<a href="#course-C-303">C-303 記録管理（全受講者）</a></li>
+      </ul>
+      <p>分類は同一IDへの参照です。カテゴリ別の独立コピーは作りません。</p>
+    </details>
+    <p><a href="#enrolled">登録済み研修</a></p>
+  </section>
+
+  <hr>
+  <section id="enrolled" data-screen-id="s_enrolled">
+    <h2>登録済み研修</h2>
+    <p>検索範囲：自分の登録済み研修（my-enrollments）。検索語：なし。形式指定：なし。</p>
+    <p>条件解除後の情報配置を、支給データで示した静的例です。登録済みはC-101の1件です。</p>
+    <table>
+      <caption>再開する登録済み研修を選ぶ</caption>
+      <thead><tr><th scope="col">研修ID</th><th scope="col">研修名</th><th scope="col">対象条件</th><th scope="col">開催日</th><th scope="col">形式</th><th scope="col">登録状態</th><th scope="col">学習再開の行先</th><th scope="col">条件確認の行先</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">C-101</th><td>基礎研修</td><td>入社時研修</td><td><time datetime="2026-12-01">2026-12-01</time></td><td>対面</td><td>登録済み</td><td><a href="#learning-C-101">C-101 基礎研修の学習を再開</a></td><td><a href="#course-C-101" data-canonical-url="/courses/C-101">C-101 基礎研修（入社時研修）の詳細</a></td></tr>
+      </tbody>
+    </table>
+    <p>再開リンクの先は、同じC-101の引継ぎ情報を示す見本です。学習処理は実行されません。</p>
+    <p><a href="#catalogue">研修を探す（全公開研修）</a></p>
+  </section>
+
+  <hr>
+  <article id="course-C-101" data-screen-id="s_course_101" data-course-id="C-101" data-canonical-url="/courses/C-101">
+    <h2>C-101 基礎研修（入社時研修）</h2>
+    <dl>
+      <dt>研修ID</dt><dd>C-101</dd>
+      <dt>研修名</dt><dd>基礎研修</dd>
+      <dt>対象条件</dt><dd>入社時研修</dd>
+      <dt>開催日</dt><dd><time datetime="2026-12-01">2026-12-01</time></dd>
+      <dt>形式</dt><dd>対面</dd>
+      <dt>登録状態</dt><dd>登録済み</dd>
+    </dl>
+    <details><summary>補足：C-101の分類タグ</summary><p>安全、入社時</p></details>
+    <p>正本URLの対応：<code>/courses/C-101</code>。旧ブックマーク <code>/training/basic</code> が指す対象もC-101です。</p>
+    <p><a href="#catalogue">研修を探す（全公開研修）</a> ／ <a href="#enrolled">登録済み研修</a></p>
+  </article>
+
+  <article id="course-C-202" data-screen-id="s_course_202" data-course-id="C-202" data-canonical-url="/courses/C-202">
+    <h2>C-202 基礎研修（配属変更時研修）</h2>
+    <dl>
+      <dt>研修ID</dt><dd>C-202</dd>
+      <dt>研修名</dt><dd>基礎研修</dd>
+      <dt>対象条件</dt><dd>配属変更時研修</dd>
+      <dt>開催日</dt><dd><time datetime="2026-12-12">2026-12-12</time></dd>
+      <dt>形式</dt><dd>オンライン</dd>
+      <dt>登録状態</dt><dd>未登録</dd>
+    </dl>
+    <details><summary>補足：C-202の分類タグ</summary><p>安全、配属変更</p></details>
+    <p>正本URLの対応：<code>/courses/C-202</code>。上の比較一覧で選ぶC-202と同じ対象です。</p>
+    <p>追加の受講資格・締切・定員は未提供です。この見本は申込を実行せず、登録状態も変更しません。</p>
+    <p><a href="#catalogue">研修を探す（全公開研修）</a> ／ <a href="#enrolled">登録済み研修</a></p>
+  </article>
+
+  <article id="course-C-303" data-screen-id="s_course_303" data-course-id="C-303" data-canonical-url="/courses/C-303">
+    <h2>C-303 記録管理（全受講者）</h2>
+    <dl>
+      <dt>研修ID</dt><dd>C-303</dd>
+      <dt>研修名</dt><dd>記録管理</dd>
+      <dt>対象条件</dt><dd>全受講者</dd>
+      <dt>開催日</dt><dd><time datetime="2026-12-20">2026-12-20</time></dd>
+      <dt>形式</dt><dd>オンライン</dd>
+      <dt>登録状態</dt><dd>未登録</dd>
+    </dl>
+    <details><summary>補足：C-303の分類タグ</summary><p>運用</p></details>
+    <p>正本URLの対応：<code>/courses/C-303</code>。</p>
+    <p><a href="#catalogue">研修を探す（全公開研修）</a> ／ <a href="#enrolled">登録済み研修</a></p>
+  </article>
+
+  <hr>
+  <section id="learning-C-101" data-screen-id="s_learning_101" data-course-id="C-101">
+    <h2>C-101 基礎研修：学習再開先の情報配置</h2>
+    <dl>
+      <dt>再開対象の研修ID</dt><dd>C-101</dd>
+      <dt>研修名</dt><dd>基礎研修</dd>
+      <dt>登録状態</dt><dd>登録済み</dd>
+      <dt>既存学習機能の実URL・再開位置</dt><dd>未提供。後続の設計・実装で確認します。</dd>
+    </dl>
+    <p><strong>学習再開先へ渡す情報の見本です。</strong> 学習は開始していません。再開完了や進捗復元を表すものではありません。</p>
+    <p><a href="#catalogue">研修を探す（全公開研修）</a> ／ <a href="#enrolled">登録済み研修</a></p>
+  </section>
+
+  <hr>
+  <section id="legacy-entry">
+    <h2>設計注記：旧ブックマークの対応</h2>
+    <table>
+      <caption>旧入口の意味と保持する行先</caption>
+      <thead><tr><th scope="col">旧入口</th><th scope="col">元の意味</th><th scope="col">保持する対象</th><th scope="col">正本URL</th><th scope="col">静的な行先見本</th></tr></thead>
+      <tbody><tr><th scope="row"><code>/training/basic</code></th><td>入社時研修の旧ブックマーク</td><td>C-101（must_preserve=true）</td><td><code>/courses/C-101</code></td><td><a href="#course-C-101">C-101 基礎研修（入社時研修）の詳細見本</a></td></tr></tbody>
+    </table>
+    <p>期待する対応を示しています。実リダイレクトは未実施です。同名のC-202へ向けず、C-101の独立コピーも作りません。</p>
+  </section>
+
+  <section id="verification">
+    <h2>設計注記：確認の範囲</h2>
+    <p>入力・plan・HTMLソースの机上照合を実施。ID、比較属性、検索0件の条件、文書内の対象リンクと行先、旧入口の対応を照合しました。</p>
+    <p>共有checker、unittest、ブラウザー描画、実操作、検索/API、認可、旧URL転送、学習再開、申込、利用者評価、独立評価は未実施です。機械検査のPASS、表示確認済み、タスクの実行完了を意味しません。</p>
+    <p>申込完了は申し込み処理の結果であり、独立メニューは設けません。既存意匠の視覚資産は未提供です。</p>
+  </section>
+</main>
+</body>
+</html>

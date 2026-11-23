@@ -1,0 +1,73 @@
+{
+  "round": 2,
+  "frozen_at": "2026-11-23T07:13:33.105859+00:00",
+  "before_candidate": true,
+  "cases": [
+    {
+      "id": "F01",
+      "expected": "Review and change links do not submit an application"
+    },
+    {
+      "id": "F02",
+      "expected": "One server-rejected field preserves every unrelated value and identifies a remedy"
+    },
+    {
+      "id": "F03",
+      "expected": "Changing effective reviewed content requires reviewing the new content"
+    },
+    {
+      "id": "F04",
+      "expected": "An inactive dependent answer is not silently included in the submitted payload"
+    },
+    {
+      "id": "F05",
+      "expected": "Service/global failure is not assigned to an arbitrary field"
+    },
+    {
+      "id": "F06",
+      "expected": "Unknown submission retains its ID and input and does not create a fresh duplicate"
+    },
+    {
+      "id": "F07",
+      "expected": "Repeated confirmation while pending starts only one operation"
+    },
+    {
+      "id": "U01",
+      "expected": "A local reversible archive restores the intended item without a universal confirmation screen"
+    },
+    {
+      "id": "U02",
+      "expected": "At the Undo deadline no restore call is made or success claimed"
+    },
+    {
+      "id": "U03",
+      "expected": "A conflicting revision preserves newer state and does not overwrite it"
+    },
+    {
+      "id": "U04",
+      "expected": "Accepted compensation remains pending rather than restored"
+    },
+    {
+      "id": "U05",
+      "expected": "Failed compensation preserves original-effect truth and a supplied next step/reference"
+    },
+    {
+      "id": "U06",
+      "expected": "Successful compensation describes only its declared scope and residual effects"
+    },
+    {
+      "id": "U07",
+      "expected": "Lost compensation reply remains unknown and recoverable by the same operation"
+    },
+    {
+      "id": "U08",
+      "expected": "Repeated Undo while pending does not create another compensation"
+    },
+    {
+      "id": "U09",
+      "expected": "Offer expiry does not prevent checking an already-started compensation"
+    }
+  ],
+  "comparison": "Original executable implementation plus deliberate negative controls; not an LLM baseline/candidate efficacy experiment",
+  "exploratory_findings": "Recorded separately; changes to criteria need an explicit erratum"
+}

@@ -1,0 +1,332 @@
+{
+  "schema_version": "B-R03-independent-review-v1",
+  "round": 3,
+  "created_at": "2026-11-23T08:13:26.359950+00:00",
+  "verdict": "REVISE",
+  "revision_reviewed": "initial candidate immutable snapshots",
+  "scope": "B-IU-007/008の出典境界、指示本文、限定fixture、実HTMLイベント。",
+  "score": {
+    "predeclared_passed": 13,
+    "predeclared_total": 13,
+    "no_composite_efficacy_score": true
+  },
+  "independence": {
+    "context": "same model, separate reviewer context",
+    "different_model": false,
+    "human_assessment": false,
+    "parent_self_score_used_as_evidence": false,
+    "child_agents_spawned": false,
+    "public_candidate_edited": false,
+    "installation_or_publication": false
+  },
+  "unit_decisions": [
+    {
+      "skill_id": "B-IU-007",
+      "decision": "REVISE",
+      "source_claim_decision": "ACCEPT",
+      "scope": "出典移植は限定範囲で支持。例示実装はF1/F2/F3修正まで採用保留。"
+    },
+    {
+      "skill_id": "B-IU-008",
+      "decision": "REVISE",
+      "source_claim_decision": "ACCEPT",
+      "scope": "出典移植は限定範囲で支持。例示実装はF1/F2/F3修正まで採用保留。"
+    }
+  ],
+  "predeclared_suite": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0,
+    "frozen_hash_matches": true,
+    "test_sha256": "f2f52bfe67da04a680299ed771581b25b6e0004325cfea6128f7b34c5e68289f",
+    "result_file": "frozen-suite.json",
+    "result_sha256": "532f986ebb9d4e59bf78de612d948d3d4a5f3268cd3355a5ffdb9239f7ff858b",
+    "criterion_changed": false
+  },
+  "dom_event_validation": {
+    "runtime": {
+      "node": "v24.22.3",
+      "jsdom": "26.1.0"
+    },
+    "method": "Actual candidate HTML click/change listeners executed in jsdom. Only the single ESM import was replaced with the exact imported candidate factory. No real browser, visual, AT, or human evidence.",
+    "module_sha256": "342471207d315e3d307232d1be7b0b796cf8d139dcdf22140d60f5a68103719b",
+    "html_sha256": "fb10fccac3ab6e788e17e212e82b5306cbc970884a90998cc3cb4ddb120db2a7",
+    "representative_total": 8,
+    "representative_passed": 8,
+    "exploratory_total": 2,
+    "exploratory_passed": 0,
+    "result_file": "dom-events.json",
+    "result_sha256": "1f2aa35c19a3ec71d2516f8c1b317f01d68755882920bd8b35cc8b63344d6f94",
+    "not_a_browser_test": true
+  },
+  "additional_probes": {
+    "total": 6,
+    "passed": 5,
+    "failures": [
+      "X03-TERMINAL-SUCCESS-VS-INFLIGHT-STALE-PENDING"
+    ],
+    "result_file": "edge-probes.json",
+    "result_sha256": "a1dd34102e62f31293daefef71d41453b1a14a50eeaaa6493ce2689dee817fba",
+    "not_added_to_fixed_criteria": true
+  },
+  "negative_controls": {
+    "total": 4,
+    "detected": 4,
+    "candidate": "initial immutable snapshot",
+    "details": "independent-checks.json:negative_controls",
+    "interpretation": "Purpose-built defect detection, not generated-baseline efficacy comparison"
+  },
+  "source_integrity": {
+    "total": 11,
+    "matched_canonical_sha256": 11,
+    "details": "independent-checks.json:source_integrity",
+    "not_raw_webpage_completeness_proof": true
+  },
+  "source_reviews": [
+    {
+      "id": "S01",
+      "topic": "AAA and informative scope",
+      "result": "SUPPORTED_WITH_STATED_LIMITS",
+      "sources": [
+        "B-S201:2.2.5/L837-L844",
+        "B-T401:L2,L20,L32-L59"
+      ],
+      "assessment": "AAA、AA非一般化、非規範Understanding、保存方式非限定を保持。"
+    },
+    {
+      "id": "S02",
+      "topic": "Storage identity and authority",
+      "result": "SUPPORTED_WITH_STATED_LIMITS",
+      "sources": [
+        "B-T402:L391,L439,L534-L537,L571-L574"
+      ],
+      "assessment": "origin/window保存範囲と削除。account照合は設計推論であり保存/認可の実装保証ではない。"
+    },
+    {
+      "id": "S03",
+      "topic": "Authentication vs authorization",
+      "result": "SUPPORTED_WITH_STATED_LIMITS",
+      "sources": [
+        "B-T403:L484-L485,L512,L520,L523"
+      ],
+      "assessment": "認証済みとwrite能力を分け、server側責務をfrontend保証へ拡大しない。"
+    },
+    {
+      "id": "S04",
+      "topic": "Opaque strong If-Match and scope",
+      "result": "SUPPORTED_WITH_STATED_LIMITS",
+      "sources": [
+        "B-S101:8.8.3-8.8.3.2,13.1.1,13.2.1"
+      ],
+      "assessment": "opaque/強比較/*/実行直前/既適用2xx/targetのみの範囲を保持。HTTP adapterは未検証。"
+    },
+    {
+      "id": "S05",
+      "topic": "AIP vs HTTP",
+      "result": "SUPPORTED_WITH_STATED_LIMITS",
+      "sources": [
+        "B-S301:original Markdown40-57,92-106,112-121"
+      ],
+      "assessment": "AIPのABORTED、他エラー優先、省略、weak許容をHTTP強比較と混ぜない。"
+    },
+    {
+      "id": "S06",
+      "topic": "Calendar sample authority",
+      "result": "SUPPORTED_WITH_STATED_LIMITS",
+      "sources": [
+        "B-S302:L65-L68,L93-L108,L121"
+      ],
+      "assessment": "412後再設定sampleは再承認規範ではない。calendarList例外を全resourceへ拡大しない。"
+    },
+    {
+      "id": "S07",
+      "topic": "Stale reads vs operation fact",
+      "result": "SUPPORTED_WITH_STATED_LIMITS",
+      "sources": [
+        "B-S303:L73-L75,L380-L424"
+      ],
+      "assessment": "React read例を結果無効化/取消/永続化保証としない。viewと元operation結果の分離はtask推論。"
+    },
+    {
+      "id": "S08",
+      "topic": "Existing operation outcome contracts",
+      "result": "SUPPORTED_WITH_STATED_LIMITS",
+      "sources": [
+        "B-S104:proto77-116,133-155",
+        "B-T201:L12,L28-L35,L48-L52,L63-L69"
+      ],
+      "assessment": "結果削除/取消/終了/成功を区別。製品固有の保持窓と再送を一般化しない。"
+    },
+    {
+      "id": "S09",
+      "topic": "Review flow prior work",
+      "result": "SUPPORTED_WITH_STATED_LIMITS",
+      "sources": [
+        "B-S205:L390-L396,L410-L430"
+      ],
+      "assessment": "確認画面の案内をreview/validator結合の直接規範とせず推論に分ける。"
+    },
+    {
+      "id": "S10",
+      "topic": "Art Direction existing concepts",
+      "result": "SUPPORTED_WITH_STATED_LIMITS",
+      "sources": [
+        "art-direction/references/g-state-forms.md:G-06",
+        "art-direction/references/d-interaction.md:D-38,D-41"
+      ],
+      "assessment": "実ファイルに古い応答/復帰再検証競合の既存観点がある。新原則と数えていない。"
+    }
+  ],
+  "pr2_overlap": {
+    "saved_overlap_record_reviewed": true,
+    "full_pr_independently_retrieved": false,
+    "local_git_attempt": "Referenced head object not available locally. No attempt to bypass access controls.",
+    "claim_limit": "候補はdraft/reopen/If-Match/conflictを新原則と数えない。PR全差分の独立確認は未完了。"
+  },
+  "registry_checker": {
+    "returncode": 0,
+    "report": {
+      "units": 8,
+      "sources": 27,
+      "statuses": {
+        "ACCEPT": 6,
+        "DRAFT": 2
+      },
+      "errors": [],
+      "limits": "Checks registry structure and referenced files, not whether prose or empirical claims are true."
+    },
+    "stderr": "",
+    "scope": "Structure/reference integrity only, not factual truth or usability."
+  },
+  "findings": [
+    {
+      "id": "B-R03-F1",
+      "classification": "exploratory_implementation_defect",
+      "severity": "medium",
+      "blocks_acceptance": true,
+      "status": "open",
+      "location": [
+        "examples/resume-and-conflict.mjs:9,27-30,58-61,90",
+        "examples/resume-and-conflict.html:27"
+      ],
+      "symptom": "確認済み成功がsnapshot再開とlookup record失効によりunknownへ戻る。",
+      "reproduction": [
+        "resume",
+        "review",
+        "commit success",
+        "record-expires=true",
+        "reopen"
+      ],
+      "observed": {
+        "phase": "unknown",
+        "operationOutcome": null,
+        "operationResult": null,
+        "effects": 1
+      },
+      "expected": "現在operationと正しく相関した確定成功を許可された保持契約の下で復帰し、照会record欠落だけで失わない。",
+      "basis": [
+        "B-IU-007:007-D06",
+        "B-IU-007:required_inputs[4]"
+      ],
+      "remedy": "owner/target/operationに相関したterminal evidenceをsnapshotへ保持・適切に復帰する。保存値を認証・認可の権威へ変換しない。",
+      "evidence": [
+        "dom-events.json:exploratory.results[E01-CONFIRMED-SUCCESS-REOPEN-EXPIRED]"
+      ]
+    },
+    {
+      "id": "B-R03-F2",
+      "classification": "exploratory_async_ordering_defect",
+      "severity": "medium",
+      "blocks_acceptance": true,
+      "status": "open",
+      "location": [
+        "examples/resume-and-conflict.mjs:27-34,52-53,60,78"
+      ],
+      "symptom": "保持済みの正しく相関したterminal成功より、後着の古いpending応答が優先される。",
+      "reproduction": [
+        "defer commit response",
+        "resume starts deferred lookup for same operation",
+        "release succeeded update response",
+        "release older pending lookup response"
+      ],
+      "observed": {
+        "phase": "pending",
+        "operationOutcome": null,
+        "operationResult": null
+      },
+      "expected": "確定済みの元operation結果は維持し、current viewへの適用条件も別に守る。",
+      "basis": [
+        "B-IU-007:007-D07",
+        "B-IU-008:008-D07",
+        "references/resume-and-conflict.md:74-86"
+      ],
+      "remedy": "acceptで同じoperationに保持したterminal結果をnonterminal応答より優先する。epoch guardを削らずaccount isolationを維持する。",
+      "evidence": [
+        "edge-probes.json:results[X03-TERMINAL-SUCCESS-VS-INFLIGHT-STALE-PENDING]"
+      ]
+    },
+    {
+      "id": "B-R03-F3",
+      "classification": "exploratory_semantic_wording_defect",
+      "severity": "low",
+      "blocks_acceptance": true,
+      "status": "open",
+      "location": [
+        "examples/resume-and-conflict.html:7,22-24"
+      ],
+      "symptom": "成功確認済みでも、表示中の保持入力を無条件に未送信と説明する。",
+      "reproduction": [
+        "resume",
+        "review",
+        "commit success",
+        "inspect visible work section copy"
+      ],
+      "observed": {
+        "phase": "completed",
+        "operationOutcome": "succeeded",
+        "unconditional_unsent_copy_present": true,
+        "effects": 1
+      },
+      "expected": "入力の未送信、送信済みで結果未確認、成功確認済みの意味を表示で分ける。",
+      "basis": [
+        "task.md:acceptance1,2",
+        "B-IU-007:draft/operation distinction",
+        "SKILL.md:truthful status"
+      ],
+      "remedy": "state別の説明で送信した入力の控えと未送信draftを区別する。",
+      "evidence": [
+        "dom-events.json:exploratory.results[E02-SENT-INPUT-NOT-LABELLED-UNSENT]"
+      ]
+    }
+  ],
+  "initial_candidate_artifacts": {
+    "modules/interaction-ux-flow/examples/resume-and-conflict.mjs": "342471207d315e3d307232d1be7b0b796cf8d139dcdf22140d60f5a68103719b",
+    "modules/interaction-ux-flow/examples/resume-and-conflict.html": "fb10fccac3ab6e788e17e212e82b5306cbc970884a90998cc3cb4ddb120db2a7",
+    "modules/interaction-ux-flow/references/resume-and-conflict.md": "b025e9bdaaa365cd5daabe1a96cc36ccf38787af905a9e7a7f04316613dc4491",
+    "registry/B/skills/B-IU-007.json": "315997657470ecca1d691168632476da3e63cb05f619222138a49801cd846700",
+    "registry/B/skills/B-IU-008.json": "7cfd3bfa832dc6df341bdb31e799b2f0ff11f56be92ad8f230eb3d81b1c5c3ae"
+  },
+  "not_tested": [
+    "実ブラウザ、レイアウト、視覚表示",
+    "実キーボード、支援技術、読み上げ、WCAG全体適合",
+    "利用者の理解、誤操作率、認知負荷、時間改善",
+    "本番identity provider、server認可、永続storage",
+    "HTTP weak/missing/wildcard adapter適合",
+    "関連resource transaction",
+    "相反する終端応答に対する実serviceの回復契約"
+  ],
+  "next_action": "F1/F2/F3修正後に限定再確認。初期固定13/13と探索失敗を保存し、点数を混在させない。",
+  "stopping_reason": "初期候補の意味のある固定/DOM/負例/追加coverageとsource照合が完了。全般追加探索は終了。",
+  "evidence_files": {
+    "report.md": "ce144f2acedd4f72d65fd0095f40322e1516c002243a46ab87cd370835c523ae",
+    "artifact-hashes.json": "481834a61768af93c47b7910c362d1141beb3fbc4fa104f7cf7807407e628f07",
+    "independent-checks.json": "172f984f4f80f0750d3861ce0395017e3e3b20269cf9e177ce65d41285278e82",
+    "registry-checker.json": "4c12fb9f1873ce27b25f7d9cb0ba3f92cfdc4332538d1479d81d39933afa4600",
+    "frozen-suite.json": "532f986ebb9d4e59bf78de612d948d3d4a5f3268cd3355a5ffdb9239f7ff858b",
+    "dom-events.mjs": "c546724ff1987aac6eb133567cd4c46bdc106310803d9290cfe380232a284d0e",
+    "dom-events.json": "1f2aa35c19a3ec71d2516f8c1b317f01d68755882920bd8b35cc8b63344d6f94",
+    "edge-probes.mjs": "3ad942f51c6cb036abaedd392cec7b587de2395e9f632541da5490a9d3aae249",
+    "edge-probes.json": "a1dd34102e62f31293daefef71d41453b1a14a50eeaaa6493ce2689dee817fba",
+    "independent-checks.py": "cd92a47dc0f4355a9a26f6f128d6d1302d90c8dcc77ea3583050f173a2495fd0"
+  }
+}

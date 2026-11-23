@@ -1,0 +1,45 @@
+{
+  "source_id": "B-S303",
+  "url": "https://react.dev/reference/react/useEffect",
+  "canonical_url": "https://react.dev/reference/react/useEffect",
+  "title": "useEffect — React",
+  "type": "official API reference and illustrative data-fetching example",
+  "authority": "React documentation maintainers",
+  "section": [
+    {
+      "section": "useEffect Parameters",
+      "source_lines": "L71-L75",
+      "local_lines": "10-14",
+      "unavailable_lines": []
+    },
+    {
+      "section": "Fetching data with Effects",
+      "source_lines": "L380-L424",
+      "local_lines": "17-61",
+      "unavailable_lines": []
+    }
+  ],
+  "read_status": "PARTIAL: saved web/tool extraction; not raw HTML",
+  "capture_kind": "PARTIAL",
+  "capture_sha256": "9fdd0a60dea4765f31b7cdcc792d5e54f4fb8dbf972b31f2cbd892c013f467b9",
+  "source_file_name": "B-S303-react-useeffect-race.web.txt",
+  "observed_facts": [
+    "useEffectは依存値が変わったcommitの後、古い値によるcleanupを実行してから新しいsetupを実行する。",
+    "data取得例ではcleanupでignoreをtrueにし、古いfetch結果がstateへ適用されることを防ぐ。ネットワーク応答は送信順と異なる順序で到着し得ると説明している。"
+  ],
+  "limits": [
+    "これはReactのread結果適用例。認証、server側の副作用取消、operation IDの権威性、返答の永続保存は保証しない。",
+    "React利用を全実装に要求しない。一般のstate machineへの展開は別の設計上の推論として扱う。",
+    "遅れて到着した成功したmutationの証跡を消す根拠には使わない。"
+  ],
+  "upstream_refs": [
+    {
+      "url": null,
+      "relationship": "Fetching data節L424の外部race-condition解説リンク43は観測したが未追跡。根拠は公式API本文のみ。",
+      "trace_web_ref": "turn878429412view3"
+    }
+  ],
+  "checked_at": "2026-11-23T07:48:23.986530+00:00",
+  "round": 3,
+  "redistribution": "Original text stays private; public record contains original paraphrases, locators and hashes."
+}

@@ -1,0 +1,70 @@
+{
+  "reviewed_at": "2026-11-23T07:43:56.721000+00:00",
+  "scope": "R02で追加された6資料の採用主張に必要な箇所だけを直接照合。既存継承出典の全面再調査なし。",
+  "independence_limit": "6資料は6つの独立した効果実証ではない。規範・同機関解説・1研究・2製品の公式資料を含む。",
+  "sources": [
+    {
+      "id": "R02-R1-S01",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "web_refs": [
+        "turn456600088view3"
+      ],
+      "locator": "SC 2.4.4、SC 2.4.5（取得本文L921–936）",
+      "verified": "リンク目的に利用できる文脈と、ページ集合内の探索方法におけるプロセス途中・結果の例外を確認。",
+      "assessment": "改訂の条件と整合。正本ID、JSON契約や全アプリ画面の入口数は規格の直接規定ではない。Aのグラフから規格適合を宣言しない境界を保持している。"
+    },
+    {
+      "id": "R02-R1-S02",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context",
+      "web_refs": [
+        "turn772015327view1"
+      ],
+      "locator": "Intent L36–46、Examples L64–67",
+      "verified": "短いリンク文言を論理的に関連する文脈で補えること、リンクと着地の連続性、目的差に応じた文言の有用性を確認。",
+      "assessment": "完全一致の強制を避け、選択時に参照できる文脈と実装の関連付けを分ける改訂は整合。解説は非規範。人の理解やC適合は未検証。"
+    },
+    {
+      "id": "R02-R1-S03",
+      "url": "https://courses.ischool.berkeley.edu/i247/f05/readings/Yee_Flamenco_CHI03.pdf",
+      "web_refs": [
+        "turn382342607view2",
+        "turn382342607view3"
+      ],
+      "locator": "PDF pp.5–7、L536–556、L613–620",
+      "verified": "処理時間差・障害等の条件下で利用時間の短縮は示されず、単純な一属性探索と総合選好が同じ結果ではない箇所を確認。",
+      "assessment": "成功・時間・選好を分ける条件付けは整合。ファセット単独の因果効果、業務UI全般の改善率、普遍的閾値は導けない。全方法・数値の再解析はしていない。"
+    },
+    {
+      "id": "R02-R2-S01",
+      "url": "https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository",
+      "web_refs": [
+        "turn382342607view0"
+      ],
+      "locator": "L20、L28、L34–41",
+      "verified": "Web/GitとPages/Actionsの扱いの違い、および旧名再利用による転送への影響を確認。",
+      "assessment": "経路種別ごとに対象承継を見る手順は条件付きの設計上の導出として妥当。全入口の永久保持や全製品の同仕様を主張していない。"
+    },
+    {
+      "id": "R02-R2-S02",
+      "url": "https://docs.github.com/en/search-github/github-code-search/using-github-code-search",
+      "web_refs": [
+        "turn772015327view2"
+      ],
+      "locator": "L37–40、L49–56",
+      "verified": "閲覧権限・索引・検索対象ブランチの範囲と、候補選択・Enter等の異なる着地を確認。",
+      "assessment": "限定0件を全体不存在へ拡張せず、選択操作と着地を照合する改訂は整合。製品固有仕様であり実案件の網羅性は別途未確認。"
+    },
+    {
+      "id": "R02-R2-S03",
+      "url": "https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-filters",
+      "web_refs": [
+        "turn382342607view1",
+        "turn559235071view0",
+        "turn382342607view5"
+      ],
+      "locator": "L23–32、L110–126、L273、L300–303",
+      "verified": "設定とテーマでの表示、集合規模や集計範囲、ラベル変更と元属性、product/variant粒度の区別を確認。",
+      "assessment": "カテゴリ統合・分割の両側を制約と比較要件で点検する条件と整合。製品固有の上限を普遍化していない。数値仕様を採用基準に追加しない。"
+    }
+  ]
+}

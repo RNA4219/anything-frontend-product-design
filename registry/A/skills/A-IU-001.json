@@ -1,0 +1,105 @@
+{
+  "skill_id": "A-IU-001",
+  "domain": "product-information-architecture",
+  "trigger": "新規設計、機能追加、機能整理、画面分割の依頼で、誰が何を達成するかが曖昧なとき。既存計画を変更するときも、影響を受ける目標に適用する。",
+  "intent": "達成内容を先に定義する",
+  "required_inputs": [
+    "`roles`、`goals`、`requirements`、`feature_requests`、`visual_intent`。",
+    "`contexts`等にある対象、業務条件、期限、権限、利用場面。記載がなければ「未確認」とする。",
+    "具体例があれば成功例だけでなく、例外・やり直し・他者への受渡しも読む。"
+  ],
+  "decision_rules": [
+    "目標は「roleが、対象について、どの結果を得るか」で記述する。「ダッシュボードを使う」「ボタンを押す」は達成内容の代用にしない。",
+    "入力で確定した目標・必須条件を、実装しやすい内容へ書き換えない。言い換える場合は同一性を確認し、原文と変更理由を残す。",
+    "「何を達成するか」と「今回の設計でどう達成するか」を分ける。先に画面・部品・操作回数を固定しない。",
+    "役割、対象、達成内容が不明で判断が逆転しうる場合は、削除・統合を確定せず保持案を作る。",
+    "機能の削除・延期・統合を検討するとき、影響する目標ごとに『どのroleが、どの対象範囲で、どの条件の下、何を達成するか』を記述し、要求された画面・部品・機能名と達成結果を分ける。既存IDとの対応を残す。",
+    "変更で影響する利用者を確認する。顧客側の操作だけでなく、入力に現れる支援・運用・連携担当と、その作業や依存を含める。関係が未確認の役割は影響調査の候補とし、架空の必須要件にはしない。",
+    "達成内容と利用条件の各主張に、観測、利用者・担当者からの報告、依頼で確定した条件、仮定、未確認の別と出所を付ける。報告や依頼による確定と、利用実績の観測は同一視しない。",
+    "役割・対象範囲・成功条件の不明点によって候補の削除・統合可否が変わるなら、影響する機能の保持案と確認課題を残す。判断に関係しない不足は別記し、整理済みの範囲は進める。"
+  ],
+  "procedure": [
+    "1. 各goal IDについて、role、対象、達成結果、必要情報、成功を判断する事実を作業表に並べる。",
+    "2. 「この機能がなくても同じ結果に到達できるか」を問い、機能名を目標から分離する。代替案の存在はまだ削除理由にしない。",
+    "3. 各目標について具体的な一件を選び、開始時に分かる情報、判断、必要な結果、例外を記述する。実例か仮例かを明記する。",
+    "4. 依頼から確定できない事項は仮定として列挙する。必須達成や権限の不明点は、`unresolved`に質問・影響・担当を置く。",
+    "5. 入力自体に欠落がある場合は入力補完案を示す。未合意の仮目標を、既存goal IDやmandatoryの確定値として黙って注入しない。",
+    "6. 目標と必要情報が整理できた範囲からA02へ進む。全件の調査完了を待つ必要はないが、未確認点を完了扱いしない。"
+  ],
+  "expected_outputs": [
+    "`features[*].goal_ids/object/outcome/roles/reason`に達成内容との関係を保持する。",
+    "`goal_routes`は後続の画面設計で具体化する。意味上の目標整理だけで到達可能と記録しない。",
+    "仮定と変更理由は`decision_notes`に「A01: goal ID、仮定、影響」の形で記録する。",
+    "`visual_intent_id`は入力のIDを引き継ぐ。達成内容を美的な統一へ置き換えない。"
+  ],
+  "dependencies": [],
+  "exceptions": [
+    "原典の方法論を根拠にしている。本Skillの作業表・IDへの転記手順は導出した運用で、効果検証済みの規格ではない。",
+    "実作業や対象者へ接触していない場合、目標の妥当性は仮説のまま。必須達成の内容が未確定ならproduct担当のblocking残件にする。",
+    "小さく、影響範囲が分かっている変更では、既存資料と担当者確認等の相応の確認でよい。全件の大規模研究を要求しない。",
+    "影響がないと説明できる別機能の設計まで、未確認の役割を理由に停止しない。",
+    "未提供の任意機能の必要性が未確認なら、確定した目標を守る範囲で保留・延期案を検討できる。"
+  ],
+  "failure_modes": [
+    "曖昧な「管理」「確認」を、そのまま全利用者共通の目標にする。",
+    "一つの便利な事例を処理できたので、他の利用者・例外も満たせると推定する。",
+    "ユーザーが挙げた機能を、そのまま独立した目標として数える。",
+    "仮定の業務ルールをmandatoryに昇格する。"
+  ],
+  "verification": [
+    "各goalについて「誰が、何を判断・達成し、何を見れば成功と分かるか」を一文で説明する。説明できない目標と、実例で確認していない条件を明示する。",
+    "必要情報が具体的なIDになっているか確認する。目標を読むだけで特定の画面形式に拘束されていれば、達成内容と設計案を再分離する。",
+    "顧客閲覧は高頻度、支援担当の月次出力は低頻度だが確定要件、追加ダッシュボードは未検証の要望。 → 支援担当の成果と依存を残し、追加要望は仮定として記録する。",
+    "role不明の出力統合と、影響範囲が既知の別画面ラベル修正。 → 統合の判定だけを保留し、ラベル修正は必要な軽量確認で進められる。"
+  ],
+  "source_refs": [
+    "A-S002",
+    "A-S011",
+    "A-S012",
+    "R01-R1-S01",
+    "R01-R1-S04"
+  ],
+  "confidence": {
+    "source_support": "inherited; current campaign verification pending",
+    "transfer": "not established",
+    "empirical_skill_effect": "unverified"
+  },
+  "status": "ACCEPT",
+  "version": "1.1.1",
+  "provenance": {
+    "kind": "inherited",
+    "repository": "RNA4219/anything-frontend-art-direction",
+    "revision": "97b19c29c0b63acfee9ad437f93af081ac0c6ef8",
+    "path": "extensions/A/references/goals-and-features.md",
+    "original_unit": "A01"
+  },
+  "implementation": "modules/product-information-architecture/references/goals-and-features.md",
+  "history": [
+    {
+      "round": "R01",
+      "action": "migrated_without_novelty_credit",
+      "status": "DRAFT"
+    },
+    {
+      "round": "R01",
+      "action": "revision",
+      "extraction_unit": "R01-A-U01",
+      "status": "DRAFT"
+    },
+    {
+      "round": "R01",
+      "action": "independent review and counterexample repair",
+      "status": "ACCEPT",
+      "at": "2026-11-23T07:03:55.087941+00:00"
+    }
+  ],
+  "implementation_refs": [
+    "modules/product-information-architecture/references/feature-context.md"
+  ],
+  "acceptance_scope": "Instruction and structural contract on synthetic fixtures; no human usability, browser rendering or cross-product superiority claim.",
+  "acceptance_evidence": [
+    "campaigns/A/rounds/R01/evaluation.json",
+    "campaigns/A/rounds/R01/findings.json",
+    "campaigns/A/rounds/R01/tests-final.txt"
+  ]
+}

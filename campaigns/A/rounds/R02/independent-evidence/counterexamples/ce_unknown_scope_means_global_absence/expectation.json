@@ -1,0 +1,14 @@
+{
+  "id": "ce_unknown_scope_means_global_absence",
+  "expected_machine": {
+    "baseline": "PASS",
+    "candidate": "PASS"
+  },
+  "expected_semantic": "SEMANTIC_DEFECT",
+  "independent_basis": "観測範囲が不明な検索0件は全体の不存在を含意しない。入力ではD-42の存在が確定している。",
+  "rubric_ids": [
+    "N2",
+    "N6"
+  ],
+  "evidence_level": "synthetic design / HTML source only; no rendered UI, operation, C conformance or human result"
+}

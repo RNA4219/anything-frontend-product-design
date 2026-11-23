@@ -1,0 +1,252 @@
+{
+  "suite": "Independent R03 exploratory probes; not frozen criteria",
+  "modulePath": "modules/interaction-ux-flow/examples/resume-and-conflict.mjs",
+  "moduleSha256": "8a08e09d10659e436e2425d698e103c851a5880ed31d686856a411204882e716",
+  "total": 6,
+  "passed": 6,
+  "results": [
+    {
+      "id": "X01-SAME-ACCOUNT-ABA-OLD-READ",
+      "pass": true,
+      "trace": [
+        {
+          "phase": "conflict",
+          "message": "保存時から対象が変わっています。入力と観測した値を比較してください。",
+          "draft": {
+            "title": "My draft"
+          },
+          "lastKnown": {
+            "etag": "z-old",
+            "values": {
+              "title": "Original"
+            }
+          },
+          "observedResource": {
+            "etag": "a-new",
+            "values": {
+              "title": "New observation"
+            }
+          },
+          "operationId": null,
+          "operationOutcome": null,
+          "operationResult": null,
+          "resourceReadError": "",
+          "canCommit": false,
+          "canReview": true,
+          "canResume": true,
+          "recoveryAction": null
+        }
+      ]
+    },
+    {
+      "id": "X02-OLD-VIEW-SUCCESS-RETAINED-FOR-OWNER",
+      "pass": true,
+      "trace": [
+        {
+          "atB": {
+            "phase": "different_account",
+            "message": "このアカウントでは保存した作業を表示・再開できません。",
+            "draft": null,
+            "lastKnown": null,
+            "observedResource": null,
+            "operationId": null,
+            "operationOutcome": null,
+            "operationResult": null,
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": false,
+            "recoveryAction": null
+          }
+        },
+        {
+          "atA": {
+            "phase": "completed",
+            "message": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+            "draft": {
+              "title": "My draft"
+            },
+            "lastKnown": {
+              "etag": "z-old",
+              "values": {
+                "title": "Original"
+              }
+            },
+            "observedResource": {
+              "etag": "b-written",
+              "values": {
+                "title": "My draft"
+              }
+            },
+            "operationId": "op",
+            "operationOutcome": "succeeded",
+            "operationResult": {
+              "etag": "b-written",
+              "values": {
+                "title": "My draft"
+              }
+            },
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": true,
+            "recoveryAction": null
+          },
+          "lookups": 0
+        }
+      ]
+    },
+    {
+      "id": "X03-TERMINAL-SUCCESS-VS-INFLIGHT-STALE-PENDING",
+      "pass": true,
+      "trace": [
+        {
+          "afterConfirmedSuccessArrives": {
+            "phase": "loading",
+            "message": "観測した状態と今回の変更内容を確認してください。",
+            "draft": {
+              "title": "My draft"
+            },
+            "lastKnown": {
+              "etag": "z-old",
+              "values": {
+                "title": "Original"
+              }
+            },
+            "observedResource": null,
+            "operationId": "op",
+            "operationOutcome": null,
+            "operationResult": null,
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": true,
+            "recoveryAction": null
+          }
+        },
+        {
+          "afterOlderPendingArrives": {
+            "phase": "completed",
+            "message": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+            "draft": {
+              "title": "My draft"
+            },
+            "lastKnown": {
+              "etag": "z-old",
+              "values": {
+                "title": "Original"
+              }
+            },
+            "observedResource": {
+              "etag": "b-written",
+              "values": {
+                "title": "My draft"
+              }
+            },
+            "operationId": "op",
+            "operationOutcome": "succeeded",
+            "operationResult": {
+              "etag": "b-written",
+              "values": {
+                "title": "My draft"
+              }
+            },
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": true,
+            "recoveryAction": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "X04-NO-ACCESS-NO-QUERY",
+      "pass": true,
+      "trace": [
+        {
+          "view": {
+            "phase": "no_access",
+            "message": "現在の権限ではこの作業を表示できません。",
+            "draft": null,
+            "lastKnown": null,
+            "observedResource": null,
+            "operationId": null,
+            "operationOutcome": null,
+            "operationResult": null,
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": false,
+            "recoveryAction": null
+          },
+          "calls": []
+        }
+      ]
+    },
+    {
+      "id": "X05-DIFFERENT-TARGET-NO-QUERY",
+      "pass": true,
+      "trace": [
+        {
+          "view": {
+            "phase": "different_task",
+            "message": "この画面の対象と保存した作業が一致しません。",
+            "draft": null,
+            "lastKnown": null,
+            "observedResource": null,
+            "operationId": null,
+            "operationOutcome": null,
+            "operationResult": null,
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": false,
+            "recoveryAction": null
+          },
+          "calls": []
+        }
+      ]
+    },
+    {
+      "id": "X06-CHANGE-AFTER-REVIEW-INVALIDATES-COMMIT",
+      "pass": true,
+      "trace": [
+        {
+          "view": {
+            "phase": "editing",
+            "message": "観測した状態と今回の変更内容を確認してください。",
+            "draft": {
+              "title": "Different decision"
+            },
+            "lastKnown": {
+              "etag": "z-old",
+              "values": {
+                "title": "Original"
+              }
+            },
+            "observedResource": {
+              "etag": "z-old",
+              "values": {
+                "title": "Original"
+              }
+            },
+            "operationId": null,
+            "operationOutcome": null,
+            "operationResult": null,
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": true,
+            "canResume": true,
+            "recoveryAction": null
+          },
+          "writes": 0
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "No production server/auth/storage/security or browser verification.",
+    "Pending/success race uses two correctly correlated operation replies delivered out of order; no mutated candidate."
+  ]
+}

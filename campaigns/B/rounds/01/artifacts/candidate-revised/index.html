@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>予約 R-204 の日時変更</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #162b39; background: #eef3f5; line-height: 1.65; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+    header { margin-bottom: 24px; }
+    h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); line-height: 1.35; margin: 8px 0; }
+    h2 { margin: 0 0 12px; font-size: 1.15rem; }
+    p { margin: 8px 0 16px; }
+    .eyebrow { font-size: .8rem; font-weight: 750; letter-spacing: .1em; color: #346471; }
+    .card { border: 1px solid #cbd8df; background: white; border-radius: 14px; padding: 24px; margin: 18px 0; }
+    .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .label { display: block; font-size: .85rem; color: #4e6574; }
+    .date { display: block; font-size: 1.3rem; font-weight: 720; margin-top: 4px; }
+    .subtle { color: #4e6574; font-size: .9rem; }
+    .status { border-left: 5px solid #247586; background: #f2f9fb; }
+    .status[data-phase="unknown"], .status[data-phase="cancel_requested"] { border-color: #946016; background: #fff9ed; }
+    .status[data-phase="succeeded"] { border-color: #246742; background: #f0faf3; }
+    .status[data-phase="failed"] { border-color: #a03d3d; background: #fff5f5; }
+    #phase-label { outline-offset: 5px; }
+    #operation-id { overflow-wrap: anywhere; font-family: ui-monospace, monospace; }
+    fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+    legend { font-size: 1.12rem; font-weight: 700; margin-bottom: 14px; }
+    .choice { display: flex; align-items: center; gap: 12px; border: 1px solid #aebfc9; border-radius: 9px; padding: 16px; margin-bottom: 12px; cursor: pointer; }
+    .choice:has(input:checked) { border: 2px solid #176577; padding: 15px; background: #edf8fb; }
+    input[type="radio"] { width: 21px; height: 21px; accent-color: #176577; flex: 0 0 auto; }
+    button, select { font: inherit; }
+    button { min-height: 46px; padding: 10px 18px; border: 1px solid #7594a2; border-radius: 8px; background: white; color: #183645; font-weight: 650; cursor: pointer; }
+    button.primary { background: #176577; border-color: #176577; color: white; }
+    button.danger { color: #933c29; border-color: #bd7866; }
+    button:disabled { opacity: .48; cursor: not-allowed; }
+    button:hover:enabled { filter: brightness(.95); }
+    :focus-visible { outline: 3px solid #d08220; outline-offset: 3px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    dl { margin: 12px 0; display: grid; grid-template-columns: 95px 1fr; gap: 8px 12px; }
+    dt { color: #4e6574; } dd { margin: 0; font-weight: 650; }
+    details summary { cursor: pointer; font-weight: 700; }
+    details[open] summary { margin-bottom: 16px; }
+    select { width: 100%; min-height: 44px; margin: 8px 0; padding: 8px; border: 1px solid #aebfc9; border-radius: 7px; background: white; color: #162b39; }
+    .metrics { padding: 12px; border-radius: 7px; background: #f1f5f7; font-size: .85rem; }
+    .error { color: #99352c; font-weight: 650; }
+    [hidden] { display: none !important; }
+    @media (max-width: 560px) { main { padding: 20px 12px 40px; } .card { padding: 18px; } .columns { grid-template-columns: 1fr; gap: 14px; } .actions button { width: 100%; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">BOOKING CHANGE · LOCAL DEMO</div>
+      <h1>予約 R-204 の日時変更</h1>
+      <p>希望日時を選び、内容を確認して変更を依頼します。</p>
+      <p class="subtle">この画面はローカルの模擬サービスです。実際の予約には接続しません。日時は予約施設の現地時刻として扱います。</p>
+    </header>
+
+    <section class="card" aria-label="予約と変更希望">
+      <div class="columns">
+        <div><span class="label">最後に確認した予約日時</span><time class="date" id="current-date"></time></div>
+        <div><span class="label">今回の変更希望</span><time class="date" id="draft-date">未選択</time></div>
+      </div>
+      <p class="subtle" id="known-note">変更成功をサービスで確認できたときに、確認済み日時を更新します。</p>
+    </section>
+
+    <section class="card status" id="status-card" aria-labelledby="phase-label">
+      <h2 id="phase-label" tabindex="-1">希望日時の選択</h2>
+      <p id="status-message" role="status" aria-live="polite" aria-atomic="true"></p>
+      <p id="operation-row" class="subtle" hidden>操作番号: <span id="operation-id"></span></p>
+    </section>
+
+    <section class="card" id="editing-panel">
+      <fieldset id="date-options">
+        <legend>どちらの日時に変更しますか？</legend>
+        <label class="choice"><input type="radio" name="target-date" value="2026-12-10T14:00"><span>2026年12月10日（木） 14:00</span></label>
+        <label class="choice"><input type="radio" name="target-date" value="2026-12-11T14:00"><span>2026年12月11日（金） 14:00</span></label>
+      </fieldset>
+      <div class="actions"><button id="review-button" class="primary" type="button">変更内容を確認</button></div>
+    </section>
+
+    <section class="card" id="review-panel" hidden>
+      <h2>この内容で変更を依頼しますか？</h2>
+      <dl><dt>対象予約</dt><dd>R-204</dd><dt>変更前</dt><dd id="review-current"></dd><dt>変更希望</dt><dd id="review-target"></dd></dl>
+      <p>送信後、サービスの結果を確認します。処理が始まると希望日時を編集できません。取消を依頼しても、変更が先に完了する場合があります。</p>
+      <div class="actions"><button id="confirm-button" class="primary" type="button">この内容で変更を依頼</button><button id="back-button" type="button">日時の選択に戻る</button></div>
+    </section>
+
+    <section class="card" id="recovery-panel" hidden>
+      <h2>変更結果を確認する</h2>
+      <p>結果が確定するまで、同じ変更を新しく送信しないでください。画面を再読み込みしても操作番号を引き継ぎます。</p>
+      <div class="actions"><button id="check-button" class="primary" type="button">変更結果を確認</button><button id="cancel-button" class="danger" type="button">日時の変更処理の取消を依頼</button></div>
+      <p class="subtle">取消の対象は今回の日時変更処理です。予約そのものを取り消す操作ではありません。見つからない状態が続く場合は、予約番号・希望日時・操作番号を保ったままサービスの担当者へ照合を依頼してください。</p>
+    </section>
+
+    <section class="card" id="finished-panel" hidden>
+      <h2 id="finished-title">処理結果</h2>
+      <p id="finished-detail"></p>
+      <div class="actions"><button id="new-change-button" type="button">希望日時を見直す</button></div>
+    </section>
+
+    <details class="card" open>
+      <summary>模擬サービスのシナリオ</summary>
+      <label for="scenario">次の変更送信で使うシナリオ</label>
+      <select id="scenario">
+        <option value="normal">正常動作 — 約3秒で変更成立</option>
+        <option value="rejected">変更拒否 — 希望枠を確保できない</option>
+        <option value="lost">応答喪失 — 受付後に送信応答が失われる</option>
+        <option value="cancellation">取消を試す — 12秒待つ間に取消要求を送れる</option>
+        <option value="race">取消との競合 — 変更成立が取消より先行する</option>
+      </select>
+      <p class="subtle">正常・応答喪失は送信から約3秒後に「変更結果を確認」。取消を試す場合は送信後に取消を依頼し、約2秒後に結果を確認します。</p>
+      <div class="actions"><button id="fail-lookup-button" type="button">次の照会を通信エラーにする</button><button id="reset-button" type="button">デモを初期状態に戻す</button></div>
+      <p id="demo-message" role="status" class="subtle"></p>
+      <p class="metrics" id="metrics"></p>
+      <p class="subtle">初期化は、このローカルデモの予約・操作履歴を消去します。処理中は初期化できません。複数タブ同時操作には対応していません。</p>
+    </details>
+    <p id="storage-error" class="error" role="alert" hidden></p>
+    <noscript><p class="error">このデモを操作するには JavaScript を有効にしてください。</p></noscript>
+  </main>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "frozen_at": "2026-11-23T06:54:32.356473+00:00",
+  "before_scored_execution": true,
+  "reason": "Independent contract-validity review; see test-errata.md",
+  "files": {
+    "modules/interaction-ux-flow/tests/run_flow_trials_v2.mjs": "7697c2ca300070f955d826704ce874bd7dc2fc7f4730517a87e15ed715b6cdaf",
+    "campaigns/B/rounds/01/task.md": "67a8b9d14cc997df40d34efae5d58497ed073cc5403591d67096dbf163c15e4a"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "source_id": "B-S203",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry",
+  "title": "Understanding SC 3.3.7: Redundant Entry",
+  "type": "official informative explanation, not normative success criterion",
+  "authority": "W3C WAI / Accessibility Guidelines Working Group",
+  "capture_kind": "PARTIAL",
+  "sha256": "dd8a6fe22207347e18ec9fc9966aa1933a1327b1c674029f6631f60bdd6a775e",
+  "locator": [
+    {
+      "section": "informative status banner",
+      "source_lines": "L0–L2",
+      "local_lines": "11–13"
+    },
+    {
+      "section": "reproduced SC text",
+      "source_lines": "L31–L42",
+      "local_lines": "42–53"
+    },
+    {
+      "section": "Intent and scope",
+      "source_lines": "L45–L58",
+      "local_lines": "56–69"
+    },
+    {
+      "section": "Exceptions",
+      "source_lines": "L59–L64",
+      "local_lines": "70–75"
+    }
+  ],
+  "observed_facts": [
+    "同一プロセスの重複入力負担を減らす説明であり、ブラウザの自動補完だけでは十分ではない。",
+    "セッションをまたぐ情報保存を追加要求しないとする一方、1つのプロセスが複数ドメインにまたがることはありうる。",
+    "選択可能なデータは同じページに置くと説明し、選択して入力、ページ上の情報をコピー、同一住所チェック等を挙げる。",
+    "記憶ゲーム、表示されない新規パスワード文字列の再検証、有効でなくなった情報を例外例に挙げる。個人情報・プライバシーに固有の包括的例外は設けていない。"
+  ],
+  "limitations": [
+    "保存期間・暗号化・復帰設計等の具体的実装は規定しない。",
+    "このSCにセッション間保存義務がないことから、他SCやサービス要件にも保存義務がないとは言えない。",
+    "Accessible Authenticationの要件は別であり、セキュリティ例外を根拠にパスワード貼付け・自動入力を一律禁止する結論は出せない。"
+  ],
+  "upstream_refs": [
+    {
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "relationship": "SC 3.3.7 link followed via actual web.click (turn574282014view2 link 13 -> turn800224827view5); recorded in queries.jsonl"
+    }
+  ],
+  "capture_file": "B-S203-w3c-understanding-337.web.txt",
+  "capture_storage": "Private research archive",
+  "checked_at": "2026-11-23T07:15:18.361422+00:00",
+  "introduced_round": 2,
+  "redistribution": "Original captured text remains private. This public record contains original paraphrases, URLs and section locators only.",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry",
+  "section": [
+    {
+      "section": "informative status banner",
+      "source_lines": "L0–L2",
+      "local_lines": "11–13"
+    },
+    {
+      "section": "reproduced SC text",
+      "source_lines": "L31–L42",
+      "local_lines": "42–53"
+    },
+    {
+      "section": "Intent and scope",
+      "source_lines": "L45–L58",
+      "local_lines": "56–69"
+    },
+    {
+      "section": "Exceptions",
+      "source_lines": "L59–L64",
+      "local_lines": "70–75"
+    }
+  ],
+  "read_status": "PARTIAL: exact web-extracted text saved privately; not raw HTML",
+  "capture_sha256": "dd8a6fe22207347e18ec9fc9966aa1933a1327b1c674029f6631f60bdd6a775e",
+  "source_file_name": "B-S203-w3c-understanding-337.web.txt",
+  "limits": [
+    "保存期間・暗号化・復帰設計等の具体的実装は規定しない。",
+    "このSCにセッション間保存義務がないことから、他SCやサービス要件にも保存義務がないとは言えない。",
+    "Accessible Authenticationの要件は別であり、セキュリティ例外を根拠にパスワード貼付け・自動入力を一律禁止する結論は出せない。"
+  ]
+}

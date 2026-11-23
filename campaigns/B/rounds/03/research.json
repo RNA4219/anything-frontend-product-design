@@ -1,0 +1,171 @@
+{
+  "round": 3,
+  "new_source_ids": [
+    "B-S301",
+    "B-S302",
+    "B-S303",
+    "B-T401",
+    "B-T402",
+    "B-T403"
+  ],
+  "extended_existing_source_ids": [
+    "B-S101",
+    "B-S201"
+  ],
+  "duplicate_canonical_records_prevented": 2,
+  "records": [
+    {
+      "researcher": "researcher1",
+      "source_ids": [
+        "B-S101",
+        "B-S301",
+        "B-S302",
+        "B-S303"
+      ],
+      "finding_count": 10,
+      "capture_hashes_verified": true,
+      "tool_runs": [
+        {
+          "tool": "exec_command",
+          "action": "Read actual imozuru README and skills/imozuru/SKILL.md, frozen task and overlap record.",
+          "result": "Completed. Initial root SKILL.md path was missing; README-documented nested path read in full."
+        },
+        {
+          "tool": "imozuru/scripts/fetch.py",
+          "command": "python3 tooling/imozuru/skills/imozuru/scripts/fetch.py private/B/round03/researcher1/sources google-aip154 https://google.aip.dev/154",
+          "result": "FAIL: DNS temporary failure. One CLI network probe only.",
+          "log": "fetch-log.jsonl"
+        },
+        {
+          "tool": "official web search/open/find/click",
+          "result": "6 calls; 3 domain-filtered search queries; all 7 search hits logged, with unchosen hits retained.",
+          "raw_receipts": [
+            "tool-output/search-01.json",
+            "tool-output/open-01.json",
+            "tool-output/find-trace-01.json",
+            "tool-output/details-01.json",
+            "tool-output/specific-0.json",
+            "tool-output/final-trace-01.json"
+          ]
+        },
+        {
+          "tool": "github_fetch",
+          "action": "Fetch the AIP154 official source URL observed via actual View source link.",
+          "result": "Complete UTF-8 Markdown obtained and saved exactly.",
+          "raw_receipt": "tool-output/specific-1.json"
+        },
+        {
+          "tool": "imozuru/scripts/digest.py add",
+          "command": "python3 tooling/imozuru/skills/imozuru/scripts/digest.py add private/B/round03/researcher1 --round 3 --by r03_research_primary < private/B/round03/researcher1/queries-input.json",
+          "result": "6 rows, 10 hits (7 search hits plus direct-open/reference-trace receipts) appended.",
+          "log": "queries.jsonl"
+        },
+        {
+          "tool": "build_capture.py",
+          "result": "Initial search-result separator parser assertion failed after capture writes; dependent digest attempt failed because query input did not yet exist. Parser corrected; rerun succeeded. Final capture metadata refers only to current bytes. Earlier fetch-log OK entries are intermediate captures, not extra network downloads."
+        },
+        {
+          "tool": "schema/hash validation",
+          "result": "Pending final check at time of writing; verification output will be saved as validation.json."
+        }
+      ],
+      "costs": {
+        "amount": null,
+        "measured": false
+      }
+    },
+    {
+      "researcher": "researcher2",
+      "source_ids": [
+        "B-S201",
+        "B-T401",
+        "B-T402",
+        "B-T403"
+      ],
+      "finding_count": 6,
+      "capture_hashes_verified": true,
+      "tool_runs": [
+        {
+          "id": "R2-TR01",
+          "tool": "local read",
+          "result": "imozuru README.md/SKILL.md, R03 task/contract, existing B-S201 and B-IU-001/002/005/006 plus PR2 overlap read"
+        },
+        {
+          "id": "R2-TR02",
+          "tool": "imozuru fetch.py",
+          "command": "python3 tooling/imozuru/skills/imozuru/scripts/fetch.py private/B/round03/researcher2/sources B-T401-w3c-understanding-reauth https://www.w3.org/WAI/WCAG22/Understanding/re-authenticating.html",
+          "exit_code": 1,
+          "result": "FAIL: Temporary failure in name resolution; one network acquisition probe only",
+          "evidence": "probe-result.json; fetch-log.jsonl"
+        },
+        {
+          "id": "R2-TR03",
+          "tool": "official web retrieval fallback",
+          "method": "system1_search_query",
+          "query_count": 3,
+          "result_count": 6,
+          "result": "batch hits preserved in search.web.txt and query-input.json; source-results are aggregate, per-query attribution not exposed",
+          "refs": [
+            "turn833376400search0",
+            "turn833376400search1",
+            "turn833376400search2",
+            "turn833376400search3",
+            "turn833376400search4",
+            "turn833376400search5"
+          ]
+        },
+        {
+          "id": "R2-TR04",
+          "tool": "web.open/find",
+          "result": "4 selected primary official documents read; 6 sequential web call batches total including initial search and trace; needed sections saved as exact tool-extracted blocks; not raw HTML",
+          "evidence": "sources/*.web.txt"
+        },
+        {
+          "id": "R2-TR05",
+          "tool": "web.click",
+          "result": "two actual backward-reference traversals",
+          "traces": [
+            {
+              "from": "turn799110635view0",
+              "link_id": 11,
+              "to": "https://www.w3.org/TR/WCAG22/",
+              "ref": "turn540325483view0"
+            },
+            {
+              "from": "turn799110635view2",
+              "link_id": 232,
+              "to": "https://html.spec.whatwg.org/multipage/webstorage.html",
+              "ref": "turn540325483view1"
+            }
+          ],
+          "evidence": "trace.web.txt"
+        },
+        {
+          "id": "R2-TR06",
+          "tool": "imozuru digest.py add",
+          "command": "python3 tooling/imozuru/skills/imozuru/scripts/digest.py add private/B/round03/researcher2 --round 3 --by researcher2 < private/B/round03/researcher2/query-input.json",
+          "exit_code": 0,
+          "result": "3 records added, 8 hits total (6 aggregated search hits + 2 actual trace destinations); no cost measurement",
+          "evidence": "queries.jsonl"
+        },
+        {
+          "id": "R2-TR07",
+          "tool": "local hash and locator inspection",
+          "result": "four source captures hashed SHA-256, all source and local locators checked using rg",
+          "evidence": "capture-hashes.json"
+        },
+        {
+          "id": "R2-TR08",
+          "tool": "local schema/hash check",
+          "result": "PASS: 49 artifact checks; not application fixture tests",
+          "evidence": "verification.json"
+        }
+      ],
+      "costs": {
+        "amount": null,
+        "measured": false
+      }
+    }
+  ],
+  "scope": "HTTP/API conditions and resume decision inputs; no implementation of authentication/storage security or React-specific rules."
+}

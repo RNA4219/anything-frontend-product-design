@@ -1,0 +1,267 @@
+{
+  "schema_version": "B-R02-independent-review-v1",
+  "round": 2,
+  "created_at": "2026-11-23T07:34:07.645604+00:00",
+  "verdict": "REVISE",
+  "revision_reviewed": "initial candidate",
+  "scope": "B-IU-004/005/006の出典境界、指示本文、固定fixtureとHTMLの限定された状態/イベント経路。候補ファイルはcriticから変更していない。",
+  "independence": {
+    "context": "separate critic context",
+    "model": "same model family/context isolation only",
+    "parent_self_score_used_as_evidence": false,
+    "child_agents_spawned": false,
+    "public_actions": false,
+    "claim_limit": "独立文脈での検証。異なるモデルや人間の独立評価、客観的UX優位、生成baselineへの因果的改善は主張しない。"
+  },
+  "unit_decisions": [
+    {
+      "skill_id": "B-IU-004",
+      "decision": "ACCEPT",
+      "scope": "明記されたfixtureと原典境界。実backend・人間効果への一般化は不可。"
+    },
+    {
+      "skill_id": "B-IU-005",
+      "decision": "REVISE",
+      "scope": "指示原則の大部分は支持。添付動作例のE01修正とE02文言整合を推奨。"
+    },
+    {
+      "skill_id": "B-IU-006",
+      "decision": "REVISE",
+      "scope": "添付動作例の分岐変更後の到達性E01を修正。固定F04を後付けで失敗に変更しない。"
+    }
+  ],
+  "candidate_artifacts": {
+    "modules/interaction-ux-flow/examples/task-flows.mjs": "3c38c312ce87e6b5ac84d532042344744737792fe4775cd6d9744ac597105c07",
+    "modules/interaction-ux-flow/tests/test_task_flows.mjs": "804a03de301db48aaaad3100c162cfdb7171cc0781c73fc1f8d03b99c7538957",
+    "modules/interaction-ux-flow/examples/repair-and-undo.html": "d93571557e22bb4742cc743b4ad2a3fb8d319393cfbfdf451f48601a328ce1a4",
+    "campaigns/B/rounds/02/cases.json": "94abd57e62f4559b339f3e754e1b9eb909ad11d1202928ee4397f6062c70f0a6",
+    "campaigns/B/rounds/02/test-freeze.json": "49b0a674082967237878cc9c8867b9eab51cfe91b05a41e306a15bd16ee722b6",
+    "campaigns/B/rounds/02/analysis.md": "7a36153a7d789773e21ce3861367d0b8a356430ec6e373274bb475a62784f501",
+    "registry/B/skills/B-IU-004.json": "15c813e7bc55dd94920a5b4a4745e748b1f00cb54fb1d936d1702d007a252e94",
+    "registry/B/skills/B-IU-005.json": "00343d2fc5acf1c0a5be3fd8ac1a69835510e5bb4ecb65c5b3dfb7635c7d068b",
+    "registry/B/skills/B-IU-006.json": "d90f299ac8e0a6218760fd7cbc6dc59db63d5c8c7f7ed15ad789bbffe72a36ea",
+    "modules/interaction-ux-flow/references/forms-and-review.md": "97704659f9fdfd7ef7c1ead61872de8fea7c789538fcbaa4caf4616db9f42c2c",
+    "modules/interaction-ux-flow/references/undo-and-compensation.md": "50e7c85d9b31feebbb8e0e7afd754925a39216d4ad3b9627625ebb60b32eccb2"
+  },
+  "predeclared_suite": {
+    "cases": 16,
+    "passed": 16,
+    "failed": 0,
+    "frozen_test_hash_matches": true,
+    "test_sha256": "804a03de301db48aaaad3100c162cfdb7171cc0781c73fc1f8d03b99c7538957",
+    "results_file": "frozen-suite.json",
+    "results_sha256": "1c88a007bab8716961e1622bb22c0670c607e943bc9eb87a0a7d5faf0605e8a8",
+    "freeze_limit": "記録されたfreezeのテストbytesを照合。timestampの独立した時刻証明は行っていない。"
+  },
+  "negative_controls": {
+    "total": 16,
+    "target_cases_detected": 16,
+    "comparison": "候補から独立に意図的欠陥を作った負例。生成baseline比較でもSkillの因果効果推定でもない。",
+    "details": "independent-checks.json:negative_controls",
+    "observation_limit": "各ケースに対応する具体的故障を検出することを確認。全故障の検出感度や網羅性の証明ではない。"
+  },
+  "registry_checker": {
+    "returncode": 0,
+    "report": {
+      "units": 6,
+      "sources": 21,
+      "statuses": {
+        "ACCEPT": 3,
+        "DRAFT": 3
+      },
+      "errors": [],
+      "limits": "Checks registry structure and referenced files, not whether prose or empirical claims are true."
+    },
+    "result_file": "registry-checker.json",
+    "result_sha256": "e261bcccaff7f24f5a1cad72ff7eb5394ab9ba7798c5f032ecfc5ab46d9ade43",
+    "limit": "構造、参照存在等のチェック。内容の真実性やUX評価ではない。"
+  },
+  "dom_event_validation": {
+    "runtime": {
+      "node": "v24.22.3",
+      "jsdom": "26.1.0"
+    },
+    "method": "Real HTML event listeners in jsdom; the one ESM import is replaced by factories imported from the exact candidate module. No browser, layout, AT, keyboard-human, server, or human study.",
+    "representative_total": 8,
+    "representative_passed": 8,
+    "paths": [
+      "DOM-REPAIR",
+      "DOM-DELIVERY",
+      "DOM-LOST-REPLY",
+      "DOM-COMPENSATION-FAILED",
+      "DOM-COMPENSATION-SUCCESS",
+      "DOM-EXPIRED",
+      "DOM-CONFLICT",
+      "DOM-LOCAL-UNDO"
+    ],
+    "exploratory": [
+      {
+        "id": "E01-INACTIVE-ERROR",
+        "pass": false
+      }
+    ],
+    "result_file": "dom-events.json",
+    "result_sha256": "da4ef5df87393d9c3d5ed7fea9285ab9a5c4f2a9bb1acb238f31bbe6cf345688",
+    "sourceHash": "3c38c312ce87e6b5ac84d532042344744737792fe4775cd6d9744ac597105c07",
+    "htmlHash": "d93571557e22bb4742cc743b4ad2a3fb8d319393cfbfdf451f48601a328ce1a4",
+    "not_a_browser_test": true
+  },
+  "source_integrity": {
+    "total": 10,
+    "matched_sha256": 10,
+    "details": "independent-checks.json:source_integrity",
+    "limit": "保存済みwebツール表現のbytesとfindingsを照合。raw HTMLの完全性や現在のAPI実行を証明しない。"
+  },
+  "source_reviews": [
+    {
+      "id": "S01",
+      "topic": "WCAG 3.3.4 normative scope and alternatives",
+      "result": "SUPPORTED",
+      "sources": [
+        "B-S201:L1328-L1341",
+        "B-S202:L2,L42,L55-L73"
+      ],
+      "assessment": "AAの対象列挙（法的約束、金融取引、保存システム内のユーザー制御データの変更・削除、テスト回答送信）と、可逆・検査と修正機会・確定前の見直し確認修正の少なくとも1つを保持している。不可逆操作だけへの縮小、3手段全部や毎回モーダルの強制、3.3.6 AAAとの混同はない。Understandingはinformativeであり技法の列挙を唯一の達成手段としていない。"
+    },
+    {
+      "id": "S02",
+      "topic": "WCAG 3.3.7 process, alternatives, and three exceptions",
+      "result": "SUPPORTED_WITH_MINOR_WORDING_FINDING",
+      "sources": [
+        "B-S201:L1373-L1381,L1942-L1945,L2274-L2277",
+        "B-S203:L2,L47-L64"
+      ],
+      "assessment": "同一processの既入力・既提示情報、自動入力/選択可能、essential/security/no-longer-validの3例外、essentialとprocessの定義をRegistryで正しく区別。セッション間・無期限保存の義務や個人情報の包括的例外は作っていない。実行用referenceの「検討する」の強さはE02で指摘。"
+    },
+    {
+      "id": "S03",
+      "topic": "WCAG 3.3.1 and 3.3.3 exception scope",
+      "result": "SUPPORTED",
+      "sources": [
+        "B-S201:L1304-L1311,L1320-L1327"
+      ],
+      "assessment": "自動検出された入力エラーの項目識別・テキスト説明と、既知の修正案を分けている。セキュリティ/内容目的の例外を3.3.1全体の免除としていない。"
+    },
+    {
+      "id": "S04",
+      "topic": "GOV.UK error and check-answer guidance authority",
+      "result": "SUPPORTED",
+      "sources": [
+        "B-S204:L137-L155",
+        "B-S205:L415-L430"
+      ],
+      "assessment": "正常値・誤入力保持と利用者が入力で直せない問題の分離、既入力を渡して確認へ復帰し必要な追加質問を行う指針は保存原典にある。政府サービス向けガイドであり、WCAG 3.3.1自体の全入力保持義務としていない。実効payload除外やreview失効は適用上の推論として表示。"
+    },
+    {
+      "id": "S05",
+      "topic": "Compensation scope and local Undo exclusions",
+      "result": "SUPPORTED",
+      "sources": [
+        "B-T301:L41,L53-L58,L64-L91"
+      ],
+      "assessment": "補償の業務依存性、並行変更、失敗・手動回復、全状態復帰の非保証は原典に対応する。外部作用のない局所Undoを適用除外とするのは明示した前提からの推論。単純局所編集へ期限・revision・分散照会を無条件に課していない。now < deadline等は今回fixtureの条件と区別。"
+    },
+    {
+      "id": "S06",
+      "topic": "Legacy confirmation guide",
+      "result": "SUPPORTED",
+      "sources": [
+        "B-T302:L31-L35,L69,L80-L90,L156"
+      ],
+      "assessment": "Windows 7向け未更新の旧資料である事実を保持し、歴史的な反例の背景に限定。現行decision ruleの直接根拠、98%閾値、客観的UX優位や効果量の根拠としていない。"
+    },
+    {
+      "id": "S07",
+      "topic": "Cloud Storage restoration and asynchronous acceptance",
+      "result": "SUPPORTED",
+      "sources": [
+        "B-T303:L205,L212,L219-L243,L314-L315",
+        "B-T304:L344-L345",
+        "B-T305:L360-L361"
+      ],
+      "assessment": "新しい世代、IAMや通知等の残存影響、非同期受付後の失敗を製品固有の反例として扱っている。一般Undoの定数・全APIの保証へ移植していない。同期完了保証のある別契約にpollを一律要求していない。"
+    },
+    {
+      "id": "S08",
+      "topic": "Disputed delete/cancel and done passages excluded",
+      "result": "SUPPORTED",
+      "sources": [
+        "B-T304:L402,L406,L426",
+        "B-T305:L302,L318-L336"
+      ],
+      "assessment": "保存原典のdelete/cancelの説明差、done:falseとdone:trueの不整合を実際に確認。不整合箇所を採用規則から除外しており、独立criticもAPIの現実の挙動を推定していない。"
+    }
+  ],
+  "findings": [
+    {
+      "id": "B-R02-E01",
+      "classification": "exploratory_implementation_defect",
+      "severity": "medium",
+      "blocks_bundle_acceptance": true,
+      "location": [
+        "modules/interaction-ux-flow/examples/task-flows.mjs:14,17-22",
+        "modules/interaction-ux-flow/examples/repair-and-undo.html:30-31"
+      ],
+      "symptom": "住所必須エラーの後に店頭受取へ切り替えてもerrors.addressが残り、住所欄が非表示のままreviewへ進めない。",
+      "reproduction": [
+        "初期状態shippingでaddressを空にするchangeイベント",
+        "内容を確認するをclickしaddressエラーを発生",
+        "deliveryをpickupにするchangeイベント",
+        "内容を確認するをclick"
+      ],
+      "observed": {
+        "phase": "editing",
+        "delivery": "pickup",
+        "effective_has_address": false,
+        "errors_address": "入力内容を確認してください。",
+        "address_hidden": true,
+        "review_hidden": true,
+        "submit_calls": 0
+      },
+      "expected": "pickupでは不要になったaddressのエラーが確認到達を妨げず、他の有効項目に未解決エラーがなければreviewへ進む。",
+      "basis": [
+        "campaigns/B/rounds/02/task.md:Application repair and review",
+        "modules/interaction-ux-flow/references/forms-and-review.md:18,43-49",
+        "registry/B/skills/B-IU-005.json:procedure[5]",
+        "registry/B/skills/B-IU-006.json:procedure[3-5]",
+        "B-S205:L417,L424-L429"
+      ],
+      "impact": "利用者は無関係な住所を再入力する迂回か分岐の戻し操作を要求される。表示された修正先は非表示であり、通常の完了経路が止まる。データ損失や誤送信は今回観測していない。",
+      "cause": "setは変更したfieldのエラーだけ削除する。reviewは現在必要なmissingエラーを加えるが、非該当になった旧エラーを除去しない。",
+      "recommended_fix": "実効項目集合が変わった時またはreview検証時に非該当項目のエラーを除く。有効項目の未解決serverエラーまで一律に消さない。既入力draftはそのまま保持する。",
+      "evidence": [
+        "dom-events.mjs",
+        "dom-events.json:exploratory[0]"
+      ],
+      "score_handling": "固定F01-F07/U01-U09の点数に追加せず、初回16/16はそのまま保存。修正確認は探索的回帰として分離。"
+    },
+    {
+      "id": "B-R02-E02",
+      "classification": "exploratory_instruction_wording",
+      "severity": "low",
+      "blocks_bundle_acceptance": false,
+      "location": [
+        "modules/interaction-ux-flow/references/forms-and-review.md:25"
+      ],
+      "symptom": "同一processで再入力を求める時の3.3.7の手段が「検討する」と表現され、適合対象での要件が任意検討のように読める。",
+      "basis": [
+        "B-S201:L1373-L1381",
+        "registry/B/skills/B-IU-005.json:95"
+      ],
+      "impact": "実行用reference単体を読んだ場合に、Registryより弱い指示として適用されるおそれ。今回fixtureでは入力保持が実装されており固定試験の失敗はない。",
+      "recommended_fix": "適用対象なら自動入力または選択手段を備える、とし、直後に具体的3例外を確認する現行の構造を維持する。",
+      "score_handling": "点数なし。原典/Registryとreferenceの文言整合性だけの修正。"
+    }
+  ],
+  "not_tested": [
+    "実ブラウザのレンダリング、レイアウト、視覚表示",
+    "実キーボード操作、支援技術、読み上げ、WCAG全体適合",
+    "利用者の理解、誤操作率、操作時間、認知負荷",
+    "実サービス、永続化、権限、料金、結果保持期限",
+    "局所snapshotの全状態完全性、実更新地点での原子的競合防止",
+    "補償の実際の部分結果、実サービス固有の再試行/補償保証"
+  ],
+  "permissions_and_limits": "R01 simuralブラウザ制約の回避なし。ネットワーク/実ブラウザ/外部サービス呼出しなし。変更はprivate critic出力のみ。",
+  "next_action": "親がE01を修正した場合、固定16ケースを変えず再実行し、この同一DOM探索経路と有効項目の未解決エラー保持を限定確認する。E02は文言照合で確認。",
+  "stopping_reason": "固定16ケースとそれぞれに対応する具体的負例の検出、代表DOM8経路、重要原典境界の照合が完了。追加の任意網羅試験は増やさない。"
+}

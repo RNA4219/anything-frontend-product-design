@@ -1,0 +1,12 @@
+{
+  "source_id": "A-S012",
+  "title": "— Clayton Lewis and John Rieman（1993/1994）— Task-Centered User Interface Design",
+  "url": "https://hcibib.org/tcuid/chap-2.html",
+  "canonical_url": "https://hcibib.org/tcuid/chap-2.html",
+  "original_id": "S12",
+  "provenance": "inherited-index",
+  "verified_in_current_round": false,
+  "rights": "Link and original paraphrase only; no third-party full text redistributed.",
+  "content_sha256": null,
+  "notes": "- **URL**: [Clayton Lewis and John Rieman（1993/1994）— Task-Centered User Interface Design](https://hcibib.org/tcuid/chap-2.html)\n- **該当箇所**: Chapter 2: §2.2 Learning About the Users’ Tasks; §2.3 Using the Tasks in Design; HyperTopic: Integrating Task-Centered Design and Traditional Requirements Analysis。Web抽出 L41–80, L99–115, L131–145。\n- **確認日 / 種別**: 2026-11-23 / 本人による公開教科書。著者の開発事例と方法論を含む。\n- **原典の主張** (author_guidance): LewisとRiemanは、設計に依存しない具体的な代表タスクを集め、特定設計での実行をシナリオとして検討する方法を示す。抽象的な機能要件と、一連の現実のタスクは相互補完として扱っている。\n- **制約・版・未確認**: サンプルタスクを処理できることだけでは一般的な妥当性は保証できない。ユーザーの現在の要望も将来利用の完全な予測ではない。本文の交通モデル開発は本人の事例であり、全製品を比較した実験ではない。\n- **接続する原則**: A01, A10。原則のProcedure/JSON契約は、別に明記した本Skillの導出。"
+}

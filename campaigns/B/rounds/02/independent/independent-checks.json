@@ -1,0 +1,672 @@
+{
+  "scope": "Original candidate plus independently injected defective copies; no generated-baseline or human-UX efficacy claim",
+  "candidate_artifacts": {
+    "modules/interaction-ux-flow/examples/task-flows.mjs": "3c38c312ce87e6b5ac84d532042344744737792fe4775cd6d9744ac597105c07",
+    "modules/interaction-ux-flow/tests/test_task_flows.mjs": "804a03de301db48aaaad3100c162cfdb7171cc0781c73fc1f8d03b99c7538957",
+    "modules/interaction-ux-flow/examples/repair-and-undo.html": "d93571557e22bb4742cc743b4ad2a3fb8d319393cfbfdf451f48601a328ce1a4",
+    "campaigns/B/rounds/02/cases.json": "94abd57e62f4559b339f3e754e1b9eb909ad11d1202928ee4397f6062c70f0a6",
+    "campaigns/B/rounds/02/test-freeze.json": "49b0a674082967237878cc9c8867b9eab51cfe91b05a41e306a15bd16ee722b6",
+    "campaigns/B/rounds/02/analysis.md": "7a36153a7d789773e21ce3861367d0b8a356430ec6e373274bb475a62784f501",
+    "registry/B/skills/B-IU-004.json": "15c813e7bc55dd94920a5b4a4745e748b1f00cb54fb1d936d1702d007a252e94",
+    "registry/B/skills/B-IU-005.json": "00343d2fc5acf1c0a5be3fd8ac1a69835510e5bb4ecb65c5b3dfb7635c7d068b",
+    "registry/B/skills/B-IU-006.json": "d90f299ac8e0a6218760fd7cbc6dc59db63d5c8c7f7ed15ad789bbffe72a36ea",
+    "modules/interaction-ux-flow/references/forms-and-review.md": "97704659f9fdfd7ef7c1ead61872de8fea7c789538fcbaa4caf4616db9f42c2c",
+    "modules/interaction-ux-flow/references/undo-and-compensation.md": "50e7c85d9b31feebbb8e0e7afd754925a39216d4ad3b9627625ebb60b32eccb2"
+  },
+  "frozen_test_hash_matches": true,
+  "base": {
+    "command": [
+      "node",
+      "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+      "modules/interaction-ux-flow/examples/task-flows.mjs",
+      "campaigns/B/rounds/02/independent/frozen-suite.json"
+    ],
+    "returncode": 0,
+    "log": "frozen-suite.log",
+    "log_sha256": "74f743446e5e8e51da5e3fcebf00bc967ed19106f44efe493f203ec885ab8f41",
+    "report": {
+      "suite": "B-R02-task-flows-v1",
+      "module": "modules/interaction-ux-flow/examples/task-flows.mjs",
+      "total": 16,
+      "passed": 16,
+      "failed": 0,
+      "results": [
+        {
+          "id": "F01",
+          "pass": true,
+          "expected": "Review and change links do not submit an application"
+        },
+        {
+          "id": "F02",
+          "pass": true,
+          "expected": "One server-rejected field preserves every unrelated value and identifies a remedy"
+        },
+        {
+          "id": "F03",
+          "pass": true,
+          "expected": "Changing effective reviewed content requires reviewing the new content"
+        },
+        {
+          "id": "F04",
+          "pass": true,
+          "expected": "An inactive dependent answer is not silently included in the submitted payload"
+        },
+        {
+          "id": "F05",
+          "pass": true,
+          "expected": "Service/global failure is not assigned to an arbitrary field"
+        },
+        {
+          "id": "F06",
+          "pass": true,
+          "expected": "Unknown submission retains its ID and input and does not create a fresh duplicate"
+        },
+        {
+          "id": "F07",
+          "pass": true,
+          "expected": "Repeated confirmation while pending starts only one operation"
+        },
+        {
+          "id": "U01",
+          "pass": true,
+          "expected": "A local reversible archive restores the intended item without a universal confirmation screen"
+        },
+        {
+          "id": "U02",
+          "pass": true,
+          "expected": "At the Undo deadline no restore call is made or success claimed"
+        },
+        {
+          "id": "U03",
+          "pass": true,
+          "expected": "A conflicting revision preserves newer state and does not overwrite it"
+        },
+        {
+          "id": "U04",
+          "pass": true,
+          "expected": "Accepted compensation remains pending rather than restored"
+        },
+        {
+          "id": "U05",
+          "pass": true,
+          "expected": "Failed compensation preserves original-effect truth and a supplied next step/reference"
+        },
+        {
+          "id": "U06",
+          "pass": true,
+          "expected": "Successful compensation describes only its declared scope and residual effects"
+        },
+        {
+          "id": "U07",
+          "pass": true,
+          "expected": "Lost compensation reply remains unknown and recoverable by the same operation"
+        },
+        {
+          "id": "U08",
+          "pass": true,
+          "expected": "Repeated Undo while pending does not create another compensation"
+        },
+        {
+          "id": "U09",
+          "pass": true,
+          "expected": "Offer expiry does not prevent checking an already-started compensation"
+        }
+      ],
+      "limits": [
+        "Synthetic task/service fixture; no real service or human study.",
+        "Deliberate mutants are negative controls, not generated baseline arms."
+      ]
+    }
+  },
+  "registry": {
+    "command": [
+      "python3",
+      "modules/interaction-ux-flow/checks/check_registry.py",
+      "--root",
+      "/workspace/scratch/0238266812de/session-b"
+    ],
+    "returncode": 0,
+    "log": "registry-checker.json",
+    "log_sha256": "e261bcccaff7f24f5a1cad72ff7eb5394ab9ba7798c5f032ecfc5ab46d9ade43",
+    "report": {
+      "units": 6,
+      "sources": 21,
+      "statuses": {
+        "ACCEPT": 3,
+        "DRAFT": 3
+      },
+      "errors": [],
+      "limits": "Checks registry structure and referenced files, not whether prose or empirical claims are true."
+    }
+  },
+  "negative_controls": [
+    {
+      "id": "N-F01",
+      "target_case": "F01",
+      "fault": "Change starts an unintended submission",
+      "mutation": {
+        "old": "function change(field){if(locked() || !Object.hasOwn(draft,field))return false;phase='editing';return true;}",
+        "new": "function change(field){if(locked() || !Object.hasOwn(draft,field))return false;phase='editing';void api.submit({requestId:'bad-change',answers:copy(effective())}).catch(()=>{});return true;}"
+      },
+      "module_sha256": "2fe36583c3b715bfd69e6b8977c8f91ea773961af717d45239c65376c67548c8",
+      "result_sha256": "7d62d06a9acd18e0938ca90ae97516e8024b51ff2ce16c88102de669440a4872",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-F01.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-F01.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-F01.log",
+        "log_sha256": "806f2340ea4ef660977df7d772336884594c6e39590bc9fbd878dc1874493160"
+      },
+      "failed_cases": [
+        "F01",
+        "F03",
+        "F04"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-F02",
+      "target_case": "F02",
+      "fault": "A rejected field clears an unrelated valid name",
+      "mutation": {
+        "old": "phase='editing';reviewed=null;errors={};formError='';",
+        "new": "phase='editing';reviewed=null;errors={};formError='';draft.name='';"
+      },
+      "module_sha256": "b618edf25b8b0a6c187ed946c3cc29d078b10c61e9ec176f88435369e3e6c816",
+      "result_sha256": "33789b9245df57cc605f36d3cd32d852226872e339c1e8f4f578ebe3097c1461",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-F02.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-F02.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-F02.log",
+        "log_sha256": "091fc36e866e5f3069b3e75fc82378981dbb5a3b06df6c5258b586dd93f10aff"
+      },
+      "failed_cases": [
+        "F02"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-F03",
+      "target_case": "F03",
+      "fault": "Allows submit without reviewing changed effective answers",
+      "mutation": {
+        "old": "if(phase!=='review'||reviewed!==JSON.stringify(effective()))return;",
+        "new": "if(locked())return;"
+      },
+      "module_sha256": "b66690d1f371b1014bc5d0182917d26c7f3e3602322cbc19c33173571aa2bf66",
+      "result_sha256": "0c5c96252611dbf8c69f90870ab2aee6d73a4384fdb4110cf732963a55832add",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-F03.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-F03.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-F03.log",
+        "log_sha256": "dcc19d631d84ba9bb49d4512964a95fb4f5534dc7cb442fcc469ed502f52291e"
+      },
+      "failed_cases": [
+        "F03"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-F04",
+      "target_case": "F04",
+      "fault": "Always includes the inactive address in the payload",
+      "mutation": {
+        "old": "...(draft.delivery==='shipping'?{address:draft.address}:{})",
+        "new": "...{address:draft.address}"
+      },
+      "module_sha256": "519b5056e31eb813cb53d7ed0edd1503ec8de190171e7ef6951e599b8875d311",
+      "result_sha256": "49e907b602c5424239b2128e29afee0f1bf22218a69442e82ea994c1ba80f095",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-F04.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-F04.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-F04.log",
+        "log_sha256": "b516ca52cf913e4ab27b8df89732d677e370dc4bb8d329ad34e0a3a8219ffdbd"
+      },
+      "failed_cases": [
+        "F04"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-F05",
+      "target_case": "F05",
+      "fault": "Assigns a global service failure to email",
+      "mutation": {
+        "old": "if(result?.status==='failed'){phase='editing';reviewed=null;errors={};formError=",
+        "new": "if(result?.status==='failed'){phase='editing';reviewed=null;errors={email:'Service unavailable'};formError="
+      },
+      "module_sha256": "688de0cbb96a5468907ac2780da14f0ac2400a39cdb10ea390ecd7d9310ea093",
+      "result_sha256": "360372333659c863aa0e120d829a42dc939c3a2cc73b0ae18d5484d210bb868a",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-F05.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-F05.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-F05.log",
+        "log_sha256": "67fe59b2fb39c4ab5fa0d3d4df00f2f0ade80c0bfb9424b3ba563369368e507c"
+      },
+      "failed_cases": [
+        "F05"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-F06",
+      "target_case": "F06",
+      "fault": "A lost application reply reopens confirmation and permits a duplicate",
+      "mutation": {
+        "old": "{phase='unknown';formError='応答を受け取れず結果未確認です。入力と操作番号を保持しています。';}",
+        "new": "{phase='review';formError='応答を受け取れず結果未確認です。入力と操作番号を保持しています。';}"
+      },
+      "module_sha256": "68bff6779ba9bc9665441709ae9b089e10a46ca3b8f7610512089cdd0e75ed55",
+      "result_sha256": "9ea3da0a8c7172ecaf1992df35bb8a4544bcbec91ee48ef465361a0d1b46c1e6",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-F06.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-F06.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-F06.log",
+        "log_sha256": "94d7741815ccc045e54707e65c0f9fac030134152908078a6f59c330f23a7dde"
+      },
+      "failed_cases": [
+        "F06"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-F07",
+      "target_case": "F07",
+      "fault": "Defers the pending lock so repeated confirmation starts two requests",
+      "mutation": {
+        "old": "operationId=nextId();phase='pending';errors={};formError='';",
+        "new": "operationId=nextId();errors={};formError='';"
+      },
+      "module_sha256": "322d53854e7cff5c0a72d1ae58ff9ebd7f1d6395bc839415944ab979562d1e9e",
+      "result_sha256": "a48e3926127859c7ab37ca8ea9f7c6c1d5089892ecf073499583f7bd6cc1c6cd",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-F07.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-F07.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-F07.log",
+        "log_sha256": "24a429b546a80b1a6244589f1a723af58190984fb80a2b2869030cd1c9de0ae3"
+      },
+      "failed_cases": [
+        "F07"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-U01",
+      "target_case": "U01",
+      "fault": "Restores a different item",
+      "mutation": {
+        "old": "api.restore({requestId:operationId,itemId,expectedRevision})",
+        "new": "api.restore({requestId:operationId,itemId:'another-item',expectedRevision})"
+      },
+      "module_sha256": "2a6ea1cc109a6a12a1b3cdee55b1c788a3ff486bbf28f27d21ff7be31ef97c03",
+      "result_sha256": "d1abab1a8abf7ff421ddfb00811d8c0f96af711e1628ea28b249ac57b555ea0d",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U01.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U01.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-U01.log",
+        "log_sha256": "6a0909bfa1eab8f0536291f9361f4d2dca2a008ef2f6cb779fca9d591a7ce872"
+      },
+      "failed_cases": [
+        "U01"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-U02",
+      "target_case": "U02",
+      "fault": "Ignores the offer deadline",
+      "mutation": {
+        "old": "const offerValid=()=>validUntil===null||(Number.isFinite(validUntil)&&now()<validUntil);",
+        "new": "const offerValid=()=>true;"
+      },
+      "module_sha256": "ec53ab82f16427a775eb324eb83735118f9a2275af283d529536f5b59f86bd48",
+      "result_sha256": "b7aa891426bada50e4caf30083e4d02d2be83260f75ce175e525c845edda7a89",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U02.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U02.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-U02.log",
+        "log_sha256": "ccbc111b5aa6a48fb6a0bad4962779e042910b92dd40030b9524a4a74ea019f1"
+      },
+      "failed_cases": [
+        "U02"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-U03",
+      "target_case": "U03",
+      "fault": "Silently advances the expected revision and overwrites the newer revision",
+      "mutation": {
+        "old": "api.restore({requestId:operationId,itemId,expectedRevision})",
+        "new": "api.restore({requestId:operationId,itemId,expectedRevision:expectedRevision+1})"
+      },
+      "module_sha256": "8d4fb8d3744acb13d25fff5ce6e5c58d1311d2a772b48078fd39b1c233995bdc",
+      "result_sha256": "a082aa1170775eef64093b6d293b50cf3c698baba0c4eba546053f992e43cc61",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U03.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U03.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-U03.log",
+        "log_sha256": "f5d4abb0dad402efeb5e5863c78fd0149e02fbd3337957df275226a08af9ac43"
+      },
+      "failed_cases": [
+        "U01",
+        "U03",
+        "U04",
+        "U05",
+        "U06",
+        "U07",
+        "U09"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-U04",
+      "target_case": "U04",
+      "fault": "Treats compensation acceptance as restoration",
+      "mutation": {
+        "old": "if(result?.status==='pending'){phase='pending';message=",
+        "new": "if(result?.status==='pending'){phase='restored';message="
+      },
+      "module_sha256": "ad5256a8ad500bad293a29d4bf6651be406f8e461150155211dda8be1262b971",
+      "result_sha256": "2ea382f462c49069d12989b4398f1df7c15361625ad3a20832d1f50a9d7bf4f9",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U04.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U04.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-U04.log",
+        "log_sha256": "704fe6686ae636d80a6a055de1f3f65f648d285d1bbde76a7883f75a4323c54c"
+      },
+      "failed_cases": [
+        "U04",
+        "U09"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-U05",
+      "target_case": "U05",
+      "fault": "Drops the supplied next action after compensation failure",
+      "mutation": {
+        "old": "nextAction:recoveryAction",
+        "new": "nextAction:null"
+      },
+      "module_sha256": "c168fcc595abf0e1c806d5ed251bb7bd656d4663b8dcb5b2d33ffa79d2f8fa40",
+      "result_sha256": "33a6ace38141d3b607be8abea78974cd207be88ce568ee8de8d8fdb9af817cff",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U05.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U05.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-U05.log",
+        "log_sha256": "ef66d58e45867d8a18a96bccdb2f6830ea5ab668715dbe8669c9cc2cc82b1e09"
+      },
+      "failed_cases": [
+        "U05"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-U06",
+      "target_case": "U06",
+      "fault": "Hides declared residual effects after success",
+      "mutation": {
+        "old": "residualEffects,canUndo:",
+        "new": "residualEffects:[],canUndo:"
+      },
+      "module_sha256": "b348c1bc398f87c13e8139a6c21ca1aac3155604edd27c5f946118d0a34ae27f",
+      "result_sha256": "87307a701f4d287e6b6a2e70f8a17e42460529e5feb921fec022a4214412994f",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U06.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U06.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-U06.log",
+        "log_sha256": "2cdb94cab5743f347a2a631c51a78d7b81d6063853e05bea133cdc53b5aa6632"
+      },
+      "failed_cases": [
+        "U06"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-U07",
+      "target_case": "U07",
+      "fault": "Treats a lost restoration reply as restored",
+      "mutation": {
+        "old": "catch{if(!final()){phase='unknown';message='応答がなく回復結果は未確認です。';}}",
+        "new": "catch{if(!final()){phase='restored';message='応答がなく回復結果は未確認です。';}}"
+      },
+      "module_sha256": "a5c01f4476803602ce7b819d40905ee81f89108ffc5e9f4b54d047180022cb74",
+      "result_sha256": "456f614fca71970bb4eb0824fdb213f0500327889938144cc03316409b703b75",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U07.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U07.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-U07.log",
+        "log_sha256": "c8632db7bdb0392b9f39e71de7eaa1d36317736f1cb5fe51faa74a62fe693375"
+      },
+      "failed_cases": [
+        "U07"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-U08",
+      "target_case": "U08",
+      "fault": "Removes the repeated-Undo guard",
+      "mutation": {
+        "old": "if(started)return;",
+        "new": "if(false)return;"
+      },
+      "module_sha256": "8be74642b1d115dfd98844daebf51c1063d56e9ffd466cad16b2e136567ae4a7",
+      "result_sha256": "d5307062c82757b322dfcf517038615a74565908bc74c5e8f3634ce858177ec4",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U08.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U08.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-U08.log",
+        "log_sha256": "331400ce0f4b4b9fbd7a6dd367daf793a2aeb677a7a2e88e632b55fdb47af3c1"
+      },
+      "failed_cases": [
+        "U08"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    },
+    {
+      "id": "N-U09",
+      "target_case": "U09",
+      "fault": "Removes lookup availability when the start offer expires",
+      "mutation": {
+        "old": "canCheck:started&&!final()&&typeof api.lookup==='function'",
+        "new": "canCheck:started&&!final()&&offerValid()&&typeof api.lookup==='function'"
+      },
+      "module_sha256": "b9c99c40ac1fd0b37b20b86d562739be392ac70fed275a9148278edcab2ae9fa",
+      "result_sha256": "d1e03fb8ceaf757557f5ebde51311938fc261f1910bc8fb848b65634e57eba06",
+      "execution": {
+        "command": [
+          "node",
+          "modules/interaction-ux-flow/tests/test_task_flows.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U09.mjs",
+          "campaigns/B/rounds/02/independent/negative-controls/N-U09.json"
+        ],
+        "returncode": 1,
+        "log": "negative-controls/N-U09.log",
+        "log_sha256": "6721a7967008383146181a941ce6a9390738fbac31587a7626daea235dbb0d2e"
+      },
+      "failed_cases": [
+        "U09"
+      ],
+      "target_detected": true,
+      "test_total": 16
+    }
+  ],
+  "negative_control_summary": {
+    "total": 16,
+    "detected": 16
+  },
+  "source_integrity": [
+    {
+      "source_id": "B-S201",
+      "capture_file": "private-evidence:round02/researcher1/sources/B-S201-w3c-wcag22.web.txt",
+      "expected_sha256": "9d695da84bb1e7f8d89ba34a00daa16aefce296e40a833cf8dd5f1180ed5d932",
+      "actual_sha256": "9d695da84bb1e7f8d89ba34a00daa16aefce296e40a833cf8dd5f1180ed5d932",
+      "matches": true,
+      "findings_sha256": "f9862c8dd1a0235be1ed5cacd420917dd715090c12e3e977d833f35c65e34c7e"
+    },
+    {
+      "source_id": "B-S202",
+      "capture_file": "private-evidence:round02/researcher1/sources/B-S202-w3c-understanding-334.web.txt",
+      "expected_sha256": "9d113e8357265b6b5aa88334ac2cb286f4c7dca09075f851d40ec31db3349588",
+      "actual_sha256": "9d113e8357265b6b5aa88334ac2cb286f4c7dca09075f851d40ec31db3349588",
+      "matches": true,
+      "findings_sha256": "f9862c8dd1a0235be1ed5cacd420917dd715090c12e3e977d833f35c65e34c7e"
+    },
+    {
+      "source_id": "B-S203",
+      "capture_file": "private-evidence:round02/researcher1/sources/B-S203-w3c-understanding-337.web.txt",
+      "expected_sha256": "dd8a6fe22207347e18ec9fc9966aa1933a1327b1c674029f6631f60bdd6a775e",
+      "actual_sha256": "dd8a6fe22207347e18ec9fc9966aa1933a1327b1c674029f6631f60bdd6a775e",
+      "matches": true,
+      "findings_sha256": "f9862c8dd1a0235be1ed5cacd420917dd715090c12e3e977d833f35c65e34c7e"
+    },
+    {
+      "source_id": "B-S204",
+      "capture_file": "private-evidence:round02/researcher1/sources/B-S204-govuk-error-message.web.txt",
+      "expected_sha256": "106c29227c18018f6e91fcbcb1bc132222a439285bdb9ae3d3fa7a85719159e3",
+      "actual_sha256": "106c29227c18018f6e91fcbcb1bc132222a439285bdb9ae3d3fa7a85719159e3",
+      "matches": true,
+      "findings_sha256": "f9862c8dd1a0235be1ed5cacd420917dd715090c12e3e977d833f35c65e34c7e"
+    },
+    {
+      "source_id": "B-S205",
+      "capture_file": "private-evidence:round02/researcher1/sources/B-S205-govuk-check-answers.web.txt",
+      "expected_sha256": "81ce6c749a7a8b10d8964ff5d8d1e0288be17ab3ddae506ed4a88e1cda8f62ba",
+      "actual_sha256": "81ce6c749a7a8b10d8964ff5d8d1e0288be17ab3ddae506ed4a88e1cda8f62ba",
+      "matches": true,
+      "findings_sha256": "f9862c8dd1a0235be1ed5cacd420917dd715090c12e3e977d833f35c65e34c7e"
+    },
+    {
+      "source_id": "B-T301",
+      "capture_file": "private-evidence:round02/researcher2/sources/B-T301-microsoft-compensating-transaction.web.txt",
+      "expected_sha256": "8f41b3690e625973f1b3ae1497e3a78176a92c3e7797c1038e88f3aad7cf8369",
+      "actual_sha256": "8f41b3690e625973f1b3ae1497e3a78176a92c3e7797c1038e88f3aad7cf8369",
+      "matches": true,
+      "findings_sha256": "5fd677055b9b41bf9028076e8e3098e2a59fcec686e1dae8567700d09f436d30"
+    },
+    {
+      "source_id": "B-T302",
+      "capture_file": "private-evidence:round02/researcher2/sources/B-T302-microsoft-confirmations.web.txt",
+      "expected_sha256": "ed358713ccb9a1dbaa8651286f5a1aff9f31d9209e45ab4ae49e42abccd0e014",
+      "actual_sha256": "ed358713ccb9a1dbaa8651286f5a1aff9f31d9209e45ab4ae49e42abccd0e014",
+      "matches": true,
+      "findings_sha256": "5fd677055b9b41bf9028076e8e3098e2a59fcec686e1dae8567700d09f436d30"
+    },
+    {
+      "source_id": "B-T303",
+      "capture_file": "private-evidence:round02/researcher2/sources/B-T303-google-soft-delete.web.txt",
+      "expected_sha256": "039e84432a7a7b5ed90ee3e867ec81c9e89e01827e1cf9ee779a733f5c1a7c55",
+      "actual_sha256": "039e84432a7a7b5ed90ee3e867ec81c9e89e01827e1cf9ee779a733f5c1a7c55",
+      "matches": true,
+      "findings_sha256": "5fd677055b9b41bf9028076e8e3098e2a59fcec686e1dae8567700d09f436d30"
+    },
+    {
+      "source_id": "B-T304",
+      "capture_file": "private-evidence:round02/researcher2/sources/B-T304-google-use-soft-deleted-objects.web.txt",
+      "expected_sha256": "f6839982cfed82ff157cb66a917067840a2a201a581e5c02927049f1b8406f1e",
+      "actual_sha256": "f6839982cfed82ff157cb66a917067840a2a201a581e5c02927049f1b8406f1e",
+      "matches": true,
+      "findings_sha256": "5fd677055b9b41bf9028076e8e3098e2a59fcec686e1dae8567700d09f436d30"
+    },
+    {
+      "source_id": "B-T305",
+      "capture_file": "private-evidence:round02/researcher2/sources/B-T305-google-long-running-operations.web.txt",
+      "expected_sha256": "db001c7f78090e4f5cb5e9cf292201541b60fe69a358ab662d194832cb0b2a75",
+      "actual_sha256": "db001c7f78090e4f5cb5e9cf292201541b60fe69a358ab662d194832cb0b2a75",
+      "matches": true,
+      "findings_sha256": "5fd677055b9b41bf9028076e8e3098e2a59fcec686e1dae8567700d09f436d30"
+    }
+  ],
+  "source_integrity_passed": 10
+}

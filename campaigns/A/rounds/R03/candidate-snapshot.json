@@ -1,0 +1,18 @@
+{
+  "round": "R03",
+  "frozen_at": "2026-11-23T08:08:27.131369+00:00",
+  "files": {
+    "SKILL.md": "64cf83b646be6ba3de5f8ba767c57fefc3ec30ef97a776825e5f60b8633b832d",
+    "references/plan-contract.md": "6727f457cf2987a2d0651ccc1c4d05920ad3e8ef78140660ef50d46c0b651336",
+    "references/decision-information.md": "5966d9a675ad24dc98589efa1e5bde3371f9f4750c9b04ab6674ac75ab0e1731",
+    "references/feature-context.md": "a337109da9a1c88a0224e663e569136a377a642951988006a8ce9225f1800411",
+    "references/navigation-evidence.md": "13cdea39838cd389e7604fd11a634c63362f737ceb6238ab90cf9b2d21b2cb85",
+    "references/disclosure-and-verification.md": "78eff5f70e477d71f5dc5d7b2b52372418fb183cde4aae72d75551e5f7219529",
+    "references/sources.md": "4cf30b8d425cb61ca963f373960b6aacbb615ccd80757c02636fb4f2a01a6fba",
+    "references/information-architecture.md": "5cf0b444820c54258e300a176fbea668f0f58bfcac867a49fe4cf79594f34810",
+    "references/goals-and-features.md": "40189855c869962f68100838f5423e36b0c1a36a83d506e94652b56ac794283c",
+    "examples/decisions.md": "9b4e846acf78e6fe2c323a60de1e7b3a6460412ec9a88095643dfd7d04ca26d2",
+    "agents/openai.yaml": "dfaefb11d2113d7d17d826f10bfab1db3702bc3b4e6206a81786ea7d5222dcbc"
+  },
+  "scope": "Instructions used for the design task, frozen before independent critique"
+}

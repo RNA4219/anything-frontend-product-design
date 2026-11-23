@@ -1,0 +1,23 @@
+{
+  "repository": "https://github.com/RNA4219/anything-frontend-art-direction",
+  "revision": "97b19c29c0b63acfee9ad437f93af081ac0c6ef8",
+  "license": "MIT",
+  "original_prefix": "extensions/A",
+  "destination_prefix": "modules/product-information-architecture",
+  "files": [
+    "SKILL.md",
+    "agents/openai.yaml",
+    "checks/validate_plan.py",
+    "examples/decisions.md",
+    "references/disclosure-and-verification.md",
+    "references/goals-and-features.md",
+    "references/information-architecture.md",
+    "references/plan-contract.md",
+    "references/sources.md",
+    "tests/briefs/course-catalog.json",
+    "tests/briefs/support-triage.json",
+    "tests/test_validate.py"
+  ],
+  "acceptance": "reference-only pending current campaign tests",
+  "novelty_credit": false
+}

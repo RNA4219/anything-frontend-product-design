@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interaction UX Flow"
+  short_description: "Design recoverable flows with truthful task outcomes"
+  default_prompt: "Use $interaction-ux-flow to design and verify this task from entry to completion, including failure and recovery."

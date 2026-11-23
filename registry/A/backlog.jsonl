@@ -1,0 +1,25 @@
+{"issue_id": "A-001", "priority": 1, "title": "Goal/requirement traceability and safe feature disposition", "status": "OPEN", "planned_round": "R01", "owner": "A"}
+{"issue_id": "A-002", "priority": 1, "title": "Merge equivalence, dependencies, rare mandatory and unknown-demand capabilities", "status": "OPEN", "planned_round": "R01", "owner": "A"}
+{"issue_id": "A-003", "priority": 2, "title": "Canonical destinations, ambiguous labels, scoped and multi-role navigation", "status": "OPEN", "planned_round": "R02", "owner": "A"}
+{"issue_id": "A-004", "priority": 2, "title": "Taxonomy versus facets, alternate paths and search completeness", "status": "OPEN", "planned_round": "R02", "owner": "A"}
+{"issue_id": "A-005", "priority": 2, "title": "Decision-critical information, density and progressive disclosure boundaries", "status": "OPEN", "planned_round": "R03", "owner": "A"}
+{"issue_id": "A-006", "priority": 3, "title": "Executable plan contract, adversarial mutations and independent task comparison", "status": "OPEN", "planned_round": "R01-R03", "owner": "A"}
+{"issue_id": "A-007", "priority": 3, "title": "Large inventory, taxonomy migration and deprecated route discoverability", "status": "OPEN", "planned_round": "R04", "owner": "A"}
+{"issue_id": "A-XB-001", "priority": 2, "title": "Booking concurrency, confirmation, cancel and recovery states", "status": "OPEN", "planned_round": "B", "owner": "B"}
+{"issue_id": "A-XC-001", "priority": 2, "title": "Responsive disclosure and keyboard component semantics", "status": "OPEN", "planned_round": "C", "owner": "C"}
+{"issue_id": "A-XD-001", "priority": 2, "title": "Human tree testing, task timing and comparative usability evaluation", "status": "OPEN", "planned_round": "D", "owner": "D"}
+{"issue_id": "A-001", "status": "ACCEPT_BOUNDED", "round": "R01", "at": "2026-11-23T07:03:55.087941+00:00"}
+{"issue_id": "A-002", "status": "ACCEPT_BOUNDED", "round": "R01", "at": "2026-11-23T07:03:55.087941+00:00"}
+{"issue_id": "A-008", "priority": 2, "title": "Declared decision location must agree with the actual information/selection location", "owner": "A", "status": "OPEN", "planned_round": "R02", "discovered_in": "R01 comparison"}
+{"id": "A-003", "event": "decision", "round": "R02", "status": "ACCEPT_BOUNDED", "at": "2026-11-23T07:46:07.423103+00:00"}
+{"id": "A-004", "event": "decision", "round": "R02", "status": "ACCEPT_BOUNDED", "at": "2026-11-23T07:46:07.423103+00:00"}
+{"id": "A-008", "event": "decision", "round": "R02", "status": "ACCEPT_BOUNDED", "at": "2026-11-23T07:46:07.423103+00:00"}
+{"id": "A-007", "event": "progress", "round": "R02", "status": "PARTIAL", "remaining": "Real large-inventory migration, actual entry redirects and filter limits remain untested", "at": "2026-11-23T07:46:07.423103+00:00"}
+{"id": "A-009", "event": "registered", "priority": "P2", "owner": "A", "title": "Provided optional decisions and unknown values need explicit information obligations; structural PASS must expose semantic limits", "planned_round": "R03", "at": "2026-11-23T07:46:07.423103+00:00"}
+{"id": "A-010", "event": "registered", "priority": "P1", "owner": "A", "status": "PROBE", "round": "R03", "title": "One goal with several explicit mandatory capabilities may pass with only a subset reachable", "basis": "Parent code-inspection hypothesis; independent reproduction pending", "at": "2026-11-23T08:12:47.893452+00:00"}
+{"id": "A-010", "event": "confirmed", "round": "R03", "status": "FIX_UNDER_REVIEW", "evidence": "Independent critic C01 isolated/staged control; patch and 57 tests complete", "at": "2026-11-23T08:21:28.470345+00:00"}
+{"id": "A-011", "event": "registered", "priority": "P2", "owner": "A", "status": "OPEN", "planned_round": "R04", "title": "Identity and scoped coverage can be lost in taxonomy migration despite unchanged counts or plausible labels", "at": "2026-11-23T08:21:28.470345+00:00"}
+{"id": "A-005", "event": "decision", "round": "R03", "status": "ACCEPT_BOUNDED", "at": "2026-11-23T08:25:37.196539+00:00"}
+{"id": "A-009", "event": "decision", "round": "R03", "status": "ACCEPT_BOUNDED", "at": "2026-11-23T08:25:37.196539+00:00"}
+{"id": "A-010", "event": "decision", "round": "R03", "status": "ACCEPT_BOUNDED", "at": "2026-11-23T08:25:37.196539+00:00"}
+{"id": "A-006", "event": "progress", "round": "R03", "status": "PARTIAL", "remaining": "Human task effectiveness, held-out task distribution and semantic correctness beyond declared schema", "at": "2026-11-23T08:25:37.196539+00:00"}

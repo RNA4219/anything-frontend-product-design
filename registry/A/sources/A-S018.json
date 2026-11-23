@@ -1,0 +1,12 @@
+{
+  "source_id": "A-S018",
+  "title": "— Edward Scott / Baymard（2023）— Overcategorization of the Product Catalog Can Lead to Abandonment",
+  "url": "https://baymard.com/research-articles/ecommerce-over-categorization",
+  "canonical_url": "https://baymard.com/research-articles/ecommerce-over-categorization",
+  "original_id": "S18",
+  "provenance": "inherited-index",
+  "verified_in_current_round": false,
+  "rights": "Link and original paraphrase only; no third-party full text redistributed.",
+  "content_sha256": null,
+  "notes": "- **URL**: [Edward Scott / Baymard（2023）— Overcategorization of the Product Catalog Can Lead to Abandonment](https://baymard.com/research-articles/ecommerce-over-categorization)\n- **該当箇所**: How Overcategorization Harms Users’ Ability to Navigate the Product Catalog; How Using Filters Instead for Product Types with Shared Attributes Alleviates These Issues; How to Get Started Evaluating the Site Catalog。Web抽出 L139–147, L161–202, L224–257。\n- **確認日 / 種別**: 2026-11-23 / 本人研究・観察あり・宣伝あり。試験観察、サイトベンチマーク、設計助言を含む。\n- **原典の主張** (empirical_observation): 共通属性を持つ候補が別カテゴリに分かれると、試験参加者は比較や一覧把握に苦労し、商品を見落とす場合があったとBaymardは報告する。共通属性で比較する候補をフィルタとして扱う方法を提案している。\n- **制約・版・未確認**: 属性群が異なる商品、専門店と総合店、件数の違いによって適切な分け方は変わる。10–30件は著者も必ずではない兆候と限定する。見出しの75%はベンチマークサイトの実装比率で、離脱率ではない。\n- **接続する原則**: A05。原則のProcedure/JSON契約は、別に明記した本Skillの導出。"
+}

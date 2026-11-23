@@ -1,0 +1,24 @@
+{
+  "status": "HOLD",
+  "issues": [
+    {
+      "code": "AMBIGUOUS_SIBLING_LABEL",
+      "location": "navigation[2]",
+      "symptom": "Same short label reaches different destinations; inspect the context available at selection before deciding ambiguity",
+      "category": "information_architecture",
+      "severity": "hold"
+    }
+  ],
+  "checks_available": {
+    "contract_version": "1.1",
+    "context_and_retirement": true,
+    "human_usability": false
+  },
+  "counts": {
+    "goals": 2,
+    "features": 2,
+    "kept_features": 2,
+    "screens": 4,
+    "navigation_edges": 3
+  }
+}

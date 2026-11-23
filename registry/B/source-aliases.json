@@ -1,0 +1,43 @@
+{
+  "aliases": {
+    "B-S101": "B-S101",
+    "B-S102": "B-S102",
+    "B-S103": "B-S103",
+    "B-S104": "B-S104",
+    "B-S105": "B-S105",
+    "B-T201": "B-T201",
+    "B-T202": "B-T202",
+    "B-T203": "B-T203",
+    "B-T204": "B-T204",
+    "B-T205": "B-T205",
+    "B-T206": "B-T206",
+    "B-T304": "B-T304",
+    "B-T303": "B-T303",
+    "B-S205": "B-S205",
+    "B-T305": "B-T305",
+    "B-S201": "B-S201",
+    "B-S202": "B-S202",
+    "B-S204": "B-S204",
+    "B-T302": "B-T302",
+    "B-S203": "B-S203",
+    "B-T301": "B-T301",
+    "B-S301": "B-S301",
+    "B-S302": "B-S302",
+    "B-S303": "B-S303",
+    "B-T401": "B-T401",
+    "B-T402": "B-T402",
+    "B-T403": "B-T403"
+  },
+  "duplicates": [
+    {
+      "round": 3,
+      "source_id": "B-S101",
+      "action": "New sections/capture merged into the existing canonical source; no second source record created."
+    },
+    {
+      "round": 3,
+      "source_id": "B-S201",
+      "action": "New sections/capture merged into the existing canonical source; no second source record created."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "round": "R03",
+  "frozen_at": "2026-11-23T07:21:42.329328+00:00",
+  "criteria": [
+    {
+      "id": "D1",
+      "criterion": "利用する判断で必要な条件・比較情報を、その判断場所で展開なしに参照できる"
+    },
+    {
+      "id": "D2",
+      "criterion": "should/couldであっても提供する作業では必要情報を隠さない。延期した作業と区別する"
+    },
+    {
+      "id": "D3",
+      "criterion": "不明・未計測・該当なし・ゼロを区別し、不明な重要条件を確定値として扱わない"
+    },
+    {
+      "id": "D4",
+      "criterion": "比較・反復処理・初回理解の課題に応じて密度と開示を決め、普遍的要素数制限を作らない"
+    },
+    {
+      "id": "D5",
+      "criterion": "適用条件が非該当の補足は開示候補にでき、全情報の常時表示を強制しない"
+    },
+    {
+      "id": "D6",
+      "criterion": "設計意図・構造検査・表示検査・実利用結果を分けて報告し、既存visual_intentを保つ"
+    }
+  ],
+  "scale": "0/1 per criterion; count hard failures separately",
+  "hard_failures": [
+    "判断に必須の既知条件を落として不適合候補を適合として示す",
+    "不明値・未検証条件を確定値と捏造",
+    "Aの設計情報整理でB/Cの状態遷移や認可の実装成功を宣言"
+  ],
+  "protocol": "Same synthetic brief and original visual intent; prior round instructions versus revised instructions where feasible. At least one independent adversarial check. No human-effect claim.",
+  "frozen_before_candidate": true
+}

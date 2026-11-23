@@ -1,0 +1,10 @@
+{
+  "frozen_at": "2026-11-23T06:38:33.158797+00:00",
+  "files": {
+    "campaigns/B/rounds/01/plan.json": "2106401b969abc7d7e563992316c0444afccd02ae3feb19bcd29956365cdb8d5",
+    "campaigns/B/rounds/01/task.md": "67a8b9d14cc997df40d34efae5d58497ed073cc5403591d67096dbf163c15e4a",
+    "modules/interaction-ux-flow/tests/run_flow_trials.mjs": "b6124123085292d1865d6927a1a76358ce75511901436fd981c9f1fdda8c9003"
+  },
+  "baseline_generated": false,
+  "candidate_generated": false
+}

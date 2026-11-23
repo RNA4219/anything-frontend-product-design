@@ -1,0 +1,140 @@
+{
+  "source_id": "B-T305",
+  "canonical_url": "https://docs.cloud.google.com/storage/docs/using-long-running-operations",
+  "title": "Use long-running operations in Cloud Storage  |  Google Cloud Documentation",
+  "type": "official product operation documentation",
+  "authority": "Google Cloud Storage",
+  "capture_kind": "FULL",
+  "sha256": "db001c7f78090e4f5cb5e9cf292201541b60fe69a358ab662d194832cb0b2a75",
+  "locator": [
+    {
+      "section": "Cancel a long-running operation",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T305-google-long-running-operations.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            300,
+            302
+          ],
+          "local_lines": [
+            301,
+            303
+          ],
+          "complete_requested_range": true
+        },
+        {
+          "web_lines": [
+            318,
+            336
+          ],
+          "local_lines": [
+            319,
+            337
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn488266981view1"
+    },
+    {
+      "section": "Metadata / Error handling",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T305-google-long-running-operations.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            342,
+            363
+          ],
+          "local_lines": [
+            343,
+            364
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn488266981view1"
+    }
+  ],
+  "observed_facts": [
+    "取消は非同期かつbest effort。要求済みフラグは要求の成立を示すが、要求どおりになる保証はない。",
+    "取消権限が必要で、具体的手順はPOST /cancelを示す。",
+    "非同期APIは受付時のHTTP成功でも後で処理が失敗し得る。soft delete一括復元は200 OKでも途中失敗があり、Operationの状態を別途読む必要がある。",
+    "進捗の値-1は不明。UIの進捗推定を確定事実として扱えない。"
+  ],
+  "limitations": [
+    "Cloud Storage固有の具体的保証。共通OperationプロトコルB-S104と一致する点はあるが他APIへの一律適用はしない。",
+    "実際のAPIは呼び出していない。取消による既完了分の逆転、期限直前の競合、再試行コストは未検証。"
+  ],
+  "upstream_refs": [
+    {
+      "title": "AIP-151 long-running operations",
+      "url": null,
+      "observed_at": "web L190 link 15",
+      "followed": false,
+      "note": "既存B-S104の引用追跡を利用し再取得しない。",
+      "href_status": "Reference label observed, target href not inspected in this round; no URL asserted."
+    }
+  ],
+  "capture_file": "B-T305-google-long-running-operations.web.txt",
+  "capture_storage": "Private research archive",
+  "checked_at": "2026-11-23T07:15:18.366458+00:00",
+  "introduced_round": 2,
+  "redistribution": "Original captured text remains private. This public record contains original paraphrases, URLs and section locators only.",
+  "url": "https://docs.cloud.google.com/storage/docs/using-long-running-operations",
+  "section": [
+    {
+      "section": "Cancel a long-running operation",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T305-google-long-running-operations.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            300,
+            302
+          ],
+          "local_lines": [
+            301,
+            303
+          ],
+          "complete_requested_range": true
+        },
+        {
+          "web_lines": [
+            318,
+            336
+          ],
+          "local_lines": [
+            319,
+            337
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn488266981view1"
+    },
+    {
+      "section": "Metadata / Error handling",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T305-google-long-running-operations.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            342,
+            363
+          ],
+          "local_lines": [
+            343,
+            364
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn488266981view1"
+    }
+  ],
+  "read_status": "FULL: exact web-extracted text saved privately; not raw HTML",
+  "capture_sha256": "db001c7f78090e4f5cb5e9cf292201541b60fe69a358ab662d194832cb0b2a75",
+  "source_file_name": "B-T305-google-long-running-operations.web.txt",
+  "limits": [
+    "Cloud Storage固有の具体的保証。共通OperationプロトコルB-S104と一致する点はあるが他APIへの一律適用はしない。",
+    "実際のAPIは呼び出していない。取消による既完了分の逆転、期限直前の競合、再試行コストは未検証。"
+  ]
+}

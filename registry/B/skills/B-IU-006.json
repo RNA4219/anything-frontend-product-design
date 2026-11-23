@@ -1,0 +1,233 @@
+{
+  "skill_id": "B-IU-006",
+  "domain": "interaction-ux-flow",
+  "trigger": [
+    "重要な送信/変更の誤操作防止手段を選ぶ",
+    "確認済み内容を変更し、必要な質問を済ませて確認へ戻す"
+  ],
+  "intent": "操作の結果と能力に応じた防止手段を選び、確認を選んだフローでは現在の実効回答を見直して修正できる状態を保つ。",
+  "required_inputs": [
+    "操作対象と結果、法的約束/金融取引/保存システムのユーザー制御可能データの変更削除/テスト回答送信のどれに当たるか、適合対象レベル。",
+    "可逆性・入力検査と修正機会・確定前の見直し確認修正のうち、選んだ手段とその能力の根拠。",
+    "実効回答の定義、変更項目と追加質問/派生値の関係、最終確定操作。",
+    "現在入力、表示した確認内容、確認後の変更を判定するための状態。方式は指定しない。"
+  ],
+  "decision_rules": [
+    {
+      "if": "WCAG 3.3.4の列挙対象",
+      "then": "規範の3代替手段から実際に成立する少なくとも1つを満たす。選択が許されること自体を欠落・承認待ちにしない。",
+      "basis": "source_requirement",
+      "source_refs": [
+        "B-S201"
+      ],
+      "source_locations": [
+        "B-S201:3.3.4"
+      ],
+      "verification_cases": [
+        "U01"
+      ]
+    },
+    {
+      "if": "今回の申請fixtureで確認または変更を選ぶ",
+      "then": "副作用のある送信を開始せず、変更先を開く。確定は最終操作で行う。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S205"
+      ],
+      "source_locations": [
+        "task.md:Application repair",
+        "B-S205:L415,L419,L422"
+      ],
+      "verification_cases": [
+        "F01"
+      ]
+    },
+    {
+      "if": "確認済みの実効回答を変更",
+      "then": "新しい内容を確認し直す状態へ移し、無関係な値を保持する。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S205",
+        "B-S201"
+      ],
+      "source_locations": [
+        "B-S205:L424-L429",
+        "B-S201:3.3.7",
+        "task.md:Application repair"
+      ],
+      "verification_cases": [
+        "F03"
+      ]
+    },
+    {
+      "if": "回答変更で追加質問が必要または旧回答が非該当になる",
+      "then": "必要な質問だけを経由して確認へ戻し、非該当回答を実効payloadへ含めない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S205"
+      ],
+      "source_locations": [
+        "B-S205:L417,L424-L429",
+        "task.md:Application repair"
+      ],
+      "verification_cases": [
+        "F04"
+      ]
+    },
+    {
+      "if": "確定後の操作が処理中または結果未確認",
+      "then": "同じ操作へ接続し、新規の二重送信を避ける。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S104",
+        "B-T201"
+      ],
+      "source_locations": [
+        "B-IU-001",
+        "B-IU-002"
+      ],
+      "verification_cases": [
+        "F06",
+        "F07"
+      ]
+    },
+    {
+      "if": "回答の分岐変更により質問が非該当または再び必要になる",
+      "then": "非該当質問のエラーを現在の確定条件から外す。他の有効な質問の未解決エラーは保持し、再び必要になった質問は再検証する。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S205"
+      ],
+      "verification_cases": [
+        "E01-inactive-error",
+        "E02-reactivated-required-answer",
+        "E03-unrelated-active-error-preserved"
+      ]
+    }
+  ],
+  "procedure": [
+    "3.3.4(AA)の適用を判断する際は、法的約束、金融取引、保存システム内のユーザーが制御できるデータの変更・削除、ユーザーのテスト回答送信という対象列挙を確認する。対象を不可逆操作だけに縮めない。",
+    "対象では、送信が可逆、入力を検査して修正機会を提供、確定前に見直し・確認・修正できる手段、の少なくとも1つを満たす。3手段すべてやモーダルを一律必須にしない。可逆性を選ぶ場合はB-IU-004で実効範囲を確認する。",
+    "今回の申請fixtureは、業務要件として最終実効回答の確認を選んでいる。確認表示と変更リンクは送信を発生させず、最終送信の作用を明確にする。各項目/区分の変更先へ既入力を渡す。",
+    "変更により必要な追加質問が生じる場合はそれだけを済ませ、無関係な回答の再入力や残り全画面の再通過を要求せず確認へ戻す。同一process内の再利用には3.3.7と3例外を適用する。",
+    "実効回答が変わったら古い確認を新内容の確認に流用せず、変更後の内容で確定可能かを見直す。派生値や依存判断の再検証範囲は適用先の仕様で定め、無関係な入力を消さない。",
+    "今回のfixtureでは配送を選んだ時だけ住所を必須・実効回答とし、受取へ変えた時の古い配送住所を有効な提出値へ黙って含めない。draft内保持の可否と実際の送信payloadを分ける。",
+    "送信後の受付・結果未確認・再操作はB-IU-001/002に委任する。確認画面を見た事実、ボタン押下、受付応答だけで提出完了を主張しない。"
+  ],
+  "expected_outputs": [
+    "選択した誤操作防止手段と根拠、実効回答の確認・変更・追加質問・最終送信の対応",
+    "代表タスクの実行記録と未検証範囲"
+  ],
+  "dependencies": [
+    "B-IU-004: 防止手段に可逆性を選ぶ — 実際に何を戻せるかの根拠を確認する。",
+    "B-IU-005: 検査で入力を拒否するか、確認から修正へ移る — 対象と修正案、作業保持、再入力の例外を一体で扱う。",
+    "B-IU-001/002: 最終送信後 — 受付・結果未確認・再試行と新しい意図の扱いを既存単位に委任する。",
+    "適用先の依存関係: 実効回答/料金/枠/同意内容等が変更される — どの判断が古くなるかは原典が定義しない。",
+    "C: 実UI構築 — Changeリンクのアクセシブル名、focus移動等のmechanicsはCに渡す。"
+  ],
+  "exceptions": [
+    "確認は3.3.4の唯一の達成手段ではない。選択した可逆/検査が条件を満たす場合にも確認ページを無条件追加しない。",
+    "今回のfixtureの最終確認は明示した業務要件であり、WCAGからすべての申請に同じ画面を要求したものではない。",
+    "3.3.7は同一processと3例外を保持する。情報が無効なら再入力/更新できるが、無関係な値の初期化まで広げない。",
+    "変更が提出内容へ影響しない場合まで、すべての内部状態変更で再確認を要求する一般規則にはしない。",
+    "適用先固有の法・安全・セキュリティ上の要求を、軽微な操作という判断だけで解除しない。今回その要求の有無は判定していない。"
+  ],
+  "failure_modes": [
+    "レビュー表示やChangeで送信が走る。",
+    "変更後も古いreviewの承認で新しい内容を送信できる。",
+    "受取へ変えても旧配送住所がactive payloadへ残る。",
+    "連絡先一つの変更で無関係な全回答を再入力する。",
+    "見直し画面はあるが情報の修正経路がない。",
+    "毎操作確認を唯一の安全策として固定する。",
+    "非表示となった質問のエラーが残り、利用者が確認や送信へ進めない。"
+  ],
+  "verification": {
+    "criteria": [
+      "F01",
+      "F03",
+      "F04",
+      "F06 (R01 dependency)",
+      "F07 (R01 dependency)",
+      "U01 (conditional protection choice)"
+    ],
+    "evidence": [
+      "campaigns/B/rounds/02/task-flow-results.json",
+      "campaigns/B/rounds/02/branch-regressions-revised.json",
+      "campaigns/B/rounds/02/independent/review.json"
+    ],
+    "limitations": [
+      "Executed fixture cases and independent DOM events only; not production API, browser rendering, assistive tech or human efficacy.",
+      "R02 uses deliberate fault controls, not generated baseline/candidate arms.",
+      "E01 regression and E02 source-wording repair are exploratory findings separate from the predeclared 16 cases."
+    ]
+  },
+  "source_refs": [
+    "B-S201",
+    "B-S202",
+    "B-S203",
+    "B-S205",
+    "B-T302",
+    "B-S104",
+    "B-T201"
+  ],
+  "confidence": {
+    "source_support": "Normative WCAG, separately marked informative explanations and official design/service guidance. Legacy Win7 material is historical context only.",
+    "transfer": "Accepted conditional guidance after independent source, fault-control and task-event checks; no causal human-usability claim.",
+    "limits": [
+      "規範は3代替の選択を許す。一般ケースの未選択は資料欠落ではない。今回fixtureはreviewを選択済み。",
+      "依存判断・有効payload・有効性期間は適用先が定義する。原典はrevision/hashのアルゴリズムを指定しない。",
+      "G164/G98等の個別技法ページ、GOV.UKが参照する元実験は未取得。この抽出を技法個別適合や実測効果の証拠にしない。"
+    ]
+  },
+  "status": "ACCEPT",
+  "version": "0.1.1",
+  "introduced_round": 2,
+  "updated_round": 2,
+  "analysis_ref": "campaigns/B/rounds/02/analysis.md",
+  "analysis_sha256": "a1153db012dc0de318cb7891e459f881928b9d8918f18b52eae9e74a45c2a97d",
+  "source_facts": [
+    {
+      "id": "006-F1",
+      "kind": "normative",
+      "fact": "3.3.4(AA)は列挙対象について可逆・検査と修正・確定前の見直し確認修正の少なくとも1つを要求する。全情報送信への同種要件は3.3.6(AAA)である。",
+      "refs": [
+        "B-S201:L1328-L1341,L1350-L1363"
+      ]
+    },
+    {
+      "id": "006-F2",
+      "kind": "informative_explanation",
+      "fact": "Understandingはすべての保存命令や単純作成/編集ごとの確認を意図しないと説明する。十分技法は必須の唯一手段ではない。",
+      "refs": [
+        "B-S202:L42,L55-L73"
+      ]
+    },
+    {
+      "id": "006-F3",
+      "kind": "official_design_guidance",
+      "fact": "GOV.UK Check answersは変更先で既入力を表示し、変更後は確認へ戻し、追加質問が必要な時だけ先に質問する。関連する区分のみ表示し、最終送信の意味を明確にする。",
+      "refs": [
+        "B-S205:L410-L430"
+      ]
+    },
+    {
+      "id": "006-F4",
+      "kind": "legacy_context_only",
+      "fact": "Microsoft ConfirmationsはWindows 7向けで新しいWindows用に更新されていない。頻繁な確認の読み飛ばしと代替設計を論じるが、現行の普遍規則や効果量の根拠にはしない。",
+      "refs": [
+        "B-T302:L31-L35,L69,L80-L90,L156"
+      ]
+    }
+  ],
+  "parent_decisions": [
+    "Local Undo does not universally require a deadline or revision identifier; only applicable contract conditions are required.",
+    "Fixed fixture prerequisites are not attributed to WCAG. Product constants and disputed source passages are excluded."
+  ],
+  "relationship_to_existing": {
+    "artifact": "https://github.com/RNA4219/anything-frontend-product-design/pull/2",
+    "revision": "f66e7954f2a59a59dad861901b9270076c2fc691",
+    "type": "formalizes_or_refines_existing_concept",
+    "additional_value": "Normative alternatives/exception scope, retained answers, active-payload and review invalidation tests."
+  },
+  "accepted_round": 2
+}

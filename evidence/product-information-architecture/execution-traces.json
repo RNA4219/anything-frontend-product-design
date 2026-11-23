@@ -1,0 +1,1207 @@
+{
+  "python": "3.11.9",
+  "script_sha256_lf": "12ad5548c1b96afc3fa7c9428a6079aab19e3e5ec50df2ca4ef6c88d9f39bb04",
+  "cases": {
+    "status-base": {
+      "arguments": [
+        "-B",
+        "-X",
+        "utf8",
+        "modules/product-information-architecture/examples/booking_choice.py",
+        "--variant",
+        "status",
+        "--scenario",
+        "base",
+        "--steps",
+        "group changeable",
+        "open R-204",
+        "slot 12-10",
+        "confirm",
+        "reopen",
+        "group changeable",
+        "open R-204"
+      ],
+      "exit": 0,
+      "result": {
+        "data": "synthetic",
+        "task": "booking-change",
+        "variant": "status",
+        "scenario": "base",
+        "commands": [
+          {
+            "command": "group changeable",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          },
+          {
+            "command": "slot 12-10",
+            "accepted": true
+          },
+          {
+            "command": "confirm",
+            "accepted": true
+          },
+          {
+            "command": "reopen",
+            "accepted": true
+          },
+          {
+            "command": "group changeable",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          }
+        ],
+        "opened_ids": [
+          "R-204",
+          "R-204"
+        ],
+        "changes": [
+          {
+            "before": {
+              "id": "R-204",
+              "date": "12-08",
+              "time": "14:00",
+              "status": "確定・変更可",
+              "room": "工作室"
+            },
+            "after": {
+              "id": "R-204",
+              "date": "12-10",
+              "time": "14:00",
+              "status": "確定・変更可",
+              "room": "工作室"
+            }
+          }
+        ],
+        "bookings": [
+          {
+            "id": "R-204",
+            "date": "12-10",
+            "time": "14:00",
+            "status": "確定・変更可",
+            "room": "工作室"
+          },
+          {
+            "id": "R-205",
+            "date": "11-10",
+            "time": "14:00",
+            "status": "利用済み",
+            "room": "工作室"
+          }
+        ],
+        "booking-change-find": true,
+        "booking-change-confirm": true
+      },
+      "transcript": [
+        "架空データの試作 | 12月8日 14:00の工作室の予約を12月10日 14:00へ変更し、結果を確かめる。",
+        "back 一つ戻る / reopen 予約一覧を再表示 / quit 終了",
+        "予約一覧",
+        "group changeable | 確定・変更可",
+        "group used | 利用済み",
+        "> group changeable",
+        "予約一覧 / 確定・変更可",
+        "open R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "> open R-204",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "slot 12-10 | 12月10日 14:00",
+        "slot 12-11 | 12月11日 14:00",
+        "> slot 12-10",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "変更前 12月8日 14:00",
+        "変更後 12月10日 14:00",
+        "confirm 変更を確定 / back 候補選択へ戻る",
+        "> confirm",
+        "変更を確定しました。R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "slot 12-11 | 12月11日 14:00",
+        "> reopen",
+        "予約一覧を再表示しました。",
+        "予約一覧",
+        "group changeable | 確定・変更可",
+        "group used | 利用済み",
+        "> group changeable",
+        "予約一覧 / 確定・変更可",
+        "open R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "> open R-204",
+        "R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "slot 12-11 | 12月11日 14:00"
+      ]
+    },
+    "status-two-changeable": {
+      "arguments": [
+        "-B",
+        "-X",
+        "utf8",
+        "modules/product-information-architecture/examples/booking_choice.py",
+        "--variant",
+        "status",
+        "--scenario",
+        "two-changeable",
+        "--steps",
+        "group changeable",
+        "open R-204",
+        "slot 12-10",
+        "confirm",
+        "reopen",
+        "group changeable",
+        "open R-204"
+      ],
+      "exit": 0,
+      "result": {
+        "data": "synthetic",
+        "task": "booking-change",
+        "variant": "status",
+        "scenario": "two-changeable",
+        "commands": [
+          {
+            "command": "group changeable",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          },
+          {
+            "command": "slot 12-10",
+            "accepted": true
+          },
+          {
+            "command": "confirm",
+            "accepted": true
+          },
+          {
+            "command": "reopen",
+            "accepted": true
+          },
+          {
+            "command": "group changeable",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          }
+        ],
+        "opened_ids": [
+          "R-204",
+          "R-204"
+        ],
+        "changes": [
+          {
+            "before": {
+              "id": "R-204",
+              "date": "12-08",
+              "time": "14:00",
+              "status": "確定・変更可",
+              "room": "工作室"
+            },
+            "after": {
+              "id": "R-204",
+              "date": "12-10",
+              "time": "14:00",
+              "status": "確定・変更可",
+              "room": "工作室"
+            }
+          }
+        ],
+        "bookings": [
+          {
+            "id": "R-206",
+            "date": "12-08",
+            "time": "10:00",
+            "status": "確定・変更可",
+            "room": "工作室"
+          },
+          {
+            "id": "R-204",
+            "date": "12-10",
+            "time": "14:00",
+            "status": "確定・変更可",
+            "room": "工作室"
+          },
+          {
+            "id": "R-205",
+            "date": "11-10",
+            "time": "14:00",
+            "status": "利用済み",
+            "room": "工作室"
+          }
+        ],
+        "booking-change-find": true,
+        "booking-change-confirm": true
+      },
+      "transcript": [
+        "架空データの試作 | 12月8日 14:00の工作室の予約を12月10日 14:00へ変更し、結果を確かめる。",
+        "back 一つ戻る / reopen 予約一覧を再表示 / quit 終了",
+        "予約一覧",
+        "group changeable | 確定・変更可",
+        "group used | 利用済み",
+        "> group changeable",
+        "予約一覧 / 確定・変更可",
+        "open R-206 | 工作室 | 12月8日 10:00 | 確定・変更可",
+        "open R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "> open R-204",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "slot 12-10 | 12月10日 14:00",
+        "slot 12-11 | 12月11日 14:00",
+        "> slot 12-10",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "変更前 12月8日 14:00",
+        "変更後 12月10日 14:00",
+        "confirm 変更を確定 / back 候補選択へ戻る",
+        "> confirm",
+        "変更を確定しました。R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "slot 12-11 | 12月11日 14:00",
+        "> reopen",
+        "予約一覧を再表示しました。",
+        "予約一覧",
+        "group changeable | 確定・変更可",
+        "group used | 利用済み",
+        "> group changeable",
+        "予約一覧 / 確定・変更可",
+        "open R-206 | 工作室 | 12月8日 10:00 | 確定・変更可",
+        "open R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "> open R-204",
+        "R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "slot 12-11 | 12月11日 14:00"
+      ]
+    },
+    "room-base": {
+      "arguments": [
+        "-B",
+        "-X",
+        "utf8",
+        "modules/product-information-architecture/examples/booking_choice.py",
+        "--variant",
+        "room",
+        "--scenario",
+        "base",
+        "--steps",
+        "group workshop",
+        "open R-204",
+        "slot 12-10",
+        "confirm",
+        "reopen",
+        "group workshop",
+        "open R-204"
+      ],
+      "exit": 0,
+      "result": {
+        "data": "synthetic",
+        "task": "booking-change",
+        "variant": "room",
+        "scenario": "base",
+        "commands": [
+          {
+            "command": "group workshop",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          },
+          {
+            "command": "slot 12-10",
+            "accepted": true
+          },
+          {
+            "command": "confirm",
+            "accepted": true
+          },
+          {
+            "command": "reopen",
+            "accepted": true
+          },
+          {
+            "command": "group workshop",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          }
+        ],
+        "opened_ids": [
+          "R-204",
+          "R-204"
+        ],
+        "changes": [
+          {
+            "before": {
+              "id": "R-204",
+              "date": "12-08",
+              "time": "14:00",
+              "status": "確定・変更可",
+              "room": "工作室"
+            },
+            "after": {
+              "id": "R-204",
+              "date": "12-10",
+              "time": "14:00",
+              "status": "確定・変更可",
+              "room": "工作室"
+            }
+          }
+        ],
+        "bookings": [
+          {
+            "id": "R-204",
+            "date": "12-10",
+            "time": "14:00",
+            "status": "確定・変更可",
+            "room": "工作室"
+          },
+          {
+            "id": "R-205",
+            "date": "11-10",
+            "time": "14:00",
+            "status": "利用済み",
+            "room": "工作室"
+          }
+        ],
+        "booking-change-find": true,
+        "booking-change-confirm": true
+      },
+      "transcript": [
+        "架空データの試作 | 12月8日 14:00の工作室の予約を12月10日 14:00へ変更し、結果を確かめる。",
+        "back 一つ戻る / reopen 予約一覧を再表示 / quit 終了",
+        "予約一覧",
+        "group workshop | 工作室",
+        "> group workshop",
+        "予約一覧 / 工作室",
+        "open R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "open R-205 | 工作室 | 11月10日 14:00 | 利用済み",
+        "> open R-204",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "slot 12-10 | 12月10日 14:00",
+        "slot 12-11 | 12月11日 14:00",
+        "> slot 12-10",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "変更前 12月8日 14:00",
+        "変更後 12月10日 14:00",
+        "confirm 変更を確定 / back 候補選択へ戻る",
+        "> confirm",
+        "変更を確定しました。R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "slot 12-11 | 12月11日 14:00",
+        "> reopen",
+        "予約一覧を再表示しました。",
+        "予約一覧",
+        "group workshop | 工作室",
+        "> group workshop",
+        "予約一覧 / 工作室",
+        "open R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "open R-205 | 工作室 | 11月10日 14:00 | 利用済み",
+        "> open R-204",
+        "R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "slot 12-11 | 12月11日 14:00"
+      ]
+    },
+    "room-two-changeable": {
+      "arguments": [
+        "-B",
+        "-X",
+        "utf8",
+        "modules/product-information-architecture/examples/booking_choice.py",
+        "--variant",
+        "room",
+        "--scenario",
+        "two-changeable",
+        "--steps",
+        "group workshop",
+        "open R-204",
+        "slot 12-10",
+        "confirm",
+        "reopen",
+        "group workshop",
+        "open R-204"
+      ],
+      "exit": 0,
+      "result": {
+        "data": "synthetic",
+        "task": "booking-change",
+        "variant": "room",
+        "scenario": "two-changeable",
+        "commands": [
+          {
+            "command": "group workshop",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          },
+          {
+            "command": "slot 12-10",
+            "accepted": true
+          },
+          {
+            "command": "confirm",
+            "accepted": true
+          },
+          {
+            "command": "reopen",
+            "accepted": true
+          },
+          {
+            "command": "group workshop",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          }
+        ],
+        "opened_ids": [
+          "R-204",
+          "R-204"
+        ],
+        "changes": [
+          {
+            "before": {
+              "id": "R-204",
+              "date": "12-08",
+              "time": "14:00",
+              "status": "確定・変更可",
+              "room": "工作室"
+            },
+            "after": {
+              "id": "R-204",
+              "date": "12-10",
+              "time": "14:00",
+              "status": "確定・変更可",
+              "room": "工作室"
+            }
+          }
+        ],
+        "bookings": [
+          {
+            "id": "R-206",
+            "date": "12-08",
+            "time": "10:00",
+            "status": "確定・変更可",
+            "room": "工作室"
+          },
+          {
+            "id": "R-204",
+            "date": "12-10",
+            "time": "14:00",
+            "status": "確定・変更可",
+            "room": "工作室"
+          },
+          {
+            "id": "R-205",
+            "date": "11-10",
+            "time": "14:00",
+            "status": "利用済み",
+            "room": "工作室"
+          }
+        ],
+        "booking-change-find": true,
+        "booking-change-confirm": true
+      },
+      "transcript": [
+        "架空データの試作 | 12月8日 14:00の工作室の予約を12月10日 14:00へ変更し、結果を確かめる。",
+        "back 一つ戻る / reopen 予約一覧を再表示 / quit 終了",
+        "予約一覧",
+        "group workshop | 工作室",
+        "> group workshop",
+        "予約一覧 / 工作室",
+        "open R-206 | 工作室 | 12月8日 10:00 | 確定・変更可",
+        "open R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "open R-205 | 工作室 | 11月10日 14:00 | 利用済み",
+        "> open R-204",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "slot 12-10 | 12月10日 14:00",
+        "slot 12-11 | 12月11日 14:00",
+        "> slot 12-10",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "変更前 12月8日 14:00",
+        "変更後 12月10日 14:00",
+        "confirm 変更を確定 / back 候補選択へ戻る",
+        "> confirm",
+        "変更を確定しました。R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "slot 12-11 | 12月11日 14:00",
+        "> reopen",
+        "予約一覧を再表示しました。",
+        "予約一覧",
+        "group workshop | 工作室",
+        "> group workshop",
+        "予約一覧 / 工作室",
+        "open R-206 | 工作室 | 12月8日 10:00 | 確定・変更可",
+        "open R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "open R-205 | 工作室 | 11月10日 14:00 | 利用済み",
+        "> open R-204",
+        "R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "slot 12-11 | 12月11日 14:00"
+      ]
+    },
+    "past-recovery": {
+      "arguments": [
+        "-B",
+        "-X",
+        "utf8",
+        "modules/product-information-architecture/examples/booking_choice.py",
+        "--variant",
+        "status",
+        "--scenario",
+        "base",
+        "--steps",
+        "group used",
+        "open R-205",
+        "slot 12-10",
+        "back",
+        "back",
+        "group changeable",
+        "open R-204",
+        "slot 12-10",
+        "confirm",
+        "reopen",
+        "group changeable",
+        "open R-204"
+      ],
+      "exit": 0,
+      "result": {
+        "data": "synthetic",
+        "task": "booking-change",
+        "variant": "status",
+        "scenario": "base",
+        "commands": [
+          {
+            "command": "group used",
+            "accepted": true
+          },
+          {
+            "command": "open R-205",
+            "accepted": true
+          },
+          {
+            "command": "slot 12-10",
+            "accepted": false
+          },
+          {
+            "command": "back",
+            "accepted": true
+          },
+          {
+            "command": "back",
+            "accepted": true
+          },
+          {
+            "command": "group changeable",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          },
+          {
+            "command": "slot 12-10",
+            "accepted": true
+          },
+          {
+            "command": "confirm",
+            "accepted": true
+          },
+          {
+            "command": "reopen",
+            "accepted": true
+          },
+          {
+            "command": "group changeable",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          }
+        ],
+        "opened_ids": [
+          "R-205",
+          "R-204",
+          "R-204"
+        ],
+        "changes": [
+          {
+            "before": {
+              "id": "R-204",
+              "date": "12-08",
+              "time": "14:00",
+              "status": "確定・変更可",
+              "room": "工作室"
+            },
+            "after": {
+              "id": "R-204",
+              "date": "12-10",
+              "time": "14:00",
+              "status": "確定・変更可",
+              "room": "工作室"
+            }
+          }
+        ],
+        "bookings": [
+          {
+            "id": "R-204",
+            "date": "12-10",
+            "time": "14:00",
+            "status": "確定・変更可",
+            "room": "工作室"
+          },
+          {
+            "id": "R-205",
+            "date": "11-10",
+            "time": "14:00",
+            "status": "利用済み",
+            "room": "工作室"
+          }
+        ],
+        "booking-change-find": true,
+        "booking-change-confirm": true
+      },
+      "transcript": [
+        "架空データの試作 | 12月8日 14:00の工作室の予約を12月10日 14:00へ変更し、結果を確かめる。",
+        "back 一つ戻る / reopen 予約一覧を再表示 / quit 終了",
+        "予約一覧",
+        "group changeable | 確定・変更可",
+        "group used | 利用済み",
+        "> group used",
+        "予約一覧 / 利用済み",
+        "open R-205 | 工作室 | 11月10日 14:00 | 利用済み",
+        "> open R-205",
+        "R-205 | 工作室 | 11月10日 14:00 | 利用済み",
+        "> slot 12-10",
+        "操作できません。この予約を指定の枠へ変更できません。",
+        "R-205 | 工作室 | 11月10日 14:00 | 利用済み",
+        "> back",
+        "予約一覧 / 利用済み",
+        "open R-205 | 工作室 | 11月10日 14:00 | 利用済み",
+        "> back",
+        "予約一覧",
+        "group changeable | 確定・変更可",
+        "group used | 利用済み",
+        "> group changeable",
+        "予約一覧 / 確定・変更可",
+        "open R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "> open R-204",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "slot 12-10 | 12月10日 14:00",
+        "slot 12-11 | 12月11日 14:00",
+        "> slot 12-10",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "変更前 12月8日 14:00",
+        "変更後 12月10日 14:00",
+        "confirm 変更を確定 / back 候補選択へ戻る",
+        "> confirm",
+        "変更を確定しました。R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "slot 12-11 | 12月11日 14:00",
+        "> reopen",
+        "予約一覧を再表示しました。",
+        "予約一覧",
+        "group changeable | 確定・変更可",
+        "group used | 利用済み",
+        "> group changeable",
+        "予約一覧 / 確定・変更可",
+        "open R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "> open R-204",
+        "R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "slot 12-11 | 12月11日 14:00"
+      ]
+    },
+    "abandon-preview": {
+      "arguments": [
+        "-B",
+        "-X",
+        "utf8",
+        "modules/product-information-architecture/examples/booking_choice.py",
+        "--variant",
+        "room",
+        "--scenario",
+        "base",
+        "--steps",
+        "group workshop",
+        "open R-204",
+        "slot 12-10",
+        "reopen",
+        "group workshop",
+        "open R-204"
+      ],
+      "exit": 1,
+      "result": {
+        "data": "synthetic",
+        "task": "booking-change",
+        "variant": "room",
+        "scenario": "base",
+        "commands": [
+          {
+            "command": "group workshop",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          },
+          {
+            "command": "slot 12-10",
+            "accepted": true
+          },
+          {
+            "command": "reopen",
+            "accepted": true
+          },
+          {
+            "command": "group workshop",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          }
+        ],
+        "opened_ids": [
+          "R-204",
+          "R-204"
+        ],
+        "changes": [],
+        "bookings": [
+          {
+            "id": "R-204",
+            "date": "12-08",
+            "time": "14:00",
+            "status": "確定・変更可",
+            "room": "工作室"
+          },
+          {
+            "id": "R-205",
+            "date": "11-10",
+            "time": "14:00",
+            "status": "利用済み",
+            "room": "工作室"
+          }
+        ],
+        "booking-change-find": true,
+        "booking-change-confirm": false
+      },
+      "transcript": [
+        "架空データの試作 | 12月8日 14:00の工作室の予約を12月10日 14:00へ変更し、結果を確かめる。",
+        "back 一つ戻る / reopen 予約一覧を再表示 / quit 終了",
+        "予約一覧",
+        "group workshop | 工作室",
+        "> group workshop",
+        "予約一覧 / 工作室",
+        "open R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "open R-205 | 工作室 | 11月10日 14:00 | 利用済み",
+        "> open R-204",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "slot 12-10 | 12月10日 14:00",
+        "slot 12-11 | 12月11日 14:00",
+        "> slot 12-10",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "変更前 12月8日 14:00",
+        "変更後 12月10日 14:00",
+        "confirm 変更を確定 / back 候補選択へ戻る",
+        "> reopen",
+        "予約一覧を再表示しました。",
+        "予約一覧",
+        "group workshop | 工作室",
+        "> group workshop",
+        "予約一覧 / 工作室",
+        "open R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "open R-205 | 工作室 | 11月10日 14:00 | 利用済み",
+        "> open R-204",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "slot 12-10 | 12月10日 14:00",
+        "slot 12-11 | 12月11日 14:00"
+      ]
+    },
+    "wrong-eligible": {
+      "arguments": [
+        "-B",
+        "-X",
+        "utf8",
+        "modules/product-information-architecture/examples/booking_choice.py",
+        "--variant",
+        "room",
+        "--scenario",
+        "two-changeable",
+        "--steps",
+        "group workshop",
+        "open R-206",
+        "slot 12-10",
+        "confirm",
+        "reopen",
+        "group workshop",
+        "open R-204"
+      ],
+      "exit": 1,
+      "result": {
+        "data": "synthetic",
+        "task": "booking-change",
+        "variant": "room",
+        "scenario": "two-changeable",
+        "commands": [
+          {
+            "command": "group workshop",
+            "accepted": true
+          },
+          {
+            "command": "open R-206",
+            "accepted": true
+          },
+          {
+            "command": "slot 12-10",
+            "accepted": true
+          },
+          {
+            "command": "confirm",
+            "accepted": true
+          },
+          {
+            "command": "reopen",
+            "accepted": true
+          },
+          {
+            "command": "group workshop",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          }
+        ],
+        "opened_ids": [
+          "R-206",
+          "R-204"
+        ],
+        "changes": [
+          {
+            "before": {
+              "id": "R-206",
+              "date": "12-08",
+              "time": "10:00",
+              "status": "確定・変更可",
+              "room": "工作室"
+            },
+            "after": {
+              "id": "R-206",
+              "date": "12-10",
+              "time": "14:00",
+              "status": "確定・変更可",
+              "room": "工作室"
+            }
+          }
+        ],
+        "bookings": [
+          {
+            "id": "R-206",
+            "date": "12-10",
+            "time": "14:00",
+            "status": "確定・変更可",
+            "room": "工作室"
+          },
+          {
+            "id": "R-204",
+            "date": "12-08",
+            "time": "14:00",
+            "status": "確定・変更可",
+            "room": "工作室"
+          },
+          {
+            "id": "R-205",
+            "date": "11-10",
+            "time": "14:00",
+            "status": "利用済み",
+            "room": "工作室"
+          }
+        ],
+        "booking-change-find": true,
+        "booking-change-confirm": false
+      },
+      "transcript": [
+        "架空データの試作 | 12月8日 14:00の工作室の予約を12月10日 14:00へ変更し、結果を確かめる。",
+        "back 一つ戻る / reopen 予約一覧を再表示 / quit 終了",
+        "予約一覧",
+        "group workshop | 工作室",
+        "> group workshop",
+        "予約一覧 / 工作室",
+        "open R-206 | 工作室 | 12月8日 10:00 | 確定・変更可",
+        "open R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "open R-205 | 工作室 | 11月10日 14:00 | 利用済み",
+        "> open R-206",
+        "R-206 | 工作室 | 12月8日 10:00 | 確定・変更可",
+        "slot 12-10 | 12月10日 14:00",
+        "slot 12-11 | 12月11日 14:00",
+        "> slot 12-10",
+        "R-206 | 工作室 | 12月8日 10:00 | 確定・変更可",
+        "変更前 12月8日 10:00",
+        "変更後 12月10日 14:00",
+        "confirm 変更を確定 / back 候補選択へ戻る",
+        "> confirm",
+        "変更を確定しました。R-206 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "R-206 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "slot 12-11 | 12月11日 14:00",
+        "> reopen",
+        "予約一覧を再表示しました。",
+        "予約一覧",
+        "group workshop | 工作室",
+        "> group workshop",
+        "予約一覧 / 工作室",
+        "open R-206 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "open R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "open R-205 | 工作室 | 11月10日 14:00 | 利用済み",
+        "> open R-204",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "slot 12-11 | 12月11日 14:00"
+      ]
+    },
+    "unknown-time-deferred": {
+      "arguments": [
+        "-B",
+        "-X",
+        "utf8",
+        "modules/product-information-architecture/examples/booking_choice.py",
+        "--variant",
+        "status",
+        "--scenario",
+        "unknown-time",
+        "--steps",
+        "group changeable",
+        "open R-206",
+        "back",
+        "open R-204",
+        "quit"
+      ],
+      "exit": 1,
+      "result": {
+        "data": "synthetic",
+        "task": "booking-change",
+        "variant": "status",
+        "scenario": "unknown-time",
+        "commands": [
+          {
+            "command": "group changeable",
+            "accepted": true
+          },
+          {
+            "command": "open R-206",
+            "accepted": true
+          },
+          {
+            "command": "back",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          }
+        ],
+        "opened_ids": [
+          "R-206",
+          "R-204"
+        ],
+        "changes": [],
+        "bookings": [
+          {
+            "id": "R-206",
+            "date": "12-08",
+            "time": "10:00",
+            "status": "確定・変更可",
+            "room": "工作室"
+          },
+          {
+            "id": "R-204",
+            "date": "12-08",
+            "time": "14:00",
+            "status": "確定・変更可",
+            "room": "工作室"
+          },
+          {
+            "id": "R-205",
+            "date": "11-10",
+            "time": "14:00",
+            "status": "利用済み",
+            "room": "工作室"
+          }
+        ],
+        "booking-change-find": false,
+        "booking-change-confirm": false,
+        "outcome": "deferred_without_change"
+      },
+      "transcript": [
+        "架空データの試作 | 12月8日の工作室の予約を12月10日 14:00へ変更したい。変更元の時刻や予約番号の控えが手元にない。表示される情報から自分の予約を特定できなければ、予約確認の通知を調べるまで変更を保留する。",
+        "back 一つ戻る / reopen 予約一覧を再表示 / quit 終了",
+        "予約一覧",
+        "group changeable | 確定・変更可",
+        "group used | 利用済み",
+        "> group changeable",
+        "予約一覧 / 確定・変更可",
+        "open R-206 | 工作室 | 12月8日 10:00 | 確定・変更可",
+        "open R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "> open R-206",
+        "R-206 | 工作室 | 12月8日 10:00 | 確定・変更可",
+        "slot 12-10 | 12月10日 14:00",
+        "slot 12-11 | 12月11日 14:00",
+        "> back",
+        "予約一覧 / 確定・変更可",
+        "open R-206 | 工作室 | 12月8日 10:00 | 確定・変更可",
+        "open R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "> open R-204",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "slot 12-10 | 12月10日 14:00",
+        "slot 12-11 | 12月11日 14:00",
+        "> quit",
+        "予約内容に変更はありません。予約確認の通知で対象を特定するまで保留です。"
+      ]
+    },
+    "unknown-time-guessed": {
+      "arguments": [
+        "-B",
+        "-X",
+        "utf8",
+        "modules/product-information-architecture/examples/booking_choice.py",
+        "--variant",
+        "room",
+        "--scenario",
+        "unknown-time",
+        "--steps",
+        "group workshop",
+        "open R-204",
+        "slot 12-10",
+        "confirm",
+        "reopen",
+        "group workshop",
+        "open R-204"
+      ],
+      "exit": 1,
+      "result": {
+        "data": "synthetic",
+        "task": "booking-change",
+        "variant": "room",
+        "scenario": "unknown-time",
+        "commands": [
+          {
+            "command": "group workshop",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          },
+          {
+            "command": "slot 12-10",
+            "accepted": true
+          },
+          {
+            "command": "confirm",
+            "accepted": true
+          },
+          {
+            "command": "reopen",
+            "accepted": true
+          },
+          {
+            "command": "group workshop",
+            "accepted": true
+          },
+          {
+            "command": "open R-204",
+            "accepted": true
+          }
+        ],
+        "opened_ids": [
+          "R-204",
+          "R-204"
+        ],
+        "changes": [
+          {
+            "before": {
+              "id": "R-204",
+              "date": "12-08",
+              "time": "14:00",
+              "status": "確定・変更可",
+              "room": "工作室"
+            },
+            "after": {
+              "id": "R-204",
+              "date": "12-10",
+              "time": "14:00",
+              "status": "確定・変更可",
+              "room": "工作室"
+            }
+          }
+        ],
+        "bookings": [
+          {
+            "id": "R-206",
+            "date": "12-08",
+            "time": "10:00",
+            "status": "確定・変更可",
+            "room": "工作室"
+          },
+          {
+            "id": "R-204",
+            "date": "12-10",
+            "time": "14:00",
+            "status": "確定・変更可",
+            "room": "工作室"
+          },
+          {
+            "id": "R-205",
+            "date": "11-10",
+            "time": "14:00",
+            "status": "利用済み",
+            "room": "工作室"
+          }
+        ],
+        "booking-change-find": false,
+        "booking-change-confirm": false,
+        "outcome": "changed_without_identification"
+      },
+      "transcript": [
+        "架空データの試作 | 12月8日の工作室の予約を12月10日 14:00へ変更したい。変更元の時刻や予約番号の控えが手元にない。表示される情報から自分の予約を特定できなければ、予約確認の通知を調べるまで変更を保留する。",
+        "back 一つ戻る / reopen 予約一覧を再表示 / quit 終了",
+        "予約一覧",
+        "group workshop | 工作室",
+        "> group workshop",
+        "予約一覧 / 工作室",
+        "open R-206 | 工作室 | 12月8日 10:00 | 確定・変更可",
+        "open R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "open R-205 | 工作室 | 11月10日 14:00 | 利用済み",
+        "> open R-204",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "slot 12-10 | 12月10日 14:00",
+        "slot 12-11 | 12月11日 14:00",
+        "> slot 12-10",
+        "R-204 | 工作室 | 12月8日 14:00 | 確定・変更可",
+        "変更前 12月8日 14:00",
+        "変更後 12月10日 14:00",
+        "confirm 変更を確定 / back 候補選択へ戻る",
+        "> confirm",
+        "変更を確定しました。R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "slot 12-11 | 12月11日 14:00",
+        "> reopen",
+        "予約一覧を再表示しました。",
+        "予約一覧",
+        "group workshop | 工作室",
+        "> group workshop",
+        "予約一覧 / 工作室",
+        "open R-206 | 工作室 | 12月8日 10:00 | 確定・変更可",
+        "open R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "open R-205 | 工作室 | 11月10日 14:00 | 利用済み",
+        "> open R-204",
+        "R-204 | 工作室 | 12月10日 14:00 | 確定・変更可",
+        "slot 12-11 | 12月11日 14:00",
+        "変更は記録されました。予約確認の通知で対象を特定できていないため、課題は未達です。"
+      ]
+    }
+  }
+}

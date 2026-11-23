@@ -1,0 +1,100 @@
+{
+  "evaluation": "contract-coverage replay",
+  "cases": [
+    {
+      "case": "same-context-keep",
+      "expected_candidate": "PASS",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "candidate_codes": [],
+      "matches_expected": true
+    },
+    {
+      "case": "equivalent-alias",
+      "expected_candidate": "PASS",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "candidate_codes": [],
+      "matches_expected": true
+    },
+    {
+      "case": "different-scope-same-label",
+      "expected_candidate": "FAIL",
+      "baseline_status": "PASS",
+      "candidate_status": "FAIL",
+      "candidate_codes": [
+        "SCOPE_CHANGED"
+      ],
+      "matches_expected": true
+    },
+    {
+      "case": "mobile-to-unavailable-desktop",
+      "expected_candidate": "FAIL",
+      "baseline_status": "PASS",
+      "candidate_status": "FAIL",
+      "candidate_codes": [
+        "CONTEXT_CHANGED"
+      ],
+      "matches_expected": true
+    },
+    {
+      "case": "roadmap-as-current-replacement",
+      "expected_candidate": "HOLD",
+      "baseline_status": "PASS",
+      "candidate_status": "HOLD",
+      "candidate_codes": [
+        "REPLACEMENT_NOT_CURRENT"
+      ],
+      "matches_expected": true
+    },
+    {
+      "case": "missing-observations-as-no-demand",
+      "expected_candidate": "HOLD",
+      "baseline_status": "PASS",
+      "candidate_status": "HOLD",
+      "candidate_codes": [
+        "RETIREMENT_EVIDENCE"
+      ],
+      "matches_expected": true
+    },
+    {
+      "case": "unexplained-existing-feature-withdrawal",
+      "expected_candidate": "FAIL",
+      "baseline_status": "PASS",
+      "candidate_status": "FAIL",
+      "candidate_codes": [
+        "RETIREMENT_CONTRACT"
+      ],
+      "matches_expected": true
+    },
+    {
+      "case": "documented-optional-retirement",
+      "expected_candidate": "PASS",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "candidate_codes": [],
+      "matches_expected": true
+    },
+    {
+      "case": "verified-partial-replacement",
+      "expected_candidate": "PASS",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "candidate_codes": [],
+      "matches_expected": true
+    },
+    {
+      "case": "reversible-new-proposal-deferral",
+      "expected_candidate": "PASS",
+      "baseline_status": "PASS",
+      "candidate_status": "PASS",
+      "candidate_codes": [],
+      "matches_expected": true
+    }
+  ],
+  "matched": 10,
+  "total": 10,
+  "newly_detected_context_cases": 5,
+  "human_usability": "not measured",
+  "llm_effect": "not measured by this replay"
+}

@@ -1,0 +1,10 @@
+import {createFlow} from './probe_flow.mjs';
+import {writeFile} from 'node:fs/promises';
+let finishCancel;
+const api={submit:async()=>({status:'pending'}),lookup:async()=>({status:'succeeded',currentDate:'2026-12-10T14:00'}),cancel:()=>new Promise(r=>{finishCancel=r;})};
+const flow=createFlow(api,{bookingId:'R-204',currentDate:'2026-12-08T14:00',nextId:()=> 'race-intent'});
+flow.choose('2026-12-10T14:00');flow.review();await flow.confirm();
+const cancellation=flow.cancel();await flow.check();const afterSuccess=flow.view();
+finishCancel({accepted:true});await cancellation;const afterLateAck=flow.view();
+const result={probe:'late-cancel-ack-after-confirmed-success',same_controller_passed_frozen_v1:'12/12',expected:'succeeded remains terminal after acknowledgement arrives',afterSuccess,afterLateAck,detectedDefect:afterLateAck.phase!=='succeeded'};
+await writeFile(new URL('./race-probe-result.json',import.meta.url),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));

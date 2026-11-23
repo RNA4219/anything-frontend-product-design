@@ -1,0 +1,102 @@
+{
+  "review_id": "B-R01-critic-v4-recheck",
+  "created_at": "2026-11-23T07:03:45.575868+00:00",
+  "verdict": "ACCEPT",
+  "verdict_scope": "Resolution of reproduced oracle defects only; not global skill effectiveness, complete coverage, or implementation acceptance.",
+  "suite": "modules/interaction-ux-flow/tests/run_flow_trials_v4.mjs",
+  "suite_sha256": "ee855a2e279e313a450e8138daef7b9567cd1e0cb70745e04020d5d80e7ebd0a",
+  "original_findings": [
+    {
+      "id": "B-R01-C01",
+      "status": "CLOSED_FOR_REPRODUCED_DEFECT",
+      "evidence": "Manual same-ID replay and bounded immediate automatic replay both pass 14/14. T04 now compares before/after check count and same intent/effect count."
+    },
+    {
+      "id": "B-R01-C02",
+      "status": "CLOSED_FOR_REPRODUCED_DEFECT",
+      "evidence": "Wrong bookingId/cancel ID probe fails T01/T06."
+    },
+    {
+      "id": "B-R01-C03",
+      "status": "CLOSED_FOR_REPRODUCED_RACES",
+      "evidence": "Race-prone probe fails T13/T14; terminal-preserving probe passes 14/14."
+    },
+    {
+      "id": "B-R01-C05",
+      "status": "CLOSED_FOR_REPRODUCED_DEFECT",
+      "evidence": "Serialized cancellation/lookup probe passes 14/14; pending cancellation is released in both branches."
+    },
+    {
+      "id": "B-R01-C04",
+      "status": "CONTROLLER_SUITE_LIMIT_RECORDED; SEPARATE_DOM_INSPECTION_COMPLETED",
+      "evidence": "Untruthful message probe still passes 14/14. v4 now explicitly labels controller-only scope. Independent implementation findings appear in implementation-copy-review.json and are not frozen-trial scores."
+    }
+  ],
+  "test_results": [
+    {
+      "probe": "control",
+      "passed": 12,
+      "total": 14,
+      "failed_ids": [
+        "T13",
+        "T14"
+      ],
+      "evidence": "campaigns/B/rounds/01/independent/v4-control.json"
+    },
+    {
+      "probe": "guarded-control",
+      "passed": 14,
+      "total": 14,
+      "failed_ids": [],
+      "evidence": "campaigns/B/rounds/01/independent/v4-guarded-control.json"
+    },
+    {
+      "probe": "safe-replay",
+      "passed": 14,
+      "total": 14,
+      "failed_ids": [],
+      "evidence": "campaigns/B/rounds/01/independent/v4-safe-replay.json"
+    },
+    {
+      "probe": "auto-replay",
+      "passed": 14,
+      "total": 14,
+      "failed_ids": [],
+      "evidence": "campaigns/B/rounds/01/independent/v4-auto-replay.json"
+    },
+    {
+      "probe": "serialized-cancel",
+      "passed": 14,
+      "total": 14,
+      "failed_ids": [],
+      "evidence": "campaigns/B/rounds/01/independent/v4-serialized-cancel.json"
+    },
+    {
+      "probe": "wrong-ids",
+      "passed": 12,
+      "total": 14,
+      "failed_ids": [
+        "T01",
+        "T06"
+      ],
+      "evidence": "campaigns/B/rounds/01/independent/v4-wrong-ids.json"
+    },
+    {
+      "probe": "untruthful-message",
+      "passed": 14,
+      "total": 14,
+      "failed_ids": [],
+      "evidence": "campaigns/B/rounds/01/independent/v4-untruthful-message.json"
+    }
+  ],
+  "methodology_disclosure": [
+    "Parent reported observing baseline v3 14/14 before creating v4; candidate had not been scored at that time. Therefore v4 must not be described as entirely blind to both arm results.",
+    "C01/C05 corrections were independently motivated and tested with independent probe controllers before implementation source inspection in this task.",
+    "Independent probes, v1/v3/v4 output files and separate source hashes remain available."
+  ],
+  "limitations": [
+    "Same-model separate task context is not objective validation.",
+    "No comprehensive race-space, API authorization, reload/expiry, or human usability proof.",
+    "No suite or generated implementation edited by critic."
+  ]
+}

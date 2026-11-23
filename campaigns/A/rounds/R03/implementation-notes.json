@@ -1,0 +1,17 @@
+{
+  "baseline_gap": "Declared should/could routes skipped capability and needed-information checks; four negative subcases passed before repair",
+  "change": "Apply these two existing obligations to all declared routes; optional routes are not forced from kept shared enablers",
+  "positive_fixture_repair": "Old requirement-erasure test declared g_topic_find route without goal-capability binding in its positive setup. Added binding to input alias and output canonical features; negative requirement erasure still fails. No negative expected outcome was weakened.",
+  "new_test_methods": 5,
+  "new_test_subcases": 12,
+  "unverified": "Value truth, conditional applicability and prose-only optional delivery are explicit false flags; no semantic automation claim",
+  "post_freeze_review_repairs": {
+    "C01": "Mandatory capability reachability is checked after canonical resolution from the union of valid declared starts for its goal and role; separate-stage ownership allowed.",
+    "C02": "Unknown input blocks only when it prevents required completion; verified alternatives can support narrower progress.",
+    "C03": "Legacy A08 trigger/output/verification aligns with all declared routes regardless of priority.",
+    "experiment_input": "Frozen candidate input and generated outputs were not replaced after these repairs.",
+    "tests": "57 unittest methods pass; 11 independently authored mechanical cases and one parent-authored canonical alias isolation/control pair added.",
+    "blinding_limit": "Z design.md contained baseline/input path; assignment concealment compromised, documented by critic before scoring."
+  },
+  "published_test_log_format": "Trailing spaces removed from baseline-information-tests.txt for repository whitespace checks; original byte copy retained privately; test content and outcomes unchanged."
+}

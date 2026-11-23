@@ -1,0 +1,79 @@
+{
+  "suite": "B-R03-resume-conflict-v1",
+  "module": "modules/interaction-ux-flow/examples/resume-and-conflict.mjs",
+  "total": 13,
+  "passed": 13,
+  "failed": 0,
+  "results": [
+    {
+      "id": "R01",
+      "pass": true,
+      "expected": "An unsent draft resumes without any write and remains distinct from observed server values"
+    },
+    {
+      "id": "R02",
+      "pass": true,
+      "expected": "A pending operation resumes by its original operation ID without a new mutation"
+    },
+    {
+      "id": "R03",
+      "pass": true,
+      "expected": "A known account mismatch neither queries nor displays another account task data"
+    },
+    {
+      "id": "R04",
+      "pass": true,
+      "expected": "Expired authentication preserves the intent internally and queries it after validated same-account reauthentication"
+    },
+    {
+      "id": "R05",
+      "pass": true,
+      "expected": "Successful reauthentication does not imply write permission"
+    },
+    {
+      "id": "R06",
+      "pass": true,
+      "expected": "Server precondition mismatch preserves the newer server state and entered draft"
+    },
+    {
+      "id": "R07",
+      "pass": true,
+      "expected": "Refreshing server facts does not silently authorize overwriting the refreshed revision"
+    },
+    {
+      "id": "R08",
+      "pass": true,
+      "expected": "A late older read cannot overwrite a more recent accepted read; opaque tags are not ordered"
+    },
+    {
+      "id": "R09",
+      "pass": true,
+      "expected": "An old-account response cannot repopulate the view after account switching"
+    },
+    {
+      "id": "R10",
+      "pass": true,
+      "expected": "A missing or expired operation record stays unresolved and never triggers a fresh operation automatically"
+    },
+    {
+      "id": "R11",
+      "pass": true,
+      "expected": "Confirmed operation result and subsequently observed resource state remain distinct"
+    },
+    {
+      "id": "R12",
+      "pass": true,
+      "expected": "Failure to read the current resource does not erase a separately verified operation success"
+    },
+    {
+      "id": "R13",
+      "pass": true,
+      "expected": "After explicit current review, a valid conditional edit changes the intended resource once"
+    }
+  ],
+  "limits": [
+    "Trusted session/capability fixture only; no real authentication, authorization or secure storage assessment.",
+    "Opaque tags are compared by equality; this is not a production HTTP implementation.",
+    "No browser, assistive technology or human efficacy evidence."
+  ]
+}

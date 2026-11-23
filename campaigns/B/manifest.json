@@ -1,0 +1,44 @@
+{
+  "campaign_id": "B-20261123-interaction-evolution",
+  "session_id": "B",
+  "domain": "interaction-ux-flow",
+  "base_sha": "3d02174a69676afa8e0b02f4062cc6ecb636d300",
+  "branch": "session-b/interaction-evolution-20261123",
+  "started_at": "2026-11-23T06:34:35.322404+00:00",
+  "max_rounds": 12,
+  "max_concurrent_subagents": 2,
+  "max_concurrent_agents_including_parent": 3,
+  "rounds": [
+    {
+      "round": 1,
+      "status": "COMPLETE",
+      "decision": "campaigns/B/rounds/01/decision.json"
+    },
+    {
+      "round": 2,
+      "status": "COMPLETE",
+      "decision": "campaigns/B/rounds/02/decision.json"
+    },
+    {
+      "round": 3,
+      "status": "COMPLETE",
+      "decision": "campaigns/B/rounds/03/decision.json"
+    }
+  ],
+  "status": "RUNNING",
+  "budget": {
+    "tokens": "not exposed",
+    "money": "not exposed",
+    "measured": false
+  },
+  "public_paths": [
+    "modules/interaction-ux-flow",
+    "registry/B",
+    "campaigns/B"
+  ],
+  "source_policy": "Keep original third-party source text outside this repository. Publish original rules, source URLs, section locators and original test evidence only.",
+  "checkpoint": {
+    "last_completed_round": 3,
+    "next": "R04 B-007 partial batch outcomes and item-scoped recovery"
+  }
+}

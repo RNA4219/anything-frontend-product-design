@@ -1,0 +1,440 @@
+{
+  "round": "R03",
+  "role": "researcher-1",
+  "question": "条件が当てはまる利用者の実際の判断点で必要な情報と、省略できる補助説明をどう区別するか。任意機能を提供した場合の情報義務をどう表すか。",
+  "search_strategy": {
+    "bounded_rounds": 1,
+    "adopted_sources": 3,
+    "known_source_count": 34,
+    "focus": "公式ガイドの開示境界、条件付き関連性、情報を選ぶ一次手順",
+    "other_researcher_scope": "Researcher-2: 密度・比較・未知値の別仮説と研究/製品反例",
+    "stop_reason": "約束による打切り。新規3資料と本文リンク2辺で探索を終了。任意機能のpriorityと情報必須性の形式契約は原典に直接存在せず導出として残す。",
+    "children_spawned": 0
+  },
+  "actual_tool_use": {
+    "web_tool_calls": 3,
+    "search_queries": 3,
+    "search_results_returned": 11,
+    "opened_sources": 3,
+    "open_actions": 2,
+    "click_actions": 2,
+    "verified_body_edges": 2,
+    "imozuru_fetch_attempts": 3,
+    "imozuru_fetch_success": 0,
+    "imozuru_fetch_dns_failures": 3,
+    "selected_excerpt_files": 3,
+    "help_probes": 0,
+    "report_check": {
+      "returncode": 0,
+      "log": "PRIVATE_CHECKPOINT/research/R03/researcher-1/logs/report-check.json",
+      "stdout": "照合 OK: 抜き書き 10 件がすべて原文のとおり"
+    },
+    "report_build": {
+      "returncode": 0,
+      "log": "PRIVATE_CHECKPOINT/research/R03/researcher-1/logs/report-build.json",
+      "stdout": "照合 OK: 抜き書き 10 件がすべて原文のとおり\n→ PRIVATE_CHECKPOINT/research/R03/researcher-1/report.html"
+    },
+    "digest_add": {
+      "returncode": 0,
+      "log": "PRIVATE_CHECKPOINT/research/R03/researcher-1/logs/digest-add.json",
+      "stdout": "1本を PRIVATE_CHECKPOINT/research/R03/researcher-1/queries.jsonl に足した（ヒット 11件）"
+    },
+    "digest_check": {
+      "returncode": 0,
+      "log": "PRIVATE_CHECKPOINT/research/R03/researcher-1/logs/digest-check.json",
+      "stdout": "照合 OK: 解説の文がすべて原文の引用を持つ・検索の記録 1本"
+    },
+    "digest_build": {
+      "returncode": 0,
+      "log": "PRIVATE_CHECKPOINT/research/R03/researcher-1/logs/digest-build.json",
+      "stdout": "照合 OK: 解説の文がすべて原文の引用を持つ・検索の記録 1本\n→ PRIVATE_CHECKPOINT/research/R03/researcher-1/digest.html"
+    }
+  },
+  "source_records": [
+    {
+      "id": "R03-R1-S01",
+      "url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components/what-a-component-means",
+      "title": "What a component means",
+      "publisher": "Department for Work and Pensions (DWP), DWP Design System",
+      "source_type": "official_design_guidance",
+      "retrieved_at": "2026-11-23T07:53:23.057Z",
+      "sha256": "762bb3665edefc6acb2d7f29f54b1bc2d9d501dc5ee3b2833b246af453094461",
+      "sha256_scope": "selected Web excerpt file only; not original HTML/PDF",
+      "version": "Undated live official guidance as retrieved; publication date not inferred from crawl time.",
+      "locator": [
+        {
+          "remote": "Content the user can skip; web L363–380",
+          "local_line": 11
+        },
+        {
+          "remote": "Content the user can skip; National Insurance number example; web L373–380",
+          "local_line": 15
+        },
+        {
+          "remote": "Content the user can skip; web L380",
+          "local_line": 19
+        },
+        {
+          "remote": "Answering the user's question; web L320–328",
+          "local_line": 23
+        }
+      ],
+      "verified_claims": [
+        {
+          "claim": "DWPはDetails/Accordion/Tabsを、一部の利用者が安全に読み飛ばせる内容のグループとして説明する。",
+          "locator": "Content the user can skip; web L363–380"
+        },
+        {
+          "claim": "National Insurance numberがない場合の例は、条件が自分に当てはまらない利用者が省略できると記す。条件付き情報そのものの不要性を述べていない。",
+          "locator": "web L373–380"
+        },
+        {
+          "claim": "利用者の問いに答える内容は、その利用者のその時点で真であることを重視する。",
+          "locator": "Answering the user's question; web L320–328"
+        }
+      ],
+      "limits": [
+        "DWPの公式助言。対象人数・比較条件・効果量が示された実験報告ではない。",
+        "当てはまらない人が省略可能という条件を、当てはまる人も情報不要へ読み替えない。",
+        "must/should/couldやprimary/secondaryのJSON契約は指定していない。"
+      ],
+      "source_edges": [
+        {
+          "from_url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components/what-a-component-means",
+          "to_url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components",
+          "relation": "本文の研究・サービスでの観察に関する出所リンクを追跡",
+          "tool": "web.click",
+          "ref": "turn198942826view0",
+          "link_id": 148,
+          "from_locator": "web L286",
+          "result_ref": "turn816678240view0",
+          "verified": true
+        },
+        {
+          "from_url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components/what-a-component-means",
+          "to_url": "https://design-system.service.gov.uk/components/details/",
+          "relation": "本文のContent the user can skip表からDetails公式説明へ追跡",
+          "tool": "web.click",
+          "ref": "turn198942826view0",
+          "link_id": 159,
+          "from_locator": "web L369",
+          "result_ref": "turn816678240view1",
+          "verified": true
+        }
+      ],
+      "acquisition": {
+        "imozuru_fetch": "FAIL_DNS",
+        "fetch_log": "PRIVATE_CHECKPOINT/research/R03/researcher-1/logs/fetch-dwp-component-meaning.json",
+        "method": "selected original wording from Web extraction",
+        "original_html_downloaded": false,
+        "original_pdf_downloaded": false,
+        "full_original_archive": false,
+        "web_refs": [
+          "turn198942826view0"
+        ]
+      },
+      "publication_safety": "Source excerpts remain private. Publish only minimal metadata and original Japanese paraphrases if needed."
+    },
+    {
+      "id": "R03-R1-S02",
+      "url": "https://design-system.service.gov.uk/components/details/",
+      "title": "Details",
+      "publisher": "GOV.UK Design System",
+      "source_type": "official_design_guidance",
+      "retrieved_at": "2026-11-23T07:53:23.057Z",
+      "sha256": "6b0f771195da938f397e5a0109eb7652753e2edb7dc20f4583edd205b2d12f72",
+      "sha256_scope": "selected Web excerpt file only; not original HTML/PDF",
+      "version": "Undated live official guidance as retrieved; publication date not inferred from crawl time.",
+      "locator": [
+        {
+          "remote": "When to use this component; web L90–92",
+          "local_line": 11
+        },
+        {
+          "remote": "When not to use this component; web L94–96",
+          "local_line": 15
+        },
+        {
+          "remote": "Write clear link text; web L141–143",
+          "local_line": 19
+        }
+      ],
+      "verified_claims": [
+        {
+          "claim": "GOV.UKは一部利用者だけが必要とする内容にDetailsを使える一方、大多数が必要とする内容を隠す用途を避けるよう案内する。",
+          "locator": "When to use / When not to use; web L90–96"
+        },
+        {
+          "claim": "展開リンクは、開く必要があるか判断しやすい短く説明的な文言を求める。",
+          "locator": "Write clear link text; web L141–143"
+        },
+        {
+          "claim": "国籍を回答できない場合の代替手段をDetails内に置く例があり、条件付き説明を一律に禁止していない。",
+          "locator": "Details example HTML; web L67–77"
+        }
+      ],
+      "limits": [
+        "『大多数』と『一部』の助言であり、全画面・全情報のクリック禁止を規定していない。",
+        "条件付きの補助説明をDetailsに置く例は、当該判断で必要な具体値を隠してよいという保証ではない。",
+        "リンク文言以外の部品選択、展開動作、キーボード、ARIA、規格適合はCへ引き継ぐ。"
+      ],
+      "source_edges": [
+        {
+          "from_url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components/what-a-component-means",
+          "to_url": "https://design-system.service.gov.uk/components/details/",
+          "relation": "本文のContent the user can skip表からDetails公式説明へ追跡",
+          "tool": "web.click",
+          "ref": "turn198942826view0",
+          "link_id": 159,
+          "from_locator": "web L369",
+          "result_ref": "turn816678240view1",
+          "verified": true
+        }
+      ],
+      "acquisition": {
+        "imozuru_fetch": "FAIL_DNS",
+        "fetch_log": "PRIVATE_CHECKPOINT/research/R03/researcher-1/logs/fetch-govuk-details.json",
+        "method": "selected original wording from Web extraction",
+        "original_html_downloaded": false,
+        "original_pdf_downloaded": false,
+        "full_original_archive": false,
+        "web_refs": [
+          "turn198942826view1",
+          "turn816678240view1"
+        ]
+      },
+      "publication_safety": "Source excerpts remain private. Publish only minimal metadata and original Japanese paraphrases if needed."
+    },
+    {
+      "id": "R03-R1-S03",
+      "url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components",
+      "title": "How to choose components",
+      "publisher": "Department for Work and Pensions (DWP), DWP Design System",
+      "source_type": "official_method_guidance",
+      "retrieved_at": "2026-11-23T07:53:23.057Z",
+      "sha256": "fd5cca2dbec40476a8abd68b0881becc1e203a9471575ab942cdc898438a9a15",
+      "sha256_scope": "selected Web excerpt file only; not original HTML/PDF",
+      "version": "Undated live official guidance as retrieved; publication date not inferred from crawl time.",
+      "locator": [
+        {
+          "remote": "5 steps to choose a component, step 1; web L288–290",
+          "local_line": 11
+        },
+        {
+          "remote": "5 steps to choose a component, step 4; web L305–307",
+          "local_line": 15
+        },
+        {
+          "remote": "Where this guidance comes from; web L335–340",
+          "local_line": 19
+        }
+      ],
+      "verified_claims": [
+        {
+          "claim": "DWPの手順は部品選択より先に、利用者が知る必要のある情報と利用者が行っていることを明確にする。",
+          "locator": "5 steps to choose a component, steps 1–2; web L286–298"
+        },
+        {
+          "claim": "見落とした場合の影響を、後から修復可能か、他の人への害を含むかによって評価する。",
+          "locator": "step 4; web L305–309"
+        },
+        {
+          "claim": "文書はDWPのプロトタイプやサービスでの経験をまとめた出発点と位置づけ、固定規則ではなく今後変わりうるとしている。",
+          "locator": "Where this guidance comes from; web L335–340"
+        }
+      ],
+      "limits": [
+        "本文の研究由来リンク先の二次理論説明は、この限定ラウンドでは追跡していない。",
+        "判断結果を支える情報の選定手順として読む。新しい密度値、段数上限、部品の普遍順位にはしない。",
+        "助言の存在は本Skillの効果・実装品質・利用者成果の証明ではない。"
+      ],
+      "source_edges": [
+        {
+          "from_url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components/what-a-component-means",
+          "to_url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components",
+          "relation": "本文の研究・サービスでの観察に関する出所リンクを追跡",
+          "tool": "web.click",
+          "ref": "turn198942826view0",
+          "link_id": 148,
+          "from_locator": "web L286",
+          "result_ref": "turn816678240view0",
+          "verified": true
+        }
+      ],
+      "acquisition": {
+        "imozuru_fetch": "FAIL_DNS",
+        "fetch_log": "PRIVATE_CHECKPOINT/research/R03/researcher-1/logs/fetch-dwp-choosing-components.json",
+        "method": "selected original wording from Web extraction",
+        "original_html_downloaded": false,
+        "original_pdf_downloaded": false,
+        "full_original_archive": false,
+        "web_refs": [
+          "turn816678240view0"
+        ]
+      },
+      "publication_safety": "Source excerpts remain private. Publish only minimal metadata and original Japanese paraphrases if needed."
+    }
+  ],
+  "source_edges": [
+    {
+      "from_url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components/what-a-component-means",
+      "to_url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components",
+      "relation": "本文の研究・サービスでの観察に関する出所リンクを追跡",
+      "tool": "web.click",
+      "ref": "turn198942826view0",
+      "link_id": 148,
+      "from_locator": "web L286",
+      "result_ref": "turn816678240view0",
+      "verified": true
+    },
+    {
+      "from_url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components/what-a-component-means",
+      "to_url": "https://design-system.service.gov.uk/components/details/",
+      "relation": "本文のContent the user can skip表からDetails公式説明へ追跡",
+      "tool": "web.click",
+      "ref": "turn198942826view0",
+      "link_id": 159,
+      "from_locator": "web L369",
+      "result_ref": "turn816678240view1",
+      "verified": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "R03-R1-F01",
+      "revision_of": [
+        "A08",
+        "A09"
+      ],
+      "source_ids": [
+        "R03-R1-S01",
+        "R03-R1-S02"
+      ],
+      "new_principle": false,
+      "source_facts": [
+        "DWPは安全に省略できる内容と、その利用者のその時点で真である回答を分ける。",
+        "GOV.UKは一部向け情報のDetails利用を許容し、大多数が必要とする内容を隠す用途は避ける。条件付きの補助説明を展開内に置く例もある。"
+      ],
+      "inferred_rules": [
+        "情報の必要性をrole・対象・判断時点・有効条件に結びつける。『条件付きだからsecondary』または『少数向けだから不要』とは決めない。",
+        "条件が当てはまり、その値・適合条件・期限等によって当該判断が変わる場合は、その判断場所でprimaryとして参照できることをSkill側の契約として要求する。",
+        "条件の判定方法を説明する補助文と、判断に直接用いる具体的な値・適合条件を別項目として検討する。条件自体が未確認なら、非該当と断定せず確認事項へ残す。"
+      ],
+      "conditions": [
+        "対象の利用者・役割・タスクが明示され、情報の有無で選択・棄却・達成が変わる場面。",
+        "条件の真偽と、その後に情報が必要になる判断場所を区別できる場合。"
+      ],
+      "exceptions": [
+        "非該当の利用者が読まなくても達成できる補助説明はsecondary候補にできる。",
+        "後の判断で初めて必要な情報を前段の全画面へ複製する必要はない。",
+        "資料からDetailsの一律禁止、全情報の初期表示範囲への収容、展開段数の普遍上限は導けない。primaryの『当該判断場所で展開不要』は本Skillの契約上の導出。"
+      ],
+      "tests": [
+        "反例: 少数利用者向けの追加サービスを選択した状態で、その料金・適用期限を補足に隠す案を提示し、条件が有効な判断場所で欠落として検出できるか点検する。",
+        "正例: 追加サービスを選択しない状態では、手順の補助説明をsecondaryへ置いても情報義務違反にしない。",
+        "境界例: 条件を判定するための具体値を、条件が判明した後だけ表示する循環を検出する。単なる条件判定の詳しい解説と混同しない。"
+      ],
+      "delta": "A08/A09の既存の必要性判断を、条件・時点・補助説明の区別で具体化する。新しい普遍原則や密度閾値は追加しない。"
+    },
+    {
+      "id": "R03-R1-F02",
+      "revision_of": [
+        "A08"
+      ],
+      "source_ids": [
+        "R03-R1-S01",
+        "R03-R1-S03"
+      ],
+      "new_principle": false,
+      "source_facts": [
+        "DWPは利用者が何を行い、何を知る必要があるかから情報を選ぶ。",
+        "原典はプロダクトのmust/should/could優先度と情報必須性の対応を形式化していない。"
+      ],
+      "inferred_rules": [
+        "機能を今回提供するかという優先度と、提供されたタスクで判断に必要な情報かを別の軸として扱う。",
+        "提供すると明示したshould/couldのタスクについても、その実際の判断場所とneeded_informationを確認する。mustだけを対象にすると、低優先度のまま提供するタスクの情報欠落が検査を通過しうる。",
+        "未提供・延期を明示したタスクまで必ず画面へ置く要求に拡張しない。提供状態の根拠と、対象タスクを先に確定する。"
+      ],
+      "conditions": [
+        "任意目標に対応する機能をkeep等で提供し、利用者がその判断を実行できる設計にしている場合。",
+        "primary義務は、そのタスクにneeded_informationとして確定した情報だけに適用する。"
+      ],
+      "exceptions": [
+        "任意タスク自体が延期・非提供で、その理由と影響が記録されている場合は、そのタスク用の画面・情報を一律に要求しない。",
+        "should/couldというラベルだけから必要情報を創作しない。業務上の必須性が不明ならproduct確認を残す。"
+      ],
+      "tests": [
+        "同一タスクの優先度だけをmustからcouldへ変え、提供状態と必要情報が同じなら情報義務を弱めないことを照合する。",
+        "couldかつ提供する比較タスクで、選択に必要な料金がsecondaryの場合を負例にする。",
+        "同じcouldタスクを明示的にdeferし、提供画面・入口がない正例では、欠落したneeded_informationだけを理由に誤検出しない。"
+      ],
+      "delta": "A08の検査対象を、mustのみという実装上の窓から、提供すると決めた判断タスクへ再検討する候補。外部規格の要請でなく既存原則を一貫させる契約案。"
+    },
+    {
+      "id": "R03-R1-F03",
+      "revision_of": [
+        "A10"
+      ],
+      "source_ids": [
+        "R03-R1-S03"
+      ],
+      "new_principle": false,
+      "source_facts": [
+        "DWPの説明は実務経験に基づく出発点で、固定規則ではないと自ら限界を示す。",
+        "このラウンドは公式助言を確認したもので、Skill利用者の比較実験や表示品質評価を行っていない。"
+      ],
+      "inferred_rules": [
+        "原典が述べる助言、Skillの情報義務契約への導出、機械検査の結果、画面表示の観察、人の判断成果を分けて報告する。",
+        "抜き書き照合のPASSは保存した選択抜粋内の文字列一致までとし、全文取得、主張の含意、Skill効果を証明したとしない。",
+        "Aは必要情報と条件・所在を記録し、展開動作や部品の適合判定をCへ、操作・状態回復をBへ、利用者成果の検証をDへ引き継ぐ。"
+      ],
+      "conditions": [
+        "原典助言を設計契約へ導入する前後、構造検査だけ完了した報告。"
+      ],
+      "exceptions": [
+        "公式ガイドを引用しただけで『適合』『使いやすさを実証』『Skill効果検証済み』としない。"
+      ],
+      "tests": [
+        "report/digest --checkが成功しても、取得方式を『選択抜粋のみ』、表示・利用者試験を『未実施』として保持する。",
+        "必要情報IDがprimaryに存在しても、実装では折りたたまれている反例は、構造PASSと表示確認の差として記録する。"
+      ],
+      "delta": "A10の既存の検証範囲分離を、今回の出典取得・条件付き開示・任意タスクへ適用する。"
+    }
+  ],
+  "overlap": {
+    "exact_url_overlap_with_known_34": 0,
+    "conceptual_overlap": [
+      "A08: primary/secondaryと判断必須情報",
+      "A09: 条件固有の判断材料",
+      "A10: 助言・契約導出・実測の区別"
+    ],
+    "new_principles_claimed": 0,
+    "revision_candidates": [
+      "A08/A09: 有効条件と補助説明/具体値を分ける",
+      "A08: 任意でも提供するタスクの情報義務",
+      "A10: 原典助言と契約導出と効果の区別"
+    ],
+    "independence_limit": "DWPの2ページは同一ガイド系列、GOV.UKも関連する政府設計ガイド。独立した3実験として数えない。",
+    "saturation": {
+      "numerator": null,
+      "denominator": null,
+      "claimed": false,
+      "reason": "限定1ラウンド。別仮説担当のResearcher-2との重複から飽和率を算出しない。"
+    }
+  },
+  "gaps": [
+    "must/should/couldと情報義務を結ぶ既成の形式規則は、この3資料にはない。提案はSkill側の導出。",
+    "原典にある条件付き補助説明の例から、具体的な判断値まで隠してよいとは一般化できない。",
+    "条件が未知の場合の値表現・データ欠測・比較密度の研究はResearcher-2の担当へ残す。",
+    "DWPの研究由来説明に、サンプル数・対照群・効果量は確認できない。詳細のリンク先理論は本ラウンドで未追跡。",
+    "全文原HTML/PDFの直接取得はDNSで失敗。Web抽出の選択抜粋のみを保存。",
+    "実画面、支援技術、操作、利用者の理解・完了時間は未検証。"
+  ],
+  "cost": {
+    "actual_amount": null,
+    "currency": null,
+    "reason": "請求・利用明細が提示されていない。実行回数を記録し、金額を0としない。"
+  },
+  "status": "completed_bounded_round_with_excerpt_only_evidence",
+  "delivery": "Private metadata and short excerpts only; no public repository edits."
+}

@@ -1,0 +1,29 @@
+{
+  "round": "R03",
+  "status": "COMPLETE",
+  "issues": [
+    "A-005",
+    "A-006",
+    "A-009"
+  ],
+  "question": "Which information must stay available at a real decision point, including optional but offered tasks, and how should unknown values, conditional relevance and disclosure be represented?",
+  "planned_units": [
+    "A-IU-008",
+    "A-IU-009",
+    "A-IU-010"
+  ],
+  "known_sources": "Inherited 20 plus previous rounds; no rediscovery credit",
+  "gates": [
+    "Separate feature priority from necessity of information when using that feature",
+    "Keep decision-changing conditions available when their condition is active",
+    "Unknown is not zero, false or not applicable",
+    "Do not impose universal density/card/step limits",
+    "Distinguish instruction compliance, structural checks, rendering and human outcomes"
+  ],
+  "scope_boundary": "A determines information obligations and review evidence. B owns interaction recovery, C owns components/accessibility/responsive behavior, D owns human/experimental evaluation.",
+  "evaluation_plan": "Different synthetic product task, fixed rubric before candidate implementation, independent counterexamples and positive controls.",
+  "registered_at": "2026-11-23T07:15:57.124766+00:00",
+  "new_sources": 6,
+  "decision": "ACCEPT",
+  "completion": "decision.json"
+}

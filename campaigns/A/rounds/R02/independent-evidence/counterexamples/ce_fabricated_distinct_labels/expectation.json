@@ -1,0 +1,14 @@
+{
+  "id": "ce_fabricated_distinct_labels",
+  "expected_machine": {
+    "baseline": "PASS",
+    "candidate": "PASS"
+  },
+  "expected_semantic": "SEMANTIC_DEFECT",
+  "independent_basis": "planの識別表記と実UIにある情報が不一致。文字列一意化は証拠を生まず、Skillはこの回避を明示禁止する。",
+  "rubric_ids": [
+    "N4",
+    "N6"
+  ],
+  "evidence_level": "synthetic design / HTML source only; no rendered UI, operation, C conformance or human result"
+}

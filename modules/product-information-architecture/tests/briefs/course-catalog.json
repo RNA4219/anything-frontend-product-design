@@ -1,0 +1,334 @@
+{
+  "case_id": "course-catalog",
+  "roles": [
+    {
+      "id": "learner",
+      "label": "受講者"
+    },
+    {
+      "id": "editor",
+      "label": "講座担当"
+    }
+  ],
+  "goals": [
+    {
+      "id": "g_discover",
+      "role": "learner",
+      "outcome": "週末に参加できる初学者向け講座を予算内で見つける",
+      "priority": "must",
+      "needed_information": [
+        "title",
+        "level",
+        "schedule",
+        "price",
+        "topic"
+      ]
+    },
+    {
+      "id": "g_compare",
+      "role": "learner",
+      "outcome": "候補講座を同じ条件で比較する",
+      "priority": "must",
+      "needed_information": [
+        "title",
+        "level",
+        "schedule",
+        "price",
+        "prerequisites",
+        "venue"
+      ]
+    },
+    {
+      "id": "g_decide",
+      "role": "learner",
+      "outcome": "参加条件と空席を確認して申込先へ進む",
+      "priority": "must",
+      "needed_information": [
+        "title",
+        "prerequisites",
+        "seats",
+        "price",
+        "schedule",
+        "enroll_link"
+      ]
+    },
+    {
+      "id": "g_saved",
+      "role": "learner",
+      "outcome": "保存した候補を後で開く",
+      "priority": "should",
+      "needed_information": [
+        "title",
+        "schedule",
+        "price"
+      ]
+    },
+    {
+      "id": "g_publish",
+      "role": "editor",
+      "outcome": "講座情報を更新し公開する",
+      "priority": "must",
+      "needed_information": [
+        "title",
+        "publication_status"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "r_find",
+      "goal_ids": [
+        "g_discover"
+      ],
+      "mandatory": true,
+      "statement": "トピック/レベル/日程/予算を使って同じ講座集合を探せる"
+    },
+    {
+      "id": "r_compare",
+      "goal_ids": [
+        "g_compare"
+      ],
+      "mandatory": true,
+      "statement": "2講座を同じ属性で比較し、前の画面の条件を記憶しなくてよい"
+    },
+    {
+      "id": "r_prereq",
+      "goal_ids": [
+        "g_decide",
+        "g_compare"
+      ],
+      "mandatory": true,
+      "statement": "参加前提・価格（無料は0円）・空席は判断する場所で読める"
+    },
+    {
+      "id": "r_enroll",
+      "goal_ids": [
+        "g_decide"
+      ],
+      "mandatory": true,
+      "statement": "対象講座と対応する申込先がある"
+    },
+    {
+      "id": "r_save",
+      "goal_ids": [
+        "g_saved"
+      ],
+      "mandatory": false,
+      "statement": "候補保存は同じ利用者の同じ講座集合への操作"
+    },
+    {
+      "id": "r_publish",
+      "goal_ids": [
+        "g_publish"
+      ],
+      "mandatory": true,
+      "statement": "編集者用の公開機能を受講者ナビゲーションから分離する"
+    }
+  ],
+  "feature_requests": [
+    {
+      "id": "f_catalog",
+      "label": "講座一覧",
+      "object": "course",
+      "outcome": "discover-course",
+      "roles": [
+        "learner"
+      ],
+      "goal_ids": [
+        "g_discover"
+      ],
+      "requirement_ids": [
+        "r_find"
+      ],
+      "dependencies": [],
+      "mandatory": true
+    },
+    {
+      "id": "f_topics",
+      "label": "トピック別講座",
+      "object": "course",
+      "outcome": "discover-course",
+      "roles": [
+        "learner"
+      ],
+      "goal_ids": [
+        "g_discover"
+      ],
+      "requirement_ids": [
+        "r_find"
+      ],
+      "dependencies": [],
+      "mandatory": false
+    },
+    {
+      "id": "f_workshops",
+      "label": "ワークショップ検索",
+      "object": "course",
+      "outcome": "discover-course",
+      "roles": [
+        "learner"
+      ],
+      "goal_ids": [
+        "g_discover"
+      ],
+      "requirement_ids": [
+        "r_find"
+      ],
+      "dependencies": [],
+      "mandatory": false
+    },
+    {
+      "id": "f_compare",
+      "label": "候補を比較",
+      "object": "course-set",
+      "outcome": "compare-courses",
+      "roles": [
+        "learner"
+      ],
+      "goal_ids": [
+        "g_compare"
+      ],
+      "requirement_ids": [
+        "r_compare",
+        "r_prereq"
+      ],
+      "dependencies": [],
+      "mandatory": true
+    },
+    {
+      "id": "f_details",
+      "label": "講座詳細",
+      "object": "course",
+      "outcome": "decide-enrollment",
+      "roles": [
+        "learner"
+      ],
+      "goal_ids": [
+        "g_decide"
+      ],
+      "requirement_ids": [
+        "r_prereq",
+        "r_enroll"
+      ],
+      "dependencies": [],
+      "mandatory": true
+    },
+    {
+      "id": "f_favorites",
+      "label": "お気に入り",
+      "object": "course-set",
+      "outcome": "save-courses",
+      "roles": [
+        "learner"
+      ],
+      "goal_ids": [
+        "g_saved"
+      ],
+      "requirement_ids": [
+        "r_save"
+      ],
+      "dependencies": [],
+      "mandatory": false
+    },
+    {
+      "id": "f_wishlist",
+      "label": "受講したいリスト",
+      "object": "course-set",
+      "outcome": "save-courses",
+      "roles": [
+        "learner"
+      ],
+      "goal_ids": [
+        "g_saved"
+      ],
+      "requirement_ids": [
+        "r_save"
+      ],
+      "dependencies": [],
+      "mandatory": false
+    },
+    {
+      "id": "f_news",
+      "label": "運営のお知らせ",
+      "object": "news",
+      "outcome": "read-news",
+      "roles": [
+        "learner"
+      ],
+      "goal_ids": [],
+      "requirement_ids": [],
+      "dependencies": [],
+      "mandatory": false
+    },
+    {
+      "id": "f_publish",
+      "label": "講座管理",
+      "object": "course",
+      "outcome": "publish-course",
+      "roles": [
+        "editor"
+      ],
+      "goal_ids": [
+        "g_publish"
+      ],
+      "requirement_ids": [
+        "r_publish"
+      ],
+      "dependencies": [],
+      "mandatory": true
+    }
+  ],
+  "visual_intent": {
+    "id": "catalog-paper-01",
+    "constraints": [
+      "既存の紙色背景、紺文字、朱色アクセントを維持",
+      "システム書体と細い区切り線、情報中心の既存意匠",
+      "新たな装飾やブランド案は作らない"
+    ]
+  },
+  "contexts": {
+    "normal": "講座一覧/トピック別/ワークショップは同じデータを呼ぶ提案名。講座は複数トピックに属せる。",
+    "abnormal": "条件に合う講座0件でも、現在の条件と条件を見直す先が分かる。編集機能は受講者に許可しない。",
+    "boundary": "0円・残席0・前提条件の長い講座。候補1件なら比較対象追加の行き先を示す。5000講座まで増える想定だが観測済みではない。"
+  },
+  "content": [
+    {
+      "title": "はじめての木工",
+      "level": "初学者",
+      "schedule": "土曜 10:00",
+      "price": "0円",
+      "topic": "ものづくり",
+      "prerequisites": "道具の持参不要",
+      "venue": "工房A",
+      "seats": "4",
+      "enroll_link": "申込先A"
+    },
+    {
+      "title": "写真から始める長い題名の地域アーカイブ制作講座",
+      "level": "初学者",
+      "schedule": "日曜 13:00",
+      "price": "2000円",
+      "topic": "写真・記録",
+      "prerequisites": "スマートフォンを持参。撮影許諾について事前説明を読む",
+      "venue": "会場B",
+      "seats": "0",
+      "enroll_link": "申込先B"
+    },
+    {
+      "title": "中級木工の接合技法",
+      "level": "中級",
+      "schedule": "平日 19:00",
+      "price": "6000円",
+      "topic": "ものづくり",
+      "prerequisites": "初級修了",
+      "venue": "工房A",
+      "seats": "2",
+      "enroll_link": "申込先C"
+    }
+  ],
+  "constraints": [
+    "好みの題材・コピーの魅力は採点しない。ラベルが同じ対象を指すかは対象。",
+    "前提条件や無料価格を補足へ隠さない。",
+    "申込/保存/公開の状態遷移はB、部品はC。Aでは画面責務と情報を指定する。"
+  ]
+}

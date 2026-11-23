@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Design / Information Architecture"
+  short_description: "Map goals to features, navigation and screen duties"
+  default_prompt: "Use $product-information-architecture to map user goals to features and design an information architecture before placing controls."

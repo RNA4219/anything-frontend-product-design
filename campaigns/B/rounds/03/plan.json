@@ -1,0 +1,14 @@
+{
+  "round": 3,
+  "status": "QUEUED",
+  "issues": [
+    "B-005",
+    "B-006"
+  ],
+  "priority": "P1 after P0 R02",
+  "created_at": "2026-11-23T07:28:41.177748+00:00",
+  "research_question": "Which saved facts remain valid when identity, authority, revision, or operation-retention changes?",
+  "frozen_before_research": true,
+  "implementation_scope": "Two conditional units: resumed task context and revision/conflict recovery. Reuse R01 unknown outcomes and R02 review/repair.",
+  "next_if_new": "Partial batch outcomes, scope of retry and compensation across items."
+}

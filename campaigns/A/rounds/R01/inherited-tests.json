@@ -1,0 +1,8 @@
+{
+  "command": "python -m unittest discover -s tests -p test_*.py -v",
+  "exit_code": 0,
+  "tests": 32,
+  "kind": "inherited-regression-suite",
+  "source_revision": "97b19c29c0b63acfee9ad437f93af081ac0c6ef8",
+  "scope": "structure only; no human effectiveness"
+}

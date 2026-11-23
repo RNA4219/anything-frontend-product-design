@@ -1,0 +1,146 @@
+{
+  "source_id": "B-T301",
+  "canonical_url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction",
+  "title": "Compensating Transaction Pattern - Azure Architecture Center | Microsoft Learn",
+  "type": "official architecture pattern guidance",
+  "authority": "Microsoft Azure Architecture Center",
+  "capture_kind": "PARTIAL",
+  "sha256": "8f41b3690e625973f1b3ae1497e3a78176a92c3e7797c1038e88f3aad7cf8369",
+  "locator": [
+    {
+      "section": "Solution / Problems and considerations",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T301-microsoft-compensating-transaction.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            41,
+            58
+          ],
+          "local_lines": [
+            42,
+            59
+          ],
+          "complete_requested_range": true
+        },
+        {
+          "web_lines": [
+            63,
+            80
+          ],
+          "local_lines": [
+            64,
+            81
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn174995417view0"
+    },
+    {
+      "section": "When to use this pattern",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T301-microsoft-compensating-transaction.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            81,
+            91
+          ],
+          "local_lines": [
+            82,
+            92
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn174995417view0"
+    }
+  ],
+  "observed_facts": [
+    "補償は並行更新を考慮するアプリケーション固有処理であり、開始時点の状態へ戻ることを必ずしも意味しない。",
+    "補償自体が失敗し得る。進捗の記録、失敗地点からの再開、再試行に耐える冪等な処理、必要時の手動介入を説明している。",
+    "対象は複数ステップ・サービス・データストアにまたがり原子的処理に頼れない業務操作等。安全な再試行で足りる場合や一時的不整合を許せない場合には適さないことがある。",
+    "取り消せない外部作用等を識別し、重要な検証後に実行する設計を述べている。"
+  ],
+  "limitations": [
+    "設計パターンの一次資料であり、対象アプリの補償機能の存在・成功率を保証しない。",
+    "ローカルUndo実装について直接のAPI仕様ではない。ローカル適用除外はこの資料の適用範囲と明示した前提からの推論。"
+  ],
+  "upstream_refs": [
+    {
+      "title": "Saga distributed transactions pattern",
+      "url": null,
+      "observed_at": "web L55/L128 link 7",
+      "followed": false,
+      "href_status": "Reference label observed, target href not inspected in this round; no URL asserted."
+    },
+    {
+      "title": "Retry pattern",
+      "url": null,
+      "observed_at": "web L127 link 20",
+      "followed": false,
+      "href_status": "Reference label observed, target href not inspected in this round; no URL asserted."
+    }
+  ],
+  "capture_file": "B-T301-microsoft-compensating-transaction.web.txt",
+  "capture_storage": "Private research archive",
+  "checked_at": "2026-11-23T07:15:18.365659+00:00",
+  "introduced_round": 2,
+  "redistribution": "Original captured text remains private. This public record contains original paraphrases, URLs and section locators only.",
+  "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction",
+  "section": [
+    {
+      "section": "Solution / Problems and considerations",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T301-microsoft-compensating-transaction.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            41,
+            58
+          ],
+          "local_lines": [
+            42,
+            59
+          ],
+          "complete_requested_range": true
+        },
+        {
+          "web_lines": [
+            63,
+            80
+          ],
+          "local_lines": [
+            64,
+            81
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn174995417view0"
+    },
+    {
+      "section": "When to use this pattern",
+      "capture_file": "/workspace/scratch/0238266812de/private/B/round02/researcher2/sources/B-T301-microsoft-compensating-transaction.web.txt",
+      "ranges": [
+        {
+          "web_lines": [
+            81,
+            91
+          ],
+          "local_lines": [
+            82,
+            92
+          ],
+          "complete_requested_range": true
+        }
+      ],
+      "web_ref": "turn174995417view0"
+    }
+  ],
+  "read_status": "PARTIAL: exact web-extracted text saved privately; not raw HTML",
+  "capture_sha256": "8f41b3690e625973f1b3ae1497e3a78176a92c3e7797c1038e88f3aad7cf8369",
+  "source_file_name": "B-T301-microsoft-compensating-transaction.web.txt",
+  "limits": [
+    "設計パターンの一次資料であり、対象アプリの補償機能の存在・成功率を保証しない。",
+    "ローカルUndo実装について直接のAPI仕様ではない。ローカル適用除外はこの資料の適用範囲と明示した前提からの推論。"
+  ]
+}

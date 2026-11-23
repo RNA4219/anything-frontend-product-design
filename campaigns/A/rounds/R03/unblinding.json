@@ -1,0 +1,8 @@
+{
+  "round": "R03",
+  "mapping": {
+    "W": "candidate",
+    "Z": "baseline"
+  },
+  "frozen_before_blind_evaluation": true
+}

@@ -1,0 +1,14 @@
+{
+  "id": "control_process_result_no_independent_entry",
+  "expected_machine": {
+    "baseline": "PASS",
+    "candidate": "PASS"
+  },
+  "expected_semantic": "DESIGN_ACCEPTABLE_PENDING_B_C",
+  "independent_basis": "プロセス結果の独立入口を要求する根拠は入力にない。通常探索とmust経路はそのまま存在する。",
+  "rubric_ids": [
+    "N5",
+    "N6"
+  ],
+  "evidence_level": "synthetic design / HTML source only; no rendered UI, operation, C conformance or human result"
+}

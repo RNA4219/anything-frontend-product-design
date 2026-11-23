@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "frozen_before_generation": true,
+  "task": "campaigns/B/rounds/01/task.md",
+  "test_suite": "modules/interaction-ux-flow/tests/run_flow_trials.mjs",
+  "arms": {
+    "baseline": "Fresh subagent; task only, no B skill or test visibility",
+    "candidate": "Fresh subagent; same task plus frozen B skill, no test visibility"
+  },
+  "sampling": {
+    "runs_per_arm": 1,
+    "model": "inherited default; same model family; exact inference configuration not exposed"
+  },
+  "analysis": {
+    "metric": "count of 12 predeclared behavioral assertions satisfied",
+    "minimum_acceptance": "candidate passes all applicable trials; critical defects from independent critic fixed and rerun",
+    "effect_claim": "descriptive case comparison only; no population effectiveness or statistical significance claim",
+    "test_changes": "original frozen trials must not change; later discoveries get separately labelled regression trials"
+  },
+  "independence_limits": [
+    "Fresh task contexts do not guarantee independent model errors",
+    "Parent writes rubric; critic and execution reduce self-review bias but no human study"
+  ],
+  "created_at": "2026-11-23T06:42:47.993656+00:00",
+  "test_suite_after_pre_scoring_review": "modules/interaction-ux-flow/tests/run_flow_trials_v3.mjs",
+  "original_suite_status": "invalidated, retained unchanged",
+  "errata": "test-errata.md",
+  "scored_cases": {
+    "original_scenarios": 12,
+    "added_race_regressions": 2
+  },
+  "copy_validation": "Separate source and DOM/implementation review, not inferred from a nonempty message field.",
+  "current_suite": "modules/interaction-ux-flow/tests/run_flow_trials_v4.mjs",
+  "amendment": "freeze-v4.json"
+}

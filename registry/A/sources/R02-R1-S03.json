@@ -1,0 +1,57 @@
+{
+  "id": "R02-R1-S03",
+  "url": "https://courses.ischool.berkeley.edu/i247/f05/readings/Yee_Flamenco_CHI03.pdf",
+  "title": "Faceted Metadata for Image Search and Browsing",
+  "publisher": "ACM; copy hosted by UC Berkeley",
+  "source_type": "primary_empirical_conference_paper",
+  "retrieved_at": "2026-11-23T07:14:16Z",
+  "sha256": "bd541d15cb75a33c323836b19ea4063decfeebd07110f8807127409e0385cf7d",
+  "sha256_scope": "selected web excerpt file only; not original HTML/PDF",
+  "version": "Ka-Ping Yee, Kirsten Swearingen, Kevin Li, Marti Hearst; CHI 2003; UC Berkeley-hosted PDF",
+  "locator": [
+    {
+      "remote": "Results; web lines 575–584",
+      "local_line": 11
+    },
+    {
+      "remote": "Post-test interface comparison / Table 2; web lines 706–714 (sentence spans 708–709)",
+      "local_line": 14
+    }
+  ],
+  "verified_claims": [
+    {
+      "claim": "32人が35,000美術画像を二つのUIで探索した被験者内比較。先行UIは半数ずつに割り当てた。",
+      "locator": "Participants/Design and Procedure; web L395–460"
+    },
+    {
+      "claim": "Table 2の単純なバラ画像探索はBaseline 15人/FC 16人の選好。FCはタスク時間を短縮せず、処理遅延・5セッションのエラー・Task 2の時間延長が解釈に影響する。",
+      "locator": "Results/Table 2; web L563–599, L618–658, L706–719"
+    },
+    {
+      "claim": "Task 2(a)の全対象取得率はaquatintsで57%対81%、woodcutsで21%対77%。差の一部はBaselineで単数・複数形の両方を問い合わせなかったことによる。",
+      "locator": "Task Satisfaction and Success; web L506–515"
+    }
+  ],
+  "limits": [
+    "美術画像・関心のある学生等・単一セッションの比較。製品全般、モバイル、業務タスクへの一般化は未検証。",
+    "比較UIはカテゴリリンクも備える。ファセット有無だけを単独操作した比較ではない。",
+    "処理速度・語形処理・Task 2の見えるカテゴリ名・時間枠も異なる。支持率を普遍的効果量にしない。"
+  ],
+  "source_edges": [],
+  "acquisition": {
+    "imozuru_fetch": "FAIL_DNS",
+    "method": "selected original wording from Web extraction",
+    "original_html_downloaded": false,
+    "original_pdf_downloaded": false,
+    "full_original_archive": false,
+    "web_refs": [
+      "turn416754686view0",
+      "turn318388470view1",
+      "turn318388470view2"
+    ]
+  },
+  "publication_safety": "Metadata, original Japanese paraphrase, and short quotation only. Source excerpt stays private.",
+  "source_id": "R02-R1-S03",
+  "verified_in_current_round": "R02",
+  "canonical_url": "https://courses.ischool.berkeley.edu/i247/f05/readings/Yee_Flamenco_CHI03.pdf"
+}

@@ -1,0 +1,123 @@
+{
+  "round": 2,
+  "ended_at": "2026-11-23T07:38:06.093252+00:00",
+  "status": "COMPLETE",
+  "investigated": [
+    "B-003",
+    "B-004",
+    "B-002-UNDO"
+  ],
+  "agents": [
+    {
+      "task_name": "/root/r02_research_primary",
+      "round": 2,
+      "role": "Researcher-1",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    },
+    {
+      "task_name": "/root/r02_research_alternative",
+      "round": 2,
+      "role": "Researcher-2",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    },
+    {
+      "task_name": "/root/r02_analyst",
+      "round": 2,
+      "role": "Analyst / sankai",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    },
+    {
+      "task_name": "/root/r02_critic",
+      "round": 2,
+      "role": "Critic / Evaluator",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    }
+  ],
+  "new_source_ids": [
+    "B-S201",
+    "B-S202",
+    "B-S203",
+    "B-S204",
+    "B-S205",
+    "B-T301",
+    "B-T302",
+    "B-T303",
+    "B-T304",
+    "B-T305"
+  ],
+  "reused_source_ids": [
+    "B-S104",
+    "B-T205"
+  ],
+  "duplicate_records_added": 0,
+  "instruction_units": {
+    "ACCEPT": [
+      "B-IU-004",
+      "B-IU-005",
+      "B-IU-006"
+    ],
+    "REVISED_DEPENDENCY": [
+      "B-IU-003"
+    ]
+  },
+  "tests": {
+    "fixed_initial": {
+      "passed": 16,
+      "total": 16
+    },
+    "fixed_revised": {
+      "passed": 16,
+      "total": 16
+    },
+    "independent_fault_controls": {
+      "detected": 16,
+      "total": 16
+    },
+    "independent_initial_dom": {
+      "passed": 8,
+      "total": 8
+    },
+    "exploratory_regression_initial": {
+      "passed": 2,
+      "total": 3
+    },
+    "exploratory_regression_revised": {
+      "passed": 3,
+      "total": 3
+    },
+    "independent_recheck": "E01 DOM defect resolved; E02 normative wording verified"
+  },
+  "decision": "ACCEPT after hidden inactive-field error fix and normative wording repair. Initial version and failures retained.",
+  "comparison_limit": "No generated model efficacy comparison in R02; faults are intentional controls. Initial and repaired implementation differ on the independently found branch error.",
+  "next": [
+    "B-005",
+    "B-006"
+  ],
+  "cost": {
+    "amount": null,
+    "currency": null,
+    "measured": false,
+    "reason": "Token/billing telemetry unavailable"
+  },
+  "execution": {
+    "subagents_recovered": true,
+    "ci": "NOT_EXECUTED",
+    "real_browser": "NOT_EXECUTED",
+    "dom": "EXECUTED"
+  },
+  "evidence": [
+    "campaigns/B/rounds/02/independent/review.json",
+    "campaigns/B/rounds/02/task-flow-initial-results.json",
+    "campaigns/B/rounds/02/task-flow-results.json",
+    "campaigns/B/rounds/02/branch-regressions-initial.json",
+    "campaigns/B/rounds/02/branch-regressions-revised.json"
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.1",
+  "case_id": "independent-manual-catalogue",
+  "visual_intent_id": "existing-manual-system",
+  "features": [
+    {
+      "id": "f_catalogue",
+      "label": "資料を探す",
+      "object": "manual",
+      "outcome": "choose-manual",
+      "roles": [
+        "engineer"
+      ],
+      "goal_ids": [
+        "g_choose"
+      ],
+      "requirement_ids": [
+        "r_choose"
+      ],
+      "dependencies": [],
+      "scope": "all-approved-manuals",
+      "context_constraints": [
+        "staff-account"
+      ],
+      "evidence_refs": [
+        "e_task"
+      ],
+      "disposition": "keep",
+      "target": null,
+      "reason": "入力で必要な成果と対象集合を保持する",
+      "priority": "required",
+      "priority_basis": "明示された必須性"
+    },
+    {
+      "id": "f_recent",
+      "label": "最近の資料",
+      "object": "manual",
+      "outcome": "resume-manual",
+      "roles": [
+        "engineer"
+      ],
+      "goal_ids": [
+        "g_resume"
+      ],
+      "requirement_ids": [
+        "r_resume"
+      ],
+      "dependencies": [],
+      "scope": "my-recent-manuals",
+      "context_constraints": [
+        "staff-account"
+      ],
+      "evidence_refs": [
+        "e_task"
+      ],
+      "disposition": "keep",
+      "target": null,
+      "reason": "入力で必要な成果と対象集合を保持する",
+      "priority": "medium",
+      "priority_basis": "明示された必須性"
+    }
+  ],
+  "screens": [
+    {
+      "id": "s_recent",
+      "title": "最近の資料",
+      "purpose": "対象資料と適用条件を照合する",
+      "goal_ids": [
+        "g_resume"
+      ],
+      "feature_ids": [
+        "f_recent"
+      ],
+      "roles": [
+        "engineer"
+      ],
+      "entry_for": [
+        "engineer"
+      ],
+      "information": [
+        {
+          "id": "manual_id",
+          "visibility": "primary",
+          "reason": "対象選択に使う"
+        },
+        {
+          "id": "title",
+          "visibility": "primary",
+          "reason": "対象選択に使う"
+        }
+      ]
+    },
+    {
+      "id": "s_catalogue",
+      "title": "承認済み資料",
+      "purpose": "対象資料と適用条件を照合する",
+      "goal_ids": [
+        "g_choose"
+      ],
+      "feature_ids": [
+        "f_catalogue"
+      ],
+      "roles": [
+        "engineer"
+      ],
+      "entry_for": [
+        "engineer"
+      ],
+      "information": [
+        {
+          "id": "manual_id",
+          "visibility": "primary",
+          "reason": "対象選択に使う"
+        },
+        {
+          "id": "title",
+          "visibility": "primary",
+          "reason": "対象選択に使う"
+        },
+        {
+          "id": "voltage",
+          "visibility": "primary",
+          "reason": "対象選択に使う"
+        },
+        {
+          "id": "revision",
+          "visibility": "primary",
+          "reason": "対象選択に使う"
+        }
+      ]
+    },
+    {
+      "id": "s_D17",
+      "title": "D-17 結線手順",
+      "purpose": "対象資料と適用条件を照合する",
+      "goal_ids": [],
+      "feature_ids": [],
+      "roles": [
+        "engineer"
+      ],
+      "entry_for": [],
+      "information": [
+        {
+          "id": "manual_id",
+          "visibility": "primary",
+          "reason": "対象選択に使う"
+        },
+        {
+          "id": "title",
+          "visibility": "primary",
+          "reason": "対象選択に使う"
+        },
+        {
+          "id": "voltage",
+          "visibility": "primary",
+          "reason": "対象選択に使う"
+        },
+        {
+          "id": "revision",
+          "visibility": "primary",
+          "reason": "対象選択に使う"
+        }
+      ]
+    },
+    {
+      "id": "s_D42",
+      "title": "D-42 結線手順",
+      "purpose": "対象資料と適用条件を照合する",
+      "goal_ids": [],
+      "feature_ids": [],
+      "roles": [
+        "engineer"
+      ],
+      "entry_for": [],
+      "information": [
+        {
+          "id": "manual_id",
+          "visibility": "primary",
+          "reason": "対象選択に使う"
+        },
+        {
+          "id": "title",
+          "visibility": "primary",
+          "reason": "対象選択に使う"
+        },
+        {
+          "id": "voltage",
+          "visibility": "primary",
+          "reason": "対象選択に使う"
+        },
+        {
+          "id": "revision",
+          "visibility": "primary",
+          "reason": "対象選択に使う"
+        }
+      ]
+    }
+  ],
+  "navigation": [
+    {
+      "from": "s_recent",
+      "to": "s_catalogue",
+      "label": "すべての承認済み資料を探す",
+      "roles": [
+        "engineer"
+      ],
+      "kind": "contextual",
+      "rationale": "最近の履歴の条件を継承せず、全承認済み資料の一覧へ戻る"
+    },
+    {
+      "from": "s_catalogue",
+      "to": "s_D17",
+      "label": "D-17の詳細",
+      "roles": [
+        "engineer"
+      ],
+      "kind": "contextual",
+      "rationale": "D-17を開く"
+    },
+    {
+      "from": "s_catalogue",
+      "to": "s_D42",
+      "label": "D-42の詳細",
+      "roles": [
+        "engineer"
+      ],
+      "kind": "contextual",
+      "rationale": "D-42を開く"
+    }
+  ],
+  "goal_routes": [
+    {
+      "goal_id": "g_choose",
+      "start_screen": "s_recent",
+      "target_screen": "s_catalogue",
+      "notes": "ここでID・電圧・改訂を比較しD-42を選ぶ"
+    },
+    {
+      "goal_id": "g_resume",
+      "start_screen": "s_recent",
+      "target_screen": "s_recent",
+      "notes": "同じD-17を再開する"
+    }
+  ],
+  "unresolved": [],
+  "decision_notes": [
+    "安全/結線カテゴリは正本D-17/D-42を共有し、独立正本を増やさない。",
+    "検索範囲と索引は未確認で現在の検索では0件。全体不存在は結論しない。",
+    "旧/manuals/wiringの対象はD-17だが、D-42も結線手順という同じ題名なのでD-42へ無言転送する。",
+    "s_catalogueで比較選択する。HTMLの描画、実操作、ラベルの人による理解は未確認。"
+  ]
+}

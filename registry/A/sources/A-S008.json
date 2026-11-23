@@ -1,0 +1,12 @@
+{
+  "source_id": "A-S008",
+  "title": "— Progress easily — U.S. Web Design System",
+  "url": "https://designsystem.digital.gov/patterns/complete-a-complex-form/progress-easily/",
+  "canonical_url": "https://designsystem.digital.gov/patterns/complete-a-complex-form/progress-easily",
+  "original_id": "S08",
+  "provenance": "inherited-index",
+  "verified_in_current_round": false,
+  "rights": "Link and original paraphrase only; no third-party full text redistributed.",
+  "content_sha256": null,
+  "notes": "- **URL**: [Progress easily — U.S. Web Design System](https://designsystem.digital.gov/patterns/complete-a-complex-form/progress-easily/)\n- **該当箇所**: When to use this pattern / Guidance: What to do and What not to do\n- **確認日 / 種別**: 2026-11-23 / official_pattern\n- **原典の主張** (author_guidance): 複雑フォームでは意味のある小話題へ分け、重要な説明を別画面のリンクの背後へ隠さない。\n- **制約・版・未確認**: 主に負荷・機微情報の多い複雑フォーム。比較表や専門家の作業面に一画面一項目を要求しない。\n- **接続する原則**: A07, A08。原則のProcedure/JSON契約は、別に明記した本Skillの導出。"
+}

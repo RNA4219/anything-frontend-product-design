@@ -1,0 +1,12 @@
+{
+  "source_id": "A-S003",
+  "title": "— Design hypothesis — 18F",
+  "url": "https://guides.18f.org/methods/decide/design-hypothesis/",
+  "canonical_url": "https://guides.18f.org/methods/decide/design-hypothesis",
+  "original_id": "S03",
+  "provenance": "inherited-index",
+  "verified_in_current_round": false,
+  "rights": "Link and original paraphrase only; no third-party full text redistributed.",
+  "content_sha256": null,
+  "notes": "- **URL**: [Design hypothesis — 18F](https://guides.18f.org/methods/decide/design-hypothesis/)\n- **該当箇所**: What / How to do it\n- **確認日 / 種別**: 2026-11-23 / archived_official_method\n- **原典の主張** (author_guidance): 出荷した機能と意図した成果を区別し、仮説と観測指標を結び、結果で修正する。\n- **制約・版・未確認**: 統計的合格値・自動昇格条件を規定しない。\n- **接続する原則**: A02, A10。原則のProcedure/JSON契約は、別に明記した本Skillの導出。"
+}

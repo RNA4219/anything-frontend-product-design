@@ -1,0 +1,31 @@
+{
+  "review_id": "B-R01-critic-candidate-revised-copy-recheck",
+  "created_at": "2026-11-23T07:05:29.976064+00:00",
+  "verdict": "ACCEPT",
+  "scope": "Only B-R01-EXP-002 cancellation-race copy in separately preserved candidate-revised. Original finding and raw arm are unchanged.",
+  "finding_id": "B-R01-EXP-002",
+  "disposition": "RESOLVED_IN_REVISED_ARTIFACT_FOR_REPRODUCED_SCENARIO",
+  "artifact": "campaigns/B/rounds/01/artifacts/candidate-revised",
+  "method": "One actual-click DOM race scenario with real revised flow/mock modules in jsdom; imports injected by harness.",
+  "observed": {
+    "phase": "succeeded",
+    "currentDate": "2026-12-10T14:00",
+    "message": "変更成功を確認しました。取消の完了は確認されていません。表示日時が今回確認できた予約日時です。",
+    "errors": [],
+    "files_stable": true,
+    "hashes": {
+      "flow.mjs": "7bf06885b487a3229c76c99f5a04aa3ad1f5091392a38984601f1834b688e14a",
+      "index.html": "41721d66cd9fc9d7a40a4e493a413d4841e4eb14eedda8bd7c0ff2ad6499c916",
+      "mock-service.mjs": "204fee67d54972a40de9451fe92a72d17a145a61a82199c7c4d202c647396041",
+      "app.mjs": "f221fc876f656f6335a84423ff13225e385ed99390128d35809f397b7de3af18"
+    }
+  },
+  "reason": "The revised text reports confirmed success and lack of confirmed cancellation without claiming an unsupported ordering between completion and cancellation request submission.",
+  "evidence": "campaigns/B/rounds/01/independent/dom-candidate-revised-race.json",
+  "initial_evidence_preserved": "campaigns/B/rounds/01/independent/dom-candidate-race.json",
+  "limitations": [
+    "No additional full suite or broader DOM regression was run by critic for this copy-only change; parent reports v4 14/14 for the revised artifact.",
+    "No real-browser visual or human-comprehension validation.",
+    "Same-model separate task context is not objective validation."
+  ]
+}

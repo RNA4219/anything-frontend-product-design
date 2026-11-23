@@ -1,0 +1,58 @@
+test_deferred_optional_proposals_have_no_screen_obligation (test_information_obligations.InformationObligationTests.test_deferred_optional_proposals_have_no_screen_obligation) ... ok
+test_priority_does_not_allow_the_capability_to_be_elsewhere (test_information_obligations.InformationObligationTests.test_priority_does_not_allow_the_capability_to_be_elsewhere) ...
+  test_priority_does_not_allow_the_capability_to_be_elsewhere (test_information_obligations.InformationObligationTests.test_priority_does_not_allow_the_capability_to_be_elsewhere) (priority='should') ... FAIL
+  test_priority_does_not_allow_the_capability_to_be_elsewhere (test_information_obligations.InformationObligationTests.test_priority_does_not_allow_the_capability_to_be_elsewhere) (priority='could') ... FAIL
+test_priority_does_not_hide_needed_information_for_a_declared_route (test_information_obligations.InformationObligationTests.test_priority_does_not_hide_needed_information_for_a_declared_route) ...
+  test_priority_does_not_hide_needed_information_for_a_declared_route (test_information_obligations.InformationObligationTests.test_priority_does_not_hide_needed_information_for_a_declared_route) (priority='should') ... FAIL
+  test_priority_does_not_hide_needed_information_for_a_declared_route (test_information_obligations.InformationObligationTests.test_priority_does_not_hide_needed_information_for_a_declared_route) (priority='could') ... FAIL
+test_shared_enabler_does_not_offer_a_deferred_optional_goal (test_information_obligations.InformationObligationTests.test_shared_enabler_does_not_offer_a_deferred_optional_goal) ... ok
+test_visible_declared_tasks_pass_across_priorities (test_information_obligations.InformationObligationTests.test_visible_declared_tasks_pass_across_priorities) ... ok
+
+======================================================================
+FAIL: test_priority_does_not_allow_the_capability_to_be_elsewhere (test_information_obligations.InformationObligationTests.test_priority_does_not_allow_the_capability_to_be_elsewhere) (priority='should')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/tests/test_information_obligations.py", line 38, in test_priority_does_not_allow_the_capability_to_be_elsewhere
+    self.assertEqual('FAIL', r['status'], r)
+AssertionError: 'FAIL' != 'PASS'
+- FAIL
++ PASS
+ : {'status': 'PASS', 'issues': [], 'checks_available': {'contract_version': '1.1', 'context_and_retirement': True, 'navigation_context': False, 'search_coverage': False, 'legacy_entry_identity': False, 'rendered_goal_location': False, 'human_usability': False}, 'counts': {'goals': 1, 'features': 2, 'kept_features': 2, 'screens': 2, 'navigation_edges': 0}}
+
+======================================================================
+FAIL: test_priority_does_not_allow_the_capability_to_be_elsewhere (test_information_obligations.InformationObligationTests.test_priority_does_not_allow_the_capability_to_be_elsewhere) (priority='could')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/tests/test_information_obligations.py", line 38, in test_priority_does_not_allow_the_capability_to_be_elsewhere
+    self.assertEqual('FAIL', r['status'], r)
+AssertionError: 'FAIL' != 'PASS'
+- FAIL
++ PASS
+ : {'status': 'PASS', 'issues': [], 'checks_available': {'contract_version': '1.1', 'context_and_retirement': True, 'navigation_context': False, 'search_coverage': False, 'legacy_entry_identity': False, 'rendered_goal_location': False, 'human_usability': False}, 'counts': {'goals': 1, 'features': 2, 'kept_features': 2, 'screens': 2, 'navigation_edges': 0}}
+
+======================================================================
+FAIL: test_priority_does_not_hide_needed_information_for_a_declared_route (test_information_obligations.InformationObligationTests.test_priority_does_not_hide_needed_information_for_a_declared_route) (priority='should')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/tests/test_information_obligations.py", line 27, in test_priority_does_not_hide_needed_information_for_a_declared_route
+    self.assertEqual('FAIL', r['status'], r)
+AssertionError: 'FAIL' != 'PASS'
+- FAIL
++ PASS
+ : {'status': 'PASS', 'issues': [], 'checks_available': {'contract_version': '1.1', 'context_and_retirement': True, 'navigation_context': False, 'search_coverage': False, 'legacy_entry_identity': False, 'rendered_goal_location': False, 'human_usability': False}, 'counts': {'goals': 1, 'features': 2, 'kept_features': 2, 'screens': 1, 'navigation_edges': 0}}
+
+======================================================================
+FAIL: test_priority_does_not_hide_needed_information_for_a_declared_route (test_information_obligations.InformationObligationTests.test_priority_does_not_hide_needed_information_for_a_declared_route) (priority='could')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/tests/test_information_obligations.py", line 27, in test_priority_does_not_hide_needed_information_for_a_declared_route
+    self.assertEqual('FAIL', r['status'], r)
+AssertionError: 'FAIL' != 'PASS'
+- FAIL
++ PASS
+ : {'status': 'PASS', 'issues': [], 'checks_available': {'contract_version': '1.1', 'context_and_retirement': True, 'navigation_context': False, 'search_coverage': False, 'legacy_entry_identity': False, 'rendered_goal_location': False, 'human_usability': False}, 'counts': {'goals': 1, 'features': 2, 'kept_features': 2, 'screens': 1, 'navigation_edges': 0}}
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+FAILED (failures=4)

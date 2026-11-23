@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>工作室の予約変更</title>
+  <link rel="stylesheet" href="booking.css">
+  <script defer src="booking.js"></script>
+</head>
+<body>
+  <main id="booking-app" data-state="loading">
+    <h1>工作室の予約変更</h1>
+    <p id="booking-status" role="status"></p>
+    <noscript><p>この試作を使うには JavaScript が必要です。</p></noscript>
+
+    <section id="reservation-list" aria-labelledby="list-heading" hidden>
+      <h2 id="list-heading">予約一覧</h2>
+      <ul class="reservations">
+        <li>
+          <h3>工作室 R-204</h3>
+          <p><span id="current-date"></span> ・ 確定</p>
+          <button id="open-change" type="button">R-204 の日程を変更する</button>
+        </li>
+        <li>
+          <h3>工作室 R-205</h3>
+          <p>11月10日 14:00 ・ 利用済み</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="choose-section" aria-labelledby="choose-heading" hidden>
+      <h2 id="choose-heading" tabindex="-1">変更先を選ぶ</h2>
+      <p>R-204 の確定日時 <strong id="choose-current-date"></strong></p>
+      <p id="conflict-message" class="notice" hidden></p>
+      <form id="slot-form">
+        <fieldset aria-describedby="slot-help">
+          <legend>工作室の空き枠（必須）</legend>
+          <p id="slot-help">希望する日時を一つ選んでください。</p>
+          <label class="slot">
+            <input id="slot-10" type="radio" name="slot" value="10" required>
+            <span>12月10日 14:00 <span id="slot-10-note"></span></span>
+          </label>
+          <label class="slot">
+            <input id="slot-11" type="radio" name="slot" value="11" required>
+            <span>12月11日 14:00 <span id="slot-11-note"></span></span>
+          </label>
+        </fieldset>
+        <div class="actions">
+          <button id="review-change" class="primary" type="submit">変更内容を確認する</button>
+          <button id="cancel-change" type="button">予約一覧へ戻る</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="confirm-section" aria-labelledby="confirm-heading" hidden>
+      <h2 id="confirm-heading" tabindex="-1">変更内容を確認する</h2>
+      <p>工作室 R-204</p>
+      <dl class="dates">
+        <dt>変更前</dt>
+        <dd id="before-date"></dd>
+        <dt>変更後</dt>
+        <dd id="after-date"></dd>
+      </dl>
+      <div class="actions">
+        <button id="submit-change" class="primary" type="button">変更を確定する</button>
+        <button id="edit-selection" type="button">候補を選び直す</button>
+      </div>
+    </section>
+
+    <section id="unknown-section" aria-labelledby="unknown-heading" hidden>
+      <h2 id="unknown-heading" tabindex="-1" aria-describedby="unknown-message">変更結果が分かりません</h2>
+      <p id="unknown-message" class="notice">現在の予約を確認してから、次の操作へ進んでください。</p>
+      <p>工作室 R-204 ・ 変更希望 <strong id="unknown-target-date"></strong></p>
+      <button id="check-current" class="primary" type="button">現在の予約を確認する</button>
+    </section>
+
+    <section id="unchanged-section" aria-labelledby="unchanged-heading" hidden>
+      <h2 id="unchanged-heading" tabindex="-1" aria-describedby="unchanged-message">日時は変更されていません</h2>
+      <p id="unchanged-message">R-204 の確定日時は <strong id="unchanged-date"></strong> です。</p>
+      <dl class="dates">
+        <dt>変更希望</dt>
+        <dd id="unchanged-target-date"></dd>
+      </dl>
+      <div class="actions">
+        <button id="retry-change" class="primary" type="button">もう一度変更内容を確認する</button>
+        <button id="return-after-unchanged" type="button">予約一覧へ戻る</button>
+      </div>
+    </section>
+
+    <section id="success-section" aria-labelledby="success-heading" hidden>
+      <h2 id="success-heading" tabindex="-1" aria-describedby="success-message">予約を変更しました</h2>
+      <p id="success-message">工作室 R-204 は <strong id="success-date"></strong> で確定しています。</p>
+      <button id="return-to-list" type="button">予約一覧へ戻る</button>
+    </section>
+
+    <section id="storage-section" aria-labelledby="storage-heading" hidden>
+      <h2 id="storage-heading" tabindex="-1" aria-describedby="storage-message">予約データを確認できません</h2>
+      <p id="storage-message" class="notice">ブラウザーでサイトのデータを利用できる状態にしてから、読み直してください。</p>
+      <button id="retry-storage" type="button">予約データを読み直す</button>
+    </section>
+  </main>
+
+  <footer id="demo-tools" hidden>
+    <p>試作モード <strong id="scenario-label"></strong></p>
+    <button id="reset-demo" type="button">このモードの試作データを初期化する</button>
+  </footer>
+</body>
+</html>

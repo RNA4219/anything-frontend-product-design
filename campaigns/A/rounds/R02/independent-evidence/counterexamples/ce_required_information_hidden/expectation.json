@@ -1,0 +1,13 @@
+{
+  "id": "ce_required_information_hidden",
+  "expected_machine": {
+    "baseline": "FAIL",
+    "candidate": "FAIL"
+  },
+  "expected_semantic": "STRUCTURAL_AND_SEMANTIC_DEFECT",
+  "independent_basis": "選択に必要な改訂情報がtarget画面でprimaryでなくなる。",
+  "rubric_ids": [
+    "N4"
+  ],
+  "evidence_level": "synthetic design / HTML source only; no rendered UI, operation, C conformance or human result"
+}

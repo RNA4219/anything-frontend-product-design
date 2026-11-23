@@ -1,0 +1,13 @@
+{
+  "id": "control_zero_within_verified_scope",
+  "expected_machine": {
+    "baseline": "PASS",
+    "candidate": "PASS"
+  },
+  "expected_semantic": "DESIGN_ACCEPTABLE_PENDING_EXTERNAL_VERIFICATION",
+  "independent_basis": "0件の観測を消さず、確認済みの限定集合についてのみ該当なしと述べている。",
+  "rubric_ids": [
+    "N2"
+  ],
+  "evidence_level": "synthetic design / HTML source only; no rendered UI, operation, C conformance or human result"
+}

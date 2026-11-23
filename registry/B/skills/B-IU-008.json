@@ -1,0 +1,458 @@
+{
+  "skill_id": "B-IU-008",
+  "domain": "interaction-ux-flow",
+  "trigger": [
+    "復帰または更新時に、reviewしたrevisionと現在のrevisionが一致しない。",
+    "conditional updateが対象APIのpreconditionエラーを返す。",
+    "複数read/operation結果が交差し、最新の観測と過去の操作結果が混ざり得る。"
+  ],
+  "intent": "最後に見直した対象・内容・revisionを変更要求へ結び付け、競合では新しいserver値とdraftを守る。再取得を承認に読み替えず、遅い応答や過去の成功snapshotで現在viewを巻き戻さない。",
+  "required_inputs": [
+    "B-IU-007の現在actor、対象binding、必要なread/lookup/write capability。server側の現在認可は各要求に必要。",
+    "利用者が最後にreviewした対象ID、実効payload、判断に影響する事実と、そのときのresource validator。最新read値とは別に保持する。",
+    "対象API・版・methodとconditional updateの契約。HTTP If-Matchかresource.etag等か、比較規則、必須性、弱いvalidatorの扱い、エラー優先順位、既適用時の応答を区別する。",
+    "validatorが覆うtarget representation/fieldと、関連resource・枠・料金等の原子的検査範囲。未定義なら保証を広げない。",
+    "保護するdraft、比較可能な現在resourceの最終観測とその取得context、reviewの意味を変えるfieldの依存関係、明示されたmerge方針。",
+    "元operationのowner/target/operation IDに相関した権威ある結果と、そのsnapshotの意味。今回のlookupは操作実行時snapshot、loadは現在resourceの観測。",
+    "read/operation応答を現在viewへ適用できるcontextと発行順序の契約。opaque tagの大小や到着順だけで判断しない。",
+    "失敗/競合/未解決時に実行できる比較・修正・破棄・照合等の次の手段。実在しない自動mergeや強制上書きを補わない。"
+  ],
+  "decision_rules": [
+    {
+      "id": "008-D01",
+      "if": "HTTP entity-tagをvalidatorとして用い、If-Matchで比較する",
+      "then": "値をopaqueとして保持し、HTTP If-Matchでは双方がweakでない完全一致の強比較を使う。数値化・辞書順による新旧判断やW/の削除で意味を変えない。",
+      "basis": "source_requirement",
+      "source_refs": [
+        "B-S101"
+      ],
+      "source_locations": [
+        "§8.8.3–8.8.3.2; web L1848–L1886",
+        "§13.1.1/L2731"
+      ],
+      "verification_cases": [
+        "R08"
+      ],
+      "limitation": "別APIの明示された単調revision契約は別物。HTTP強比較をAIPの全resource.etagへ無条件適用しない。"
+    },
+    {
+      "id": "008-D02",
+      "if": "現在の利用者が見直して確定する変更を送る",
+      "then": "そのreviewが扱った対象とpayloadに対応する具体validatorを、serverの実行直前条件として送る。clientだけの検査、If-Match:*、condition省略を版一致の代用にしない。送信後の未知/再送はB-IU-001/002へ委任する。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S302"
+      ],
+      "source_locations": [
+        "B-S101:§13.1.1,§13.2.1",
+        "B-S302:L65–L68",
+        "task.md:acceptance5"
+      ],
+      "verification_cases": [
+        "R06",
+        "R13"
+      ],
+      "source_vs_design": "serverでのIf-Match評価はRFCの規範。reviewと具体validatorを結び付ける設計はtask要件とB-IU-006の適用。"
+    },
+    {
+      "id": "008-D03",
+      "if": "serverが今回の更新のprecondition不一致を確定している",
+      "then": "新しいserver値を変更せず、利用者draftも失わせず、比較・修正・再判断へ戻す。再取得したtagだけを旧payloadへ差し替える、conditionを外す、*に替える自動再送は行わない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S301",
+        "B-S302"
+      ],
+      "source_locations": [
+        "B-S101:§13.1.1/L2753–L2756",
+        "B-S301:48–54",
+        "task.md:acceptance5,6"
+      ],
+      "verification_cases": [
+        "R06",
+        "R07"
+      ],
+      "exception_ref": "008-E05: RFCは既適用と判断できる場合の2xx例外も持つ。未知の元operationと今回不一致の要求を区別する。"
+    },
+    {
+      "id": "008-D04",
+      "if": "最新resourceの取得で、利用者がreviewしたactionの対象・金額・効果等を変える事実が判明した",
+      "then": "影響するreviewを無効化し、draftと現在観測を比較して明示的な新しい選択を得る。読込成功だけをapprovalとして扱わず、新しい内容と条件を確定するまでwriteしない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S302",
+        "B-S205"
+      ],
+      "source_locations": [
+        "B-IU-006:review invalidation",
+        "B-S302:L93–L102はsampleのみ",
+        "task.md:acceptance6"
+      ],
+      "verification_cases": [
+        "R07"
+      ],
+      "limitation": "重要性の集合は適用先が定義する。Calendar sampleは人の再承認の規範ではなく、無条件自動上書きの根拠にもならない。"
+    },
+    {
+      "id": "008-D05",
+      "if": "利用者が現在の事実・希望内容を明示的にreviewし、現在のwrite能力と対象bindingが有効である",
+      "then": "その選択に対応するpayloadとreview済みvalidatorで条件付き更新を行う。直前にさらに版が変わればserverで拒否し、再び比較へ戻す。同じ送信の再操作はB-IU-002で扱う。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S301",
+        "B-T403"
+      ],
+      "source_locations": [
+        "B-S101:§13.2.1",
+        "B-S301:45–50",
+        "B-IU-002",
+        "B-IU-006",
+        "cases.json:R13"
+      ],
+      "verification_cases": [
+        "R13"
+      ],
+      "scope_note": "R13の『1回』はfixtureの観測条件。任意のネットワークでexactly-onceを保証する主張ではない。"
+    },
+    {
+      "id": "008-D06",
+      "if": "古いreadがより新しく採用したreadの後に届く、または現在contextと対応しない",
+      "then": "data-layerのcontext/発行対応に従って現在viewへの採用を拒否する。account/resourceが同じ場所へ戻った場合にも古い発行を区別し、opaque tagの大小や単なる到着順で現行viewを決めない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S303",
+        "B-S101"
+      ],
+      "source_locations": [
+        "B-S303:L380–L424",
+        "B-S101:§8.8.3",
+        "task.md:acceptance7"
+      ],
+      "verification_cases": [
+        "R08",
+        "R09"
+      ],
+      "implementation_boundary": "React cleanup/ignore、request epoch、cache機能は実装例。既存data layerが同等の条件を保証するなら独自counterを追加しない。"
+    },
+    {
+      "id": "008-D07",
+      "if": "同じowner/target/operationに正しく相関した確定成功snapshotと、後に得た現在resource観測が異なる",
+      "then": "操作はその時点で成功したという結果を保ち、現在resourceはその観測として別に保持する。遅い過去snapshotで現行viewを巻き戻さない。別accountへその結果を表示する根拠にはしない。 同じoperationの古いpending応答を、既知の終端結果へ上書き適用しない。 元操作の成功を現在の認証・権限の代わりにせず、現在のauth_required等があれば必要な再確認までprivate表示・照会を止める。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S104",
+        "B-S101",
+        "B-S303"
+      ],
+      "source_locations": [
+        "cases.json:observation_contract",
+        "B-IU-001:exceptions",
+        "task.md:acceptance7"
+      ],
+      "verification_cases": [
+        "R11"
+      ],
+      "source_vs_design": "lookup/loadのsnapshot分離は今回の明示契約。Reactのread例やRFCだけからoperationの結果schema・永続性は導かない。"
+    },
+    {
+      "id": "008-D08",
+      "if": "operation成功を権威ある結果で確認した後、現在resourceのreadが失敗した",
+      "then": "確認済みoperation成功を消してunknown/failedへ戻さない。現在resourceは読込失敗・未確認と別に示し、以前の観測があれば『最終観測』として時点を区別する。read失敗だけを理由に同じ変更を再送しない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S104"
+      ],
+      "source_locations": [
+        "cases.json:observation_contract,R12",
+        "B-IU-001:operation/lookup error distinction"
+      ],
+      "verification_cases": [
+        "R12"
+      ]
+    },
+    {
+      "id": "008-D09",
+      "if": "API adapterがetag不一致または認可等のエラーをtask状態へ変換する",
+      "then": "AIP-154のABORTED、HTTP If-Match/Calendarの412、他の認可・検証エラーを対象契約に従って区別する。一致だけで全条件充足とせず、省略を許すAPIでもreviewした版を守る条件を黙って外さない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S301",
+        "B-S101",
+        "B-S302",
+        "B-T403"
+      ],
+      "source_locations": [
+        "B-S301:45–54,112–119",
+        "B-S101:§13.2.1",
+        "B-S302:L65–L68",
+        "B-T403:L484"
+      ],
+      "verification_cases": [
+        "R05",
+        "R06",
+        "R13"
+      ],
+      "limitation": "AIPはGoogle API設計指針で、すべてのserviceの実契約ではない。R05/R06/R13だけで各実APIのエラー適合を確認したことにはしない。"
+    },
+    {
+      "id": "008-D10",
+      "if": "target validator以外の予約枠・在庫・関連record・権限等も成立条件となる",
+      "then": "関連条件を同じ原子的判断で扱うservice契約がある範囲だけ保証を述べる。targetのIf-Match成功を、他のresourceや全業務条件まで検査済みという表示に拡張しない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S101",
+        "B-S302"
+      ],
+      "source_locations": [
+        "B-S101:§13.1/L2725–L2726",
+        "B-S302:L68,L121"
+      ],
+      "verification_cases": [],
+      "verification_gap": "R01–R13は関連resourceのtransactionを直接試さない。適用先契約を得るまでその保証だけを未確定とする。"
+    }
+  ],
+  "procedure": [
+    "復帰/更新対象の現在actorと操作capabilityをB-IU-007で確かめ、最後にreviewした対象・payload・事実・validatorを現在のread結果とは別に取り出す。",
+    "APIのconditional update契約を確認する。HTTP If-Matchならopaqueな強validatorの一致を使い、通常検査後・method実行直前にserverが評価する。resource.etag系の別契約ではその比較・エラー・必須性に従う。",
+    "更新はreviewに対応する具体validatorを付けて送る。clientで直前に読めたという理由だけで条件を省略しない。If-Match:*は対象の存在条件であり、reviewした版の一致条件ではない。",
+    "不一致が確定したら、新しいserver値と入力draftをともに保って比較へ戻す。最新tagを旧payloadへ付け直す、conditionを消す、weak値をstrongに見せることで衝突を回避しない。",
+    "取得した変化がreviewしたactionの意味を変える場合は、既存B-IU-006に従い関係する判断を無効化する。利用者が差分を確認し、修正・採用・破棄等の実在する選択を明示するまで新しいwriteは行わない。",
+    "新たに確定した内容とvalidatorで条件付き更新する。review後のさらなる競合はserverで防ぎ、再び比較へ戻す。終端結果・未知・再送は既存B-IU-001/002を使う。",
+    "readの反映は現在contextと採用順序の契約で判断する。古いreadが後着しても確認済みviewを上書きしない。tagの見た目や大小は順序の根拠にしない。",
+    "operationの確定結果はそのowner/target/operationに結び付け、現在resource観測と別に記録する。今回のlookup成功snapshotをcurrent resourceとして上書きせず、loadで得た観測は観測時点の事実として扱う。",
+    "current resourceの読込に失敗しても、別に確認したoperation成功を失敗/未知へ変えない。必要な現在値だけを未確認と示す。単一の応答が両事実を保証するAPIには余計な照会を追加しない。",
+    "固定R06/R07/R08/R11/R12/R13で、server値・draft・review状態・送信validator・query/operation対応を観測する。関連resourceの原子性や各製品APIへの適合は、このfixtureだけでは保証しない。"
+  ],
+  "expected_outputs": [
+    "review済みの対象・実効内容・判断に影響する事実・validatorを結ぶ条件付き変更の判断。",
+    "競合時に保持したdraft、serverの最終観測値、差分、必要な再判断と実行可能な次の操作。",
+    "owner/target/operation別の確定結果と、現在resourceの観測/読込失敗を分けた状態・表示。",
+    "opaque validator、API別エラー、target範囲、遅延応答採否の条件と、固定ケースで観測する証拠。"
+  ],
+  "dependencies": [
+    {
+      "ref": "B-IU-007",
+      "when": "復帰、account切替、認証/権限変化がある",
+      "need": "現在actor/binding/capabilityを前提にしてprivate query・表示・writeを選ぶ。"
+    },
+    {
+      "ref": "B-IU-006",
+      "when": "新しい事実が旧reviewのactionを変える",
+      "need": "review無効化、必要な修正・追加質問・再確認。全確認flowを再実装しない。"
+    },
+    {
+      "ref": "B-IU-005",
+      "when": "比較から入力修正へ戻る",
+      "need": "保持入力と該当項目の修正経路、同一process再入力の例外。"
+    },
+    {
+      "ref": "B-IU-001/002",
+      "when": "条件付き変更の結果が未知、遅延、再操作になる",
+      "need": "権威ある結果照合、元intent/操作識別、安全な再送条件。snapshot/current観測の分離にも結果意味を使う。"
+    },
+    {
+      "ref": "API/server contract",
+      "when": "常時",
+      "need": "validator適用範囲、実行直前評価、認可、payload semantics、エラー優先順位、関連resourceの原子性。"
+    },
+    {
+      "ref": "C / data layer",
+      "when": "非同期read/operationの応答が交差する",
+      "need": "現在contextと応答適用の対応を実装し、保持・表示の権限を満たす。特定epoch/cleanup方式は指定しない。"
+    },
+    {
+      "ref": "https://github.com/RNA4219/anything-frontend-art-direction/blob/main/references/g-state-forms.md#g-06",
+      "when": "stale readを実装する",
+      "need": "後着の古いresponseという既知実装概念。Bは業務的な採用条件を追加する。"
+    },
+    {
+      "ref": "https://github.com/RNA4219/anything-frontend-art-direction/blob/main/references/d-interaction.md#d-38",
+      "when": "再取得と仮表示/書込みが交差する",
+      "need": "古い再取得の上書き制御という既知の実装導線。D-41にも復帰再検証と書込み競合の参照がある。"
+    }
+  ],
+  "exceptions": [
+    "判断に影響しない変更や、明示されたfield単位merge方針で同じactionの意味を保てる場合に、一律の確認dialogを追加しない。merge可否を未提示のまま許可しない。",
+    "HTTP ETagはopaqueで順序を与えない。APIが別の単調revision/因果順序を明示する場合はその別契約を使える。",
+    "AIP-154はstrong/weak両方のresource.etagを許す設計指針だが、HTTP If-Matchは強比較。適用先の同名etagを同一仕様と仮定せず、W/を削除して偽装しない。",
+    "AIP-154はetag省略を原則許容する指針も持つ。これは今回のreviewした版を保護する要件を外してよい意味ではなく、対象APIの必須性と要求する保証を分ける。",
+    "RFC If-Matchが偽なら新たにmethodを実行しないが、要求変更が既に適用されたと判断できる場合の2xx例外がある。すべての不一致が必ず412になるとは断定しない。",
+    "Calendarの412後の再取得・summary再設定sampleは、人の再承認を定める規範ではない。insertの非対応やcalendarList read-only fieldの例外も当該範囲に限定する。",
+    "単一応答がoperation結果と必要なcurrent resource情報の両方を権威をもって返すなら、その応答で足りる。lookup/load二重照会を一般必須にしない。",
+    "正しく相関した過去operationの確定結果は、その操作の事実として残り得る。現在viewへの非採用はserver取消や結果無効化を意味せず、保存/表示は権限・保持契約に従う。",
+    "target validatorがaggregate/transactionを含むと明示されたserviceでは、その確認済み範囲へ保証できる。targetのみのIf-Matchからは関連resourceの原子性を推論しない。",
+    "現在resourceとはread時点での最終観測である。採用したreadやconditional update成功を、その後の変更が起こらない保証にはしない。",
+    "既存data layerがcontextとresponse適用順を扱えるなら、その契約を使う。React、ignoreフラグ、独自request counterを新しい必須依存にしない。"
+  ],
+  "failure_modes": [
+    "旧reviewで送信して新しいserver値を上書きする：serverの実行直前条件がない、条件を省略した、または*を版一致と誤認した。",
+    "412/ABORTED後にdraftまたは新しいserver値が消える：競合の比較材料を同じstateで上書きしている。",
+    "最新readの完了だけで旧draftを自動送信する：取得と利用者の再判断を同一視している。",
+    "最新tagのみを旧payloadへ差し替える：reviewと変更内容/validatorの対応が失われている。",
+    "『z-old』が『a-new』より新しいと判定される：opaque tagを順序値としている。",
+    "古いreadが同じresourceへの再訪後に現行viewを上書きする：ID一致だけで発行context/採用順を確認していない。",
+    "過去operation成功snapshotで後の現在観測が巻き戻る：operation結果とcurrent resourceを一つの値にしている。",
+    "現在resourceのread失敗で確認済みoperation成功が消え、再送を勧める：照会失敗を元操作失敗へ変換している。",
+    "同じetagなら権限も枠も有効と表示する：validatorの対象範囲を全業務条件へ拡張している。",
+    "AIP ABORTEDとHTTP412を同じ規範として記録する、またはweakタグを偽装する：API契約を混ぜている。",
+    "古いreadを無視したことをmutation取消と説明する：Reactのread例を業務終端保証へ広げている。"
+  ],
+  "verification": {
+    "criteria": [
+      "R06",
+      "R07",
+      "R08",
+      "R11",
+      "R12",
+      "R13"
+    ],
+    "evidence": [
+      "campaigns/B/rounds/03/independent/verdict.json",
+      "campaigns/B/rounds/03/independent/revised3/frozen-suite.json",
+      "campaigns/B/rounds/03/evidence-regressions-revised3.json"
+    ],
+    "limitations": [
+      "Fixed 13/13 plus independent source, DOM, negative-control and focused repair checks within declared fixtures; no generated efficacy comparison.",
+      "No production identity/storage security, HTTP adapter, related-resource transaction, assistive-technology or human efficacy validation.",
+      "This fixture combines resource read and operation lookup under canRead; split capabilities when the real service distinguishes them."
+    ]
+  },
+  "source_refs": [
+    "B-S101",
+    "B-S301",
+    "B-S302",
+    "B-S303",
+    "B-T403",
+    "B-S104",
+    "B-S205"
+  ],
+  "confidence": {
+    "source_support": "Official standards/API guidance with AAA, HTTP vs resource.etag, and informative-document scope retained.",
+    "transfer": "Conditional synthesis exercised through an editable document task; another service must supply its own identity/validator/recovery contracts.",
+    "limits": [
+      "実APIのvalidatorが覆うrepresentation/fieldと、関連resource・枠・料金・権限の原子性。",
+      "reviewの意味を変えるfieldの依存関係、自動merge可否、全量PUT/PATCH/update_maskのpayload意味。",
+      "同account/同resourceへの再訪を含むresponse採用順序のdata-layer保証。",
+      "operation結果とcurrent resourceの正本・保持・表示契約。",
+      "影響しないfieldの自動merge、表示構成、差分UI、Cの実装方式。",
+      "Calendar sampleのJava全文、React例の外部race解説、旧RFC7232本文。",
+      "実APIのABORTED/412/認可優先順位、weak/missing/*のadapter適合、関連resource transaction、実ネットワーク/ブラウザでの順序。"
+    ]
+  },
+  "status": "ACCEPT",
+  "version": "0.1.2",
+  "introduced_round": 3,
+  "analysis_ref": "campaigns/B/rounds/03/analysis.md",
+  "analysis_sha256": "10b8d5906e20de29d789435f568f752e169e6f89b286ef5cf49c7988a94a3fb6",
+  "source_facts": [
+    {
+      "id": "008-F01",
+      "kind": "normative",
+      "fact": "RFC 9110のETagはselected representationのopaque validatorであり、強比較は双方がweakでないopaque-tagの文字単位一致である。",
+      "source_refs": [
+        "B-S101"
+      ],
+      "source_locations": [
+        "§8.8.3–8.8.3.2; web L1848–L1886; local10–48"
+      ],
+      "scope_limit": "生成方式や時間順序はclientへ保証しない。opaque値の見た目から順序を推測しないという規則はこの性質を適用したもの。"
+    },
+    {
+      "id": "008-F02",
+      "kind": "normative",
+      "fact": "If-Matchは対象resourceの現在representationに条件を掛け、*は存在を条件とする。origin serverは強比較を使い、通常のrequest検査後・処理直前に評価する。偽なら要求methodを新たに実行しない。既適用と判断できる場合は2xxの選択肢がある。",
+      "source_refs": [
+        "B-S101"
+      ],
+      "source_locations": [
+        "§13.1.1 web L2730–L2756; §13.2.1 L2889–L2894; local56–94"
+      ],
+      "scope_limit": "reviewのUI/利用者承認はRFCの規定ではない。必ず412とも、client条件だけで十分とも述べない。"
+    },
+    {
+      "id": "008-F03",
+      "kind": "normative_scope",
+      "fact": "RFCの通常preconditionはtarget resourceのvalidatorを比較する。複数resourceを扱う拡張条件は別に区別されている。",
+      "source_refs": [
+        "B-S101"
+      ],
+      "source_locations": [
+        "§13.1 web L2725–L2727; local51–53"
+      ],
+      "scope_limit": "関連枠や権限まで同じvalidatorに含まれるかは適用先の契約。"
+    },
+    {
+      "id": "008-F04",
+      "kind": "official_api_design_guidance",
+      "fact": "AIP-154はetag不一致をABORTEDとし、PERMISSION_DENIED等の他エラーが優先し得る。一致しても他の失敗原因は残り、省略は原則許容しつつ必須にするserviceも認める。strong/weak両方を許し、weakにはW/と挙動の文書化を求める。",
+      "source_refs": [
+        "B-S301"
+      ],
+      "source_locations": [
+        "original Markdown40–57,92–106,112–121"
+      ],
+      "scope_limit": "承認済みのGoogle API設計指針であり、全serviceへの実装保証やHTTP If-Match強比較と同一の規範ではない。"
+    },
+    {
+      "id": "008-F05",
+      "kind": "official_api_guide_and_example",
+      "fact": "Calendarの条件付き更新/削除は以前のetagをIf-Matchへ渡し、不一致を412とする。sampleは最新eventを取得してsummaryを再設定し、必要ならより複雑な競合処理を使うと説明する。insertは対象外で、calendarListの一部read-only field変更ではetagが変わらない場合がある。",
+      "source_refs": [
+        "B-S302"
+      ],
+      "source_locations": [
+        "web L65–L68,L93–L102,L121; local17–20,45–54,75"
+      ],
+      "scope_limit": "sampleは利用者の再承認やすべての業務上書き方針を定めない。calendarList例外を全event fieldへ拡張しない。"
+    },
+    {
+      "id": "008-F06",
+      "kind": "official_api_reference_and_read_example",
+      "fact": "React useEffectは依存値変更時に旧cleanup後に新setupを実行する。公式fetch例はcleanupでignoreを立て、送信順と異なる順に到着する古いread結果のstate適用を防ぐ。",
+      "source_refs": [
+        "B-S303"
+      ],
+      "source_locations": [
+        "web L73–L75,L380–L424; local10–14,17–61"
+      ],
+      "scope_limit": "認証、server副作用取消、operation結果の永続性・終端状態を保証する例ではない。Bのcontext条件への展開は設計推論。"
+    }
+  ],
+  "relationship_to_existing": {
+    "type": "formalizes_or_refines_existing_concepts",
+    "references": [
+      "B-IU-001",
+      "B-IU-002",
+      "B-IU-005",
+      "B-IU-006",
+      "campaigns/B/existing-pr-overlap.json",
+      "Art Direction:G-06,D-38,D-41"
+    ],
+    "existing_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/2",
+    "additional_value": "opaque token/target範囲/API差、最新readと再判断の分離、旧readの現在context、操作成功snapshotと後のresource観測を固定ケースへ結ぶ。If-Match・conflict dialog・stale fetch自体は新原則ではない。"
+  },
+  "history": [
+    {
+      "version": "0.1.1",
+      "at": "2026-11-23T08:11:02.193175+00:00",
+      "status": "REVISE",
+      "reason": "Independent F1/F2/F3 findings: retain confirmed operation evidence across reopen; terminal evidence must survive stale pending lookup; state-dependent input copy. Initial artifacts retained; independent recheck pending."
+    },
+    {
+      "version": "0.1.2",
+      "at": "2026-11-23T08:18:33.170928+00:00",
+      "status": "REVISE",
+      "reason": "Independent repair regression: terminal evidence retention must not override current authority. Fixed tests preserve original success while blocking private view and read until reauthentication."
+    },
+    {
+      "version": "0.1.2",
+      "at": "2026-11-23T08:22:05.260076+00:00",
+      "status": "ACCEPT",
+      "reason": "Independent final ACCEPT after F1/F2/F3 repairs and F4 current-authority regression repair; all initial and intermediate evidence retained."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "task_id": "booking-change",
+  "build": "booking-a:sha256:5015c191680f3ee7b6ad7726a5d60c2cd2e642d5b252534f4fd2cbcd0a323de1",
+  "automated_environment": {
+    "browser": "Microsoft Edge",
+    "version": "158.0.4370.33",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  "observations": [
+    {
+      "case_id": "confirm",
+      "method": "automated",
+      "evidence": "execution.md#automated",
+      "actual": {
+        "before_review": 8,
+        "review_from": 8,
+        "review_to": 10,
+        "after_submit": 10,
+        "after_reload": 10,
+        "commit_count": 1
+      }
+    },
+    {
+      "case_id": "conflict-state",
+      "method": "automated",
+      "evidence": "execution.md#automated",
+      "actual": {
+        "current_day": 8,
+        "commit_count": 0
+      }
+    },
+    {
+      "case_id": "conflict-recover",
+      "method": "automated",
+      "evidence": "execution.md#automated",
+      "actual": {
+        "after_submit": 11,
+        "after_reload": 11,
+        "commit_count": 1
+      }
+    },
+    {
+      "case_id": "lost-reply-retry",
+      "method": "automated",
+      "evidence": "execution.md#automated",
+      "actual": {
+        "final_day": 10,
+        "after_reload": 10,
+        "commit_count": 2
+      }
+    },
+    {
+      "case_id": "find",
+      "method": "manual",
+      "evidence": "execution.md#manual-find",
+      "actual": {
+        "correct_target": true,
+        "other_booking_visible": true
+      }
+    },
+    {
+      "case_id": "conflict-guidance",
+      "method": "manual",
+      "evidence": "execution.md#manual-conflict",
+      "actual": {
+        "cause_clear": false,
+        "original_state_clear": true,
+        "next_action_clear": false,
+        "keyboard_focus_to_available_slots": false
+      }
+    },
+    {
+      "case_id": "lost-reply-guidance",
+      "method": "manual",
+      "evidence": "execution.md#manual-lost-reply",
+      "actual": {
+        "lookup_first": false,
+        "lookup_available": false,
+        "keyboard_focus_to_lookup": false,
+        "edit_blocked_until_lookup": false,
+        "stale_display_marked": false
+      }
+    }
+  ],
+  "manual_environment": {
+    "browser": "Chromium 157",
+    "input": "keyboard",
+    "viewport": {
+      "width": 1440,
+      "height": 888
+    },
+    "evidence": "execution.md"
+  }
+}

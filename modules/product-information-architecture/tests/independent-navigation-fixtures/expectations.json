@@ -1,0 +1,14 @@
+{
+  "provenance": "R02 independent reviewer; synthetic manufacturing-manual cases, not task-arm outputs",
+  "scope": "Mechanically decidable controls and label-collision holds only; known semantic blind spots are archived, not protected as required PASS outcomes",
+  "cases": {
+    "control_preserve_identity_scope": "PASS",
+    "ce_short_with_context": "HOLD",
+    "ce_short_without_context": "HOLD",
+    "ce_context_only_after_landing": "HOLD",
+    "control_zero_within_verified_scope": "PASS",
+    "ce_required_information_hidden": "FAIL",
+    "ce_hard_error_dominates_label_hold": "FAIL",
+    "control_process_result_no_independent_entry": "PASS"
+  }
+}

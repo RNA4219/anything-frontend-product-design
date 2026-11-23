@@ -1,0 +1,123 @@
+{
+  "id": "R03-R2-S01",
+  "url": "https://chernev.com/wp-content/uploads/2017/02/ChoiceOverload_JCP_2015.pdf",
+  "title": "Choice overload: A conceptual review and meta-analysis",
+  "authors": [
+    "Alexander Chernev",
+    "Ulf Böckenholt",
+    "Joseph Goodman"
+  ],
+  "source_type": "original_meta_analysis_and_conceptual_review",
+  "version": "Journal of Consumer Psychology 25(2), 333–358 (2015); indexed corrigendum identified separately",
+  "doi": "10.1016/j.jcps.2014.08.002",
+  "retrieved_at": "2026-11-23",
+  "sha256": "a58375fb5b006f44bc47222d084b7009811ba4c03f403c49a7e2b97b7e6f9029",
+  "locator": {
+    "web_ref": "turn204523429view0",
+    "verified_passages": [
+      {
+        "claim_id": "S01-C1",
+        "locator": "PDF p333 Abstract, p346 Results; Web L10–17, L1053–1067"
+      },
+      {
+        "claim_id": "S01-C2",
+        "locator": "PDF p338–339 Preference uncertainty; Web L530–581"
+      },
+      {
+        "claim_id": "S01-C3",
+        "locator": "PDF p352–353 Prior meta-analytic research; Web L1423–1466"
+      },
+      {
+        "claim_id": "S01-C4",
+        "locator": "PDF p354 Future research; Web L1530–1539"
+      }
+    ],
+    "local_quotes": [
+      {
+        "line": 11,
+        "text": "choice set complexity, decision task difficulty, preference uncertainty, and decision goal"
+      },
+      {
+        "line": 14,
+        "text": "the impact of assortment size is reversed,"
+      },
+      {
+        "line": 17,
+        "text": "interact"
+      }
+    ]
+  },
+  "verified_claims": [
+    {
+      "claim_id": "S01-C1",
+      "text": "原著メタ分析は99観測を用い、選択肢集合の複雑さ・判断課題の難しさ・選好の不確かさ・判断目標の4要因が候補数の影響を調整すると報告する。",
+      "locator": "PDF p333 Abstract, p346 Results; Web L10–17, L1053–1067",
+      "claim_type": "meta_analysis_result"
+    },
+    {
+      "claim_id": "S01-C2",
+      "text": "概念レビュー部分は、商品カテゴリに不慣れな消費者と熟知した消費者で候補数の影響が逆転する先行研究を挙げ、商品知識と具体的に定まった好みを区別している。",
+      "locator": "PDF p338–339 Preference uncertainty; Web L530–581",
+      "claim_type": "authors_review_of_prior_experiments"
+    },
+    {
+      "claim_id": "S01-C3",
+      "text": "2010メタ分析と対象研究・調整変数・モデルが異なる。2015側は掲載論文に限定しており、両メタ分析の元データは重複する。",
+      "locator": "PDF p352–353 Prior meta-analytic research; Web L1423–1466",
+      "claim_type": "method_and_limit"
+    },
+    {
+      "claim_id": "S01-C4",
+      "text": "著者は複数の調整要因の相互作用を検討する実験が少なく、追加研究を要すると記す。",
+      "locator": "PDF p354 Future research; Web L1530–1539",
+      "claim_type": "author_stated_limit"
+    }
+  ],
+  "limits": [
+    "商品選択の研究であり、画面のピクセル密度・カード数・文字数の閾値を調べた研究ではない。",
+    "熟知度に関する逆転例は概念レビューの先行実験説明。反復業務UIの作業時間改善へ直接一般化しない。",
+    "2010資料と元研究が重複し、独立した2回の再現証拠とは数えない。",
+    "2016訂正はp348の統計記号・検定値の表記訂正として出版社検索索引に現れた。本文直接openは403。訂正箇所の効果量を本ラウンドの根拠に用いない。"
+  ],
+  "source_edges": [
+    {
+      "from": "R03-R2-S01",
+      "to": "R03-R2-S02",
+      "relation": "backward_reference_followed",
+      "source_locator": "S01 PDF p358 References / Web L2071–2073",
+      "action": "参考文献の題名を検索し、大学公開PDFを開いて著者・題名・DOIを照合した。",
+      "query_log": "PRIVATE_CHECKPOINT/research/R03/researcher-2/queries-input.json",
+      "target_locator": "S02 PDF p409 / Web L0–16",
+      "verified": true,
+      "limit": "S01参考文献の開始頁408と原著開始頁409に差があり、書誌は原著409–425を採用。"
+    }
+  ],
+  "acquisition": {
+    "imozuru_fetch": "FAIL_DNS",
+    "method": "public web tool extraction fallback, scoped short fragments",
+    "original_html_downloaded": false,
+    "original_pdf_downloaded": false,
+    "full_original_archive": false,
+    "relevant_passages_verified": true,
+    "raw_web_trace_directory": "PRIVATE_CHECKPOINT/research/R03/researcher-2/web"
+  },
+  "publication": "原文断片とツール取得記録はprivate。公開する場合は独自要約・URL・短い引用に限る。",
+  "companion_correction": {
+    "for_source_id": "R03-R2-S01",
+    "url": "https://myscp.onlinelibrary.wiley.com/doi/full/10.1016/j.jcps.2015.07.001",
+    "doi": "10.1016/j.jcps.2015.07.001",
+    "title": "Corrigendum to Choice overload: A conceptual review and meta-analysis",
+    "evidence_type": "companion_correction_metadata_not_fourth_substantive_source",
+    "verification": "出版社2ドメインの検索索引でp348統計表記の訂正を確認。両直接openは403で本文アーカイブなし。",
+    "web_refs": [
+      "turn204523429search0",
+      "turn204523429search1",
+      "turn104364010view1",
+      "turn770785878view1"
+    ],
+    "decision": "詳細効果量・p348検定表記は採用しない。"
+  },
+  "source_id": "R03-R2-S01",
+  "verified_in_current_round": "R03",
+  "canonical_url": "https://chernev.com/wp-content/uploads/2017/02/ChoiceOverload_JCP_2015.pdf"
+}

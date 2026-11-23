@@ -1,0 +1,9 @@
+{
+  "frozen_at": "2026-11-23T06:55:56.319337+00:00",
+  "before_scored_execution": true,
+  "reason": "Independent negative controls found wrong-target and late-response blind spots. Original 12 cases plus 2 separately identified race regressions.",
+  "files": {
+    "modules/interaction-ux-flow/tests/run_flow_trials_v3.mjs": "b8c41e7a76f7c748cdf713d9ccd0b5568a4235a214b777a71e9d183a57655dbd",
+    "campaigns/B/rounds/01/task.md": "67a8b9d14cc997df40d34efae5d58497ed073cc5403591d67096dbf163c15e4a"
+  }
+}

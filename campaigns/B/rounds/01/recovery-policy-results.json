@@ -1,0 +1,64 @@
+{
+  "suite": "B-recovery-policy-v1",
+  "total": 14,
+  "passed": 14,
+  "results": [
+    {
+      "name": "Complete replay contract permits same-intent replay",
+      "pass": true
+    },
+    {
+      "name": "Missing or invalid requestId requires reconciliation",
+      "pass": true
+    },
+    {
+      "name": "Missing or invalid samePayload requires reconciliation",
+      "pass": true
+    },
+    {
+      "name": "Missing or invalid scopeMatches requires reconciliation",
+      "pass": true
+    },
+    {
+      "name": "Missing or invalid errorAllowsRetry requires reconciliation",
+      "pass": true
+    },
+    {
+      "name": "Missing or invalid supported requires reconciliation",
+      "pass": true
+    },
+    {
+      "name": "Missing or invalid validUntil requires reconciliation",
+      "pass": true
+    },
+    {
+      "name": "Expiry boundary is outside the verified replay window",
+      "pass": true
+    },
+    {
+      "name": "No response or nonauthoritative not_found is not a final result",
+      "pass": true
+    },
+    {
+      "name": "Verified outcome needs no extra request",
+      "pass": true
+    },
+    {
+      "name": "Proven nonexecution allows correction",
+      "pass": true
+    },
+    {
+      "name": "Method semantics can permit retry without a custom key",
+      "pass": true
+    },
+    {
+      "name": "Repeated replies need not be byte-identical to preserve effects",
+      "pass": true
+    },
+    {
+      "name": "Negative control: replaying a pruned key duplicates a side effect",
+      "pass": true
+    }
+  ],
+  "limits": "Synthetic contract decision and service-side-effect counterexample; not a live API test."
+}

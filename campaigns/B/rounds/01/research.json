@@ -1,0 +1,76 @@
+{
+  "inventories": [
+    {
+      "role": "researcher1",
+      "sources": 5,
+      "execution_status": {
+        "state": "completed_with_acquisition_limits",
+        "round": 1,
+        "selected_primary_sources": 5,
+        "complete_originals": 2,
+        "complete_web_text_extractions": 3,
+        "partial_web_excerpts": 1,
+        "source_count_note": "Google canonical Code includes both complete original and corroborating rendered text; 6 source files represent 5 selected sources.",
+        "search_queries": 6,
+        "returned_hits": 74,
+        "chain_queries": 1,
+        "stop_reason": "Within requested 4–6 primary-source scope, all five research issues have exact source locations; at least one backward trace completed. No saturation claim.",
+        "public_repo_modified": false,
+        "publication": false,
+        "objective_validation_claimed": false
+      }
+    },
+    {
+      "role": "Researcher-2 / product-engineering counterexamples",
+      "sources": 6,
+      "execution_status": {
+        "round": 1,
+        "status": "completed",
+        "original_fetch": "fetch.py attempted 6 official URLs; all failed DNS resolution; no restrictions changed",
+        "fallback": "3 full retrieved Markdown representations and 3 partial retrieved text representations saved with exact web/local locators and hashes",
+        "chain": "chain.py --help executed; citation operations not applicable to product API pages. Backward links were actually followed twice instead.",
+        "digest": "digest.py add executed against exact queries.json; query log produced",
+        "scope": "Only private/B/round01/researcher2 modified. No nested agent, public change, publish, or final skill.",
+        "stop_reason": "Assigned product-contract questions have primary section locators; round includes backward tracing. Overall campaign stopping decision remains with parent.",
+        "query_note": "Initial 3-query call returned merged results without query attribution. All hits and original queries retained as one explicitly labelled batch, plus one empty and one 5-hit single-query record."
+      }
+    }
+  ],
+  "trace_edges": [
+    {
+      "from_url": "https://google.aip.dev/151",
+      "to_url": "https://github.com/googleapis/googleapis/blob/master/google/longrunning/operations.proto",
+      "method": "Backward link tracing: web click of AIP-151 link 23 at web L48/L69; complete primary file retrieved through github_fetch_file after fetch.py DNS failure."
+    },
+    {
+      "from_url": "https://github.com/googleapis/googleapis/blob/master/google/longrunning/operations.proto",
+      "to_url": "https://github.com/googleapis/googleapis/raw/refs/heads/master/google/longrunning/operations.proto",
+      "method": "Followed Raw link 56; web tool rejected restricted URL. No bypass; GitHub connector used for the already identified original."
+    },
+    {
+      "from_url": "https://docs.stripe.com/error-low-level",
+      "to_url": "https://docs.stripe.com/api/idempotent_requests.md",
+      "method": "Backward link following: source L57/L63 link opened with web open; returned turn489296841view0."
+    },
+    {
+      "from_url": "https://docs.cloud.google.com/bigquery/docs/managing-jobs",
+      "to_url": "https://docs.cloud.google.com/bigquery/docs/reference/rest/v2/jobs/cancel",
+      "method": "Backward link following: source L958 link 112 clicked; returned turn670122715view0."
+    }
+  ],
+  "source_ids": [
+    "B-S101",
+    "B-S102",
+    "B-S103",
+    "B-S104",
+    "B-S105",
+    "B-T201",
+    "B-T202",
+    "B-T203",
+    "B-T204",
+    "B-T205",
+    "B-T206"
+  ],
+  "deduplicated_count": 0,
+  "caveat": "Separate agents with the same model family; primary-source checks, not independent empirical validation."
+}

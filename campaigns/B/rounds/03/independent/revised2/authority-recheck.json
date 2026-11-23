@@ -1,0 +1,74 @@
+{
+  "id": "RC04-KNOWN-SUCCESS-DOES-NOT-GRANT-CURRENT-AUTHORITY",
+  "scope": "Direct regression risk of the terminal-priority change; not a frozen criterion.",
+  "modulePath": "modules/interaction-ux-flow/examples/resume-and-conflict.mjs",
+  "moduleSha256": "cc52cf64d592ce78b9c473fb1a82858b9913885977705fae76c23e104b4edb41",
+  "pass": false,
+  "error": "A correlated success must not suppress a current auth_required signal.\n+ actual - expected\n\n+ 'completed'\n- 'reauthenticate'\n",
+  "trace": [
+    {
+      "afterSuccess": {
+        "phase": "loading",
+        "message": "観測した状態と今回の変更内容を確認してください。",
+        "draft": {
+          "title": "Private draft"
+        },
+        "lastKnown": {
+          "etag": "old",
+          "values": {
+            "title": "Original"
+          }
+        },
+        "observedResource": null,
+        "operationId": "operation-1",
+        "operationOutcome": null,
+        "operationResult": null,
+        "resourceReadError": "",
+        "canCommit": false,
+        "canReview": false,
+        "canResume": true,
+        "recoveryAction": null
+      },
+      "loads": 1,
+      "lookups": 1,
+      "updates": 1
+    },
+    {
+      "afterCurrentAuthRequired": {
+        "phase": "completed",
+        "message": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+        "draft": {
+          "title": "Private draft"
+        },
+        "lastKnown": {
+          "etag": "old",
+          "values": {
+            "title": "Original"
+          }
+        },
+        "observedResource": {
+          "etag": "old",
+          "values": {
+            "title": "Original"
+          }
+        },
+        "operationId": "operation-1",
+        "operationOutcome": "succeeded",
+        "operationResult": {
+          "etag": "written",
+          "values": {
+            "title": "Private draft"
+          }
+        },
+        "resourceReadError": "",
+        "canCommit": false,
+        "canReview": false,
+        "canResume": true,
+        "recoveryAction": null
+      },
+      "loads": 2,
+      "lookups": 1,
+      "updates": 1
+    }
+  ]
+}

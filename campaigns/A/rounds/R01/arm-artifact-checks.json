@@ -1,0 +1,122 @@
+{
+  "checker_sha256": "5f6054b1799dbfb7bba9f2d6f2f490821d9a12d7bbcad7884a6d0c6e6b39f597",
+  "method": "static source/DOM-tree inspection; no rendered layout or click claim",
+  "arms": {
+    "P": {
+      "files": {
+        "plan.json": "7327c9f765e4bd21ebf0cc2b28812d7331776e0ea6c394e73674303ef1c0819e",
+        "design.md": "761906853cdac515ef5af7efabd4b728c8742376a25862d5e65aaf4d78f6c108",
+        "preview.html": "af840a16a302788c5619124d0d97fcea678aab49eb6986d1a0c9f2ef643dd862"
+      },
+      "checker_exit_code": 0,
+      "checker_result": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 3,
+          "features": 6,
+          "kept_features": 5,
+          "screens": 5,
+          "navigation_edges": 6
+        }
+      },
+      "goal_change_route": {
+        "goal_id": "g_change",
+        "start_screen": "s_member_reservations",
+        "target_screen": "s_member_reservations",
+        "notes": "member/selfの入口に予約番号・部屋・日時・状態をprimary表示する。R-204を変更対象として選び、R-205を利用済みとして除外できる情報を揃える。対象確認へのcontextualリンクは文書内の静的な例。"
+      },
+      "selection_article_text": [
+        {
+          "text": "予約 R-204 — 工作室\n        \n          予約番号R-204\n          部屋工作室\n          日時12月8日 14:00\n          状態確定・変更可\n        \n        R-204を変更対象として確認（文書内の確認例へ移動）",
+          "inside_details": false,
+          "id": "reservation-r204"
+        },
+        {
+          "text": "予約 R-205 — 工作室\n        \n          予約番号R-205\n          部屋工作室\n          日時11月10日 14:00\n          状態利用済み\n        \n        利用済みのため、今回の変更対象には含めません。",
+          "inside_details": false,
+          "id": "reservation-r205"
+        }
+      ],
+      "target_text": "施設利用者の入口：自分の予約\n      ここでする判断：変更したい予約を選ぶ。本人の予約だけを扱います。\n      \n        予約時間の変更通知（この予約領域内の行き先）\n      \n      入力された予約は2件です。部屋・日時・予約番号・状態を確かめてください。識別に使う情報は詳細を開かずに参照できます。\n      \n        予約 R-204 — 工作室\n        \n          予約番号R-204\n          部屋工作室\n          日時12月8日 14:00\n          状態確定・変更可\n        \n        R-204を変更対象として確認（文書内の確認例へ移動）\n      \n      \n        予約 R-205 — 工作室\n        \n          予約番号R-205\n          部屋工作室\n          日時11月10日 14:00\n          状態利用済み\n        \n        利用済みのため、今回の変更対象には含めません。\n      \n      \n        補足：同じ部屋の予約を見分けるには\n        2件とも工作室ですが、予約番号・日時・状態が異なります。入力の例ではR-204が変更可能、R-205が利用済みです。日付の年は入力にないため補っていません。",
+      "fragment_links": [
+        "#s_member_reservations",
+        "#s_staff_audit",
+        "#s_member_notifications",
+        "#s_member_target",
+        "#s_member_reservations",
+        "#s_member_reservations",
+        "#s_staff_assigned",
+        "#s_staff_audit"
+      ],
+      "unresolved_fragment_links": [],
+      "duplicate_ids": false,
+      "custom_style_tags": 0,
+      "script_tags": 0,
+      "hidden_attributes": 0
+    },
+    "Q": {
+      "files": {
+        "plan.json": "8ef2ba7997c0edae2274738ef888c27e615149c12d36ee94c492c054a2ab6c3c",
+        "design.md": "f41fb9892f76aa776995b3ed15604ecbacbc8e66a0c14ea92b109c1dafdff037",
+        "preview.html": "ffe18ef2a8758fb8590e6a91b117747de15bf7791ddee860cfb4677b638b7829"
+      },
+      "checker_exit_code": 0,
+      "checker_result": {
+        "status": "PASS",
+        "issues": [],
+        "checks_available": {
+          "contract_version": "1.1",
+          "context_and_retirement": true,
+          "human_usability": false
+        },
+        "counts": {
+          "goals": 3,
+          "features": 6,
+          "kept_features": 5,
+          "screens": 5,
+          "navigation_edges": 6
+        }
+      },
+      "goal_change_route": {
+        "goal_id": "g_change",
+        "start_screen": "s_my_reservations",
+        "target_screen": "s_change_target",
+        "notes": "member の入口で R-204 と R-205 の予約番号・室名・日時・状態を展開なしに比較し、確定・変更可の R-204 を選ぶ。同じ4項目を確認先でも表示する。予約変更の保存・送信はこの設計の操作実装に含めない。"
+      },
+      "selection_article_text": [
+        {
+          "text": "R-204 — 工作室\n          \n            予約番号R-204\n            室名工作室\n            日時12月8日 14:00\n            状態確定・変更可\n          \n          R-204 の変更対象を確認する\n          同じ予約の確認例へ移動します。予約データは変更しません。",
+          "inside_details": false,
+          "id": null
+        },
+        {
+          "text": "R-205 — 工作室\n          \n            予約番号R-205\n            室名工作室\n            日時11月10日 14:00\n            状態利用済み\n          \n          変更対象には選べません。利用済みの予約です。",
+          "inside_details": false,
+          "id": null
+        }
+      ],
+      "target_text": "変更対象の確認\n        選択後の固定表示例：R-204\n        変更したい予約と一致するか確認します。この欄はあらかじめ表示した例で、選択状態を保存する機能ではありません。\n        \n          予約番号R-204\n          室名工作室\n          日時12月8日 14:00\n          状態確定・変更可\n        \n        変更内容の入力・保存はこの見取り図に含みません。\n        自分の予約へ戻る",
+      "fragment_links": [
+        "#s_my_reservations",
+        "#s_audit_records",
+        "#s_change_target",
+        "#s_notifications",
+        "#s_my_reservations",
+        "#s_my_reservations",
+        "#s_team_records",
+        "#s_audit_records"
+      ],
+      "unresolved_fragment_links": [],
+      "duplicate_ids": false,
+      "custom_style_tags": 0,
+      "script_tags": 0,
+      "hidden_attributes": 0
+    }
+  }
+}

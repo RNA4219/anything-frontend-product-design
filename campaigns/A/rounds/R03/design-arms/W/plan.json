@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.1",
+  "case_id": "team-plan-decision-information",
+  "visual_intent_id": "existing-team-admin",
+  "features": [
+    {
+      "id": "f_plans",
+      "label": "プラン比較",
+      "disposition": "keep",
+      "target": null,
+      "object": "plan",
+      "outcome": "select-qualified-plan",
+      "roles": [
+        "buyer"
+      ],
+      "goal_ids": [
+        "g_select"
+      ],
+      "requirement_ids": [
+        "r_select"
+      ],
+      "dependencies": [],
+      "scope": "own-organization",
+      "context_constraints": [
+        "buyer-account"
+      ],
+      "evidence_refs": [
+        "e_case",
+        "e_missing"
+      ],
+      "reason": "契約担当者が自組織の3候補を同じ属性で比較する既存機能を維持する。人数・年間上限・税込12か月総額・契約期間を同じ判断場所に置き、未確認のP-200を適合済みにしない。入力のlifecycle=existing、availability=available、mandatory=trueを保持する判断。",
+      "priority": "required",
+      "priority_basis": "g_selectはmust、r_selectとf_plansはmandatory=true。12人・年間900,000件・年総額130,000円以内という確定条件を満たす候補選択に必要。利用頻度の実測値はない。"
+    },
+    {
+      "id": "f_cancel_info",
+      "label": "解約条件",
+      "disposition": "keep",
+      "target": null,
+      "object": "contract",
+      "outcome": "review-cancellation-conditions",
+      "roles": [
+        "buyer"
+      ],
+      "goal_ids": [
+        "g_review_cancel"
+      ],
+      "requirement_ids": [
+        "r_cancel"
+      ],
+      "dependencies": [],
+      "scope": "own-organization",
+      "context_constraints": [
+        "buyer-account"
+      ],
+      "evidence_refs": [
+        "e_case",
+        "e_missing"
+      ],
+      "reason": "今回提供すると指定された現契約CT-75の条件確認を維持する。対象と成果がf_plansと異なるため独立したkeepとする。入力のlifecycle=existing、availability=available、mandatory=falseを保持し、解約実行へ拡張しない。",
+      "priority": "high",
+      "priority_basis": "g_review_cancelはshould、r_cancelとf_cancel_infoはmandatory=false。条件の誤読が通知期限・返金に関する判断へ影響するため保持する補助タスク。更新日が不明なので期限の切迫度や利用頻度は推定しない。"
+    }
+  ],
+  "screens": [
+    {
+      "id": "s_compare",
+      "title": "3候補のプラン比較",
+      "purpose": "12人・年間900,000件・年総額130,000円以内の確定条件を満たす候補を選ぶ",
+      "goal_ids": [
+        "g_select"
+      ],
+      "feature_ids": [
+        "f_plans"
+      ],
+      "roles": [
+        "buyer"
+      ],
+      "entry_for": [
+        "buyer"
+      ],
+      "information": [
+        {
+          "id": "requirement_conditions",
+          "visibility": "primary",
+          "reason": "人数12人以上、年間上限900,000件以上、年総額130,000円以下という比較基準を表の必要条件列に固定する。"
+        },
+        {
+          "id": "plan_id",
+          "visibility": "primary",
+          "reason": "列見出しでP-100 / Team、P-200 / Team Plus、P-300 / Team Proを区別する。比較対象は入力の3件だけ。"
+        },
+        {
+          "id": "seat_limit",
+          "visibility": "primary",
+          "reason": "P-100は10人で2人不足、P-200とP-300は20人で人数条件を満たす。"
+        },
+        {
+          "id": "annual_quota",
+          "visibility": "primary",
+          "reason": "P-100は1,000,000件、P-200はnull（未確認）、P-300は1,200,000件。900,000件以上かを同じ表で判断する。nullを0や無制限へ補完しない。"
+        },
+        {
+          "id": "annual_quota_status",
+          "visibility": "primary",
+          "reason": "P-200の年間上限は未確認であり、年間900,000件を利用できるか判断保留と明示する。"
+        },
+        {
+          "id": "annual_total",
+          "visibility": "primary",
+          "reason": "P-100は96,000円、P-200は110,000円、P-300は120,000円。いずれも130,000円以下で、税込・12か月総額の共通基準。"
+        },
+        {
+          "id": "commitment",
+          "visibility": "primary",
+          "reason": "全候補12か月を価格・上限と同じ表に表示する。入力に期間の合否基準はないので新しい条件を作らない。"
+        },
+        {
+          "id": "price_basis",
+          "visibility": "primary",
+          "reason": "税込・12か月総額という価格基準を比較表の直前と見出しに示し、月額との混同を避ける。"
+        },
+        {
+          "id": "fit_assessment",
+          "visibility": "primary",
+          "reason": "P-100は条件不適合（人数不足）、P-200は判断保留（年間上限未確認）、P-300は全3条件を満たす。P-300の余裕は8人・年間300,000件・10,000円。"
+        },
+        {
+          "id": "comparison_terms",
+          "visibility": "primary",
+          "reason": "人数上限・年間上限・年総額・契約期間の短い意味説明を表の前に置き、初回でも判断基準を読めるようにする。"
+        },
+        {
+          "id": "quota_confirmation",
+          "visibility": "primary",
+          "reason": "確認項目はP-200の年間上限が900,000件以上か。担当は契約担当者、情報提供元の確認はproductへ引き継ぐ。確認先は提案として示す。"
+        },
+        {
+          "id": "supplementary_information",
+          "visibility": "secondary",
+          "reason": "請求書の宛名テンプレートの説明と過去バージョンのヘルプ改訂履歴は、今回の候補合否を変えない補足として内容名が分かるdetailsに置く。本文は未提供と表示する。"
+        }
+      ]
+    },
+    {
+      "id": "s_cancel",
+      "title": "現契約 CT-75 の解約条件と不足情報",
+      "purpose": "現契約の解約条件を読み、通知期限の日付を判断するために不足する情報を特定する",
+      "goal_ids": [
+        "g_review_cancel"
+      ],
+      "feature_ids": [
+        "f_cancel_info"
+      ],
+      "roles": [
+        "buyer"
+      ],
+      "entry_for": [],
+      "information": [
+        {
+          "id": "contract_id",
+          "visibility": "primary",
+          "reason": "CT-75を見出しと条件一覧に表示し、候補プランの契約条件と取り違えない。"
+        },
+        {
+          "id": "notice_days",
+          "visibility": "primary",
+          "reason": "解約の通知日数は30日。任意目標でも今回提供する判断に必要な具体値のため折りたたまない。"
+        },
+        {
+          "id": "next_renewal_date",
+          "visibility": "primary",
+          "reason": "null（未確認）を明示する。次回更新日の具体的な日付を創作しない。"
+        },
+        {
+          "id": "refund_rule",
+          "visibility": "primary",
+          "reason": "途中解約による返金なし、という入力の条件を省略せず示す。"
+        },
+        {
+          "id": "notice_deadline",
+          "visibility": "primary",
+          "reason": "次回更新日が未確認なので通知期限の日付は未確定。期限内・期限超過のいずれも判断できないと表示する。"
+        },
+        {
+          "id": "renewal_confirmation",
+          "visibility": "primary",
+          "reason": "確認項目はCT-75の次回更新日。担当は契約担当者、情報提供元の確認はproductへ引き継ぐ。確認先の実在性は未確認と区別する。"
+        }
+      ]
+    }
+  ],
+  "navigation": [
+    {
+      "from": "s_compare",
+      "to": "s_cancel",
+      "label": "現契約 CT-75 の解約条件と不足情報",
+      "roles": [
+        "buyer"
+      ],
+      "kind": "contextual",
+      "rationale": "プラン検討に付随して自組織の現在の契約CT-75を読む。同じHTMLの#s_cancelへ移動する。実際のリンクにも契約IDと目的を表示し、別候補の詳細リンクに置き換えない。"
+    },
+    {
+      "from": "s_cancel",
+      "to": "s_compare",
+      "label": "3候補のプラン比較へ戻る",
+      "roles": [
+        "buyer"
+      ],
+      "kind": "local",
+      "rationale": "同じ検討領域の#s_compareへ戻り、同じP-100/P-200/P-300と基準を再参照する。購入や解約の状態遷移ではない。"
+    }
+  ],
+  "goal_routes": [
+    {
+      "goal_id": "g_select",
+      "start_screen": "s_compare",
+      "target_screen": "s_compare",
+      "notes": "buyer-accountを前提にしたbuyerの入口。3候補の比較表そのものが判断場所。P-100の人数不足、P-200の未確認、P-300の適合を同じ属性で照合し、候補を判断する。保存・申込の完了画面をtargetにしない。"
+    },
+    {
+      "goal_id": "g_review_cancel",
+      "start_screen": "s_compare",
+      "target_screen": "s_cancel",
+      "notes": "CT-75を明記した常時表示のリンクから同一HTML内の解約条件領域へ移る。contract_id、notice_days、next_renewal_date、refund_ruleを展開せず参照し、通知期限に更新日が不足することを確認する。shouldでも必要情報をprimaryにする。"
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "u_p200_quota",
+      "category": "information_architecture",
+      "owner": "product",
+      "impact": "P-200の適合は保留。P-300で全確定条件を満たす候補を判断できるためg_select全体は停止しない。",
+      "blocking": false,
+      "question": "P-200の年間上限は何件で、900,000件以上を利用できるか。契約担当者が条件を確認できる資料または窓口を特定して確認する。入力に確認先はないためこれは確認手順の提案。"
+    },
+    {
+      "id": "u_contract_renewal",
+      "category": "information_architecture",
+      "owner": "product",
+      "impact": "CT-75の通知期限の日付と期限内かどうかは判断できない。今回の目標である条件と不足情報の確認は提供できる。",
+      "blocking": false,
+      "question": "CT-75の次回更新日は何年何月何日か。契約担当者が確認できる契約資料または管理窓口を特定して照合する。入力に窓口の実在性やURLはない。"
+    },
+    {
+      "id": "u_operations",
+      "category": "interaction",
+      "owner": "B",
+      "impact": "購入・解約API、確認・取消、選択保存の状態遷移は未実装で今回の対象外。静的な判断案を取引の成功と扱えない。",
+      "blocking": false,
+      "question": "実サービス化する場合、候補の判断結果を受け取った後の操作・確認・取消・失敗状態をBで設計する。今回のプレビューには実行ボタンを設けない。"
+    },
+    {
+      "id": "u_rendering",
+      "category": "implementation",
+      "owner": "C",
+      "impact": "HTMLソース上の配置とリンク先のみ確認。実画面の収まり、キーボード操作、支援技術、認可動作は未確認。",
+      "blocking": false,
+      "question": "利用可能な環境で各画面幅の表の読み取り、見出し・セルの関係、アンカー移動と補足の展開を確認する。buyer-accountとown-organizationの認可は静的HTMLでは実装しない。ブラウザー起動は今回再試行しない。"
+    },
+    {
+      "id": "u_user_evaluation",
+      "category": "information_architecture",
+      "owner": "D",
+      "impact": "初回利用者と繰返し比較する利用者が、未確認と不適合を区別して目標を達成できるか未測定。",
+      "blocking": false,
+      "question": "実利用者にP-300を条件から選ぶ課題と、CT-75の期限判断に不足する情報を指す課題を行ってもらい、誤り・迷い・時間を観察する。今回の机上確認を実利用者評価の代用にしない。"
+    }
+  ],
+  "decision_notes": [
+    "入力固定: 2026-11-23に支給brief.json、task.md、共通契約1.1と指定Skillの必要referencesを読んだ。revisionは未提供。外部商品・実契約・法規則を調査または推定していない。",
+    "A01/A02: buyer（契約担当者）→g_select(must)→r_select(mandatory=true)→f_plans、buyer→g_review_cancel(should)→r_cancel(mandatory=false)→f_cancel_infoの対応を維持。全入力機能を一度ずつkeepで保持し、依存は入力どおり空。",
+    "A03/A04: f_plansとf_cancel_infoはともにexisting/available。対象planとcontract、成果select-qualified-planとreview-cancellation-conditionsが異なるためmergeしない。scope=own-organization、context_constraints=[buyer-account]を両方で維持。削除・延期・追加機能はない。",
+    "証拠: e_caseは本ケースの記載データだけについてのrequirement/verified。実利用の観測ではない。e_missingはP-200の年間上限とCT-75の次回更新日の2項目がunknownであることを示す。欠測原因は推測しない。",
+    "A05/A07: 比較対象はplanのP-100/P-200/P-300、比較属性はseat_limit/annual_quota/annual_total/commitment。現契約CT-75は別対象・別判断。標準HTML一枚にs_compareとs_cancelの論理的な判断領域を順に置き、screensはこの2領域へ対応させる。候補ごとの別ページを作らず全3候補を残す。",
+    "A06: s_compareをbuyerの入口とし、実際に存在する契約ID付きリンクでs_cancelへ移る。戻りリンクは同じ候補集合へ戻る。既存URL・旧入口の情報は未提供なので移行成功を主張しない。3件の固定集合に検索や絞込は追加せず、検索網羅性の検証を行ったとも主張しない。",
+    "A08: 提供するg_selectとg_review_cancelのneeded_informationを各targetですべてprimaryにする。primaryは展開不要であり、スクロール不要という意味ではない。通知日数・次回更新日・返金条件を任意タスクだからという理由で補足へ移さない。",
+    "値の意味照合: P-100は10人で必要12人に2人不足。年間1,000,000件・96,000円は条件内でも候補適合とはしない。P-200は20人・110,000円だが年間上限nullのため判断保留。P-300は20人・1,200,000件・120,000円で3条件を満たす。全候補12か月、価格基準は税込・12か月総額。",
+    "不明値: P-200の年間上限とCT-75の次回更新日はnull/未確認を保持。0、無制限、非該当、適合済みへ置換しない。CT-75の通知日数30日、返金条件「途中解約による返金なし」を表示し、通知期限の日付は算出しない。",
+    "A09: 初回向けの短い用語説明を比較場所に置き、反復比較に必要な具体値は表に残す。請求書の宛名テンプレートの説明と過去バージョンのヘルプ改訂履歴だけをsecondaryに置く。補足本文は未提供として内容を創作しない。",
+    "代替案: 候補別の詳細画面やウィザードは同じ属性の記憶・往復を必要とするため不採用。価格だけのカードは人数不足と年間上限の未確認を選択時に判別できないため不採用。解約条件の一括折りたたみは今回提供する判断の必要情報を隠すため不採用。これらは設計判断で、効果の実測ではない。",
+    "仮定: 確認先として契約資料・条件提供元への照会を提案するが、具体的な資料・窓口・URLは未提供。契約期間の追加合否基準は指定されていないため作らない。表示情報の本人確認・認可は実装したと主張しない。",
+    "visual_intent existing-team-adminを保持: 視覚資産未提供。標準HTMLで情報構成を示す。独自意匠の採用や既存UI再現を主張しない。CSS・JavaScript・外部フレームワークは使用しない。",
+    "引継ぎ: Bは購入・解約・確認/取消等の状態設計、Cは部品・レスポンシブ・アクセシビリティ・認可の実装確認、Dは実利用者の達成評価、Art Directionは支給資産が得られた際の視覚表現を担当する。",
+    "検証: Python標準ライブラリによる自作のJSON/HTMLソース照合を実施。入力機能IDの一意性と対応、参照ID、役割付き経路、宣言した全goalのprimary情報、固定数値・未知値、アンカーの存在、必要情報がdetails内にないことを確認した。これは公式checkerでも独立評価でもない。",
+    "未実施: 指定範囲外のchecker・テストは実行していない。ブラウザーは環境制約が通知されているため起動を再試行せず、描画・実操作・実利用者評価は未実施。構造とHTMLソースの確認済み、効果未確認という範囲に限定する。",
+    "検査能力の境界: checks_available.navigation_context=false、search_coverage=false、legacy_entry_identity=false、rendered_goal_location=false、information_values=false、information_applicability=false、optional_goal_delivery=falseに相当する自動判定の限界を維持する。これらの正式checker結果を生成したという意味ではない。値と任意目標の提供は今回の入力・ソースの意味照合として別記した。"
+  ]
+}

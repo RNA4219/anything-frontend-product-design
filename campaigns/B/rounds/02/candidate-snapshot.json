@@ -1,0 +1,8 @@
+{
+  "recorded_at": "2026-11-23T07:29:32.995957+00:00",
+  "purpose": "Preserve initial R02 candidate before responding to independent exploratory findings",
+  "files": {
+    "campaigns/B/rounds/02/artifacts/initial/task-flows.mjs": "3c38c312ce87e6b5ac84d532042344744737792fe4775cd6d9744ac597105c07",
+    "campaigns/B/rounds/02/artifacts/initial/repair-and-undo.html": "d93571557e22bb4742cc743b4ad2a3fb8d319393cfbfdf451f48601a328ce1a4"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "ce03_indirect_canonical_chain",
+  "expected_status": "FAIL_or_documented_exception",
+  "explanation": "A02/A03本文はkeep正本へ直接・一段で対応を要求するが、間接merge鎖を許すか確認する。",
+  "actual_status": "PASS",
+  "exit_code": 0,
+  "issues": [],
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/validate_plan.py",
+    "--brief",
+    "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce03_indirect_canonical_chain/brief.json",
+    "--plan",
+    "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce03_indirect_canonical_chain/plan.json",
+    "--output",
+    "/workspace/scratch/10bb09e1845f/private/review/R01/counterexamples/ce03_indirect_canonical_chain/actual.json"
+  ]
+}

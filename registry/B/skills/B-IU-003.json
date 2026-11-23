@@ -1,0 +1,177 @@
+{
+  "skill_id": "B-IU-003",
+  "domain": "interaction-ux-flow",
+  "trigger": [
+    "B-002: 取消の対象・要求受付・終端結果・完了競合を分け、補償を別業務の境界として残す。"
+  ],
+  "intent": "取消の対象・要求受付・終端結果・完了競合を分け、補償を別業務の境界として残す。",
+  "required_inputs": [
+    "対象操作/job ID、業務対象ID、元の処理段階。",
+    "取消APIの対応可否、要求受付と取消確定の違い、終端判定、対象範囲。",
+    "完了が競合した場合に返す結果/成果物と、その参照経路。",
+    "補償について述べる場合のみ、その別契約・状態・残る影響。B-IU-004の回復契約を使う。"
+  ],
+  "decision_rules": [
+    {
+      "if": "画面にキャンセル操作を設ける",
+      "then": "画面終了、通信中断、処理取消、業務取消の対象を明示し、同一ラベルの効果を曖昧にしない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S104",
+        "B-S105",
+        "B-T203",
+        "B-T205",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "非同期取消の受付だけを確認",
+      "then": "取消要求済みの非終端状態とし、対象操作を照合する。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S104",
+        "B-S105",
+        "B-T203",
+        "B-T205",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "取消成功を保証する契約上の終端結果を確認",
+      "then": "確定した対象に限定して取消済みを表示する。予約取消や全副作用復元へ範囲を広げない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S104",
+        "B-S105",
+        "B-T203",
+        "B-T205",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "取消と元処理成功が競合し、元処理成功が確定",
+      "then": "成功結果と成果物への導線を保ち、偽の取消済みにしない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S104",
+        "B-S105",
+        "B-T203",
+        "B-T205",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "未対応、拒否、手遅れ、取消応答喪失、照会失敗",
+      "then": "取消確定としない。既知の元状態と取消要求の観測を分け、同じ対象の照合へ戻る。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S104",
+        "B-S105",
+        "B-T203",
+        "B-T205",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "完了後のUndo/返金/巻戻しの説明を求められる",
+      "then": "B-IU-004で局所Undo、保存済み資源の復元、外部補償の条件を判断する。契約不明な回復範囲だけをHOLDに残し、取消と混同しない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S104",
+        "B-S105",
+        "B-T203",
+        "B-T205",
+        "B-T206"
+      ]
+    },
+    {
+      "if": "取消要求と元処理成功の両方を観測したが、サーバーでの発生順の証拠がない",
+      "then": "確認した成功と取消状況だけを述べ、取消要求より完了が早かった等の時系列・原因を断定しない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S104",
+        "B-T203"
+      ]
+    }
+  ],
+  "procedure": [
+    "取消ボタンがどの対象と効果を取り消すのかを明記する。",
+    "契約上、要求を送れる状態と確定を認める応答を調べる。",
+    "取消受付後も元操作IDを残し、取消と完了のどちらが成立したかを確認する。",
+    "拒否・未対応・応答喪失では取消済みと表示しない。成果物への経路を残す。",
+    "完了との競合、取消後の照会失敗、同期的取消確定の例外を検証する。"
+  ],
+  "expected_outputs": [
+    "状態・操作・遷移条件・保持データの表",
+    "結果を確定する証拠と回復経路",
+    "正常・異常・境界条件の試験と未検証事項"
+  ],
+  "dependencies": [
+    "B-IU-001: 取消応答と元操作の結果照合。",
+    "取消要求自体の再送を行う場合はB-IU-002と対象APIの取消再試行契約。",
+    "実業務取消の契約。完了後の回復はB-IU-004へ接続する。"
+  ],
+  "exceptions": [
+    "同期応答が取消確定を保証するAPIなら、その応答で確定できる。一律にpollを必須化しない。",
+    "取消が未対応なら実行可能な取消として提示しない。",
+    "Google DeleteOperationが取消ではないという事実はこのAPIに限る。全DELETEへ一般化しない。",
+    "完全ローカルで可逆な編集の通常undoに、分散補償の全条件を課さない。",
+    "Browser AbortControllerの効果は今回直接検証していない。通信中断だけで業務取消成立を証明する根拠には採用しない。",
+    "取消の成立が返金・通知・課金の全ての復元を意味するとはしない。具体的残存効果は実APIごとに確認する。"
+  ],
+  "failure_modes": [
+    "取消クリック/HTTP成功だけで取消済みと表示する。",
+    "元処理が成功しても成果物へ到達できなくなる。",
+    "閉じる操作やoperation記録削除で業務が取り消されたと表示する。",
+    "処理取消を予約自体の取消と表示する。",
+    "返金受付を全影響が元通りになったと表示する。",
+    "成功結果だけを根拠に取消要求の送信より前に完了したと断定する。"
+  ],
+  "verification": {
+    "criteria": [
+      "T06",
+      "T07",
+      "T08",
+      "cancel/complete races (critic)"
+    ],
+    "evidence": [
+      "campaigns/B/rounds/01/candidate-revised-trials.json",
+      "campaigns/B/rounds/01/recovery-policy-results.json",
+      "campaigns/B/rounds/01/independent/public-independent-review-summary.json"
+    ],
+    "limitations": [
+      "Executed synthetic controllers, decision adapter and generated DOM only; real backend, rendered browser, keyboard/AT and human comprehension unverified.",
+      "One same-model generation per arm; both scored 14/14. No causal efficacy gain demonstrated.",
+      "Initial candidate copy defect revised after independent DOM observation; original arm and all trial versions retained."
+    ]
+  },
+  "source_refs": [
+    "B-S104",
+    "B-S105",
+    "B-T203",
+    "B-T205",
+    "B-T206"
+  ],
+  "confidence": {
+    "source_support": "Primary standards and official API/service guidance; scope and edition preserved.",
+    "transfer": "Accepted as conditional executable guidance within tested contracts; general usability benefit is not established.",
+    "limits": [
+      "実APIで処理取消と予約取消がどう対応するか未提示。",
+      "BigQuery jobs.cancelのpoll必須とresponse final state記述の局所的緊張。特定応答の内容を確認する必要がある。",
+      "Browser AbortController/Fetch規範は未調査。",
+      "B-IU-004で局所/外部補償の代表fixtureを検証。実製品の回復契約と部分成功は個別確認が必要。",
+      "日本語の取消ラベルが利用者に理解されることは未検証。"
+    ]
+  },
+  "status": "ACCEPT",
+  "version": "0.1.2",
+  "introduced_round": 1,
+  "analysis_ref": "campaigns/B/rounds/01/analysis.md",
+  "accepted_round": 1,
+  "relationship_to_existing": {
+    "artifact": "https://github.com/RNA4219/anything-frontend-product-design/pull/2",
+    "revision": "f66e7954f2a59a59dad861901b9270076c2fc691",
+    "type": "formalizes_or_refines_existing_concept",
+    "additional_value": "Explicit cancellation receipt vs final result, cancellation/completion ordering counterexample and separate compensation boundary."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "source_id": "A-S010",
+  "title": "— Make Short Critical Paths — W3C/WAI",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p02-short-paths/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p02-short-paths",
+  "original_id": "S10",
+  "provenance": "inherited-index",
+  "verified_in_current_round": false,
+  "rights": "Link and original paraphrase only; no third-party full text redistributed.",
+  "content_sha256": null,
+  "notes": "- **URL**: [Make Short Critical Paths — W3C/WAI](https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p02-short-paths/)\n- **該当箇所**: What to Do / Examples\n- **確認日 / 種別**: 2026-11-23 / official_supplemental_guidance\n- **原典の主張** (author_guidance): 完了に必要な経路から任意の追加ステップを分ける。\n- **制約・版・未確認**: 認知/学習障害向けのWorking Group Note由来の補足ガイダンス。WCAG適合必須要件ではなく必要な確認や法的要件の削除を許さない。\n- **接続する原則**: A06, A08。原則のProcedure/JSON契約は、別に明記した本Skillの導出。"
+}

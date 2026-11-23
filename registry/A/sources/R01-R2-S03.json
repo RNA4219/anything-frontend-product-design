@@ -1,0 +1,18 @@
+{
+  "id": "R01-R2-S03",
+  "title": "Release notes — Sonos app updates",
+  "url": "https://support.sonos.com/en/article/release-notes-sonos-app-updates",
+  "kind": "official_product_release_history",
+  "locator": "2024-05-07 redesigned release; 2024-05-14 alarms re-added; 2024-06-04 sleep timer added. Web L788-L805, L843-L851, L875-L884.",
+  "short_quote": "Added sleep timer settings",
+  "claim": "公式履歴には2024-05-07の全面再設計、05-14のアラーム追加・編集再導入、06-04のsleep timer追加が記録される。今後提供の機能と当日に実行できる機能は異なる。",
+  "limits": "リリースノートは利用者の成功率や原因分析ではない。本文の2026年部分は判断に使わず、2024年の履歴のみ採用。アプリ版・OSで提供時点は異なる。",
+  "sha256": "a0a3e051af02c39f5423619c08dce61a7660ce97812456b0d0ae8d1d81cbab7b",
+  "retrieved_at": "2026-11-23",
+  "acquisition": "Web tool text extraction after imozuru fetch.py DNS failure; original HTML not acquired",
+  "redistribution": "Do not commit raw source or retrieval transcript; use source URL, own rules, bounded quotation only",
+  "is_full_original": false,
+  "source_id": "R01-R2-S03",
+  "canonical_url": "https://support.sonos.com/en/article/release-notes-sonos-app-updates",
+  "verified_in_current_round": true
+}

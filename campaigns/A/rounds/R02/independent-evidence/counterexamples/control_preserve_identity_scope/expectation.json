@@ -1,0 +1,17 @@
+{
+  "id": "control_preserve_identity_scope",
+  "expected_machine": {
+    "baseline": "PASS",
+    "candidate": "PASS"
+  },
+  "expected_semantic": "DESIGN_ACCEPTABLE_PENDING_EXTERNAL_VERIFICATION",
+  "independent_basis": "入力のD-17/D-42、複数所属、未知検索範囲、旧入口の対応をそれぞれ保持する。",
+  "rubric_ids": [
+    "N1",
+    "N2",
+    "N3",
+    "N4",
+    "N6"
+  ],
+  "evidence_level": "synthetic design / HTML source only; no rendered UI, operation, C conformance or human result"
+}

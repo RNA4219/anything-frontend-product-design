@@ -1,0 +1,12 @@
+{
+  "source_id": "A-S016",
+  "title": "— Jakob Nielsen（2006）— Progressive Disclosure",
+  "url": "https://www.nngroup.com/articles/progressive-disclosure/",
+  "canonical_url": "https://www.nngroup.com/articles/progressive-disclosure",
+  "original_id": "S16",
+  "provenance": "inherited-index",
+  "verified_in_current_round": false,
+  "rights": "Link and original paraphrase only; no third-party full text redistributed.",
+  "content_sha256": null,
+  "notes": "- **URL**: [Jakob Nielsen（2006）— Progressive Disclosure](https://www.nngroup.com/articles/progressive-disclosure/)\n- **該当箇所**: Usability Criteria for Progressive Disclosure; Staged Disclosure: One Step at a Time。Web抽出 L85–106。\n- **確認日 / 種別**: 2026-11-23 / 本人・専門家の設計助言。記事自体は新規実験の方法や標本を報告する論文ではない。\n- **原典の主張** (author_guidance): Nielsenは、初期表示と二次表示の分け方、二次表示への明瞭な操作とラベル、観察による利用統計の補完を求める。重要度によるprogressive disclosureと、タスクの順番によるstaged disclosureを区別している。\n- **制約・版・未確認**: 2段を超える構造への懸念は実務指針であり普遍的画面数上限ではない。根拠リンクのTraining Wheels紹介までは到達したが、Carrollらの原研究への旧ACMリンク2件は403で、紹介された効果量を原研究本文と照合していない。\n- **接続する原則**: A08。原則のProcedure/JSON契約は、別に明記した本Skillの導出。"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "R01-R1-S02",
+  "title": "Retiring your service",
+  "url": "https://www.gov.uk/service-manual/agile-delivery/retiring-your-service",
+  "kind": "official_guidance",
+  "locator": "Consider user needs; Telling your users; Make a plan to redirect traffic",
+  "short_quote": "how the user need your service met will be met",
+  "claim": "Retirement distinguishes needs that disappear, needs served by a replacement, and needs no longer served by government. Users, direct-entry routes, APIs and assisted channels require transition consideration.",
+  "limits": "Whole-service retirement guidance. Applying its preservation questions to an individual feature is this campaign’s inference. Government-specific notification and domain-retention rules are not transplanted.",
+  "sha256": "e0757a1d6c6b9a856ab619ac06f83e5f7f981afca4bd8e161fbcf60ad5b7b237",
+  "acquisition": {
+    "method": "web_run extracted original passage fallback",
+    "imozuru_fetch": "FAIL_DNS",
+    "original_html_downloaded": false,
+    "full_original_archive": false,
+    "relevant_passages_verified": true
+  },
+  "publication_safety": "Metadata and short quotation only; retained source text stays private.",
+  "source_id": "R01-R1-S02",
+  "canonical_url": "https://www.gov.uk/service-manual/agile-delivery/retiring-your-service",
+  "verified_in_current_round": true
+}

@@ -1,0 +1,113 @@
+{
+  "round": "R03",
+  "status": "ACCEPT",
+  "scope": "Conditional decision-information instructions and bounded structural checks; human effectiveness remains unverified",
+  "issues": [
+    "A-005",
+    "A-006",
+    "A-009",
+    "A-010"
+  ],
+  "actual_subagents": [
+    {
+      "id": "/root/r03_researcher_1",
+      "role": "Researcher-1",
+      "status": "completed"
+    },
+    {
+      "id": "/root/r03_researcher_2",
+      "role": "Researcher-2",
+      "status": "completed"
+    },
+    {
+      "id": "/root/r03_analyst",
+      "role": "Analyst",
+      "status": "completed"
+    },
+    {
+      "id": "/root/r03_task_x",
+      "role": "Baseline task generation",
+      "status": "completed"
+    },
+    {
+      "id": "/root/r03_task_y",
+      "role": "Candidate task generation",
+      "status": "completed"
+    },
+    {
+      "id": "/root/r03_critic",
+      "role": "Critic/Evaluator",
+      "status": "completed"
+    }
+  ],
+  "new_sources": 6,
+  "new_units": 0,
+  "units_updated": [
+    "A-IU-002",
+    "A-IU-006",
+    "A-IU-008",
+    "A-IU-009",
+    "A-IU-010"
+  ],
+  "deduplication": {
+    "research_proposals": 6,
+    "extracted_revisions": 3,
+    "overlaps_consolidated": 3,
+    "source_url_duplicates": 0
+  },
+  "tests": {
+    "unit_test_methods": 57,
+    "independent_fixtures": 13,
+    "limited_recheck_fixtures": 8,
+    "independent_regression_fixtures_retained": 11,
+    "parent_alias_pair": 2,
+    "pre_fix_optional_route_failures_detected_by_new_tests": 4,
+    "independent_findings_resolved": [
+      "R03-C01",
+      "R03-C02",
+      "R03-C03"
+    ]
+  },
+  "task_comparison": {
+    "baseline": "Z",
+    "candidate": "W",
+    "scores": {
+      "baseline": 6,
+      "candidate": 6,
+      "max": 6
+    },
+    "runs_per_arm": 1,
+    "difference": 0,
+    "hard_failures": {
+      "baseline": 0,
+      "candidate": 0
+    },
+    "assignment_concealment": "compromised by baseline path in Z/design.md; critic reported before scoring",
+    "equivalence_or_superiority_proven": false
+  },
+  "candidate_freeze": "candidate-snapshot.json",
+  "post_freeze_review_repairs": [
+    "Bounded mandatory capability reachability after canonical resolution",
+    "Limit blocking to impact on required completion",
+    "Propagate all-declared-route scope into old A08 text and registry"
+  ],
+  "limitations": [
+    "Source excerpts and locator hashes, not full original archives",
+    "Same model family and one trial per arm; assignment leak",
+    "No rendering, interaction, actual authorization or human task observation",
+    "Values, applicability, prose-only delivery and dependency execution remain unchecked semantically",
+    "Mandatory reachability is limited to explicit input mandatory=true, matching goal and role, and declared authorized starts"
+  ],
+  "cost": {
+    "actual_amount": null,
+    "currency": null,
+    "reason": "Provider billing unavailable; zero is not inferred"
+  },
+  "next": [
+    "A-007",
+    "A-011"
+  ],
+  "meaningful_improvement": true,
+  "saturation_streak": 0,
+  "completed_at": "2026-11-23T08:25:37.196539+00:00"
+}

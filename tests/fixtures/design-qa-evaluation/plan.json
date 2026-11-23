@@ -1,0 +1,93 @@
+{
+  "task_id": "booking-change",
+  "cases": [
+    {
+      "id": "find",
+      "requirement_id": "booking-change-find",
+      "path": "normal",
+      "priority": "required",
+      "method": "manual",
+      "expected": {
+        "correct_target": true,
+        "other_booking_visible": true
+      }
+    },
+    {
+      "id": "confirm",
+      "requirement_id": "booking-change-confirm",
+      "path": "normal",
+      "priority": "required",
+      "method": "automated",
+      "expected": {
+        "before_review": 8,
+        "review_from": 8,
+        "review_to": 10,
+        "after_submit": 10,
+        "after_reload": 10,
+        "commit_count": 1
+      }
+    },
+    {
+      "id": "conflict-state",
+      "requirement_id": "booking-change-conflict",
+      "path": "failure",
+      "priority": "required",
+      "method": "automated",
+      "expected": {
+        "current_day": 8,
+        "commit_count": 0
+      }
+    },
+    {
+      "id": "conflict-guidance",
+      "requirement_id": "booking-change-conflict",
+      "path": "failure",
+      "priority": "required",
+      "method": "manual",
+      "expected": {
+        "cause_clear": true,
+        "original_state_clear": true,
+        "next_action_clear": true,
+        "keyboard_focus_to_available_slots": true
+      }
+    },
+    {
+      "id": "conflict-recover",
+      "requirement_id": "booking-change-conflict",
+      "path": "recovery",
+      "priority": "required",
+      "method": "automated",
+      "expected": {
+        "after_submit": 11,
+        "after_reload": 11,
+        "commit_count": 1
+      }
+    },
+    {
+      "id": "lost-reply-guidance",
+      "requirement_id": "booking-change-retry",
+      "path": "failure",
+      "priority": "required",
+      "method": "manual",
+      "expected": {
+        "lookup_first": true,
+        "lookup_available": true,
+        "keyboard_focus_to_lookup": true,
+        "edit_blocked_until_lookup": true,
+        "stale_display_marked": true
+      }
+    },
+    {
+      "id": "lost-reply-retry",
+      "requirement_id": "booking-change-retry",
+      "path": "recovery",
+      "priority": "required",
+      "method": "automated",
+      "expected": {
+        "final_day": 10,
+        "after_reload": 10,
+        "commit_count": 1
+      }
+    }
+  ]
+}

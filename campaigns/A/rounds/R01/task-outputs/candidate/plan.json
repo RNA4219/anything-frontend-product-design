@@ -1,0 +1,550 @@
+{
+  "schema_version": "1.1",
+  "case_id": "regional-facility-service",
+  "visual_intent_id": "facility-editorial-v1",
+  "features": [
+    {
+      "id": "f_mine",
+      "object": "reservation",
+      "outcome": "select-change-target",
+      "roles": [
+        "member"
+      ],
+      "goal_ids": [
+        "g_change"
+      ],
+      "requirement_ids": [
+        "r_change"
+      ],
+      "dependencies": [],
+      "scope": "self",
+      "context_constraints": [
+        "mobile-supported"
+      ],
+      "label": "自分の予約",
+      "disposition": "keep",
+      "target": null,
+      "reason": "本人の予約から変更対象を選ぶ必須成果を担う正本。予約番号・部屋・日時・状態を同時に示す。f_my_bookings は入力上の対象・成果・役割・scope・端末条件・提供状態・必要情報が一致するため、この機能へ統合する。",
+      "priority": "required",
+      "priority_basis": "g_change と r_change、および入力の mandatory=true による。頻度を推定せず必須条件を優先する。",
+      "evidence_refs": [
+        "e_contract"
+      ]
+    },
+    {
+      "id": "f_my_bookings",
+      "object": "reservation",
+      "outcome": "select-change-target",
+      "roles": [
+        "member"
+      ],
+      "goal_ids": [
+        "g_change"
+      ],
+      "requirement_ids": [
+        "r_change"
+      ],
+      "dependencies": [],
+      "scope": "self",
+      "context_constraints": [
+        "mobile-supported"
+      ],
+      "label": "予約一覧",
+      "disposition": "merge",
+      "target": "f_mine",
+      "reason": "f_mine と reservation / select-change-target / member / self / mobile-supported、existing / available が一致し、同じ g_change の必要情報を使用する。入力IDを残して f_mine を正本にする。旧入口と直リンクは自分の予約へ案内する計画とし、移行処理は未実装。",
+      "priority": "required",
+      "priority_basis": "統合後も必須の予約識別能力を維持する。独立した二つ目の能力は要求されていない。",
+      "evidence_refs": [
+        "e_missing",
+        "e_contract"
+      ]
+    },
+    {
+      "id": "f_audit",
+      "object": "reservation",
+      "outcome": "export-records",
+      "roles": [
+        "staff"
+      ],
+      "goal_ids": [
+        "g_audit"
+      ],
+      "requirement_ids": [
+        "r_audit"
+      ],
+      "dependencies": [
+        "f_all_records"
+      ],
+      "scope": "facility-all",
+      "context_constraints": [
+        "staff-account"
+      ],
+      "label": "監査用記録出力",
+      "disposition": "keep",
+      "target": null,
+      "reason": "年次監査で施設全体の予約記録を取り出す必須機能。f_all_records への依存を維持する。直近30日・同意者のみ・監査期間外の0回観測では年次の必要性を否定できない。",
+      "priority": "required",
+      "priority_basis": "g_audit と r_audit、および mandatory=true による。年1回でも提出を満たせない影響があるため必須。",
+      "evidence_refs": [
+        "e_contract",
+        "e_telemetry"
+      ]
+    },
+    {
+      "id": "f_all_records",
+      "object": "reservation",
+      "outcome": "read-records",
+      "roles": [
+        "staff"
+      ],
+      "goal_ids": [
+        "g_audit"
+      ],
+      "requirement_ids": [
+        "r_audit"
+      ],
+      "dependencies": [],
+      "scope": "facility-all",
+      "context_constraints": [
+        "staff-account"
+      ],
+      "label": "施設全体の予約記録",
+      "disposition": "keep",
+      "target": null,
+      "reason": "f_audit が依存する施設全体の記録閲覧を維持する。f_team_records は assigned-room-only であり facility-all の代わりにならない。閲覧と出力は同じ監査判断画面に同居させるが、成果が違う別機能として保持する。",
+      "priority": "required",
+      "priority_basis": "入力上は非mandatoryだが、必須の f_audit を成立させる明示依存のため required。入力の mandatory 値自体は変更しない。",
+      "evidence_refs": [
+        "e_missing",
+        "e_contract"
+      ]
+    },
+    {
+      "id": "f_team_records",
+      "object": "reservation",
+      "outcome": "read-records",
+      "roles": [
+        "staff"
+      ],
+      "goal_ids": [
+        "g_audit"
+      ],
+      "requirement_ids": [],
+      "dependencies": [],
+      "scope": "assigned-room-only",
+      "context_constraints": [
+        "staff-account"
+      ],
+      "label": "担当室の予約記録",
+      "disposition": "keep",
+      "target": null,
+      "reason": "既存提供の assigned-room-only を維持する。同名の f_all_records と権限対象が異なるため統合しない。担当室の記録は監査準備を支援し得るが、施設全体の監査記録を充足するとは数えない。独立した利用目的と廃止根拠は未確認。",
+      "priority": "medium",
+      "priority_basis": "暫定順位。必須監査の直接依存ではないが、既存の限定範囲での利用を失わせる根拠がない。担当室業務の失敗影響・期限が確認されたら再評価する。",
+      "evidence_refs": [
+        "e_missing"
+      ]
+    },
+    {
+      "id": "f_notify",
+      "object": "notification",
+      "outcome": "receive-booking-change",
+      "roles": [
+        "member"
+      ],
+      "goal_ids": [
+        "g_notice"
+      ],
+      "requirement_ids": [
+        "r_notice"
+      ],
+      "dependencies": [],
+      "scope": "self",
+      "context_constraints": [
+        "mobile-supported"
+      ],
+      "label": "予約時間の変更通知",
+      "disposition": "keep",
+      "target": null,
+      "reason": "既存の予約時間変更通知を維持する。2%は計測同意者の直近30日の部分観測で全利用者の分母は不明。未観測の利用者を非利用と扱わず、携帯電話だけの利用者が使える代替も未確認のため延期・削除しない。",
+      "priority": "high",
+      "priority_basis": "暫定順位。g_notice は should と明示されている。時間変更の見落としを避ける成果を優先するが、影響の程度・期限は未計測であり required には変更しない。",
+      "evidence_refs": [
+        "e_missing",
+        "e_telemetry"
+      ]
+    }
+  ],
+  "screens": [
+    {
+      "id": "s_member_reservations",
+      "title": "自分の予約",
+      "purpose": "本人の予約を比較して変更対象を選ぶ",
+      "goal_ids": [
+        "g_change"
+      ],
+      "feature_ids": [
+        "f_mine"
+      ],
+      "roles": [
+        "member"
+      ],
+      "entry_for": [
+        "member"
+      ],
+      "information": [
+        {
+          "id": "reservation_id",
+          "visibility": "primary",
+          "reason": "同じ部屋の予約を一意に識別する。入力の content.reservations[].id をこの情報IDに対応させる。"
+        },
+        {
+          "id": "room",
+          "visibility": "primary",
+          "reason": "変更したい工作室の予約かを確認する。"
+        },
+        {
+          "id": "date",
+          "visibility": "primary",
+          "reason": "同じ工作室の別日時の予約を取り違えない。入力の表記を保ち年は推測しない。"
+        },
+        {
+          "id": "status",
+          "visibility": "primary",
+          "reason": "確定・変更可と利用済みを区別する。状態は文字で表示し詳細へ隠さない。"
+        },
+        {
+          "id": "change_target_entry",
+          "visibility": "primary",
+          "reason": "変更可能な予約に結び付く対象確認の入口を示す。利用済みには変更入口を付けない。"
+        },
+        {
+          "id": "reservation_help",
+          "visibility": "secondary",
+          "reason": "判別方法の補足。4つの識別情報自体は補足へ移さない。"
+        }
+      ]
+    },
+    {
+      "id": "s_member_target",
+      "title": "変更対象の確認",
+      "purpose": "選んだ予約が意図した変更対象かを確かめる",
+      "goal_ids": [
+        "g_change"
+      ],
+      "feature_ids": [
+        "f_mine"
+      ],
+      "roles": [
+        "member"
+      ],
+      "entry_for": [],
+      "information": [
+        {
+          "id": "reservation_id",
+          "visibility": "primary",
+          "reason": "選択元と同じ予約であることを確認する。"
+        },
+        {
+          "id": "room",
+          "visibility": "primary",
+          "reason": "選んだ部屋を再確認する。"
+        },
+        {
+          "id": "date",
+          "visibility": "primary",
+          "reason": "選んだ日時を再確認する。"
+        },
+        {
+          "id": "status",
+          "visibility": "primary",
+          "reason": "変更対象としての条件を再確認する。実際の再検証と変更保存はB/Cの設計・実装範囲。"
+        }
+      ]
+    },
+    {
+      "id": "s_member_notifications",
+      "title": "予約時間の変更通知",
+      "purpose": "通知内容から予約時間にどの変更があったかを把握する",
+      "goal_ids": [
+        "g_notice"
+      ],
+      "feature_ids": [
+        "f_notify"
+      ],
+      "roles": [
+        "member"
+      ],
+      "entry_for": [],
+      "information": [
+        {
+          "id": "notice_reservation_reference",
+          "visibility": "primary",
+          "reason": "通知がどの本人予約についてのものかを示す配置案。実際の通知データは未提供。"
+        },
+        {
+          "id": "notice_time_change",
+          "visibility": "primary",
+          "reason": "変更前後の予約日時を伝える配置案。実際の日時や通知実績を捏造しない。"
+        },
+        {
+          "id": "notice_delivery_context",
+          "visibility": "primary",
+          "reason": "現行の受取手段・配信先・配信条件を確認して配置する。入力に値がないため未確認と示す。"
+        },
+        {
+          "id": "notice_help",
+          "visibility": "secondary",
+          "reason": "通知が届かない場合の案内は既存手順を確認して引き継ぐ。"
+        }
+      ]
+    },
+    {
+      "id": "s_staff_audit",
+      "title": "施設全体の予約記録・監査出力",
+      "purpose": "年次監査に取り出す施設・期間・記録範囲を確かめる",
+      "goal_ids": [
+        "g_audit"
+      ],
+      "feature_ids": [
+        "f_all_records",
+        "f_audit"
+      ],
+      "roles": [
+        "staff"
+      ],
+      "entry_for": [
+        "staff"
+      ],
+      "information": [
+        {
+          "id": "facility",
+          "visibility": "primary",
+          "reason": "監査対象の施設を識別する。施設名・IDの実値は未提供。"
+        },
+        {
+          "id": "period",
+          "visibility": "primary",
+          "reason": "監査対象の開始日と終了日を確認する。対象年度や期間を推測しない。"
+        },
+        {
+          "id": "record_scope",
+          "visibility": "primary",
+          "reason": "施設全体 facility-all と明示し、担当室だけの記録と混同しない。"
+        },
+        {
+          "id": "record_preview",
+          "visibility": "primary",
+          "reason": "選択範囲の記録を出力前に確認する配置。入力の2件を施設全体の監査記録として代用しない。"
+        },
+        {
+          "id": "export_format_and_retention",
+          "visibility": "secondary",
+          "reason": "提出形式・保存規則の補足は業務条件確認後に配置する。今回の範囲選択に影響する条件が判明したらprimaryへ移す。"
+        }
+      ]
+    },
+    {
+      "id": "s_staff_assigned",
+      "title": "担当室の予約記録",
+      "purpose": "担当室の範囲内で確認する予約記録を選ぶ",
+      "goal_ids": [
+        "g_audit"
+      ],
+      "feature_ids": [
+        "f_team_records"
+      ],
+      "roles": [
+        "staff"
+      ],
+      "entry_for": [],
+      "information": [
+        {
+          "id": "record_scope",
+          "visibility": "primary",
+          "reason": "assigned-room-only を常時示す。施設全体の監査出力には使えないと分かるようにする。"
+        },
+        {
+          "id": "assigned_room",
+          "visibility": "primary",
+          "reason": "閲覧が許可された担当室を示す。部屋の実値は未提供。"
+        },
+        {
+          "id": "period",
+          "visibility": "primary",
+          "reason": "担当室の記録を確認する期間を示す。実値は未提供。"
+        },
+        {
+          "id": "assigned_records",
+          "visibility": "primary",
+          "reason": "担当室に限定された記録の確認位置。実データは未提供。"
+        }
+      ]
+    }
+  ],
+  "navigation": [
+    {
+      "from": "s_member_reservations",
+      "to": "s_member_target",
+      "label": "変更対象を確認",
+      "roles": [
+        "member"
+      ],
+      "kind": "contextual",
+      "rationale": "変更可能な本人予約の識別情報に結び付く。入力例は R-204。選択状態や変更処理の実装ではない。"
+    },
+    {
+      "from": "s_member_target",
+      "to": "s_member_reservations",
+      "label": "自分の予約へ戻る",
+      "roles": [
+        "member"
+      ],
+      "kind": "local",
+      "rationale": "対象を選び直すための正当な戻り経路。"
+    },
+    {
+      "from": "s_member_reservations",
+      "to": "s_member_notifications",
+      "label": "予約時間の変更通知",
+      "roles": [
+        "member"
+      ],
+      "kind": "local",
+      "rationale": "本人予約に関係する通知の入口。主要分類を独立に増やさない。具体的な受取手段と既存導線の統合は未確認。"
+    },
+    {
+      "from": "s_member_notifications",
+      "to": "s_member_reservations",
+      "label": "自分の予約へ戻る",
+      "roles": [
+        "member"
+      ],
+      "kind": "local",
+      "rationale": "通知で知った変更に関係する本人予約を確認するため。"
+    },
+    {
+      "from": "s_staff_audit",
+      "to": "s_staff_assigned",
+      "label": "担当室の予約記録",
+      "roles": [
+        "staff"
+      ],
+      "kind": "local",
+      "rationale": "職員の記録領域内で、許可された担当室の対象範囲へ移る。facility-all と機能を統合しない。"
+    },
+    {
+      "from": "s_staff_assigned",
+      "to": "s_staff_audit",
+      "label": "施設全体の予約記録・監査出力",
+      "roles": [
+        "staff"
+      ],
+      "kind": "local",
+      "rationale": "施設全体を扱う権限のある職員が年次監査の対象確認へ戻る。実装で認可を確認する。"
+    }
+  ],
+  "goal_routes": [
+    {
+      "goal_id": "g_change",
+      "start_screen": "s_member_reservations",
+      "target_screen": "s_member_reservations",
+      "notes": "member/selfの入口に予約番号・部屋・日時・状態をprimary表示する。R-204を変更対象として選び、R-205を利用済みとして除外できる情報を揃える。対象確認へのcontextualリンクは文書内の静的な例。"
+    },
+    {
+      "goal_id": "g_audit",
+      "start_screen": "s_staff_audit",
+      "target_screen": "s_staff_audit",
+      "notes": "入力のstaff/facility-allの提供範囲を持つ職員が、施設・期間・施設全体の記録範囲をprimaryで確認し、f_all_recordsに依存したf_auditの出力へ進む構造。実際の出力処理は未実装。"
+    },
+    {
+      "goal_id": "g_notice",
+      "start_screen": "s_member_reservations",
+      "target_screen": "s_member_notifications",
+      "notes": "本人予約からlocalの変更通知案内へ到達する配置案。既存の受信機能は提供を維持する。配信先・チャネル・通知内容の実値は未提供で、通知受信の達成をこの経路だけで証明しない。"
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "u_legacy_entry",
+      "category": "interaction",
+      "owner": "B",
+      "blocking": false,
+      "impact": "統合後の旧メニュー・ブックマーク・直リンクの継続利用は、この静的見取り図では実装・確認していない。",
+      "question": "旧「予約」「予約一覧」のURL・クエリ・戻り先を確認し、同じ本人範囲と選択文脈を保って f_mine / s_member_reservations へ案内できるか。"
+    },
+    {
+      "id": "u_change_rules",
+      "category": "interaction",
+      "owner": "B",
+      "blocking": false,
+      "impact": "入力の status で2件を識別するところまでを設計した。年、変更期限、競合、再検証、変更内容の保存と失敗時の状態は未設計。",
+      "question": "実際に変更を実行する前の適格性再確認・期限・競合・保存・取消・失敗時の手順を既存仕様から確認する。"
+    },
+    {
+      "id": "u_audit_terms",
+      "category": "function",
+      "owner": "product",
+      "blocking": false,
+      "impact": "施設・期間・施設全体の範囲をprimaryにする構造は決められるが、実監査に提出できる出力の完成は未確認。現提供の廃止は行わない。",
+      "question": "対象施設、年度・期間境界、取消等の収録範囲、出力形式、保持期間、提出期限を確認する。監査実行時に必須値や収録範囲が欠ける場合は実行を保留する。"
+    },
+    {
+      "id": "u_authorization",
+      "category": "implementation",
+      "owner": "C",
+      "blocking": false,
+      "impact": "member/self、staff/facility-all、staff/assigned-room-only は入力の役割・対象範囲として維持した。メニューの分離だけでは認可実装を証明しない。",
+      "question": "既存の本人・施設全体・担当室の認可を表示とサーバー取得の両方で維持する。全職員へfacility-allを新たに付与せず、権限のない直リンクも拒否できるか。"
+    },
+    {
+      "id": "u_notice_coverage",
+      "category": "function",
+      "owner": "product",
+      "blocking": false,
+      "impact": "通知は提供を維持。全利用者の利用率・受取手段・配信先・配信条件は未確認のため、通知画面の具体内容と将来の廃止可否は確定していない。",
+      "question": "既存の受取手段と携帯電話のみでの到達条件、未計測者を含む利用目的、通知の欠落による影響を確認する。別PCを必要としない代替が全対象者に使える根拠、または業務終了の根拠が得られた場合に限り整理方針を再検討する。"
+    },
+    {
+      "id": "u_assigned_records_need",
+      "category": "function",
+      "owner": "product",
+      "blocking": false,
+      "impact": "担当室限定機能は維持し、暫定mediumとした。g_auditへの入力の関連付けは保持するが、単独では全施設の監査を満たさない。",
+      "question": "担当室限定の具体的な作業・期限・利用権限を確認する。全施設閲覧と同じ権限で利用できると推定せず、不要性または条件を満たす代替が確認されるまで削除・統合しない。"
+    },
+    {
+      "id": "u_mobile_and_labels",
+      "category": "information_architecture",
+      "owner": "D",
+      "blocking": false,
+      "impact": "実利用者による入口発見、ラベル理解、誤選択率、携帯電話での操作性・読み上げは未検証。",
+      "question": "携帯電話のみの利用者が、4情報から R-204 を選び R-205 を除外できるかを観察する。0件・1件・多数件・長い名称・通知なし・担当権限のみの境界も確認する。"
+    },
+    {
+      "id": "u_visual_assets",
+      "category": "visual",
+      "owner": "C",
+      "blocking": false,
+      "impact": "既存の配色・書体・余白・構図の実ファイルが未提供。visual_intent_idの継承は実描画の一致を保証しない。プレビューはブラウザー標準表示の情報見取り図。",
+      "question": "本番画面への反映時は facility-editorial-v1 の現行スタイルと部品を引き継ぎ、広幅・狭幅で必須情報の欠落を確認する。新しい意匠はこの成果物では決めない。"
+    }
+  ],
+  "decision_notes": [
+    "入力固定: 2026-11-23の作業で指定された input/task.md、input/brief.json、input/contract.md を判断の入力とした。入力のrevisionは未提供。予約の日付の年をこの日付から補っていない。",
+    "A01/A02: g_change→r_change→f_mine（f_my_bookingsを統合）。g_audit→r_audit→f_audit→f_all_records。g_notice→r_notice→f_notify。f_team_recordsのg_audit関連は補助関係として保持し、必須監査の代替には数えない。",
+    "A03: 6個の入力IDを残し、keep 5、merge 1、defer 0、remove 0。重複を1件正本化するが、利用者の達成能力を1件廃止したとは数えない。既存機能の廃止・延期を採用していないためretirementは適用外。",
+    "A03: f_mineとf_my_bookingsの統合は入力の役割・self範囲・成果・必要情報・mobile-supported・existing/availableの一致に基づく。旧入口は同じ正本へ案内する計画であり、リダイレクト・データ移行を実装したとは報告しない。予約データの削除や複製は提案しない。",
+    "A03/A07: f_all_recordsとf_team_recordsは同名でもscopeが異なる。f_all_recordsとf_auditは対象とscopeが同じでもread-records/export-recordsが異なる。後者だけを監査判断画面に同居させ、別featureのkeepを維持する。",
+    "A04: e_telemetryの監査0回、通知2%は計測に同意した直近30日の部分観測。監査期間を含まず全利用者の分母も不明。r_auditの月次0%も年次監査の不要性を示さない。欠測を利用ゼロへ置き換えない。",
+    "A04: f_notifyは既存・availableであり、新機能の着手延期としてdeferしない。携帯電話だけの利用者にPCを代替として要求しない。high/mediumは説明付きの暫定順位であり利用率や効果の点数を捏造していない。",
+    "A05/A06: 予約番号が個体、room/date/statusが属性、変更対象選択と記録出力が行為。利用済みは別の正本や大分類に分断せず本人予約一覧で比較する。役割ごとに主要入口を一つ設け、通知と担当室の記録はlocal、予約の対象確認はcontextualにする。独立global項目や共通ダッシュボードは増設しない。",
+    "A07/A08: g_changeはs_member_reservationsで4情報が展開不要、g_auditはs_staff_auditでfacility/period/record_scopeが展開不要。primaryはスクロールを許し、補足の折りたたみに必須情報を移さない。",
+    "A09: 入力2件は member/self の比較例としてのみ使用する。R-204=工作室/12月8日 14:00/確定・変更可を選択候補、R-205=工作室/11月10日 14:00/利用済みを除外例とする。施設名・監査年・全施設記録・通知の実績は未提供であり捏造しない。",
+    "仮定: s_member_notificationsは既存通知の内容・受取条件を扱う配置案であり、入力にアプリ内通知一覧が存在すると主張するものではない。現行がメール等の別経路ならその受信経路を維持する。g_noticeの経路は情報配置の提案で、通知配信の成功証明ではない。",
+    "視覚範囲: facility-editorial-v1をそのまま継承し、既存の配色・書体・余白・構図の再設計を行わない。現行資産未提供のためpreview.htmlは外部CSS・フォント・画像・スクリプトを使わない標準HTMLの見取り図とした。",
+    "スコープ: 状態遷移・変更保存・監査出力・通知送信・認可・データ移行は未実装。プレビュー内リンクは文書内の見取り図への移動だけ。blocking=falseの残件は今回の情報構造の納品を止めないが、本番導入や監査実行の完了承認ではない。",
+    "A10: 付属validate_plan.pyの契約1.1検査を実行し、exit 0 / PASS / issues=[]を確認した。自作のHTML内容照合で入力2件の4情報の一致と展開不要、R-204だけの対象確認リンク、全8文書内リンク、外部依存・スクリプトなしを確認した。ブラウザー描画、実利用者評価、実端末、実際の認可と業務操作は未検証。構造検査済み・効果未確認であり、総合的品質PASSではない。"
+  ]
+}

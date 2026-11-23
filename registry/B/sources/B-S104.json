@@ -1,0 +1,27 @@
+{
+  "source_id": "B-S104",
+  "title": "google.longrunning Operations and Operation primary protocol definition",
+  "url": "https://github.com/googleapis/googleapis/blob/master/google/longrunning/operations.proto",
+  "kind": "official API specification source",
+  "section": "DeleteOperation lines 77–86; CancelOperation lines 88–105; WaitOperation lines 107–116; Operation.done/result lines 133–155",
+  "read_status": "Complete original UTF-8 file obtained through GitHub connector; relevant sections read; reached through AIP-151 reference link.",
+  "observed_facts": [
+    "CancelOperation starts asynchronous cancellation and is best effort; clients check whether cancellation succeeded or the operation completed despite cancellation.",
+    "Successful cancellation is represented by an existing Operation with error code CANCELLED; it is not deletion of the operation.",
+    "DeleteOperation means the client is no longer interested in the operation result and does not cancel the operation.",
+    "done=false means in progress; done=true accompanies an error or response, so completion and success are separate distinctions."
+  ],
+  "limits": [
+    "Cancelling a long-running rescheduling operation is not specified to cancel the underlying booking or reverse prior effects.",
+    "The method can be unsupported; unsupported cancellation must not be shown as available.",
+    "This source supplies protocol semantics, not empirical evidence that proposed Japanese labels work for users."
+  ],
+  "canonical_url": "https://github.com/googleapis/googleapis/blob/master/google/longrunning/operations.proto",
+  "capture_sha256": "5d2e7f9eeb55b8417b50e0a536a092babd32d26e4fbeb7099c6cdcda6e16db9c",
+  "capture_hash_scope": "exact retrieved representation, not necessarily raw webpage",
+  "source_file_name": "google-2025-operations.proto",
+  "checked_at": "2026-11-23T06:43:37.754332+00:00",
+  "round": 1,
+  "redistribution": "Original is retained privately, not committed; this record contains campaign paraphrases and public locators.",
+  "upstream_git_blob_sha": "63df207d258dbcc9db5911a52234791802ba77bf"
+}

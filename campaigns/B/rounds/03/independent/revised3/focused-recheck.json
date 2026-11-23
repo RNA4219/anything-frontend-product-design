@@ -1,0 +1,179 @@
+{
+  "scope": "Focused recheck of known repairs plus their directly changed binding/error path. Separate from frozen criteria.",
+  "moduleSha256": "c5130db7bd10a48bb586f30c689a40089deae648c966c372c0bc6e4c95bd41a4",
+  "htmlSha256": "84a92808062a8f903e2a64a9cb33041b367f9fcaff0102297cf6ce3f39779a9f",
+  "total": 3,
+  "passed": 3,
+  "results": [
+    {
+      "id": "RC01-TERMINAL-SUCCESS-BEFORE-LOOKUP-REJECTION",
+      "pass": true,
+      "trace": [
+        {
+          "afterSuccess": {
+            "phase": "loading",
+            "message": "観測した状態と今回の変更内容を確認してください。",
+            "draft": {
+              "title": "Draft"
+            },
+            "lastKnown": {
+              "etag": "original",
+              "values": {
+                "title": "Original"
+              }
+            },
+            "observedResource": null,
+            "operationId": "operation-1",
+            "operationOutcome": null,
+            "operationResult": null,
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": true,
+            "recoveryAction": null
+          }
+        },
+        {
+          "afterLookupFailure": {
+            "phase": "completed",
+            "message": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+            "draft": {
+              "title": "Draft"
+            },
+            "lastKnown": {
+              "etag": "original",
+              "values": {
+                "title": "Original"
+              }
+            },
+            "observedResource": {
+              "etag": "original",
+              "values": {
+                "title": "Original"
+              }
+            },
+            "operationId": "operation-1",
+            "operationOutcome": "succeeded",
+            "operationResult": {
+              "etag": "written",
+              "values": {
+                "title": "Draft"
+              }
+            },
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": true,
+            "recoveryAction": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "RC02-RESTORED-EVIDENCE-BINDING",
+      "pass": true,
+      "trace": [
+        {
+          "mismatch": "ownerId",
+          "view": {
+            "phase": "pending",
+            "message": "同じ操作の結果を待っています。",
+            "draft": {
+              "title": "Draft"
+            },
+            "lastKnown": {
+              "etag": "original",
+              "values": {
+                "title": "Original"
+              }
+            },
+            "observedResource": null,
+            "operationId": "op-1",
+            "operationOutcome": null,
+            "operationResult": null,
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": true,
+            "recoveryAction": null
+          },
+          "lookups": 1
+        },
+        {
+          "mismatch": "resourceId",
+          "view": {
+            "phase": "pending",
+            "message": "同じ操作の結果を待っています。",
+            "draft": {
+              "title": "Draft"
+            },
+            "lastKnown": {
+              "etag": "original",
+              "values": {
+                "title": "Original"
+              }
+            },
+            "observedResource": null,
+            "operationId": "op-1",
+            "operationOutcome": null,
+            "operationResult": null,
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": true,
+            "recoveryAction": null
+          },
+          "lookups": 1
+        },
+        {
+          "mismatch": "operationId",
+          "view": {
+            "phase": "pending",
+            "message": "同じ操作の結果を待っています。",
+            "draft": {
+              "title": "Draft"
+            },
+            "lastKnown": {
+              "etag": "original",
+              "values": {
+                "title": "Original"
+              }
+            },
+            "observedResource": null,
+            "operationId": "op-1",
+            "operationOutcome": null,
+            "operationResult": null,
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": true,
+            "recoveryAction": null
+          },
+          "lookups": 1
+        }
+      ]
+    },
+    {
+      "id": "RC03-INPUT-COPY-ACROSS-SUBMISSION-STATES",
+      "pass": true,
+      "trace": [
+        {
+          "phase": "editing",
+          "inputStatus": "保持した入力は今回の変更案です。入力の復帰だけでは更新を実行していません。"
+        },
+        {
+          "phase": "unknown",
+          "inputStatus": "この入力を使う操作は送信済みです。結果は操作の状態を確認してください。"
+        },
+        {
+          "phase": "completed",
+          "inputStatus": "表示した入力で送信した操作の成功を確認しています。現在の資源状態とは分けて表示します。"
+        },
+        {
+          "phase": "different_account",
+          "inputStatus": ""
+        }
+      ]
+    }
+  ]
+}

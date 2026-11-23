@@ -1,0 +1,13 @@
+{
+  "campaigns/B/rounds/01/artifacts/baseline/flow.mjs": "016adcd05b934bb19ac465dcc89040ac725eb1a19af793d9b0ab0f7b03dc7a03",
+  "campaigns/B/rounds/01/artifacts/baseline/index.html": "acf35e8b214463af19d27f5608a95fe00dd203ae3ec7f01e7028a977592febde",
+  "campaigns/B/rounds/01/artifacts/baseline/mock-service.mjs": "16494da2695d5e8d41066eff3459d34bf8299536f20a38c8457de53449eb2b1f",
+  "campaigns/B/rounds/01/artifacts/baseline/notes.md": "3522b8745fc60bcdb12bd1e9d74d872b1292ad18242c2d445387bbca49620b02",
+  "campaigns/B/rounds/01/artifacts/candidate/app.mjs": "f221fc876f656f6335a84423ff13225e385ed99390128d35809f397b7de3af18",
+  "campaigns/B/rounds/01/artifacts/candidate/flow.mjs": "c46f9c9e63d6199efcf0010e6545d1d70b170082399018607f4b475893f63bd1",
+  "campaigns/B/rounds/01/artifacts/candidate/index.html": "41721d66cd9fc9d7a40a4e493a413d4841e4eb14eedda8bd7c0ff2ad6499c916",
+  "campaigns/B/rounds/01/artifacts/candidate/mock-service.mjs": "204fee67d54972a40de9451fe92a72d17a145a61a82199c7c4d202c647396041",
+  "campaigns/B/rounds/01/artifacts/candidate/notes.md": "a6f987d22f8e61259aba45ad4060593ee9b1646b7d9553ac036fc8a53450eb2f",
+  "campaigns/B/rounds/01/artifacts/candidate/serve.mjs": "23f474ed2bd3294bd39db9cf21adee431bf937af528b5f1b702851fa95a644ce",
+  "campaigns/B/rounds/01/artifacts/candidate/smoke-test.mjs": "51b43414b1a7cedd227d4142eb109a1762f27d7c03913ab0c73d1b2d4536559b"
+}

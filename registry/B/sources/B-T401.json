@@ -1,0 +1,58 @@
+{
+  "source_id": "B-T401",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/re-authenticating.html",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/re-authenticating.html",
+  "title": "Understanding Success Criterion 2.2.5: Re-authenticating",
+  "type": "official informative explanation; non-normative",
+  "authority": "W3C WAI Accessibility Guidelines Working Group",
+  "section": [
+    {
+      "section": "Non-normative status and Level AAA",
+      "source_lines": "L2,L20",
+      "local_lines": "7,25"
+    },
+    {
+      "section": "Intent and relation to Timing Adjustable",
+      "source_lines": "L35–L41",
+      "local_lines": "40–46"
+    },
+    {
+      "section": "Shopping checkout and email examples",
+      "source_lines": "L45–L50",
+      "local_lines": "50–55"
+    },
+    {
+      "section": "Techniques are not exclusive",
+      "source_lines": "L51–L59",
+      "local_lines": "56–64"
+    }
+  ],
+  "read_status": "PARTIAL: saved web/tool extraction; not raw HTML",
+  "capture_kind": "PARTIAL",
+  "capture_sha256": "a05f7b955c1353d788d6a0029adf23c9df45de9052972d7206f8be991c49560c",
+  "source_file_name": "B-T401-understanding-reauth.web.txt",
+  "observed_facts": [
+    "説明は再認証による情報や文脈の喪失を避ける意図を示す。",
+    "checkoutの例は再認証後に同じ情報・段階へ復帰する。emailの例は作成中の内容を残し、再認証後に送信できる。",
+    "session time limitと再認証を実装しても他の基準（例2.2.1）が引き続き適用される。十分技法は唯一の達成方法ではない。"
+  ],
+  "limits": [
+    "原文自体がinformativeと明示。例の一時サーバー保存や再認証用別ウィンドウを唯一の実装にしない。",
+    "保存本文はtool抽出L0–L97で画面全文が見えるが、raw HTML取得を意味しないためPARTIAL。",
+    "再認証後の別accountへの情報開示、失効済み権限、業務条件変更を許可する説明ではない。個別技法G105/G181の詳細は未読。"
+  ],
+  "upstream_refs": [
+    {
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "relationship": "SC 2.2.5 link 11 clicked; redirected to canonical URL; turn540325483view0",
+      "observed_link_id": 11
+    },
+    {
+      "url": null,
+      "relationship": "G105/G181/F12 links observed at L58–L68; not followed"
+    }
+  ],
+  "checked_at": "2026-11-23T07:48:23.986530+00:00",
+  "round": 3,
+  "redistribution": "Original text stays private; public record contains original paraphrases, locators and hashes."
+}

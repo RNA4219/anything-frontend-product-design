@@ -1,0 +1,173 @@
+{
+  "skill_id": "A-IU-002",
+  "domain": "product-information-architecture",
+  "trigger": "機能を追加・統合・延期・削除する前、および画面へ配置する前。入力の対応IDが与えられている場合も、参照があるだけで整合しているとはみなさない。",
+  "intent": "goal → requirement → featureを双方向に追跡する",
+  "required_inputs": [
+    "goal ID、requirement ID、feature IDと各記述、mandatory、dependencies。",
+    "A01で整理した達成内容・必要情報・例外。",
+    "既存の対応関係と、その根拠。単に同じ単語を含むことは根拠にしない。"
+  ],
+  "decision_rules": [
+    "一つの目標に複数要件・複数機能が対応してよい。一対一対応へ無理に変換しない。",
+    "前向きには「この要件をどの利用可能な機能が満たすか」、逆向きには「この機能を何の要件・目標のために残すか」を説明する。",
+    "IDの存在確認と、実際に要件を満たす意味上の確認を分ける。",
+    "統合元の入力IDを消さず、循環なしでkeepの正本へ解決できる対応を残す。循環・行方不明・defer/removeへの統合は認めない。",
+    "必要な機能がない場合は追加候補を作る。根拠のない機能を発明して空欄を埋めない。",
+    "機能の削除・延期・統合を検討するとき、影響する目標ごとに『どのroleが、どの対象範囲で、どの条件の下、何を達成するか』を記述し、要求された画面・部品・機能名と達成結果を分ける。既存IDとの対応を残す。",
+    "変更で影響する利用者を確認する。顧客側の操作だけでなく、入力に現れる支援・運用・連携担当と、その作業や依存を含める。関係が未確認の役割は影響調査の候補とし、架空の必須要件にはしない。",
+    "達成内容と利用条件の各主張に、観測、利用者・担当者からの報告、依頼で確定した条件、仮定、未確認の別と出所を付ける。報告や依頼による確定と、利用実績の観測は同一視しない。",
+    "役割・対象範囲・成功条件の不明点によって候補の削除・統合可否が変わるなら、影響する機能の保持案と確認課題を残す。判断に関係しない不足は別記し、整理済みの範囲は進める。",
+    "統合・置換候補について、元の各role、対象・データ範囲、成果、必要情報、権限、業務条件、アカウント・契約、機器・接続等の関係する条件を、候補先と対応付ける。各条件下で必要な結果を得られる根拠を示し、ラベルの一致を充足の根拠にしない。",
+    "available等の製品表は調査の入口として使う。partialは必要サブタスクが含まれるか確認し、確認済みの必要範囲は採用できる。upcomingは現在提供の証拠にしない。unknown、調査中、非網羅表の未掲載は提供なしとも同等とも断定しない。",
+    "入口や画面を共有するだけなら、役割・対象範囲・成果の異なる機能を別のまま保持する。同一機能の正本化としてmergeする場合は、既存A03の同一性条件とA02の対応ID・依存を保ち、循環なしで正本のkeepへ解決する。",
+    "旧部品の名前や方式が変わっても、元の必要成果と利用条件がすべて満たされ、旧部品そのものの維持が必須指定でなければ、旧部品の重複維持を要求しない。機能の正本化、実装手段の置換、異なる機能の同居を区別し、出力契約に合う表現を親が選ぶ。",
+    "条件差がある場合は、それが必要成果を変えるか確認する。必要条件を満たす別プラットフォーム等の代替は許されるが、未確認の条件を一致扱いせず、実行可能性はR01-A-U03で確認する。",
+    "削除・延期案ごとに、機能が現在どの利用者・条件で提供されているか、未提供の計画なのかを記録する。既存能力の停止・再提供待ちを、新機能の着手延期と同じ影響として扱わない。",
+    "変更対象の各成果を、確認済み代替で継続する、業務・ニーズ自体が終了した、明示された提供範囲変更で提供を終了する、未解決のいずれかとして説明する。これは分析上の区別であり、新しいdisposition enumを追加する指示ではない。",
+    "代替を根拠に旧提供を終了する場合、必要role・対象範囲・成果についてR01-A-U02を通し、対象利用者が必要な時点に手元の機器・アカウント・権限・データ・接続条件で利用でき、入口から到達できる根拠を記す。別プラットフォームへの変更だけで却下せず、利用可能性を推測で補わない。",
+    "ロードマップ上の予定は現在の代替へ数えない。将来の切替案を作るなら、必要範囲の提供確認を切替成立の条件として残す。未解決の必須成果や依存がある削除・既存提供の延期は、保持案と影響を残し、完了や改善と記録しない。",
+    "業務終了の根拠、または明示された提供範囲変更があれば、代替のない廃止も提案できる。後者ではニーズが消えたと偽らず、失う成果・対象者・理由を記録する。既存の確定必須条件を自分で変更して、この例外を作らない。",
+    "変更される既存入口・別名・直接参照の行先を、後継への案内か明示的な終了案内としてAの計画に残す。保存・送信・移行・リダイレクト・失敗時の振る舞いはB/Cへの依存として示す。任意機能の延期には失われる成果、理由、再検討条件を添える。",
+    "宣言した経路を持つgoalについて、入力でmandatory=trueかつ同goal・同roleに結び付けられた各機能は、正本解決後の所有画面が、そのgoalの認可された宣言入口の少なくとも一つから到達できることを確認する。targetに一つ対応機能があれば残りも利用可能とは扱わない。"
+  ],
+  "procedure": [
+    "1. 作業表に「goal ID → requirement ID → feature ID → 提案disposition → 正本ID → 充足理由」を作る。",
+    "2. 全goal・全requirementを前向きにたどる。必須要件を実現する機能と、その成立条件を記す。",
+    "3. 全featureを逆向きにたどる。未対応を見つけたら、不要と即断せず入力漏れ・独立した業務目的・重複の可能性を確認する。",
+    "4. A03で統合を認めた場合、正本へgoal_idsとrequirement_idsの対応を保存する。誤った対応まで無条件に合算しない。",
+    "5. 必要な依存関係をkeepの正本へ解決する。利用中の機能がdefer/removeに依存する案は修正するかblocking残件にする。",
+    "6. 不足機能には`add_`で始まるIDを付け、既存機能で満たせない理由と対応要件を書く。",
+    "7. A06・A08の後に、必須目標の経路と必要情報まで追跡を延ばす。表の対応だけでタスク完了を宣言しない。"
+  ],
+  "expected_outputs": [
+    "入力feature IDは`features`に一度ずつ出す。`goal_ids`、`requirement_ids`、`dependencies`、`disposition`、`target`、`reason`を整合させる。",
+    "作業表の判断理由は`decision_notes`へ保存する。欠落の影響は`unresolved`に記録し、担当をAまたはproductにする。",
+    "追跡表自体をplan.jsonの未定義キーとして追加しない。必要なら別の説明表として添える。"
+  ],
+  "dependencies": [
+    "A-IU-001"
+  ],
+  "exceptions": [
+    "双方向追跡の考え方と、このJSON形式が有効であることは別問題。この契約・手順そのものの使いやすさは未検証。",
+    "対応IDが完全でも要件の正しさ、実装、業務適合は証明できない。削除に必要な充足事実が不明ならkeepを維持する。",
+    "小さく、影響範囲が分かっている変更では、既存資料と担当者確認等の相応の確認でよい。全件の大規模研究を要求しない。",
+    "影響がないと説明できる別機能の設計まで、未確認の役割を理由に停止しない。",
+    "未提供の任意機能の必要性が未確認なら、確定した目標を守る範囲で保留・延期案を検討できる。",
+    "必要サブタスクが提供範囲内と確認できるpartial候補は、当該範囲で採用できる。",
+    "同じ必要成果を満たす内蔵化・方式変更では、旧実装部品の保存は自動的な義務にならない。",
+    "異なる機能でも共通入口・同画面への配置は可能であり、機能の同一性を偽装する必要はない。",
+    "元の業務・提供範囲が明示的に変更された場合、変更済みの条件で比較できる。R01-A-U03の廃止根拠を残す。",
+    "ニーズ・業務の終了が根拠付きで確認できれば、後継機能がなくても廃止できる。",
+    "明示的な提供範囲縮小は可能だが、残存ニーズを充足済みと記録しない。確定必須条件の変更が必要なら、その決定を未決のまま採用しない。",
+    "未提供かつ未契約の任意範囲は、確定必須目標と依存を守って延期できる。",
+    "対象利用者が利用できる実行可能な代替があり、必要成果・条件が維持されるなら、旧機能や旧経路の恒久保持は要求しない。",
+    "代替の採用・業務終了・範囲縮小のいずれかが既に入力で決定済みなら、同じ許可を取り直す条件は追加しない。",
+    "必要な機能をすべてtargetへ同居させる必要はなく、別段階の画面でも到達できればよい。依存機能を一律mandatoryへ昇格せず、別roleの支援、経路を提供しない任意goal、宣言されていない状態条件の成立を推測しない。これは画面間の構造検査で、利用順序や実行成功は別途B/Cで検証する。"
+  ],
+  "failure_modes": [
+    "機能名を似た要件へ機械的につなぎ、充足理由を省略する。",
+    "統合後に元のgoalやrequirementが消える。",
+    "低頻度の依存機能を削除し、上位の必須機能だけを残す。",
+    "必須要件の空白を、存在しない追加機能の実装済み扱いで埋める。"
+  ],
+  "verification": [
+    "全入力featureの出現回数、全参照ID、統合先のkeep、依存の利用可能性を確認する。",
+    "次に必須要件ごとに、具体的な一件を対応する機能で処理できる説明を確認する。説明できない場合は「追跡IDはあるが充足未確認」と記録する。",
+    "顧客閲覧は高頻度、支援担当の月次出力は低頻度だが確定要件、追加ダッシュボードは未検証の要望。 → 支援担当の成果と依存を残し、追加要望は仮定として記録する。",
+    "role不明の出力統合と、影響範囲が既知の別画面ラベル修正。 → 統合の判定だけを保留し、ラベル修正は必要な軽量確認で進められる。",
+    "同じ『export』名で、一方は本人分、他方は組織全体。必要な権限も異なる。 → 単純な同一機能mergeを認めず、差を残した別機能の同居は許す。",
+    "旧アドインと内蔵機能で、必要role・scope・成果・条件を全件確認済み。旧部品そのものの必須指定なし。 → 旧部品の重複維持を要求せず、成果と追跡を維持する置換案を採用可能とする。",
+    "partial候補で必要タスクXは確認済み、不要タスクYは未対応。別ケースでは必要タスクX自体が未対応。 → 前者はXの範囲で通し、後者は充足と記録しない。",
+    "非網羅的な製品表に機能Zの行がない。 → Zの状態を未確認とし、非実装の断定をしない。",
+    "mobile-only利用者の必須成果を提供中。代替はPC専用で、PCなし。 → その代替を充足とせず、現提供の保持案と確認課題を残す。",
+    "別端末の代替が対象者の手元で利用でき、必要範囲・権限・データ・時点・入口を確認済み。旧方式の維持義務なし。 → 旧提供の終了を採用可能とする。",
+    "代替は来月のロードマップのみ。本日から旧提供を停止する案。 → 現在の代替と数えず、将来切替は提供確認を成立条件として未確定にする。",
+    "業務終了の確定根拠があるケースと、必要性は残るが提供範囲縮小が明示的に決定済みのケース。 → 両者とも廃止を検討可能。後者は失われる成果を未充足として記録し、ニーズ消滅とは書かない。",
+    "未提供・未契約のcould機能を延期し、必須成果は他機能で維持される。 → 理由・影響・再検討条件を付けて延期できる。",
+    "同じgoalを支える明示必須機能の一つだけを孤立画面に置く反例をFAILとして検出し、認可入口から別段階の画面へ辿れる正常例と正本への統合をPASSとして保つ。"
+  ],
+  "source_refs": [
+    "A-S001",
+    "A-S004",
+    "A-S012",
+    "R01-R1-S01",
+    "R01-R1-S02",
+    "R01-R1-S04",
+    "R01-R2-S01",
+    "R01-R2-S02",
+    "R01-R2-S03"
+  ],
+  "confidence": {
+    "source_support": "R01–R03 bounded source records and independent review; inherited source provenance retained, no claim of full-source archive or universal empirical validity.",
+    "transfer": "not established",
+    "empirical_skill_effect": "unverified",
+    "task_effect": "One paired synthetic task per round; R03 6/6 versus 6/6 with assignment clue leakage; no improvement inference."
+  },
+  "status": "ACCEPT",
+  "version": "1.1.2",
+  "provenance": {
+    "kind": "inherited",
+    "repository": "RNA4219/anything-frontend-art-direction",
+    "revision": "97b19c29c0b63acfee9ad437f93af081ac0c6ef8",
+    "path": "extensions/A/references/goals-and-features.md",
+    "original_unit": "A02"
+  },
+  "implementation": "modules/product-information-architecture/references/goals-and-features.md",
+  "history": [
+    {
+      "round": "R01",
+      "action": "migrated_without_novelty_credit",
+      "status": "DRAFT"
+    },
+    {
+      "round": "R01",
+      "action": "revision",
+      "extraction_unit": "R01-A-U01",
+      "status": "DRAFT"
+    },
+    {
+      "round": "R01",
+      "action": "revision",
+      "extraction_unit": "R01-A-U02",
+      "status": "DRAFT"
+    },
+    {
+      "round": "R01",
+      "action": "revision",
+      "extraction_unit": "R01-A-U03",
+      "status": "DRAFT"
+    },
+    {
+      "round": "R01",
+      "action": "independent review and counterexample repair",
+      "status": "ACCEPT",
+      "at": "2026-11-23T07:03:55.087941+00:00"
+    },
+    {
+      "round": "R03",
+      "version": "1.1.2",
+      "status": "REVISE",
+      "reason": "Independent counterexample C01: one mandatory capability reachable did not establish reachability of the other mandatory capability."
+    },
+    {
+      "round": "R03",
+      "version": "1.1.2",
+      "status": "ACCEPT",
+      "at": "2026-11-23T08:25:37.196539+00:00",
+      "reason": "Bounded independent source/instruction review, adversarial cases and 57-method suite; paired task tie and assignment leakage retained."
+    }
+  ],
+  "implementation_refs": [
+    "modules/product-information-architecture/references/feature-context.md"
+  ],
+  "acceptance_scope": "Instruction conditions and bounded structural verification only; source truth, actual UI behavior and human effectiveness require separate evidence.",
+  "acceptance_evidence": [
+    "campaigns/A/rounds/R01/evaluation.json",
+    "campaigns/A/rounds/R01/findings.json",
+    "campaigns/A/rounds/R01/tests-final.txt",
+    "campaigns/A/rounds/R03/decision.json",
+    "campaigns/A/rounds/R03/independent-evidence/correction-check.json",
+    "campaigns/A/rounds/R03/tests-after-critic.txt"
+  ]
+}

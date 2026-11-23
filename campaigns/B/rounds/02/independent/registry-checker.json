@@ -1,0 +1,10 @@
+{
+  "units": 6,
+  "sources": 21,
+  "statuses": {
+    "ACCEPT": 3,
+    "DRAFT": 3
+  },
+  "errors": [],
+  "limits": "Checks registry structure and referenced files, not whether prose or empirical claims are true."
+}

@@ -1,0 +1,1449 @@
+{
+  "runtime": {
+    "node": "v24.22.3",
+    "jsdom": "26.1.0"
+  },
+  "method": "Actual candidate HTML click/change listeners executed in jsdom. Only the single ESM import was replaced with the exact imported candidate factory. No real browser, visual, AT, or human evidence.",
+  "modulePath": "modules/interaction-ux-flow/examples/resume-and-conflict.mjs",
+  "htmlPath": "modules/interaction-ux-flow/examples/resume-and-conflict.html",
+  "hashes": {
+    "module": "8a08e09d10659e436e2425d698e103c851a5880ed31d686856a411204882e716",
+    "html": "84a92808062a8f903e2a64a9cb33041b367f9fcaff0102297cf6ce3f39779a9f"
+  },
+  "representative": {
+    "total": 8,
+    "passed": 8,
+    "results": [
+      {
+        "id": "DOM01-UNSENT",
+        "pass": true,
+        "events": [
+          {
+            "type": "click",
+            "id": "resume",
+            "disabled": false
+          }
+        ],
+        "observations": {
+          "flow": {
+            "phase": "editing",
+            "message": "未送信の入力を復帰しました。まだサーバーへ保存していません。",
+            "draft": {
+              "title": "My draft title"
+            },
+            "lastKnown": {
+              "etag": "z-original",
+              "values": {
+                "title": "Original title"
+              }
+            },
+            "observedResource": {
+              "etag": "z-original",
+              "values": {
+                "title": "Original title"
+              }
+            },
+            "operationId": null,
+            "operationOutcome": null,
+            "operationResult": null,
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": true,
+            "canResume": true,
+            "recoveryAction": "操作履歴または管理者への照合で、対象操作の結果を確認してください。"
+          },
+          "server": {
+            "etag": "z-original",
+            "values": {
+              "title": "Original title"
+            }
+          },
+          "calls": [
+            {
+              "method": "load",
+              "accountId": "A",
+              "resourceId": "doc-1"
+            }
+          ],
+          "effects": 0,
+          "dom": {
+            "workHidden": false,
+            "fixtureHidden": false,
+            "status": "未送信の入力を復帰しました。まだサーバーへ保存していません。",
+            "title": "My draft title",
+            "titleDisabled": false,
+            "reauthHidden": true,
+            "resumeDisabled": false,
+            "reviewDisabled": false,
+            "reviewHidden": true,
+            "reviewText": "{\n  \"observed\": {\n    \"title\": \"Original title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}",
+            "commitDisabled": true,
+            "saved": "保存した作業で最後に確認した値：Original title",
+            "observed": "今回照合した資源の状態：Original title",
+            "readError": "",
+            "operation": "",
+            "reference": "",
+            "recovery": "",
+            "workText": "保持した入力と、照合した事実\n保持した入力は今回の変更案です。入力の復帰だけでは更新を実行していません。\n今回の変更案 保存した作業で最後に確認した値：Original title今回照合した資源の状態：Original title\n変更内容を確認する今回確定する変更{\n  \"observed\": {\n    \"title\": \"Original title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}確認した条件で更新する\n",
+            "effects": "模擬サービスで成立した更新：0回"
+          }
+        }
+      },
+      {
+        "id": "DOM02-ACCOUNT-MISMATCH",
+        "pass": true,
+        "events": [
+          {
+            "type": "change",
+            "id": "lose-reply",
+            "value": true
+          },
+          {
+            "type": "click",
+            "id": "resume",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "review",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "commit",
+            "disabled": false
+          },
+          {
+            "type": "change",
+            "id": "session",
+            "value": "B"
+          },
+          {
+            "type": "click",
+            "id": "resume",
+            "disabled": true
+          }
+        ],
+        "observations": {
+          "before": {
+            "flow": {
+              "phase": "unknown",
+              "message": "応答を受け取れず結果未確認です。同じ操作を照合してください。",
+              "draft": {
+                "title": "My draft title"
+              },
+              "lastKnown": {
+                "etag": "z-original",
+                "values": {
+                  "title": "Original title"
+                }
+              },
+              "observedResource": {
+                "etag": "z-original",
+                "values": {
+                  "title": "Original title"
+                }
+              },
+              "operationId": "operation-1",
+              "operationOutcome": null,
+              "operationResult": null,
+              "resourceReadError": "",
+              "canCommit": false,
+              "canReview": false,
+              "canResume": true,
+              "recoveryAction": "操作履歴または管理者への照合で、対象操作の結果を確認してください。"
+            },
+            "server": {
+              "etag": "write-1",
+              "values": {
+                "title": "My draft title"
+              }
+            },
+            "calls": [
+              {
+                "method": "load",
+                "accountId": "A",
+                "resourceId": "doc-1"
+              },
+              {
+                "method": "update",
+                "accountId": "A",
+                "resourceId": "doc-1",
+                "requestId": "operation-1",
+                "ifMatch": "z-original",
+                "changes": {
+                  "title": "My draft title"
+                }
+              }
+            ],
+            "effects": 1,
+            "dom": {
+              "workHidden": false,
+              "fixtureHidden": false,
+              "status": "応答を受け取れず結果未確認です。同じ操作を照合してください。",
+              "title": "My draft title",
+              "titleDisabled": true,
+              "reauthHidden": true,
+              "resumeDisabled": false,
+              "reviewDisabled": true,
+              "reviewHidden": true,
+              "reviewText": "{\n  \"observed\": {\n    \"title\": \"Original title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}",
+              "commitDisabled": true,
+              "saved": "保存した作業で最後に確認した値：Original title",
+              "observed": "今回照合した資源の状態：Original title",
+              "readError": "",
+              "operation": "",
+              "reference": "操作番号：operation-1",
+              "recovery": "操作履歴または管理者への照合で、対象操作の結果を確認してください。",
+              "workText": "保持した入力と、照合した事実\nこの入力を使う操作は送信済みです。結果は操作の状態を確認してください。\n今回の変更案 保存した作業で最後に確認した値：Original title今回照合した資源の状態：Original title\n変更内容を確認する今回確定する変更{\n  \"observed\": {\n    \"title\": \"Original title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}確認した条件で更新する\n操作番号：operation-1操作履歴または管理者への照合で、対象操作の結果を確認してください。",
+              "effects": "模擬サービスで成立した更新：1回"
+            }
+          },
+          "after": {
+            "flow": {
+              "phase": "different_account",
+              "message": "このアカウントでは保存した作業を表示・再開できません。",
+              "draft": null,
+              "lastKnown": null,
+              "observedResource": null,
+              "operationId": null,
+              "operationOutcome": null,
+              "operationResult": null,
+              "resourceReadError": "",
+              "canCommit": false,
+              "canReview": false,
+              "canResume": false,
+              "recoveryAction": null
+            },
+            "server": {
+              "etag": "write-1",
+              "values": {
+                "title": "My draft title"
+              }
+            },
+            "calls": [
+              {
+                "method": "load",
+                "accountId": "A",
+                "resourceId": "doc-1"
+              },
+              {
+                "method": "update",
+                "accountId": "A",
+                "resourceId": "doc-1",
+                "requestId": "operation-1",
+                "ifMatch": "z-original",
+                "changes": {
+                  "title": "My draft title"
+                }
+              }
+            ],
+            "effects": 1,
+            "dom": {
+              "workHidden": true,
+              "fixtureHidden": true,
+              "status": "このアカウントでは保存した作業を表示・再開できません。",
+              "title": "",
+              "titleDisabled": true,
+              "reauthHidden": true,
+              "resumeDisabled": true,
+              "reviewDisabled": true,
+              "reviewHidden": true,
+              "reviewText": "",
+              "commitDisabled": true,
+              "saved": "",
+              "observed": "今回の資源状態は未確認です。",
+              "readError": "",
+              "operation": "",
+              "reference": "",
+              "recovery": "",
+              "workText": "保持した入力と、照合した事実\n\n今回の変更案 今回の資源状態は未確認です。\n変更内容を確認する今回確定する変更確認した条件で更新する\n",
+              "effects": ""
+            }
+          }
+        }
+      },
+      {
+        "id": "DOM03-EXPIRED-REAUTH",
+        "pass": true,
+        "events": [
+          {
+            "type": "change",
+            "id": "lose-reply",
+            "value": true
+          },
+          {
+            "type": "click",
+            "id": "resume",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "review",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "commit",
+            "disabled": false
+          },
+          {
+            "type": "change",
+            "id": "session",
+            "value": "expired"
+          },
+          {
+            "type": "click",
+            "id": "reauth",
+            "disabled": false
+          }
+        ],
+        "observations": {
+          "flow": {
+            "phase": "completed",
+            "message": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+            "draft": {
+              "title": "My draft title"
+            },
+            "lastKnown": {
+              "etag": "z-original",
+              "values": {
+                "title": "Original title"
+              }
+            },
+            "observedResource": {
+              "etag": "write-1",
+              "values": {
+                "title": "My draft title"
+              }
+            },
+            "operationId": "operation-1",
+            "operationOutcome": "succeeded",
+            "operationResult": {
+              "etag": "write-1",
+              "values": {
+                "title": "My draft title"
+              }
+            },
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": true,
+            "recoveryAction": "操作履歴または管理者への照合で、対象操作の結果を確認してください。"
+          },
+          "server": {
+            "etag": "write-1",
+            "values": {
+              "title": "My draft title"
+            }
+          },
+          "calls": [
+            {
+              "method": "load",
+              "accountId": "A",
+              "resourceId": "doc-1"
+            },
+            {
+              "method": "update",
+              "accountId": "A",
+              "resourceId": "doc-1",
+              "requestId": "operation-1",
+              "ifMatch": "z-original",
+              "changes": {
+                "title": "My draft title"
+              }
+            },
+            {
+              "method": "lookup",
+              "accountId": "A",
+              "resourceId": "doc-1",
+              "operationId": "operation-1"
+            },
+            {
+              "method": "load",
+              "accountId": "A",
+              "resourceId": "doc-1"
+            }
+          ],
+          "effects": 1,
+          "dom": {
+            "workHidden": false,
+            "fixtureHidden": false,
+            "status": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+            "title": "My draft title",
+            "titleDisabled": true,
+            "reauthHidden": true,
+            "resumeDisabled": false,
+            "reviewDisabled": true,
+            "reviewHidden": true,
+            "reviewText": "{\n  \"observed\": {\n    \"title\": \"My draft title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}",
+            "commitDisabled": true,
+            "saved": "保存した作業で最後に確認した値：Original title",
+            "observed": "今回照合した資源の状態：My draft title",
+            "readError": "",
+            "operation": "対象操作で確認した結果：My draft title",
+            "reference": "操作番号：operation-1",
+            "recovery": "",
+            "workText": "保持した入力と、照合した事実\n表示した入力で送信した操作の成功を確認しています。現在の資源状態とは分けて表示します。\n今回の変更案 保存した作業で最後に確認した値：Original title今回照合した資源の状態：My draft title\n変更内容を確認する今回確定する変更{\n  \"observed\": {\n    \"title\": \"My draft title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}確認した条件で更新する\n対象操作で確認した結果：My draft title操作番号：operation-1",
+            "effects": "模擬サービスで成立した更新：1回"
+          }
+        }
+      },
+      {
+        "id": "DOM04-READONLY",
+        "pass": true,
+        "events": [
+          {
+            "type": "change",
+            "id": "session",
+            "value": "expired"
+          },
+          {
+            "type": "change",
+            "id": "session",
+            "value": "readonly"
+          },
+          {
+            "type": "click",
+            "id": "resume",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "review",
+            "disabled": true
+          },
+          {
+            "type": "click",
+            "id": "commit",
+            "disabled": true
+          }
+        ],
+        "observations": {
+          "flow": {
+            "phase": "readonly",
+            "message": "現在の権限では閲覧のみ可能です。下書きを自動送信しません。",
+            "draft": {
+              "title": "My draft title"
+            },
+            "lastKnown": {
+              "etag": "z-original",
+              "values": {
+                "title": "Original title"
+              }
+            },
+            "observedResource": {
+              "etag": "z-original",
+              "values": {
+                "title": "Original title"
+              }
+            },
+            "operationId": null,
+            "operationOutcome": null,
+            "operationResult": null,
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": true,
+            "recoveryAction": "操作履歴または管理者への照合で、対象操作の結果を確認してください。"
+          },
+          "server": {
+            "etag": "z-original",
+            "values": {
+              "title": "Original title"
+            }
+          },
+          "calls": [
+            {
+              "method": "load",
+              "accountId": "A",
+              "resourceId": "doc-1"
+            }
+          ],
+          "effects": 0,
+          "dom": {
+            "workHidden": false,
+            "fixtureHidden": false,
+            "status": "現在の権限では閲覧のみ可能です。下書きを自動送信しません。",
+            "title": "My draft title",
+            "titleDisabled": true,
+            "reauthHidden": true,
+            "resumeDisabled": false,
+            "reviewDisabled": true,
+            "reviewHidden": true,
+            "reviewText": "{\n  \"observed\": {\n    \"title\": \"Original title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}",
+            "commitDisabled": true,
+            "saved": "保存した作業で最後に確認した値：Original title",
+            "observed": "今回照合した資源の状態：Original title",
+            "readError": "",
+            "operation": "",
+            "reference": "",
+            "recovery": "",
+            "workText": "保持した入力と、照合した事実\n保持した入力は今回の変更案です。入力の復帰だけでは更新を実行していません。\n今回の変更案 保存した作業で最後に確認した値：Original title今回照合した資源の状態：Original title\n変更内容を確認する今回確定する変更{\n  \"observed\": {\n    \"title\": \"Original title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}確認した条件で更新する\n",
+            "effects": "模擬サービスで成立した更新：0回"
+          }
+        }
+      },
+      {
+        "id": "DOM05-CONFLICT-NEW-REVIEW",
+        "pass": true,
+        "events": [
+          {
+            "type": "click",
+            "id": "resume",
+            "disabled": false
+          },
+          {
+            "type": "change",
+            "id": "title",
+            "value": "I choose this title"
+          },
+          {
+            "type": "click",
+            "id": "review",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "external-change",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "commit",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "commit",
+            "disabled": true
+          },
+          {
+            "type": "click",
+            "id": "review",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "commit",
+            "disabled": false
+          }
+        ],
+        "observations": {
+          "conflict": {
+            "flow": {
+              "phase": "conflict",
+              "message": "対象が変更されています。入力は保持しています。比較して確認し直してください。",
+              "draft": {
+                "title": "I choose this title"
+              },
+              "lastKnown": {
+                "etag": "z-original",
+                "values": {
+                  "title": "Original title"
+                }
+              },
+              "observedResource": {
+                "etag": "a-other-1",
+                "values": {
+                  "title": "Other editor title"
+                }
+              },
+              "operationId": null,
+              "operationOutcome": "conflict",
+              "operationResult": null,
+              "resourceReadError": "",
+              "canCommit": false,
+              "canReview": true,
+              "canResume": true,
+              "recoveryAction": "操作履歴または管理者への照合で、対象操作の結果を確認してください。"
+            },
+            "server": {
+              "etag": "a-other-1",
+              "values": {
+                "title": "Other editor title"
+              }
+            },
+            "calls": [
+              {
+                "method": "load",
+                "accountId": "A",
+                "resourceId": "doc-1"
+              },
+              {
+                "method": "update",
+                "accountId": "A",
+                "resourceId": "doc-1",
+                "requestId": "operation-1",
+                "ifMatch": "z-original",
+                "changes": {
+                  "title": "I choose this title"
+                }
+              }
+            ],
+            "effects": 0,
+            "dom": {
+              "workHidden": false,
+              "fixtureHidden": false,
+              "status": "対象が変更されています。入力は保持しています。比較して確認し直してください。",
+              "title": "I choose this title",
+              "titleDisabled": false,
+              "reauthHidden": true,
+              "resumeDisabled": false,
+              "reviewDisabled": false,
+              "reviewHidden": true,
+              "reviewText": "{\n  \"observed\": {\n    \"title\": \"Other editor title\"\n  },\n  \"change\": {\n    \"title\": \"I choose this title\"\n  }\n}",
+              "commitDisabled": true,
+              "saved": "保存した作業で最後に確認した値：Original title",
+              "observed": "今回照合した資源の状態：Other editor title",
+              "readError": "",
+              "operation": "",
+              "reference": "",
+              "recovery": "",
+              "workText": "保持した入力と、照合した事実\n保持した入力は今回の変更案です。入力の復帰だけでは更新を実行していません。\n今回の変更案 保存した作業で最後に確認した値：Original title今回照合した資源の状態：Other editor title\n変更内容を確認する今回確定する変更{\n  \"observed\": {\n    \"title\": \"Other editor title\"\n  },\n  \"change\": {\n    \"title\": \"I choose this title\"\n  }\n}確認した条件で更新する\n",
+              "effects": "模擬サービスで成立した更新：0回"
+            }
+          },
+          "confirmed": {
+            "flow": {
+              "phase": "completed",
+              "message": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+              "draft": {
+                "title": "I choose this title"
+              },
+              "lastKnown": {
+                "etag": "z-original",
+                "values": {
+                  "title": "Original title"
+                }
+              },
+              "observedResource": {
+                "etag": "write-2",
+                "values": {
+                  "title": "I choose this title"
+                }
+              },
+              "operationId": "operation-2",
+              "operationOutcome": "succeeded",
+              "operationResult": {
+                "etag": "write-2",
+                "values": {
+                  "title": "I choose this title"
+                }
+              },
+              "resourceReadError": "",
+              "canCommit": false,
+              "canReview": false,
+              "canResume": true,
+              "recoveryAction": "操作履歴または管理者への照合で、対象操作の結果を確認してください。"
+            },
+            "server": {
+              "etag": "write-2",
+              "values": {
+                "title": "I choose this title"
+              }
+            },
+            "calls": [
+              {
+                "method": "load",
+                "accountId": "A",
+                "resourceId": "doc-1"
+              },
+              {
+                "method": "update",
+                "accountId": "A",
+                "resourceId": "doc-1",
+                "requestId": "operation-1",
+                "ifMatch": "z-original",
+                "changes": {
+                  "title": "I choose this title"
+                }
+              },
+              {
+                "method": "update",
+                "accountId": "A",
+                "resourceId": "doc-1",
+                "requestId": "operation-2",
+                "ifMatch": "a-other-1",
+                "changes": {
+                  "title": "I choose this title"
+                }
+              },
+              {
+                "method": "load",
+                "accountId": "A",
+                "resourceId": "doc-1"
+              }
+            ],
+            "effects": 1,
+            "dom": {
+              "workHidden": false,
+              "fixtureHidden": false,
+              "status": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+              "title": "I choose this title",
+              "titleDisabled": true,
+              "reauthHidden": true,
+              "resumeDisabled": false,
+              "reviewDisabled": true,
+              "reviewHidden": true,
+              "reviewText": "{\n  \"observed\": {\n    \"title\": \"I choose this title\"\n  },\n  \"change\": {\n    \"title\": \"I choose this title\"\n  }\n}",
+              "commitDisabled": true,
+              "saved": "保存した作業で最後に確認した値：Original title",
+              "observed": "今回照合した資源の状態：I choose this title",
+              "readError": "",
+              "operation": "対象操作で確認した結果：I choose this title",
+              "reference": "操作番号：operation-2",
+              "recovery": "",
+              "workText": "保持した入力と、照合した事実\n表示した入力で送信した操作の成功を確認しています。現在の資源状態とは分けて表示します。\n今回の変更案 保存した作業で最後に確認した値：Original title今回照合した資源の状態：I choose this title\n変更内容を確認する今回確定する変更{\n  \"observed\": {\n    \"title\": \"I choose this title\"\n  },\n  \"change\": {\n    \"title\": \"I choose this title\"\n  }\n}確認した条件で更新する\n対象操作で確認した結果：I choose this title操作番号：operation-2",
+              "effects": "模擬サービスで成立した更新：1回"
+            }
+          }
+        }
+      },
+      {
+        "id": "DOM06-LOST-REPLY-REOPEN",
+        "pass": true,
+        "events": [
+          {
+            "type": "change",
+            "id": "lose-reply",
+            "value": true
+          },
+          {
+            "type": "click",
+            "id": "resume",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "review",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "commit",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "reopen",
+            "disabled": false
+          }
+        ],
+        "observations": {
+          "before": {
+            "flow": {
+              "phase": "unknown",
+              "message": "応答を受け取れず結果未確認です。同じ操作を照合してください。",
+              "draft": {
+                "title": "My draft title"
+              },
+              "lastKnown": {
+                "etag": "z-original",
+                "values": {
+                  "title": "Original title"
+                }
+              },
+              "observedResource": {
+                "etag": "z-original",
+                "values": {
+                  "title": "Original title"
+                }
+              },
+              "operationId": "operation-1",
+              "operationOutcome": null,
+              "operationResult": null,
+              "resourceReadError": "",
+              "canCommit": false,
+              "canReview": false,
+              "canResume": true,
+              "recoveryAction": "操作履歴または管理者への照合で、対象操作の結果を確認してください。"
+            },
+            "server": {
+              "etag": "write-1",
+              "values": {
+                "title": "My draft title"
+              }
+            },
+            "calls": [
+              {
+                "method": "load",
+                "accountId": "A",
+                "resourceId": "doc-1"
+              },
+              {
+                "method": "update",
+                "accountId": "A",
+                "resourceId": "doc-1",
+                "requestId": "operation-1",
+                "ifMatch": "z-original",
+                "changes": {
+                  "title": "My draft title"
+                }
+              }
+            ],
+            "effects": 1,
+            "dom": {
+              "workHidden": false,
+              "fixtureHidden": false,
+              "status": "応答を受け取れず結果未確認です。同じ操作を照合してください。",
+              "title": "My draft title",
+              "titleDisabled": true,
+              "reauthHidden": true,
+              "resumeDisabled": false,
+              "reviewDisabled": true,
+              "reviewHidden": true,
+              "reviewText": "{\n  \"observed\": {\n    \"title\": \"Original title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}",
+              "commitDisabled": true,
+              "saved": "保存した作業で最後に確認した値：Original title",
+              "observed": "今回照合した資源の状態：Original title",
+              "readError": "",
+              "operation": "",
+              "reference": "操作番号：operation-1",
+              "recovery": "操作履歴または管理者への照合で、対象操作の結果を確認してください。",
+              "workText": "保持した入力と、照合した事実\nこの入力を使う操作は送信済みです。結果は操作の状態を確認してください。\n今回の変更案 保存した作業で最後に確認した値：Original title今回照合した資源の状態：Original title\n変更内容を確認する今回確定する変更{\n  \"observed\": {\n    \"title\": \"Original title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}確認した条件で更新する\n操作番号：operation-1操作履歴または管理者への照合で、対象操作の結果を確認してください。",
+              "effects": "模擬サービスで成立した更新：1回"
+            }
+          },
+          "after": {
+            "flow": {
+              "phase": "completed",
+              "message": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+              "draft": {
+                "title": "My draft title"
+              },
+              "lastKnown": {
+                "etag": "z-original",
+                "values": {
+                  "title": "Original title"
+                }
+              },
+              "observedResource": {
+                "etag": "write-1",
+                "values": {
+                  "title": "My draft title"
+                }
+              },
+              "operationId": "operation-1",
+              "operationOutcome": "succeeded",
+              "operationResult": {
+                "etag": "write-1",
+                "values": {
+                  "title": "My draft title"
+                }
+              },
+              "resourceReadError": "",
+              "canCommit": false,
+              "canReview": false,
+              "canResume": true,
+              "recoveryAction": "操作履歴または管理者への照合で、対象操作の結果を確認してください。"
+            },
+            "server": {
+              "etag": "write-1",
+              "values": {
+                "title": "My draft title"
+              }
+            },
+            "calls": [
+              {
+                "method": "load",
+                "accountId": "A",
+                "resourceId": "doc-1"
+              },
+              {
+                "method": "update",
+                "accountId": "A",
+                "resourceId": "doc-1",
+                "requestId": "operation-1",
+                "ifMatch": "z-original",
+                "changes": {
+                  "title": "My draft title"
+                }
+              },
+              {
+                "method": "lookup",
+                "accountId": "A",
+                "resourceId": "doc-1",
+                "operationId": "operation-1"
+              },
+              {
+                "method": "load",
+                "accountId": "A",
+                "resourceId": "doc-1"
+              }
+            ],
+            "effects": 1,
+            "dom": {
+              "workHidden": false,
+              "fixtureHidden": false,
+              "status": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+              "title": "My draft title",
+              "titleDisabled": true,
+              "reauthHidden": true,
+              "resumeDisabled": false,
+              "reviewDisabled": true,
+              "reviewHidden": true,
+              "reviewText": "{\n  \"observed\": {\n    \"title\": \"My draft title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}",
+              "commitDisabled": true,
+              "saved": "保存した作業で最後に確認した値：Original title",
+              "observed": "今回照合した資源の状態：My draft title",
+              "readError": "",
+              "operation": "対象操作で確認した結果：My draft title",
+              "reference": "操作番号：operation-1",
+              "recovery": "",
+              "workText": "保持した入力と、照合した事実\n表示した入力で送信した操作の成功を確認しています。現在の資源状態とは分けて表示します。\n今回の変更案 保存した作業で最後に確認した値：Original title今回照合した資源の状態：My draft title\n変更内容を確認する今回確定する変更{\n  \"observed\": {\n    \"title\": \"My draft title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}確認した条件で更新する\n対象操作で確認した結果：My draft title操作番号：operation-1",
+              "effects": "模擬サービスで成立した更新：1回"
+            }
+          }
+        }
+      },
+      {
+        "id": "DOM07-SUCCESS-CURRENT-READ-FAILS",
+        "pass": true,
+        "events": [
+          {
+            "type": "click",
+            "id": "resume",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "review",
+            "disabled": false
+          },
+          {
+            "type": "change",
+            "id": "read-fails",
+            "value": true
+          },
+          {
+            "type": "click",
+            "id": "commit",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "reopen",
+            "disabled": false
+          }
+        ],
+        "observations": {
+          "before": {
+            "flow": {
+              "phase": "completed",
+              "message": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+              "draft": {
+                "title": "My draft title"
+              },
+              "lastKnown": {
+                "etag": "z-original",
+                "values": {
+                  "title": "Original title"
+                }
+              },
+              "observedResource": null,
+              "operationId": "operation-1",
+              "operationOutcome": "succeeded",
+              "operationResult": {
+                "etag": "write-1",
+                "values": {
+                  "title": "My draft title"
+                }
+              },
+              "resourceReadError": "現在の資源状態を照合できません。確認済みの操作結果とは別の問題です。",
+              "canCommit": false,
+              "canReview": false,
+              "canResume": true,
+              "recoveryAction": "操作履歴または管理者への照合で、対象操作の結果を確認してください。"
+            },
+            "server": {
+              "etag": "write-1",
+              "values": {
+                "title": "My draft title"
+              }
+            },
+            "calls": [
+              {
+                "method": "load",
+                "accountId": "A",
+                "resourceId": "doc-1"
+              },
+              {
+                "method": "update",
+                "accountId": "A",
+                "resourceId": "doc-1",
+                "requestId": "operation-1",
+                "ifMatch": "z-original",
+                "changes": {
+                  "title": "My draft title"
+                }
+              },
+              {
+                "method": "load",
+                "accountId": "A",
+                "resourceId": "doc-1"
+              }
+            ],
+            "effects": 1,
+            "dom": {
+              "workHidden": false,
+              "fixtureHidden": false,
+              "status": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+              "title": "My draft title",
+              "titleDisabled": true,
+              "reauthHidden": true,
+              "resumeDisabled": false,
+              "reviewDisabled": true,
+              "reviewHidden": true,
+              "reviewText": "{\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}",
+              "commitDisabled": true,
+              "saved": "保存した作業で最後に確認した値：Original title",
+              "observed": "今回の資源状態は未確認です。",
+              "readError": "現在の資源状態を照合できません。確認済みの操作結果とは別の問題です。",
+              "operation": "対象操作で確認した結果：My draft title",
+              "reference": "操作番号：operation-1",
+              "recovery": "",
+              "workText": "保持した入力と、照合した事実\n表示した入力で送信した操作の成功を確認しています。現在の資源状態とは分けて表示します。\n今回の変更案 保存した作業で最後に確認した値：Original title今回の資源状態は未確認です。現在の資源状態を照合できません。確認済みの操作結果とは別の問題です。\n変更内容を確認する今回確定する変更{\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}確認した条件で更新する\n対象操作で確認した結果：My draft title操作番号：operation-1",
+              "effects": "模擬サービスで成立した更新：1回"
+            }
+          },
+          "after": {
+            "flow": {
+              "phase": "completed",
+              "message": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+              "draft": {
+                "title": "My draft title"
+              },
+              "lastKnown": {
+                "etag": "z-original",
+                "values": {
+                  "title": "Original title"
+                }
+              },
+              "observedResource": null,
+              "operationId": "operation-1",
+              "operationOutcome": "succeeded",
+              "operationResult": {
+                "etag": "write-1",
+                "values": {
+                  "title": "My draft title"
+                }
+              },
+              "resourceReadError": "現在の資源状態を照合できません。確認済みの操作結果とは別の問題です。",
+              "canCommit": false,
+              "canReview": false,
+              "canResume": true,
+              "recoveryAction": "操作履歴または管理者への照合で、対象操作の結果を確認してください。"
+            },
+            "server": {
+              "etag": "write-1",
+              "values": {
+                "title": "My draft title"
+              }
+            },
+            "calls": [
+              {
+                "method": "load",
+                "accountId": "A",
+                "resourceId": "doc-1"
+              },
+              {
+                "method": "update",
+                "accountId": "A",
+                "resourceId": "doc-1",
+                "requestId": "operation-1",
+                "ifMatch": "z-original",
+                "changes": {
+                  "title": "My draft title"
+                }
+              },
+              {
+                "method": "load",
+                "accountId": "A",
+                "resourceId": "doc-1"
+              },
+              {
+                "method": "load",
+                "accountId": "A",
+                "resourceId": "doc-1"
+              }
+            ],
+            "effects": 1,
+            "dom": {
+              "workHidden": false,
+              "fixtureHidden": false,
+              "status": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+              "title": "My draft title",
+              "titleDisabled": true,
+              "reauthHidden": true,
+              "resumeDisabled": false,
+              "reviewDisabled": true,
+              "reviewHidden": true,
+              "reviewText": "{\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}",
+              "commitDisabled": true,
+              "saved": "保存した作業で最後に確認した値：Original title",
+              "observed": "今回の資源状態は未確認です。",
+              "readError": "現在の資源状態を照合できません。確認済みの操作結果とは別の問題です。",
+              "operation": "対象操作で確認した結果：My draft title",
+              "reference": "操作番号：operation-1",
+              "recovery": "",
+              "workText": "保持した入力と、照合した事実\n表示した入力で送信した操作の成功を確認しています。現在の資源状態とは分けて表示します。\n今回の変更案 保存した作業で最後に確認した値：Original title今回の資源状態は未確認です。現在の資源状態を照合できません。確認済みの操作結果とは別の問題です。\n変更内容を確認する今回確定する変更{\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}確認した条件で更新する\n対象操作で確認した結果：My draft title操作番号：operation-1",
+              "effects": "模擬サービスで成立した更新：1回"
+            }
+          }
+        }
+      },
+      {
+        "id": "DOM08-OPERATION-AND-CURRENT-DIFFER",
+        "pass": true,
+        "events": [
+          {
+            "type": "click",
+            "id": "resume",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "review",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "commit",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "external-change",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "reopen",
+            "disabled": false
+          }
+        ],
+        "observations": {
+          "flow": {
+            "phase": "completed",
+            "message": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+            "draft": {
+              "title": "My draft title"
+            },
+            "lastKnown": {
+              "etag": "z-original",
+              "values": {
+                "title": "Original title"
+              }
+            },
+            "observedResource": {
+              "etag": "a-other-2",
+              "values": {
+                "title": "Other editor title"
+              }
+            },
+            "operationId": "operation-1",
+            "operationOutcome": "succeeded",
+            "operationResult": {
+              "etag": "write-1",
+              "values": {
+                "title": "My draft title"
+              }
+            },
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": true,
+            "recoveryAction": "操作履歴または管理者への照合で、対象操作の結果を確認してください。"
+          },
+          "server": {
+            "etag": "a-other-2",
+            "values": {
+              "title": "Other editor title"
+            }
+          },
+          "calls": [
+            {
+              "method": "load",
+              "accountId": "A",
+              "resourceId": "doc-1"
+            },
+            {
+              "method": "update",
+              "accountId": "A",
+              "resourceId": "doc-1",
+              "requestId": "operation-1",
+              "ifMatch": "z-original",
+              "changes": {
+                "title": "My draft title"
+              }
+            },
+            {
+              "method": "load",
+              "accountId": "A",
+              "resourceId": "doc-1"
+            },
+            {
+              "method": "load",
+              "accountId": "A",
+              "resourceId": "doc-1"
+            }
+          ],
+          "effects": 1,
+          "dom": {
+            "workHidden": false,
+            "fixtureHidden": false,
+            "status": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+            "title": "My draft title",
+            "titleDisabled": true,
+            "reauthHidden": true,
+            "resumeDisabled": false,
+            "reviewDisabled": true,
+            "reviewHidden": true,
+            "reviewText": "{\n  \"observed\": {\n    \"title\": \"Other editor title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}",
+            "commitDisabled": true,
+            "saved": "保存した作業で最後に確認した値：Original title",
+            "observed": "今回照合した資源の状態：Other editor title",
+            "readError": "",
+            "operation": "対象操作で確認した結果：My draft title",
+            "reference": "操作番号：operation-1",
+            "recovery": "",
+            "workText": "保持した入力と、照合した事実\n表示した入力で送信した操作の成功を確認しています。現在の資源状態とは分けて表示します。\n今回の変更案 保存した作業で最後に確認した値：Original title今回照合した資源の状態：Other editor title\n変更内容を確認する今回確定する変更{\n  \"observed\": {\n    \"title\": \"Other editor title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}確認した条件で更新する\n対象操作で確認した結果：My draft title操作番号：operation-1",
+            "effects": "模擬サービスで成立した更新：1回"
+          }
+        }
+      }
+    ]
+  },
+  "exploratory": {
+    "total": 2,
+    "passed": 2,
+    "results": [
+      {
+        "id": "E01-CONFIRMED-SUCCESS-REOPEN-EXPIRED",
+        "pass": true,
+        "events": [
+          {
+            "type": "click",
+            "id": "resume",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "review",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "commit",
+            "disabled": false
+          },
+          {
+            "type": "change",
+            "id": "record-expires",
+            "value": true
+          },
+          {
+            "type": "click",
+            "id": "reopen",
+            "disabled": false
+          }
+        ],
+        "observations": {
+          "flow": {
+            "phase": "completed",
+            "message": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+            "draft": {
+              "title": "My draft title"
+            },
+            "lastKnown": {
+              "etag": "z-original",
+              "values": {
+                "title": "Original title"
+              }
+            },
+            "observedResource": {
+              "etag": "write-1",
+              "values": {
+                "title": "My draft title"
+              }
+            },
+            "operationId": "operation-1",
+            "operationOutcome": "succeeded",
+            "operationResult": {
+              "etag": "write-1",
+              "values": {
+                "title": "My draft title"
+              }
+            },
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": true,
+            "recoveryAction": "操作履歴または管理者への照合で、対象操作の結果を確認してください。"
+          },
+          "server": {
+            "etag": "write-1",
+            "values": {
+              "title": "My draft title"
+            }
+          },
+          "calls": [
+            {
+              "method": "load",
+              "accountId": "A",
+              "resourceId": "doc-1"
+            },
+            {
+              "method": "update",
+              "accountId": "A",
+              "resourceId": "doc-1",
+              "requestId": "operation-1",
+              "ifMatch": "z-original",
+              "changes": {
+                "title": "My draft title"
+              }
+            },
+            {
+              "method": "load",
+              "accountId": "A",
+              "resourceId": "doc-1"
+            },
+            {
+              "method": "load",
+              "accountId": "A",
+              "resourceId": "doc-1"
+            }
+          ],
+          "effects": 1,
+          "dom": {
+            "workHidden": false,
+            "fixtureHidden": false,
+            "status": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+            "title": "My draft title",
+            "titleDisabled": true,
+            "reauthHidden": true,
+            "resumeDisabled": false,
+            "reviewDisabled": true,
+            "reviewHidden": true,
+            "reviewText": "{\n  \"observed\": {\n    \"title\": \"My draft title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}",
+            "commitDisabled": true,
+            "saved": "保存した作業で最後に確認した値：Original title",
+            "observed": "今回照合した資源の状態：My draft title",
+            "readError": "",
+            "operation": "対象操作で確認した結果：My draft title",
+            "reference": "操作番号：operation-1",
+            "recovery": "",
+            "workText": "保持した入力と、照合した事実\n表示した入力で送信した操作の成功を確認しています。現在の資源状態とは分けて表示します。\n今回の変更案 保存した作業で最後に確認した値：Original title今回照合した資源の状態：My draft title\n変更内容を確認する今回確定する変更{\n  \"observed\": {\n    \"title\": \"My draft title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}確認した条件で更新する\n対象操作で確認した結果：My draft title操作番号：operation-1",
+            "effects": "模擬サービスで成立した更新：1回"
+          }
+        }
+      },
+      {
+        "id": "E02-SENT-INPUT-NOT-LABELLED-UNSENT",
+        "pass": true,
+        "events": [
+          {
+            "type": "click",
+            "id": "resume",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "review",
+            "disabled": false
+          },
+          {
+            "type": "click",
+            "id": "commit",
+            "disabled": false
+          }
+        ],
+        "observations": {
+          "flow": {
+            "phase": "completed",
+            "message": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+            "draft": {
+              "title": "My draft title"
+            },
+            "lastKnown": {
+              "etag": "z-original",
+              "values": {
+                "title": "Original title"
+              }
+            },
+            "observedResource": {
+              "etag": "write-1",
+              "values": {
+                "title": "My draft title"
+              }
+            },
+            "operationId": "operation-1",
+            "operationOutcome": "succeeded",
+            "operationResult": {
+              "etag": "write-1",
+              "values": {
+                "title": "My draft title"
+              }
+            },
+            "resourceReadError": "",
+            "canCommit": false,
+            "canReview": false,
+            "canResume": true,
+            "recoveryAction": "操作履歴または管理者への照合で、対象操作の結果を確認してください。"
+          },
+          "server": {
+            "etag": "write-1",
+            "values": {
+              "title": "My draft title"
+            }
+          },
+          "calls": [
+            {
+              "method": "load",
+              "accountId": "A",
+              "resourceId": "doc-1"
+            },
+            {
+              "method": "update",
+              "accountId": "A",
+              "resourceId": "doc-1",
+              "requestId": "operation-1",
+              "ifMatch": "z-original",
+              "changes": {
+                "title": "My draft title"
+              }
+            },
+            {
+              "method": "load",
+              "accountId": "A",
+              "resourceId": "doc-1"
+            }
+          ],
+          "effects": 1,
+          "dom": {
+            "workHidden": false,
+            "fixtureHidden": false,
+            "status": "対象の操作が成功したことを確認しました。操作時の結果と、照合した資源状態を分けて表示します。",
+            "title": "My draft title",
+            "titleDisabled": true,
+            "reauthHidden": true,
+            "resumeDisabled": false,
+            "reviewDisabled": true,
+            "reviewHidden": true,
+            "reviewText": "{\n  \"observed\": {\n    \"title\": \"My draft title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}",
+            "commitDisabled": true,
+            "saved": "保存した作業で最後に確認した値：Original title",
+            "observed": "今回照合した資源の状態：My draft title",
+            "readError": "",
+            "operation": "対象操作で確認した結果：My draft title",
+            "reference": "操作番号：operation-1",
+            "recovery": "",
+            "workText": "保持した入力と、照合した事実\n表示した入力で送信した操作の成功を確認しています。現在の資源状態とは分けて表示します。\n今回の変更案 保存した作業で最後に確認した値：Original title今回照合した資源の状態：My draft title\n変更内容を確認する今回確定する変更{\n  \"observed\": {\n    \"title\": \"My draft title\"\n  },\n  \"change\": {\n    \"title\": \"My draft title\"\n  }\n}確認した条件で更新する\n対象操作で確認した結果：My draft title操作番号：operation-1",
+            "effects": "模擬サービスで成立した更新：1回"
+          }
+        }
+      }
+    ]
+  }
+}

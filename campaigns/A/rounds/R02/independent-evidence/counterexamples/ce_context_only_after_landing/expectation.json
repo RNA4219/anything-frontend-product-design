@@ -1,0 +1,14 @@
+{
+  "id": "ce_context_only_after_landing",
+  "expected_machine": {
+    "baseline": "FAIL",
+    "candidate": "HOLD"
+  },
+  "expected_semantic": "SEMANTIC_DEFECT",
+  "independent_basis": "到着後の識別情報は選択時に参照できない。後段の情報を入口の文脈と数える主張を棄却する。",
+  "rubric_ids": [
+    "N4",
+    "N6"
+  ],
+  "evidence_level": "synthetic design / HTML source only; no rendered UI, operation, C conformance or human result"
+}

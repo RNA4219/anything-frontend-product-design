@@ -1,0 +1,17 @@
+{
+  "suite": "B-R03-exploratory-evidence",
+  "total": 2,
+  "passed": 2,
+  "results": [
+    {
+      "id": "E01",
+      "name": "Known success survives reopen and expired operation record",
+      "pass": true
+    },
+    {
+      "id": "E02",
+      "name": "Older pending lookup cannot erase newly known success",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "source_id": "B-T204",
+  "title": "Making retries safe with idempotent APIs",
+  "url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+  "kind": "official-primary",
+  "section": "Retrying and side effects; client request identifier; Late arriving requests; Same client request ID, different intent",
+  "read_status": "partial_web_text: L0–L477 of a 504-line representation; relevant article body available; remainder not retrieved; relevant sections read",
+  "observed_facts": [
+    "Malcolm Featonbyは応答のないRunInstancesで重複起動が生じる反例とreconciliationの必要性を示す。",
+    "同じパラメータでも別の意図で同型リソースを2個欲しい場合があるため、要求内容の一致だけでは重複を判定できない。",
+    "遅延再試行時に対象が削除済みでも、同じclient tokenの結果は意味的に対応する。保持要件はサービス・リソースごとに異なり、同じtokenでパラメータ変更は不一致エラー。"
+  ],
+  "limits": [
+    "公式の実装者解説であり、すべてのAWS APIの契約ではない。",
+    "説明には仮想例とEC2操作例が混在。保証を他製品へ転用しない。"
+  ],
+  "canonical_url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs",
+  "capture_sha256": "2e7fcd2ed2024586d6edd96f185bd8c5c52d5696752b0a63984bcdcfea9d1c0d",
+  "capture_hash_scope": "exact retrieved representation, not necessarily raw webpage",
+  "source_file_name": "B-T204-aws-safe-retries.web.md",
+  "checked_at": "2026-11-23T06:43:37.755490+00:00",
+  "round": 1,
+  "redistribution": "Original is retained privately, not committed; this record contains campaign paraphrases and public locators."
+}

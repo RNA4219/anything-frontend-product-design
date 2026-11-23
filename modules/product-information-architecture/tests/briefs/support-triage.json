@@ -1,0 +1,301 @@
+{
+  "case_id": "support-triage",
+  "roles": [
+    {
+      "id": "operator",
+      "label": "対応担当"
+    },
+    {
+      "id": "manager",
+      "label": "管理責任者"
+    }
+  ],
+  "goals": [
+    {
+      "id": "g_triage",
+      "role": "operator",
+      "outcome": "期限と影響を比較して次に着手する問い合わせを選ぶ",
+      "priority": "must",
+      "needed_information": [
+        "ticket_id",
+        "summary",
+        "severity",
+        "due_at",
+        "owner",
+        "status"
+      ]
+    },
+    {
+      "id": "g_assign",
+      "role": "operator",
+      "outcome": "選んだ問い合わせの担当を決める",
+      "priority": "must",
+      "needed_information": [
+        "ticket_id",
+        "owner",
+        "assignment_policy"
+      ]
+    },
+    {
+      "id": "g_find",
+      "role": "operator",
+      "outcome": "解決済みを含め問い合わせの対応経緯を探す",
+      "priority": "must",
+      "needed_information": [
+        "ticket_id",
+        "status",
+        "history"
+      ]
+    },
+    {
+      "id": "g_audit",
+      "role": "manager",
+      "outcome": "期間を指定して監査用記録を取り出す",
+      "priority": "must",
+      "needed_information": [
+        "date_range",
+        "retention",
+        "export_scope"
+      ]
+    },
+    {
+      "id": "g_trends",
+      "role": "manager",
+      "outcome": "月別傾向を把握する",
+      "priority": "should",
+      "needed_information": [
+        "monthly_counts"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "r_triage",
+      "goal_ids": [
+        "g_triage"
+      ],
+      "mandatory": true,
+      "statement": "期限と影響を一覧で比較できる"
+    },
+    {
+      "id": "r_assign",
+      "goal_ids": [
+        "g_assign"
+      ],
+      "mandatory": true,
+      "statement": "担当変更機能と担当ルールを提供する"
+    },
+    {
+      "id": "r_archive",
+      "goal_ids": [
+        "g_find"
+      ],
+      "mandatory": true,
+      "statement": "解決済み記録を90日保持し、検索して経緯を読める"
+    },
+    {
+      "id": "r_audit",
+      "goal_ids": [
+        "g_audit"
+      ],
+      "mandatory": true,
+      "statement": "責任者は低頻度でも期間指定の監査エクスポートを実行できる。担当者には権限がない"
+    },
+    {
+      "id": "r_trends",
+      "goal_ids": [
+        "g_trends"
+      ],
+      "mandatory": false,
+      "statement": "月別集計はあるとよいが初回リリースに必須ではない"
+    }
+  ],
+  "feature_requests": [
+    {
+      "id": "f_inbox",
+      "label": "受信箱",
+      "object": "ticket",
+      "outcome": "select-ticket",
+      "roles": [
+        "operator"
+      ],
+      "goal_ids": [
+        "g_triage"
+      ],
+      "requirement_ids": [
+        "r_triage"
+      ],
+      "dependencies": [],
+      "mandatory": true
+    },
+    {
+      "id": "f_my_queue",
+      "label": "自分の対応一覧",
+      "object": "ticket",
+      "outcome": "select-ticket",
+      "roles": [
+        "operator"
+      ],
+      "goal_ids": [
+        "g_triage"
+      ],
+      "requirement_ids": [
+        "r_triage"
+      ],
+      "dependencies": [],
+      "mandatory": false
+    },
+    {
+      "id": "f_assign",
+      "label": "担当変更",
+      "object": "ticket",
+      "outcome": "assign-owner",
+      "roles": [
+        "operator"
+      ],
+      "goal_ids": [
+        "g_assign"
+      ],
+      "requirement_ids": [
+        "r_assign"
+      ],
+      "dependencies": [
+        "f_history"
+      ],
+      "mandatory": true
+    },
+    {
+      "id": "f_search",
+      "label": "解決済みも検索",
+      "object": "ticket",
+      "outcome": "find-ticket",
+      "roles": [
+        "operator"
+      ],
+      "goal_ids": [
+        "g_find"
+      ],
+      "requirement_ids": [
+        "r_archive"
+      ],
+      "dependencies": [],
+      "mandatory": true
+    },
+    {
+      "id": "f_history",
+      "label": "対応履歴",
+      "object": "ticket",
+      "outcome": "read-history",
+      "roles": [
+        "operator",
+        "manager"
+      ],
+      "goal_ids": [
+        "g_find",
+        "g_audit"
+      ],
+      "requirement_ids": [
+        "r_archive",
+        "r_audit"
+      ],
+      "dependencies": [],
+      "mandatory": true
+    },
+    {
+      "id": "f_export",
+      "label": "監査エクスポート",
+      "object": "audit-record",
+      "outcome": "export-records",
+      "roles": [
+        "manager"
+      ],
+      "goal_ids": [
+        "g_audit"
+      ],
+      "requirement_ids": [
+        "r_audit"
+      ],
+      "dependencies": [
+        "f_history"
+      ],
+      "mandatory": true
+    },
+    {
+      "id": "f_trends",
+      "label": "月別ダッシュボード",
+      "object": "metrics",
+      "outcome": "read-trends",
+      "roles": [
+        "manager"
+      ],
+      "goal_ids": [
+        "g_trends"
+      ],
+      "requirement_ids": [
+        "r_trends"
+      ],
+      "dependencies": [],
+      "mandatory": false
+    },
+    {
+      "id": "f_theme",
+      "label": "テーマギャラリー",
+      "object": "theme",
+      "outcome": "browse-themes",
+      "roles": [
+        "operator",
+        "manager"
+      ],
+      "goal_ids": [],
+      "requirement_ids": [],
+      "dependencies": [],
+      "mandatory": false
+    }
+  ],
+  "visual_intent": {
+    "id": "ops-charcoal-01",
+    "constraints": [
+      "既存の黒鉛色背景、白文字、琥珀色アクセントを維持",
+      "システム書体、角丸は小さく、テキストと罫線中心",
+      "Aの判断では新しい色・書体・装飾に置き換えない"
+    ]
+  },
+  "contexts": {
+    "normal": "担当者は1日に多数の問い合わせを処理する。自分の担当と全件は同じチケット集合の絞込ビュー。",
+    "abnormal": "責任者のexport権限を担当者に提示しない。検索0件のとき検索条件と保持期間を確認できる。",
+    "boundary": "0件/1件/10000件。責任者の監査作業は年4回。低頻度を削除理由にしない。"
+  },
+  "content": [
+    {
+      "ticket_id": "T-104",
+      "summary": "共有端末で同期が止まる",
+      "severity": "高",
+      "due_at": "本日16:00",
+      "owner": "未割当",
+      "status": "未対応",
+      "history": "受付済み"
+    },
+    {
+      "ticket_id": "T-105",
+      "summary": "請求書の表示名を変更したい",
+      "severity": "低",
+      "due_at": "明日12:00",
+      "owner": "担当A",
+      "status": "対応中",
+      "history": "担当へ確認中"
+    },
+    {
+      "ticket_id": "T-099",
+      "summary": "復旧した接続の確認",
+      "severity": "中",
+      "due_at": "完了",
+      "owner": "担当B",
+      "status": "解決済み",
+      "history": "11/20復旧確認"
+    }
+  ],
+  "constraints": [
+    "既存機能の統合/延期/削除は設計提案として理由を残す。実データを消さない。",
+    "状態遷移、再試行、通知の挙動はBへ、部品とARIAはCへ渡す。"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "created_before_arms": true,
+  "created_at": "2026-11-23T07:51:12.991119+00:00",
+  "input_sha256": "c9f287caa4b55b1a35f389c618732799bfb679e84c0bc5bafffe18de82d17a49",
+  "source": "Only the fixed synthetic brief; no external commercial claims",
+  "rule": "Any false required condition => ineligible; otherwise any unknown => unconfirmed; otherwise eligible. This is not a UI/usability oracle.",
+  "rows": [
+    {
+      "plan_id": "P-100",
+      "conditions": {
+        "seats": "fail",
+        "quota": "pass",
+        "budget": "pass"
+      },
+      "outcome": "ineligible"
+    },
+    {
+      "plan_id": "P-200",
+      "conditions": {
+        "seats": "pass",
+        "quota": "unknown",
+        "budget": "pass"
+      },
+      "outcome": "unconfirmed"
+    },
+    {
+      "plan_id": "P-300",
+      "conditions": {
+        "seats": "pass",
+        "quota": "pass",
+        "budget": "pass"
+      },
+      "outcome": "eligible"
+    }
+  ],
+  "cancellation_deadline": "cannot compute from unknown next_renewal_date; do not replace with zero or invent a date"
+}

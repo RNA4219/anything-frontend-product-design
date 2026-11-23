@@ -1,0 +1,110 @@
+{
+  "skill_id": "A-IU-009",
+  "domain": "product-information-architecture",
+  "trigger": "「情報が多い」「カードを減らす」「余白を増やす」「シンプルにする」という依頼、一覧・比較表・ダッシュボードの情報選定を行うとき。",
+  "intent": "密度を要素数ではなく判断材料で評価する",
+  "required_inputs": [
+    "画面のpurpose、必要な判断、候補集合、needed_information、カテゴリ固有の判断条件、実データ量、制約、visual_intent。",
+    "情報を削る理由が混雑感だけか、判断を妨げる具体的な事実があるかを確認する。",
+    "判断目的、候補集合、必要属性、比較関係、時間等の条件、visual_intent。",
+    "対象知識と選好の明確さについての根拠または仮定。",
+    "原典の種類・取得範囲、今回実施した確認と観測、未実施事項。"
+  ],
+  "decision_rules": [
+    "同じ判断に要る比較材料を減らして成立する「簡潔さ」を、改善とみなさない。",
+    "情報を「判断必須／判断補助／別の判断で必要／根拠不明」に分ける。要素数の目標値を先に置かない。",
+    "共通属性だけでなく、今回の対象や条件に固有の判断材料を残す。",
+    "比較対象を揃える、同じ意味の情報を揃える、無関係な重複を避ける等、情報の関係から整理する。",
+    "情報が多い場合は目的別のまとまり、一覧と比較の役割分担、スクロール可能なprimary等を検討する。見えないところへ移すことだけを解決にしない。",
+    "色・書体・装飾の変更で情報不足を補ったことにしない。見せ方の実装はCへ渡す。",
+    "熟知度と選好の確定を別に確認する。逆転例は2015論文の概念レビューによる先行研究の説明で、今回の比較UIの実測ではない。",
+    "A09の情報四区分とA10の検証範囲分離を維持する。visual_intent_idの一致は実画面の見た目を確認した証拠ではない。"
+  ],
+  "procedure": [
+    "1. 画面の判断を一つ書き、そのために候補を選ぶ・棄却する条件を列挙する。",
+    "2. 各条件に必要な情報IDと、入力データの有無を対応させる。値がない場合は捏造せずデータ取得の残件にする。",
+    "3. 現在の情報を四区分へ置く。根拠不明は削除候補ではなく確認候補として扱う。",
+    "4. 判断必須はprimaryへ残す。補助情報はA08で開示を決め、別の判断で必要な情報はそのtargetへ配置する。",
+    "5. 同時比較が必要なら候補と属性の対応を保つ。表・一覧等の情報関係は提案できるが、部品の外観や挙動をAで実装しない。",
+    "6. 省略する情報は、どの目標・要件にも必要でない根拠を書く。既存機能の提供を変えるならA03・A04へ戻る。",
+    "7. 実データと端末で未確認なら、収まり・読み取りやすさ・処理時間について未検証と記録する。",
+    "候補集合の大きさと画面の表示密度を別に扱う。初回理解・同時比較・反復処理のどの判断を支えるかを定め、同じ対象・必要属性・条件で配置案を比較する。候補数やカード数を減らした事実だけを改善とせず、普遍的な要素数・段数上限を作らない。",
+    "その対象への知識と、今回どの属性を優先するかという選好の確定を分ける。熟練年数だけで判断材料を隠さず、比較に必要な属性対応を保ち、補助説明はU01で扱う。密度案の意図と未確認の収まり・時間・誤りを記録し、既存visual_intentを維持して表現をCへ渡す。"
+  ],
+  "expected_outputs": [
+    "`screens.information`のreasonに、その情報が支える判断を記録する。",
+    "decision_notesに「A09: 画面ID、残した判断材料、補足へ移した情報、移動先または理由、未確認条件」を記録する。",
+    "実データ不足はproduct、情報構造はA、表現・部品の問題はC担当のunresolvedにする。新しい密度スコアや件数制限を契約へ追加しない。"
+  ],
+  "dependencies": [
+    "A-IU-001"
+  ],
+  "exceptions": [
+    "四区分と出力形式は本Skillの導出で、密度を測る標準尺度ではない。情報が多いことも少ないことも単独では良否を決めない。",
+    "対象・条件・データが異なる場合は必要属性を調べ直す。Baymardの記事中の属性数や実装比率を普遍的な上限・成功率として使わない。",
+    "候補が多いことが選択を支える条件もあり、平均がほぼゼロという報告から全条件の無効果を導かない。少ない候補・低密度も単独では良否を決めない。",
+    "2010/2015のメタ分析は元研究が重複し、対象研究・調整変数・モデルも異なる。独立した二回の再現や単純な勝敗として扱わない。",
+    "2015論文に対する2016訂正は検索索引で確認され、本文の直接取得は403。詳細効果量・訂正対象の統計表記を採用せず、原HTML/PDF全文保存済みとしない。"
+  ],
+  "failure_modes": [
+    "カードを少なくしただけで比較性能が上がったと報告する。業界固有の決定的属性を共通テンプレートにないから落とす。",
+    "同じ対象の別名・重複と、別候補・別属性を同じ冗長性として扱う。商品一覧の属性を別業務へそのまま必須化する。"
+  ],
+  "verification": [
+    "「この情報だけで候補を選べる／棄却できるか」を具体例で点検する。必要なら比較対象を並べ、属性対応が失われていないか確認する。",
+    "これは机上の照合であり、実ユーザーの正答率・作業時間の測定とは区別する。要素数の減少だけを合格根拠にしない。",
+    "同じ提供状態でpriorityだけを変える正負例、任意作業延期・共通支援機能の正例、値の意味と条件の独立照合を行う。"
+  ],
+  "source_refs": [
+    "A-S012",
+    "A-S019",
+    "A-S020",
+    "R03-R2-S01",
+    "R03-R2-S02"
+  ],
+  "confidence": {
+    "source_support": "R01–R03 bounded source records and independent review; inherited source provenance retained, no claim of full-source archive or universal empirical validity.",
+    "transfer": "Synthetic decision-information task pending",
+    "empirical_skill_effect": "unverified",
+    "task_effect": "One paired synthetic task per round; R03 6/6 versus 6/6 with assignment clue leakage; no improvement inference."
+  },
+  "status": "ACCEPT",
+  "version": "1.1.1",
+  "provenance": {
+    "kind": "inherited",
+    "repository": "RNA4219/anything-frontend-art-direction",
+    "revision": "97b19c29c0b63acfee9ad437f93af081ac0c6ef8",
+    "path": "extensions/A/references/disclosure-and-verification.md",
+    "original_unit": "A09"
+  },
+  "implementation": "modules/product-information-architecture/references/decision-information.md",
+  "history": [
+    {
+      "round": "R01",
+      "action": "migrated_without_novelty_credit",
+      "status": "DRAFT"
+    },
+    {
+      "round": "R03",
+      "action": "conditional_information_refinement",
+      "status": "REVISE",
+      "extractions": [
+        "R03-A-U03"
+      ],
+      "at": "2026-11-23T08:06:03.383864+00:00"
+    },
+    {
+      "round": "R03",
+      "version": "1.1.1",
+      "status": "ACCEPT",
+      "at": "2026-11-23T08:25:37.196539+00:00",
+      "reason": "Bounded independent source/instruction review, adversarial cases and 57-method suite; paired task tie and assignment leakage retained."
+    }
+  ],
+  "acceptance_evidence": [
+    "campaigns/A/rounds/R03/decision.json",
+    "campaigns/A/rounds/R03/independent-evidence/correction-check.json",
+    "campaigns/A/rounds/R03/tests-after-critic.txt"
+  ],
+  "acceptance_scope": "Instruction conditions and bounded structural verification only; source truth, actual UI behavior and human effectiveness require separate evidence."
+}

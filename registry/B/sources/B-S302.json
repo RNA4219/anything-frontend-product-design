@@ -1,0 +1,52 @@
+{
+  "source_id": "B-S302",
+  "url": "https://developers.google.com/workspace/calendar/api/guides/version-resources",
+  "canonical_url": "https://developers.google.com/workspace/calendar/api/guides/version-resources",
+  "title": "Get specific versions of resources — Google Calendar",
+  "type": "official API guide and illustrative client sample",
+  "authority": "Google Workspace / Google Calendar API",
+  "section": [
+    {
+      "section": "Conditional modification and sample",
+      "source_lines": "L58-L117",
+      "local_lines": "10-69",
+      "unavailable_lines": []
+    },
+    {
+      "section": "Conditional retrieval and etag limitation",
+      "source_lines": "L118-L121",
+      "local_lines": "72-75",
+      "unavailable_lines": []
+    },
+    {
+      "section": "Document update date",
+      "source_lines": "L153-L155",
+      "local_lines": "78-80",
+      "unavailable_lines": []
+    }
+  ],
+  "read_status": "PARTIAL: saved web/tool extraction; not raw HTML",
+  "capture_kind": "PARTIAL",
+  "capture_sha256": "4c4b44f2f12223c7b4afbde59bd6292b88d8486c982c656418a17c228c1afff3",
+  "source_file_name": "B-S302-google-calendar-conditional.web.txt",
+  "observed_facts": [
+    "Calendarの条件付き更新・削除は以前のetagをIf-Matchで送り、変化していれば412を返す。insertはこの条件付き変更の対象外。",
+    "掲載sampleは412の後に最新eventを取得し、summaryを再設定する簡略例である。より複雑な競合処理を必要に応じて実装するよう記述されている。",
+    "calendarListの一部read-only field、たとえばcalendar propertiesやACLsの変更でetagが変わらない場合があると注記する。"
+  ],
+  "limits": [
+    "sampleの再取得・再適用は利用者の再承認を定義しない。任意の業務変更を自動上書きしてよい根拠にはならない。",
+    "calendarListの例外をすべてのevent fieldへ一般化しない。",
+    "実際のCalendar APIを呼び出したり、予約・アカウントを変更したりしていない。文書契約だけを調査した。"
+  ],
+  "upstream_refs": [
+    {
+      "url": "https://developers.google.com/workspace/calendar/api/guides/version-resources",
+      "relationship": "search結果から公式guideをopen。L117にJava sampleのGitHubリンク12を観測したが、そのリンクは追加探索せず未追跡。",
+      "trace_web_ref": "turn920176378view2"
+    }
+  ],
+  "checked_at": "2026-11-23T07:48:23.986530+00:00",
+  "round": 3,
+  "redistribution": "Original text stays private; public record contains original paraphrases, locators and hashes."
+}

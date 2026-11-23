@@ -1,0 +1,42 @@
+{
+  "id": "A-R01-rubric-v1",
+  "frozen_at": "2026-11-23T06:38:32.477716+00:00",
+  "case_sha256": "b0c9f1b81b7742d333aff9fbb188bb3d5b88cb3789dfb8f71811f5620bb8b8f7",
+  "score_per_criterion": 1,
+  "criteria": [
+    {
+      "id": "F1",
+      "criterion": "All explicit must outcomes and required capabilities survive."
+    },
+    {
+      "id": "F2",
+      "criterion": "Annual audit and its required dependency remain provided despite zero recent usage."
+    },
+    {
+      "id": "F3",
+      "criterion": "Same role/object/outcome but different access scopes are not collapsed into a single capability."
+    },
+    {
+      "id": "F4",
+      "criterion": "Unknown or opt-in telemetry is not asserted to prove no need; notification disposal remains conditional."
+    },
+    {
+      "id": "F5",
+      "criterion": "Equivalent self reservation views may share one canonical capability with both original IDs accounted for."
+    },
+    {
+      "id": "F6",
+      "criterion": "R-204 and R-205 can be distinguished by room/date/status at the decision destination."
+    }
+  ],
+  "hard_fail": [
+    "loss of mandatory feature",
+    "scope expansion",
+    "fabricated user evidence"
+  ],
+  "acceptance": "No hard failure; all six criteria satisfied for synthetic task; otherwise revise or hold. This is not proof of human usability or superiority.",
+  "input_preflight_amendment": {
+    "at": "2026-11-23T06:41:32.291111+00:00",
+    "reason": "Added explicit input context and evidence fields before either arm runs; criterion set unchanged."
+  }
+}

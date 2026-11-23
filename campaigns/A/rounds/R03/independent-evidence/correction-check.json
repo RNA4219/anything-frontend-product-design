@@ -1,0 +1,131 @@
+{
+  "round": "R03",
+  "checked_at": "2026-11-23T08:22:49.526781+00:00",
+  "scope": "Parent-requested bounded recheck of C01-C03 only; no broadened literature exploration or browser retry",
+  "cases": [
+    {
+      "id": "ce_mandatory_capability_isolated",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "codes": [
+        "REQUIRED_CAPABILITY_UNREACHABLE"
+      ],
+      "expected_code": "REQUIRED_CAPABILITY_UNREACHABLE",
+      "ok": true,
+      "pre_correction_candidate": "PASS"
+    },
+    {
+      "id": "control_mandatory_capabilities_separate_stages",
+      "expected": "PASS",
+      "actual": "PASS",
+      "codes": [],
+      "expected_code": null,
+      "ok": true,
+      "pre_correction_candidate": "PASS"
+    },
+    {
+      "id": "ce_should_needed_info_secondary",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "codes": [
+        "HIDDEN_DECISION_INFORMATION"
+      ],
+      "expected_code": "HIDDEN_DECISION_INFORMATION",
+      "ok": true,
+      "pre_correction_candidate": "FAIL"
+    },
+    {
+      "id": "ce_could_needed_info_absent",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "codes": [
+        "HIDDEN_DECISION_INFORMATION"
+      ],
+      "expected_code": "HIDDEN_DECISION_INFORMATION",
+      "ok": true,
+      "pre_correction_candidate": "FAIL"
+    },
+    {
+      "id": "ce_should_route_without_target_capability",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "codes": [
+        "ROUTE_CAPABILITY_MISSING"
+      ],
+      "expected_code": "ROUTE_CAPABILITY_MISSING",
+      "ok": true,
+      "pre_correction_candidate": "FAIL"
+    },
+    {
+      "id": "control_explicit_defer_shared_enabler",
+      "expected": "PASS",
+      "actual": "PASS",
+      "codes": [],
+      "expected_code": null,
+      "ok": true,
+      "pre_correction_candidate": "PASS"
+    },
+    {
+      "id": "control_all_priorities_provided",
+      "expected": "PASS",
+      "actual": "PASS",
+      "codes": [],
+      "expected_code": null,
+      "ok": true,
+      "pre_correction_candidate": "PASS"
+    },
+    {
+      "id": "control_multiple_capabilities_one_goal",
+      "expected": "PASS",
+      "actual": "PASS",
+      "codes": [],
+      "expected_code": null,
+      "ok": true,
+      "pre_correction_candidate": "PASS"
+    }
+  ],
+  "documentation_checks": {
+    "old_must_only_and_unconditional_blocking_absent": true,
+    "trigger_aligned": true,
+    "expected_outputs_aligned": true,
+    "verification_declared_routes_aligned": true,
+    "blocking_scope_aligned": true,
+    "mandatory_scope_same_in_contract_and_registries": true,
+    "separate_stages_and_no_optional_inference_documented": true
+  },
+  "parent_authored_alias_pair": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "test_information_independent.IndependentInformationTests.test_mandatory_alias_uses_the_reachable_canonical_capability",
+      "-v"
+    ],
+    "method_count": 1,
+    "subcases": 2,
+    "exit_code": 0,
+    "log": "corrections/alias-recheck.txt"
+  },
+  "pre_correction_result_files_preserved": true,
+  "initial_observed_unit_suite": {
+    "methods": 55,
+    "result": "OK",
+    "log": "unit-tests.txt"
+  },
+  "full_post_correction_suite": "Not rerun by critic; parent reports 57 methods OK. Critic independently reran the bounded cases and canonical-alias pair.",
+  "reviewed_hashes": {
+    "session-A/modules/product-information-architecture/checks/validate_plan.py": "4dbc9bd1e541568bcf2acc4c06f720acfc8b391d711e63742c581d3fd6b2617f",
+    "session-A/modules/product-information-architecture/references/disclosure-and-verification.md": "c665a6549142d51355789cd794cb2f7df4ec65d56a2c5f4583d3e22bb9f74f05",
+    "session-A/modules/product-information-architecture/references/plan-contract.md": "32db06d9faee3ae2633ef81175706eeedfeb10830d8c584e9c1b19f4f93533dd",
+    "session-A/registry/A/skills/A-IU-008.json": "b3b3eecddb2ab56b54a4be41d300f41d8a0a38c05e412aa43b36e421c33a9092",
+    "session-A/registry/A/skills/A-IU-002.json": "9d4f1d6b699a3d7c5e4f6c1fbe0e3a552d62198a3e2fcd8a3d0b00635e385f14",
+    "session-A/registry/A/skills/A-IU-006.json": "8e4d80968f1d9cef5c633cce48730250e4665889021888676ceb9ca4b7147690"
+  },
+  "all_expected": true,
+  "final_verdict": "ACCEPT_BOUNDED_STRUCTURAL_AND_INSTRUCTION_CHANGE",
+  "remaining_limits": [
+    "値の真偽、適用条件、文章だけの任意提供宣言は自動検査しない。",
+    "必須能力の追加検査は入力mandatory=true・同goal・同role・宣言した認可入口群に限定。段階の実行順序や実行成功、文章だけの必須性は保証しない。",
+    "匿名比較は各1回の同系モデル合成課題でW=6/6、Z=6/6、差0。割当手掛かり漏洩あり。実利用効果を示さない。"
+  ]
+}

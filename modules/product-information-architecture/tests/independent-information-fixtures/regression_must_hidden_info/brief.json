@@ -1,0 +1,177 @@
+{
+  "case_id": "independent-kiln-workshop",
+  "roles": [
+    {
+      "id": "maker",
+      "label": "共同窯を利用する制作者"
+    }
+  ],
+  "goals": [
+    {
+      "id": "g_book",
+      "role": "maker",
+      "outcome": "焼成枠を選ぶ",
+      "priority": "must",
+      "needed_information": [
+        "slot_capacity",
+        "firing_profile"
+      ]
+    },
+    {
+      "id": "g_glaze",
+      "role": "maker",
+      "outcome": "釉薬試料の比較対象を選ぶ",
+      "priority": "must",
+      "needed_information": [
+        "sample_identity",
+        "shrinkage_status"
+      ]
+    },
+    {
+      "id": "g_export",
+      "role": "maker",
+      "outcome": "試料台帳の書き出し対象を選ぶ",
+      "priority": "could",
+      "needed_information": [
+        "export_scope"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "r_booking",
+      "goal_ids": [
+        "g_book"
+      ],
+      "mandatory": true,
+      "statement": "予約の確定前に枠の空きと焼成条件を照合する"
+    }
+  ],
+  "feature_requests": [
+    {
+      "id": "f_lookup",
+      "label": "試料の選択",
+      "object": "kiln-workshop-batch",
+      "outcome": "select-batch",
+      "roles": [
+        "maker"
+      ],
+      "goal_ids": [
+        "g_book",
+        "g_glaze",
+        "g_export"
+      ],
+      "requirement_ids": [],
+      "dependencies": [],
+      "mandatory": false,
+      "scope": "assigned-workshop",
+      "lifecycle": "proposed",
+      "availability": "available",
+      "context_constraints": [
+        "high-fire"
+      ],
+      "evidence_refs": [
+        "e_synthetic"
+      ]
+    },
+    {
+      "id": "f_booking",
+      "label": "枠の予約",
+      "object": "kiln-workshop-batch",
+      "outcome": "book-slot",
+      "roles": [
+        "maker"
+      ],
+      "goal_ids": [
+        "g_book"
+      ],
+      "requirement_ids": [
+        "r_booking"
+      ],
+      "dependencies": [
+        "f_lookup"
+      ],
+      "mandatory": true,
+      "scope": "assigned-workshop",
+      "lifecycle": "proposed",
+      "availability": "available",
+      "context_constraints": [
+        "high-fire"
+      ],
+      "evidence_refs": [
+        "e_synthetic"
+      ]
+    },
+    {
+      "id": "f_glaze",
+      "label": "試料の比較",
+      "object": "kiln-workshop-batch",
+      "outcome": "compare-glaze",
+      "roles": [
+        "maker"
+      ],
+      "goal_ids": [
+        "g_glaze"
+      ],
+      "requirement_ids": [],
+      "dependencies": [
+        "f_lookup"
+      ],
+      "mandatory": false,
+      "scope": "assigned-workshop",
+      "lifecycle": "proposed",
+      "availability": "available",
+      "context_constraints": [
+        "high-fire"
+      ],
+      "evidence_refs": [
+        "e_synthetic"
+      ]
+    },
+    {
+      "id": "f_export",
+      "label": "台帳の書き出し",
+      "object": "kiln-workshop-batch",
+      "outcome": "export-ledger",
+      "roles": [
+        "maker"
+      ],
+      "goal_ids": [
+        "g_export"
+      ],
+      "requirement_ids": [],
+      "dependencies": [
+        "f_lookup"
+      ],
+      "mandatory": false,
+      "scope": "assigned-workshop",
+      "lifecycle": "proposed",
+      "availability": "available",
+      "context_constraints": [
+        "high-fire"
+      ],
+      "evidence_refs": [
+        "e_synthetic"
+      ]
+    }
+  ],
+  "visual_intent": {
+    "id": "v_workshop",
+    "constraints": [
+      "既存の文字と配色を保持"
+    ]
+  },
+  "contexts": {
+    "conditional_information": "shrinkage_status is required only for the high-fire comparison view; this base scenario is high-fire.",
+    "evidence_status": "synthetic fixture requirement"
+  },
+  "evidence": [
+    {
+      "id": "e_synthetic",
+      "kind": "requirement",
+      "statement": "架空の工房の検査用要件",
+      "coverage": "このfixture内に限定",
+      "coverage_status": "verified"
+    }
+  ]
+}

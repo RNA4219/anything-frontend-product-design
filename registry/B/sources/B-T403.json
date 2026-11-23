@@ -1,0 +1,54 @@
+{
+  "source_id": "B-T403",
+  "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+  "canonical_url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+  "title": "Session Management Cheat Sheet",
+  "type": "official security implementation guidance; not WCAG requirement",
+  "authority": "OWASP Cheat Sheet Series",
+  "section": [
+    {
+      "section": "HTML5 Web Storage: duration and offline access",
+      "source_lines": "L425–L455",
+      "local_lines": "20–50"
+    },
+    {
+      "section": "Session ID input validation and privilege changes",
+      "source_lines": "L480–L489",
+      "local_lines": "177–186"
+    },
+    {
+      "section": "Session expiration",
+      "source_lines": "L507–L523",
+      "local_lines": "204–220"
+    }
+  ],
+  "read_status": "PARTIAL: saved web/tool extraction; not raw HTML",
+  "capture_kind": "PARTIAL",
+  "capture_sha256": "82ed5b8c656013009d82cda7e9e85e4d00c5b730367dbd967da9cd08c8d0062d",
+  "source_file_name": "B-T403-owasp-session-management.web.txt",
+  "observed_facts": [
+    "認証済みになっても認可済みでない場合があると明示し、権限変更をsession管理の境界として扱う。",
+    "sessionの期限はサーバー側で強制し、期限切れではsessionの無効化と再認証が必要になると説明する。",
+    "localStorageがbrowsing sessionを超えて残ること、開いたままのtabではsessionStorageも後のアクセスを阻止しないこと、両方に保存時暗号化の規範保証がないことを説明する。"
+  ],
+  "limits": [
+    "Bはsession ID更新、token配置、cookie属性や認証protocolを実装しない。現在認証・認可をC/サーバーのtrusted inputとして受け取る根拠だけを使う。",
+    "推奨timeoutの具体値をBの業務制限に転用しない。",
+    "保存技術の助言から全入力の強制再入力や無期限保存を正当化しない。",
+    "tool抽出の必要範囲のみ。ページrevisionの固定commitは取得していない。"
+  ],
+  "upstream_refs": [
+    {
+      "url": "https://html.spec.whatwg.org/multipage/webstorage.html",
+      "relationship": "Web Storage API Spec link232を実clickして到達",
+      "observed_link_id": 232
+    },
+    {
+      "url": null,
+      "relationship": "Authentication Cheat Sheet Reauthentication After Risk Events link242 observed; not followed because B does not design authentication"
+    }
+  ],
+  "checked_at": "2026-11-23T07:48:23.986530+00:00",
+  "round": 3,
+  "redistribution": "Original text stays private; public record contains original paraphrases, locators and hashes."
+}

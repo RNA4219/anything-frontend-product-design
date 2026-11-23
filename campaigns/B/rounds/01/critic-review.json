@@ -1,0 +1,218 @@
+{
+  "review_id": "B-R01-critic-initial",
+  "created_at": "2026-11-23T06:55:51.623352+00:00",
+  "verdict": "REVISE",
+  "summary": "主要な出典解釈と条件付きルールは概ね一致。検査自体は合格。ただし凍結v1の受入判定には1件の誤拒否と3件の実証済み検出漏れがあり、これだけでB-IU-001〜003を受入済みにできない。",
+  "scope": {
+    "read": [
+      "module SKILL.md",
+      "references/async-outcomes.md",
+      "checks",
+      "registry/B/skills",
+      "registry/B/sources",
+      "registry/B/schema.json",
+      "frozen task.md",
+      "frozen run_flow_trials.mjs",
+      "experiment-protocol.json",
+      "relevant researcher1/researcher2 primary captures",
+      "tooling/art-direction/SKILL.md and interaction/forms/usability reference entries"
+    ],
+    "not_read": [
+      "baseline generated implementation",
+      "candidate generated implementation"
+    ],
+    "mutations": "private/B/round01/critic only; no frozen suite changes"
+  },
+  "defects": [
+    {
+      "id": "B-R01-C01",
+      "severity": "high",
+      "file": "session-b/modules/interaction-ux-flow/tests/run_flow_trials.mjs",
+      "location": "T03 lines 35–39; related blanket canSubmit checks in T05/T10/T12",
+      "symptom": "同じID・同じ内容による契約内の再送を、二重の業務変更と同一視して不合格にする。",
+      "evidence": [
+        "task.md lines 30–33 permits same requestId/identical payload deduplication for 24 hours.",
+        "references/async-outcomes.md lines 37–50 and B-IU-002 permit conditional same-intent replay.",
+        "control-trials.json: 12/12. safe-replay-trials.json: 11/12, only T03 fails with 2 !== 1. The only enabled variation reuses the stored payload and requestId within 24 hours."
+      ],
+      "impact": "適合する回復実装を誤って不合格にし、lookupのみの実装へ比較を偏らせる。呼出し回数は副作用回数ではない。",
+      "fix": "v1を保持したまま事前訂正を別版として記録する。未確定中の新しいID/変化した内容を拒み、契約内の同一再送またはlookupを許容する。副作用台帳、保持期限、同一payloadを確認する。canSubmitの見かけだけで安全性を判定しない。"
+    },
+    {
+      "id": "B-R01-C02",
+      "severity": "high",
+      "file": "session-b/modules/interaction-ux-flow/tests/run_flow_trials.mjs",
+      "location": "setup lines 13–17; T01/T06/T07/T08",
+      "symptom": "モックが予約対象・取消対象を検証せず、各試験もbookingId/cancel(requestId)の対応を確認しない。",
+      "evidence": [
+        "task.md lines 4 and 21–33 specifies R-204 and cancellation by the original requestId.",
+        "CRITIC_WRONG_IDS=1 sets every submit bookingId to R-WRONG and every cancellation ID to UNRELATED-ID. wrong-ids-trials.json still reports 12/12.",
+        "T04 checks one lookup ID and T08/T11 inspect selected targetDate values, but cancellation identity and bookingId are absent."
+      ],
+      "impact": "別予約の変更や別操作の取消という重大な対象誤りを検出できず、対象維持・取消対象一致の受入証拠にならない。",
+      "fix": "すべてのsubmitでbookingId、確認されたtargetDate、requestIdを検証する。lookup/cancelの対象を元操作IDへ照合し、未知のIDに成功を返さないモックを使う。操作IDとpayloadの台帳から副作用数を観測する。"
+    },
+    {
+      "id": "B-R01-C03",
+      "severity": "high",
+      "file": "session-b/modules/interaction-ux-flow/tests/run_flow_trials.mjs",
+      "location": "T07 lines 55–58; setup deferred only affects submit",
+      "symptom": "「取消との競合」はcancelをawaitした後でcheckする逐次経路だけ。遅い取消応答や古い照会結果が確定結果を上書きする競合を検証しない。",
+      "evidence": [
+        "control-trials.json: independently written controller passes all 12 frozen trials.",
+        "probe_race.mjs runs cancel (unresolved), then check returning succeeded, then resolves cancel as accepted:true.",
+        "race-probe-result.json records succeeded followed by cancel_requested for the same operation; detectedDefect=true.",
+        "SKILL.md line 67 and B-IU-003 verification explicitly name delayed replies and cancel/complete races."
+      ],
+      "impact": "確定成功が未確定へ後退し、操作を再度取り消せるように見える実装が全件合格する。T07単独で競合耐性を実証できない。",
+      "fix": "取消/照会応答を個別に遅延できる回帰試験を追加する。成功確認後に取消受付・取消通信エラー・古いpendingが到着する順序を検証する。新しい意図の開始後に古い応答が届く場合も操作ID/世代を確認する。"
+    },
+    {
+      "id": "B-R01-C04",
+      "severity": "medium",
+      "file": "session-b/modules/interaction-ux-flow/tests/run_flow_trials.mjs",
+      "location": "T02 line 33; T10 line 74; output limits line 86; B-IU-001 verification criteria",
+      "symptom": "結果表示の真実性は非空message程度しか観測されず、未知結果を失敗や元予約維持と断定しても合格する。",
+      "evidence": [
+        "CRITIC_LIE=1 returns the same false message in all phases: 変更に失敗しました。元の予約は変更されていません。 untruthful-message-trials.json reports 12/12.",
+        "SKILL.md lines 47–48 and async-outcomes.md lines 24–26 prohibit exactly this unsupported claim.",
+        "The runner imports only flow.mjs; no DOM/rendering observation occurs here."
+      ],
+      "impact": "B-IU-001の中心的な表示条件をこの12件の成績だけで受入済みにできない。phaseの正しさと利用者への説明の正しさが乖離する。",
+      "fix": "自動検査では状態と観測事実を別の意味フィールドで確認するか、表示文言と実画面を人/criticが意味で確認する。固定の日本語文字列一致を一般契約にしない。DOM観察を別途実行した場合のみ、その記録への明示リンクを受入証拠にする。"
+    }
+  ],
+  "source_rule_agreement": {
+    "status": "substantially_supported_with_stated_limits",
+    "source_hashes": [
+      {
+        "source_id": "B-S101",
+        "matches": true
+      },
+      {
+        "source_id": "B-S102",
+        "matches": true
+      },
+      {
+        "source_id": "B-S103",
+        "matches": true
+      },
+      {
+        "source_id": "B-S104",
+        "matches": true
+      },
+      {
+        "source_id": "B-S105",
+        "matches": true
+      },
+      {
+        "source_id": "B-T201",
+        "matches": true
+      },
+      {
+        "source_id": "B-T202",
+        "matches": true
+      },
+      {
+        "source_id": "B-T203",
+        "matches": true
+      },
+      {
+        "source_id": "B-T204",
+        "matches": true
+      },
+      {
+        "source_id": "B-T205",
+        "matches": true
+      },
+      {
+        "source_id": "B-T206",
+        "matches": true
+      }
+    ],
+    "notes": [
+      "RFC 9110 supports acceptance/completion distinction and conditional retries. Google code.proto supports unknown outcome after deadline.",
+      "Google operations.proto supports best-effort cancel, preserved operation record, terminal result interpretation; registry instruction explicitly accommodates services without results.",
+      "Stripe v1/v2 replay and retention are correctly scoped; AWS input-equality counterexample is correctly treated as service-dependent guidance.",
+      "BigQuery poll requirement versus response final-state wording is acknowledged, not silently harmonized into a universal guarantee.",
+      "GOV.UK completion scope is used as guidance, with no claimed Japanese-wording effectiveness."
+    ]
+  },
+  "art_direction_overlap": {
+    "finding": "no demonstrated harmful duplication",
+    "evidence": [
+      "Art Direction d-interaction D-38–D-41 treats cache/optimistic update races. c-usability C2-11 covers retained inputs.",
+      "New module addresses operation identity, authoritative outcome and cancellation semantics and explicitly hands off cache/React/accessibility implementation."
+    ],
+    "limitation": "Reviewed main skill and relevant reference entries, not every Art Direction file."
+  },
+  "counterexamples_and_complexity": {
+    "finding": "No demonstrated unnecessary complexity defect in prose",
+    "evidence": [
+      "Synchronous final responses require no extra polling.",
+      "Ordinary local Undo is exempt from distributed compensation constraints.",
+      "Idempotent HTTP methods are not forced to adopt keys.",
+      "Only applicable states should be instantiated; B-IU-004 remains HOLD."
+    ],
+    "remaining_checks": [
+      "Reload/key-loss/expiry and deliberately repeated identical input are not covered by frozen v1. B-IU-002 explicitly lists separate policy replay tests; these remain necessary before broad acceptance.",
+      "Cancellation unavailable/error cases and late replies require separate trials.",
+      "Backend atomicity and actual reservation preservation are not proved by retaining currentDate in the controller."
+    ]
+  },
+  "test_results": [
+    {
+      "name": "registry",
+      "exit_code": 0,
+      "log": "private-critic-artifact:registry.log"
+    },
+    {
+      "name": "python-tests",
+      "exit_code": 0,
+      "log": "private-critic-artifact:python-tests.log"
+    },
+    {
+      "name": "independent control",
+      "passed": 12,
+      "total": 12,
+      "file": "control-trials.json"
+    },
+    {
+      "name": "same-ID replay",
+      "passed": 11,
+      "total": 12,
+      "file": "safe-replay-trials.json"
+    },
+    {
+      "name": "wrong identifiers negative control",
+      "passed": 12,
+      "total": 12,
+      "file": "wrong-ids-trials.json"
+    },
+    {
+      "name": "untruthful message negative control",
+      "passed": 12,
+      "total": 12,
+      "file": "untruthful-message-trials.json"
+    },
+    {
+      "name": "late-cancel-ack probe",
+      "detected_defect": true,
+      "file": "race-probe-result.json"
+    }
+  ],
+  "limitations": [
+    "Same-model review in a separate task context is not objective or model-independent validation.",
+    "No generated implementation was inspected or scored; probes demonstrate limitations of the oracle, not defects in either arm.",
+    "Sources were checked against supplied captures, not refreshed live pages. Hash matches establish capture identity, not truth.",
+    "No browser/DOM run, human participants, production backend, or real side effects were evaluated.",
+    "Source/rule support is a conditional synthesis, not evidence of measured user benefit.",
+    "The protocol should preserve v1 and label any subsequent pre-scoring errata as v2; no outcome-driven test tuning."
+  ],
+  "recommended_disposition": {
+    "B-IU-001": "REVISE acceptance evidence; prose generally supported",
+    "B-IU-002": "REVISE trial contract and complete replay-boundary evidence",
+    "B-IU-003": "REVISE race/identity evidence",
+    "B-IU-004": "HOLD appropriate"
+  }
+}

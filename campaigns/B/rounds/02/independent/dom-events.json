@@ -1,0 +1,833 @@
+{
+  "runtime": {
+    "node": "v24.22.3",
+    "jsdom": "26.1.0"
+  },
+  "method": "Real HTML event listeners in jsdom; the one ESM import is replaced by factories imported from the exact candidate module. No browser, layout, AT, keyboard-human, server, or human study.",
+  "modulePath": "modules/interaction-ux-flow/examples/task-flows.mjs",
+  "htmlPath": "modules/interaction-ux-flow/examples/repair-and-undo.html",
+  "sourceHash": "3c38c312ce87e6b5ac84d532042344744737792fe4775cd6d9744ac597105c07",
+  "htmlHash": "d93571557e22bb4742cc743b4ad2a3fb8d319393cfbfdf451f48601a328ce1a4",
+  "representative": {
+    "total": 8,
+    "passed": 8,
+    "results": [
+      {
+        "id": "DOM-REPAIR",
+        "pass": true,
+        "observations": {
+          "rejected": {
+            "app": {
+              "phase": "editing",
+              "draft": {
+                "name": "Aki",
+                "email": "old@example.test",
+                "delivery": "shipping",
+                "address": "1 Example Street"
+              },
+              "effective": {
+                "name": "Aki",
+                "email": "old@example.test",
+                "delivery": "shipping",
+                "address": "1 Example Street"
+              },
+              "errors": {
+                "email": "受信できるメールアドレスに修正してください。"
+              },
+              "formError": "",
+              "operationId": "demo-1",
+              "reference": null,
+              "canSubmit": false,
+              "canCheck": false
+            },
+            "undo": {
+              "kind": "local",
+              "phase": "available",
+              "message": "",
+              "operationId": null,
+              "itemId": "archive-1",
+              "scope": "この書類のアーカイブ状態",
+              "residualEffects": [],
+              "canUndo": true,
+              "canCheck": false,
+              "nextAction": "模擬データの状態と操作番号を確認してください。"
+            },
+            "item": {
+              "id": "archive-1",
+              "revision": 1,
+              "archived": true
+            },
+            "appCalls": [
+              {
+                "requestId": "demo-1",
+                "answers": {
+                  "name": "Aki",
+                  "email": "old@example.test",
+                  "delivery": "shipping",
+                  "address": "1 Example Street"
+                }
+              }
+            ],
+            "restoreCalls": [],
+            "dom": {
+              "addressHidden": false,
+              "reviewHidden": true,
+              "answers": "{\n  \"name\": \"Aki\",\n  \"email\": \"old@example.test\",\n  \"delivery\": \"shipping\",\n  \"address\": \"1 Example Street\"\n}",
+              "errors": "email: 受信できるメールアドレスに修正してください。",
+              "appMessage": "必要な項目を入力・修正できます。",
+              "appResult": "操作番号：demo-1。下書き保持は提出完了の証拠ではありません。",
+              "undoMessage": "この例の元に戻す操作を開始できます。",
+              "undoDisabled": false,
+              "checkHidden": true,
+              "undoNext": "",
+              "scope": "回復する範囲：この書類のアーカイブ状態",
+              "residual": "",
+              "fixtureState": "模擬データの実状態：アーカイブ中、版 1"
+            }
+          },
+          "completed": {
+            "app": {
+              "phase": "submitted",
+              "draft": {
+                "name": "Aki",
+                "email": "new@example.test",
+                "delivery": "shipping",
+                "address": "1 Example Street"
+              },
+              "effective": {
+                "name": "Aki",
+                "email": "new@example.test",
+                "delivery": "shipping",
+                "address": "1 Example Street"
+              },
+              "errors": {},
+              "formError": "",
+              "operationId": "demo-2",
+              "reference": "demo-2",
+              "canSubmit": false,
+              "canCheck": false
+            },
+            "undo": {
+              "kind": "local",
+              "phase": "available",
+              "message": "",
+              "operationId": null,
+              "itemId": "archive-1",
+              "scope": "この書類のアーカイブ状態",
+              "residualEffects": [],
+              "canUndo": true,
+              "canCheck": false,
+              "nextAction": "模擬データの状態と操作番号を確認してください。"
+            },
+            "item": {
+              "id": "archive-1",
+              "revision": 1,
+              "archived": true
+            },
+            "appCalls": [
+              {
+                "requestId": "demo-1",
+                "answers": {
+                  "name": "Aki",
+                  "email": "old@example.test",
+                  "delivery": "shipping",
+                  "address": "1 Example Street"
+                }
+              },
+              {
+                "requestId": "demo-2",
+                "answers": {
+                  "name": "Aki",
+                  "email": "new@example.test",
+                  "delivery": "shipping",
+                  "address": "1 Example Street"
+                }
+              }
+            ],
+            "restoreCalls": [],
+            "dom": {
+              "addressHidden": false,
+              "reviewHidden": true,
+              "answers": "{\n  \"name\": \"Aki\",\n  \"email\": \"new@example.test\",\n  \"delivery\": \"shipping\",\n  \"address\": \"1 Example Street\"\n}",
+              "errors": "",
+              "appMessage": "提出完了を確認しました。",
+              "appResult": "確認できた申請番号：demo-2",
+              "undoMessage": "この例の元に戻す操作を開始できます。",
+              "undoDisabled": false,
+              "checkHidden": true,
+              "undoNext": "",
+              "scope": "回復する範囲：この書類のアーカイブ状態",
+              "residual": "",
+              "fixtureState": "模擬データの実状態：アーカイブ中、版 1"
+            }
+          }
+        }
+      },
+      {
+        "id": "DOM-DELIVERY",
+        "pass": true,
+        "observations": {
+          "app": {
+            "phase": "submitted",
+            "draft": {
+              "name": "Aki",
+              "email": "old@example.test",
+              "delivery": "pickup",
+              "address": "1 Example Street"
+            },
+            "effective": {
+              "name": "Aki",
+              "email": "old@example.test",
+              "delivery": "pickup"
+            },
+            "errors": {},
+            "formError": "",
+            "operationId": "demo-1",
+            "reference": "demo-1",
+            "canSubmit": false,
+            "canCheck": false
+          },
+          "undo": {
+            "kind": "local",
+            "phase": "available",
+            "message": "",
+            "operationId": null,
+            "itemId": "archive-1",
+            "scope": "この書類のアーカイブ状態",
+            "residualEffects": [],
+            "canUndo": true,
+            "canCheck": false,
+            "nextAction": "模擬データの状態と操作番号を確認してください。"
+          },
+          "item": {
+            "id": "archive-1",
+            "revision": 1,
+            "archived": true
+          },
+          "appCalls": [
+            {
+              "requestId": "demo-1",
+              "answers": {
+                "name": "Aki",
+                "email": "old@example.test",
+                "delivery": "pickup"
+              }
+            }
+          ],
+          "restoreCalls": [],
+          "dom": {
+            "addressHidden": true,
+            "reviewHidden": true,
+            "answers": "{\n  \"name\": \"Aki\",\n  \"email\": \"old@example.test\",\n  \"delivery\": \"pickup\"\n}",
+            "errors": "",
+            "appMessage": "提出完了を確認しました。",
+            "appResult": "確認できた申請番号：demo-1",
+            "undoMessage": "この例の元に戻す操作を開始できます。",
+            "undoDisabled": false,
+            "checkHidden": true,
+            "undoNext": "",
+            "scope": "回復する範囲：この書類のアーカイブ状態",
+            "residual": "",
+            "fixtureState": "模擬データの実状態：アーカイブ中、版 1"
+          }
+        }
+      },
+      {
+        "id": "DOM-LOST-REPLY",
+        "pass": true,
+        "observations": {
+          "app": {
+            "phase": "submitted",
+            "draft": {
+              "name": "Aki",
+              "email": "old@example.test",
+              "delivery": "shipping",
+              "address": "1 Example Street"
+            },
+            "effective": {
+              "name": "Aki",
+              "email": "old@example.test",
+              "delivery": "shipping",
+              "address": "1 Example Street"
+            },
+            "errors": {},
+            "formError": "",
+            "operationId": "demo-1",
+            "reference": "demo-1",
+            "canSubmit": false,
+            "canCheck": false
+          },
+          "undo": {
+            "kind": "local",
+            "phase": "available",
+            "message": "",
+            "operationId": null,
+            "itemId": "archive-1",
+            "scope": "この書類のアーカイブ状態",
+            "residualEffects": [],
+            "canUndo": true,
+            "canCheck": false,
+            "nextAction": "模擬データの状態と操作番号を確認してください。"
+          },
+          "item": {
+            "id": "archive-1",
+            "revision": 1,
+            "archived": true
+          },
+          "appCalls": [
+            {
+              "requestId": "demo-1",
+              "answers": {
+                "name": "Aki",
+                "email": "old@example.test",
+                "delivery": "shipping",
+                "address": "1 Example Street"
+              }
+            }
+          ],
+          "restoreCalls": [],
+          "dom": {
+            "addressHidden": false,
+            "reviewHidden": true,
+            "answers": "{\n  \"name\": \"Aki\",\n  \"email\": \"old@example.test\",\n  \"delivery\": \"shipping\",\n  \"address\": \"1 Example Street\"\n}",
+            "errors": "",
+            "appMessage": "提出完了を確認しました。",
+            "appResult": "確認できた申請番号：demo-1",
+            "undoMessage": "この例の元に戻す操作を開始できます。",
+            "undoDisabled": false,
+            "checkHidden": true,
+            "undoNext": "",
+            "scope": "回復する範囲：この書類のアーカイブ状態",
+            "residual": "",
+            "fixtureState": "模擬データの実状態：アーカイブ中、版 1"
+          }
+        }
+      },
+      {
+        "id": "DOM-COMPENSATION-FAILED",
+        "pass": true,
+        "observations": {
+          "pending": {
+            "app": {
+              "phase": "editing",
+              "draft": {
+                "name": "Aki",
+                "email": "old@example.test",
+                "delivery": "shipping",
+                "address": "1 Example Street"
+              },
+              "effective": {
+                "name": "Aki",
+                "email": "old@example.test",
+                "delivery": "shipping",
+                "address": "1 Example Street"
+              },
+              "errors": {},
+              "formError": "",
+              "operationId": null,
+              "reference": null,
+              "canSubmit": false,
+              "canCheck": false
+            },
+            "undo": {
+              "kind": "compensation",
+              "phase": "pending",
+              "message": "回復要求は受付済みです。回復完了は未確認です。",
+              "operationId": "demo-1",
+              "itemId": "archive-1",
+              "scope": "この書類のアーカイブ状態",
+              "residualEffects": [
+                "送信済みの通知は取り消されません。"
+              ],
+              "canUndo": false,
+              "canCheck": true,
+              "nextAction": "模擬データの状態と操作番号を確認してください。"
+            },
+            "item": {
+              "id": "archive-1",
+              "revision": 1,
+              "archived": true
+            },
+            "appCalls": [],
+            "restoreCalls": [
+              {
+                "requestId": "demo-1",
+                "itemId": "archive-1",
+                "expectedRevision": 1
+              }
+            ],
+            "dom": {
+              "addressHidden": false,
+              "reviewHidden": true,
+              "answers": "{\n  \"name\": \"Aki\",\n  \"email\": \"old@example.test\",\n  \"delivery\": \"shipping\",\n  \"address\": \"1 Example Street\"\n}",
+              "errors": "",
+              "appMessage": "必要な項目を入力・修正できます。",
+              "appResult": "",
+              "undoMessage": "回復要求は受付済みです。回復完了は未確認です。",
+              "undoDisabled": true,
+              "checkHidden": false,
+              "undoNext": "",
+              "scope": "回復する範囲：この書類のアーカイブ状態",
+              "residual": "送信済みの通知は取り消されません。",
+              "fixtureState": "模擬データの実状態：アーカイブ中、版 1"
+            }
+          },
+          "failed": {
+            "app": {
+              "phase": "editing",
+              "draft": {
+                "name": "Aki",
+                "email": "old@example.test",
+                "delivery": "shipping",
+                "address": "1 Example Street"
+              },
+              "effective": {
+                "name": "Aki",
+                "email": "old@example.test",
+                "delivery": "shipping",
+                "address": "1 Example Street"
+              },
+              "errors": {},
+              "formError": "",
+              "operationId": null,
+              "reference": null,
+              "canSubmit": false,
+              "canCheck": false
+            },
+            "undo": {
+              "kind": "compensation",
+              "phase": "failed",
+              "message": "補償処理が失敗しました。アーカイブ状態の回復は確認できていません。",
+              "operationId": "demo-1",
+              "itemId": "archive-1",
+              "scope": "この書類のアーカイブ状態",
+              "residualEffects": [
+                "送信済みの通知は取り消されません。"
+              ],
+              "canUndo": false,
+              "canCheck": false,
+              "nextAction": "模擬データの状態と操作番号を確認してください。"
+            },
+            "item": {
+              "id": "archive-1",
+              "revision": 1,
+              "archived": true
+            },
+            "appCalls": [],
+            "restoreCalls": [
+              {
+                "requestId": "demo-1",
+                "itemId": "archive-1",
+                "expectedRevision": 1
+              }
+            ],
+            "dom": {
+              "addressHidden": false,
+              "reviewHidden": true,
+              "answers": "{\n  \"name\": \"Aki\",\n  \"email\": \"old@example.test\",\n  \"delivery\": \"shipping\",\n  \"address\": \"1 Example Street\"\n}",
+              "errors": "",
+              "appMessage": "必要な項目を入力・修正できます。",
+              "appResult": "",
+              "undoMessage": "補償処理が失敗しました。アーカイブ状態の回復は確認できていません。",
+              "undoDisabled": true,
+              "checkHidden": true,
+              "undoNext": "模擬データの状態と操作番号を確認してください。 demo-1",
+              "scope": "回復する範囲：この書類のアーカイブ状態",
+              "residual": "送信済みの通知は取り消されません。",
+              "fixtureState": "模擬データの実状態：アーカイブ中、版 1"
+            }
+          }
+        }
+      },
+      {
+        "id": "DOM-COMPENSATION-SUCCESS",
+        "pass": true,
+        "observations": {
+          "app": {
+            "phase": "editing",
+            "draft": {
+              "name": "Aki",
+              "email": "old@example.test",
+              "delivery": "shipping",
+              "address": "1 Example Street"
+            },
+            "effective": {
+              "name": "Aki",
+              "email": "old@example.test",
+              "delivery": "shipping",
+              "address": "1 Example Street"
+            },
+            "errors": {},
+            "formError": "",
+            "operationId": null,
+            "reference": null,
+            "canSubmit": false,
+            "canCheck": false
+          },
+          "undo": {
+            "kind": "compensation",
+            "phase": "restored",
+            "message": "確認できた回復範囲：この書類のアーカイブ状態",
+            "operationId": "demo-1",
+            "itemId": "archive-1",
+            "scope": "この書類のアーカイブ状態",
+            "residualEffects": [
+              "送信済みの通知は取り消されません。"
+            ],
+            "canUndo": false,
+            "canCheck": false,
+            "nextAction": "模擬データの状態と操作番号を確認してください。"
+          },
+          "item": {
+            "id": "archive-1",
+            "revision": 1,
+            "archived": false
+          },
+          "appCalls": [],
+          "restoreCalls": [
+            {
+              "requestId": "demo-1",
+              "itemId": "archive-1",
+              "expectedRevision": 1
+            }
+          ],
+          "dom": {
+            "addressHidden": false,
+            "reviewHidden": true,
+            "answers": "{\n  \"name\": \"Aki\",\n  \"email\": \"old@example.test\",\n  \"delivery\": \"shipping\",\n  \"address\": \"1 Example Street\"\n}",
+            "errors": "",
+            "appMessage": "必要な項目を入力・修正できます。",
+            "appResult": "",
+            "undoMessage": "確認できた回復範囲：この書類のアーカイブ状態",
+            "undoDisabled": true,
+            "checkHidden": true,
+            "undoNext": "",
+            "scope": "回復する範囲：この書類のアーカイブ状態",
+            "residual": "送信済みの通知は取り消されません。",
+            "fixtureState": "模擬データの実状態：アーカイブ解除済み、版 1"
+          }
+        }
+      },
+      {
+        "id": "DOM-EXPIRED",
+        "pass": true,
+        "observations": {
+          "app": {
+            "phase": "editing",
+            "draft": {
+              "name": "Aki",
+              "email": "old@example.test",
+              "delivery": "shipping",
+              "address": "1 Example Street"
+            },
+            "effective": {
+              "name": "Aki",
+              "email": "old@example.test",
+              "delivery": "shipping",
+              "address": "1 Example Street"
+            },
+            "errors": {},
+            "formError": "",
+            "operationId": null,
+            "reference": null,
+            "canSubmit": false,
+            "canCheck": false
+          },
+          "undo": {
+            "kind": "local",
+            "phase": "expired",
+            "message": "この操作の期限が過ぎています。回復は実行していません。",
+            "operationId": null,
+            "itemId": "archive-1",
+            "scope": "この書類のアーカイブ状態",
+            "residualEffects": [],
+            "canUndo": false,
+            "canCheck": false,
+            "nextAction": "模擬データの状態と操作番号を確認してください。"
+          },
+          "item": {
+            "id": "archive-1",
+            "revision": 1,
+            "archived": true
+          },
+          "appCalls": [],
+          "restoreCalls": [],
+          "dom": {
+            "addressHidden": false,
+            "reviewHidden": true,
+            "answers": "{\n  \"name\": \"Aki\",\n  \"email\": \"old@example.test\",\n  \"delivery\": \"shipping\",\n  \"address\": \"1 Example Street\"\n}",
+            "errors": "",
+            "appMessage": "必要な項目を入力・修正できます。",
+            "appResult": "",
+            "undoMessage": "この操作の期限が過ぎています。回復は実行していません。",
+            "undoDisabled": true,
+            "checkHidden": true,
+            "undoNext": "模擬データの状態と操作番号を確認してください。 ",
+            "scope": "回復する範囲：この書類のアーカイブ状態",
+            "residual": "",
+            "fixtureState": "模擬データの実状態：アーカイブ中、版 1"
+          }
+        }
+      },
+      {
+        "id": "DOM-CONFLICT",
+        "pass": true,
+        "observations": {
+          "app": {
+            "phase": "editing",
+            "draft": {
+              "name": "Aki",
+              "email": "old@example.test",
+              "delivery": "shipping",
+              "address": "1 Example Street"
+            },
+            "effective": {
+              "name": "Aki",
+              "email": "old@example.test",
+              "delivery": "shipping",
+              "address": "1 Example Street"
+            },
+            "errors": {},
+            "formError": "",
+            "operationId": null,
+            "reference": null,
+            "canSubmit": false,
+            "canCheck": false
+          },
+          "undo": {
+            "kind": "local",
+            "phase": "conflict",
+            "message": "対象が変更されています。新しい状態を上書きしていません。",
+            "operationId": "demo-1",
+            "itemId": "archive-1",
+            "scope": "この書類のアーカイブ状態",
+            "residualEffects": [],
+            "canUndo": false,
+            "canCheck": false,
+            "nextAction": "模擬データの状態と操作番号を確認してください。"
+          },
+          "item": {
+            "id": "archive-1",
+            "revision": 2,
+            "archived": true
+          },
+          "appCalls": [],
+          "restoreCalls": [
+            {
+              "requestId": "demo-1",
+              "itemId": "archive-1",
+              "expectedRevision": 1
+            }
+          ],
+          "dom": {
+            "addressHidden": false,
+            "reviewHidden": true,
+            "answers": "{\n  \"name\": \"Aki\",\n  \"email\": \"old@example.test\",\n  \"delivery\": \"shipping\",\n  \"address\": \"1 Example Street\"\n}",
+            "errors": "",
+            "appMessage": "必要な項目を入力・修正できます。",
+            "appResult": "",
+            "undoMessage": "対象が変更されています。新しい状態を上書きしていません。",
+            "undoDisabled": true,
+            "checkHidden": true,
+            "undoNext": "模擬データの状態と操作番号を確認してください。 demo-1",
+            "scope": "回復する範囲：この書類のアーカイブ状態",
+            "residual": "",
+            "fixtureState": "模擬データの実状態：アーカイブ中、版 2"
+          }
+        }
+      },
+      {
+        "id": "DOM-LOCAL-UNDO",
+        "pass": true,
+        "observations": {
+          "app": {
+            "phase": "editing",
+            "draft": {
+              "name": "Aki",
+              "email": "old@example.test",
+              "delivery": "shipping",
+              "address": "1 Example Street"
+            },
+            "effective": {
+              "name": "Aki",
+              "email": "old@example.test",
+              "delivery": "shipping",
+              "address": "1 Example Street"
+            },
+            "errors": {},
+            "formError": "",
+            "operationId": null,
+            "reference": null,
+            "canSubmit": false,
+            "canCheck": false
+          },
+          "undo": {
+            "kind": "local",
+            "phase": "restored",
+            "message": "確認できた回復範囲：この書類のアーカイブ状態",
+            "operationId": "demo-1",
+            "itemId": "archive-1",
+            "scope": "この書類のアーカイブ状態",
+            "residualEffects": [],
+            "canUndo": false,
+            "canCheck": false,
+            "nextAction": "模擬データの状態と操作番号を確認してください。"
+          },
+          "item": {
+            "id": "archive-1",
+            "revision": 1,
+            "archived": false
+          },
+          "appCalls": [],
+          "restoreCalls": [
+            {
+              "requestId": "demo-1",
+              "itemId": "archive-1",
+              "expectedRevision": 1
+            }
+          ],
+          "dom": {
+            "addressHidden": false,
+            "reviewHidden": true,
+            "answers": "{\n  \"name\": \"Aki\",\n  \"email\": \"old@example.test\",\n  \"delivery\": \"shipping\",\n  \"address\": \"1 Example Street\"\n}",
+            "errors": "",
+            "appMessage": "必要な項目を入力・修正できます。",
+            "appResult": "",
+            "undoMessage": "確認できた回復範囲：この書類のアーカイブ状態",
+            "undoDisabled": true,
+            "checkHidden": true,
+            "undoNext": "",
+            "scope": "回復する範囲：この書類のアーカイブ状態",
+            "residual": "",
+            "fixtureState": "模擬データの実状態：アーカイブ解除済み、版 1"
+          },
+          "confirmCalls": 0
+        }
+      }
+    ]
+  },
+  "exploratory": [
+    {
+      "id": "E01-INACTIVE-ERROR",
+      "expected": "Pickup has no address requirement; the old address error must not block review.",
+      "pass": false,
+      "invalidShipping": {
+        "app": {
+          "phase": "editing",
+          "draft": {
+            "name": "Aki",
+            "email": "old@example.test",
+            "delivery": "shipping",
+            "address": ""
+          },
+          "effective": {
+            "name": "Aki",
+            "email": "old@example.test",
+            "delivery": "shipping",
+            "address": ""
+          },
+          "errors": {
+            "address": "入力内容を確認してください。"
+          },
+          "formError": "",
+          "operationId": null,
+          "reference": null,
+          "canSubmit": false,
+          "canCheck": false
+        },
+        "undo": {
+          "kind": "local",
+          "phase": "available",
+          "message": "",
+          "operationId": null,
+          "itemId": "archive-1",
+          "scope": "この書類のアーカイブ状態",
+          "residualEffects": [],
+          "canUndo": true,
+          "canCheck": false,
+          "nextAction": "模擬データの状態と操作番号を確認してください。"
+        },
+        "item": {
+          "id": "archive-1",
+          "revision": 1,
+          "archived": true
+        },
+        "appCalls": [],
+        "restoreCalls": [],
+        "dom": {
+          "addressHidden": false,
+          "reviewHidden": true,
+          "answers": "{\n  \"name\": \"Aki\",\n  \"email\": \"old@example.test\",\n  \"delivery\": \"shipping\",\n  \"address\": \"\"\n}",
+          "errors": "address: 入力内容を確認してください。",
+          "appMessage": "必要な項目を入力・修正できます。",
+          "appResult": "",
+          "undoMessage": "この例の元に戻す操作を開始できます。",
+          "undoDisabled": false,
+          "checkHidden": true,
+          "undoNext": "",
+          "scope": "回復する範囲：この書類のアーカイブ状態",
+          "residual": "",
+          "fixtureState": "模擬データの実状態：アーカイブ中、版 1"
+        }
+      },
+      "afterBranchChange": {
+        "app": {
+          "phase": "editing",
+          "draft": {
+            "name": "Aki",
+            "email": "old@example.test",
+            "delivery": "pickup",
+            "address": ""
+          },
+          "effective": {
+            "name": "Aki",
+            "email": "old@example.test",
+            "delivery": "pickup"
+          },
+          "errors": {
+            "address": "入力内容を確認してください。"
+          },
+          "formError": "",
+          "operationId": null,
+          "reference": null,
+          "canSubmit": false,
+          "canCheck": false
+        },
+        "undo": {
+          "kind": "local",
+          "phase": "available",
+          "message": "",
+          "operationId": null,
+          "itemId": "archive-1",
+          "scope": "この書類のアーカイブ状態",
+          "residualEffects": [],
+          "canUndo": true,
+          "canCheck": false,
+          "nextAction": "模擬データの状態と操作番号を確認してください。"
+        },
+        "item": {
+          "id": "archive-1",
+          "revision": 1,
+          "archived": true
+        },
+        "appCalls": [],
+        "restoreCalls": [],
+        "dom": {
+          "addressHidden": true,
+          "reviewHidden": true,
+          "answers": "{\n  \"name\": \"Aki\",\n  \"email\": \"old@example.test\",\n  \"delivery\": \"pickup\"\n}",
+          "errors": "address: 入力内容を確認してください。",
+          "appMessage": "必要な項目を入力・修正できます。",
+          "appResult": "",
+          "undoMessage": "この例の元に戻す操作を開始できます。",
+          "undoDisabled": false,
+          "checkHidden": true,
+          "undoNext": "",
+          "scope": "回復する範囲：この書類のアーカイブ状態",
+          "residual": "",
+          "fixtureState": "模擬データの実状態：アーカイブ中、版 1"
+        }
+      }
+    }
+  ]
+}

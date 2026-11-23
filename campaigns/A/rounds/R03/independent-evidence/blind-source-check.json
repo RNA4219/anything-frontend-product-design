@@ -1,0 +1,97 @@
+{
+  "scope": "Independent JSON/HTML source checks; not browser rendering or original arm execution evidence",
+  "input_sha256": "c9f287caa4b55b1a35f389c618732799bfb679e84c0bc5bafffe18de82d17a49",
+  "input_matches_oracle_snapshot": true,
+  "arms": {
+    "W": {
+      "snapshot_matches": {
+        "plan.json": true,
+        "design.md": true,
+        "preview.html": true
+      },
+      "goals": {
+        "g_select": [
+          {
+            "target": "s_compare",
+            "missing_plan_primary": [],
+            "missing_html_outside_details": [],
+            "capability_ids": [
+              "f_plans"
+            ],
+            "html_locators": {
+              "plan_id": 24,
+              "seat_limit": 34,
+              "annual_quota": 41,
+              "annual_total": 48,
+              "commitment": 55
+            }
+          }
+        ],
+        "g_review_cancel": [
+          {
+            "target": "s_cancel",
+            "missing_plan_primary": [],
+            "missing_html_outside_details": [],
+            "capability_ids": [
+              "f_cancel_info"
+            ],
+            "html_locators": {
+              "contract_id": 91,
+              "notice_days": 93,
+              "next_renewal_date": 95,
+              "refund_rule": 97
+            }
+          }
+        ]
+      },
+      "anchors_resolve": true,
+      "asset_tags": [],
+      "visual_intent_preserved": true
+    },
+    "Z": {
+      "snapshot_matches": {
+        "plan.json": true,
+        "design.md": true,
+        "preview.html": true
+      },
+      "goals": {
+        "g_select": [
+          {
+            "target": "s_plan_compare",
+            "missing_plan_primary": [],
+            "missing_html_outside_details": [],
+            "capability_ids": [
+              "f_plans"
+            ],
+            "html_locators": {
+              "plan_id": 28,
+              "seat_limit": 37,
+              "annual_quota": 44,
+              "annual_total": 51,
+              "commitment": 65
+            }
+          }
+        ],
+        "g_review_cancel": [
+          {
+            "target": "s_cancel_conditions",
+            "missing_plan_primary": [],
+            "missing_html_outside_details": [],
+            "capability_ids": [
+              "f_cancel_info"
+            ],
+            "html_locators": {
+              "contract_id": 101,
+              "notice_days": 103,
+              "next_renewal_date": 105,
+              "refund_rule": 107
+            }
+          }
+        ]
+      },
+      "anchors_resolve": true,
+      "asset_tags": [],
+      "visual_intent_preserved": true
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.1",
+  "case_id": "critic-warehouse-labels",
+  "visual_intent_id": "warehouse-existing",
+  "features": [
+    {
+      "id": "f_live",
+      "label": "発送ラベル発行",
+      "object": "shipment",
+      "outcome": "print-shipping-label",
+      "roles": [
+        "shipper"
+      ],
+      "goal_ids": [
+        "g_label"
+      ],
+      "requirement_ids": [
+        "r_label"
+      ],
+      "dependencies": [],
+      "mandatory": true,
+      "scope": "assigned-shipments",
+      "context_constraints": [
+        "warehouse-terminal",
+        "assigned-account"
+      ],
+      "evidence_refs": [
+        "e_required"
+      ],
+      "lifecycle": "existing",
+      "availability": "available",
+      "disposition": "keep",
+      "target": null,
+      "reason": "本日の発送に必要な能力を維持する",
+      "priority": "required",
+      "priority_basis": "明示された必須要件"
+    },
+    {
+      "id": "f_all",
+      "label": "全出荷記録",
+      "object": "shipment",
+      "outcome": "read-all-shipments",
+      "roles": [
+        "supervisor"
+      ],
+      "goal_ids": [
+        "g_all"
+      ],
+      "requirement_ids": [
+        "r_all"
+      ],
+      "dependencies": [],
+      "mandatory": true,
+      "scope": "all-shipments",
+      "context_constraints": [
+        "supervisor-account"
+      ],
+      "evidence_refs": [
+        "e_required"
+      ],
+      "lifecycle": "existing",
+      "availability": "available",
+      "disposition": "keep",
+      "target": null,
+      "reason": "本日の発送に必要な能力を維持する",
+      "priority": "required",
+      "priority_basis": "明示された必須要件"
+    }
+  ],
+  "screens": [
+    {
+      "id": "s_home",
+      "title": "発送対象",
+      "purpose": "対象の送り先を確認して発送ラベルを発行する",
+      "goal_ids": [
+        "g_label",
+        "g_all"
+      ],
+      "feature_ids": [
+        "f_live",
+        "f_all"
+      ],
+      "roles": [
+        "shipper",
+        "supervisor"
+      ],
+      "entry_for": [
+        "shipper",
+        "supervisor"
+      ],
+      "information": [
+        {
+          "id": "shipment_id",
+          "visibility": "primary",
+          "reason": "発行対象を確認するため"
+        },
+        {
+          "id": "destination",
+          "visibility": "primary",
+          "reason": "発行対象を確認するため"
+        },
+        {
+          "id": "all_shipments_report",
+          "visibility": "primary",
+          "reason": "共有画面に全出荷記録を無条件で表示する"
+        }
+      ]
+    }
+  ],
+  "navigation": [],
+  "goal_routes": [
+    {
+      "goal_id": "g_label",
+      "start_screen": "s_home",
+      "target_screen": "s_home",
+      "notes": "入口で発送対象を確認し発行する"
+    },
+    {
+      "goal_id": "g_all",
+      "start_screen": "s_home",
+      "target_screen": "s_home",
+      "notes": "共有入口に全出荷記録を表示する"
+    }
+  ],
+  "unresolved": [],
+  "decision_notes": [
+    "合成反例。人の利用効果を測定したものではない。"
+  ]
+}

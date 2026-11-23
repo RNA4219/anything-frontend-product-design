@@ -1,0 +1,30 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>中断からの再開と更新競合</title>
+<style>body{font-family:system-ui,sans-serif;max-width:55rem;margin:2rem auto;padding:0 1rem;line-height:1.7;color:#17212b}section{border:1px solid #bac3ca;padding:1rem;margin:1rem 0}label{display:block;margin:.7rem 0}input,select,button{font:inherit;padding:.4rem}button{margin:.3rem .4rem .3rem 0}pre{white-space:pre-wrap}[hidden]{display:none}.note{color:#465663}</style>
+<main><h1>文書タイトルの編集を再開する</h1><p>このページ内だけの模擬サービスです。実際のログイン・認可・安全な保存機構は実装していません。</p>
+<label>現在の認証・権限を模擬 <select id="session"><option value="A">A：閲覧・編集可</option><option value="expired">A：セッション失効</option><option value="readonly">A：再認証済み・閲覧のみ</option><option value="B">B：別アカウント</option></select></label>
+<p id="status" role="status"></p><button id="resume" type="button">保存した作業を開く・照合する</button><button id="reauth" type="button" hidden>Aで再認証を模擬する</button>
+<section id="work"><h2>保持した入力と、照合した事実</h2>
+<p id="input-status"></p>
+<label>今回の変更案 <input id="title"></label><p id="saved-value"></p><p id="observed-value"></p><p id="read-error"></p>
+<button id="review" type="button">変更内容を確認する</button><div id="review-panel" hidden><h3>今回確定する変更</h3><pre id="review-text"></pre><button id="commit" type="button">確認した条件で更新する</button></div>
+<p id="operation-result"></p><p id="operation-reference"></p><p id="recovery"></p></section>
+<section id="fixture"><h2>中断・競合の模擬操作</h2><label><input type="checkbox" id="lose-reply"> 更新は成立し、送信応答だけ失う</label><label><input type="checkbox" id="read-fails"> 現在の資源の照合だけ失敗する</label><label><input type="checkbox" id="record-expires"> 操作記録を照会できない状態にする</label>
+<button id="external-change" type="button">別の担当者による更新を模擬する</button><button id="reopen" type="button">保存した作業で画面を開き直す</button><p id="effects"></p></section>
+<p class="note">原子性はこの一つの文書に対するfixture契約です。関連する資源の更新、実ブラウザ、実際の認証基盤や保存領域の保証は別途検証します。</p></main>
+<script type="module">
+import {createResumableEdit} from './resume-and-conflict.mjs';
+const $=id=>document.getElementById(id);const cp=x=>JSON.parse(JSON.stringify(x));let revision=0,seq=0,effects=0;
+let server={etag:'z-original',values:{title:'Original title'}};const jobs=new Map();const apiCalls=[];
+const currentSession=()=>({accountId:$('session').value==='B'?'B':'A',authenticated:$('session').value!=='expired',canRead:true,canWrite:$('session').value==='A'});
+const api={load:async x=>{apiCalls.push({method:'load',...x});if(x.accountId!=='A')throw Error('denied');if($('read-fails').checked)throw Error('read failed');return cp(server);},lookup:async x=>{apiCalls.push({method:'lookup',...x});if(x.accountId!=='A')throw Error('denied');return $('record-expires').checked?{status:'expired'}:cp(jobs.get(x.operationId)||{status:'not_found'});},update:async x=>{apiCalls.push({method:'update',...x});if(x.accountId!=='A'||!currentSession().canWrite)return {status:'auth_required'};if(x.ifMatch!==server.etag)return {status:'conflict',observed:cp(server)};effects++;server={etag:`write-${++revision}`,values:{...server.values,...x.changes}};const result={status:'succeeded',operationResult:cp(server)};jobs.set(x.requestId,result);if($('lose-reply').checked)throw Error('response lost');return cp(result);}};
+let saved={ownerId:'A',resourceId:'doc-1',lastKnown:cp(server),draft:{title:'My draft title'},operation:null};
+let flow=createResumableEdit(api,{session:currentSession(),saved,nextId:()=>`operation-${++seq}`,recoveryAction:'操作履歴または管理者への照合で、対象操作の結果を確認してください。'});
+function render(){const v=flow.view(),visible=!['different_account','different_task','no_access','reauthenticate'].includes(v.phase);$('status').textContent=v.message||'保存した作業を開いて、現在の条件を確認してください。';$('work').hidden=!visible;$('fixture').hidden=!visible;$('resume').disabled=!v.canResume;$('reauth').hidden=v.phase!=='reauthenticate';
+ $('title').value=v.draft?.title||'';$('title').disabled=!['editing','conflict','review'].includes(v.phase);$('saved-value').textContent=v.lastKnown?`保存した作業で最後に確認した値：${v.lastKnown.values.title}`:'';$('observed-value').textContent=v.observedResource?`今回照合した資源の状態：${v.observedResource.values.title}`:'今回の資源状態は未確認です。';$('read-error').textContent=v.resourceReadError;$('review').disabled=!v.canReview;$('review-panel').hidden=v.phase!=='review';$('review-text').textContent=v.draft?JSON.stringify({observed:v.observedResource?.values,change:v.draft},null,2):'';$('commit').disabled=!v.canCommit;
+ $('input-status').textContent=!visible?'':v.operationOutcome==='succeeded'?'表示した入力で送信した操作の成功を確認しています。現在の資源状態とは分けて表示します。':v.operationId?'この入力を使う操作は送信済みです。結果は操作の状態を確認してください。':'保持した入力は今回の変更案です。入力の復帰だけでは更新を実行していません。';
+ $('operation-result').textContent=v.operationOutcome==='succeeded'?`対象操作で確認した結果：${v.operationResult?.values?.title??'結果の内容は未提供'}`:'';$('operation-reference').textContent=v.operationId?`操作番号：${v.operationId}`:'';$('recovery').textContent=v.phase==='unknown'?v.recoveryAction||'':'';$('effects').textContent=visible?`模擬サービスで成立した更新：${effects}回`:'';
+}
+async function act(fn){const promise=fn();render();await promise;render();}
+$('session').onchange=()=>{flow.setSession(currentSession());render();};$('resume').onclick=()=>act(()=>flow.resume());$('reauth').onclick=()=>{ $('session').value='A';flow.setSession(currentSession());return act(()=>flow.resume());};$('title').onchange=()=>{flow.edit('title',$('title').value);render();};$('review').onclick=()=>{flow.review();render();};$('commit').onclick=()=>act(()=>flow.commit());$('external-change').onclick=()=>{server={etag:`a-other-${++revision}`,values:{title:'Other editor title'}};render();};$('reopen').onclick=()=>{saved=flow.snapshot();flow=createResumableEdit(api,{session:currentSession(),saved,nextId:()=>`operation-${++seq}`,recoveryAction:'操作履歴または管理者への照合で、対象操作の結果を確認してください。'});return act(()=>flow.resume());};
+render();window.resumeDemo={getFlow:()=>flow,getServer:()=>cp(server),apiCalls,getEffects:()=>effects};
+</script></html>

@@ -1,0 +1,34 @@
+[
+  {
+    "path": "campaigns/A/rounds/R02/rubric.json",
+    "sha256": "785c1267f6bed97731ecaad19de7f2012e2fdcb56b359c8a47f733b0d8425e2d"
+  },
+  {
+    "path": "campaigns/A/rounds/R02/baseline-validator.py",
+    "sha256": "5f6054b1799dbfb7bba9f2d6f2f490821d9a12d7bbcad7884a6d0c6e6b39f597"
+  },
+  {
+    "path": "modules/product-information-architecture/checks/validate_plan.py",
+    "sha256": "36bfd1d9052b28ac4ca36ed1fbeb53c74c93c8e4ef39a59d96c2201c10d4a373"
+  },
+  {
+    "path": "modules/product-information-architecture/references/navigation-evidence.md",
+    "sha256": "7ac15e54aa096b9180c2fca5abe9122410157e865c38fdca04bdc0a30272d7a4"
+  },
+  {
+    "path": "modules/product-information-architecture/references/plan-contract.md",
+    "sha256": "b7f90275fb6aa6df891975a7acaa560809a7538d6d84ccadf1cba28bac843ca3"
+  },
+  {
+    "path": "registry/A/skills/A-IU-005.json",
+    "sha256": "2b7232061cd563f666b4872498028d97316fb52eb40d8f4b0107a23112998a92"
+  },
+  {
+    "path": "registry/A/skills/A-IU-006.json",
+    "sha256": "350b156fcc44a2ed89d3378521357e72b2edfb906ef6aea5ba8823c0b7087948"
+  },
+  {
+    "path": "registry/A/skills/A-IU-007.json",
+    "sha256": "2404e40e8eaaa263f3211bf8c43444149950ce45d673cd81d63a690c66d14dfa"
+  }
+]

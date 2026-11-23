@@ -1,0 +1,251 @@
+{
+  "source_id": "B-S201",
+  "canonical_url": "https://www.w3.org/TR/WCAG22/",
+  "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+  "type": "normative W3C Recommendation; explicitly marked informative material remains informative",
+  "authority": "W3C Accessibility Guidelines Working Group",
+  "capture_kind": "PARTIAL",
+  "sha256": "9d695da84bb1e7f8d89ba34a00daa16aefce296e40a833cf8dd5f1180ed5d932",
+  "locator": [
+    {
+      "section": "3.3.1 Error Identification (A)",
+      "source_lines": "L1304–L1311",
+      "local_lines": "254–261"
+    },
+    {
+      "section": "3.3.3 Error Suggestion (AA)",
+      "source_lines": "L1320–L1327",
+      "local_lines": "270–277"
+    },
+    {
+      "section": "3.3.4 Error Prevention (Legal, Financial, Data) (AA)",
+      "source_lines": "L1328–L1341",
+      "local_lines": "278–291"
+    },
+    {
+      "section": "3.3.6 Error Prevention (All) (AAA), boundary comparison only",
+      "source_lines": "L1350–L1363",
+      "local_lines": "300–313"
+    },
+    {
+      "section": "3.3.7 Redundant Entry (A)",
+      "source_lines": "L1364–L1381",
+      "local_lines": "314–331"
+    },
+    {
+      "section": "5.1 Interpreting Normative Requirements",
+      "source_lines": "L1462–L1465",
+      "local_lines": "902–905"
+    },
+    {
+      "section": "Glossary: essential",
+      "source_lines": "L1942–L1945",
+      "local_lines": "720–723"
+    },
+    {
+      "section": "Glossary: input error; following Note is informative",
+      "source_lines": "L2052–L2061",
+      "local_lines": "1301–1310"
+    },
+    {
+      "section": "Glossary: process",
+      "source_lines": "L2274–L2277",
+      "local_lines": "1501–1504"
+    }
+  ],
+  "observed_facts": [
+    "3.3.1は自動検出した入力エラーについて、該当項目を識別し、エラーをテキストで説明することを要求する。",
+    "3.3.3は自動検出かつ修正案が既知の場合に修正案を要求する。ただし内容のセキュリティまたは目的を危うくする場合を除く。",
+    "3.3.4の対象は法的約束、金融取引、データ保存システム内のユーザーが制御できるデータの変更・削除、ユーザーのテスト回答送信。可逆、入力検査と修正機会、確定前の確認・修正手段の少なくとも1つを要求する。",
+    "全情報送信への同種要件は3.3.6でLevel AAA。3.3.4はLevel AA。",
+    "3.3.7は同じプロセス中に再入力が必要な既入力またはユーザーに提供済みの情報を、自動入力するか選択可能にする。再入力が本質的、セキュリティのため必要、以前の情報がもはや有効でない、という3例外を列挙する。",
+    "essentialは除去すると内容の情報または機能を根本的に変え、適合する別方法では達成できないもの。processは活動の完遂に必要な各利用者操作の連なり。",
+    "5.1は本文の規範性と、導入・付録・非規範表示部分・図・例・注の非規範性を区別する。",
+    "2.2.5はLevel AAAで、認証済みsessionが失効した場合、再認証後にデータを失わず活動を続けられることを要求する。",
+    "2.2.1はLevel Aで時間制限の調整等を扱い、2.2.5の達成と同一の要件ではない。",
+    "2.2.6はLevel AAAの警告要件であり、20時間を超える保持を一律の最低保存期間として命じてはいない。"
+  ],
+  "limitations": [
+    "これはWCAGへの適合要件であり、対象サービスの法的義務やアプリ全体の適合を証明しない。",
+    "保存されたのは必要節を含むwebツール抽出の断片。raw HTMLや規範全文の取得ではない。",
+    "入力保持の全実装、依存データの無効化アルゴリズム、サーバーの取消保証は規定しない。",
+    "3.3.4を不可逆操作だけに狭めるのも不正確。規範の列挙対象を確認した上で防止手段を選ぶ。"
+  ],
+  "upstream_refs": [
+    {
+      "url": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+      "relationship": "This version link observed at source L5–L6; dated target not separately acquired"
+    },
+    {
+      "url": null,
+      "parent_url": "https://www.w3.org/TR/WCAG22/",
+      "observed_link_id": 186,
+      "relationship": "Understanding WCAG 2.2 supporting-document link observed at source L223; destination not independently resolved"
+    }
+  ],
+  "capture_file": "B-S201-w3c-wcag22.web.txt",
+  "capture_storage": "Private research archive",
+  "checked_at": "2026-11-23T07:15:18.360160+00:00",
+  "introduced_round": 2,
+  "redistribution": "Original captured text remains private. This public record contains original paraphrases, URLs and section locators only.",
+  "url": "https://www.w3.org/TR/WCAG22/",
+  "section": [
+    {
+      "section": "3.3.1 Error Identification (A)",
+      "source_lines": "L1304–L1311",
+      "local_lines": "254–261"
+    },
+    {
+      "section": "3.3.3 Error Suggestion (AA)",
+      "source_lines": "L1320–L1327",
+      "local_lines": "270–277"
+    },
+    {
+      "section": "3.3.4 Error Prevention (Legal, Financial, Data) (AA)",
+      "source_lines": "L1328–L1341",
+      "local_lines": "278–291"
+    },
+    {
+      "section": "3.3.6 Error Prevention (All) (AAA), boundary comparison only",
+      "source_lines": "L1350–L1363",
+      "local_lines": "300–313"
+    },
+    {
+      "section": "3.3.7 Redundant Entry (A)",
+      "source_lines": "L1364–L1381",
+      "local_lines": "314–331"
+    },
+    {
+      "section": "5.1 Interpreting Normative Requirements",
+      "source_lines": "L1462–L1465",
+      "local_lines": "902–905"
+    },
+    {
+      "section": "Glossary: essential",
+      "source_lines": "L1942–L1945",
+      "local_lines": "720–723"
+    },
+    {
+      "section": "Glossary: input error; following Note is informative",
+      "source_lines": "L2052–L2061",
+      "local_lines": "1301–1310"
+    },
+    {
+      "section": "Glossary: process",
+      "source_lines": "L2274–L2277",
+      "local_lines": "1501–1504"
+    }
+  ],
+  "read_status": "Multiple saved captures, each with explicit FULL/PARTIAL scope; see capture_history. Original capture fields retained.",
+  "capture_sha256": "9d695da84bb1e7f8d89ba34a00daa16aefce296e40a833cf8dd5f1180ed5d932",
+  "source_file_name": "B-S201-w3c-wcag22.web.txt",
+  "limits": [
+    "これはWCAGへの適合要件であり、対象サービスの法的義務やアプリ全体の適合を証明しない。",
+    "保存されたのは必要節を含むwebツール抽出の断片。raw HTMLや規範全文の取得ではない。",
+    "入力保持の全実装、依存データの無効化アルゴリズム、サーバーの取消保証は規定しない。",
+    "3.3.4を不可逆操作だけに狭めるのも不正確。規範の列挙対象を確認した上で防止手段を選ぶ。",
+    "既存B-S201への追加captureであり、新規sourceとして重複登録しない。既存captureは変更していない。",
+    "webツール抽出の必要節を保存した。raw HTMLや全文ではない。",
+    "AAAをAA一般義務へ読み替えない。認証手順、account分離、保存方式、サーバー操作結果をこのSCだけで規定しない。"
+  ],
+  "capture_history": [
+    {
+      "round": 2,
+      "file_name": "B-S201-w3c-wcag22.web.txt",
+      "capture_sha256": "9d695da84bb1e7f8d89ba34a00daa16aefce296e40a833cf8dd5f1180ed5d932",
+      "read_status": "PARTIAL: exact web-extracted text saved privately; not raw HTML",
+      "section": [
+        {
+          "section": "3.3.1 Error Identification (A)",
+          "source_lines": "L1304–L1311",
+          "local_lines": "254–261"
+        },
+        {
+          "section": "3.3.3 Error Suggestion (AA)",
+          "source_lines": "L1320–L1327",
+          "local_lines": "270–277"
+        },
+        {
+          "section": "3.3.4 Error Prevention (Legal, Financial, Data) (AA)",
+          "source_lines": "L1328–L1341",
+          "local_lines": "278–291"
+        },
+        {
+          "section": "3.3.6 Error Prevention (All) (AAA), boundary comparison only",
+          "source_lines": "L1350–L1363",
+          "local_lines": "300–313"
+        },
+        {
+          "section": "3.3.7 Redundant Entry (A)",
+          "source_lines": "L1364–L1381",
+          "local_lines": "314–331"
+        },
+        {
+          "section": "5.1 Interpreting Normative Requirements",
+          "source_lines": "L1462–L1465",
+          "local_lines": "902–905"
+        },
+        {
+          "section": "Glossary: essential",
+          "source_lines": "L1942–L1945",
+          "local_lines": "720–723"
+        },
+        {
+          "section": "Glossary: input error; following Note is informative",
+          "source_lines": "L2052–L2061",
+          "local_lines": "1301–1310"
+        },
+        {
+          "section": "Glossary: process",
+          "source_lines": "L2274–L2277",
+          "local_lines": "1501–1504"
+        }
+      ],
+      "stored": "private research archive"
+    },
+    {
+      "round": 3,
+      "file_name": "B-S201-wcag22-reauth.web.txt",
+      "capture_sha256": "4db80cd707ac0d8829e0c4ef57db72e9566cc0f56e84243855c0643234b0e47e",
+      "capture_kind": "PARTIAL",
+      "section": [
+        {
+          "section": "2.2.5 Re-authenticating (Level AAA)",
+          "source_lines": "L837–L844",
+          "local_lines": "132–139"
+        },
+        {
+          "section": "2.2.1 Timing Adjustable (Level A), context",
+          "source_lines": "L754–L792",
+          "local_lines": "49–87"
+        },
+        {
+          "section": "2.2.6 Timeouts (Level AAA), boundary only",
+          "source_lines": "L845–L855",
+          "local_lines": "140–150"
+        }
+      ],
+      "stored": "private research archive"
+    }
+  ],
+  "additional_sections": [
+    [
+      {
+        "section": "2.2.5 Re-authenticating (Level AAA)",
+        "source_lines": "L837–L844",
+        "local_lines": "132–139"
+      },
+      {
+        "section": "2.2.1 Timing Adjustable (Level A), context",
+        "source_lines": "L754–L792",
+        "local_lines": "49–87"
+      },
+      {
+        "section": "2.2.6 Timeouts (Level AAA), boundary only",
+        "source_lines": "L845–L855",
+        "local_lines": "140–150"
+      }
+    ]
+  ],
+  "last_extended_at": "2026-11-23T07:48:23.986530+00:00"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "R03-R1-S02",
+  "url": "https://design-system.service.gov.uk/components/details/",
+  "title": "Details",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_design_guidance",
+  "retrieved_at": "2026-11-23T07:53:23.057Z",
+  "sha256": "6b0f771195da938f397e5a0109eb7652753e2edb7dc20f4583edd205b2d12f72",
+  "sha256_scope": "selected Web excerpt file only; not original HTML/PDF",
+  "version": "Undated live official guidance as retrieved; publication date not inferred from crawl time.",
+  "locator": [
+    {
+      "remote": "When to use this component; web L90–92",
+      "local_line": 11
+    },
+    {
+      "remote": "When not to use this component; web L94–96",
+      "local_line": 15
+    },
+    {
+      "remote": "Write clear link text; web L141–143",
+      "local_line": 19
+    }
+  ],
+  "verified_claims": [
+    {
+      "claim": "GOV.UKは一部利用者だけが必要とする内容にDetailsを使える一方、大多数が必要とする内容を隠す用途を避けるよう案内する。",
+      "locator": "When to use / When not to use; web L90–96"
+    },
+    {
+      "claim": "展開リンクは、開く必要があるか判断しやすい短く説明的な文言を求める。",
+      "locator": "Write clear link text; web L141–143"
+    },
+    {
+      "claim": "国籍を回答できない場合の代替手段をDetails内に置く例があり、条件付き説明を一律に禁止していない。",
+      "locator": "Details example HTML; web L67–77"
+    }
+  ],
+  "limits": [
+    "『大多数』と『一部』の助言であり、全画面・全情報のクリック禁止を規定していない。",
+    "条件付きの補助説明をDetailsに置く例は、当該判断で必要な具体値を隠してよいという保証ではない。",
+    "リンク文言以外の部品選択、展開動作、キーボード、ARIA、規格適合はCへ引き継ぐ。"
+  ],
+  "source_edges": [
+    {
+      "from_url": "https://design-system.dwp.gov.uk/choose-a-component/how-to-choose-components/what-a-component-means",
+      "to_url": "https://design-system.service.gov.uk/components/details/",
+      "relation": "本文のContent the user can skip表からDetails公式説明へ追跡",
+      "tool": "web.click",
+      "ref": "turn198942826view0",
+      "link_id": 159,
+      "from_locator": "web L369",
+      "result_ref": "turn816678240view1",
+      "verified": true
+    }
+  ],
+  "acquisition": {
+    "imozuru_fetch": "FAIL_DNS",
+    "fetch_log": "PRIVATE_CHECKPOINT/research/R03/researcher-1/logs/fetch-govuk-details.json",
+    "method": "selected original wording from Web extraction",
+    "original_html_downloaded": false,
+    "original_pdf_downloaded": false,
+    "full_original_archive": false,
+    "web_refs": [
+      "turn198942826view1",
+      "turn816678240view1"
+    ]
+  },
+  "publication_safety": "Source excerpts remain private. Publish only minimal metadata and original Japanese paraphrases if needed.",
+  "source_id": "R03-R1-S02",
+  "verified_in_current_round": "R03",
+  "canonical_url": "https://design-system.service.gov.uk/components/details"
+}

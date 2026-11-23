@@ -1,0 +1,102 @@
+{
+  "skill_id": "A-IU-007",
+  "domain": "product-information-architecture",
+  "trigger": "画面の新設、統合、分割、詳細画面への移動を検討するとき。「一画面一機能」「一話題一画面」を適用したくなった場合も点検する。",
+  "intent": "判断に必要な情報のまとまりで画面責務を決める",
+  "required_inputs": [
+    "具体的なタスクの判断点、必要情報、比較対象、機能間の依存。",
+    "roles、権限、対象・成果の違い、端末や件数の制約。",
+    "A06の入口・経路案と、維持すべきvisual_intent。",
+    "goalの完了条件、role、開始場所、選択操作と期待対象・粒度",
+    "実際の表示ラベル、選択時に参照できる関連文脈、関連付けの根拠または未確認状態",
+    "screensのpurpose/goal_ids/feature_ids/information、navigation、goal_routes",
+    "画面・プレビューの有無、実操作結果、C/Dの検証状態"
+  ],
+  "decision_rules": [
+    "一画面のpurposeは一つの判断または達成の局面を表す。「設定一般」「管理全般」だけで済ませない。",
+    "同じ判断のための比較対象・情報・一括処理は同居させてよい。機能数から画面数を決めない。",
+    "別の判断、独立した対象範囲、異なる情報権限がある場合に分割を検討する。分割後に必要な同時参照を壊さない。",
+    "role/object/outcomeの異なる機能は、画面を共用しても別featureのkeepを維持する。共有画面はmergeの根拠ではない。",
+    "複雑なフォームの段階分けを、候補比較・一覧探索・監視等へ一律に転用しない。",
+    "操作手順を短く見せるために、必要な確認情報や結果の判断材料を除去しない。",
+    "Understandingのリンクとタイトルの連続性は良い実践の説明。目的の違うリンクの文言を区別する利点と、関連文脈付き短ラベルの許容を保つ。",
+    "既存契約のtargetがgoalを担当し、keep機能・必要情報をprimaryで持つ条件を継承する。primaryは展開不要でありスクロール禁止ではない。"
+  ],
+  "procedure": [
+    "1. タスクを具体的な判断点へ分け、それぞれに「問い・見る情報ID・比較対象・使う機能・次に必要な結果」を並べる。",
+    "2. 同時参照が必要な判断材料を同じまとまりへ置く。前画面の値の記憶、転記、行き来を要求する案を特定する。",
+    "3. まとまりごとにpurposeを書き、画面候補を作る。複数機能が一つの判断を支えるなら同居させる。",
+    "4. 統合案と分割案を、目標の達成、文脈維持、権限、必要情報の所在で比較する。見た目の空白量では選ばない。",
+    "5. 共有画面でrole別の情報権限を契約上表せない場合、画面を分けるか、B/Cへのblocking残件を置く。制限情報を全roleに利用可能と記述しない。",
+    "6. 各目標のtargetを選び、その画面でneeded_informationをprimaryにする。別画面にあるだけで満たしたと数えない。",
+    "7. A06の経路を更新する。画面移動に伴う保存・取消・エラー等はBへ渡し、勝手な状態遷移を追加しない。",
+    "タスクごとに開始場所、選択操作、表示ラベルと関連文脈、期待対象・粒度、実際の判断場所、着地を対応させる。候補選択・Enter・保存検索を同じ経路にしない。短ラベルは選択時の文脈を含めて目的を照合し、別画面の記憶や到着後の情報を文脈へ数えない。プログラム上の関連付けはCへ渡す。",
+    "ラベルと着地タイトル・内容は同じ目的を伝えるかを確かめ、文字列の完全一致を強制しない。対象粒度はgoalで決める。比較・選択で完了するgoalは実際の判断画面をtargetとし、keep機能と必要情報を置く。保存完了がgoalならその完了条件に沿うtargetを選び、前段の判断情報も残す。",
+    "画面がある場合は対象操作の着地を計画と照合する。未操作・画面なし・文脈未確認は未確認とし、グラフ・意味・実装・人の理解を分ける。対応は既存rationale/notes/decision_notes、残件はunresolvedへ記す。checker回避のため実UIにないラベルや文脈を創作しない。"
+  ],
+  "expected_outputs": [
+    "`screens`に`id/title/purpose/goal_ids/feature_ids/roles/entry_for/information`を記録する。",
+    "feature_idsはkeep正本のみ。informationはその画面での必要性をreasonに書く。primaryは展開不要で参照できることを意味し、スクロールを禁止しない。",
+    "画面の共有・分割理由と比較した代替案はdecision_notesへ残し、goal_routesを更新する。"
+  ],
+  "dependencies": [
+    "A-IU-001"
+  ],
+  "exceptions": [
+    "「一つの判断局面」というpurposeの書き方は本Skillの導出。画面数やタスク分解の最適解を保証しない。",
+    "比較対象数・データ量・端末が不明なら、同時参照できる実装は未確認。構造上の同居だけで表示可能・操作可能と結論しない。",
+    "同じ短ラベルでも関連文脈で目的を区別できれば許容候補。実装・人の理解は別途未確認になり得る。意図を全員に伏せるゲーム等の例外を通常業務の文脈不足へ転用しない。",
+    "商品全体がgoalならvariant移動を強制せず、variant選択がgoalなら商品レベルの一致だけで成功としない。",
+    "比較・選択と保存成功が異なるgoalなら完了条件ごとにtargetを選べる。全goalを一覧か完了画面へ固定しない。"
+  ],
+  "failure_modes": [
+    "一機能ずつ別画面へ分けて比較不能にする。同じ画面で扱うから異なる役割や成果を一機能に統合する。",
+    "一覧が短く見えることを目的に、候補の選択に必要な属性を詳細へ隠す。異なる権限の情報を共通画面へ無条件に合流する。",
+    "R02の条件を落として検索範囲・旧入口・選択時の文脈を確定扱いする。"
+  ],
+  "verification": [
+    "具体例をrole別にたどり、各判断時点で必要な情報が展開不要で参照できるか確認する。比較のために記憶・転記が必要なら再検討する。",
+    "画面数が少ないことを合格条件にしない。情報権限や操作状態の未確認事項を、画面責務の確定と分けて報告する。",
+    "探索の正例/反例と、選択場所・期待対象・実際の着地を照合する。実施範囲を分けて報告する。"
+  ],
+  "source_refs": [
+    "A-S005",
+    "A-S008",
+    "A-S010",
+    "A-S011",
+    "A-S019",
+    "R02-R1-S01",
+    "R02-R1-S02",
+    "R02-R2-S02",
+    "R02-R2-S03"
+  ],
+  "confidence": {
+    "source_support": "R02 conditions checked against six bounded primary-source records; inherited sources remain identified separately",
+    "transfer": "cross-domain synthetic task pending",
+    "empirical_skill_effect": "unverified"
+  },
+  "status": "REVISE",
+  "version": "1.1.0",
+  "provenance": {
+    "kind": "inherited",
+    "repository": "RNA4219/anything-frontend-art-direction",
+    "revision": "97b19c29c0b63acfee9ad437f93af081ac0c6ef8",
+    "path": "extensions/A/references/information-architecture.md",
+    "original_unit": "A07"
+  },
+  "implementation": "modules/product-information-architecture/references/navigation-evidence.md",
+  "history": [
+    {
+      "round": "R01",
+      "action": "migrated_without_novelty_credit",
+      "status": "DRAFT"
+    },
+    {
+      "round": "R02",
+      "action": "condition_refinement",
+      "extraction": "R02-A-U03",
+      "status": "REVISE",
+      "at": "2026-11-23T07:30:14.179976+00:00"
+    }
+  ]
+}

@@ -1,0 +1,591 @@
+{
+  "round": "R02",
+  "role": "researcher-2",
+  "question": "正本化・旧入口・範囲付きナビゲーション・分類／フィルタの選択は、どの条件で発見可能性を失い、何を確認すべきか。",
+  "completed_at": "2026-11-23T07:15:55.388577+00:00",
+  "search_strategy": {
+    "strategy": "公式製品の改名・検索・フィルタ仕様から、統合と検索の例外を探す。規格／正式手法担当のResearcher-1とは別の反例探索。",
+    "queries": [
+      {
+        "q": "site:docs.github.com renaming repository redirects exceptions"
+      },
+      {
+        "q": "site:help.shopify.com filters 5000 products empty values category"
+      },
+      {
+        "q": "site:docs.github.com code search limitations default branch fork"
+      },
+      {
+        "q": "site:docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository \"redirect\" \"name\"",
+        "domains": [
+          "docs.github.com"
+        ],
+        "recency": 365
+      },
+      {
+        "q": "site:help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-filters \"first 1,000\" \"variant\"",
+        "domains": [
+          "help.shopify.com"
+        ],
+        "recency": 365
+      }
+    ],
+    "selection": "既知28URLを除外し、異なる3課題に関わる公式資料3件を採用。新しいGitHub Code Searchとlegacy検索の仕様を分離した。",
+    "scope_limits": "英語のGitHubとShopifyに偏る。全製品・全言語・全端末・全連携を網羅していない。",
+    "hits_recording": "ツールは検索バッチのヒットを統合して返すため、全37件と3件をバッチ単位でそのまま記録。個々の検索語への帰属は復元せず不明とした。リンク追跡2件は別記録。",
+    "stop_reason": "親から3件で十分との指示を受け、追加探索を終了。新規3件の本文抽出と2本の実リンク追跡を記録。飽和・網羅・利用者効果の確認とは扱わない。",
+    "saturation_claimed": false,
+    "subagents_spawned": 0
+  },
+  "actual_tool_use": {
+    "skill_read": [
+      "imozuru README.md",
+      "imozuru SKILL.md",
+      "product-information-architecture SKILL.md",
+      "references/information-architecture.md",
+      "references/sources.md",
+      "R02 charter.json",
+      "known source registry"
+    ],
+    "web_calls": 3,
+    "search_queries": 5,
+    "explicit_open_count": 3,
+    "followed_link_count": 2,
+    "cli_help": "fetch.py --helpはusageを出力し終了2。digest.pyとreport.pyは--help非対応でFileNotFoundError終了1。現行コードのusageとmainを確認して正規構文で実行した。",
+    "fetch": {
+      "attempted": 3,
+      "ok": 0,
+      "dns_failures": 3,
+      "log": "PRIVATE_CHECKPOINT/research/R02/researcher-2/fetch-log.jsonl",
+      "fallback": "検証したWeb抜粋をsourceごとに保存しSHA-256とWeb/local位置を記録。"
+    },
+    "digest_add": {
+      "executed": true,
+      "records": 4,
+      "hits_including_followed_links": 42,
+      "log": "PRIVATE_CHECKPOINT/research/R02/researcher-2/logs/digest-add.json"
+    },
+    "validation": [
+      {
+        "step": "report-check",
+        "log": "PRIVATE_CHECKPOINT/research/R02/researcher-2/logs/report-check.json",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "PRIVATE_CHECKPOINT/tooling/imozuru/skills/imozuru/scripts/report.py",
+          "PRIVATE_CHECKPOINT/research/R02/researcher-2",
+          "--check"
+        ],
+        "at": "2026-11-23T07:15:55.497121+00:00",
+        "returncode": 0,
+        "stdout": "照合 OK: 抜き書き 11 件がすべて原文のとおり\n",
+        "stderr": ""
+      },
+      {
+        "step": "report-render",
+        "log": "PRIVATE_CHECKPOINT/research/R02/researcher-2/logs/report-render.json",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "PRIVATE_CHECKPOINT/tooling/imozuru/skills/imozuru/scripts/report.py",
+          "PRIVATE_CHECKPOINT/research/R02/researcher-2"
+        ],
+        "at": "2026-11-23T07:15:55.569841+00:00",
+        "returncode": 0,
+        "stdout": "照合 OK: 抜き書き 11 件がすべて原文のとおり\n→ PRIVATE_CHECKPOINT/research/R02/researcher-2/report.html\n",
+        "stderr": ""
+      },
+      {
+        "step": "digest-check",
+        "log": "PRIVATE_CHECKPOINT/research/R02/researcher-2/logs/digest-check.json",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "PRIVATE_CHECKPOINT/tooling/imozuru/skills/imozuru/scripts/digest.py",
+          "PRIVATE_CHECKPOINT/research/R02/researcher-2",
+          "--check"
+        ],
+        "at": "2026-11-23T07:15:55.632207+00:00",
+        "returncode": 0,
+        "stdout": "照合 OK: 解説の文がすべて原文の引用を持つ・検索の記録 4本\n",
+        "stderr": ""
+      },
+      {
+        "step": "digest-render",
+        "log": "PRIVATE_CHECKPOINT/research/R02/researcher-2/logs/digest-render.json",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+          "PRIVATE_CHECKPOINT/tooling/imozuru/skills/imozuru/scripts/digest.py",
+          "PRIVATE_CHECKPOINT/research/R02/researcher-2"
+        ],
+        "at": "2026-11-23T07:15:55.733969+00:00",
+        "returncode": 0,
+        "stdout": "照合 OK: 解説の文がすべて原文の引用を持つ・検索の記録 4本\n→ PRIVATE_CHECKPOINT/research/R02/researcher-2/digest.html\n",
+        "stderr": ""
+      }
+    ],
+    "no_product_ui_or_user_test": true
+  },
+  "source_records": [
+    {
+      "id": "R02-R2-S01",
+      "url": "https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository",
+      "canonical_url": "https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository",
+      "title": "Renaming a repository",
+      "publisher": "GitHub",
+      "source_type": "official_product_documentation",
+      "retrieved_at": "2026-11-23",
+      "sha256": "137719d8db85fa8b220babee7157d63989be5a205ab01f48695733cf2dcf4e35",
+      "locator": {
+        "web_ref": "turn475801247view0",
+        "web_lines": [
+          {
+            "claim_id": "S01-C1",
+            "text": "GitHubのリポジトリ改名では既存Web情報とGit操作に転送がある一方、PagesのURLとActions呼出しには別の扱いがある。",
+            "locator": "Web L20-L37"
+          },
+          {
+            "claim_id": "S01-C2",
+            "text": "改名前の名前で新しいリポジトリを作ると、改名後への転送は機能しなくなる。",
+            "locator": "Web L39-L41"
+          }
+        ],
+        "local_line_anchors": {
+          "20": 30,
+          "41": 51
+        }
+      },
+      "verified_claims": [
+        {
+          "claim_id": "S01-C1",
+          "text": "GitHubのリポジトリ改名では既存Web情報とGit操作に転送がある一方、PagesのURLとActions呼出しには別の扱いがある。",
+          "locator": "Web L20-L37"
+        },
+        {
+          "claim_id": "S01-C2",
+          "text": "改名前の名前で新しいリポジトリを作ると、改名後への転送は機能しなくなる。",
+          "locator": "Web L39-L41"
+        }
+      ],
+      "limits": [
+        "GitHubの改名仕様であり、全サービスの移行保証ではない。転送維持の利用者効果・移行失敗率・現行プロジェクトの旧入口動作は測定していない。"
+      ],
+      "source_edges": [],
+      "acquisition": {
+        "imozuru_fetch": "FAIL_DNS",
+        "method": "public web tool text extraction fallback",
+        "original_html_downloaded": false,
+        "full_original_archive": false,
+        "relevant_passages_verified": true
+      },
+      "publication": "公開可能なのはURL・独自要約・必要最小限の短い引用。原文抜粋と取得ログはprivateに保持。"
+    },
+    {
+      "id": "R02-R2-S02",
+      "url": "https://docs.github.com/en/search-github/github-code-search/using-github-code-search",
+      "canonical_url": "https://docs.github.com/en/search-github/github-code-search/using-github-code-search",
+      "title": "Using GitHub Code Search",
+      "publisher": "GitHub",
+      "source_type": "official_product_documentation",
+      "retrieved_at": "2026-11-23",
+      "sha256": "bb1cd0d737a69f87d9e3bb39c6c2a9ea71f3b54e857d86f3c5508c8ea57c0fc7",
+      "locator": {
+        "web_ref": "turn475801247view1",
+        "web_lines": [
+          {
+            "claim_id": "S02-C1",
+            "text": "GitHub Code Searchは権限のあるコードを対象とし、全コードの索引を保証せず、検索対象のブランチも限定する。",
+            "locator": "Web L37-L40"
+          },
+          {
+            "claim_id": "S02-C2",
+            "text": "検索候補を選ぶと対象ページへ直接移動する経路があり、検索語のEnter送信や保存検索の選択とは遷移が異なる。",
+            "locator": "Web L48-L56, L80-L92"
+          }
+        ],
+        "local_line_anchors": {
+          "37": 47,
+          "56": 66,
+          "80": 90,
+          "92": 102
+        }
+      },
+      "verified_claims": [
+        {
+          "claim_id": "S02-C1",
+          "text": "GitHub Code Searchは権限のあるコードを対象とし、全コードの索引を保証せず、検索対象のブランチも限定する。",
+          "locator": "Web L37-L40"
+        },
+        {
+          "claim_id": "S02-C2",
+          "text": "検索候補を選ぶと対象ページへ直接移動する経路があり、検索語のEnter送信や保存検索の選択とは遷移が異なる。",
+          "locator": "Web L48-L56, L80-L92"
+        }
+      ],
+      "limits": [
+        "新しいGitHub Code Searchの説明であり、legacy searchやEnterprise Server別版の仕様を混在させない。検索0件から物理的不在を推定する実験ではない。"
+      ],
+      "source_edges": [
+        {
+          "from": "R02-R2-S02",
+          "from_locator": "Using GitHub Code Search, Web L38, link 9",
+          "to_url": "https://docs.github.com/en/search-github/github-code-search/about-github-code-search",
+          "relation": "official product documentation links to known limitations",
+          "tool": "web_run.click",
+          "followed": true,
+          "retrieval_ref": "turn501380594view0",
+          "target_locator": "Limitations, Web L42-L59",
+          "registered_as_new_source": false,
+          "note": "本文リンクを実際に開いた。追加登録・数値規則の一般化はしない。"
+        }
+      ],
+      "acquisition": {
+        "imozuru_fetch": "FAIL_DNS",
+        "method": "public web tool text extraction fallback",
+        "original_html_downloaded": false,
+        "full_original_archive": false,
+        "relevant_passages_verified": true
+      },
+      "publication": "公開可能なのはURL・独自要約・必要最小限の短い引用。原文抜粋と取得ログはprivateに保持。"
+    },
+    {
+      "id": "R02-R2-S03",
+      "url": "https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-filters",
+      "canonical_url": "https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-filters",
+      "title": "Adding filters with Shopify Search & Discovery",
+      "publisher": "Shopify",
+      "source_type": "official_product_documentation",
+      "retrieved_at": "2026-11-23",
+      "sha256": "0c762f3197d20c19ba0dd812ec4a723ae1acc661a3eb20ca0a207856a50658fc",
+      "locator": {
+        "web_ref": "turn475801247view2",
+        "web_lines": [
+          {
+            "claim_id": "S03-C1",
+            "text": "Shopifyには集合規模によるフィルタ非表示、検索結果の一部に基づく件数、全空値によるフィルタ隠蔽がある。",
+            "locator": "Web L23-L33, L199-L210"
+          },
+          {
+            "claim_id": "S03-C2",
+            "text": "商品カテゴリに固有の属性があり、表示ラベルの変更と元属性の変更は別である。複数の値を一つの表示値へまとめる設定もある。",
+            "locator": "Web L58-L74, L110-L155"
+          },
+          {
+            "claim_id": "S03-C3",
+            "text": "variantを対象にするフィルタは、検索結果やコレクションから対応するvariantへ案内するために使われる。",
+            "locator": "Web L271-L276"
+          }
+        ],
+        "local_line_anchors": {
+          "23": 33,
+          "33": 43,
+          "58": 68,
+          "74": 84,
+          "110": 120,
+          "155": 165,
+          "199": 209,
+          "210": 220,
+          "271": 281,
+          "276": 286
+        }
+      },
+      "verified_claims": [
+        {
+          "claim_id": "S03-C1",
+          "text": "Shopifyには集合規模によるフィルタ非表示、検索結果の一部に基づく件数、全空値によるフィルタ隠蔽がある。",
+          "locator": "Web L23-L33, L199-L210"
+        },
+        {
+          "claim_id": "S03-C2",
+          "text": "商品カテゴリに固有の属性があり、表示ラベルの変更と元属性の変更は別である。複数の値を一つの表示値へまとめる設定もある。",
+          "locator": "Web L58-L74, L110-L155"
+        },
+        {
+          "claim_id": "S03-C3",
+          "text": "variantを対象にするフィルタは、検索結果やコレクションから対応するvariantへ案内するために使われる。",
+          "locator": "Web L271-L276"
+        }
+      ],
+      "limits": [
+        "Shopify固有の実装・上限・設定である。集合を分割すれば常に有益、カテゴリを統合すれば常に有害、という因果効果は示さない。Web抽出はL302までで、残りの節は未読。"
+      ],
+      "source_edges": [
+        {
+          "from": "R02-R2-S03",
+          "from_locator": "Adding filters, Web L64 and L70, link 25",
+          "to_url": "https://help.shopify.com/en/manual/products/details/product-category",
+          "relation": "official product documentation links to the underlying taxonomy",
+          "tool": "web_run.click",
+          "followed": true,
+          "retrieval_ref": "turn501380594view1",
+          "target_locator": "How are product category and product type different?; Migrating existing product categories, Web L44-L60 and L94-L107",
+          "registered_as_new_source": false,
+          "note": "本文リンクを実際に開いた。追加登録せず、追跡経路の記録として保持。"
+        }
+      ],
+      "acquisition": {
+        "imozuru_fetch": "FAIL_DNS",
+        "method": "public web tool text extraction fallback",
+        "original_html_downloaded": false,
+        "full_original_archive": false,
+        "relevant_passages_verified": true
+      },
+      "publication": "公開可能なのはURL・独自要約・必要最小限の短い引用。原文抜粋と取得ログはprivateに保持。"
+    }
+  ],
+  "source_edges": [
+    {
+      "from": "R02-R2-S02",
+      "from_locator": "Using GitHub Code Search, Web L38, link 9",
+      "to_url": "https://docs.github.com/en/search-github/github-code-search/about-github-code-search",
+      "relation": "official product documentation links to known limitations",
+      "tool": "web_run.click",
+      "followed": true,
+      "retrieval_ref": "turn501380594view0",
+      "target_locator": "Limitations, Web L42-L59",
+      "registered_as_new_source": false,
+      "note": "本文リンクを実際に開いた。追加登録・数値規則の一般化はしない。"
+    },
+    {
+      "from": "R02-R2-S03",
+      "from_locator": "Adding filters, Web L64 and L70, link 25",
+      "to_url": "https://help.shopify.com/en/manual/products/details/product-category",
+      "relation": "official product documentation links to the underlying taxonomy",
+      "tool": "web_run.click",
+      "followed": true,
+      "retrieval_ref": "turn501380594view1",
+      "target_locator": "How are product category and product type different?; Migrating existing product categories, Web L44-L60 and L94-L107",
+      "registered_as_new_source": false,
+      "note": "本文リンクを実際に開いた。追加登録せず、追跡経路の記録として保持。"
+    }
+  ],
+  "findings": [
+    {
+      "id": "R02-R2-F01",
+      "title": "旧入口は経路の種類と対象同一性ごとに移行を確認する",
+      "source_facts": [
+        {
+          "source_id": "R02-R2-S01",
+          "claim_ids": [
+            "S01-C1",
+            "S01-C2"
+          ]
+        }
+      ],
+      "inferred_rules": [
+        "正本への統合を決めたら、旧メニュー・ブックマーク・深いURL・外部連携を別々に棚卸しし、保存／転送／明示廃止を記録する。",
+        "旧入口が開くことに加えて、旧入口が同一の対象・成果・権限の正本へ着くかを確認する。旧名が別対象へ再割当てされた場合を成功に数えない。"
+      ],
+      "applicability": "名前変更、正本化、別名の整理、旧URLや外部連携を持つ統合。",
+      "exceptions": [
+        "原典はGitHub固有であり、すべての入口を永久保持する規則は導かない。",
+        "正式に廃止する入口は、理由・代替・利用者への案内を残すことで扱う。"
+      ],
+      "tests": [
+        {
+          "id": "R2-T01",
+          "case": "旧入口Aから新正本Bへ転送し、role/object/outcomeが維持される。",
+          "expected": "構造上の移行成立候補。人が見つけられるかは別評価。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R2-T02",
+          "case": "旧入口AがHTTP成功でも、新規の別対象Cへ着く。",
+          "expected": "移行の対象不一致として失敗。URLが開くことだけで合格しない。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R2-T03",
+          "case": "通常リンクは転送するが、外部連携入口だけ未対応。",
+          "expected": "入口種別別の不足を残し、一括で移行済みにしない。",
+          "status": "proposed_not_run"
+        }
+      ],
+      "candidate_units": [
+        "A-IU-003",
+        "A-IU-005",
+        "A-IU-006"
+      ]
+    },
+    {
+      "id": "R02-R2-F02",
+      "title": "検索0件とフィルタ非表示を対象不在に読み替えない",
+      "source_facts": [
+        {
+          "source_id": "R02-R2-S02",
+          "claim_ids": [
+            "S02-C1"
+          ]
+        },
+        {
+          "source_id": "R02-R2-S03",
+          "claim_ids": [
+            "S03-C1"
+          ]
+        }
+      ],
+      "inferred_rules": [
+        "0件の観測には検索語、対象集合、ブランチ等の範囲、権限、適用フィルタ、索引対象と取得時点を結び付ける。範囲外は不在と断定しない。",
+        "フィルタの設定が存在しても、画面で表示されない条件を確認する。現在の対象集合と条件を利用者が確認・変更できる導線を検討する。"
+      ],
+      "applicability": "領域内検索、保存検索、フィルタ付き一覧、検索結果を根拠にした削除・統合。",
+      "exceptions": [
+        "この資料から普遍的な件数閾値、索引更新時間、完全網羅の判定方法は導けない。",
+        "0件の理由は権限・索引・範囲だけとは限らず、該当サービスで確認する。"
+      ],
+      "tests": [
+        {
+          "id": "R2-T04",
+          "case": "既知の対象Xは別ブランチまたは別領域にあるが、現在の限定検索は0件。",
+          "expected": "検索漏れを含む範囲限定の観測と記録し、X削除の根拠にしない。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R2-T05",
+          "case": "フィルタを設定済みだが、集合規模・テーマ・空値処理のため表示されない。",
+          "expected": "設定存在と利用可能な入口を区別し、必須経路成立を保留する。",
+          "status": "proposed_not_run"
+        }
+      ],
+      "candidate_units": [
+        "A-IU-005",
+        "A-IU-006",
+        "A-IU-010"
+      ]
+    },
+    {
+      "id": "R02-R2-F03",
+      "title": "カテゴリ統合・細分化は比較の要件と実装条件で選ぶ",
+      "source_facts": [
+        {
+          "source_id": "R02-R2-S03",
+          "claim_ids": [
+            "S03-C1",
+            "S03-C2"
+          ]
+        }
+      ],
+      "inferred_rules": [
+        "共通属性を持つ候補の比較を保つ案と、対象集合の規模・カテゴリ固有属性・実装が許すフィルタ範囲を両方照合する。",
+        "表示値のまとめ、元属性の同一化、対象の正本化を別操作として扱う。表示名が同じでも元属性や対象IDが違えば自動統合しない。",
+        "複数入口や別名のために対象データを複製せず、同じ正本への所属・条件・表示ラベルの対応を記録する。これは本調査の設計上の導出である。"
+      ],
+      "applicability": "大きい一覧の再編、類似カテゴリの統合、カテゴリ固有属性、表示値のグループ化。",
+      "exceptions": [
+        "Shopifyの5,000等の数値を業務アプリ一般のカテゴリ分割閾値にしない。",
+        "現行A05とBaymardの過分類の注意を否定しない。比較を壊す細分化とフィルタを失う統合の両側に反例がある。"
+      ],
+      "tests": [
+        {
+          "id": "R2-T06",
+          "case": "同属性の候補を二カテゴリに隔離し、横断比較ができない。",
+          "expected": "比較の要求がある場合は改善候補。件数だけで強制統合しない。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R2-T07",
+          "case": "統合後の集合が製品の実装限界を超え、必須の絞り込みを失う。",
+          "expected": "統合案をそのまま採用しない。分割・横断検索・実装変更の代替を比較する。",
+          "status": "proposed_not_run"
+        }
+      ],
+      "candidate_units": [
+        "A-IU-005",
+        "A-IU-006"
+      ]
+    },
+    {
+      "id": "R02-R2-F04",
+      "title": "選んだ場所と計画上のdestinationを対象粒度まで対応させる",
+      "source_facts": [
+        {
+          "source_id": "R02-R2-S02",
+          "claim_ids": [
+            "S02-C2"
+          ]
+        },
+        {
+          "source_id": "R02-R2-S03",
+          "claim_ids": [
+            "S03-C3"
+          ]
+        }
+      ],
+      "inferred_rules": [
+        "タスクの開始場所、選択ラベル、選択時の範囲、期待対象ID／粒度、実際の着地を一組にして確認する。検索候補の選択と検索語の送信を同じ経路とみなさない。",
+        "計画のtarget_screenに到達する経路があっても、画面上の操作が別対象や一般一覧へ着くなら、そのタスクの実装確認済みとはしない。",
+        "契約に未定義のトップレベル項目を加えず、現状はdecision_notesと検証記録で選択箇所・対象・destinationの対応を示す。正式な契約変更は別レビューとする。"
+      ],
+      "applicability": "検索サジェスト、商品／variant等の粒度がある一覧、保存ビュー、文脈付きリンク。",
+      "exceptions": [
+        "商品全体への移動がタスク要件ならvariantへの移動を強制しない。",
+        "公式資料を読んだだけでは現在のプレビューや実製品のクリック結果を確認したことにはならない。"
+      ],
+      "tests": [
+        {
+          "id": "R2-T08",
+          "case": "赤variantの選択が要求されるタスクで、カードを選ぶと別色または一般商品ページに着く。",
+          "expected": "対象・粒度の不一致を報告する。商品が同じだけでは成功にしない。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R2-T09",
+          "case": "同じ検索欄で候補選択は詳細へ、Enterは結果一覧へ着く。計画は片方だけを表す。",
+          "expected": "実際の操作を区別し、対象タスクに必要な経路を対応させる。",
+          "status": "proposed_not_run"
+        }
+      ],
+      "candidate_units": [
+        "A-IU-006",
+        "A-IU-007",
+        "A-IU-010"
+      ]
+    }
+  ],
+  "existing_unit_revision_candidates": [
+    {
+      "unit": "A-IU-005",
+      "change": "カテゴリ／フィルタの比較に対象集合規模・属性の適用範囲・元属性と表示ラベルの区別を追加。万能な統合・分割を退ける。"
+    },
+    {
+      "unit": "A-IU-006",
+      "change": "旧入口別の移行と、検索の範囲・選択箇所・正本destinationの対応を記録し、実際の着地を確認する。"
+    },
+    {
+      "unit": "A-IU-003",
+      "change": "正本化後の旧入口の保存／転送／明示廃止と、別対象への再割当てを分ける。"
+    },
+    {
+      "unit": "A-IU-007",
+      "change": "商品／variant等の対象粒度を、判断に必要な画面責務と照合する。"
+    },
+    {
+      "unit": "A-IU-010",
+      "change": "計画グラフの到達性・実クリックの着地・人の発見可能性を別の検証結果として記録する。"
+    }
+  ],
+  "overlap": {
+    "known_source_count": 28,
+    "duplicate_of_known": [],
+    "new_registered_source_count": 3,
+    "followed_but_not_registered": 2,
+    "conceptual_overlap": "A05/A06の既存原則を補う条件・反例。新しい普遍的なIA法則や効果の実証としては登録しない。"
+  },
+  "gaps": [
+    "原HTMLは3件ともDNS失敗。Web抽出の見えた部分のみ。全文アーカイブではない。",
+    "実製品UIや公開プレビューのクリック確認は未実施。選択とdestination対応のテストは提案のみ。",
+    "利用者調査・tree test・検索成功率・認知負荷・因果効果を測定していない。",
+    "英語2製品の資料に偏り、検索漏れがありうる。既知外資料全体の網羅性や飽和は示していない。",
+    "製品固有の閾値と仕様は時点情報。再利用先の権限・索引・集合規模・選択対象を個別確認する。"
+  ],
+  "cost": {
+    "actual_amount": null,
+    "currency": null,
+    "reason": "実費はツール出力に提供されず不明。0とは記録しない。"
+  },
+  "status": "COMPLETE_WITH_LIMITS",
+  "artifacts": {
+    "summary": "PRIVATE_CHECKPOINT/research/R02/researcher-2/summary.json",
+    "report": "PRIVATE_CHECKPOINT/research/R02/researcher-2/report.html",
+    "digest": "PRIVATE_CHECKPOINT/research/R02/researcher-2/digest.html",
+    "map": "PRIVATE_CHECKPOINT/research/R02/researcher-2/map.md",
+    "log": "PRIVATE_CHECKPOINT/research/R02/researcher-2/log.md"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "round": "R02",
+  "frozen_at": "2026-11-23T07:09:18.810093+00:00",
+  "baseline_revision": "4132d1aefed2a278bb1e168bfb308928eca00a03",
+  "criteria": [
+    {
+      "id": "N1",
+      "criterion": "同じ資料の複数入口・カテゴリ所属を別の独立正本にせずIDを保持する"
+    },
+    {
+      "id": "N2",
+      "criterion": "特定範囲・有効な絞込・索引範囲に限った0件を全体不存在と結論しない"
+    },
+    {
+      "id": "N3",
+      "criterion": "旧入口の目的・対象範囲を保つか、提供終了/不明を明示する。同名の別対象へ無言置換しない"
+    },
+    {
+      "id": "N4",
+      "criterion": "実際に比較・選択する場所とgoal_routesの到達先、必要情報の配置が一致する"
+    },
+    {
+      "id": "N5",
+      "criterion": "プロセスの途中画面へ不要な独立入口を強制せず、必要な探索入口は理由付きで提供する"
+    },
+    {
+      "id": "N6",
+      "criterion": "到達グラフの成立、ラベル理解、検索網羅性、実装動作、人の発見を区別する"
+    }
+  ],
+  "scale": "0/1 per criterion, hard failure recorded separately",
+  "hard_failures": [
+    "必須対象・機能・役割が失われる",
+    "入力にない検索網羅性やラベル理解の証拠を捏造",
+    "既存Art Directionの意図を破壊"
+  ],
+  "protocol": "Fixed synthetic design task and original/updated instruction comparison where feasible; independent unseen adversarial cases required. No human success-rate claim. Criteria fixed before researcher reports and implementation.",
+  "limit": "No browser-render or human test unless actually executed; same-family model reviews are bounded."
+}

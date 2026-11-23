@@ -1,0 +1,12 @@
+{
+  "source_id": "A-S020",
+  "title": "— Iva Olah / Baymard（2023）— Product Listing UX: What Information to Display in Product Listings",
+  "url": "https://baymard.com/research-articles/product-listing-information",
+  "canonical_url": "https://baymard.com/research-articles/product-listing-information",
+  "original_id": "S20",
+  "provenance": "inherited-index",
+  "verified_in_current_round": false,
+  "rights": "Link and original paraphrase only; no third-party full text redistributed.",
+  "content_sha256": null,
+  "notes": "- **URL**: [Iva Olah / Baymard（2023）— Product Listing UX: What Information to Display in Product Listings](https://baymard.com/research-articles/product-listing-information)\n- **該当箇所**: 導入の観察結果; Provide 5 Essential Product Attributes; Provide Category-Specific Product Attributes for Spec-Driven Products。Web抽出 L117–143, L195–225, L226以降。\n- **確認日 / 種別**: 2026-11-23 / 本人研究・観察あり・宣伝あり。\n- **原典の主張** (empirical_observation): 一覧の属性が欠けることで、適合する商品を飛ばしたり、各商品の詳細ページを往復したりする参加者を観察したと報告する。共通属性とカテゴリ固有属性を区別している。\n- **制約・版・未確認**: 記事の5属性をあらゆる業務画面に転用する根拠はない。小規模・DTCサイトでのレビューや、商品種別ごとのバリエーション表示には記事内でも例外がある。50%はサイトのベンチマーク値で、ユーザー失敗率ではない。\n- **接続する原則**: A09。原則のProcedure/JSON契約は、別に明記した本Skillの導出。"
+}

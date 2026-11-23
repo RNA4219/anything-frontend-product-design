@@ -1,0 +1,17 @@
+{
+  "round": "R02",
+  "frozen_at": "2026-11-23T07:30:14.179976+00:00",
+  "files": {
+    "SKILL.md": "9b650ad95bba0ebcaff003fe75aabe245e1298957c717b883b3e955849a00ef5",
+    "references/plan-contract.md": "b7f90275fb6aa6df891975a7acaa560809a7538d6d84ccadf1cba28bac843ca3",
+    "references/feature-context.md": "a337109da9a1c88a0224e663e569136a377a642951988006a8ce9225f1800411",
+    "references/navigation-evidence.md": "7ac15e54aa096b9180c2fca5abe9122410157e865c38fdca04bdc0a30272d7a4",
+    "references/disclosure-and-verification.md": "4a88b067308e9b2fb3cf5ebbd849b5c2d46100a023871f638e3211fca351a788",
+    "references/sources.md": "4cf30b8d425cb61ca963f373960b6aacbb615ccd80757c02636fb4f2a01a6fba",
+    "references/information-architecture.md": "5cf0b444820c54258e300a176fbea668f0f58bfcac867a49fe4cf79594f34810",
+    "references/goals-and-features.md": "40189855c869962f68100838f5423e36b0c1a36a83d506e94652b56ac794283c",
+    "examples/decisions.md": "9b4e846acf78e6fe2c323a60de1e7b3a6460412ec9a88095643dfd7d04ca26d2",
+    "agents/openai.yaml": "dfaefb11d2113d7d17d826f10bfab1db3702bc3b4e6206a81786ea7d5222dcbc"
+  },
+  "scope": "Instructions used by candidate task; checker repairs after this snapshot require separate history"
+}

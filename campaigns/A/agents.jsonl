@@ -1,0 +1,43 @@
+{"agent_id": "/root/r01_researcher_1", "round": "R01", "role": "Researcher-1", "mechanism": "collaboration.spawn_agent", "status": "started", "at": "2026-11-23T06:37:50.643630+00:00", "children_forbidden": true}
+{"agent_id": "/root/r01_researcher_2", "round": "R01", "role": "Researcher-2", "mechanism": "collaboration.spawn_agent", "status": "started", "at": "2026-11-23T06:37:50.643630+00:00", "children_forbidden": true}
+{"id": "/root/r01_researcher_1", "role": "Researcher-1", "status": "completed", "round": "R01", "at": "2026-11-23T07:03:55.087941+00:00"}
+{"id": "/root/r01_researcher_2", "role": "Researcher-2", "status": "completed", "round": "R01", "at": "2026-11-23T07:03:55.087941+00:00"}
+{"id": "/root/r01_analyst", "role": "Analyst", "status": "completed", "round": "R01", "at": "2026-11-23T07:03:55.087941+00:00"}
+{"id": "/root/r01_task_x", "role": "Baseline task generation", "status": "completed", "round": "R01", "at": "2026-11-23T07:03:55.087941+00:00"}
+{"id": "/root/r01_task_y", "role": "Candidate task generation", "status": "completed", "round": "R01", "at": "2026-11-23T07:03:55.087941+00:00"}
+{"id": "/root/r01_critic", "role": "Critic/Evaluator", "status": "completed", "round": "R01", "at": "2026-11-23T07:03:55.087941+00:00"}
+{"round": "R02", "id": "/root/r02_researcher_1", "role": "Researcher-1", "status": "started", "at": "2026-11-23T07:09:18.810093+00:00", "nested_agents": false}
+{"round": "R02", "id": "/root/r02_researcher_2", "role": "Researcher-2", "status": "started", "at": "2026-11-23T07:09:18.810093+00:00", "nested_agents": false}
+{"round": "R02", "id": "/root/r02_researcher_1", "role": "Researcher-1", "status": "completed", "at": "2026-11-23T07:21:04.085221+00:00"}
+{"round": "R02", "id": "/root/r02_researcher_2", "role": "Researcher-2", "status": "completed", "at": "2026-11-23T07:21:04.085221+00:00"}
+{"round": "R02", "id": "/root/r02_analyst", "role": "Analyst", "status": "started", "at": "2026-11-23T07:21:04.085221+00:00"}
+{"round": "R02", "id": "/root/r02_task_x", "role": "Baseline task generation", "status": "started", "at": "2026-11-23T07:21:04.085221+00:00"}
+{"round": "R02", "id": "/root/r02_analyst", "role": "Analyst", "status": "completed", "at": "2026-11-23T07:31:49.233953+00:00"}
+{"round": "R02", "id": "/root/r02_task_x", "role": "Baseline task generation", "status": "completed", "at": "2026-11-23T07:31:49.233953+00:00"}
+{"round": "R02", "id": "/root/r02_task_y", "role": "Candidate task generation", "status": "started", "at": "2026-11-23T07:31:49.233953+00:00"}
+{"round": "R02", "id": "/root/r02_critic", "role": "Critic/Evaluator", "status": "started", "at": "2026-11-23T07:31:49.233953+00:00"}
+{"round": "R02", "id": "/root/r02_researcher_1", "role": "Researcher-1", "status": "completed", "at": "2026-11-23T07:46:07.423103+00:00"}
+{"round": "R02", "id": "/root/r02_researcher_2", "role": "Researcher-2", "status": "completed", "at": "2026-11-23T07:46:07.423103+00:00"}
+{"round": "R02", "id": "/root/r02_analyst", "role": "Analyst", "status": "completed", "at": "2026-11-23T07:46:07.423103+00:00"}
+{"round": "R02", "id": "/root/r02_task_x", "role": "Baseline task generation", "status": "completed", "at": "2026-11-23T07:46:07.423103+00:00"}
+{"round": "R02", "id": "/root/r02_task_y", "role": "Candidate task generation", "status": "completed", "at": "2026-11-23T07:46:07.423103+00:00"}
+{"round": "R02", "id": "/root/r02_critic", "role": "Critic/Evaluator", "status": "completed", "at": "2026-11-23T07:46:07.423103+00:00"}
+{"round": "R03", "id": "/root/r03_researcher_1", "role": "Researcher-1", "status": "started", "at": "2026-11-23T07:47:16.726252+00:00"}
+{"round": "R03", "id": "/root/r03_researcher_2", "role": "Researcher-2", "status": "started", "at": "2026-11-23T07:47:16.726252+00:00"}
+{"round": "R03", "id": "/root/r03_researcher_1", "role": "Researcher-1", "status": "completed", "at": "2026-11-23T07:55:51.531831+00:00"}
+{"round": "R03", "id": "/root/r03_researcher_2", "role": "Researcher-2", "status": "completed", "at": "2026-11-23T07:55:51.531831+00:00"}
+{"round": "R03", "id": "/root/r03_analyst", "role": "Analyst", "status": "started", "at": "2026-11-23T07:55:51.531831+00:00"}
+{"round": "R03", "id": "/root/r03_task_x", "role": "Baseline task generation", "status": "started", "at": "2026-11-23T07:55:51.531831+00:00"}
+{"round": "R03", "id": "/root/r03_analyst", "role": "Analyst", "status": "completed", "at": "2026-11-23T08:12:47.893452+00:00"}
+{"round": "R03", "id": "/root/r03_task_x", "role": "Baseline task generation", "status": "completed", "at": "2026-11-23T08:12:47.893452+00:00"}
+{"round": "R03", "id": "/root/r03_task_y", "role": "Candidate task generation", "status": "started", "at": "2026-11-23T08:12:47.893452+00:00"}
+{"round": "R03", "id": "/root/r03_critic", "role": "Critic/Evaluator", "status": "started", "at": "2026-11-23T08:12:47.893452+00:00"}
+{"round": "R03", "agent": "r03_task_y", "role": "candidate_task_executor", "status": "COMPLETED", "artifacts": "private/evaluation/R03/candidate/output", "at": "2026-11-23T08:18:15.721223+00:00"}
+{"round": "R03", "agent": "/root/r03_researcher_1", "role": "Researcher-1", "status": "COMPLETED", "at": "2026-11-23T08:25:37.196539+00:00"}
+{"round": "R03", "agent": "/root/r03_researcher_2", "role": "Researcher-2", "status": "COMPLETED", "at": "2026-11-23T08:25:37.196539+00:00"}
+{"round": "R03", "agent": "/root/r03_analyst", "role": "Analyst", "status": "COMPLETED", "at": "2026-11-23T08:25:37.196539+00:00"}
+{"round": "R03", "agent": "/root/r03_task_x", "role": "Baseline task generation", "status": "COMPLETED", "at": "2026-11-23T08:25:37.196539+00:00"}
+{"round": "R03", "agent": "/root/r03_task_y", "role": "Candidate task generation", "status": "COMPLETED", "at": "2026-11-23T08:25:37.196539+00:00"}
+{"round": "R03", "agent": "/root/r03_critic", "role": "Critic/Evaluator", "status": "COMPLETED", "at": "2026-11-23T08:25:37.196539+00:00"}
+{"round": "R04", "agent": "/root/r04_researcher_1", "role": "Researcher-1", "status": "STARTED", "at": "2026-11-23T08:25:37.196539+00:00", "mechanism": "collaboration.spawn_agent", "nested_agents": false}
+{"round": "R04", "agent": "/root/r04_researcher_2", "role": "Researcher-2", "status": "STARTED", "at": "2026-11-23T08:25:37.196539+00:00", "mechanism": "collaboration.spawn_agent", "nested_agents": false}

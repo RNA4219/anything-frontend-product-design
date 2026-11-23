@@ -1,0 +1,3 @@
+queries-*.jsonl text eol=lf
+fetch-log.jsonl text eol=lf
+sources/govuk-contribution-criteria.md -text

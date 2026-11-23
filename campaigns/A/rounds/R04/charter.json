@@ -1,0 +1,24 @@
+{
+  "round": "R04",
+  "status": "DISCOVER",
+  "issues": [
+    "A-007",
+    "A-011"
+  ],
+  "question": "How can a taxonomy or navigation reorganization preserve object/capability identity, scoped findability and explicit unresolved mappings across a larger inventory, without treating a rename, broad/narrow mapping or equal item counts as semantic equivalence?",
+  "planned_units": [
+    "A-IU-005",
+    "A-IU-006",
+    "A-IU-007"
+  ],
+  "priority": "P2",
+  "why_next": "R03 fixes the demonstrated P1 mandatory-reachability hole. R02 left large-inventory migration and old-entry identity only partially exercised.",
+  "scope_boundary": "A owns information inventories, classification decisions, source-to-target meaning and entry mappings. Redirect execution, state and permissions remain B/C; user comprehension and production migration performance remain D.",
+  "research_plan": "Two independent researchers using verified imozuru CLI; one standards/methods track, one operational counterexample track; then sankai decomposition, parent implementation and independent critic. No new unit if existing units can represent the conditions.",
+  "known_sources": "All registry/A/sources records; duplicates receive no novelty credit.",
+  "registered_at": "2026-11-23T08:21:28.470345+00:00",
+  "cost": {
+    "actual_amount": null,
+    "status": "unavailable"
+  }
+}

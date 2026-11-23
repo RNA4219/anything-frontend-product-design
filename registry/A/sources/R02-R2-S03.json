@@ -1,0 +1,86 @@
+{
+  "id": "R02-R2-S03",
+  "url": "https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-filters",
+  "canonical_url": "https://help.shopify.com/en/manual/online-store/storefront-search/search-and-discovery-filters",
+  "title": "Adding filters with Shopify Search & Discovery",
+  "publisher": "Shopify",
+  "source_type": "official_product_documentation",
+  "retrieved_at": "2026-11-23",
+  "sha256": "0c762f3197d20c19ba0dd812ec4a723ae1acc661a3eb20ca0a207856a50658fc",
+  "locator": {
+    "web_ref": "turn475801247view2",
+    "web_lines": [
+      {
+        "claim_id": "S03-C1",
+        "text": "Shopifyには集合規模によるフィルタ非表示、検索結果の一部に基づく件数、全空値によるフィルタ隠蔽がある。",
+        "locator": "Web L23-L33, L199-L210"
+      },
+      {
+        "claim_id": "S03-C2",
+        "text": "商品カテゴリに固有の属性があり、表示ラベルの変更と元属性の変更は別である。複数の値を一つの表示値へまとめる設定もある。",
+        "locator": "Web L58-L74, L110-L155"
+      },
+      {
+        "claim_id": "S03-C3",
+        "text": "variantを対象にするフィルタは、検索結果やコレクションから対応するvariantへ案内するために使われる。",
+        "locator": "Web L271-L276"
+      }
+    ],
+    "local_line_anchors": {
+      "23": 33,
+      "33": 43,
+      "58": 68,
+      "74": 84,
+      "110": 120,
+      "155": 165,
+      "199": 209,
+      "210": 220,
+      "271": 281,
+      "276": 286
+    }
+  },
+  "verified_claims": [
+    {
+      "claim_id": "S03-C1",
+      "text": "Shopifyには集合規模によるフィルタ非表示、検索結果の一部に基づく件数、全空値によるフィルタ隠蔽がある。",
+      "locator": "Web L23-L33, L199-L210"
+    },
+    {
+      "claim_id": "S03-C2",
+      "text": "商品カテゴリに固有の属性があり、表示ラベルの変更と元属性の変更は別である。複数の値を一つの表示値へまとめる設定もある。",
+      "locator": "Web L58-L74, L110-L155"
+    },
+    {
+      "claim_id": "S03-C3",
+      "text": "variantを対象にするフィルタは、検索結果やコレクションから対応するvariantへ案内するために使われる。",
+      "locator": "Web L271-L276"
+    }
+  ],
+  "limits": [
+    "Shopify固有の実装・上限・設定である。集合を分割すれば常に有益、カテゴリを統合すれば常に有害、という因果効果は示さない。Web抽出はL302までで、残りの節は未読。"
+  ],
+  "source_edges": [
+    {
+      "from": "R02-R2-S03",
+      "from_locator": "Adding filters, Web L64 and L70, link 25",
+      "to_url": "https://help.shopify.com/en/manual/products/details/product-category",
+      "relation": "official product documentation links to the underlying taxonomy",
+      "tool": "web_run.click",
+      "followed": true,
+      "retrieval_ref": "turn501380594view1",
+      "target_locator": "How are product category and product type different?; Migrating existing product categories, Web L44-L60 and L94-L107",
+      "registered_as_new_source": false,
+      "note": "本文リンクを実際に開いた。追加登録せず、追跡経路の記録として保持。"
+    }
+  ],
+  "acquisition": {
+    "imozuru_fetch": "FAIL_DNS",
+    "method": "public web tool text extraction fallback",
+    "original_html_downloaded": false,
+    "full_original_archive": false,
+    "relevant_passages_verified": true
+  },
+  "publication": "公開可能なのはURL・独自要約・必要最小限の短い引用。原文抜粋と取得ログはprivateに保持。",
+  "source_id": "R02-R2-S03",
+  "verified_in_current_round": "R02"
+}

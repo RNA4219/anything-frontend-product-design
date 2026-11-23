@@ -1,0 +1,27 @@
+{
+  "round": 2,
+  "issues": [
+    "B-003",
+    "B-004",
+    "B-002-UNDO"
+  ],
+  "status": "QUEUED",
+  "frozen_before_candidate": true,
+  "created_at": "2026-11-23T06:45:38.742544+00:00",
+  "research_question": "How do forms, consequential review, and Undo preserve an executable path to completion without excessive confirmation?",
+  "acceptance": [
+    "Correctable errors identify affected fields and a remedy while preserving valid work",
+    "A changed reviewed input invalidates the previous review without discarding unrelated input",
+    "Choose prevention/review/reversal based on consequence and actual capability, not one global confirmation rule",
+    "Undo that is pending, failed or expired never presents restoration as completed",
+    "Cancellation, compensating business action, and local edit reversal remain distinct"
+  ],
+  "cases": [
+    "Multi-field application with one server-rejected field",
+    "Edit from review and return without answering unrelated questions again",
+    "Locally reversible archive; restore race or expired Undo offer",
+    "External compensation accepted then failed"
+  ],
+  "verification": "Executable state/event conformance plus independent critic; human comprehension and assistive tech not measured",
+  "scope_boundary": "C owns DOM focus/live announcement mechanics; B states the user-visible correction and return-path requirements"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "HOLD",
+  "issues": [
+    {
+      "code": "MERGE_NOT_CURRENT",
+      "location": "features.f_live",
+      "symptom": "Proposed or unknown availability is not a current replacement for existing users",
+      "category": "function",
+      "severity": "hold"
+    }
+  ],
+  "checks_available": {
+    "contract_version": "1.1",
+    "context_and_retirement": true,
+    "human_usability": false
+  },
+  "counts": {
+    "goals": 1,
+    "features": 2,
+    "kept_features": 1,
+    "screens": 1,
+    "navigation_edges": 0
+  }
+}
