@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-203",
+  "title": "Cognitive Accessibility Design Pattern: Use a Consistent Visual Design",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p03-consistent-design/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p03-consistent-design/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p03-consistent-design/",
+  "response_sha256": "2b475c9c008904d7cb2c6c3ed857d20ee352b6fa77e00780c95d5d4008c34d4c",
+  "used_by": [
+    "A-IU-201"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p03-consistent-design/#whattodo"
+}

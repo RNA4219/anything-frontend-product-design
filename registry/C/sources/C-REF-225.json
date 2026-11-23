@@ -1,0 +1,26 @@
+{
+  "source_id": "C-REF-225",
+  "title": "Accuracy measures for evaluating computer pointing devices",
+  "authors": [
+    "I. Scott MacKenzie",
+    "Tatu Kauppinen",
+    "Miika Silfverberg"
+  ],
+  "year": 2001,
+  "venue": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/365024.365028",
+  "url": "https://doi.org/10.1145/365024.365028",
+  "canonical_url": "https://doi.org/10.1145/365024.365028",
+  "primary_text_url": "https://www.yorku.ca/mack/CHI01.htm",
+  "section": "Table 2",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "入力装置を比較する際、時間に加えて対象への再侵入など軌跡を観測する。",
+  "limits": "計測したポインター装置と選択課題に限る。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "C-UI-205"
+  ]
+}

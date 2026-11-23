@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-243",
+  "title": "Headings",
+  "url": "https://www.w3.org/WAI/tutorials/page-structure/headings/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/page-structure/headings/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Heading ranks",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/page-structure/headings/",
+  "response_sha256": "7c3b4307dd60415ef8774188aa447b484888bf4c20b20d3f7549dc752ca2555b",
+  "used_by": [
+    "A-IU-207"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/page-structure/headings/#heading-ranks"
+}

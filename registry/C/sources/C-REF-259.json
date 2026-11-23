@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-259",
+  "title": "File input",
+  "url": "https://designsystem.digital.gov/components/file-input/",
+  "canonical_url": "https://designsystem.digital.gov/components/file-input/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/file-input/",
+  "response_sha256": "6b6dbc8ea273d60f4f6cad3e8ac39c4259498303e8081f6adeb9f746d46a18a1",
+  "used_by": [
+    "C-UI-211"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/file-input/#usability-guidance-file-input"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-215",
+  "title": "Date picker",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/date-picker/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/date-picker/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Universal behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/date-picker/guidelines",
+  "response_sha256": "7cb947d3e4341e501f1173a57a133762091ceb68e9fa0d6c83243f3b33ee69e9",
+  "used_by": [
+    "B-IU-203"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/date-picker/guidelines#universal-behaviors"
+}

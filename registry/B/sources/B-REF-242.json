@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-242",
+  "title": "Cognitive Accessibility Design Pattern: Provide Feedback",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p10-status-feedback/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p10-status-feedback/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p10-status-feedback/",
+  "response_sha256": "8b5bb0d8861502dedf896a0b77fcc32ab5186c38c3f40bc09703bd99ff76af56",
+  "used_by": [
+    "B-IU-207"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p10-status-feedback/#whattodo"
+}

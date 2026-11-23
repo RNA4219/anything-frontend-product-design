@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-213",
+  "title": "Cognitive Accessibility Design Pattern: Provide Help with Directions",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p06-supported-wayfinding/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p06-supported-wayfinding/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p06-supported-wayfinding/",
+  "response_sha256": "592f95fa412062e87373743bf5cb5773880c42ed92708f1aaad97e3a2a5ae558",
+  "used_by": [
+    "A-IU-202"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p06-supported-wayfinding/#whattodo"
+}

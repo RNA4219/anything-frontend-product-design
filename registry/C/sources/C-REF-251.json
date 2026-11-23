@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-251",
+  "title": "Application Menus",
+  "url": "https://www.w3.org/WAI/tutorials/menus/application-menus/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/menus/application-menus/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Additional markup",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/menus/application-menus/",
+  "response_sha256": "6c69ab3e1b0af7d484709bc7f251fb08c3b04318c4272128fdf56ee2d3feb165",
+  "used_by": [
+    "C-UI-209"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/menus/application-menus/#additional-markup"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-237",
+  "title": "Tooltip",
+  "url": "https://designsystem.digital.gov/components/tooltip/",
+  "canonical_url": "https://designsystem.digital.gov/components/tooltip/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/tooltip/",
+  "response_sha256": "f445ff951446802841edfc02335711a8bd0c249a3a13745bd842c023c04b1f58",
+  "used_by": [
+    "C-UI-207"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/tooltip/#usability-guidance-tooltip"
+}

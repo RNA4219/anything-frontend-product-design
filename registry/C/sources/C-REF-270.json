@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-270",
+  "title": "Providing Accessible Names and Descriptions",
+  "url": "https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "What ARE Accessible Names and Descriptions?",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/",
+  "response_sha256": "d0bd1970796a19242e5c6496d00d7135693c87b91a9232938284d32afed06474",
+  "used_by": [
+    "C-UI-213"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#whatareaccessiblenamesanddescriptions?"
+}

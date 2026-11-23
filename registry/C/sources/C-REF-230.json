@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-230",
+  "title": "Spinbutton Pattern",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/spinbutton/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/spinbutton/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/spinbutton/",
+  "response_sha256": "489cc2bfcdc88277a15fac36a1b28a8c2c791928ed8809d39815a9f25428f39a",
+  "used_by": [
+    "C-UI-206"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/spinbutton/#keyboardinteraction"
+}

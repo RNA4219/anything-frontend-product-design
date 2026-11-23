@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-253",
+  "title": "Cognitive Accessibility Design Pattern: Provide Alternatives for Numerical Concepts",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o3p13-numerical-alternatives/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o3p13-numerical-alternatives/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "User Need",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o3p13-numerical-alternatives/",
+  "response_sha256": "947528e6e8f8a9b100eb2cde0da09f29b78d7b7133495893d6873be53e563494",
+  "used_by": [
+    "A-IU-208"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o3p13-numerical-alternatives/#userneed"
+}

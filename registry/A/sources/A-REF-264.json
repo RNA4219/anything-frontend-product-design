@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-264",
+  "title": "GOV.UK footer",
+  "url": "https://design-system.service.gov.uk/components/footer/",
+  "canonical_url": "https://design-system.service.gov.uk/components/footer/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/footer/",
+  "response_sha256": "a6d1e6505e9995f0f0e18b619447c77086e2d5c225a292b74716946af0605210",
+  "used_by": [
+    "A-IU-210"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/footer/#how-it-works"
+}

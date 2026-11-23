@@ -1,0 +1,84 @@
+{
+  "skill_id": "C-UI-212",
+  "domain": "ui-engineering-design-system",
+  "trigger": "意見欄や申請理由に長さの上限がある場合",
+  "intent": "文字数制限を入力途中と超過時に伝える",
+  "required_inputs": [
+    "文字数の数え方",
+    "通知契機",
+    "保存側の制限"
+  ],
+  "decision_rules": [
+    "上限と数え方を示し、超過内容を黙って切り捨てず修正できる状態で残す。文字入力中の通知頻度を決める。"
+  ],
+  "procedure": [
+    "上限と数え方を示し、超過内容を黙って切り捨てず修正できる状態で残す。文字入力中の通知頻度を決める。",
+    "貼り付け、日本語変換確定、絵文字を含む入力で、表示残数・エラー・保存条件を比較する。"
+  ],
+  "expected_outputs": [
+    "変換・貼り付け後の残数と保存結果"
+  ],
+  "dependencies": [],
+  "exceptions": [
+    "空白・改行・結合文字の処理は実際のサーバーの規則に合わせる。"
+  ],
+  "failure_modes": [
+    "絵文字の数え方が違い送信時に初めて失敗する"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "文字数制限を入力途中と超過時に伝える",
+        "status": "not_executed",
+        "procedure": "貼り付け、日本語変換確定、絵文字を含む入力で、表示残数・エラー・保存条件を比較する。",
+        "falsifier": "絵文字の数え方が違い送信時に初めて失敗する"
+      }
+    ],
+    "status": "PLANNED",
+    "evidence": []
+  },
+  "source_refs": [
+    {
+      "id": "C-REF-263",
+      "url": "https://design-system.service.gov.uk/components/character-count/",
+      "record": "registry/C/sources/C-REF-263.json",
+      "registry_source_id": "C-REF-263",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-264",
+      "url": "https://designsystem.digital.gov/components/character-count/",
+      "record": "registry/C/sources/C-REF-264.json",
+      "registry_source_id": "C-REF-264",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-265",
+      "url": "https://design-system.service.gov.uk/components/textarea/",
+      "record": "registry/C/sources/C-REF-265.json",
+      "registry_source_id": "C-REF-265",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-266",
+      "url": "https://designsystem.digital.gov/components/text-input/",
+      "record": "registry/C/sources/C-REF-266.json",
+      "registry_source_id": "C-REF-266",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-267",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification",
+      "record": "registry/C/sources/C-REF-267.json",
+      "registry_source_id": "C-REF-267",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    }
+  ],
+  "confidence": {
+    "source_support": "各出典の指定箇所を参照。複数資料から組み立てた設計判断。",
+    "transfer": "意見欄や申請理由に長さの上限がある場合",
+    "limits": "空白・改行・結合文字の処理は実際のサーバーの規則に合わせる。"
+  },
+  "status": "DRAFT",
+  "version": "0.1.0"
+}

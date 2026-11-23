@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-256",
+  "title": "Help users to Exit a page quickly",
+  "url": "https://design-system.service.gov.uk/patterns/exit-a-page-quickly/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/exit-a-page-quickly/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/exit-a-page-quickly/",
+  "response_sha256": "e6eba30b79839276b26063bab3f7bf36786aa11d1df4fd94723764e94a17b15f",
+  "used_by": [
+    "B-IU-210"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/exit-a-page-quickly/#when-to-use-this-pattern"
+}

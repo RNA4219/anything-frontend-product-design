@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-256",
+  "title": "Accordion",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/accordion/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/accordion/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/accordion/guidelines",
+  "response_sha256": "941c06d11b36b891e6bf48840c89bef22c3e78d0ce7470e56b42eef6178988b5",
+  "used_by": [
+    "C-UI-210"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/accordion/guidelines#behaviors"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-213",
+  "title": "Date picker",
+  "url": "https://designsystem.digital.gov/components/date-picker/",
+  "canonical_url": "https://designsystem.digital.gov/components/date-picker/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/date-picker/",
+  "response_sha256": "f8408183f6c16ad060995e44d68e579fd769bf91222c9881b91d5c1706b4b78b",
+  "used_by": [
+    "B-IU-203"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/date-picker/#usability-guidance-date-picker"
+}

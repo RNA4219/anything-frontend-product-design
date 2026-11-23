@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-225",
+  "title": "User research in discovery",
+  "url": "https://www.gov.uk/service-manual/user-research/user-research-in-discovery",
+  "canonical_url": "https://www.gov.uk/service-manual/user-research/user-research-in-discovery",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "How to do user research in discovery",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/user-research/user-research-in-discovery",
+  "response_sha256": "a6081f29f7f2646ac675c84e5ed397c7dd2d577f92cd07750c42d8eabf49a28b",
+  "used_by": [
+    "D-IU-206"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/user-research/user-research-in-discovery#how-to-do-user-research-in-discovery"
+}

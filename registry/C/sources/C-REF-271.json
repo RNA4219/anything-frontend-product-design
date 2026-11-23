@@ -1,0 +1,26 @@
+{
+  "source_id": "C-REF-271",
+  "title": "Slide Rule: Making Mobile Touch Screens Accessible to Blind People Using Multi-Touch Interaction Techniques",
+  "authors": [
+    "Shaun K. Kane",
+    "Jeffrey P. Bigham",
+    "Jacob O. Wobbrock"
+  ],
+  "year": 2008,
+  "venue": "Proceedings of the 10th international ACM SIGACCESS conference on Computers and accessibility",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/1414471.1414487",
+  "url": "https://doi.org/10.1145/1414471.1414487",
+  "canonical_url": "https://doi.org/10.1145/1414471.1414487",
+  "primary_text_url": "https://www.cs.cmu.edu/~jbigham/pubs/pdfs/2008/sliderule.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "非視覚のタッチ操作で、探索だけの接触と実際の起動を分ける。",
+  "limits": "研究用の非視覚インターフェースでの評価。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "C-UI-213"
+  ]
+}

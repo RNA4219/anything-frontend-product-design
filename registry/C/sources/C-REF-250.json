@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-250",
+  "title": "Fly-out Menus",
+  "url": "https://www.w3.org/WAI/tutorials/menus/flyout/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/menus/flyout/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Indicate submenus",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/menus/flyout/",
+  "response_sha256": "10887f9a067dbf42ccbda9d6a058c613578203942c4533653de5f0b3989c23ad",
+  "used_by": [
+    "C-UI-209"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/menus/flyout/#indicate-submenus"
+}

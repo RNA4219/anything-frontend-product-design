@@ -1,0 +1,17 @@
+{
+  "source_id": "B-REF-274",
+  "title": "Understanding SC 3.3.6 Error Prevention (All) (Level AAA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-all",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-all",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-all",
+  "response_sha256": "60ffeba9e93f8acf745b6c4fe23534821d2719d8cf806ff5de926d6ed2b6fac3",
+  "used_by": [
+    "B-IU-213"
+  ]
+}

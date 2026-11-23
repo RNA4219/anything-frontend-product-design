@@ -1,0 +1,17 @@
+{
+  "source_id": "C-REF-268",
+  "title": "Understanding SC 2.5.3 Label in Name (Level A)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name",
+  "response_sha256": "0e67909580f4ebb4f75fe7063377766bfc9bf77c8088d584ee5cff175b41dd56",
+  "used_by": [
+    "C-UI-213"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "source_id": "B-REF-228",
+  "title": "Understanding SC 3.3.8 Accessible Authentication (Minimum) (Level AA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum",
+  "response_sha256": "0391c286268bdcb08b892fad7716965edb608041749a046f8ee8320ba983b770",
+  "used_by": [
+    "B-IU-205"
+  ]
+}

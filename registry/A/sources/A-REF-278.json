@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-278",
+  "title": "Step indicator",
+  "url": "https://designsystem.digital.gov/components/step-indicator/",
+  "canonical_url": "https://designsystem.digital.gov/components/step-indicator/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/step-indicator/",
+  "response_sha256": "2f09afb3bde7af93960ad8ea130653dc81a4b7bca9fc9afb04acdbe92e561d38",
+  "used_by": [
+    "A-IU-212"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/step-indicator/#usability-guidance-step-indicator"
+}

@@ -1,0 +1,17 @@
+{
+  "source_id": "C-REF-218",
+  "title": "Understanding SC 2.5.6 Concurrent Input Mechanisms (Level AAA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/concurrent-input-mechanisms",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/concurrent-input-mechanisms",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/concurrent-input-mechanisms",
+  "response_sha256": "ef7f12aa2625ecf38b7149eaac5fad3cf9bc8c048297bcc12d83384e8256c83c",
+  "used_by": [
+    "C-UI-204"
+  ]
+}

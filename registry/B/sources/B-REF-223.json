@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-223",
+  "title": "Phone number",
+  "url": "https://designsystem.digital.gov/patterns/create-a-user-profile/phone-number/",
+  "canonical_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/phone-number/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/phone-number/",
+  "response_sha256": "9ba031d00aff6726027871607b18cbf74f9131c847fadb7cb7dba9a6bbaa7d27",
+  "used_by": [
+    "B-IU-204"
+  ],
+  "section_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/phone-number/#guidance"
+}

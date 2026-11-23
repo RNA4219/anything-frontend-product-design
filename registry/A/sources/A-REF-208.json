@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-208",
+  "title": "Breadcrumb Pattern",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/",
+  "response_sha256": "16c9297e2bb5e89844a2416bb4bc1b577ec3ec25d7064500032c415a3290cf73",
+  "used_by": [
+    "A-IU-202"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/#keyboardinteraction"
+}

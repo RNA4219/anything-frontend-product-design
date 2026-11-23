@@ -1,0 +1,17 @@
+{
+  "source_id": "C-REF-243",
+  "title": "Understanding SC 2.3.3 Animation from Interactions (Level AAA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions",
+  "response_sha256": "14af35e29c3c990a8de49207a26b260c1812eb09b2c70b25f3750a9f114c12f2",
+  "used_by": [
+    "C-UI-208"
+  ]
+}

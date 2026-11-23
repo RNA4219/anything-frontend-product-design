@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-233",
+  "title": "Slider",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/slider/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/slider/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/slider/guidelines",
+  "response_sha256": "ece13aadbc46eee7b9084fb61d033da09e090599b8589d068cedf7da2c589dc8",
+  "used_by": [
+    "C-UI-206"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/slider/guidelines#behaviors"
+}

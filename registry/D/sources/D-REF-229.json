@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-229",
+  "title": "Making prototypes",
+  "url": "https://www.gov.uk/service-manual/design/making-prototypes",
+  "canonical_url": "https://www.gov.uk/service-manual/design/making-prototypes",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "When to use prototypes",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/design/making-prototypes",
+  "response_sha256": "d2d4ac161408a4c90e743cb9234f98b987c4f0bfce9bc1bc1437c183c5585f5a",
+  "used_by": [
+    "D-IU-206"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/design/making-prototypes#when-to-use-prototypes"
+}

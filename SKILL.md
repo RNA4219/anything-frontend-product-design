@@ -19,4 +19,6 @@ description: Webプロダクトの機能、情報構造、操作フロー、再�
 
 選択肢が複数あるときは、同じ内容・課題・成功条件を使い、案ごとの差と失敗条件を観察する。実装を伴う場合は利用目的を最後まで達成できるかを確かめる。使った入力、アプリの版、観察結果、確認できなかった条件を残す。
 
+課題に合う設計案を探すときは、[分野別の設計ルールと出典](research/design-evidence/README.md)から、適用条件と確かめ方を選ぶ。
+
 視覚表現も扱う依頼では、主要な情報と操作、機能上の制約を Art Direction に渡す。表現を適用した実画面で、情報の発見、操作、完了の確認をもう一度試す。 [Anything Frontend Art Direction](https://github.com/RNA4219/anything-frontend-art-direction)

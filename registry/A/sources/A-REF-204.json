@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-204",
+  "title": "Menu Structure",
+  "url": "https://www.w3.org/WAI/tutorials/menus/structure/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/menus/structure/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Menu representation",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/menus/structure/",
+  "response_sha256": "44b1461b2aa01b3bb10995964564ce0c81fc83e2c064b1ef3cc429efe3c26084",
+  "used_by": [
+    "A-IU-201"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/menus/structure/#menu-representation"
+}

@@ -1,0 +1,24 @@
+{
+  "source_id": "D-REF-207",
+  "title": "System Usability Scale: A Meta-Analysis of How SUS Relates to Workload, Task Time, and Error Rate",
+  "authors": [
+    "Morten Hertzum"
+  ],
+  "year": 2026,
+  "venue": "International Journal of Human–Computer Interaction",
+  "source_type": "research_paper",
+  "publication_type": "journal-article",
+  "doi": "10.1080/10447318.2026.2625260",
+  "url": "https://doi.org/10.1080/10447318.2026.2625260",
+  "canonical_url": "https://doi.org/10.1080/10447318.2026.2625260",
+  "primary_text_url": "https://mortenhertzum.dk/publ/IJHCI2026.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "SUS、時間、エラーの改善方向が一致するかを個別に示す。",
+  "limits": "システムの比較研究のメタ分析。SUS単独で実作業を採点しない。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "D-IU-201"
+  ]
+}

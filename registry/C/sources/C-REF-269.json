@@ -1,0 +1,17 @@
+{
+  "source_id": "C-REF-269",
+  "title": "Understanding SC 4.1.2 Name, Role, Value (Level A)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value",
+  "response_sha256": "3005c5418151609ddadedb28dafc26500119f90d7949914462bab82490212304",
+  "used_by": [
+    "C-UI-213"
+  ]
+}

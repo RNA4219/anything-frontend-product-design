@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-264",
+  "title": "Character count",
+  "url": "https://designsystem.digital.gov/components/character-count/",
+  "canonical_url": "https://designsystem.digital.gov/components/character-count/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use the character count component",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/character-count/",
+  "response_sha256": "8379b769c4584d718fb0f171090ea514de837d55cd21f95d1cef32632102cebf",
+  "used_by": [
+    "C-UI-212"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/character-count/#when-to-use-the-character-count"
+}

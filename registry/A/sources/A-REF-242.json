@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-242",
+  "title": "In-page navigation",
+  "url": "https://designsystem.digital.gov/components/in-page-navigation/",
+  "canonical_url": "https://designsystem.digital.gov/components/in-page-navigation/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/in-page-navigation/",
+  "response_sha256": "d5aa585fe22ffff02672324f270931122fcba1ade7737e62558af59676aa34c4",
+  "used_by": [
+    "A-IU-207"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/in-page-navigation/#usability-guidance-in-page-navigation"
+}

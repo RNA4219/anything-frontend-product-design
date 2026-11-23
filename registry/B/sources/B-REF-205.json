@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-205",
+  "title": "Cognitive Accessibility Design Pattern: Accept different input formats",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p08-input-formats/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p08-input-formats/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p08-input-formats/",
+  "response_sha256": "338abd83dabf66f43b1202ca892a0d3a3f08f0f663b4a847a9f198105349fca9",
+  "used_by": [
+    "B-IU-201"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p08-input-formats/#whattodo"
+}

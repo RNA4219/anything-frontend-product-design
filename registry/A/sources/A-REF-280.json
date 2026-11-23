@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-280",
+  "title": "Cognitive Accessibility Design Pattern: Make Each Step Clear",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p04-clear-steps/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p04-clear-steps/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p04-clear-steps/",
+  "response_sha256": "fd7ddbd7e2f0df9346e988e1e31ba878b8af8029f41d7a07467f9bfe453c11e8",
+  "used_by": [
+    "A-IU-212"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p04-clear-steps/#whattodo"
+}

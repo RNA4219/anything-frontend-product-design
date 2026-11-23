@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-249",
+  "title": "Informative Images",
+  "url": "https://www.w3.org/WAI/tutorials/images/informative/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/images/informative/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Example 1: Images used to label other information",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/images/informative/",
+  "response_sha256": "415a12289131c157d5bcd8bd37a59b4ba5a37899d118fbeccf3df9af0914dc36",
+  "used_by": [
+    "A-IU-208"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/images/informative/#example-1-images-used-to-label-other-information"
+}
