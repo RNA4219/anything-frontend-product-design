@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-218",
+  "title": "Ask users for Email addresses",
+  "url": "https://design-system.service.gov.uk/patterns/email-addresses/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/email-addresses/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/email-addresses/",
+  "response_sha256": "20d9ee83ffa53275ee857164872cf7d63e88829c7e49abcb0ad52fde7f5709a2",
+  "used_by": [
+    "B-IU-204"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/email-addresses/#when-to-use-this-pattern"
+}

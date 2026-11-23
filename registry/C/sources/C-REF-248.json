@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-248",
+  "title": "Tree view",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/tree-view/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/tree-view/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/tree-view/guidelines",
+  "response_sha256": "9c5212380a8914fd9e9c2c6a8ad602c6611b726fe0b8fa759f6f88dcd4a17962",
+  "used_by": [
+    "C-UI-209"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/tree-view/guidelines#behaviors"
+}

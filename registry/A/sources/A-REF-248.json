@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-248",
+  "title": "Complex Images",
+  "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/images/complex/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Example 1: Description containing structured information",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/images/complex/",
+  "response_sha256": "cbd691a9081fcbf00a988d11b9e6476a1ec6754108fcf12c2c207f3f139e93dd",
+  "used_by": [
+    "A-IU-208"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/images/complex/#example-1-description-containing-structured-information"
+}

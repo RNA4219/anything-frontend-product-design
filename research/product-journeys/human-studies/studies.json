@@ -1,0 +1,509 @@
+[
+  {
+    "id": "study-madrid",
+    "title": "Streamlining Museum Trip Planning",
+    "url": "https://ixd.prattsi.org/2026/05/streamlining-museum-trip-planning/",
+    "publisher": "Pratt Institute・実施チーム",
+    "year": 2026,
+    "sample": {
+      "n": 7,
+      "scope": "米国在住の18～45歳を対象に募集した美術館利用者"
+    },
+    "device": "本人のスマートフォン",
+    "method": "対面または遠隔で進行役が観察。発話しながら公式サイトで3課題を実施。",
+    "prior_exposure": "当該サイトの初回利用かは不明。",
+    "limits": "小規模な依頼調査。ためらい、困惑、最終的な未完了は別の事象。",
+    "related_tasks": [
+      "friday"
+    ],
+    "relationship": "曜日ごとの開館時間と例外を公式サイトで調べる。今回の金曜閉館とは曜日・対象館が異なる。",
+    "study_type": "service_study",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "study-washington",
+    "title": "Improving the National Gallery of Art’s Website for First-Time Visitors",
+    "url": "https://ixd.prattsi.org/2026/05/case-study-improving-the-national-gallery-of-arts-website-for-first-time-visitors/",
+    "publisher": "Pratt Institute・実施チーム",
+    "year": 2026,
+    "sample": {
+      "n": 8,
+      "scope": "美術館を訪れる観光客を想定。18～65歳、スマホ4人・PC4人"
+    },
+    "device": "スマートフォンとPC",
+    "method": "Zoomで画面を共有し、発話しながら来館計画に関する5課題を実施。",
+    "prior_exposure": "初めて来館する観光客を想定。当該サイトの過去の利用歴が全員ゼロかは本文では不明。",
+    "limits": "スマホ参加者4人の観察。ワシントンの施設。ロンドンの同名に近い施設とは別。",
+    "related_tasks": [
+      "friday"
+    ],
+    "relationship": "公式の来館案内で入口を見つける。時刻そのものの正答率は記載されていない。",
+    "study_type": "service_study",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "study-muji",
+    "title": "MUJI Responsive Web Redesign – Research Report",
+    "url": "https://www.urvashibhorkar.com/_files/ugd/af2984_8eb80ea884a9449b82310c712b81b042.pdf",
+    "publisher": "Ankita Satija・Urvashi Bhorkar",
+    "year": null,
+    "sample": {
+      "n": 3,
+      "scope": "ウェブ課題を行った3人。同じ報告の実店舗観察4人とは別に扱う。"
+    },
+    "device": "デスクトップとモバイル。機種不明。",
+    "method": "万年筆、返品規約、合計額を探す。PCの後にモバイルで同じ課題を実施。",
+    "prior_exposure": "モバイルで再試行する時点で同じ場所をPCで探した経験がある。PC開始前のサイト利用歴は不明。",
+    "limits": "3人の順序固定の試行。2条件を合わせて6人とは数えない。公表年は原文で確認できない。",
+    "related_tasks": [
+      "mug",
+      "returns"
+    ],
+    "relationship": "商品種・価格の条件検索と、返品規約の発見を扱う。ブランドと同一商品の比較ではない。",
+    "study_type": "service_study",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "study-ikea",
+    "title": "Final Report: IKEA Website",
+    "url": "https://uploads-ssl.webflow.com/5c2ed19d3ded38577c949b46/5c50c38c3c076f0aaa48fbf9_Final%20Report.pdf",
+    "publisher": "University of Washington・HCDEの調査チーム",
+    "year": 2018,
+    "sample": {
+      "n": 8,
+      "scope": "転居経験がある大学生8人、19～22歳"
+    },
+    "device": "研究者が用意したノートPC",
+    "method": "購入、絞り込み、買い物かご、クーポン探索など5課題。発話・画面収録・観察。",
+    "prior_exposure": "8人全員がIKEAサイトの閲覧経験あり。購入経験は2人。",
+    "limits": "2018年の画面。支援を受けて到達した人を自力の完了者に含めない。",
+    "related_tasks": [
+      "mug",
+      "repair"
+    ],
+    "relationship": "IKEAで検索結果と入口の意味を判断する点が共通。商品と国・画面の版が異なる。",
+    "study_type": "service_study",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "study-nordstrom",
+    "title": "Nordstrom.com Core Shopping Experience",
+    "url": "https://static1.squarespace.com/static/5c2e3922a9e028aa96c590c0/t/64e6d82d3261ca69fa25a4e1/1692850232008/Nordstrom_FinalReport.pdf",
+    "publisher": "University of Washington・Nordstromとの共同調査",
+    "year": 2022,
+    "sample": {
+      "n": 9,
+      "scope": "Nordstromの顧客になり得る参加者9人"
+    },
+    "device": "PC版ウェブサイト",
+    "method": "Zoom・発話思考法を使い、衣料品の検索、絞り込み、保存、数量変更など11課題を観察。",
+    "prior_exposure": "利用経験にばらつきがある。サイト未経験者だけの結果は不明。",
+    "limits": "学生チームによる9人の試験。位置変化に遭遇した人数と操作に失敗した人数は別。",
+    "related_tasks": [
+      "shirt",
+      "mug"
+    ],
+    "relationship": "衣料品を条件で絞り、商品詳細から次の操作に進む。前回の課題は価格とMサイズを確認するところまで。",
+    "study_type": "service_study",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "study-economic",
+    "title": "A Usability and Eye-Tracking Evaluation of the Economic Census Web Site",
+    "url": "https://www.census.gov/content/dam/Census/library/working-papers/2008/adrm/ssm2008-11.pdf",
+    "publisher": "U.S. Census Bureau",
+    "year": 2008,
+    "sample": {
+      "n": 7,
+      "scope": "外部募集したウェブ操作経験者7人"
+    },
+    "device": "研究室のPC・視線計測",
+    "method": "初めて使う統計サイトで10課題。課題ごとの正答を観察者が判定した。",
+    "prior_exposure": "要旨に全員がこのサイトに不案内と明記。募集条件は広範な事前経験がないこと。既訪問回数は未集計。",
+    "limits": "米国の旧統計サイト。「戻る」は正常な探索にも使う。Table 2とTable 3では一部の試行の成否が一致しないため、時間を組み合わせていない。",
+    "related_tasks": [
+      "friday",
+      "store"
+    ],
+    "relationship": "公式サイトで指定された情報に行き着けるかを評価する点が共通。実店舗・美術館の利用者は調べていない。",
+    "study_type": "service_study",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "study-build",
+    "title": "A Usability and Eye-Tracking Evaluation of the Build-a-Table Web Site",
+    "url": "https://www.census.gov/content/dam/Census/library/working-papers/2009/adrm/ssm2009-06.pdf",
+    "publisher": "U.S. Census Bureau",
+    "year": 2009,
+    "sample": {
+      "n": 9,
+      "scope": "解析対象9人。外部募集9人と実習生1人のうち、外部参加者1人を解析から除外。"
+    },
+    "device": "研究室のPC・視線計測",
+    "method": "統計を探す8課題。時間は成功試行のみ。設問の解釈で採点を変更した課題2は未収録。",
+    "prior_exposure": "当該サイトに詳しい人を除外。実習生1人は未経験。全員が初訪問かは不明。",
+    "limits": "課題6には推測による正答とサイト外の検索による正答を含む。時間はTable 4の列平均。",
+    "related_tasks": [
+      "repair",
+      "store"
+    ],
+    "relationship": "情報探索中の引き返しと正答を別々に計測した例。検索語修正や住所検索と同じ課題ではない。",
+    "study_type": "service_study",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "study-regional",
+    "title": "Final Report for Usability Testing of the Census Regional Website",
+    "url": "https://www2.census.gov/library/working-papers/2011/adrm/ssm2012-02.pdf",
+    "publisher": "U.S. Census Bureau",
+    "year": 2011,
+    "sample": {
+      "n": 13,
+      "scope": "視線計測群8人、スクリーンリーダーJAWSの利用者5人。1人は課題6までで終了。"
+    },
+    "device": "研究室のPC、視線計測またはJAWS",
+    "method": "発話を伴う地域事務所サイトの探索。成功と全試行の時間を別々に記録。",
+    "prior_exposure": "各サイトの事前利用歴は不明。後の課題では先の課題の経験がある。",
+    "limits": "JAWS利用群の課題7以降の分母は4人。両群は募集・入力方法が異なり、端末や支援技術の因果効果を推定できない。",
+    "related_tasks": [
+      "store",
+      "friday"
+    ],
+    "relationship": "実際に訪れる場所の道順・予約条件・連絡先を公式サイトで探した課題。前回の新宿の支店検索と地域は異なる。",
+    "study_type": "service_study",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "study-complex",
+    "title": "Keep it Simple: How Visual Complexity and Preferences Impact Search Efficiency on Websites",
+    "url": "https://talaugust.github.io/assets/pdf/Baughan2020KeepIS.pdf",
+    "publisher": "ACM CHI・Baughanほか",
+    "year": 2020,
+    "sample": {
+      "n": 165,
+      "scope": "オンライン実験の参加者165人。各人が探索課題で6画面を使用。"
+    },
+    "device": "コンピューター、主にマウスまたはトラックパッド",
+    "method": "実サイトの静止画像で、指定リンクを探して選択。低・中・高の複雑さの画像を無作為順で各2枚提示。",
+    "prior_exposure": "知名度の低いサイトを選定。参加者ごとの既訪問履歴は不明。",
+    "limits": "画像全体の視覚的複雑さで分類。CSSの余白だけを変えた実験ではなく、生サイトのタスク完了時間とも異なる。",
+    "related_tasks": [
+      "mug",
+      "friday",
+      "store"
+    ],
+    "relationship": "画面の項目量と対象発見の関係を読む原著。今回測った空白距離から個別サイトの所要時間を予測できない。",
+    "study_type": "density_experiment",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "study-density",
+    "title": "The Influence of Local Density and Link Color on Visual Search",
+    "url": "https://www.cs.uoregon.edu/research/cm-hci/Text_Search/Text_Color_and_local_density_study.pdf",
+    "publisher": "Tim Halverson・University of Oregon",
+    "year": 2003,
+    "sample": {
+      "n": 24,
+      "scope": "実験1に参加したGUI利用経験者24人"
+    },
+    "device": "研究室のモニター・マウス・視線計測",
+    "method": "複数群に配置した単語から指定語を探す。見つけるまでマウスを動かさず、探索とポインティングの時間を分離。",
+    "prior_exposure": "実験課題。実サービスへの初訪問の測定ではない。",
+    "limits": "密度と同時に枠内の文字サイズと単語数を変えた。誤り試行は除外してやり直した。余白の独立効果ではない。",
+    "related_tasks": [],
+    "relationship": "初期画面全体の面積比とは異なる、グループ内の局所密度を比較した実験。",
+    "study_type": "density_experiment",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "industry-blender-video",
+    "title": "How to Turn User Videos into Insights",
+    "url": "https://measuringu.com/user-videos-insights/",
+    "publisher": "MeasuringU",
+    "year": 2018,
+    "sample": {
+      "n": 150,
+      "scope": "小売サイト全体150人中、動画を確認した17人の部分集合"
+    },
+    "device": "不明",
+    "method": "レビュー件数が最低条件を満たすブレンダーを選ぶ課題の録画17件を分析。",
+    "prior_exposure": "不明",
+    "limits": "17動画の選択方法不明。遅延と未完了を分離しておらず、150人全体の失敗率ではない。",
+    "related_tasks": [
+      "mug",
+      "shirt"
+    ],
+    "relationship": "商品属性を確かめて選ぶ点が類似。対象はレビュー数を伴うブレンダー。",
+    "study_type": "service_study",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "industry-bypass-first",
+    "title": "ByPass: Reconsidering the Usability of Password Managers",
+    "url": "https://eudl.eu/pdf/10.1007/978-3-030-63086-7_24",
+    "publisher": "SecureComm / Springer",
+    "year": 2020,
+    "sample": {
+      "n": 20,
+      "scope": "大学キャンパスで募集した実験室参加者"
+    },
+    "device": "Chrome拡張の実験室環境。画面寸法・端末詳細は未確認",
+    "method": "架空ECとメールサービス、試作パスワードマネージャーを用いた初回利用課題。画面表示から成功までログ計時し、ミス時間も含む。",
+    "prior_exposure": "全員がByPassの初利用、課題も初回。実験前に概要説明あり。15人に他のパスワードマネージャー利用経験あり。",
+    "limits": "変更課題であり、忘れたパスワードの再設定ではない。1つの試作で対照群なし。4.7クリックは操作の繰り返しであり失敗回数ではない。",
+    "related_tasks": [
+      "reset"
+    ],
+    "relationship": "認証情報を変更し完了する人の操作時間という点で近いが、復旧ではなく試作マネージャー内の変更。",
+    "study_type": "controlled_task",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "industry-fallback-longitudinal",
+    "title": "A Comparative Long-Term Study of Fallback Authentication Schemes",
+    "url": "https://maximiliangolla.com/files/2024/papers/chi24-sub9761-fallback-lt.pdf",
+    "publisher": "ACM CHI",
+    "year": 2024,
+    "sample": {
+      "n": 97,
+      "scope": "登録後6・12・18か月の呼戻しで4方式のいずれかに割付けられた参加者"
+    },
+    "device": "デスクトップ限定",
+    "method": "研究用サイトで登録後、各人に割り当てた方法で再設定。時間は開始から新しいパスワード設定成功まで。極端な外れ値を除去。",
+    "prior_exposure": "研究用サイトへの登録と2週間後のログインあり。再設定は初回と断定できない。",
+    "limits": "研究用サイト・強制的な再設定。成功者の時間のみ、極端な外れ値を除いた中央値。待ち時間は全利用者の時間とは限らない。",
+    "related_tasks": [
+      "reset"
+    ],
+    "relationship": "メール・SMSで本人が再設定する点は類似。実サービスの既存パスワード忘れとは異なる。",
+    "study_type": "controlled_task",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "industry-live-click",
+    "title": "Do Click Tests Predict Live Site Clicks?",
+    "url": "https://measuringu.com/do-click-tests-predict-live-site-clicks/",
+    "publisher": "MeasuringU",
+    "year": 2023,
+    "sample": {
+      "n": 130,
+      "scope": "画像62人・実サイト68人。各人が5サイト各1課題"
+    },
+    "device": "デスクトップを含む。解像度が変わる例あり、機種不明",
+    "method": "米国オンラインパネルを画像群と実サイト群に割り当て、サイト順をランダム化。両群に拡張機能を導入。",
+    "prior_exposure": "不明。5課題による習熟の可能性あり",
+    "limits": "研究全体の時間であり1課題の時間ではない。初回クリックは最終成功ではない。画面・機能差と学習効果あり。",
+    "related_tasks": [
+      "returns"
+    ],
+    "relationship": "注文後のIKEAで情報を探す点が近いが、返金ではなく追跡。",
+    "study_type": "live_and_static",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "industry-product-click",
+    "title": "Do Click Tests Predict Clicks on Product Pages?",
+    "url": "https://measuringu.com/do-click-tests-predict-clicks-on-product-pages/",
+    "publisher": "MeasuringU",
+    "year": 2023,
+    "sample": {
+      "n": 306,
+      "scope": "脱落者除外後、3サイト×画像/実サイトの6群"
+    },
+    "device": "不明。画像と実サイトで画面サイズ・解像度の影響の可能性を指摘",
+    "method": "米国オンラインパネルをLenovo/HP/Dellの画像または実サイトに無作為割付。15インチ・1000ドル未満のPCを探し、検索バーを使わない。",
+    "prior_exposure": "不明",
+    "limits": "初回クリックの比較で、購入や実課題完了を示さない。サイズ・価格フィルターの配置は条件と在庫で変化。",
+    "related_tasks": [
+      "mug",
+      "shirt"
+    ],
+    "relationship": "商品一覧から仕様と価格を使い候補を探す点が類似。商品種別と成功条件は異なる。",
+    "study_type": "live_and_static",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "industry-target-tree",
+    "title": "Card Sorting + Tree Testing: The Science of Great Site Navigation",
+    "url": "https://measuringu.com/cardsort-tree-test/",
+    "publisher": "MeasuringU",
+    "year": 2012,
+    "sample": {
+      "n": 50,
+      "scope": "既存Target.com構造で14項目を探すツリーテスト用に別途募集した50人"
+    },
+    "device": "不明",
+    "method": "Target.comの既存ナビゲーションを表示要素を除いた階層として提示。14項目を選択し各項目の自信・難易度を回答。",
+    "prior_exposure": "不明",
+    "limits": "階層のみのツリーテストで実サイト操作や商品詳細表示ではない。17分は14項目と質問の合計。",
+    "related_tasks": [
+      "mug",
+      "shirt"
+    ],
+    "relationship": "商品を分類から探す点が類似するが、画面上の検索・商品詳細は扱わない。",
+    "study_type": "controlled_task",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "touch-children",
+    "title": "Interaction and Recognition Challenges in Interpreting Children’s Touch and Gesture Input on Mobile Devices",
+    "url": "https://lisa-anthony.com/wp-content/uploads/2012/09/anthony-et-al-tabletop20121.pdf",
+    "publisher": "ACM ITS 2012",
+    "year": 2012,
+    "sample": {
+      "n": 30,
+      "scope": "子ども16人と成人14人。タップ課題はログ欠損で28人（15人と13人）を分析"
+    },
+    "device": "Samsung Google Nexus S、Android 4.0.4",
+    "method": "実機で大きさと位置が異なる標的をタップし、直前の標的位置への押し直しを記録。",
+    "prior_exposure": "成人はタッチ端末の自己評価が全員平均または熟達。子どもは初心者から熟達まで。最初の標的は練習として除外。",
+    "limits": "81%の分母は原文から特定できず、誤タップ全体の発生率やholdover全体に占める割合と解釈しない。小型標的の実験であり実Webの完了率を測っていない。28人分析。",
+    "related_tasks": [],
+    "relationship": "画面遷移後に前の位置を再タップする現象と似るが、標的実験で実際の商品・サポート画面ではない。",
+    "study_type": "touch_study",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "touch-elderly",
+    "title": "Elderly User Evaluation of Mobile Touchscreen Interactions",
+    "url": "https://opendl.ifip-tc6.org/db/conf/interact/interact2011-1/KobayashiHMAHI11.pdf",
+    "publisher": "IFIP INTERACT 2011",
+    "year": 2011,
+    "sample": {
+      "n": 20,
+      "scope": "日本の60〜70代20人。小型iPod群10人と大型iPad群10人"
+    },
+    "device": "iPod touch と iPad、iOS 4.2",
+    "method": "標的タップ等を練習後に測定、1週間の練習後に再実施。",
+    "prior_exposure": "4人にタッチ端末の経験あり。他の経験は異なり、試験前練習もある。第2回は初見ではない。",
+    "limits": "制御された古い端末・少人数の標的タップ。39%は参加者割合でなく試行の誤り割合。年齢層間の比較研究ではない。",
+    "related_tasks": [],
+    "relationship": "小さな操作対象を押し直す問題に関係するが、商品検索やサポート画面の実操作ではない。",
+    "study_type": "touch_study",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "touch-game",
+    "title": "100,000,000 Taps: Analysis and Improvement of Touch Performance in the Large",
+    "url": "https://www.uni-ulm.de/fileadmin/website_uni_ulm/iui.inst.100/institut/Papers/Prof_Rukzio/2011/2011_henze_mobilehci2011.pdf",
+    "publisher": "ACM MobileHCI 2011",
+    "year": 2011,
+    "sample": {
+      "n": null,
+      "scope": "ゲームの91,731インストール、比較研究12,201インストール。人数ではない"
+    },
+    "device": "Android Marketで配布されたゲームを動かした各種Android端末",
+    "method": "円標的をタップするゲームを公開し、位置補正の有無で独立群を比較。",
+    "prior_exposure": "自然利用のため個々の練習履歴・初見性は不明。解析では各端末の最初のレベルを除外。",
+    "limits": "インストール数は人数でない。利用環境・選択・中途離脱を統制できない準実験。単一円を叩くゲームで一般Webの到達率でない。",
+    "related_tasks": [],
+    "relationship": "端末での実タップ精度に関係するが、目的地の選択やWeb上の判断は測らない。",
+    "study_type": "touch_study",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "touch-google",
+    "title": "Can Capacitive Touch Images Enhance Mobile Keyboard Decoding?",
+    "url": "https://arxiv.org/abs/2410.02264",
+    "publisher": "ACM / Google Research",
+    "year": 2024,
+    "sample": {
+      "n": 16,
+      "scope": "オンライン対話型キーボード比較の参加者16人"
+    },
+    "device": "Google Pixel 6 Pro、実機",
+    "method": "画面上の英文とランダム文字列を4ブロック各30件転記。重心方式とヒートマップ方式を順序相殺し比較。",
+    "prior_exposure": "日常的にスマートフォンで英語入力をする人。2方式を繰り返すため初見・初回購入課題ではない。",
+    "limits": "英文の転記と比較用キーボードに限定。単語誤り率はタップミス率と同義ではない。自動修正は無効。",
+    "related_tasks": [
+      "repair"
+    ],
+    "relationship": "検索語入力で誤りが起きうることに関連するが、商品を探す自然な検索課題ではない。",
+    "study_type": "touch_study",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  },
+  {
+    "id": "touch-physicians",
+    "title": "Exploring Usability Issues of a Smartphone-Based Physician-to-Physician Teleconsultation App in an Orthopedic Clinic: Mixed Methods Study",
+    "url": "https://humanfactors.jmir.org/2021/4/e31130",
+    "publisher": "JMIR Human Factors",
+    "year": 2021,
+    "sample": {
+      "n": 5,
+      "scope": "タイの大学病院の整形外科医5人。別に比較用の熟練者1人"
+    },
+    "device": "スマートフォン上のMEDICアプリ",
+    "method": "5課題を発話思考法と観察、課題後面接で評価。専門家との比較を含む。",
+    "prior_exposure": "全員が業務上のスマートフォンでの複数作業に慣れていると自己申告。課題ごとの熟知度は異なる。",
+    "limits": "少人数・単一病院・医療従事者の専用アプリ。時間は操作だけではなく面接を含む課題もある。記事はクリックと記すが指操作の誤タップ数とは別。",
+    "related_tasks": [
+      "repair"
+    ],
+    "relationship": "目的の対象や連絡先を探し、実行できるかという点はサポート探索に類似。医療の業務内容やアプリは異なる。",
+    "study_type": "touch_study",
+    "related_rule_ids": [
+      "D-IU-214",
+      "D-IU-201"
+    ]
+  }
+]

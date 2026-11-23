@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-241",
+  "title": "Carousel (Slide Show or Image Rotator) Pattern",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/carousel/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/carousel/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/carousel/",
+  "response_sha256": "0fc74b5f45275b40e87e82feff7765440a84fb2dbc7d33f6eb9abc76547d804b",
+  "used_by": [
+    "C-UI-208"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/carousel/#keyboardinteraction"
+}

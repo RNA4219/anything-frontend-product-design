@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-268",
+  "title": "Pages – Confirmation page",
+  "url": "https://service-manual.nhs.uk/design-system/patterns/confirmation-page",
+  "canonical_url": "https://service-manual.nhs.uk/design-system/patterns/confirmation-page",
+  "publisher": "NHS England",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How to use a confirmation page",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://service-manual.nhs.uk/design-system/patterns/confirmation-page",
+  "response_sha256": "4bc40390712ed2ecdef4cb33c26ce145ce9f6c3c8266c52fa7b4be20ff9339ee",
+  "used_by": [
+    "B-IU-212"
+  ],
+  "section_url": "https://service-manual.nhs.uk/design-system/patterns/confirmation-page#how-to-use"
+}

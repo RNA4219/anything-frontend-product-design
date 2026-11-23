@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-214",
+  "title": "Menu Button Pattern",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/",
+  "response_sha256": "045c3c51d28bc0f18c7c04ef3f37c55b36064efbd9870c5057be53e4359ad654",
+  "used_by": [
+    "C-UI-203"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/#keyboardinteraction"
+}

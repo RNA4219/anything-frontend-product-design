@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-260",
+  "title": "Table",
+  "url": "https://design-system.service.gov.uk/components/table/",
+  "canonical_url": "https://design-system.service.gov.uk/components/table/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/table/",
+  "response_sha256": "7b856b7c729b303302fa718fe7fea4c4b966323221c29b4aa9f055e8af560ca3",
+  "used_by": [
+    "A-IU-209"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/table/#how-it-works"
+}

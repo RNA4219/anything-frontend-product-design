@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-247",
+  "title": "Treegrid Pattern",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/",
+  "response_sha256": "015cbd1654b492a6265d59024d6a87717bddd7be9ade56f8746c65369a90e017",
+  "used_by": [
+    "C-UI-209"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/#keyboardinteraction"
+}

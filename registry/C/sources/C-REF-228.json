@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-228",
+  "title": "Slider Pattern",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/slider/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/slider/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/slider/",
+  "response_sha256": "ef2fbd86eeb0399bef945c7fb935703ab6bd4b45857cdd57276387d4c7a4499e",
+  "used_by": [
+    "C-UI-206"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/slider/#keyboardinteraction"
+}

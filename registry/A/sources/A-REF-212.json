@@ -1,0 +1,17 @@
+{
+  "source_id": "A-REF-212",
+  "title": "Understanding SC 2.4.8 Location (Level AAA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/location",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/location",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/location",
+  "response_sha256": "c7f7a8b5aed62b28d9c751669ef6cc5ecc918a5fc1fd1918600a6bc2c9539c5e",
+  "used_by": [
+    "A-IU-202"
+  ]
+}

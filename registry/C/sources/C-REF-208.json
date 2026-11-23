@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-208",
+  "title": "Tabs",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/tabs/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/tabs/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Universal behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/tabs/guidelines",
+  "response_sha256": "235452b9b9d5b3bb6ec2a6cefe365c001882cb10e0ed51f02c37c914c3c2b236",
+  "used_by": [
+    "C-UI-202"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/tabs/guidelines#universal-behaviors"
+}

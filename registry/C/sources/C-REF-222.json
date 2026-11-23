@@ -1,0 +1,17 @@
+{
+  "source_id": "C-REF-222",
+  "title": "Understanding SC 2.5.2 Pointer Cancellation (Level A)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation",
+  "response_sha256": "bdbc36e49b77f7981620c9b5083f63a36483c30e78b19336c7f02d8ae0af0950",
+  "used_by": [
+    "C-UI-205"
+  ]
+}

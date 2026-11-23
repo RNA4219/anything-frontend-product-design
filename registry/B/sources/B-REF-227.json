@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-227",
+  "title": "Help users to Create accounts",
+  "url": "https://design-system.service.gov.uk/patterns/create-accounts/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/create-accounts/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/create-accounts/",
+  "response_sha256": "ba133855733bad34ef97eb36e9d6e58bd560983ab736f8372662bac8fb63c524",
+  "used_by": [
+    "B-IU-205"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/create-accounts/#when-to-use-this-pattern"
+}

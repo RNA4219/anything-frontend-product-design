@@ -2,7 +2,7 @@
 
 利用者が目的を達成できるよう、機能と情報の構造を決め、操作を実装し、結果を確かめるためのSkillです。同じ課題と入力で試作を動かし、利用者が何を見つけ、どう判断し、どの条件で完了できたかを採用理由にします。
 
-[SKILL.md](SKILL.md) から相談に合う担当を選べます。複数の担当をつなぐ場合は、[受け渡しの約束](references/handoff.md) と [共通の試作課題](tests/fixtures/booking-change.md) を参照してください。
+[SKILL.md](SKILL.md) から相談に合う担当を選べます。製品を点検するときは、[製品評価チェックリスト](references/product-checklist.md)に用件ごとの基準・実測値・証拠を記入します。複数の担当をつなぐ場合は、[受け渡しの約束](references/handoff.md) と [共通の試作課題](tests/fixtures/booking-change.md) を参照してください。
 
 | 担当 | 設計するもの | 担当ディレクトリ |
 | --- | --- | --- |
@@ -12,6 +12,8 @@
 | D | 検証の設計、観察結果、リリース判断 | `modules/design-qa-evaluation/` |
 
 配色・書体・余白・構図の表現は [Anything Frontend Art Direction](https://github.com/RNA4219/anything-frontend-art-direction) が担当します。両方を使う場合は、利用者に伝える情報と操作の目的を共有し、表現が決まった画面を同じ利用課題で再確認します。
+
+[実サイトの用件別の索引](references/site-comparisons.md)から、操作回数・余白・情報密度を参照できます。[29ブランド・施設の実画面](research/product-journeys/walkthrough/README.md)と[新規12ブランド・施設を含む追加観察](research/product-journeys/expansion/README.md)を収録しています。人の探索時間や達成率については[利用者を観察した研究](research/product-journeys/human-studies/README.md)を参照してください。
 
 [調査資料の置き方](research/README.md)、[検証の実行方法](tests/README.md)、[実行・評価の証跡](evidence/README.md)。
 

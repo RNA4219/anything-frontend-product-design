@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-210",
+  "title": "Doing user research remotely by phone or video call",
+  "url": "https://www.gov.uk/service-manual/user-research/remote-user-research-phone-video-call",
+  "canonical_url": "https://www.gov.uk/service-manual/user-research/remote-user-research-phone-video-call",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "When to do research remotely",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/user-research/remote-user-research-phone-video-call",
+  "response_sha256": "ed77461a0d1341da1fba0d406420c2c07fd1096a4685830e75afae289382c105",
+  "used_by": [
+    "D-IU-202"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/user-research/remote-user-research-phone-video-call#when-to-do-research-remotely"
+}

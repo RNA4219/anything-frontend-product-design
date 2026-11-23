@@ -1,0 +1,17 @@
+{
+  "source_id": "D-REF-243",
+  "title": "Understanding SC 1.3.4 Orientation (Level AA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/orientation",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/orientation",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/orientation",
+  "response_sha256": "93e67978e3b5c7c7a3e289ae539553e8fe5e35a5c4eba4c2abc5e370e6b10755",
+  "used_by": [
+    "D-IU-209"
+  ]
+}

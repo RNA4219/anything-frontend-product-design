@@ -1,0 +1,28 @@
+{
+  "source_id": "D-REF-272",
+  "title": "Designing Usable Web Forms: Empirical Evaluation of Web Form Improvement Guidelines",
+  "authors": [
+    "Mirjam Seckler",
+    "Silvia Heinz",
+    "Javier A. Bargas-Avila",
+    "Klaus Opwis",
+    "Alexandre N. Tuch"
+  ],
+  "year": 2014,
+  "venue": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/2556288.2557265",
+  "url": "https://doi.org/10.1145/2556288.2557265",
+  "canonical_url": "https://doi.org/10.1145/2556288.2557265",
+  "primary_text_url": "https://edoc.unibas.ch/server/api/core/bitstreams/a4d3ea7f-518a-4ca4-b13a-f799f6781740/content",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "フォームの修正では、所要時間と送信試行回数を同じ課題で確認する。",
+  "limits": "複数の改善を一括適用した研究。単独の項目の効果に分解できない。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "D-IU-213"
+  ]
+}

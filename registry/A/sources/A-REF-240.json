@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-240",
+  "title": "Cognitive Accessibility Design Pattern: Explain Implied Content",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o3p12-implicit-explained/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o3p12-implicit-explained/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o3p12-implicit-explained/",
+  "response_sha256": "77fab60646d5a3ed6d52268a7d57f01221237c63a5414a0ad5857c265af169b8",
+  "used_by": [
+    "A-IU-206"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o3p12-implicit-explained/#whattodo"
+}

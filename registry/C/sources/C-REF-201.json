@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-201",
+  "title": "Combobox Pattern",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
+  "response_sha256": "784e112de0b97d643525e5529f837674a983619c397ed299582aec8c7a20fcbc",
+  "used_by": [
+    "C-UI-201"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/#keyboardinteraction"
+}

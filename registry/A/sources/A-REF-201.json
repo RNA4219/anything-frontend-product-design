@@ -1,0 +1,17 @@
+{
+  "source_id": "A-REF-201",
+  "title": "Understanding SC 3.2.3 Consistent Navigation (Level AA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation",
+  "response_sha256": "aaad0da894a88a8aee73088a8bbfb5d27cfb249da908f8ba50156fbed56a8a9d",
+  "used_by": [
+    "A-IU-201"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-234",
+  "title": "Number input",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/number-input/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/number-input/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/number-input/guidelines",
+  "response_sha256": "4db12537335b1ad14ffe4cd1b2d94b283cc06fb04bf07548432e15300ea4e2a2",
+  "used_by": [
+    "C-UI-206"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/number-input/guidelines#behaviors"
+}

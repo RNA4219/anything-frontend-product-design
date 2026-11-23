@@ -1,0 +1,24 @@
+{
+  "source_id": "B-REF-244",
+  "title": "The importance of percent-done progress indicators for computer-human interfaces",
+  "authors": [
+    "Brad A. Myers"
+  ],
+  "year": 1985,
+  "venue": "Proceedings of the SIGCHI conference on Human factors in computing systems  - CHI '85",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/317456.317459",
+  "url": "https://doi.org/10.1145/317456.317459",
+  "canonical_url": "https://doi.org/10.1145/317456.317459",
+  "primary_text_url": "https://www.cs.cmu.edu/~bam/papers/percentdoneCHI85.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "完了割合を示す表示と稼働中を示す表示を区別する。",
+  "limits": "進捗を推定できる処理での実験。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "B-IU-207"
+  ]
+}

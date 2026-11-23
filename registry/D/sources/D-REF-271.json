@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-271",
+  "title": "Select accessibility tests",
+  "url": "https://designsystem.digital.gov/components/select/accessibility-tests/",
+  "canonical_url": "https://designsystem.digital.gov/components/select/accessibility-tests/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品試験手順",
+  "section": "Keyboard navigation tests",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/select/accessibility-tests/",
+  "response_sha256": "9c14d89cdebc05aff20d40d12a275941eaa8cdb437bc00a38c7598bd9482f680",
+  "used_by": [
+    "D-IU-213"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/select/accessibility-tests/#keyboard-navigation-tests"
+}

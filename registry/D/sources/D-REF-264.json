@@ -1,0 +1,17 @@
+{
+  "source_id": "D-REF-264",
+  "title": "Understanding SC 1.2.5 Audio Description (Prerecorded) (Level AA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded",
+  "response_sha256": "19b2cd4a324b697a1792b472e0abc46e849dc9b533f022b0b8af956de3fdb5a2",
+  "used_by": [
+    "D-IU-212"
+  ]
+}

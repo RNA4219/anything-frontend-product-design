@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-260",
+  "title": "Pages – Interruption page",
+  "url": "https://service-manual.nhs.uk/design-system/patterns/interruption-page",
+  "canonical_url": "https://service-manual.nhs.uk/design-system/patterns/interruption-page",
+  "publisher": "NHS England",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How to use an interruption page",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://service-manual.nhs.uk/design-system/patterns/interruption-page",
+  "response_sha256": "b37ac99153dfaa4261d52c30845227675c3d28686a4b6f6c3cdd0774619bc3f2",
+  "used_by": [
+    "B-IU-211"
+  ],
+  "section_url": "https://service-manual.nhs.uk/design-system/patterns/interruption-page#how-to-use"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-254",
+  "title": "Tables with One Header",
+  "url": "https://www.w3.org/WAI/tutorials/tables/one-header/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/tables/one-header/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Table with header cells in the top row only",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/tables/one-header/",
+  "response_sha256": "fb878465b487ba63ffeee74453f022106cc8d33bb356f80b277613c64404ea81",
+  "used_by": [
+    "A-IU-209"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/tables/one-header/#table-with-header-cells-in-the-top-row-only"
+}

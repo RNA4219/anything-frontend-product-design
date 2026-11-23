@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-262",
+  "title": "Cognitive Accessibility Design Pattern: Limit Interruptions",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p01-minimal-interruptions/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p01-minimal-interruptions/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p01-minimal-interruptions/",
+  "response_sha256": "24e5d374cea4c74f3530cf0e4b1891c5de90828eabec93ab23fe86c2bb6d3f83",
+  "used_by": [
+    "B-IU-211"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p01-minimal-interruptions/#whattodo"
+}

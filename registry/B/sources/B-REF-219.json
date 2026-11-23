@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-219",
+  "title": "Ask users for Phone numbers",
+  "url": "https://design-system.service.gov.uk/patterns/phone-numbers/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/phone-numbers/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/phone-numbers/",
+  "response_sha256": "a435b20ca4f9364b4f5e4c703f43283a77e6141f80493aaa7d975509afb025f3",
+  "used_by": [
+    "B-IU-204"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/phone-numbers/#when-to-use-this-pattern"
+}

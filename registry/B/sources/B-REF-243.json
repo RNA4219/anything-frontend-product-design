@@ -1,0 +1,17 @@
+{
+  "source_id": "B-REF-243",
+  "title": "Understanding SC 4.1.3 Status Messages (Level AA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages",
+  "response_sha256": "4a7628ba36e86f28dce570611aa369b70e4b5a7a9f98468e3dc5c62752e07a07",
+  "used_by": [
+    "B-IU-207"
+  ]
+}

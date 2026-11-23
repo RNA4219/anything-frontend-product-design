@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-207",
+  "title": "Name",
+  "url": "https://designsystem.digital.gov/patterns/create-a-user-profile/name/",
+  "canonical_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/name/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/name/",
+  "response_sha256": "80143db3d4be37a9041ebeefaaa732840791742c2f80f58b3d23f84eb0d849f9",
+  "used_by": [
+    "B-IU-202"
+  ],
+  "section_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/name/#guidance"
+}

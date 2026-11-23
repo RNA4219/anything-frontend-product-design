@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-261",
+  "title": "Identifier",
+  "url": "https://designsystem.digital.gov/components/identifier/",
+  "canonical_url": "https://designsystem.digital.gov/components/identifier/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/identifier/",
+  "response_sha256": "34e4da7dedb65f37732d32121828dd51347fabe5616889d36693ba86f69cf40e",
+  "used_by": [
+    "A-IU-210"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/identifier/#usability-guidance-identifier"
+}

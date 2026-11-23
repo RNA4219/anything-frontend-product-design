@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-246",
+  "title": "Tree View Pattern",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/treeview/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/treeview/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/treeview/",
+  "response_sha256": "b3366a548c51b994092d4e581d043682c44a72e724a4369446687ce22712e493",
+  "used_by": [
+    "C-UI-209"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/treeview/#keyboardinteraction"
+}

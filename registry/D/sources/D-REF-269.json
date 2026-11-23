@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-269",
+  "title": "Text input accessibility tests",
+  "url": "https://designsystem.digital.gov/components/text-input/accessibility-tests/",
+  "canonical_url": "https://designsystem.digital.gov/components/text-input/accessibility-tests/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品試験手順",
+  "section": "Keyboard navigation tests",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/text-input/accessibility-tests/",
+  "response_sha256": "39d409e2a15626a0eb8cc542e978eaf7339283f64c2d22ecffe79bf407b75155",
+  "used_by": [
+    "D-IU-213"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/text-input/accessibility-tests/#keyboard-navigation-tests"
+}

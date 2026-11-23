@@ -1,0 +1,50 @@
+{
+  "skill_id": "A-IU-204",
+  "domain": "product-information-architecture",
+  "trigger": "部署名や制度名から探せないサービス",
+  "intent": "検索入口と結果ラベルに利用者の語彙を使う",
+  "required_inputs": [
+    "検索語の実例",
+    "結果見出し",
+    "対象ページ"
+  ],
+  "decision_rules": [
+    "代表的な用件の語で検索し、検索欄・入力候補・結果見出しのどこで用件との対応が失われるかを確認する。"
+  ],
+  "procedure": [
+    "代表的な用件の語で検索し、検索欄・入力候補・結果見出しのどこで用件との対応が失われるかを確認する。",
+    "通称と正式名の両方を試し、目的地を開く前に識別できたかを記録する。"
+  ],
+  "expected_outputs": [
+    "通称別の到達結果とラベル案"
+  ],
+  "dependencies": [],
+  "exceptions": [
+    "同じ語が地域ごとに別制度を指すときは統合せず範囲を添える。"
+  ],
+  "failure_modes": [
+    "入力を受け付けても結果から目的地を識別できない"
+  ],
+  "verification": [
+    "通称と正式名の両方を試し、目的地を開く前に識別できたかを記録する。"
+  ],
+  "source_refs": [
+    "A-REF-222",
+    "A-REF-223",
+    "A-REF-224",
+    "A-REF-225",
+    "A-REF-226",
+    "A-REF-227"
+  ],
+  "confidence": {
+    "source_support": "各出典の指定箇所を参照。複数資料から組み立てた設計判断。",
+    "transfer": "部署名や制度名から探せないサービス",
+    "limits": "同じ語が地域ごとに別制度を指すときは統合せず範囲を添える。"
+  },
+  "product_observations": {
+    "dataset": "research/product-journeys/observations.json",
+    "examples": ["mug-hands-desktop", "mug-ikea-mobile"]
+  },
+  "status": "DRAFT",
+  "version": "0.1.0"
+}

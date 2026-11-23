@@ -1,0 +1,87 @@
+{
+  "skill_id": "C-UI-210",
+  "domain": "ui-engineering-design-system",
+  "trigger": "複数セクションを独立に開閉する画面",
+  "intent": "折りたたみの見出しに状態と対象を対応付ける",
+  "required_inputs": [
+    "見出しと本文の対応",
+    "開閉時のフォーカス"
+  ],
+  "decision_rules": [
+    "見出し内の操作でどの本文が開くかを対応付け、開閉状態を通知する。閉じた領域にフォーカスを残さない。"
+  ],
+  "procedure": [
+    "見出し内の操作でどの本文が開くかを対応付け、開閉状態を通知する。閉じた領域にフォーカスを残さない。",
+    "同じ見出し語を含む2区画を順番に開閉し、対象の本文だけが変わり、非表示部品に移動しないか試す。"
+  ],
+  "expected_outputs": [
+    "区画ごとの状態と操作可能な内容"
+  ],
+  "dependencies": [],
+  "exceptions": [
+    "手順上必須の判断や全項目の比較を繰り返す内容は常時表示も試す。"
+  ],
+  "failure_modes": [
+    "折りたたんだ本文にキー操作で入ってしまう"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "折りたたみの見出しに状態と対象を対応付ける",
+        "status": "not_executed",
+        "procedure": "同じ見出し語を含む2区画を順番に開閉し、対象の本文だけが変わり、非表示部品に移動しないか試す。",
+        "falsifier": "折りたたんだ本文にキー操作で入ってしまう"
+      }
+    ],
+    "status": "PLANNED",
+    "evidence": []
+  },
+  "source_refs": [
+    {
+      "id": "C-REF-253",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/accordion/",
+      "record": "registry/C/sources/C-REF-253.json",
+      "registry_source_id": "C-REF-253",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-254",
+      "url": "https://designsystem.digital.gov/components/accordion/",
+      "record": "registry/C/sources/C-REF-254.json",
+      "registry_source_id": "C-REF-254",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-255",
+      "url": "https://design-system.service.gov.uk/components/accordion/",
+      "record": "registry/C/sources/C-REF-255.json",
+      "registry_source_id": "C-REF-255",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-256",
+      "url": "https://www.carbondesignsystem.com/building-blocks/core/components/accordion/guidelines",
+      "record": "registry/C/sources/C-REF-256.json",
+      "registry_source_id": "C-REF-256",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-257",
+      "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p05-clear-controls/",
+      "record": "registry/C/sources/C-REF-257.json",
+      "registry_source_id": "C-REF-257",
+      "evidence_kind": "W3C 認知アクセシビリティ補足ガイド"
+    }
+  ],
+  "confidence": {
+    "source_support": "各出典の指定箇所を参照。複数資料から組み立てた設計判断。",
+    "transfer": "複数セクションを独立に開閉する画面",
+    "limits": "手順上必須の判断や全項目の比較を繰り返す内容は常時表示も試す。"
+  },
+  "product_observations": {
+    "dataset": "research/product-journeys/observations.json",
+    "examples": ["returns-apple-returns-mobile"]
+  },
+  "status": "DRAFT",
+  "version": "0.1.0"
+}

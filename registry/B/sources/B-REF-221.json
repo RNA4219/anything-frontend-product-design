@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-221",
+  "title": "Help users to Confirm an email address",
+  "url": "https://design-system.service.gov.uk/patterns/confirm-an-email-address/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/confirm-an-email-address/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/confirm-an-email-address/",
+  "response_sha256": "7c7186e15461412514976ff1e5661c1df2c0441acae0ca27d9cf183a2035f354",
+  "used_by": [
+    "B-IU-204"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/confirm-an-email-address/#when-to-use-this-pattern"
+}

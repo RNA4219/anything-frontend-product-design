@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-249",
+  "title": "Grouping Controls",
+  "url": "https://www.w3.org/WAI/tutorials/forms/grouping/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/forms/grouping/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Associating related controls with fieldset",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/forms/grouping/",
+  "response_sha256": "8e78f77a0f2f2f65d88d3f94820ede6fc3aecc0d88f9527f4d5e55921539ad20",
+  "used_by": [
+    "B-IU-208"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/forms/grouping/#associating-related-controls-with-fieldset"
+}

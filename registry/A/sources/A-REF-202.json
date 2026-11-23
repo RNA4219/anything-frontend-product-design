@@ -1,0 +1,17 @@
+{
+  "source_id": "A-REF-202",
+  "title": "Understanding SC 3.2.4 Consistent Identification (Level AA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/consistent-identification",
+  "response_sha256": "bf3d2df631378be1399cb795e3b2fe1788758c6cf558e77afeec27bdb5217cf1",
+  "used_by": [
+    "A-IU-201"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-270",
+  "title": "Help users to Check a service is suitable",
+  "url": "https://design-system.service.gov.uk/patterns/check-a-service-is-suitable/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/check-a-service-is-suitable/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/check-a-service-is-suitable/",
+  "response_sha256": "09a5608fb91b64e446c5f3d70c90b40d363a160018439fcdb53184807560c61e",
+  "used_by": [
+    "A-IU-211"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/check-a-service-is-suitable/#when-to-use-this-pattern"
+}

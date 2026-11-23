@@ -1,0 +1,105 @@
+{
+  "skill_id": "C-UI-205",
+  "domain": "ui-engineering-design-system",
+  "trigger": "選択対象が密集する一覧やツール列",
+  "intent": "隣接ターゲットへの誤入力を計測する",
+  "required_inputs": [
+    "寸法・間隔",
+    "端末",
+    "押下と解放イベント"
+  ],
+  "decision_rules": [
+    "ターゲットの寸法、間隔、端末の支持状態を記録し、狙った対象と発火対象の食い違い・押し直しを計測する。押した瞬間と離した瞬間の扱いを決める。"
+  ],
+  "procedure": [
+    "ターゲットの寸法、間隔、端末の支持状態を記録し、狙った対象と発火対象の食い違い・押し直しを計測する。押した瞬間と離した瞬間の扱いを決める。",
+    "狭い幅で隣の対象へ指がずれた例と押下後に外へ出た例を操作し、誤発火と取消を観測する。"
+  ],
+  "expected_outputs": [
+    "狙いと実際の起動が異なる試行の記録"
+  ],
+  "dependencies": [],
+  "exceptions": [
+    "本文中のリンクなど達成基準の例外は適用理由を記す。装置をまたいで一律の実験閾値を断定しない。"
+  ],
+  "failure_modes": [
+    "小さい対象で隣の破壊的操作が起動する"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "隣接ターゲットへの誤入力を計測する",
+        "status": "not_executed",
+        "procedure": "狭い幅で隣の対象へ指がずれた例と押下後に外へ出た例を操作し、誤発火と取消を観測する。",
+        "falsifier": "小さい対象で隣の破壊的操作が起動する"
+      }
+    ],
+    "status": "PLANNED",
+    "evidence": []
+  },
+  "source_refs": [
+    {
+      "id": "C-REF-220",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum",
+      "record": "registry/C/sources/C-REF-220.json",
+      "registry_source_id": "C-REF-220",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    },
+    {
+      "id": "C-REF-221",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced",
+      "record": "registry/C/sources/C-REF-221.json",
+      "registry_source_id": "C-REF-221",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    },
+    {
+      "id": "C-REF-222",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation",
+      "record": "registry/C/sources/C-REF-222.json",
+      "registry_source_id": "C-REF-222",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    },
+    {
+      "id": "C-REF-223",
+      "url": "https://designsystem.digital.gov/components/button-group/",
+      "record": "registry/C/sources/C-REF-223.json",
+      "registry_source_id": "C-REF-223",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-224",
+      "url": "https://doi.org/10.1145/1866029.1866055",
+      "record": "registry/C/sources/C-REF-224.json",
+      "registry_source_id": "C-REF-224",
+      "evidence_kind": "学術論文"
+    },
+    {
+      "id": "C-REF-225",
+      "url": "https://doi.org/10.1145/365024.365028",
+      "record": "registry/C/sources/C-REF-225.json",
+      "registry_source_id": "C-REF-225",
+      "evidence_kind": "学術論文"
+    },
+    {
+      "id": "C-REF-226",
+      "url": "https://doi.org/10.1007/978-3-319-20916-6_23",
+      "record": "registry/C/sources/C-REF-226.json",
+      "registry_source_id": "C-REF-226",
+      "evidence_kind": "学術論文"
+    },
+    {
+      "id": "C-REF-227",
+      "url": "https://doi.org/10.1145/1294211.1294253",
+      "record": "registry/C/sources/C-REF-227.json",
+      "registry_source_id": "C-REF-227",
+      "evidence_kind": "学術論文"
+    }
+  ],
+  "confidence": {
+    "source_support": "各出典の指定箇所を参照。複数資料から組み立てた設計判断。",
+    "transfer": "選択対象が密集する一覧やツール列",
+    "limits": "本文中のリンクなど達成基準の例外は適用理由を記す。装置をまたいで一律の実験閾値を断定しない。"
+  },
+  "status": "DRAFT",
+  "version": "0.1.0"
+}

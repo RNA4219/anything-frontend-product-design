@@ -1,0 +1,2314 @@
+{
+  "observed_on_jst": "2026-11-23",
+  "browser": "Microsoft Edge 158.0.4370.33 (Chromium, headless)",
+  "conditions": {
+    "desktop": "1365 × 900 CSS px、マウス",
+    "mobile": "390 × 844 CSS px、Pixel 7相当のモバイルUA・タッチをエミュレーション",
+    "timezone": "Asia/Tokyo",
+    "session": "各試行を未ログインの新規コンテキストで開始"
+  },
+  "rule_ids": [
+    "D-IU-214"
+  ],
+  "tasks": {
+    "mug": {
+      "title": "マグカップを探す",
+      "success": "通販トップから「マグカップ」で検索し、実在するマグカップの商品詳細で商品名と単価を確認する。"
+    },
+    "repair": {
+      "title": "検索の誤記から復帰する",
+      "success": "通販トップから「マグカップzqx814」を送信する。明示的な0件表示と該当リンクなしを確認できたら「マグカップ」に直し、商品リンクの復帰を確認する。"
+    },
+    "reset": {
+      "title": "パスワードの再設定方法を探す",
+      "success": "公式サポートのトップから、未ログインで使える再設定手順か、再設定を開始できる画面に着く。個人情報の入力や送信は行わない。"
+    },
+    "friday": {
+      "title": "金曜日の閉館時刻を調べる",
+      "success": "公式ホームから対象館の通常の金曜閉館時刻を確認する。館・曜日と時刻を組み合わせ、最終入館・展覧会・臨時変更との取り違えを除く。"
+    },
+    "store": {
+      "title": "新宿の店舗を探す",
+      "success": "公式店舗検索・店舗一覧から新宿区内の支店詳細に進み、番地を含む住所と通常の平日営業時間を確認する。"
+    },
+    "shirt": {
+      "title": "Tシャツの価格とサイズを調べる",
+      "success": "公式衣料品一覧からTシャツの商品詳細を開き、対象商品の価格とMサイズの選択肢を同じ商品で確認する。"
+    },
+    "returns": {
+      "title": "返品期限と条件を調べる",
+      "success": "販売地域向けの公式ヘルプから通常返品の期限と、起算点・商品の状態・対象商品など適用条件を少なくとも一つ確認する。"
+    }
+  },
+  "observations": [
+    {
+      "id": "mug-hands-desktop",
+      "task": "mug",
+      "brand": "ハンズ",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:56:18.019810+00:00",
+      "start_url": "https://hands.net/",
+      "end_url": "https://hands.net/goods/4964412604408/",
+      "status": "confirmed",
+      "evidence": "スヌーピーのマグカップの商品詳細で1,540円を確認。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "商品名・型番・JANコードで検索"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "マグカップ"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        },
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "スヌーピーキーワード マグカップ ハウス"
+        }
+      ],
+      "attempted_counts": {
+        "click": 2,
+        "tap": 0,
+        "text": 1,
+        "key": 1,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 2,
+      "after_browser_back": {
+        "url": "https://hands.net/search/?q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97",
+        "query_in_input_observed": true,
+        "query_in_page_text": true
+      },
+      "related_rule_ids": [
+        "D-IU-214",
+        "A-IU-204"
+      ]
+    },
+    {
+      "id": "mug-hands-mobile",
+      "task": "mug",
+      "brand": "ハンズ",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:56:19.253214+00:00",
+      "start_url": "https://hands.net/",
+      "end_url": "https://hands.net/",
+      "status": "unconfirmed",
+      "evidence": "スマホ幅で検索欄のタップを完了できなかった。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "mug-loft-desktop",
+      "task": "mug",
+      "brand": "ロフト",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:51:32.280620+00:00",
+      "start_url": "https://www.loft.co.jp/store/",
+      "end_url": "https://www.loft.co.jp/store/g/g408030600373/",
+      "status": "confirmed",
+      "evidence": "河内啓のマグカップ（小・ルリ釉）の詳細で3,080円を確認。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "商品名・商品番号・キーワードで検索"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "マグカップ"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        },
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "河内啓 マグカップ 小 ルリ釉"
+        }
+      ],
+      "attempted_counts": {
+        "click": 2,
+        "tap": 0,
+        "text": 1,
+        "key": 1,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 2,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "mug-loft-mobile",
+      "task": "mug",
+      "brand": "ロフト",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T11:00:20.396896+00:00",
+      "start_url": "https://www.loft.co.jp/store/",
+      "end_url": "https://www.loft.co.jp/store/g/g408030600373/",
+      "status": "confirmed",
+      "evidence": "河内啓のマグカップ（小・ルリ釉）の詳細で3,080円を確認。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "商品名・商品番号・キーワードで検索"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "マグカップ"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        },
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "河内啓 マグカップ 小 ルリ釉"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 2,
+        "text": 1,
+        "key": 1,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 2,
+      "after_browser_back": {
+        "url": "https://www.loft.co.jp/store/goods/search.aspx?search=x&keyword=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97",
+        "query_in_input_observed": false,
+        "query_in_page_text": true
+      },
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "mug-ikea-desktop",
+      "task": "mug",
+      "brand": "IKEA",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:56:30.258214+00:00",
+      "start_url": "https://www.ikea.com/jp/ja/",
+      "end_url": "https://www.ikea.com/jp/ja/",
+      "status": "unconfirmed",
+      "evidence": "検索を送信した後、商品詳細への遷移を確認できなかった。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "商品、インスピレーションを検索"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "マグカップ"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 1,
+        "key": 1,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "mug-ikea-mobile",
+      "task": "mug",
+      "brand": "IKEA",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:56:34.387843+00:00",
+      "start_url": "https://www.ikea.com/jp/ja/",
+      "end_url": "https://www.ikea.com/jp/ja/p/dinera-mug-dark-grey-10362821/",
+      "status": "confirmed",
+      "evidence": "DINERAのマグカップの商品詳細で299円を確認。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "商品、インスピレーションを検索"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "マグカップ"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        },
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "DINERA ディネーラ マグ, ダークグレー, 30 cl"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 2,
+        "text": 1,
+        "key": 1,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 2,
+      "after_browser_back": {
+        "url": "https://www.ikea.com/jp/ja/search/?q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97",
+        "query_in_input_observed": true,
+        "query_in_page_text": true
+      },
+      "related_rule_ids": [
+        "D-IU-214",
+        "A-IU-204"
+      ]
+    },
+    {
+      "id": "repair-hands-desktop",
+      "task": "repair",
+      "brand": "ハンズ",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:56:24.077999+00:00",
+      "start_url": "https://hands.net/",
+      "end_url": "https://hands.net/search/?q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97",
+      "status": "confirmed",
+      "evidence": "0件を表示。入力欄に残った語を修正してマグカップの商品リンクを確認。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "商品名・型番・JANコードで検索"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "マグカップzqx814"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        },
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "商品名・型番・JANコードで検索"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "マグカップ"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        }
+      ],
+      "attempted_counts": {
+        "click": 2,
+        "tap": 0,
+        "text": 2,
+        "key": 2,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 2,
+      "repair_check": {
+        "initial_empty": true,
+        "original_query_in_field": true,
+        "corrected_results_have_product_links": true
+      },
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "repair-hands-mobile",
+      "task": "repair",
+      "brand": "ハンズ",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:56:24.204346+00:00",
+      "start_url": "https://hands.net/",
+      "end_url": null,
+      "status": "unconfirmed",
+      "evidence": "スマホ幅で検索欄のタップを完了できず、0件画面を確認できなかった。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "repair-loft-desktop",
+      "task": "repair",
+      "brand": "ロフト",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:56:24.205348+00:00",
+      "start_url": "https://www.loft.co.jp/store/",
+      "end_url": "https://www.loft.co.jp/store/goods/search.aspx?search=x&keyword=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97",
+      "status": "confirmed",
+      "evidence": "該当なしを表示。入力欄に残った語を修正してマグカップの商品リンクを確認。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "商品名・商品番号・キーワードで検索"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "マグカップzqx814"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        },
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "商品名・商品番号・キーワードで検索"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "マグカップ"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        }
+      ],
+      "attempted_counts": {
+        "click": 2,
+        "tap": 0,
+        "text": 2,
+        "key": 2,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 2,
+      "repair_check": {
+        "initial_empty": true,
+        "original_query_in_field": true,
+        "corrected_results_have_product_links": true
+      },
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "repair-loft-mobile",
+      "task": "repair",
+      "brand": "ロフト",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:56:24.208856+00:00",
+      "start_url": "https://www.loft.co.jp/store/",
+      "end_url": "https://www.loft.co.jp/store/goods/search.aspx?search=x&keyword=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97",
+      "status": "confirmed",
+      "evidence": "該当なしを表示。入力欄に残った語を修正してマグカップの商品リンクを確認。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "商品名・商品番号・キーワードで検索"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "マグカップzqx814"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        },
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "商品名・商品番号・キーワードで検索"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "マグカップ"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 2,
+        "text": 2,
+        "key": 2,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 2,
+      "repair_check": {
+        "initial_empty": true,
+        "original_query_in_field": true,
+        "corrected_results_have_product_links": true
+      },
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "repair-ikea-desktop",
+      "task": "repair",
+      "brand": "IKEA",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:56:24.211385+00:00",
+      "start_url": "https://www.ikea.com/jp/ja/",
+      "end_url": "https://www.ikea.com/jp/ja/search/?q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97zqx814",
+      "status": "precondition_absent",
+      "evidence": "同じ誤記で32件と表示され、商品リンクもあった。0件からの修正は適用外。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "商品、インスピレーションを検索"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "マグカップzqx814"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 1,
+        "key": 1,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "repair-ikea-mobile",
+      "task": "repair",
+      "brand": "IKEA",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:56:24.211385+00:00",
+      "start_url": "https://www.ikea.com/jp/ja/",
+      "end_url": "https://www.ikea.com/jp/ja/search/?q=%E3%83%9E%E3%82%B0%E3%82%AB%E3%83%83%E3%83%97zqx814",
+      "status": "precondition_absent",
+      "evidence": "同じ誤記で32件と表示され、商品リンクもあった。0件からの修正は適用外。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "商品、インスピレーションを検索"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "マグカップzqx814"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 1,
+        "key": 1,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214",
+        "D-IU-201"
+      ]
+    },
+    {
+      "id": "reset-apple-desktop",
+      "task": "reset",
+      "brand": "Apple",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:55:53.089663+00:00",
+      "start_url": "https://support.apple.com/en-us",
+      "end_url": "https://iforgot.apple.com/",
+      "status": "confirmed",
+      "evidence": "Apple Accountの復旧画面で本人確認と再設定の入口を確認。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "Reset Apple Account password"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "reset-apple-mobile",
+      "task": "reset",
+      "brand": "Apple",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:55:58.706156+00:00",
+      "start_url": "https://support.apple.com/en-us",
+      "end_url": "https://iforgot.apple.com/",
+      "status": "confirmed",
+      "evidence": "Apple Accountの復旧画面で本人確認と再設定の入口を確認。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "Reset Apple Account password"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "reset-dropbox-desktop",
+      "task": "reset",
+      "brand": "Dropbox",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:51:32.282621+00:00",
+      "start_url": "https://help.dropbox.com/",
+      "end_url": "https://help.dropbox.com/security/password-reset",
+      "status": "confirmed",
+      "evidence": "未ログイン時にパスワードを再設定する手順をヘルプ本文で確認。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "How do I change or reset my Dropbox password?"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "reset-dropbox-mobile",
+      "task": "reset",
+      "brand": "Dropbox",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:51:48.953865+00:00",
+      "start_url": "https://help.dropbox.com/",
+      "end_url": "https://help.dropbox.com/security/password-reset",
+      "status": "confirmed",
+      "evidence": "未ログイン時にパスワードを再設定する手順をヘルプ本文で確認。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "How do I change or reset my Dropbox password?"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "reset-netflix-desktop",
+      "task": "reset",
+      "brand": "Netflix",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T11:00:24.572537+00:00",
+      "start_url": "https://help.netflix.com/en",
+      "end_url": "https://www.netflix.com/jp-en/loginhelp",
+      "status": "confirmed",
+      "evidence": "再設定用のメールまたはSMSを選ぶ画面を確認。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "Get help signing in"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "alternate_route": {
+        "control": "Reset password",
+        "pointer_count": 1,
+        "end_url": "https://www.netflix.com/login",
+        "status": "unconfirmed",
+        "evidence": "通常のログイン画面に着き、再設定手順や送信方法の選択肢は表示されなかった。"
+      },
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "reset-netflix-mobile",
+      "task": "reset",
+      "brand": "Netflix",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T11:00:31.583429+00:00",
+      "start_url": "https://help.netflix.com/en",
+      "end_url": "https://www.netflix.com/jp-en/loginhelp",
+      "status": "confirmed",
+      "evidence": "再設定用のメールまたはSMSを選ぶ画面を確認。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "Get help signing in"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "alternate_route": {
+        "control": "Reset password",
+        "pointer_count": 1,
+        "end_url": "https://www.netflix.com/jp-en/login",
+        "status": "unconfirmed",
+        "evidence": "通常のログイン画面に着き、再設定手順や送信方法の選択肢は表示されなかった。"
+      },
+      "related_rule_ids": [
+        "D-IU-214",
+        "D-IU-201"
+      ]
+    },
+    {
+      "id": "reset-spotify-desktop",
+      "task": "reset",
+      "brand": "Spotify",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:55:50.029651+00:00",
+      "start_url": "https://support.spotify.com/us/",
+      "end_url": "https://support.spotify.com/us/article/reset-password/",
+      "status": "confirmed",
+      "evidence": "アカウント管理、ログインの順に進み、パスワード再設定の記事を確認。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "Manage your account"
+        },
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "Logging In"
+        },
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "How to reset or change your Spotify password"
+        }
+      ],
+      "attempted_counts": {
+        "click": 3,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 3,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "reset-spotify-mobile",
+      "task": "reset",
+      "brand": "Spotify",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:55:51.871277+00:00",
+      "start_url": "https://support.spotify.com/us/",
+      "end_url": "https://support.spotify.com/us/article/reset-password/",
+      "status": "confirmed",
+      "evidence": "アカウント管理、ログインの順に進み、パスワード再設定の記事を確認。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "Manage your account"
+        },
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "Logging In"
+        },
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "How to reset or change your Spotify password"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 3,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 3,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "reset-wordpress-desktop",
+      "task": "reset",
+      "brand": "WordPress.com",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:51:59.227492+00:00",
+      "start_url": "https://wordpress.com/support/",
+      "end_url": "https://wordpress.com/support/",
+      "status": "unconfirmed",
+      "evidence": "再設定の候補を選んだ後もサポートトップが表示され、手順や再設定フォームを確認できなかった。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "Reset my password"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "reset-wordpress-mobile",
+      "task": "reset",
+      "brand": "WordPress.com",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:52:02.619558+00:00",
+      "start_url": "https://wordpress.com/support/",
+      "end_url": "https://wordpress.com/support/",
+      "status": "unconfirmed",
+      "evidence": "再設定の候補を選んだ後もサポートトップが表示され、手順や再設定フォームを確認できなかった。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "Reset my password"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "friday-ng-desktop",
+      "task": "friday",
+      "brand": "ナショナル・ギャラリー",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T11:00:02.912213+00:00",
+      "start_url": "https://www.nationalgallery.org.uk/",
+      "end_url": "https://www.nationalgallery.org.uk/",
+      "status": "confirmed",
+      "evidence": "ロンドン本館の金曜夜間開館は21時まで。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 0,
+      "answer_position": {
+        "in_initial_viewport": true,
+        "top_css_px": 862,
+        "bottom_css_px": 890
+      },
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "friday-ng-mobile",
+      "task": "friday",
+      "brand": "ナショナル・ギャラリー",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T11:00:07.751975+00:00",
+      "start_url": "https://www.nationalgallery.org.uk/",
+      "end_url": "https://www.nationalgallery.org.uk/",
+      "status": "confirmed",
+      "evidence": "ロンドン本館の金曜夜間開館は21時まで。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 0,
+      "answer_position": {
+        "in_initial_viewport": true,
+        "top_css_px": 425,
+        "bottom_css_px": 447
+      },
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "friday-vanda-desktop",
+      "task": "friday",
+      "brand": "V&A",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:52:09.154939+00:00",
+      "start_url": "https://www.vam.ac.uk/",
+      "end_url": "https://www.vam.ac.uk/",
+      "status": "confirmed",
+      "evidence": "South Kensingtonの金曜閉館は22時。他館と区別して確認。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 0,
+      "answer_position": {
+        "in_initial_viewport": false
+      },
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "friday-vanda-mobile",
+      "task": "friday",
+      "brand": "V&A",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:52:10.489012+00:00",
+      "start_url": "https://www.vam.ac.uk/",
+      "end_url": "https://www.vam.ac.uk/",
+      "status": "confirmed",
+      "evidence": "South Kensingtonの金曜閉館は22時。他館と区別して確認。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 0,
+      "answer_position": {
+        "in_initial_viewport": false
+      },
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "friday-british-desktop",
+      "task": "friday",
+      "brand": "大英博物館",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:52:06.257378+00:00",
+      "start_url": "https://www.britishmuseum.org/",
+      "end_url": "https://www.britishmuseum.org/",
+      "status": "unconfirmed",
+      "evidence": "この環境では開始画面を確認できなかった。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "friday-british-mobile",
+      "task": "friday",
+      "brand": "大英博物館",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T11:00:14.145588+00:00",
+      "start_url": "https://www.britishmuseum.org/",
+      "end_url": "https://www.britishmuseum.org/",
+      "status": "confirmed",
+      "evidence": "金曜は20時30分閉館。最終入館の20時15分を別に表示。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 0,
+      "answer_position": {
+        "in_initial_viewport": false,
+        "top_css_px": 10833,
+        "bottom_css_px": 10855
+      },
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "friday-moma-desktop",
+      "task": "friday",
+      "brand": "MoMA",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:52:14.361290+00:00",
+      "start_url": "https://www.moma.org/",
+      "end_url": "https://www.moma.org/",
+      "status": "unconfirmed",
+      "evidence": "この環境では開始画面を確認できなかった。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "friday-moma-mobile",
+      "task": "friday",
+      "brand": "MoMA",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:52:15.173792+00:00",
+      "start_url": "https://www.moma.org/",
+      "end_url": "https://www.moma.org/visit/",
+      "status": "confirmed",
+      "evidence": "ニューヨーク本館の曜日表で金曜20時30分閉館を確認。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "Plan your visit"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "friday-met-desktop",
+      "task": "friday",
+      "brand": "メトロポリタン美術館",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:52:10.713694+00:00",
+      "start_url": "https://www.metmuseum.org/",
+      "end_url": "https://www.metmuseum.org/plan-your-visit",
+      "status": "confirmed",
+      "evidence": "1000 Fifth Avenueの曜日表で金曜21時閉館を確認。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "The Met Fifth Avenue"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "friday-met-mobile",
+      "task": "friday",
+      "brand": "メトロポリタン美術館",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:56:17.603762+00:00",
+      "start_url": "https://www.metmuseum.org/",
+      "end_url": "https://www.metmuseum.org/plan-your-visit",
+      "status": "confirmed",
+      "evidence": "1000 Fifth Avenueの曜日表で金曜21時閉館を確認。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "The Met Fifth Avenue"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "friday-tnm-desktop",
+      "task": "friday",
+      "brand": "東京国立博物館",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T11:00:16.146563+00:00",
+      "start_url": "https://www.tnm.jp/",
+      "end_url": "https://www.tnm.jp/modules/r_free_page/index.php?id=113",
+      "status": "confirmed",
+      "evidence": "来館案内の英語表示で金・土曜は20時までと確認。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "交通・料金・開館時間"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "friday-tnm-mobile",
+      "task": "friday",
+      "brand": "東京国立博物館",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:52:19.851708+00:00",
+      "start_url": "https://www.tnm.jp/",
+      "end_url": "https://www.tnm.jp/modules/r_free_page/index.php?id=113",
+      "status": "confirmed",
+      "evidence": "来館案内の日本語表示で金・土曜は20時までと確認。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "来館案内"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "friday-louvre-desktop",
+      "task": "friday",
+      "brand": "ルーヴル美術館",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T11:00:16.645775+00:00",
+      "start_url": "https://www.louvre.fr/en",
+      "end_url": "https://www.louvre.fr/en/visit#hours-admission",
+      "status": "confirmed",
+      "evidence": "本館は水・金曜21時閉館。任意Cookieの拒否を含む。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "interstitial",
+          "label": "Reject everything, except technical cookies"
+        },
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "Prepare your visit"
+        },
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "Hours & admission"
+        }
+      ],
+      "attempted_counts": {
+        "click": 3,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 1
+      },
+      "completion_pointer_count": 3,
+      "related_rule_ids": [
+        "D-IU-214",
+        "B-IU-211"
+      ]
+    },
+    {
+      "id": "friday-louvre-mobile",
+      "task": "friday",
+      "brand": "ルーヴル美術館",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:56:12.993649+00:00",
+      "start_url": "https://www.louvre.fr/en",
+      "end_url": "https://www.louvre.fr/en/visit#hours-admission",
+      "status": "confirmed",
+      "evidence": "本館は水・金曜21時閉館。任意Cookieの拒否を含む。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "interstitial",
+          "label": "Reject everything, except technical cookies"
+        },
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "Plan your visit"
+        },
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "Hours & admission"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 3,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 1
+      },
+      "completion_pointer_count": 3,
+      "related_rule_ids": [
+        "D-IU-214",
+        "B-IU-211"
+      ]
+    },
+    {
+      "id": "friday-kahaku-desktop",
+      "task": "friday",
+      "brand": "国立科学博物館",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:56:42.920616+00:00",
+      "start_url": "https://www.kahaku.go.jp/",
+      "end_url": "https://www.kahaku.go.jp/riyou/nyukan-annai/calendar.html",
+      "status": "unconfirmed",
+      "evidence": "開館カレンダーまで進んだが、通常の閉館時刻を確認できなかった。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "本日開館"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "friday-kahaku-mobile",
+      "task": "friday",
+      "brand": "国立科学博物館",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:56:44.745778+00:00",
+      "start_url": "https://www.kahaku.go.jp/",
+      "end_url": "https://www.kahaku.go.jp/riyou/nyukan-annai/",
+      "status": "confirmed",
+      "evidence": "上野本館の通常開館は9時～17時。金曜にも適用。特別展・指定日は別条件。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "本日開館"
+        },
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "入館案内"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 2,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 2,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "store-uniqlo-stores-desktop",
+      "task": "store",
+      "brand": "ユニクロ",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:55:30.344605+00:00",
+      "start_url": "https://map.uniqlo.com/jp/ja/",
+      "end_url": "https://map.uniqlo.com/jp/ja/detail/10101779",
+      "status": "confirmed",
+      "evidence": "新宿三丁目店。新宿3-13-3、月曜11時～21時。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "店舗名・住所・郵便番号"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "新宿"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        },
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "ユニクロ 新宿三丁目店"
+        }
+      ],
+      "attempted_counts": {
+        "click": 2,
+        "tap": 0,
+        "text": 1,
+        "key": 1,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 2,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "store-uniqlo-stores-mobile",
+      "task": "store",
+      "brand": "ユニクロ",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:55:30.883092+00:00",
+      "start_url": "https://map.uniqlo.com/jp/ja/",
+      "end_url": "https://map.uniqlo.com/jp/ja/detail/10101779",
+      "status": "confirmed",
+      "evidence": "新宿三丁目店。新宿3-13-3、月曜11時～21時。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "店舗名・住所・郵便番号"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "新宿"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        },
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "ユニクロ 新宿三丁目店"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 2,
+        "text": 1,
+        "key": 1,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 2,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "store-gu-stores-desktop",
+      "task": "store",
+      "brand": "GU",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:55:28.445378+00:00",
+      "start_url": "https://map.gu-global.com/jp/ja/",
+      "end_url": "https://map.gu-global.com/jp/ja/detail/10101270",
+      "status": "confirmed",
+      "evidence": "新宿東南口フラッグス店。新宿3-37-1、月曜11時～21時。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "店舗名・住所・郵便番号"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "新宿"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        },
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "ジーユー 新宿東南口フラッグス店"
+        }
+      ],
+      "attempted_counts": {
+        "click": 2,
+        "tap": 0,
+        "text": 1,
+        "key": 1,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 2,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "store-gu-stores-mobile",
+      "task": "store",
+      "brand": "GU",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:55:29.556716+00:00",
+      "start_url": "https://map.gu-global.com/jp/ja/",
+      "end_url": "https://map.gu-global.com/jp/ja/detail/10101270",
+      "status": "confirmed",
+      "evidence": "新宿東南口フラッグス店。新宿3-37-1、月曜11時～21時。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "店舗名・住所・郵便番号"
+        },
+        {
+          "kind": "text",
+          "category": "task",
+          "label": "新宿"
+        },
+        {
+          "kind": "key",
+          "category": "task",
+          "label": "Enter"
+        },
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "ジーユー 新宿東南口フラッグス店"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 2,
+        "text": 1,
+        "key": 1,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 2,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "store-kinokuniya-stores-desktop",
+      "task": "store",
+      "brand": "紀伊國屋書店",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:55:11.154597+00:00",
+      "start_url": "https://store.kinokuniya.co.jp/",
+      "end_url": "https://store.kinokuniya.co.jp/store/shinjuku-main-store/",
+      "status": "confirmed",
+      "evidence": "新宿本店。新宿3-17-7、営業時間10時～21時。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "新宿本店 10:00〜21:00"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "store-kinokuniya-stores-mobile",
+      "task": "store",
+      "brand": "紀伊國屋書店",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:55:11.163760+00:00",
+      "start_url": "https://store.kinokuniya.co.jp/",
+      "end_url": "https://store.kinokuniya.co.jp/store/shinjuku-main-store/",
+      "status": "confirmed",
+      "evidence": "新宿本店。新宿3-17-7、営業時間10時～21時。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "新宿本店 10:00〜21:00"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "store-starbucks-stores-desktop",
+      "task": "store",
+      "brand": "スターバックス",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:55:11.165757+00:00",
+      "start_url": "https://store.starbucks.co.jp/",
+      "end_url": "https://store.starbucks.co.jp/detail-4456/",
+      "status": "confirmed",
+      "evidence": "明治安田新宿ビル B1F店。西新宿1-9-1、月～金7時～22時。店舗のお知らせから到達。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "2026.11.28. 明治安田新宿ビル B1F店"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "store-starbucks-stores-mobile",
+      "task": "store",
+      "brand": "スターバックス",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:55:11.166757+00:00",
+      "start_url": "https://store.starbucks.co.jp/",
+      "end_url": "https://store.starbucks.co.jp/detail-4456/",
+      "status": "confirmed",
+      "evidence": "明治安田新宿ビル B1F店。西新宿1-9-1、月～金7時～22時。店舗のお知らせから到達。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "2026.11.28. 明治安田新宿ビル B1F店"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "store-bic-stores-desktop",
+      "task": "store",
+      "brand": "ビックカメラ",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:55:11.167759+00:00",
+      "start_url": "https://www.biccamera.com/bc/i/shop/shoplist/index.jsp",
+      "end_url": null,
+      "status": "unconfirmed",
+      "evidence": "この環境では開始画面を確認できなかった。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "store-bic-stores-mobile",
+      "task": "store",
+      "brand": "ビックカメラ",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:55:11.168944+00:00",
+      "start_url": "https://www.biccamera.com/bc/i/shop/shoplist/index.jsp",
+      "end_url": "https://www.biccamera.com/bc/i/shop/shoplist/shop016.jsp",
+      "status": "confirmed",
+      "evidence": "新宿西口店。西新宿1-5-1、平日・土曜10時～20時30分。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "新宿西口店 〒160-0023 東京都新宿区西新宿1-5-1 新宿西口ハルク 2F～6F"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "store-yodobashi-stores-desktop",
+      "task": "store",
+      "brand": "ヨドバシカメラ",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:55:15.191666+00:00",
+      "start_url": "https://www.yodobashi.com/ec/store/list/",
+      "end_url": null,
+      "status": "unconfirmed",
+      "evidence": "この環境では開始画面を確認できなかった。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "store-yodobashi-stores-mobile",
+      "task": "store",
+      "brand": "ヨドバシカメラ",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:55:19.144309+00:00",
+      "start_url": "https://www.yodobashi.com/ec/store/list/",
+      "end_url": null,
+      "status": "unconfirmed",
+      "evidence": "店舗一覧から選択した後、詳細画面を取得できなかった。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "ヨドバシカメラ 新宿西口本店 石井スポーツ ヨドバシ新宿西口店"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "shirt-gu-desktop",
+      "task": "shirt",
+      "brand": "GU",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:55:31.156917+00:00",
+      "start_url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+      "end_url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+      "status": "unconfirmed",
+      "evidence": "この環境では開始画面を確認できなかった。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "shirt-gu-mobile",
+      "task": "shirt",
+      "brand": "GU",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:55:33.134944+00:00",
+      "start_url": "https://www.gu-global.com/jp/ja/women/all-item/tops",
+      "end_url": "https://www.gu-global.com/jp/ja/products/E361524-000/00?colorDisplayCode=15",
+      "status": "unconfirmed",
+      "evidence": "商品URLに遷移したが、その商品の価格とMサイズを同じ画面で確認できなかった。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "ソフトコットンクルーネックT(長袖), ¥1,290, ユニセックス"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "shirt-beams-desktop",
+      "task": "shirt",
+      "brand": "BEAMS",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:55:35.222626+00:00",
+      "start_url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+      "end_url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+      "status": "unconfirmed",
+      "evidence": "この環境では開始画面を確認できなかった。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "shirt-beams-mobile",
+      "task": "shirt",
+      "brand": "BEAMS",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:55:39.369324+00:00",
+      "start_url": "https://www.beams.co.jp/category/t-shirt/?label=0023&sex=M",
+      "end_url": "https://www.beams.co.jp/item/international_gallery_beams/t-shirt/23040097729/?color=19",
+      "status": "unconfirmed",
+      "evidence": "一覧から遷移した後、詳細画面にアクセス制限が表示された。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "【BLACK FRIDAY対象】〈MEN〉VEILA... ¥42,900 ¥38,610 [10%OFF]"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "shirt-globalwork-desktop",
+      "task": "shirt",
+      "brand": "GLOBAL WORK",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:55:49.007676+00:00",
+      "start_url": "https://www.dot-st.com/globalwork/disp/itemlist/?dispNo=001002002002",
+      "end_url": null,
+      "status": "unconfirmed",
+      "evidence": "この環境では開始画面を確認できなかった。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "shirt-globalwork-mobile",
+      "task": "shirt",
+      "brand": "GLOBAL WORK",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T11:00:17.024225+00:00",
+      "start_url": "https://www.dot-st.com/globalwork/disp/itemlist/?dispNo=001002002002",
+      "end_url": "https://www.dot-st.com/globalwork/disp/item/1023339/?COLOR_CD=05",
+      "status": "unconfirmed",
+      "evidence": "商品名を確認したが、その商品の価格とMサイズを同時に確認できなかった。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "マイニチ多機能クルーTシャツ/長袖/1023339 ¥2,990税込 キャンペーン ポイントアップ"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "returns-apple-returns-desktop",
+      "task": "returns",
+      "brand": "Apple",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:59:45.294635+00:00",
+      "start_url": "https://www.apple.com/shop/help",
+      "end_url": "https://www.apple.com/shop/help/returns_refund",
+      "status": "confirmed",
+      "evidence": "米国の通常返品は受け取りから14暦日。返品ページの本文で確認。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "Learn more about refunds and returns"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "returns-apple-returns-mobile",
+      "task": "returns",
+      "brand": "Apple",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T11:01:07.717963+00:00",
+      "start_url": "https://www.apple.com/shop/help",
+      "end_url": "https://www.apple.com/shop/help/returns_refund",
+      "status": "confirmed",
+      "evidence": "返品ページで米国向けの規約を展開し、受け取りから14暦日と確認。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "Returns & Refunds"
+        },
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "U.S. Returns & Refunds Policy"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 2,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 2,
+      "related_rule_ids": [
+        "D-IU-214",
+        "C-UI-210"
+      ]
+    },
+    {
+      "id": "returns-ikea-returns-desktop",
+      "task": "returns",
+      "brand": "IKEA",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:59:45.304159+00:00",
+      "start_url": "https://www.ikea.com/us/en/customer-service/",
+      "end_url": "https://www.ikea.com/us/en/customer-service/returns-claims/",
+      "status": "confirmed",
+      "evidence": "米国の通常返品は新品未開封365日、開封済み180日。購入証明が条件。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "Learn more"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "returns-ikea-returns-mobile",
+      "task": "returns",
+      "brand": "IKEA",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:59:45.305161+00:00",
+      "start_url": "https://www.ikea.com/us/en/customer-service/",
+      "end_url": "https://www.ikea.com/us/en/customer-service/returns-claims/",
+      "status": "confirmed",
+      "evidence": "米国の通常返品は新品未開封365日、開封済み180日。購入証明が条件。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "Learn more"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "returns-target-returns-desktop",
+      "task": "returns",
+      "brand": "Target",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:59:48.787308+00:00",
+      "start_url": "https://help.target.com/",
+      "end_url": "https://www.target.com/returns",
+      "status": "confirmed",
+      "evidence": "Target販売の大半は90日。レシートのある自社ブランド品は365日。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "Returns & receipts Start a return or find a receipt"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "returns-target-returns-mobile",
+      "task": "returns",
+      "brand": "Target",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:59:53.653835+00:00",
+      "start_url": "https://help.target.com/",
+      "end_url": "https://www.target.com/returns",
+      "status": "confirmed",
+      "evidence": "Target販売の大半は90日。レシートのある自社ブランド品は365日。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "Returns & receipts Start a return or find a receipt"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "returns-argos-returns-desktop",
+      "task": "returns",
+      "brand": "Argos",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:59:45.305161+00:00",
+      "start_url": "https://help.argos.co.uk/",
+      "end_url": "https://help.argos.co.uk/",
+      "status": "unconfirmed",
+      "evidence": "この環境では開始画面を確認できなかった。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "returns-argos-returns-mobile",
+      "task": "returns",
+      "brand": "Argos",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:59:45.305161+00:00",
+      "start_url": "https://help.argos.co.uk/",
+      "end_url": "https://help.argos.co.uk/help/refunds-&-returns/how-do-i-return-a-home-delivered-item-or-product-i-collected-in-store",
+      "status": "confirmed",
+      "evidence": "対象の宅配・店頭受取商品の記事で、配送・受取日から30日と確認。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "How do I return a home delivered item, or product I collected in store?"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "returns-jl-returns-desktop",
+      "task": "returns",
+      "brand": "John Lewis",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:59:55.706977+00:00",
+      "start_url": "https://www.johnlewis.com/customer-services",
+      "end_url": null,
+      "status": "unconfirmed",
+      "evidence": "この環境では開始画面を確認できなかった。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "returns-jl-returns-mobile",
+      "task": "returns",
+      "brand": "John Lewis",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:59:59.145283+00:00",
+      "start_url": "https://www.johnlewis.com/customer-services",
+      "end_url": null,
+      "status": "unconfirmed",
+      "evidence": "返品案内への操作後、期限を記したページを取得できなかった。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "Returns & refunds"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "returns-lego-returns-desktop",
+      "task": "returns",
+      "brand": "LEGO",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T10:59:54.375753+00:00",
+      "start_url": "https://www.lego.com/en-us/service",
+      "end_url": "https://www.lego.com/en-us/service",
+      "status": "unconfirmed",
+      "evidence": "サポートから返品条件の表示まで操作を完了できなかった。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "returns-lego-returns-mobile",
+      "task": "returns",
+      "brand": "LEGO",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T10:59:55.095568+00:00",
+      "start_url": "https://www.lego.com/en-us/service",
+      "end_url": "https://www.lego.com/en-us/service",
+      "status": "unconfirmed",
+      "evidence": "サポートから返品条件の表示まで操作を完了できなかった。",
+      "events": [],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": null,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "shirt-gap-desktop",
+      "task": "shirt",
+      "brand": "Gap",
+      "mode": "desktop",
+      "observed_at": "2026-11-23T11:09:55.995993+00:00",
+      "start_url": "https://www.gap.com/browse/men/t-shirts?cid=5225",
+      "end_url": "https://www.gap.com/browse/product.do?pid=1185662032&vid=1&pcid=5225&cid=5225#pdp-page-content",
+      "status": "confirmed",
+      "evidence": "米国向けのWaffle Henley T-Shirtで表示価格49.95米ドルとMの選択肢を確認。サイズの選択操作はしていない。",
+      "events": [
+        {
+          "kind": "click",
+          "category": "task",
+          "label": "Waffle Henley T-Shirtの商品リンク"
+        }
+      ],
+      "attempted_counts": {
+        "click": 1,
+        "tap": 0,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    },
+    {
+      "id": "shirt-gap-mobile",
+      "task": "shirt",
+      "brand": "Gap",
+      "mode": "mobile",
+      "observed_at": "2026-11-23T11:11:10.929169+00:00",
+      "start_url": "https://www.gap.com/browse/men/t-shirts?cid=5225",
+      "end_url": "https://www.gap.com/browse/product.do?pid=1185662032&vid=1&pcid=5225&cid=5225#pdp-page-content",
+      "status": "confirmed",
+      "evidence": "米国向けのWaffle Henley T-Shirtで表示価格49.95米ドルとMの選択肢を確認。サイズの選択操作はしていない。",
+      "events": [
+        {
+          "kind": "tap",
+          "category": "task",
+          "label": "Waffle Henley T-Shirtの商品リンク"
+        }
+      ],
+      "attempted_counts": {
+        "click": 0,
+        "tap": 1,
+        "text": 0,
+        "key": 0,
+        "interstitial_pointer": 0
+      },
+      "completion_pointer_count": 1,
+      "related_rule_ids": [
+        "D-IU-214"
+      ]
+    }
+  ]
+}

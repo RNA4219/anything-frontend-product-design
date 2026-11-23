@@ -1,0 +1,17 @@
+{
+  "source_id": "B-REF-253",
+  "title": "Understanding SC 2.2.1 Timing Adjustable (Level A)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable",
+  "response_sha256": "bf6c6a68a3fb4b6866ab144bd72d83996d90de4dec05c6ca14875e7ac6e5e9c5",
+  "used_by": [
+    "B-IU-209"
+  ]
+}

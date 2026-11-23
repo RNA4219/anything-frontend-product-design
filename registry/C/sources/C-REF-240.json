@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-240",
+  "title": "Popover",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/popover/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/popover/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Universal behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/popover/guidelines",
+  "response_sha256": "2058d8a8f1298c08515dacb2fdeba554a70f022142f1f902b5c5615cd7fa3301",
+  "used_by": [
+    "C-UI-207"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/popover/guidelines#universal-behaviors"
+}

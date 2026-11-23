@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-248",
+  "title": "Summary list",
+  "url": "https://design-system.service.gov.uk/components/summary-list/",
+  "canonical_url": "https://design-system.service.gov.uk/components/summary-list/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/summary-list/",
+  "response_sha256": "a670026b345b453996c23ff8c55853006abe03dcb681501d3fccb7c06c4ab88b",
+  "used_by": [
+    "B-IU-208"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/summary-list/#how-it-works"
+}

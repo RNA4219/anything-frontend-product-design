@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-226",
+  "title": "Cognitive Accessibility Design Pattern: Use Clear Words",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o3p01-clear-words/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o3p01-clear-words/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o3p01-clear-words/",
+  "response_sha256": "398145e859f561f94d974a019d9885c8d185466f8e08ec5cf2f7806402d73ab2",
+  "used_by": [
+    "A-IU-204"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o3p01-clear-words/#whattodo"
+}

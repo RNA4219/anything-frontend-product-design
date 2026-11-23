@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-207",
+  "title": "Tabs",
+  "url": "https://design-system.service.gov.uk/components/tabs/",
+  "canonical_url": "https://design-system.service.gov.uk/components/tabs/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/tabs/",
+  "response_sha256": "3f2203e406fd720d95f4721a5bc203319350a50b89070dfaf1f3f4495a627bad",
+  "used_by": [
+    "C-UI-202"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/tabs/#how-it-works"
+}

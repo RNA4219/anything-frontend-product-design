@@ -1,0 +1,17 @@
+{
+  "source_id": "C-REF-212",
+  "title": "Understanding SC 2.1.1 Keyboard (Level A)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard",
+  "response_sha256": "66c341336b3380002bb5b737b33ab565159ab42eeaf427ae6dba4b2fbb46cb29",
+  "used_by": [
+    "C-UI-203"
+  ]
+}

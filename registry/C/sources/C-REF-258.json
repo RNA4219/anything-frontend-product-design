@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-258",
+  "title": "File upload",
+  "url": "https://design-system.service.gov.uk/components/file-upload/",
+  "canonical_url": "https://design-system.service.gov.uk/components/file-upload/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/file-upload/",
+  "response_sha256": "6e209ad6cd3189e9a1d4957e85129cd77a124c4dce6d0639faf5ce0370d0de2a",
+  "used_by": [
+    "C-UI-211"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/file-upload/#how-it-works"
+}

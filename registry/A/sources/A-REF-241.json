@@ -1,0 +1,17 @@
+{
+  "source_id": "A-REF-241",
+  "title": "Content guide – Health literacy",
+  "url": "https://service-manual.nhs.uk/content/health-literacy",
+  "canonical_url": "https://service-manual.nhs.uk/content/health-literacy",
+  "publisher": "NHS England",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "What is health literacy?",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://service-manual.nhs.uk/content/health-literacy",
+  "response_sha256": "7f2d6b5d8dd164889d0ad4466d5f9141ea8ef35d1310232214796e309ce2d9fa",
+  "used_by": [
+    "A-IU-206"
+  ]
+}

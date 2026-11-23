@@ -1,0 +1,37 @@
+{
+  "skill_id": "D-IU-214",
+  "domain": "design-qa-evaluation",
+  "trigger": "購入前の情報探索やサポートの経路を、クリック・タップ数で比較するとき",
+  "intent": "目的を達成した画面と、そこまでに必要だった操作を突き合わせる",
+  "required_inputs": ["対象者の用件", "開始URLと初期状態", "画面幅と入力方法", "完了と判定できる情報または状態"],
+  "decision_rules": [
+    "終点で対象と答えを照合する。同じリンク名や同じ操作数でも、通常ログインと再設定開始は別の結果として記録する。",
+    "ポインター、文字列入力、確定キーの回数を分ける。割り込みへの応答はポインターの内数にする。0クリックなら、答えが最初の画面内に収まるかも調べる。",
+    "失敗からの復帰を試すときは、その失敗が実際に起きたことを先に確認する。入力値を再利用できたか、修正後の結果に目的物があるかを記録する。"
+  ],
+  "procedure": [
+    "比較する用件と終点を一文で定め、開始ページ、言語・地域、事前同意、画面幅と入力方法をそろえる。",
+    "操作を順に記録し、終点の表示で完了・未確認・前提不成立を判定する。最短経路を主張する場合は他の入口も検証する。",
+    "完了した経路で種類別の操作数を比較し、未確認の経路には停止点を書く。利用者の探す時間や誤操作を問う場合は、同じ課題を対象者に試してもらう。"
+  ],
+  "expected_outputs": ["開始・成功条件、経路別の到達結果、クリック／タップ・入力・キー・割り込みの内訳と観察限界"],
+  "dependencies": [],
+  "exceptions": ["0件を狙った検索で商品が返った場合、0件からの復帰は前提不成立。端末の表示を取得できなかった場合は未確認。"],
+  "failure_modes": ["短い経路で誤った終点に着いても成功になる", "自動スクロールの距離を見落として0クリックを初期表示と解釈する", "一覧の価格と別商品のサイズを取り違える"],
+  "verification": ["同じ1クリックで異なる終点に着く例、0クリックで答えが画面外にある例、0件が発生しない例を、記録から区別できるか確かめる。"],
+  "source_refs": ["D-REF-273", "D-REF-274", "D-REF-275", "D-REF-276"],
+  "product_observations": {
+    "dataset": "research/product-journeys/observations.json",
+    "examples": ["reset-netflix-mobile", "friday-british-mobile", "returns-apple-returns-mobile", "repair-loft-mobile", "repair-ikea-mobile"],
+    "layout_measurements": "research/product-journeys/spacing/measurements.json",
+    "participant_studies": "research/product-journeys/human-studies/studies.json",
+    "participant_metrics": "research/product-journeys/human-studies/metrics.csv"
+  },
+  "confidence": {
+    "source_support": "実サイトの経路観察と、入力負担・送信操作・フォーム構造・状態表示に関する一次調査を照合した。",
+    "transfer": "用件と開始・終了状態を事前に定義できる公開Webの操作比較。",
+    "limits": "各観察は取得日の表示に限る。人の発見時間、利用者の達成率、変更の因果効果は別途測定する。"
+  },
+  "status": "DRAFT",
+  "version": "0.1.0"
+}

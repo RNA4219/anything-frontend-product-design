@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-233",
+  "title": "Selected multilingual content",
+  "url": "https://designsystem.digital.gov/patterns/select-a-language/selected-content/",
+  "canonical_url": "https://designsystem.digital.gov/patterns/select-a-language/selected-content/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/patterns/select-a-language/selected-content/",
+  "response_sha256": "6aa17e2b5c3ea67277214725588f152f56ba68cfad8443941dc37502ec273bff",
+  "used_by": [
+    "A-IU-205"
+  ],
+  "section_url": "https://designsystem.digital.gov/patterns/select-a-language/selected-content/#guidance"
+}

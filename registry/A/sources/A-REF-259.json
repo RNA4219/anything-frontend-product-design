@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-259",
+  "title": "Table Pattern",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/table/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/table/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/table/",
+  "response_sha256": "caebcaa57dc94c4393e4ac97a1e4a0a615b2bdb2052bdc2cda2ceda9d5dc8b4b",
+  "used_by": [
+    "A-IU-209"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/table/#keyboardinteraction"
+}

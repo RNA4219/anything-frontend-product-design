@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-271",
+  "title": "Writing effective letters",
+  "url": "https://www.gov.uk/service-manual/design/writing-effective-letters",
+  "canonical_url": "https://www.gov.uk/service-manual/design/writing-effective-letters",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Decide whether you should send a letter",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/design/writing-effective-letters",
+  "response_sha256": "1b0e8dc6e6572cb7152b1cefed9defc6b2f88acfac7e1bdace10e41140ab5661",
+  "used_by": [
+    "B-IU-212"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/design/writing-effective-letters#decide-whether-you-should-send-a-letter"
+}

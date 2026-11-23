@@ -1,0 +1,27 @@
+{
+  "source_id": "C-REF-252",
+  "title": "More than Meets the Eye: A Survey of Screen-Reader Browsing Strategies",
+  "authors": [
+    "Yevgen Borodin",
+    "Jeffrey P. Bigham",
+    "Glenn Dausch",
+    "I. V. Ramakrishnan"
+  ],
+  "year": 2010,
+  "venue": "Proceedings of the 2010 International Cross Disciplinary Conference on Web Accessibility (W4A)",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/1805986.1806005",
+  "url": "https://doi.org/10.1145/1805986.1806005",
+  "canonical_url": "https://doi.org/10.1145/1805986.1806005",
+  "primary_text_url": "https://www.cs.cmu.edu/~jbigham/pubs/pdfs/2010/screen-reader-strategies.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "見出し・リンク等をたどる非視覚の探索経路で、同じ情報に達するか確認する。",
+  "limits": "記録した探索戦略。現行の全支援技術の互換性を保証しない。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "C-UI-209"
+  ]
+}

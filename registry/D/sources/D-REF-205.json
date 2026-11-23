@@ -1,0 +1,26 @@
+{
+  "source_id": "D-REF-205",
+  "title": "Measuring Usability: Are Effectiveness, Efficiency, and Satisfaction Really Correlated?",
+  "authors": [
+    "Erik Frøkjær",
+    "Morten Hertzum",
+    "Kasper Hornbæk"
+  ],
+  "year": 2000,
+  "venue": "Proceedings of the SIGCHI conference on Human Factors in Computing Systems",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/332040.332455",
+  "url": "https://doi.org/10.1145/332040.332455",
+  "canonical_url": "https://doi.org/10.1145/332040.332455",
+  "primary_text_url": "https://mortenhertzum.dk/publ/CHI2000.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "解答の正しさ、時間、主観評価を個別に報告する。",
+  "limits": "検索課題で得た相関を別の作業の予測にそのまま使わない。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "D-IU-201"
+  ]
+}
