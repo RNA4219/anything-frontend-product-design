@@ -8,7 +8,7 @@
 [jump target="*call"]
 
 *call
-[bg storage="station"]
+[bg storage="hero"]
 [speaker name="業務電話"]
 「水守さん。最終列車が遅れています。ひとり、まだ橋の上にいるんです」[p]
 [jump target="*name"]
@@ -20,7 +20,7 @@
 [jump target="*ticket"]
 
 *ticket
-[bg storage="hero"]
+[bg storage="relief"]
 [speaker name="受話器の向こう"]
 「そっちの改札、開けてくれる？　今度はちゃんと、お釣りも持ってる」[p]
 [jump target="*choice"]
@@ -40,7 +40,7 @@
 [jump target="*redEnd"]
 
 *redEnd
-[bg storage="hero"]
+[bg storage="relief"]
 [speaker name="妹"]
 「ただいま、お姉ちゃん」。改札を抜けたのは妹だった。制服の袖からこぼれた百円玉には、明日の年号が刻まれていた。[p]
 [ending title="赤灯の岸"]
