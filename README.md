@@ -4,7 +4,7 @@
 
 ## 動く作例「かさね印刷室」
 
-**[ブラウザーで試し刷りする](https://rna4219.github.io/anything-frontend-product-design/)** · [単体HTMLをダウンロード](https://github.com/RNA4219/anything-frontend-product-design/raw/refs/heads/main/docs/index.html) · [ソースを読む](docs/index.html)
+**[ブラウザーで試し刷りする](https://rna4219.github.io/anything-frontend-product-design/)** · [単体HTMLを保存する](https://rna4219.github.io/anything-frontend-product-design/#download) · [ソースを読む](docs/index.html)
 
 [![かさね印刷室の操作画面。瀬戸内海の夕景を朱と群青で刷った見本の隣に、図案、インク、版ずれ、PNG保存の操作が並ぶ。](assets/kasane-preview.webp)](https://rna4219.github.io/anything-frontend-product-design/)
 
