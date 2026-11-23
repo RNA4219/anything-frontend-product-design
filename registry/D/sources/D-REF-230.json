@@ -1,0 +1,24 @@
+{
+  "source_id": "D-REF-230",
+  "title": "Current practice in measuring usability: Challenges to usability studies and research",
+  "authors": [
+    "Kasper Hornbæk"
+  ],
+  "year": 2006,
+  "venue": "International Journal of Human-Computer Studies",
+  "source_type": "research_paper",
+  "publication_type": "journal-article",
+  "doi": "10.1016/j.ijhcs.2005.06.002",
+  "url": "https://doi.org/10.1016/j.ijhcs.2005.06.002",
+  "canonical_url": "https://doi.org/10.1016/j.ijhcs.2005.06.002",
+  "primary_text_url": "https://www.kasperhornbaek.dk/papers/IJHCS2006_MeasuringUsability.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "短時間の印象と実作業の完了、学習後の成績を分けて測定計画を作る。",
+  "limits": "研究の測定実態を調べたレビュー。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "D-IU-206"
+  ]
+}

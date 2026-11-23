@@ -1,0 +1,17 @@
+{
+  "source_id": "C-REF-220",
+  "title": "Understanding SC 2.5.8 Target Size (Minimum) (Level AA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum",
+  "response_sha256": "7735697bb0163a9cf05bdfacca9dd7a14cede9a733c7e236afefee8d5c1d1e5b",
+  "used_by": [
+    "C-UI-205"
+  ]
+}

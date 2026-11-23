@@ -1,0 +1,17 @@
+{
+  "source_id": "A-REF-283",
+  "title": "Content guide – PDFs and other non-HTML documents",
+  "url": "https://service-manual.nhs.uk/content/pdfs-and-other-non-html-documents",
+  "canonical_url": "https://service-manual.nhs.uk/content/pdfs-and-other-non-html-documents",
+  "publisher": "NHS England",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "The problem with PDFs",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://service-manual.nhs.uk/content/pdfs-and-other-non-html-documents",
+  "response_sha256": "0126c39be1dece10cee763c33bd7bebe9369ead17e4aa62b36f90f9c41a97694",
+  "used_by": [
+    "A-IU-213"
+  ]
+}

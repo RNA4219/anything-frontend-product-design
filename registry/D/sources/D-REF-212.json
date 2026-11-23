@@ -1,0 +1,24 @@
+{
+  "source_id": "D-REF-212",
+  "title": "Concurrent or Retrospective Thinking Aloud in Usability Tests: A Meta-Analytic Review",
+  "authors": [
+    "Morten Hertzum"
+  ],
+  "year": 2024,
+  "venue": "ACM Transactions on Computer-Human Interaction",
+  "source_type": "research_paper",
+  "publication_type": "journal-article",
+  "doi": "10.1145/3665327",
+  "url": "https://doi.org/10.1145/3665327",
+  "canonical_url": "https://doi.org/10.1145/3665327",
+  "primary_text_url": "https://mortenhertzum.dk/publ/TOCHI2024.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "同時発話と事後発話のタスク時間・セッション全体の時間を分けて扱う。",
+  "limits": "異なる発話条件の研究をまとめたメタ分析。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "D-IU-202"
+  ]
+}

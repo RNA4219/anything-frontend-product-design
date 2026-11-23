@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-257",
+  "title": "Tables with Multi-Level Headers",
+  "url": "https://www.w3.org/WAI/tutorials/tables/multi-level/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/tables/multi-level/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Table with multiple column headers in each column",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/tables/multi-level/",
+  "response_sha256": "baa6be88dcfe3305392226191f0ce9b5f7d69b71d71a09c2925115a606aacc21",
+  "used_by": [
+    "A-IU-209"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/tables/multi-level/#table-with-multiple-column-headers-in-each-column"
+}

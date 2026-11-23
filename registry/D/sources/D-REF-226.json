@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-226",
+  "title": "User research in alpha",
+  "url": "https://www.gov.uk/service-manual/user-research/user-research-in-alpha",
+  "canonical_url": "https://www.gov.uk/service-manual/user-research/user-research-in-alpha",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "How to do user research in alpha",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/user-research/user-research-in-alpha",
+  "response_sha256": "0415815bd3212000202a7565bdfdfeb626a434de465cf4eeced2545b17474410",
+  "used_by": [
+    "D-IU-206"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/user-research/user-research-in-alpha#how-to-do-user-research-in-alpha"
+}

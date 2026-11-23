@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-238",
+  "title": "Tooltip",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/tooltip/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/tooltip/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/tooltip/guidelines",
+  "response_sha256": "4070c78ca701aa00bba81082146f003a94155e21507d7c3bca4fe631530ccc1f",
+  "used_by": [
+    "C-UI-207"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/tooltip/guidelines#behaviors"
+}

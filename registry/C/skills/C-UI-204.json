@@ -1,0 +1,77 @@
+{
+  "skill_id": "C-UI-204",
+  "domain": "ui-engineering-design-system",
+  "trigger": "項目の並べ替えや範囲選択にドラッグを使う場合",
+  "intent": "ドラッグ以外で同じ移動結果を作れるようにする",
+  "required_inputs": [
+    "移動の対象",
+    "許容順序",
+    "代替操作"
+  ],
+  "decision_rules": [
+    "ドラッグが本質でない移動には単一ポインター操作で到達できる別手段を置く。移動後に順序と対象を知らせる。"
+  ],
+  "procedure": [
+    "ドラッグが本質でない移動には単一ポインター操作で到達できる別手段を置く。移動後に順序と対象を知らせる。",
+    "開始・終端の数値指定や移動ボタンで同じ状態を作り、最終順序と操作対象を照合する。"
+  ],
+  "expected_outputs": [
+    "操作方式別の並び順と移動結果"
+  ],
+  "dependencies": [],
+  "exceptions": [
+    "軌跡そのものを記録する署名や描画では、同じ結果とみなす条件を別に定める。"
+  ],
+  "failure_modes": [
+    "キーボードだけが代替で、ドラッグできないタッチ利用者が操作できない"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "ドラッグ以外で同じ移動結果を作れるようにする",
+        "status": "not_executed",
+        "procedure": "開始・終端の数値指定や移動ボタンで同じ状態を作り、最終順序と操作対象を照合する。",
+        "falsifier": "キーボードだけが代替で、ドラッグできないタッチ利用者が操作できない"
+      }
+    ],
+    "status": "PLANNED",
+    "evidence": []
+  },
+  "source_refs": [
+    {
+      "id": "C-REF-216",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements",
+      "record": "registry/C/sources/C-REF-216.json",
+      "registry_source_id": "C-REF-216",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    },
+    {
+      "id": "C-REF-217",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures",
+      "record": "registry/C/sources/C-REF-217.json",
+      "registry_source_id": "C-REF-217",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    },
+    {
+      "id": "C-REF-218",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/concurrent-input-mechanisms",
+      "record": "registry/C/sources/C-REF-218.json",
+      "registry_source_id": "C-REF-218",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    },
+    {
+      "id": "C-REF-219",
+      "url": "https://doi.org/10.1145/1978942.1979001",
+      "record": "registry/C/sources/C-REF-219.json",
+      "registry_source_id": "C-REF-219",
+      "evidence_kind": "学術論文"
+    }
+  ],
+  "confidence": {
+    "source_support": "各出典の指定箇所を参照。複数資料から組み立てた設計判断。",
+    "transfer": "項目の並べ替えや範囲選択にドラッグを使う場合",
+    "limits": "軌跡そのものを記録する署名や描画では、同じ結果とみなす条件を別に定める。"
+  },
+  "status": "DRAFT",
+  "version": "0.1.0"
+}

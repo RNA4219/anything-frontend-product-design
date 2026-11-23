@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-265",
+  "title": "Help users to Contact a department or service team",
+  "url": "https://design-system.service.gov.uk/patterns/contact-a-department-or-service-team/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/contact-a-department-or-service-team/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/contact-a-department-or-service-team/",
+  "response_sha256": "3e38b442f820b5b96b9edb34dd5372d7da44003f0dd2ce3e932c0c7474fac361",
+  "used_by": [
+    "A-IU-210"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/contact-a-department-or-service-team/#when-to-use-this-pattern"
+}

@@ -1,0 +1,26 @@
+{
+  "source_id": "C-REF-227",
+  "title": "Automatically generating user interfaces adapted to users' motor and vision capabilities",
+  "authors": [
+    "Krzysztof Z. Gajos",
+    "Jacob O. Wobbrock",
+    "Daniel S. Weld"
+  ],
+  "year": 2007,
+  "venue": "Proceedings of the 20th annual ACM symposium on User interface software and technology",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/1294211.1294253",
+  "url": "https://doi.org/10.1145/1294211.1294253",
+  "canonical_url": "https://doi.org/10.1145/1294211.1294253",
+  "primary_text_url": "https://faculty.washington.edu/wobbrock/pubs/uist-07.02.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "入力能力の違いが対象サイズと配置の選択に影響するかを個別に調べる。",
+  "limits": "試作と予備評価の範囲に限る。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "C-UI-205"
+  ]
+}

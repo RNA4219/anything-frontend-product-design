@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-224",
+  "title": "Cognitive Accessibility Design Pattern: Provide Search",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p06-search/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p06-search/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p06-search/",
+  "response_sha256": "ddc71bf047c598778bcaa61e29503fdb28522e288f5c4d22e38925457727268c",
+  "used_by": [
+    "A-IU-204"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p06-search/#whattodo"
+}

@@ -1,0 +1,83 @@
+{
+  "skill_id": "C-UI-202",
+  "domain": "ui-engineering-design-system",
+  "trigger": "左右キーでタブを切り替える部品を実装するとき",
+  "intent": "タブのフォーカス移動とパネル読込を切り分ける",
+  "required_inputs": [
+    "タブとパネルの対応",
+    "読込時間"
+  ],
+  "decision_rules": [
+    "パネルの表示が即時なら自動選択を比較できる。読込待ちがある場合はフォーカス移動と選択操作を分け、対応するパネル名を結ぶ。"
+  ],
+  "procedure": [
+    "パネルの表示が即時なら自動選択を比較できる。読込待ちがある場合はフォーカス移動と選択操作を分け、対応するパネル名を結ぶ。",
+    "遅延したタブを連続で通過し、現在のタブ・選択済みタブ・表示パネルが矛盾しないか確認する。"
+  ],
+  "expected_outputs": [
+    "遅延時のフォーカス・選択・表示状態"
+  ],
+  "dependencies": [],
+  "exceptions": [
+    "別ページへのリンクを見かけだけでタブに変えない。"
+  ],
+  "failure_modes": [
+    "遅いパネルが後から現在の選択を上書きする"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "タブのフォーカス移動とパネル読込を切り分ける",
+        "status": "not_executed",
+        "procedure": "遅延したタブを連続で通過し、現在のタブ・選択済みタブ・表示パネルが矛盾しないか確認する。",
+        "falsifier": "遅いパネルが後から現在の選択を上書きする"
+      }
+    ],
+    "status": "PLANNED",
+    "evidence": []
+  },
+  "source_refs": [
+    {
+      "id": "C-REF-206",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+      "record": "registry/C/sources/C-REF-206.json",
+      "registry_source_id": "C-REF-206",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-207",
+      "url": "https://design-system.service.gov.uk/components/tabs/",
+      "record": "registry/C/sources/C-REF-207.json",
+      "registry_source_id": "C-REF-207",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-208",
+      "url": "https://www.carbondesignsystem.com/building-blocks/core/components/tabs/guidelines",
+      "record": "registry/C/sources/C-REF-208.json",
+      "registry_source_id": "C-REF-208",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-209",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/on-focus",
+      "record": "registry/C/sources/C-REF-209.json",
+      "registry_source_id": "C-REF-209",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    },
+    {
+      "id": "C-REF-210",
+      "url": "https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/",
+      "record": "registry/C/sources/C-REF-210.json",
+      "registry_source_id": "C-REF-210",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    }
+  ],
+  "confidence": {
+    "source_support": "各出典の指定箇所を参照。複数資料から組み立てた設計判断。",
+    "transfer": "左右キーでタブを切り替える部品を実装するとき",
+    "limits": "別ページへのリンクを見かけだけでタブに変えない。"
+  },
+  "status": "DRAFT",
+  "version": "0.1.0"
+}

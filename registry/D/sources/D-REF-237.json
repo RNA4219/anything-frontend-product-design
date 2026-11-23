@@ -1,0 +1,17 @@
+{
+  "source_id": "D-REF-237",
+  "title": "Understanding Conformance",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/conformance",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/conformance",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "What does conformance mean?",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/conformance",
+  "response_sha256": "1577a8097ca57eaeb5e62d9bb632d19e2074dc993fce5fea135bffdb9d137f3e",
+  "used_by": [
+    "D-IU-208"
+  ]
+}

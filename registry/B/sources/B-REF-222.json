@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-222",
+  "title": "Email address",
+  "url": "https://designsystem.digital.gov/patterns/create-a-user-profile/email-address/",
+  "canonical_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/email-address/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/email-address/",
+  "response_sha256": "2fbf325560d37459cfcc0fcfdd8ab44703f6db609a1bce39255ac3d0c7934aea",
+  "used_by": [
+    "B-IU-204"
+  ],
+  "section_url": "https://designsystem.digital.gov/patterns/create-a-user-profile/email-address/#guidance"
+}

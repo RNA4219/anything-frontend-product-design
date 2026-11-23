@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-258",
+  "title": "Caption & Summary",
+  "url": "https://www.w3.org/WAI/tutorials/tables/caption-summary/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/tables/caption-summary/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Identifying a table using a caption",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/tables/caption-summary/",
+  "response_sha256": "5eec0bfdd5e7869ce446e165f39ee4c855c016e1197d79fa4e0093c29e17ac06",
+  "used_by": [
+    "A-IU-209"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/tables/caption-summary/#identifying-a-table-using-a-caption"
+}

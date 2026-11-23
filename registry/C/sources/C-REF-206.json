@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-206",
+  "title": "Tabs Pattern",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+  "response_sha256": "f2de5314e15c4aa6c2ee7fc51813b77e23b28a279bbf80d96d62df0b7f36282f",
+  "used_by": [
+    "C-UI-202"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboardinteraction"
+}

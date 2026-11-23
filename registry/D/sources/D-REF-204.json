@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-204",
+  "title": "Usability benchmarking a website or whole service",
+  "url": "https://www.gov.uk/service-manual/measuring-success/usability-benchmarking-a-website-or-whole-service",
+  "canonical_url": "https://www.gov.uk/service-manual/measuring-success/usability-benchmarking-a-website-or-whole-service",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Choosing tasks to test",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/measuring-success/usability-benchmarking-a-website-or-whole-service",
+  "response_sha256": "20acf0b6c09ab19deb0dea33f31f195fd3ba2b771d2cf8ce03ec063b18dfc318",
+  "used_by": [
+    "D-IU-201"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/measuring-success/usability-benchmarking-a-website-or-whole-service#choosing-tasks-to-test"
+}

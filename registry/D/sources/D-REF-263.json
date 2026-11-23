@@ -1,0 +1,17 @@
+{
+  "source_id": "D-REF-263",
+  "title": "Understanding SC 1.2.2 Captions (Prerecorded) (Level A)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded",
+  "response_sha256": "25bb5c531779c3f6358ee45886daa35e33bf6b9fd48a9613f5f28b6cfc84b183",
+  "used_by": [
+    "D-IU-212"
+  ]
+}

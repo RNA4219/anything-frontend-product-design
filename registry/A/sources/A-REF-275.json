@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-275",
+  "title": "Step by step navigation",
+  "url": "https://design-system.service.gov.uk/patterns/step-by-step-navigation/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/step-by-step-navigation/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/step-by-step-navigation/",
+  "response_sha256": "9ab69b3e3f4ae60b7ccaba84bfd617b5ccaf4c9b80923fbf390eac8441b98b91",
+  "used_by": [
+    "A-IU-212"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/step-by-step-navigation/#when-to-use-this-pattern"
+}

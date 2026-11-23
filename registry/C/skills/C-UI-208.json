@@ -1,0 +1,84 @@
+{
+  "skill_id": "C-UI-208",
+  "domain": "ui-engineering-design-system",
+  "trigger": "自動回転・点滅・継続して変わる表示がある場合",
+  "intent": "自動で動く内容の停止状態を保つ",
+  "required_inputs": [
+    "自動進行条件",
+    "停止操作",
+    "動きの設定"
+  ],
+  "decision_rules": [
+    "一時停止の入口と現在状態を示す。キーボード操作中に次へ送らず、動きを減らす希望を反映する。"
+  ],
+  "procedure": [
+    "一時停止の入口と現在状態を示す。キーボード操作中に次へ送らず、動きを減らす希望を反映する。",
+    "停止後に別要素へフォーカスを移し、再開するまで内容と読んでいた位置を保てるか操作する。"
+  ],
+  "expected_outputs": [
+    "停止後の表示項目と再開条件"
+  ],
+  "dependencies": [],
+  "exceptions": [
+    "ライブ情報を止めると誤解が生じる場合、表示が停止中であることと再開方法を示す。"
+  ],
+  "failure_modes": [
+    "フォーカスが離れただけで自動再生が再開する"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "自動で動く内容の停止状態を保つ",
+        "status": "not_executed",
+        "procedure": "停止後に別要素へフォーカスを移し、再開するまで内容と読んでいた位置を保てるか操作する。",
+        "falsifier": "フォーカスが離れただけで自動再生が再開する"
+      }
+    ],
+    "status": "PLANNED",
+    "evidence": []
+  },
+  "source_refs": [
+    {
+      "id": "C-REF-241",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/carousel/",
+      "record": "registry/C/sources/C-REF-241.json",
+      "registry_source_id": "C-REF-241",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-242",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide",
+      "record": "registry/C/sources/C-REF-242.json",
+      "registry_source_id": "C-REF-242",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    },
+    {
+      "id": "C-REF-243",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions",
+      "record": "registry/C/sources/C-REF-243.json",
+      "registry_source_id": "C-REF-243",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    },
+    {
+      "id": "C-REF-244",
+      "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o8p01-motion/",
+      "record": "registry/C/sources/C-REF-244.json",
+      "registry_source_id": "C-REF-244",
+      "evidence_kind": "W3C 認知アクセシビリティ補足ガイド"
+    },
+    {
+      "id": "C-REF-245",
+      "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p01-unexpected-movement/",
+      "record": "registry/C/sources/C-REF-245.json",
+      "registry_source_id": "C-REF-245",
+      "evidence_kind": "W3C 認知アクセシビリティ補足ガイド"
+    }
+  ],
+  "confidence": {
+    "source_support": "各出典の指定箇所を参照。複数資料から組み立てた設計判断。",
+    "transfer": "自動回転・点滅・継続して変わる表示がある場合",
+    "limits": "ライブ情報を止めると誤解が生じる場合、表示が停止中であることと再開方法を示す。"
+  },
+  "status": "DRAFT",
+  "version": "0.1.0"
+}

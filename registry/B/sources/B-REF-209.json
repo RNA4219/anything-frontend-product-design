@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-209",
+  "title": "Labeling Controls",
+  "url": "https://www.w3.org/WAI/tutorials/forms/labels/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/forms/labels/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Associating labels explicitly",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/forms/labels/",
+  "response_sha256": "7ffbc180ad5978a398d6f98162f11fe461c5f317c66f39e6f16554e578486b22",
+  "used_by": [
+    "B-IU-202"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-explicitly"
+}

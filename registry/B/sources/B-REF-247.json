@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-247",
+  "title": "Add another thing",
+  "url": "https://design-system.dwp.gov.uk/patterns/add-another-thing",
+  "canonical_url": "https://design-system.dwp.gov.uk/patterns/add-another-thing",
+  "publisher": "Department for Work and Pensions",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Principles",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.dwp.gov.uk/patterns/add-another-thing",
+  "response_sha256": "ac34126fc7bf38295b9e16797ecd0251c454c20848633b852bd2ea08c7ecbc67",
+  "used_by": [
+    "B-IU-208"
+  ],
+  "section_url": "https://design-system.dwp.gov.uk/patterns/add-another-thing#principles"
+}

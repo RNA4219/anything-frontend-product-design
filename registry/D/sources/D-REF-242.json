@@ -1,0 +1,17 @@
+{
+  "source_id": "D-REF-242",
+  "title": "Understanding SC 1.4.12 Text Spacing (Level AA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing",
+  "response_sha256": "48d38892c50739b98b6d7c4d54b83d15152e9c9dbba2a550bc5dec5bead38df2",
+  "used_by": [
+    "D-IU-209"
+  ]
+}

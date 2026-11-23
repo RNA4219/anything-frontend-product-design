@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-277",
+  "title": "Process list",
+  "url": "https://designsystem.digital.gov/components/process-list/",
+  "canonical_url": "https://designsystem.digital.gov/components/process-list/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/process-list/",
+  "response_sha256": "e84bb91f0f06017f6d92c71c6f523353b739894c54be283b9b3a34a8713ca0bc",
+  "used_by": [
+    "A-IU-212"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/process-list/#usability-guidance-process-list"
+}

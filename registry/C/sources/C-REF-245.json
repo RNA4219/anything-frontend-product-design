@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-245",
+  "title": "Cognitive Accessibility Design Pattern: Ensure Controls and Content Do Not Move Unexpectedly",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p01-unexpected-movement/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p01-unexpected-movement/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p01-unexpected-movement/",
+  "response_sha256": "f15973b243c10f3791ef977322fd46dc4067f7bc1017acaa7bbae192294a1950",
+  "used_by": [
+    "C-UI-208"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p01-unexpected-movement/#whattodo"
+}

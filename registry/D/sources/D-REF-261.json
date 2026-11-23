@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-261",
+  "title": "Media Players",
+  "url": "https://www.w3.org/WAI/media/av/player/",
+  "canonical_url": "https://www.w3.org/WAI/media/av/player/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Skills Needed",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/media/av/player/",
+  "response_sha256": "22608025e7143f8944887e69063bc1afb722690d5d4deec171d8872be7215715",
+  "used_by": [
+    "D-IU-212"
+  ],
+  "section_url": "https://www.w3.org/WAI/media/av/player/#skills"
+}

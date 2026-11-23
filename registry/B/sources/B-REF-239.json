@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-239",
+  "title": "Loading",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/loading/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/loading/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/loading/guidelines",
+  "response_sha256": "49c2723af51c805c67362d34ccd015072ac17e1df782506b6b27408bc6117345",
+  "used_by": [
+    "B-IU-207"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/loading/guidelines#behaviors"
+}

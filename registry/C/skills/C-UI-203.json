@@ -1,0 +1,84 @@
+{
+  "skill_id": "C-UI-203",
+  "domain": "ui-engineering-design-system",
+  "trigger": "文字キーだけで操作を起動するアプリ",
+  "intent": "単一キーのショートカットに停止手段を用意する",
+  "required_inputs": [
+    "発火キー",
+    "対象領域",
+    "無効化設定"
+  ],
+  "decision_rules": [
+    "入力欄と音声入力で意図しない起動が起きないよう、対象フォーカスに限定するか、変更・無効化できるようにする。通常の操作経路も示す。"
+  ],
+  "procedure": [
+    "入力欄と音声入力で意図しない起動が起きないよう、対象フォーカスに限定するか、変更・無効化できるようにする。通常の操作経路も示す。",
+    "入力欄に同じ文字を入力し、ショートカットが発火しないことと、設定変更後の代替操作を試す。 メニューから割当キーを発見できるかも観察する。"
+  ],
+  "expected_outputs": [
+    "通常入力とショートカットの検証結果"
+  ],
+  "dependencies": [],
+  "exceptions": [
+    "修飾キーを組み合わせる操作と文字キー単独の操作の適用条件を区別する。"
+  ],
+  "failure_modes": [
+    "文字入力や音声入力で別の操作が起動する"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "単一キーのショートカットに停止手段を用意する",
+        "status": "not_executed",
+        "procedure": "入力欄に同じ文字を入力し、ショートカットが発火しないことと、設定変更後の代替操作を試す。 メニューから割当キーを発見できるかも観察する。",
+        "falsifier": "文字入力や音声入力で別の操作が起動する"
+      }
+    ],
+    "status": "PLANNED",
+    "evidence": []
+  },
+  "source_refs": [
+    {
+      "id": "C-REF-211",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts",
+      "record": "registry/C/sources/C-REF-211.json",
+      "registry_source_id": "C-REF-211",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    },
+    {
+      "id": "C-REF-212",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard",
+      "record": "registry/C/sources/C-REF-212.json",
+      "registry_source_id": "C-REF-212",
+      "evidence_kind": "WCAG 達成基準の解説（参考資料）"
+    },
+    {
+      "id": "C-REF-213",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/",
+      "record": "registry/C/sources/C-REF-213.json",
+      "registry_source_id": "C-REF-213",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-214",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/",
+      "record": "registry/C/sources/C-REF-214.json",
+      "registry_source_id": "C-REF-214",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-215",
+      "url": "https://doi.org/10.1145/1240624.1240865",
+      "record": "registry/C/sources/C-REF-215.json",
+      "registry_source_id": "C-REF-215",
+      "evidence_kind": "学術論文"
+    }
+  ],
+  "confidence": {
+    "source_support": "各出典の指定箇所を参照。複数資料から組み立てた設計判断。",
+    "transfer": "文字キーだけで操作を起動するアプリ",
+    "limits": "修飾キーを組み合わせる操作と文字キー単独の操作の適用条件を区別する。"
+  },
+  "status": "DRAFT",
+  "version": "0.1.0"
+}

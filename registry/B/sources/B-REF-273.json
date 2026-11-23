@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-273",
+  "title": "Cognitive Accessibility Design Pattern: Make it Easy to Undo Form Errors",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p05-form-undo/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p05-form-undo/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p05-form-undo/",
+  "response_sha256": "d19268088182732132f3374ca19dae71092ddd4a393a507eb035b0c4560cc837",
+  "used_by": [
+    "B-IU-213"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p05-form-undo/#whattodo"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-229",
+  "title": "Language navigation",
+  "url": "https://design-system.service.gov.uk/components/language-navigation/",
+  "canonical_url": "https://design-system.service.gov.uk/components/language-navigation/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/language-navigation/",
+  "response_sha256": "93f2190332a8ad2417dfb33df4106ae708bcd914d007f84cbfa0d8cfce4402ef",
+  "used_by": [
+    "A-IU-205"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/language-navigation/#how-it-works"
+}

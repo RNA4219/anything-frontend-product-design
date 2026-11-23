@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-255",
+  "title": "Tables with Two Headers",
+  "url": "https://www.w3.org/WAI/tutorials/tables/two-headers/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/tables/two-headers/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Table with header cells in the top row and first column",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/tables/two-headers/",
+  "response_sha256": "17b6995dcf2954c8a786e83c756c8670f6a998f4c1a2b865f02ed7e27afcb7b8",
+  "used_by": [
+    "A-IU-209"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/tables/two-headers/#table-with-header-cells-in-the-top-row-and-first-column"
+}

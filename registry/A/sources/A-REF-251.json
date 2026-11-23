@@ -1,0 +1,17 @@
+{
+  "source_id": "A-REF-251",
+  "title": "An alt Decision Tree",
+  "url": "https://www.w3.org/WAI/tutorials/images/decision-tree/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/images/decision-tree/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "An alt Decision Tree",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/images/decision-tree/",
+  "response_sha256": "f868eb40b9883b56814daf4c20b4f717d0eff3f1e3a568a0fb1886483b7aa016",
+  "used_by": [
+    "A-IU-208"
+  ]
+}

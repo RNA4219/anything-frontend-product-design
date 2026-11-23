@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-268",
+  "title": "Cognitive Accessibility Design Pattern: Make It Easy to Find Help and Give Feedback",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p05-findable-support/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p05-findable-support/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p05-findable-support/",
+  "response_sha256": "e339e057638c051e8d2521489960a16cefbcf67c01ca71eb93d0e5a502a2e91d",
+  "used_by": [
+    "A-IU-210"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p05-findable-support/#whattodo"
+}

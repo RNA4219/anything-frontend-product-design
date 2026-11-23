@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-212",
+  "title": "Memorable date",
+  "url": "https://designsystem.digital.gov/components/memorable-date/",
+  "canonical_url": "https://designsystem.digital.gov/components/memorable-date/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/memorable-date/",
+  "response_sha256": "68ff45cfdc697da0f4761fc30be3e442b16259fc132ac1a866dfc781bd536f2e",
+  "used_by": [
+    "B-IU-203"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/memorable-date/#usability-guidance-memorable-date"
+}

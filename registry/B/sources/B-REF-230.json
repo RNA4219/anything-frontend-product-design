@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-230",
+  "title": "Cognitive Accessibility Design Pattern: Provide a Login that Does Not Rely on Memory or Other Cognitive Skills",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o6p01-login-cognition/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o6p01-login-cognition/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o6p01-login-cognition/",
+  "response_sha256": "135ed0a610ce0d31a544dc210d9489f68a6268dcd5bc4a49593dbbb5ee39a566",
+  "used_by": [
+    "B-IU-205"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o6p01-login-cognition/#whattodo"
+}

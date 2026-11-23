@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-231",
+  "title": "Analyse a research session",
+  "url": "https://www.gov.uk/service-manual/user-research/analyse-a-research-session",
+  "canonical_url": "https://www.gov.uk/service-manual/user-research/analyse-a-research-session",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Plan analysis sessions",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/user-research/analyse-a-research-session",
+  "response_sha256": "99b2845e75ac1019131b21947b40bfae4220c092d483456c98278e73ebebe0e8",
+  "used_by": [
+    "D-IU-207"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/user-research/analyse-a-research-session#plan-analysis-sessions"
+}

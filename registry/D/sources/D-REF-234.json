@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-234",
+  "title": "Button accessibility tests",
+  "url": "https://designsystem.digital.gov/components/button/accessibility-tests/",
+  "canonical_url": "https://designsystem.digital.gov/components/button/accessibility-tests/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品試験手順",
+  "section": "Keyboard navigation tests",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/button/accessibility-tests/",
+  "response_sha256": "a0f19ef0779c1cd9c0134c871defaf435443d53a5b4d17f3b79849ff7f616ea1",
+  "used_by": [
+    "D-IU-208"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/button/accessibility-tests/#keyboard-navigation-tests"
+}

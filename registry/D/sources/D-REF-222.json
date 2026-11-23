@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-222",
+  "title": "Measuring digital take-up",
+  "url": "https://www.gov.uk/service-manual/measuring-success/measuring-digital-take-up",
+  "canonical_url": "https://www.gov.uk/service-manual/measuring-success/measuring-digital-take-up",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Calculate digital take-up",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/measuring-success/measuring-digital-take-up",
+  "response_sha256": "01dc005d4ee9e713a12e22bc5957354136fd990bfc19adb1f1139d2e7ae4bc7e",
+  "used_by": [
+    "D-IU-205"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/measuring-success/measuring-digital-take-up#calculate-digital-take-up"
+}

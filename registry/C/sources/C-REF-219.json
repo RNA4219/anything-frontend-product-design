@@ -1,0 +1,26 @@
+{
+  "source_id": "C-REF-219",
+  "title": "Usable Gestures for Blind People: Understanding Preference and Performance",
+  "authors": [
+    "Shaun K. Kane",
+    "Jacob O. Wobbrock",
+    "Richard E. Ladner"
+  ],
+  "year": 2011,
+  "venue": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/1978942.1979001",
+  "url": "https://doi.org/10.1145/1978942.1979001",
+  "canonical_url": "https://doi.org/10.1145/1978942.1979001",
+  "primary_text_url": "https://faculty.washington.edu/wobbrock/pubs/chi-11.05.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "望むジェスチャーと実行できたジェスチャーを別に調べる。",
+  "limits": "調査に参加した盲ユーザーとテスト機器の範囲に限る。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "C-UI-204"
+  ]
+}

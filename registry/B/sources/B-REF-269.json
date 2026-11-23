@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-269",
+  "title": "Panel",
+  "url": "https://design-system.service.gov.uk/components/panel/",
+  "canonical_url": "https://design-system.service.gov.uk/components/panel/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/panel/",
+  "response_sha256": "4c35ea2558edf469691745eeff2ed198e1a0f0a6876f7d3250d40d2f409f4e6b",
+  "used_by": [
+    "B-IU-212"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/panel/#how-it-works"
+}

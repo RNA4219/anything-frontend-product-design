@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-224",
+  "title": "Planning and writing text messages and emails",
+  "url": "https://www.gov.uk/service-manual/design/sending-emails-and-text-messages",
+  "canonical_url": "https://www.gov.uk/service-manual/design/sending-emails-and-text-messages",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "When to send emails and text messages",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/design/sending-emails-and-text-messages",
+  "response_sha256": "1728aedd4bf227723553080cac09b19f3267e688d994507ec1528cb4dc59d1ce",
+  "used_by": [
+    "B-IU-204"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/design/sending-emails-and-text-messages#when-to-send-emails-and-text-messages"
+}

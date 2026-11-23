@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-270",
+  "title": "Summary box",
+  "url": "https://designsystem.digital.gov/components/summary-box/",
+  "canonical_url": "https://designsystem.digital.gov/components/summary-box/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/summary-box/",
+  "response_sha256": "5e2e990c33f20602f543db0ab97388508d497172aab88c3f873a3dcc2e2d09ae",
+  "used_by": [
+    "B-IU-212"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/summary-box/#usability-guidance-summary-box"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-205",
+  "title": "Side navigation",
+  "url": "https://designsystem.digital.gov/components/side-navigation/",
+  "canonical_url": "https://designsystem.digital.gov/components/side-navigation/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/side-navigation/",
+  "response_sha256": "88126643899d5dc99dabfd014af5f9d0258cf177d0591f2bd5f5bf5a42f555e1",
+  "used_by": [
+    "A-IU-201"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/side-navigation/#usability-guidance-side-navigation"
+}

@@ -1,0 +1,26 @@
+{
+  "source_id": "B-REF-246",
+  "title": "Faster Progress Bars: Manipulating Perceived Duration with Visual Augmentations",
+  "authors": [
+    "Chris Harrison",
+    "Zhiquan Yeo",
+    "Scott E. Hudson"
+  ],
+  "year": 2010,
+  "venue": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/1753326.1753556",
+  "url": "https://doi.org/10.1145/1753326.1753556",
+  "canonical_url": "https://doi.org/10.1145/1753326.1753556",
+  "primary_text_url": "https://www.chrisharrison.net/projects/progressbars2/ProgressBarsHarrison.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "進捗バーの外観を変える実験では処理時間を固定する。",
+  "limits": "知覚時間の変化からバックエンドの高速化は推定できない。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "B-IU-207"
+  ]
+}

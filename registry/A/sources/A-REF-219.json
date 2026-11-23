@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-219",
+  "title": "Collection",
+  "url": "https://designsystem.digital.gov/components/collection/",
+  "canonical_url": "https://designsystem.digital.gov/components/collection/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/collection/",
+  "response_sha256": "a63a853ff5f62ddb625f031a1f0335dc03e95c19f840b3eb89dd3e0cc0bec942",
+  "used_by": [
+    "A-IU-203"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/collection/#usability-guidance-collection"
+}

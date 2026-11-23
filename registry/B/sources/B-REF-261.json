@@ -1,0 +1,17 @@
+{
+  "source_id": "B-REF-261",
+  "title": "Understanding SC 2.2.4 Interruptions (Level AAA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/interruptions",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/interruptions",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/interruptions",
+  "response_sha256": "9a62e74b931b62cc3bbc54faf11ad3c66e918b23dff1a36ccaa41255b7d86bbb",
+  "used_by": [
+    "B-IU-211"
+  ]
+}

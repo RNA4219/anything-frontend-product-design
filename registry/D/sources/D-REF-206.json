@@ -1,0 +1,25 @@
+{
+  "source_id": "D-REF-206",
+  "title": "Meta-analysis of correlations among usability measures",
+  "authors": [
+    "Kasper Hornbæk",
+    "Effie Lai-Chong Law"
+  ],
+  "year": 2007,
+  "venue": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/1240624.1240722",
+  "url": "https://doi.org/10.1145/1240624.1240722",
+  "canonical_url": "https://doi.org/10.1145/1240624.1240722",
+  "primary_text_url": "https://www.kasperhornbaek.dk/papers/CHI2007_MetaAnalysis.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "効率の改善を達成・満足の改善とみなす前に指標同士の関係を確認する。",
+  "limits": "異なる研究の相関の集約。個別UIでの因果効果は示さない。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "D-IU-201"
+  ]
+}

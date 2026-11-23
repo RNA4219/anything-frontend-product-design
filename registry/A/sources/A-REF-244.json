@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-244",
+  "title": "Labeling Regions",
+  "url": "https://www.w3.org/WAI/tutorials/page-structure/labels/",
+  "canonical_url": "https://www.w3.org/WAI/tutorials/page-structure/labels/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C WAI チュートリアル",
+  "section": "Using aria-labelledby",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/tutorials/page-structure/labels/",
+  "response_sha256": "e221bb31c4e9157294fa1b070cb47889c9adcc0e46e2ee194d30c64eb8c0b99d",
+  "used_by": [
+    "A-IU-207"
+  ],
+  "section_url": "https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby"
+}

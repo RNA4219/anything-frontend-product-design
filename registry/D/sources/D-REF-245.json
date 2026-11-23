@@ -1,0 +1,17 @@
+{
+  "source_id": "D-REF-245",
+  "title": "Understanding SC 1.4.1 Use of Color (Level A)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color",
+  "response_sha256": "2b5aea8d4cf5371fda0b14e5d43d40cc33305aa69ab7f0d86b4455f530f66aa8",
+  "used_by": [
+    "D-IU-210"
+  ]
+}

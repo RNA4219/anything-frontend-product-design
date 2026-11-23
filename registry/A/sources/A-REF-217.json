@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-217",
+  "title": "Cognitive Accessibility Design Pattern: Make the Site Hierarchy Easy to Understand and Navigate",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p02-site-structure/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p02-site-structure/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p02-site-structure/",
+  "response_sha256": "16113c38ae8ff3a8660f944f7911a1f27033a0e32f5e556b779749861a79e59f",
+  "used_by": [
+    "A-IU-203"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o2p02-site-structure/#whattodo"
+}
