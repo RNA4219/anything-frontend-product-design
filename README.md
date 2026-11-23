@@ -13,6 +13,8 @@
 
 配色・書体・余白・構図の表現は [Anything Frontend Art Direction](https://github.com/RNA4219/anything-frontend-art-direction) が担当します。両方を使う場合は、利用者に伝える情報と操作の目的を共有し、表現が決まった画面を同じ利用課題で再確認します。
 
-[主要サイトのクリック・タップ実測](research/product-journeys/README.md)、[調査資料の置き方](research/README.md)、[検証の実行方法](tests/README.md)、[実行・評価の証跡](evidence/README.md)。
+[主要サイトのクリック・タップ実測](research/product-journeys/README.md)、[人が探す・押し直すときの測定値](research/product-journeys/human-studies/README.md)、[余白と情報密度の実測](research/product-journeys/spacing/README.md)。
+
+[調査資料の置き方](research/README.md)、[検証の実行方法](tests/README.md)、[実行・評価の証跡](evidence/README.md)。
 
 このリポジトリの成果物は [MIT License](LICENSE) で配布します。収録する第三者の原典には、各原典に明記した条件が適用されます。
