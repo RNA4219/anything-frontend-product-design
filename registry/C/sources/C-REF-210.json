@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-210",
+  "title": "Developing a Keyboard Interface",
+  "url": "https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Fundamental Keyboard Navigation Conventions",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/",
+  "response_sha256": "340fab1a1f1c17121a95898bd252648ae0cfe5028dea51e9e0f5ae0c1e2aba23",
+  "used_by": [
+    "C-UI-202"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#fundamentalkeyboardnavigationconventions"
+}

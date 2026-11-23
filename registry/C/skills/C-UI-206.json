@@ -1,0 +1,97 @@
+{
+  "skill_id": "C-UI-206",
+  "domain": "ui-engineering-design-system",
+  "trigger": "スライダーで価格や時間を厳密に選ぶ場合",
+  "intent": "数値範囲の入力に正確な値を指定する経路を置く",
+  "required_inputs": [
+    "数値の上下限と刻み",
+    "つまみの名前"
+  ],
+  "decision_rules": [
+    "最小・最大・刻み・現在値を伝え、精度が必要な場合は数値入力を併設する。複数つまみには各々の意味を付ける。"
+  ],
+  "procedure": [
+    "最小・最大・刻み・現在値を伝え、精度が必要な場合は数値入力を併設する。複数つまみには各々の意味を付ける。",
+    "両端と中間値をキーとタッチで選び、表示・読み上げ・提出値が一致することを確認する。"
+  ],
+  "expected_outputs": [
+    "入力経路ごとの値と読み上げ"
+  ],
+  "dependencies": [],
+  "exceptions": [
+    "値の正確さが目的でない探索用の連続操作では刻み方を同じにする必要はない。"
+  ],
+  "failure_modes": [
+    "画面値は同じでも提出値が丸められる"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "数値範囲の入力に正確な値を指定する経路を置く",
+        "status": "not_executed",
+        "procedure": "両端と中間値をキーとタッチで選び、表示・読み上げ・提出値が一致することを確認する。",
+        "falsifier": "画面値は同じでも提出値が丸められる"
+      }
+    ],
+    "status": "PLANNED",
+    "evidence": []
+  },
+  "source_refs": [
+    {
+      "id": "C-REF-228",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/slider/",
+      "record": "registry/C/sources/C-REF-228.json",
+      "registry_source_id": "C-REF-228",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-229",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/slider-multithumb/",
+      "record": "registry/C/sources/C-REF-229.json",
+      "registry_source_id": "C-REF-229",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-230",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/spinbutton/",
+      "record": "registry/C/sources/C-REF-230.json",
+      "registry_source_id": "C-REF-230",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-231",
+      "url": "https://www.w3.org/WAI/ARIA/apg/practices/range-related-properties/",
+      "record": "registry/C/sources/C-REF-231.json",
+      "registry_source_id": "C-REF-231",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-232",
+      "url": "https://designsystem.digital.gov/components/range-slider/",
+      "record": "registry/C/sources/C-REF-232.json",
+      "registry_source_id": "C-REF-232",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-233",
+      "url": "https://www.carbondesignsystem.com/building-blocks/core/components/slider/guidelines",
+      "record": "registry/C/sources/C-REF-233.json",
+      "registry_source_id": "C-REF-233",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-234",
+      "url": "https://www.carbondesignsystem.com/building-blocks/core/components/number-input/guidelines",
+      "record": "registry/C/sources/C-REF-234.json",
+      "registry_source_id": "C-REF-234",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    }
+  ],
+  "confidence": {
+    "source_support": "各出典の指定箇所を参照。複数資料から組み立てた設計判断。",
+    "transfer": "スライダーで価格や時間を厳密に選ぶ場合",
+    "limits": "値の正確さが目的でない探索用の連続操作では刻み方を同じにする必要はない。"
+  },
+  "status": "DRAFT",
+  "version": "0.1.0"
+}

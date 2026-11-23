@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-282",
+  "title": "Choose alternative contact formats",
+  "url": "https://design-system.dwp.gov.uk/patterns/alternative-formats",
+  "canonical_url": "https://design-system.dwp.gov.uk/patterns/alternative-formats",
+  "publisher": "Department for Work and Pensions",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Principles",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.dwp.gov.uk/patterns/alternative-formats",
+  "response_sha256": "7f2b6b92ddf12766d7dc40b681b2c0dbba2e8eb4c6e2051dbb54fd90e5a107da",
+  "used_by": [
+    "A-IU-213"
+  ],
+  "section_url": "https://design-system.dwp.gov.uk/patterns/alternative-formats#principles"
+}

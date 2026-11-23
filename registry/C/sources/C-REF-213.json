@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-213",
+  "title": "Menu and Menubar Pattern",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/",
+  "response_sha256": "ef3c4fb67125f721cb81e165fbda7baf5dca0664ee2ba846430f1422837dbe53",
+  "used_by": [
+    "C-UI-203"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction"
+}

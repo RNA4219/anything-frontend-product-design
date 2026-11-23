@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-279",
+  "title": "Help users to – Complete multiple tasks",
+  "url": "https://service-manual.nhs.uk/design-system/patterns/complete-multiple-tasks",
+  "canonical_url": "https://service-manual.nhs.uk/design-system/patterns/complete-multiple-tasks",
+  "publisher": "NHS England",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://service-manual.nhs.uk/design-system/patterns/complete-multiple-tasks",
+  "response_sha256": "aac70a0c14fced663a1f9d3e3971aac04146aa264b9893c3389c2ea79a5fa795",
+  "used_by": [
+    "A-IU-212"
+  ],
+  "section_url": "https://service-manual.nhs.uk/design-system/patterns/complete-multiple-tasks#when-to-use-the-task-list"
+}

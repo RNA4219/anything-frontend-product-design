@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-257",
+  "title": "Exit this page",
+  "url": "https://design-system.service.gov.uk/components/exit-this-page/",
+  "canonical_url": "https://design-system.service.gov.uk/components/exit-this-page/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/exit-this-page/",
+  "response_sha256": "129cf2dd27965e8273e042d018c0dfc71d00fed9ca74a37f7797b05ea606fd40",
+  "used_by": [
+    "B-IU-210"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/exit-this-page/#how-it-works"
+}

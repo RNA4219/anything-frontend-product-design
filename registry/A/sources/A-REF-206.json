@@ -1,0 +1,25 @@
+{
+  "source_id": "A-REF-206",
+  "title": "A comparison of static, adaptive, and adaptable menus",
+  "authors": [
+    "Leah Findlater",
+    "Joanna McGrenere"
+  ],
+  "year": 2004,
+  "venue": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/985692.985704",
+  "url": "https://doi.org/10.1145/985692.985704",
+  "canonical_url": "https://doi.org/10.1145/985692.985704",
+  "primary_text_url": "https://www.cs.ubc.ca/labs/edapt/papers/findlater2004.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "固定順、利用頻度による自動並べ替え、手動の並べ替えを区別する。",
+  "limits": "分割メニューの比較。全ナビゲーションに同じ優劣を仮定しない。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "A-IU-201"
+  ]
+}

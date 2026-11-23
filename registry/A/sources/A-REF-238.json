@@ -1,0 +1,17 @@
+{
+  "source_id": "A-REF-238",
+  "title": "Understanding SC 3.1.6 Pronunciation (Level AAA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/pronunciation",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/pronunciation",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/pronunciation",
+  "response_sha256": "cbdc1386975f0f615e4b2dfc3d21fc23a3258011180568b1efc5c07bfe902938",
+  "used_by": [
+    "A-IU-206"
+  ]
+}

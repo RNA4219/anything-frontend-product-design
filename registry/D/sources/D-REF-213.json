@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-213",
+  "title": "Finding participants for user research",
+  "url": "https://www.gov.uk/service-manual/user-research/find-user-research-participants",
+  "canonical_url": "https://www.gov.uk/service-manual/user-research/find-user-research-participants",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Identifying your target groups",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/user-research/find-user-research-participants",
+  "response_sha256": "9deff15d3c5c847fb62faf611f0b5c12e8305a46629435ba232fcfc238f7be65",
+  "used_by": [
+    "D-IU-203"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/user-research/find-user-research-participants#identifying-your-target-groups"
+}

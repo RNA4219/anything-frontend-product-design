@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-214",
+  "title": "Date range picker",
+  "url": "https://designsystem.digital.gov/components/date-range-picker/",
+  "canonical_url": "https://designsystem.digital.gov/components/date-range-picker/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/date-range-picker/",
+  "response_sha256": "f01c21d0327a9a58451ee0ee578c35ff97abe0519993f117b49a56309b242576",
+  "used_by": [
+    "B-IU-203"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/date-range-picker/#usability-guidance-date-range-picker"
+}

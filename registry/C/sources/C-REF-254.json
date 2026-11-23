@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-254",
+  "title": "Accordion",
+  "url": "https://designsystem.digital.gov/components/accordion/",
+  "canonical_url": "https://designsystem.digital.gov/components/accordion/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/accordion/",
+  "response_sha256": "29a09fcfe1743ea9e3aff8a8e6a46906d9635621e9e3150e64d4b725689aab9f",
+  "used_by": [
+    "C-UI-210"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/accordion/#usability-guidance-accordion"
+}

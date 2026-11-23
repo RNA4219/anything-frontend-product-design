@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-231",
+  "title": "Two languages",
+  "url": "https://designsystem.digital.gov/patterns/select-a-language/two-languages/",
+  "canonical_url": "https://designsystem.digital.gov/patterns/select-a-language/two-languages/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/patterns/select-a-language/two-languages/",
+  "response_sha256": "82edfbdd74db26c550c1fbd466d32e9b9bba70245f0bf01a9eb445f3055b52bc",
+  "used_by": [
+    "A-IU-205"
+  ],
+  "section_url": "https://designsystem.digital.gov/patterns/select-a-language/two-languages/#guidance"
+}

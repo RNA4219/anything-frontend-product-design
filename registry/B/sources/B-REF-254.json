@@ -1,0 +1,17 @@
+{
+  "source_id": "B-REF-254",
+  "title": "Understanding SC 2.2.6 Timeouts (Level AAA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/timeouts",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/timeouts",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/timeouts",
+  "response_sha256": "6538a464ada95eb8366af90f425e6a9b6bdd37b93a534f21de15831d66eb2ecb",
+  "used_by": [
+    "B-IU-209"
+  ]
+}

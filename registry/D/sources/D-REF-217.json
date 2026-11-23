@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-217",
+  "title": "Making your service more inclusive",
+  "url": "https://www.gov.uk/service-manual/design/making-your-service-more-inclusive",
+  "canonical_url": "https://www.gov.uk/service-manual/design/making-your-service-more-inclusive",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Understand your legal obligations",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/design/making-your-service-more-inclusive",
+  "response_sha256": "45927a6cff7613f18e9374909d3a0a9862f4890f575d62826c15a852cd4176ef",
+  "used_by": [
+    "D-IU-203"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/design/making-your-service-more-inclusive#understand-your-legal-obligations"
+}

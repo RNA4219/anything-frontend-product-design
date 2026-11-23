@@ -1,22 +1,25 @@
 ---
 name: anything-frontend-product-design
 license: MIT
-description: Webプロダクトの機能、情報構造、操作フロー、再利用できるUI部品、リリースの受入条件を設計・実装・評価する。利用者の目的から、正常時と失敗時の振る舞いを決め、実画面と観察結果で判断する。
+description: Webプロダクトの機能・情報設計、操作フロー、UI部品の実装、リリース判定を扱う。実サイトの操作数・余白・情報密度を参照し、同じ利用課題で設計を検証する。
 ---
 
 # Anything Frontend Product Design
 
-利用者、目標、対象のデータと制約、目標を達成したと分かる結果を最初に確認する。既存画面がある場合は、代表的な利用課題を現行版で実行し、どこで判断や操作が止まるかを観察する。情報が足りなければ、その判断に影響する仮定と確認方法を書く。
+誰が何を達成するか、対象データ・制約・成功条件を決める。
+既存画面は代表課題を試して止まる箇所を記録し、不明点には仮定と確かめ方を添える。
 
-| 今回の判断 | 読む担当Skill |
-| --- | --- |
-| 何を提供し、どこから見つけられるようにするか | `modules/product-information-architecture/SKILL.md` |
-| 開始から完了までに何が変わり、異常時にどう戻れるか | `modules/interaction-ux-flow/SKILL.md` |
-| 既存部品をどう再利用し、状態や操作をどう実装するか | `modules/ui-engineering-design-system/SKILL.md` |
-| 何を再現し、どの証拠でリリース判断するか | `modules/design-qa-evaluation/SKILL.md` |
+| 用件 | 担当 |
+|---|---|
+| 提供する機能・情報とその入口 | [機能と情報設計](modules/product-information-architecture/SKILL.md) |
+| 完了までの状態変化・中断・失敗からの回復 | [操作フロー](modules/interaction-ux-flow/SKILL.md) |
+| 部品の再利用・状態・操作の実装 | [UI部品](modules/ui-engineering-design-system/SKILL.md) |
+| 再現する条件・証拠・リリース判定 | [検証とリリース判定](modules/design-qa-evaluation/SKILL.md) |
 
-担当をまたぐ場合は [受け渡しの約束](references/handoff.md) に従う。既存の仕様や実装に必要な情報があればその情報を使い、今回必要な判断から進める。担当ファイルがまだないチェックアウトでは、該当する担当ブランチを探す。
+定量評価は[製品評価チェックリスト](references/product-checklist.md)で課題ごとの実測から判定し、比較材料は[用件別の実例](references/site-comparisons.md)を使う。
 
-選択肢が複数あるときは、同じ内容・課題・成功条件を使い、案ごとの差と失敗条件を観察する。実装を伴う場合は利用目的を最後まで達成できるかを確かめる。使った入力、アプリの版、観察結果、確認できなかった条件を残す。
-
-視覚表現も扱う依頼では、主要な情報と操作、機能上の制約を Art Direction に渡す。表現を適用した実画面で、情報の発見、操作、完了の確認をもう一度試す。 [Anything Frontend Art Direction](https://github.com/RNA4219/anything-frontend-art-direction)
+既存仕様を使い、担当をまたぐときは[受け渡しの約束](references/handoff.md)に従い、表の担当スキルがなければこのスキルのリポジトリで該当担当のブランチを探す。
+複数案は内容・課題・成功条件をそろえ、結果の差と失敗条件を比べる。
+実装後は課題を最後まで試し、入力・アプリの版・観察結果・未確認の条件を残す。
+根拠は各ルールの出典か[分野別の資料](research/design-evidence/README.md)から調べる。
+視覚表現も扱うときは主要な情報・操作・制約を[Art Direction](https://github.com/RNA4219/anything-frontend-art-direction)へ渡し、適用後の実画面で発見から完了までを再確認する。

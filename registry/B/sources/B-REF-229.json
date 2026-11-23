@@ -1,0 +1,17 @@
+{
+  "source_id": "B-REF-229",
+  "title": "Understanding SC 3.3.9 Accessible Authentication (Enhanced) (Level AAA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-enhanced",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-enhanced",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-enhanced",
+  "response_sha256": "ed468f38d545e5623904fc610dc7896f341fa57f4a3ea4819584f9efb5aa1f34",
+  "used_by": [
+    "B-IU-205"
+  ]
+}

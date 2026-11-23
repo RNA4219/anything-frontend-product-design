@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-220",
+  "title": "Plan a round of user research",
+  "url": "https://www.gov.uk/service-manual/user-research/plan-round-of-user-research",
+  "canonical_url": "https://www.gov.uk/service-manual/user-research/plan-round-of-user-research",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Set your research objectives",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/user-research/plan-round-of-user-research",
+  "response_sha256": "6847da3cd4c403a134bcc36cd3e48d7b2b1616a805da5873ddba1ac43b1bddd7",
+  "used_by": [
+    "D-IU-204"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/user-research/plan-round-of-user-research#set-your-research-objectives"
+}

@@ -1,0 +1,24 @@
+{
+  "source_id": "C-REF-226",
+  "title": "Fitts’ Throughput and the Remarkable Case of Touch-Based Target Selection",
+  "authors": [
+    "I. Scott MacKenzie"
+  ],
+  "year": 2015,
+  "venue": "Lecture Notes in Computer Science",
+  "source_type": "research_paper",
+  "publication_type": "book-chapter",
+  "doi": "10.1007/978-3-319-20916-6_23",
+  "url": "https://doi.org/10.1007/978-3-319-20916-6_23",
+  "canonical_url": "https://doi.org/10.1007/978-3-319-20916-6_23",
+  "primary_text_url": "https://www.yorku.ca/mack/hcii2015a.html",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "一次元と二次元のタッチ選択課題、端末の支持条件を分けて記録する。",
+  "limits": "スマートフォンの実験結果をマウスの数値に転用しない。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "C-UI-205"
+  ]
+}

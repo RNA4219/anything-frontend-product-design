@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-222",
+  "title": "Search",
+  "url": "https://designsystem.digital.gov/components/search/",
+  "canonical_url": "https://designsystem.digital.gov/components/search/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Usability guidance",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/search/",
+  "response_sha256": "0d06c00702057af4254018da87571e87cab1faafadc6683ec357136e165e015d",
+  "used_by": [
+    "A-IU-204"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/search/#usability-guidance-search"
+}

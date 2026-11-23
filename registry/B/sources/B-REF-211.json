@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-211",
+  "title": "Date input",
+  "url": "https://design-system.service.gov.uk/components/date-input/",
+  "canonical_url": "https://design-system.service.gov.uk/components/date-input/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/date-input/",
+  "response_sha256": "7b2f554b68f63c7222e0d5b97195579af658cf91025db74a32647654f1927d22",
+  "used_by": [
+    "B-IU-203"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/date-input/#how-it-works"
+}

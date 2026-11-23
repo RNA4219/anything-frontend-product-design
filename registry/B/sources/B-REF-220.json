@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-220",
+  "title": "Help users to Confirm a phone number",
+  "url": "https://design-system.service.gov.uk/patterns/confirm-a-phone-number/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/confirm-a-phone-number/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/confirm-a-phone-number/",
+  "response_sha256": "046bcf270a40eb07ea6572151666d046b9fb3e02fd792f170bf3f0db743e95a0",
+  "used_by": [
+    "B-IU-204"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/confirm-a-phone-number/#when-to-use-this-pattern"
+}

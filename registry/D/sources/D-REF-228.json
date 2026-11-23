@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-228",
+  "title": "User research in live",
+  "url": "https://www.gov.uk/service-manual/user-research/user-research-in-live",
+  "canonical_url": "https://www.gov.uk/service-manual/user-research/user-research-in-live",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "How to do user research in live",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/user-research/user-research-in-live",
+  "response_sha256": "29872c95e7e8ce614eebb867ed4ec666f650fddd3eacb50e9afe55d5417f4bf8",
+  "used_by": [
+    "D-IU-206"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/user-research/user-research-in-live#how-to-do-user-research-in-live"
+}

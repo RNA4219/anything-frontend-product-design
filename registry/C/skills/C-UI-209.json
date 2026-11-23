@@ -1,0 +1,98 @@
+{
+  "skill_id": "C-UI-209",
+  "domain": "ui-engineering-design-system",
+  "trigger": "階層データを矢印キーで操作するとき",
+  "intent": "ツリーの展開と項目の選択を区別する",
+  "required_inputs": [
+    "階層",
+    "展開状態",
+    "選択値"
+  ],
+  "decision_rules": [
+    "展開状態と選択状態を別に伝える。開く・閉じる・親へ移るキーと、項目を選択する操作を定める。"
+  ],
+  "procedure": [
+    "展開状態と選択状態を別に伝える。開く・閉じる・親へ移るキーと、項目を選択する操作を定める。",
+    "子に選択を残した状態で親を閉じて再展開し、現在位置・選択内容・読み上げを照合する。 見出し・リンクをたどる探索でも同じ対象へ到達できるか確認する。"
+  ],
+  "expected_outputs": [
+    "再展開後の選択と読み上げ"
+  ],
+  "dependencies": [],
+  "exceptions": [
+    "通常のサイトナビゲーションで単純なリンク一覧が足りるときは複合ツリーを導入しない。"
+  ],
+  "failure_modes": [
+    "親を閉じると別の項目が選択済みになる"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "ツリーの展開と項目の選択を区別する",
+        "status": "not_executed",
+        "procedure": "子に選択を残した状態で親を閉じて再展開し、現在位置・選択内容・読み上げを照合する。 見出し・リンクをたどる探索でも同じ対象へ到達できるか確認する。",
+        "falsifier": "親を閉じると別の項目が選択済みになる"
+      }
+    ],
+    "status": "PLANNED",
+    "evidence": []
+  },
+  "source_refs": [
+    {
+      "id": "C-REF-246",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/treeview/",
+      "record": "registry/C/sources/C-REF-246.json",
+      "registry_source_id": "C-REF-246",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-247",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/",
+      "record": "registry/C/sources/C-REF-247.json",
+      "registry_source_id": "C-REF-247",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-248",
+      "url": "https://www.carbondesignsystem.com/building-blocks/core/components/tree-view/guidelines",
+      "record": "registry/C/sources/C-REF-248.json",
+      "registry_source_id": "C-REF-248",
+      "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド"
+    },
+    {
+      "id": "C-REF-249",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "record": "registry/C/sources/C-REF-249.json",
+      "registry_source_id": "C-REF-249",
+      "evidence_kind": "ARIA Authoring Practices の実装ガイド"
+    },
+    {
+      "id": "C-REF-250",
+      "url": "https://www.w3.org/WAI/tutorials/menus/flyout/",
+      "record": "registry/C/sources/C-REF-250.json",
+      "registry_source_id": "C-REF-250",
+      "evidence_kind": "W3C WAI チュートリアル"
+    },
+    {
+      "id": "C-REF-251",
+      "url": "https://www.w3.org/WAI/tutorials/menus/application-menus/",
+      "record": "registry/C/sources/C-REF-251.json",
+      "registry_source_id": "C-REF-251",
+      "evidence_kind": "W3C WAI チュートリアル"
+    },
+    {
+      "id": "C-REF-252",
+      "url": "https://doi.org/10.1145/1805986.1806005",
+      "record": "registry/C/sources/C-REF-252.json",
+      "registry_source_id": "C-REF-252",
+      "evidence_kind": "学術論文"
+    }
+  ],
+  "confidence": {
+    "source_support": "各出典の指定箇所を参照。複数資料から組み立てた設計判断。",
+    "transfer": "階層データを矢印キーで操作するとき",
+    "limits": "通常のサイトナビゲーションで単純なリンク一覧が足りるときは複合ツリーを導入しない。"
+  },
+  "status": "DRAFT",
+  "version": "0.1.0"
+}

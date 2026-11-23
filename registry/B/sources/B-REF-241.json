@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-241",
+  "title": "Progress bar",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/progress-bar/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/progress-bar/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Universal behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/progress-bar/guidelines",
+  "response_sha256": "07ad2d1954f3feb4ba8fccbfd10358b0355cfe8bda6d6039bffbcd4bdcc4884d",
+  "used_by": [
+    "B-IU-207"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/progress-bar/guidelines#universal-behaviors"
+}

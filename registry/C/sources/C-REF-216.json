@@ -1,0 +1,17 @@
+{
+  "source_id": "C-REF-216",
+  "title": "Understanding SC 2.5.7 Dragging Movements (Level AA)",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements",
+  "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "WCAG 達成基準の解説（参考資料）",
+  "section": "Intent",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements",
+  "response_sha256": "c3905630a35b6e8246aba32c1769f3ff82b217d464d41e4b1b2a34b9df5771c6",
+  "used_by": [
+    "C-UI-204"
+  ]
+}

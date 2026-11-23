@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-255",
+  "title": "Cognitive Accessibility Design Pattern: Avoid Data Loss and “Timeouts”",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p09-data-loss/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p09-data-loss/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p09-data-loss/",
+  "response_sha256": "48c1e9b14108130ab62b73ae942b212ff0a6baf3da18f7a123c3c80778829c2a",
+  "used_by": [
+    "B-IU-209"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p09-data-loss/#whattodo"
+}

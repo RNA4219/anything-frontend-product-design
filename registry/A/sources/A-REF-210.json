@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-210",
+  "title": "Breadcrumbs",
+  "url": "https://design-system.service.gov.uk/components/breadcrumbs/",
+  "canonical_url": "https://design-system.service.gov.uk/components/breadcrumbs/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/breadcrumbs/",
+  "response_sha256": "4c803dd02a758af0f28fdc54f34c4116fca575d9ad7309e55cc27355234fd40a",
+  "used_by": [
+    "A-IU-202"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/breadcrumbs/#how-it-works"
+}

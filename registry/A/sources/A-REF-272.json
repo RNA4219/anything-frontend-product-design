@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-272",
+  "title": "Cognitive Accessibility Design Pattern: Provide Information So a User Can Complete and Prepare for a Task",
+  "url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p04-task-expectations/",
+  "canonical_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p04-task-expectations/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "W3C 認知アクセシビリティ補足ガイド",
+  "section": "What to Do",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p04-task-expectations/",
+  "response_sha256": "30a0ca90c7ef07769eff65174a6eb52e6ffa24edbad8840b626c77b45d338e63",
+  "used_by": [
+    "A-IU-211"
+  ],
+  "section_url": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o5p04-task-expectations/#whattodo"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-205",
+  "title": "Dropdown",
+  "url": "https://www.carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines",
+  "canonical_url": "https://www.carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines",
+  "publisher": "IBM Carbon Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Universal behaviors",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines",
+  "response_sha256": "b594ed48ce3cbe5c5e9b836707cf1340a94c265dcd984544fa9e271e25ba9eaf",
+  "used_by": [
+    "C-UI-201"
+  ],
+  "section_url": "https://www.carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines#universal-behaviors"
+}

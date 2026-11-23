@@ -1,0 +1,27 @@
+{
+  "source_id": "B-REF-245",
+  "title": "Rethinking the progress bar",
+  "authors": [
+    "Chris Harrison",
+    "Brian Amento",
+    "Stacey Kuznetsov",
+    "Robert Bell"
+  ],
+  "year": 2007,
+  "venue": "Proceedings of the 20th annual ACM symposium on User interface software and technology",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/1294211.1294231",
+  "url": "https://doi.org/10.1145/1294211.1294231",
+  "canonical_url": "https://doi.org/10.1145/1294211.1294231",
+  "primary_text_url": "https://chrisharrison.net/projects/progressbars/ProgBarHarrison.pdf",
+  "section": "Discussion",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "実測した待ち時間と利用者が感じた待ち時間を別に比較する。",
+  "limits": "対比較で用いた進み方とタスクに限る。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "B-IU-207"
+  ]
+}

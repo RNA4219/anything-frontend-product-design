@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-263",
+  "title": "Alert and Message Dialogs Pattern",
+  "url": "https://www.w3.org/WAI/ARIA/apg/patterns/alertdialog/",
+  "canonical_url": "https://www.w3.org/WAI/ARIA/apg/patterns/alertdialog/",
+  "publisher": "W3C WAI",
+  "source_type": "official_guidance",
+  "evidence_kind": "ARIA Authoring Practices の実装ガイド",
+  "section": "Keyboard Interaction",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.w3.org/WAI/ARIA/apg/patterns/alertdialog/",
+  "response_sha256": "1ae0e77eef210c2aa3cad16be74bebf879368208fa6ff2fa2add63f880cac345",
+  "used_by": [
+    "B-IU-211"
+  ],
+  "section_url": "https://www.w3.org/WAI/ARIA/apg/patterns/alertdialog/#keyboardinteraction"
+}

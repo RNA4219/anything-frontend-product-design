@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-267",
+  "title": "Combo box accessibility tests",
+  "url": "https://designsystem.digital.gov/components/combo-box/accessibility-tests/",
+  "canonical_url": "https://designsystem.digital.gov/components/combo-box/accessibility-tests/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品試験手順",
+  "section": "Keyboard navigation tests",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/combo-box/accessibility-tests/",
+  "response_sha256": "f97d57a83addbe569a3c044a111557a3e6b6886ca057341f453778c8383fc010",
+  "used_by": [
+    "D-IU-213"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/combo-box/accessibility-tests/#keyboard-navigation-tests"
+}

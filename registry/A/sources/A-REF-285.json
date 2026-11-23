@@ -1,0 +1,18 @@
+{
+  "source_id": "A-REF-285",
+  "title": "Help users to – Find British Sign Language content",
+  "url": "https://service-manual.nhs.uk/design-system/patterns/find-bsl-content",
+  "canonical_url": "https://service-manual.nhs.uk/design-system/patterns/find-bsl-content",
+  "publisher": "NHS England",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Download the icons",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://service-manual.nhs.uk/design-system/patterns/find-bsl-content",
+  "response_sha256": "f9cfc6d2d6333d3b4990f074d2ab29261ffacdad4cd8898501866e666aa38e77",
+  "used_by": [
+    "A-IU-213"
+  ],
+  "section_url": "https://service-manual.nhs.uk/design-system/patterns/find-bsl-content#download-the-icons"
+}

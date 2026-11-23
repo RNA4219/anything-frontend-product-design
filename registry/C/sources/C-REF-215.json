@@ -1,0 +1,26 @@
+{
+  "source_id": "C-REF-215",
+  "title": "Strategies for accelerating on-line learning of hotkeys",
+  "authors": [
+    "Tovi Grossman",
+    "Pierre Dragicevic",
+    "Ravin Balakrishnan"
+  ],
+  "year": 2007,
+  "venue": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/1240624.1240865",
+  "url": "https://doi.org/10.1145/1240624.1240865",
+  "canonical_url": "https://doi.org/10.1145/1240624.1240865",
+  "primary_text_url": "https://www.dgp.toronto.edu/~ravin/papers/chi2007_learninghotkeys.pdf",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "既存メニューからキーボードショートカットを発見し、学習後に想起できるかを試す。",
+  "limits": "短時間の学習と普段の利用での定着は別に測る。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "C-UI-203"
+  ]
+}

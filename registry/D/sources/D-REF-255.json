@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-255",
+  "title": "Skip link",
+  "url": "https://design-system.service.gov.uk/components/skip-link/",
+  "canonical_url": "https://design-system.service.gov.uk/components/skip-link/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/skip-link/",
+  "response_sha256": "7f2fd169133156d58b2ebb799f59c9dce0d1a9b7779cbb92c0ed4f1d507282d8",
+  "used_by": [
+    "D-IU-211"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/skip-link/#how-it-works"
+}

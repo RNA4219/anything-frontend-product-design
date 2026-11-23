@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-210",
+  "title": "Ask users for Dates",
+  "url": "https://design-system.service.gov.uk/patterns/dates/",
+  "canonical_url": "https://design-system.service.gov.uk/patterns/dates/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "When to use this pattern",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/patterns/dates/",
+  "response_sha256": "09549772f8e6a76511b92d438ba580e92e45b6c6043f24845491e921374ddad8",
+  "used_by": [
+    "B-IU-203"
+  ],
+  "section_url": "https://design-system.service.gov.uk/patterns/dates/#when-to-use-this-pattern"
+}

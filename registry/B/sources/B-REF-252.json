@@ -1,0 +1,18 @@
+{
+  "source_id": "B-REF-252",
+  "title": "Manage a session timeout",
+  "url": "https://design-system.dwp.gov.uk/patterns/manage-a-session-timeout",
+  "canonical_url": "https://design-system.dwp.gov.uk/patterns/manage-a-session-timeout",
+  "publisher": "Department for Work and Pensions",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "Principles",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.dwp.gov.uk/patterns/manage-a-session-timeout",
+  "response_sha256": "b088c997e431c276f511e94a651fec0873dada2cc7b14142a159a92b9631c9f6",
+  "used_by": [
+    "B-IU-209"
+  ],
+  "section_url": "https://design-system.dwp.gov.uk/patterns/manage-a-session-timeout#principles"
+}

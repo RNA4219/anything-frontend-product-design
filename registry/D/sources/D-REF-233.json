@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-233",
+  "title": "Contextual research and observation",
+  "url": "https://www.gov.uk/service-manual/user-research/contextual-research-and-observation",
+  "canonical_url": "https://www.gov.uk/service-manual/user-research/contextual-research-and-observation",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "When to do contextual research",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/user-research/contextual-research-and-observation",
+  "response_sha256": "643d1cafaa27f3544141c73ac877f570a5c87bc6cbfcd2919ffd0a73f52c1190",
+  "used_by": [
+    "D-IU-207"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/user-research/contextual-research-and-observation#when-to-do-contextual-research"
+}

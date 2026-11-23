@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-249",
+  "title": "Alert accessibility tests",
+  "url": "https://designsystem.digital.gov/components/alert/accessibility-tests/",
+  "canonical_url": "https://designsystem.digital.gov/components/alert/accessibility-tests/",
+  "publisher": "U.S. Web Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品試験手順",
+  "section": "General tests",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://designsystem.digital.gov/components/alert/accessibility-tests/",
+  "response_sha256": "786b62dd90fac02e561f6913ba053f27c7227d54feda19eb4303a782db278c4a",
+  "used_by": [
+    "D-IU-210"
+  ],
+  "section_url": "https://designsystem.digital.gov/components/alert/accessibility-tests/#general-tests"
+}

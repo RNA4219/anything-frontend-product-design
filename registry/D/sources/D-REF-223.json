@@ -1,0 +1,18 @@
+{
+  "source_id": "D-REF-223",
+  "title": "Choosing digital analytics tools",
+  "url": "https://www.gov.uk/service-manual/measuring-success/choosing-digital-analytics-tools",
+  "canonical_url": "https://www.gov.uk/service-manual/measuring-success/choosing-digital-analytics-tools",
+  "publisher": "GOV.UK Service Manual",
+  "source_type": "official_guidance",
+  "evidence_kind": "サービスの調査・設計・計測ガイド",
+  "section": "Choosing functions and features",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://www.gov.uk/service-manual/measuring-success/choosing-digital-analytics-tools",
+  "response_sha256": "a3ff12d05545589f44501ffd0a345c3894f3eeea3a4e1e6e5954b197908b1ab7",
+  "used_by": [
+    "D-IU-205"
+  ],
+  "section_url": "https://www.gov.uk/service-manual/measuring-success/choosing-digital-analytics-tools#choosing-functions-and-features"
+}

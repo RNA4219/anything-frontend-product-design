@@ -1,0 +1,18 @@
+{
+  "source_id": "C-REF-265",
+  "title": "Textarea",
+  "url": "https://design-system.service.gov.uk/components/textarea/",
+  "canonical_url": "https://design-system.service.gov.uk/components/textarea/",
+  "publisher": "GOV.UK Design System",
+  "source_type": "official_guidance",
+  "evidence_kind": "デザインシステムの部品・パターン・コンテンツガイド",
+  "section": "How it works",
+  "read_status": "該当ページの指定箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "retrieved_url": "https://design-system.service.gov.uk/components/textarea/",
+  "response_sha256": "6147603e472e2a0de1e16960943023d0ac055c19fa4860faa4f864e9231b1c6c",
+  "used_by": [
+    "C-UI-212"
+  ],
+  "section_url": "https://design-system.service.gov.uk/components/textarea/#how-it-works"
+}

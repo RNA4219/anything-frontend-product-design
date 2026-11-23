@@ -1,0 +1,26 @@
+{
+  "source_id": "A-REF-221",
+  "title": "A predictive model of menu performance",
+  "authors": [
+    "Andy Cockburn",
+    "Carl Gutwin",
+    "Saul Greenberg"
+  ],
+  "year": 2007,
+  "venue": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+  "source_type": "research_paper",
+  "publication_type": "proceedings-article",
+  "doi": "10.1145/1240624.1240723",
+  "url": "https://doi.org/10.1145/1240624.1240723",
+  "canonical_url": "https://doi.org/10.1145/1240624.1240723",
+  "primary_text_url": "https://ir.canterbury.ac.nz/items/fd5ec0a7-03bf-4b08-a1a9-ba211be3d837",
+  "section": "Abstract",
+  "evidence_kind": "学術論文",
+  "read_status": "記載の節を確認",
+  "design_application": "項目の発見とポインター移動にかかる時間を分けて記録する。",
+  "limits": "評価したメニューと習熟条件によって予測が変わる。",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "A-IU-203"
+  ]
+}
