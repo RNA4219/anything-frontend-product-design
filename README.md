@@ -64,7 +64,7 @@ Adobeの観察例は、再設定方法を案内記事で確認するまでに**2
 
 - **人物画と背景**。DGXのMOSS-Imageで主人公、水没駅、駅務電話を描きました。着信した瞬間、澪は妹かもしれないという期待と、いるはずがないという戸惑いを同時に見せます。妹が切符のお釣りに触れる場面で、ようやく肩の力が抜けた微笑みに切り替わります。栗色の髪を留めるのは、真鍮の細い弓に載った二匹の魚です。青磁色の魚の尾を小さな卵色の魚が追う形に、澪と妹を重ねました。生成りの保線服には駅の鍵を留めました。[髪飾りの原画](assets/suisosen-hairpin.webp)太い輪郭と平らな色面を参照し、浅い湖の色と細い線が読める淡色に調整しました。[『パラノマサイト』登場人物](https://www.jp.square-enix.com/paranormasight/character/) · [『都市伝説解体センター』作品紹介](https://shueisha-games.com/games/umdc/)
 - **劇伴と効果音**。YuE2で作譜・生成した約3分59秒の原曲から、劇伴「汐見湖、二十三時十七分」の約54秒のループを編集しました。電話の二連ベル、切符を切る音、硬貨が跳ねる音、車輪音は、別にYuE2で生成した打楽器素材の打音を編集したものです。ボイス中は伴奏が自動で小さくなります。[YuE2](https://github.com/multimodal-art-projection/YuE)
-- **ボイス**。Irodori-TTS-v4-Largeで澪と妹の声を生成。電話越しの妹には帯域を狭める処理を加え、同じ場面で妹の台詞から澪の語りに移る箇所でも声を切り替えています。[Irodori-TTS-v4-Large](https://huggingface.co/Aratako/Irodori-TTS-v4-Large)
+- **ボイス**。Irodori-TTS-v4-Largeで澪と妹の声を生成しました。澪は20代前半の声で、妹の呼び方を思い出す「今もそうした」の前にひと呼吸置き、夕飯を尋ねる場面では普段の姉妹の調子に戻ります。電話越しの妹の声は帯域を狭めています。[Irodori-TTS-v4-Large](https://huggingface.co/Aratako/Irodori-TTS-v4-Large)
 
 </details>
 
