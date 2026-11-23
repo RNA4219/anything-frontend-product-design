@@ -78,6 +78,10 @@
     "transfer": "複数セクションを独立に開閉する画面",
     "limits": "手順上必須の判断や全項目の比較を繰り返す内容は常時表示も試す。"
   },
+  "product_observations": {
+    "dataset": "research/product-journeys/observations.json",
+    "examples": ["returns-apple-returns-mobile"]
+  },
   "status": "DRAFT",
   "version": "0.1.0"
 }

@@ -1,0 +1,21 @@
+{
+  "source_id": "D-REF-274",
+  "title": "Always Provide a Submit Button Adjacent to the Search Field on Mobile (21% Don’t)",
+  "authors": [
+    "Sally Collins"
+  ],
+  "year": 2021,
+  "publisher": "Baymard Institute",
+  "url": "https://baymard.com/research-articles/mobile-search-submit-button",
+  "canonical_url": "https://baymard.com/research-articles/mobile-search-submit-button",
+  "source_type": "primary_product_research",
+  "evidence_kind": "調査実施者による公開記録",
+  "section": "On Sites that Hide the Search Field, Users Mistake the Purpose of the Icon",
+  "design_application": "モバイル検索で、入力・送信の操作を分けて観察する。Sephoraの一参加者は虫眼鏡を繰り返し押し、約40秒後にキーボード上の送信操作を見つけた。",
+  "limits": "特定の旧画面での一例。現在のSephoraや利用者全体の平均時間を表さない。",
+  "read_status": "該当箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "D-IU-214"
+  ]
+}

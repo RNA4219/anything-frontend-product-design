@@ -1,0 +1,21 @@
+{
+  "source_id": "D-REF-276",
+  "title": "No more accordions: how to choose a form structure",
+  "authors": [
+    "Caroline Jarrett"
+  ],
+  "year": 2015,
+  "publisher": "Government Digital Service",
+  "url": "https://userresearch.blog.gov.uk/2015/08/13/no-more-accordions-how-to-choose-a-form-structure/",
+  "canonical_url": "https://userresearch.blog.gov.uk/2015/08/13/no-more-accordions-how-to-choose-a-form-structure/",
+  "source_type": "primary_product_research",
+  "evidence_kind": "調査実施者による公開記録",
+  "section": "“At least as a starting point” is important",
+  "design_application": "GOV.UK Verifyは利用者名とパスワードを別ページで試し、用語に不慣れな人へ両方を説明するため同じページに戻した。ページ数と説明の理解を分けて検証する。",
+  "limits": "特定の行政サービスのフォームで得た発見。商品ヘルプの折りたたみ表示の効果を直接測った調査ではない。",
+  "read_status": "該当箇所を確認",
+  "retrieved_date": "2026-11-23",
+  "used_by": [
+    "D-IU-214"
+  ]
+}
