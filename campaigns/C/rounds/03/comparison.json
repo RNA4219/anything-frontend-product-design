@@ -1,0 +1,537 @@
+{
+  "scope": "Synthetic input-model comparison; no generation or browser experiment",
+  "controls": [
+    "not page_overflow",
+    "every bbox width and height >=24"
+  ],
+  "case_count": 10,
+  "control_mismatches": 6,
+  "candidate_mismatches": 0,
+  "records": [
+    {
+      "case": "plain-reflow",
+      "input": {
+        "schema": "C-layout-model/1",
+        "kind": "reflow",
+        "context": {
+          "id": "synthetic-state-1",
+          "coordinate_space": "viewport-css-px",
+          "css_width": 320,
+          "css_height": 640,
+          "scroll_direction": "vertical"
+        },
+        "evidence": {
+          "kind": "synthetic_geometry",
+          "ref": "authored test data; not measured"
+        },
+        "inventory_complete": true,
+        "page_overflow": false,
+        "required_ids": [
+          "instructions",
+          "confirm"
+        ],
+        "regions": [
+          {
+            "id": "main",
+            "reflows": true,
+            "exception": null
+          }
+        ],
+        "items": [
+          {
+            "id": "instructions",
+            "region_id": "main",
+            "availability": "present",
+            "evidence_ref": "synthetic retained-item record"
+          },
+          {
+            "id": "confirm",
+            "region_id": "main",
+            "availability": "present",
+            "evidence_ref": "synthetic retained-item record"
+          }
+        ]
+      },
+      "expected_model_status": "MODEL_PASS",
+      "authored_shallow_control": "MODEL_PASS",
+      "candidate": "MODEL_PASS",
+      "control_matches": true,
+      "candidate_matches": true
+    },
+    {
+      "case": "hidden-required-action-with-no-overflow",
+      "input": {
+        "schema": "C-layout-model/1",
+        "kind": "reflow",
+        "context": {
+          "id": "synthetic-state-1",
+          "coordinate_space": "viewport-css-px",
+          "css_width": 320,
+          "css_height": 640,
+          "scroll_direction": "vertical"
+        },
+        "evidence": {
+          "kind": "synthetic_geometry",
+          "ref": "authored test data; not measured"
+        },
+        "inventory_complete": true,
+        "page_overflow": false,
+        "required_ids": [
+          "instructions",
+          "confirm"
+        ],
+        "regions": [
+          {
+            "id": "main",
+            "reflows": true,
+            "exception": null
+          }
+        ],
+        "items": [
+          {
+            "id": "instructions",
+            "region_id": "main",
+            "availability": "present",
+            "evidence_ref": "synthetic retained-item record"
+          },
+          {
+            "id": "confirm",
+            "region_id": "main",
+            "availability": "missing",
+            "evidence_ref": "synthetic retained-item record"
+          }
+        ]
+      },
+      "expected_model_status": "MODEL_FAIL",
+      "authored_shallow_control": "MODEL_PASS",
+      "candidate": "MODEL_FAIL",
+      "control_matches": false,
+      "candidate_matches": true
+    },
+    {
+      "case": "excepted-content-causes-page-overflow",
+      "input": {
+        "schema": "C-layout-model/1",
+        "kind": "reflow",
+        "context": {
+          "id": "synthetic-state-1",
+          "coordinate_space": "viewport-css-px",
+          "css_width": 320,
+          "css_height": 640,
+          "scroll_direction": "vertical"
+        },
+        "evidence": {
+          "kind": "synthetic_geometry",
+          "ref": "authored test data; not measured"
+        },
+        "inventory_complete": true,
+        "page_overflow": true,
+        "required_ids": [
+          "instructions",
+          "confirm"
+        ],
+        "regions": [
+          {
+            "id": "main",
+            "reflows": true,
+            "exception": null
+          },
+          {
+            "id": "video",
+            "reflows": false,
+            "exception": {
+              "kind": "two_dimensional",
+              "reason": "Spatial frame",
+              "evidence_ref": "claim pending review"
+            }
+          }
+        ],
+        "items": [
+          {
+            "id": "instructions",
+            "region_id": "main",
+            "availability": "present",
+            "evidence_ref": "synthetic retained-item record"
+          },
+          {
+            "id": "confirm",
+            "region_id": "main",
+            "availability": "present",
+            "evidence_ref": "synthetic retained-item record"
+          }
+        ]
+      },
+      "expected_model_status": "MODEL_HOLD",
+      "authored_shallow_control": "MODEL_FAIL",
+      "candidate": "MODEL_HOLD",
+      "control_matches": false,
+      "candidate_matches": true
+    },
+    {
+      "case": "nonexcepted-prose-reflow-failure-no-scrollbar",
+      "input": {
+        "schema": "C-layout-model/1",
+        "kind": "reflow",
+        "context": {
+          "id": "synthetic-state-1",
+          "coordinate_space": "viewport-css-px",
+          "css_width": 320,
+          "css_height": 640,
+          "scroll_direction": "vertical"
+        },
+        "evidence": {
+          "kind": "synthetic_geometry",
+          "ref": "authored test data; not measured"
+        },
+        "inventory_complete": true,
+        "page_overflow": false,
+        "required_ids": [
+          "instructions",
+          "confirm"
+        ],
+        "regions": [
+          {
+            "id": "main",
+            "reflows": false,
+            "exception": null
+          }
+        ],
+        "items": [
+          {
+            "id": "instructions",
+            "region_id": "main",
+            "availability": "present",
+            "evidence_ref": "synthetic retained-item record"
+          },
+          {
+            "id": "confirm",
+            "region_id": "main",
+            "availability": "present",
+            "evidence_ref": "synthetic retained-item record"
+          }
+        ]
+      },
+      "expected_model_status": "MODEL_FAIL",
+      "authored_shallow_control": "MODEL_PASS",
+      "candidate": "MODEL_FAIL",
+      "control_matches": false,
+      "candidate_matches": true
+    },
+    {
+      "case": "size-boundary",
+      "input": {
+        "schema": "C-layout-model/1",
+        "kind": "targets",
+        "context": {
+          "id": "synthetic-state-1",
+          "coordinate_space": "viewport-css-px",
+          "css_width": 320,
+          "css_height": 640,
+          "scroll_direction": "vertical"
+        },
+        "evidence": {
+          "kind": "synthetic_geometry",
+          "ref": "authored test data; not measured"
+        },
+        "targets_complete": true,
+        "targets": [
+          {
+            "id": "a",
+            "action_id": "a",
+            "geometry": {
+              "kind": "effective_rect",
+              "rect": [
+                0,
+                0,
+                24,
+                24
+              ],
+              "limitations": [],
+              "uncertainty": 0
+            },
+            "exception": null
+          }
+        ]
+      },
+      "expected_model_status": "MODEL_PASS",
+      "authored_shallow_control": "MODEL_PASS",
+      "candidate": "MODEL_PASS",
+      "control_matches": true,
+      "candidate_matches": true
+    },
+    {
+      "case": "undersized-spacing-tangent",
+      "input": {
+        "schema": "C-layout-model/1",
+        "kind": "targets",
+        "context": {
+          "id": "synthetic-state-1",
+          "coordinate_space": "viewport-css-px",
+          "css_width": 320,
+          "css_height": 640,
+          "scroll_direction": "vertical"
+        },
+        "evidence": {
+          "kind": "synthetic_geometry",
+          "ref": "authored test data; not measured"
+        },
+        "targets_complete": true,
+        "targets": [
+          {
+            "id": "a",
+            "action_id": "a",
+            "geometry": {
+              "kind": "effective_rect",
+              "rect": [
+                0,
+                0,
+                20,
+                20
+              ],
+              "limitations": [],
+              "uncertainty": 0
+            },
+            "exception": null
+          },
+          {
+            "id": "b",
+            "action_id": "b",
+            "geometry": {
+              "kind": "effective_rect",
+              "rect": [
+                24,
+                0,
+                20,
+                20
+              ],
+              "limitations": [],
+              "uncertainty": 0
+            },
+            "exception": null
+          }
+        ]
+      },
+      "expected_model_status": "MODEL_PASS",
+      "authored_shallow_control": "MODEL_FAIL",
+      "candidate": "MODEL_PASS",
+      "control_matches": false,
+      "candidate_matches": true
+    },
+    {
+      "case": "undersized-neighbor-intrusion",
+      "input": {
+        "schema": "C-layout-model/1",
+        "kind": "targets",
+        "context": {
+          "id": "synthetic-state-1",
+          "coordinate_space": "viewport-css-px",
+          "css_width": 320,
+          "css_height": 640,
+          "scroll_direction": "vertical"
+        },
+        "evidence": {
+          "kind": "synthetic_geometry",
+          "ref": "authored test data; not measured"
+        },
+        "targets_complete": true,
+        "targets": [
+          {
+            "id": "a",
+            "action_id": "a",
+            "geometry": {
+              "kind": "effective_rect",
+              "rect": [
+                0,
+                0,
+                20,
+                20
+              ],
+              "limitations": [],
+              "uncertainty": 0
+            },
+            "exception": null
+          },
+          {
+            "id": "b",
+            "action_id": "b",
+            "geometry": {
+              "kind": "effective_rect",
+              "rect": [
+                23.999,
+                0,
+                20,
+                20
+              ],
+              "limitations": [],
+              "uncertainty": 0
+            },
+            "exception": null
+          }
+        ]
+      },
+      "expected_model_status": "MODEL_FAIL",
+      "authored_shallow_control": "MODEL_FAIL",
+      "candidate": "MODEL_FAIL",
+      "control_matches": true,
+      "candidate_matches": true
+    },
+    {
+      "case": "wide-short-neighbor",
+      "input": {
+        "schema": "C-layout-model/1",
+        "kind": "targets",
+        "context": {
+          "id": "synthetic-state-1",
+          "coordinate_space": "viewport-css-px",
+          "css_width": 320,
+          "css_height": 640,
+          "scroll_direction": "vertical"
+        },
+        "evidence": {
+          "kind": "synthetic_geometry",
+          "ref": "authored test data; not measured"
+        },
+        "targets_complete": true,
+        "targets": [
+          {
+            "id": "a",
+            "action_id": "a",
+            "geometry": {
+              "kind": "effective_rect",
+              "rect": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "limitations": [],
+              "uncertainty": 0
+            },
+            "exception": null
+          },
+          {
+            "id": "b",
+            "action_id": "b",
+            "geometry": {
+              "kind": "effective_rect",
+              "rect": [
+                0,
+                17,
+                100,
+                16
+              ],
+              "limitations": [],
+              "uncertainty": 0
+            },
+            "exception": null
+          }
+        ]
+      },
+      "expected_model_status": "MODEL_FAIL",
+      "authored_shallow_control": "MODEL_FAIL",
+      "candidate": "MODEL_FAIL",
+      "control_matches": true,
+      "candidate_matches": true
+    },
+    {
+      "case": "overlapping-targets",
+      "input": {
+        "schema": "C-layout-model/1",
+        "kind": "targets",
+        "context": {
+          "id": "synthetic-state-1",
+          "coordinate_space": "viewport-css-px",
+          "css_width": 320,
+          "css_height": 640,
+          "scroll_direction": "vertical"
+        },
+        "evidence": {
+          "kind": "synthetic_geometry",
+          "ref": "authored test data; not measured"
+        },
+        "targets_complete": true,
+        "targets": [
+          {
+            "id": "a",
+            "action_id": "a",
+            "geometry": {
+              "kind": "effective_rect",
+              "rect": [
+                0,
+                0,
+                48,
+                48
+              ],
+              "limitations": [],
+              "uncertainty": 0
+            },
+            "exception": null
+          },
+          {
+            "id": "b",
+            "action_id": "b",
+            "geometry": {
+              "kind": "effective_rect",
+              "rect": [
+                10,
+                10,
+                48,
+                48
+              ],
+              "limitations": [],
+              "uncertainty": 0
+            },
+            "exception": null
+          }
+        ]
+      },
+      "expected_model_status": "MODEL_HOLD",
+      "authored_shallow_control": "MODEL_PASS",
+      "candidate": "MODEL_HOLD",
+      "control_matches": false,
+      "candidate_matches": true
+    },
+    {
+      "case": "circle-bbox-is-not-filled-rectangle",
+      "input": {
+        "schema": "C-layout-model/1",
+        "kind": "targets",
+        "context": {
+          "id": "synthetic-state-1",
+          "coordinate_space": "viewport-css-px",
+          "css_width": 320,
+          "css_height": 640,
+          "scroll_direction": "vertical"
+        },
+        "evidence": {
+          "kind": "synthetic_geometry",
+          "ref": "authored test data; not measured"
+        },
+        "targets_complete": true,
+        "targets": [
+          {
+            "id": "a",
+            "action_id": "a",
+            "geometry": {
+              "kind": "circle_bbox",
+              "rect": [
+                0,
+                0,
+                24,
+                24
+              ],
+              "limitations": [],
+              "uncertainty": 0
+            },
+            "exception": null
+          }
+        ]
+      },
+      "expected_model_status": "MODEL_HOLD",
+      "authored_shallow_control": "MODEL_PASS",
+      "candidate": "MODEL_HOLD",
+      "control_matches": false,
+      "candidate_matches": true
+    }
+  ]
+}

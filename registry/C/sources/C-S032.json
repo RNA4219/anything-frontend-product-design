@@ -1,0 +1,15 @@
+{
+  "source_id": "C-S032",
+  "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow",
+  "title": "Understanding SC 1.4.10: Reflow",
+  "retrieved_date": "2026-11-23",
+  "records": [
+    {
+      "file": "research/ui-engineering-design-system/round-03/researcher-1.json",
+      "source_id": "C03-R1-S02"
+    }
+  ],
+  "original_download": "unavailable",
+  "reader_capture": "partial",
+  "public_fulltext": false
+}

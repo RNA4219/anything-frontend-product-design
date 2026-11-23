@@ -1,0 +1,316 @@
+{
+  "skill_id": "C-UI-009",
+  "domain": "ui-engineering-design-system",
+  "trigger": "pointer targetの小ささ・隣接間隔を確認するとき。実効領域を測る前のschema設計、および限定矩形モデルの計算検査にも使う。",
+  "intent": "実際の対象領域に限定してサイズと間隔を計算する",
+  "required_inputs": [
+    "全対象の一意ID・実動作・同一ページ/状態・CSS px座標系",
+    "実効軸平行充填矩形のx/y/width/heightとその根拠、隣接対象一覧の完全性",
+    "形状、clip、transform、重なり、改行断片、iframe等の対応状態",
+    "サイズ/spacing/equivalent/inline/UA/essentialの判断根拠",
+    "証拠種別、実入力、環境/版、測定不確かさ"
+  ],
+  "decision_rules": [
+    "【規範＋公式解説】SC 2.5.8のサイズ条件は24×24 CSS px以上であり、公式解説に従い軸平行の24×24正方形が実際のpointer-action領域内に完全に収まることを確認する。外接矩形やmin-width/min-heightの宣言だけを対象内部の証明にしない。24直径の円のbbox=24×24はサイズ条件の証明にならない。",
+    "【製品policy】限定検査器は、実効対象領域と一致すると確認された軸平行の充填矩形だけを扱う。全対象のID・動作・同一状態/CSS px座標系・x/y/width/height・証拠種別・形状適用条件・周辺対象一覧の完全性を受け取る。有限な数値、正の寸法、一意ID、同一座標系を検査する。非矩形、clip、変形、遮蔽、改行断片、iframe等が未解決ならHOLD/unsupportedとし、不適合そのものとは断定しない。",
+    "【事実＋製品policy】getBoundingClientRectはborder boxを囲む矩形であり、実効hit areaを証明しない。elementFromPointの複数点samplingも領域全体と実activationの証明にはならない。子要素・関連control・event処理による実動作を確認する。別動作の重なりを除く必要や同一動作の扱いが未解決なら元の矩形を使ってPASSにしない。",
+    "【規範＋製品policy】対応する矩形に限りwidth >= 24かつheight >= 24でサイズ条件を満たすと計算する。いずれかが24未満なら不足対象としてspacingまたは他の根拠付き例外を確認する。23.999を24へ丸めず、独自のepsilonをWCAGの許容差として追加しない。観測誤差により閾値のどちらか決められない場合はHOLDにする。",
+    "【公式解説＋推論】不足対象iの最小外接矩形中心(cx_i,cy_i)へ半径12の円を置く。不足対象どうしでは中心距離二乗 < 576を重なりとする。さらに各不足対象iと他の全ての実対象jについて、dx=max(x_j-cx_i,0,cx_i-(x_j+w_j))、dy=max(y_j-cy_i,0,cy_i-(y_j+h_j))とし、dx²+dy² < 144を重なりとする。相手jが大きい場合も不足対象の場合もこの比較を省かない。中心距離だけでは幅広で高さの小さい対象への侵入を見落とす。",
+    "【推論＋製品policy】上記strict <と等号の接触許容はUnderstandingの図5/図10の適合例から導いた限定幾何モデルであり、規範本文が不等式を定義したと書かない。対応する入力についてのみ、サイズ関係・円どうし・円と実対象の結果を別に返す。サイズを満たす対象自体にはspacingを追加要求しないが、その対象に隣接する不足対象の円との比較から除外しない。",
+    "【規範＋製品policy】spacing以外の例外は条件と根拠を残す。同等controlは同一ページで同じ機能を持ち当該基準を満たす対象を特定する。inlineは文中であるか非対象文字のline-heightでサイズが制約される状況を示す。UA controlはUAがサイズを決め作者が変更していない根拠を示す。essentialは情報/機能に不可欠な提示または法的要求を具体化する。nativeタグ、display:inline、密度の好み、別ページ、循環する同等例外申告だけで承認しない。根拠不足はHOLD、明確な条件不一致は例外不成立として返し、無言skipしない。",
+    "【製品policy】例外対象を含む他の実対象はspacingの障害物一覧から消さない。隣接対象の形状/座標が未確認ならそのspacing判断はHOLDにする。操作で開いたmenu/dialog等は当該状態の新しい対象を評価する。一時的に覆われた背後の対象の扱いを、一般的な情報やfocus遮蔽の許可へ拡張しない。",
+    "【製品policy】synthetic矩形は計算モデルの試験入力として扱い、数値関係の狭いPASSだけを許す。持込測定、実ブラウザのlayout/activation、AT観測を混同しない。CSS変数2.75remの存在を測定済み44 CSS pxとしない。能力queryから実入力やSC例外を導かない。実targetの一致が未確認なら実UI結果はHOLDとし、幾何PASSからWCAG・keyboard・focus・操作完了の合格へ昇格しない。",
+    "【条件論理・反証修正】UA例外はua_determined=false、またはauthor_resized=trueのいずれかが明示されれば申告条件不成立とする。他方の条件が未提出でも既知のspacing FAILをHOLDへ弱めない。"
+  ],
+  "procedure": [
+    "【規範＋公式解説】SC 2.5.8のサイズ条件は24×24 CSS px以上であり、公式解説に従い軸平行の24×24正方形が実際のpointer-action領域内に完全に収まることを確認する。外接矩形やmin-width/min-heightの宣言だけを対象内部の証明にしない。24直径の円のbbox=24×24はサイズ条件の証明にならない。",
+    "【製品policy】限定検査器は、実効対象領域と一致すると確認された軸平行の充填矩形だけを扱う。全対象のID・動作・同一状態/CSS px座標系・x/y/width/height・証拠種別・形状適用条件・周辺対象一覧の完全性を受け取る。有限な数値、正の寸法、一意ID、同一座標系を検査する。非矩形、clip、変形、遮蔽、改行断片、iframe等が未解決ならHOLD/unsupportedとし、不適合そのものとは断定しない。",
+    "【事実＋製品policy】getBoundingClientRectはborder boxを囲む矩形であり、実効hit areaを証明しない。elementFromPointの複数点samplingも領域全体と実activationの証明にはならない。子要素・関連control・event処理による実動作を確認する。別動作の重なりを除く必要や同一動作の扱いが未解決なら元の矩形を使ってPASSにしない。",
+    "【規範＋製品policy】対応する矩形に限りwidth >= 24かつheight >= 24でサイズ条件を満たすと計算する。いずれかが24未満なら不足対象としてspacingまたは他の根拠付き例外を確認する。23.999を24へ丸めず、独自のepsilonをWCAGの許容差として追加しない。観測誤差により閾値のどちらか決められない場合はHOLDにする。",
+    "【公式解説＋推論】不足対象iの最小外接矩形中心(cx_i,cy_i)へ半径12の円を置く。不足対象どうしでは中心距離二乗 < 576を重なりとする。さらに各不足対象iと他の全ての実対象jについて、dx=max(x_j-cx_i,0,cx_i-(x_j+w_j))、dy=max(y_j-cy_i,0,cy_i-(y_j+h_j))とし、dx²+dy² < 144を重なりとする。相手jが大きい場合も不足対象の場合もこの比較を省かない。中心距離だけでは幅広で高さの小さい対象への侵入を見落とす。",
+    "【推論＋製品policy】上記strict <と等号の接触許容はUnderstandingの図5/図10の適合例から導いた限定幾何モデルであり、規範本文が不等式を定義したと書かない。対応する入力についてのみ、サイズ関係・円どうし・円と実対象の結果を別に返す。サイズを満たす対象自体にはspacingを追加要求しないが、その対象に隣接する不足対象の円との比較から除外しない。",
+    "【規範＋製品policy】spacing以外の例外は条件と根拠を残す。同等controlは同一ページで同じ機能を持ち当該基準を満たす対象を特定する。inlineは文中であるか非対象文字のline-heightでサイズが制約される状況を示す。UA controlはUAがサイズを決め作者が変更していない根拠を示す。essentialは情報/機能に不可欠な提示または法的要求を具体化する。nativeタグ、display:inline、密度の好み、別ページ、循環する同等例外申告だけで承認しない。根拠不足はHOLD、明確な条件不一致は例外不成立として返し、無言skipしない。",
+    "【製品policy】例外対象を含む他の実対象はspacingの障害物一覧から消さない。隣接対象の形状/座標が未確認ならそのspacing判断はHOLDにする。操作で開いたmenu/dialog等は当該状態の新しい対象を評価する。一時的に覆われた背後の対象の扱いを、一般的な情報やfocus遮蔽の許可へ拡張しない。",
+    "【製品policy】synthetic矩形は計算モデルの試験入力として扱い、数値関係の狭いPASSだけを許す。持込測定、実ブラウザのlayout/activation、AT観測を混同しない。CSS変数2.75remの存在を測定済み44 CSS pxとしない。能力queryから実入力やSC例外を導かない。実targetの一致が未確認なら実UI結果はHOLDとし、幾何PASSからWCAG・keyboard・focus・操作完了の合格へ昇格しない。",
+    "【条件論理・反証修正】UA例外はua_determined=false、またはauthor_resized=trueのいずれかが明示されれば申告条件不成立とする。他方の条件が未提出でも既知のspacing FAILをHOLDへ弱めない。"
+  ],
+  "expected_outputs": [
+    "対象ごとのサイズ関係とspacing衝突対、適用した例外と根拠",
+    "入力不備、未対応、未観測、不確かさを区別した診断",
+    "計算モデルの結果と実hit area・実操作のHOLDを分離した報告"
+  ],
+  "dependencies": [
+    "C-UI-008の観測由来・実入力・状態契約",
+    "Art Direction E-07と既存入力/操作ガイダンス",
+    "既存C-UI-001〜004の意味・event・keyboard・focus契約",
+    "実target検証に必要な描画/activation観測、Dの評価"
+  ],
+  "exceptions": [
+    "spacingは宣言marginではなく円と実領域の幾何条件により確認する。",
+    "同等control、inline、UA決定、essentialの例外は各条件にのみ掛かり、他の基準を免除しない。",
+    "同じ動作・同じページを開く重なりには公式解説の例外があるが、意味の一致をbboxから推定しない。",
+    "interaction/scripted contentに一時的に覆われた背後の対象をその状態で評価しない説明は、新しく出た対象の免除を意味しない。",
+    "非矩形は規範上の自動FAILではなく、この矩形検査器の未対応として扱う。"
+  ],
+  "failure_modes": [
+    "bboxだけで実targetサイズをPASS",
+    "clipや別動作overlayを無視",
+    "不足対象の中心距離だけを検査",
+    "全ての対象へspacingを追加必須化",
+    "例外や未対応対象を無言で削除",
+    "23.999を丸める、未知のepsilonを追加",
+    "syntheticをbrowser実績・WCAG適合へ昇格"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "target-size-boundary",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "24×24と23.999×24の充填矩形を与える。",
+        "falsifier": "後者をsize PASSに丸める、または前者へspacingを追加要求する。"
+      },
+      {
+        "case": "undersized-target-spacing",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "20×20の対象をx=0とx=24、次に23.999へ置く。円対円と円対実対象を両方記録する。",
+        "falsifier": "接触例と侵入例を同じ非衝突として返す、またはstrict <を規範明文と表示する。"
+      },
+      {
+        "case": "circle-to-large-target",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "16×16を(0,0)、40×40を(20,0)、次に(19.999,0)へ置く。",
+        "falsifier": "半径12の接触/侵入境界を区別しない。"
+      },
+      {
+        "case": "wide-short-neighbor",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "16×16を(0,0)、100×16を(0,17)へ置く。中心間は遠いが小対象の円は相手の実領域へ侵入する。",
+        "falsifier": "circle-circleだけでspacing PASSにする。"
+      },
+      {
+        "case": "exception-with-and-without-evidence",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "同等/inline/UA/essentialごとに条件を満たす根拠付き案とBooleanのみ・条件不一致・循環参照案を対にする。",
+        "falsifier": "不足根拠をHOLDにせず免除、正当な例外までサイズ不合格として一律棄却。"
+      },
+      {
+        "case": "nonrectangular-or-clipped-target-limit",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "直径24円のbbox、clipされた48×48、別動作layerのある矩形を与える。",
+        "falsifier": "bboxだけでPASS、または非矩形を規範上の自動FAILにする。"
+      },
+      {
+        "case": "malformed-or-incomplete-targets",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "非有限/非正寸法、重複ID、座標系混在、欠落隣接対象、計算overflow、不明例外を与える。",
+        "falsifier": "無言skipやgeneric PASSを返す。"
+      },
+      {
+        "case": "missing-or-synthetic-measurement",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "同じ正常矩形をsynthetic、未検証持込測定、実観測の異なる種別で渡す。",
+        "falsifier": "幾何結果からbrowser/AT/WCAG結果を埋める。"
+      }
+    ],
+    "status": "MODEL_PASS_UI_HOLD",
+    "evidence": [
+      "campaigns/C/rounds/03/decision.json",
+      "campaigns/C/rounds/03/initial-results.json",
+      "campaigns/C/rounds/03/recheck-results.json",
+      "campaigns/C/rounds/03/recheck.json",
+      "campaigns/C/rounds/03/revision-execution.json",
+      "campaigns/C/rounds/03/revision-comparison.json"
+    ],
+    "model_scope": "供給されたC-layout-model/1入力の形式検査、明示的な保持/例外申告、条件付きの充填軸平行矩形の正確な幾何precheckに限定する。",
+    "browser": "BLOCKED",
+    "assistive_technology": "NOT_RUN",
+    "wcag_conformance": "NOT_ASSESSED",
+    "planned_case_note": "Original planned procedures are retained. Synthetic/model execution does not complete live UI observations in those procedures."
+  },
+  "source_refs": [
+    {
+      "id": "WCAG22",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "record": "research/ui-engineering-design-system/round-03/researcher-1.json#/sources/0",
+      "evidence_kind": "normative Recommendation; source identity reused from round-01",
+      "version": "研究取得日2026-11-23; 完全原文未取得",
+      "sections": [
+        "1.4.10 Reflow",
+        "2.5.8 Target Size (Minimum)",
+        "1.4.4 Resize Text",
+        "1.3.2 Meaningful Sequence",
+        "2.4.11 Focus Not Obscured (Minimum)"
+      ],
+      "web_lines": {
+        "reflow": [
+          612,
+          630
+        ],
+        "target": [
+          1152,
+          1168
+        ],
+        "resize": [
+          506,
+          513
+        ],
+        "sequence": [
+          405,
+          412
+        ],
+        "focus": [
+          987,
+          996
+        ]
+      },
+      "registry_source_id": "C-S007"
+    },
+    {
+      "id": "C03-R1-S03",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum",
+      "record": "research/ui-engineering-design-system/round-03/researcher-1.json#/sources/2",
+      "evidence_kind": "informative explanation/examples; normative SC restated separately",
+      "version": "研究取得日2026-11-23; 完全原文未取得",
+      "sections": [
+        "Exceptions",
+        "Size requirement",
+        "Spacing, Figures 5 and 10",
+        "Key Terms: target, minimum bounding box, essential"
+      ],
+      "web_lines": [
+        [
+          61,
+          103
+        ],
+        [
+          105,
+          129
+        ],
+        [
+          203,
+          235
+        ]
+      ],
+      "registry_source_id": "C-S033"
+    },
+    {
+      "id": "R2-S5",
+      "url": "https://github.com/mozilla-firefox/firefox/blob/main/widget/windows/docs/windows-pointing-device/index.md",
+      "record": "research/ui-engineering-design-system/round-03/researcher-2.json#/sources/4",
+      "evidence_kind": "official",
+      "version": "live main branch retrieved 2026-11-23; commit/date/browser version unpinned; historical reports not current reproductions",
+      "sections": "Selection of Primary Pointing Device; Pointer Media Queries",
+      "web_lines": [
+        495,
+        508,
+        511,
+        523,
+        540,
+        567,
+        569
+      ],
+      "registry_source_id": "C-S039"
+    },
+    {
+      "id": "R2-S6",
+      "url": "https://www.w3.org/TR/mediaqueries-4/",
+      "record": "research/ui-engineering-design-system/round-03/researcher-2.json#/sources/5",
+      "evidence_kind": "official",
+      "version": "W3C Candidate Recommendation Draft 2026-02-19; work in progress",
+      "sections": "7.2–7.3 Interaction Media Features",
+      "web_lines": [
+        894,
+        895,
+        914,
+        916,
+        918,
+        920,
+        925,
+        926
+      ],
+      "registry_source_id": "C-S040"
+    },
+    {
+      "id": "R2-S7",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect",
+      "record": "research/ui-engineering-design-system/round-03/researcher-2.json#/sources/6",
+      "evidence_kind": "official",
+      "version": "live MDN retrieved 2026-11-23; revision not pinned",
+      "sections": "Return value and scrolling",
+      "web_lines": [
+        207,
+        208,
+        211
+      ],
+      "registry_source_id": "C-S041"
+    },
+    {
+      "id": "R2-S8",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/elementFromPoint",
+      "record": "research/ui-engineering-design-system/round-03/researcher-2.json#/sources/7",
+      "evidence_kind": "official",
+      "version": "live MDN; last modified 2025-06-03",
+      "sections": "Description / Return value",
+      "web_lines": [
+        183,
+        184,
+        186,
+        189
+      ],
+      "registry_source_id": "C-S042"
+    },
+    {
+      "id": "R2-S9",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/clipPath",
+      "record": "research/ui-engineering-design-system/round-03/researcher-2.json#/sources/8",
+      "evidence_kind": "official",
+      "version": "live MDN; last modified 2025-11-07",
+      "sections": "Example: geometry and pointer events",
+      "web_lines": [
+        255,
+        256
+      ],
+      "registry_source_id": "C-S043"
+    }
+  ],
+  "confidence": {
+    "source": "Primary normative and informative sources; repository supplement where available",
+    "runtime": "unverified",
+    "transfer": "unverified",
+    "model": "Selected pure-model tests passed after independent same-model recheck; not a proof for all inputs"
+  },
+  "status": "HOLD",
+  "version": "0.1.1",
+  "analysis_unit": "C002-U2",
+  "round": 3,
+  "fact_rule_boundary": "Normative/informative/inference/local policy labels retained; observation model is not rendered conformance",
+  "history": [
+    {
+      "event": "REGISTER",
+      "at": "2026-11-23T10:04:57.957188+00:00",
+      "status": "DRAFT"
+    },
+    {
+      "event": "CRITIC",
+      "at": "2026-11-23T10:32:34.821976+00:00",
+      "candidate_model_status": "REVISE",
+      "evidence": "campaigns/C/rounds/03/critic.json"
+    },
+    {
+      "event": "DECIDE",
+      "at": "2026-11-23T10:32:34.821976+00:00",
+      "status": "HOLD",
+      "model_precheck": "ACCEPT",
+      "reason": "Both instruction units require real rendering, hit geometry, input and order observations that were not executed. Selected pure-model checks passed after revisions.",
+      "evidence": "campaigns/C/rounds/03/decision.json"
+    }
+  ]
+}

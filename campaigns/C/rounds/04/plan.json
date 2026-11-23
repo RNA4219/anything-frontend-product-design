@@ -1,0 +1,32 @@
+{
+  "round": 4,
+  "state": "REGISTERED_NOT_STARTED",
+  "issues": ["C-004"],
+  "question": "How should asynchronous state updates preserve component identity, user input and focus, and expose status without duplicated or missing announcements?",
+  "selection_reason": "A repeated implementation gap remains after component, token and layout contracts; business recovery policy remains B-owned.",
+  "evaluation_frozen_before_research": true,
+  "known_inputs": [
+    "Reuse the 44-source canonical registry before searching again",
+    "Reuse existing component/focus units and inherited booking fixture with their actual evidence limits",
+    "Require the service/B contract for cancellation, retry, conflict and response acceptance; do not invent it"
+  ],
+  "required_cases": [
+    "Pending/result updates preserve the intended control, typed value and focus",
+    "State render preserves accessible name and description relationships",
+    "Status and error notifications follow the task urgency and do not duplicate focus announcements",
+    "A stale result is mapped according to the supplied business contract, with unresolved policy held",
+    "Success, failure, cancel and result-unknown remain distinct supplied states",
+    "Re-render or reopen does not reuse stale derived state",
+    "Missing runtime or AT evidence is not inferred from markup or a DOM double"
+  ],
+  "delegation": {
+    "first": "Start two actual independent researchers in parallel, no child spawning",
+    "second": "After retrieval, run a separate sankai analyst",
+    "third": "Parent implements the bounded candidate, then start an independent critic",
+    "max_active_children": 2
+  },
+  "evidence_limit": "Browser and AT remain unexecuted in the current environment. Do not retry a blocked browser operation through an alternative surface. Pure logic tests may only support their stated scope.",
+  "handoffs": ["B: recovery and response-acceptance business policy", "D: runtime/AT evaluation and repeated generation effectiveness"],
+  "decision_rule": "ACCEPT only an explicit tested scope; unresolved dependencies or actual observation gaps HOLD; preserve failed candidates and initial test results.",
+  "executed": false
+}

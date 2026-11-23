@@ -9,9 +9,9 @@
   "max_rounds": 12,
   "max_concurrent_subagents": 2,
   "max_active_including_parent": 3,
-  "rounds_completed": 2,
-  "state": "RUNNING",
-  "checkpoint": "round-02-decided-round-03-registered",
+  "rounds_completed": 3,
+  "state": "CHECKPOINTED",
+  "checkpoint": "round-03-decided-next-round-04-registered",
   "issues_at_start": 0,
   "prs_at_start": 0,
   "runtime_cost": {
@@ -40,5 +40,27 @@
   "draft_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/1",
   "integrated_main_snapshot": "20f21fb9bb1b4d0921333ca1be683d6b42a60c63",
   "public_base_sha": "4333d097b5699528b5554434b494d8079126ba0f",
-  "public_history_note": "Remote public history was replaced during this session. Only the C delta was rebased onto the current public branch; removed records were not restored."
+  "public_history_note": "Remote public history was replaced during this session. Only the C delta was rebased onto the current public branch; removed records were not restored.",
+  "active_round": null,
+  "active_subagents": [],
+  "subagents_unique": 12,
+  "subagents_completed": 12,
+  "subagents_failed": 0,
+  "subagents_unrecovered": 0,
+  "instruction_units": 9,
+  "unit_states": {
+    "ACCEPT": 3,
+    "HOLD": 6,
+    "REVISE": 0,
+    "REJECT": 0,
+    "DRAFT": 0
+  },
+  "canonical_sources": 44,
+  "duplicate_source_records": 2,
+  "next_round": 4,
+  "next_round_started": false,
+  "saturated": false,
+  "consecutive_rounds_without_meaningful_improvement": 0,
+  "stop_reason": "Bounded execution checkpoint after three complete cycles; maximum of twelve not reached and coverage not complete",
+  "updated_at": "2026-11-23T10:32:34.821976+00:00"
 }

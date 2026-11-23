@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "session": "C",
+  "round": 3,
+  "phase": "initial_independent_critic_immutable",
+  "verdict": {
+    "pure_precheck": "REVISE",
+    "C-UI-008": "HOLD",
+    "C-UI-009": "HOLD",
+    "reason": "初期固定候補に4欠陥群。実ブラウザ/AT/実hit領域が未観測のため、修正後に純検査を限定採用できても両Unit全体のHOLDは妥当。"
+  },
+  "summary": {
+    "executed": 127,
+    "passed": 118,
+    "failed": 9,
+    "independently_authored_cases": 124,
+    "parent_discovery_reproductions": 3
+  },
+  "category_counts": {
+    "geometry": 34,
+    "exceptions": 33,
+    "reflow": 24,
+    "evidence_provenance": 10,
+    "input_cli": 26
+  },
+  "category_failures": {
+    "geometry": 0,
+    "exceptions": 2,
+    "reflow": 2,
+    "evidence_provenance": 0,
+    "input_cli": 5
+  },
+  "execution_counts": {
+    "distinct_initial_cases": 127,
+    "initial_case_invocations": 127,
+    "supplementary_exact_byte_recaptures": 2,
+    "total_initial_cli_invocations": 129,
+    "initial_failed_cases": 9
+  },
+  "independence": {
+    "new_script": "independent-probes.py",
+    "same_model_separate_task": true,
+    "blind_review": false,
+    "candidate_tests_reexecuted": false,
+    "parent_discovery_cases": 3,
+    "independently_authored_cases": 124,
+    "independent_defect_families": 3,
+    "parent_defect_families_reproduced": 1,
+    "limits": "同一基盤モデルの別タスクであり、独立研究者・別モデルによる外部再現ではない。実装と既存testを読んだ上で期待値を別に作成したため、完全な盲検ではない。"
+  },
+  "candidate_snapshot_matches": true,
+  "files_unchanged_during_probes": true,
+  "candidate_snapshot_sha256": "17088c48a54f7c772c94db22c50bf849e0e6260b07ba5b843d0a91e44809403e",
+  "tested_sha256": {
+    "modules/ui-engineering-design-system/checks/layout.py": "da066ac8c6a2543d5dbfa0c49ccceeef9a3082af7aa0d791b86f3988ec888670",
+    "modules/ui-engineering-design-system/tests/test_layout.py": "1e46dc387195630207f9c9cb6f559000aa58501506c7c7d00b48ee2af96a22ff",
+    "modules/ui-engineering-design-system/references/layout-contracts.md": "288d5cb00e50d448148ac13de2e3dc62a5312264c2a3274cb3349c9c12d96c83",
+    "modules/ui-engineering-design-system/checks/layout-observation-protocol.md": "12005ad6a8dee484676ba9b921fdbf5b7633b8b91fdb7b8b153333a88a26deec",
+    "modules/ui-engineering-design-system/examples/reflow-targets.html": "1f841aec1fb4a066d82b2af3d57d0f4fd2d04804b5b5d87795fb1918f8cbe9bb",
+    "campaigns/C/rounds/03/plan.json": "1790a4f36964e7974061986021d3766a2456e8c75cead7085156571ecf6c9f97",
+    "campaigns/C/rounds/03/evaluation-plan.md": "1fd8e6f1631618237ac3e8f9126d40a470800582eedeb0fd597a2ce4aa81b865",
+    "campaigns/C/rounds/03/compare_models.py": "d95e8b0fd6fc34e99667e96113cf61f73a4e281cfdc793144eb7a336f3f32ecb",
+    "modules/ui-engineering-design-system/examples/booking-reflow-model.json": "3ead4e9cc92bf1a40e1ccbfb3ea0ec4a008224aea82fbe5480ca51d210dc1214",
+    "modules/ui-engineering-design-system/examples/toolbar-target-model.json": "c74ca38a4bdd6b359eef9ab93d3143f0ab1d2ac48f14c32a4629a9b4fd58fae8",
+    "registry/C/skills/C-UI-008.json": "02335309a0f5698a59d9a50ea53324100ac335155013e60aa954d6637726f23c",
+    "registry/C/skills/C-UI-009.json": "fd45d98431895baae4903e21a6ad47add208cc16c8d0b9c22021513447e22066"
+  },
+  "test_source_sha256": "49ca022700f7c533ab3acd3958da8930d7b4f821d80639255aa0fed83d20275f",
+  "initial_results_sha256": "949c80eb2a91e690764e0ab361b42f3a7e073bb24b4a69c3b6557066ab09597a",
+  "findings": [
+    {
+      "id": "C03-CR-01",
+      "severity": "major",
+      "origin": "independent_critic",
+      "location": {
+        "path": "modules/ui-engineering-design-system/checks/layout.py",
+        "lines": [
+          299,
+          300,
+          314,
+          319
+        ],
+        "function": "targets / UA exception review"
+      },
+      "symptom": "UA例外の成立不能が一条件だけで確定しても、もう一条件がないと既知spacing FAILをHOLDへ上書きする。",
+      "cases": [
+        "E-ua-partial-contradiction-author_resized",
+        "E-ua-partial-contradiction-ua_determined"
+      ],
+      "input_summary": "a=[-1,-1,2,2]、obstacle=[10,-12,24,24]。aの例外はuaでauthor_resized=trueのみ、またはua_determined=falseのみ。",
+      "expected": "MODEL_FAIL、a.status=FAIL_MODEL_SPACING、exception=CONDITIONS_CONTRADICT_CLAIM。",
+      "actual": "MODEL_HOLD、a.status=HOLD_EXCEPTION_REVIEW、spacing=FAIL、exception=MISSING_CONDITION_OR_EVIDENCE。exit=3。",
+      "evidence_source": [
+        "initial-results.json",
+        "evaluation-plan.md §4",
+        "C-S007 SC2.5.8 User Agent Control",
+        "C-S033 Exceptions / User agent control",
+        "references/layout-contracts.md §3"
+      ],
+      "impact": "サイズ条件を満たす隣接対象だけを用いた反例なので、全体にほかのFAILはなく、確定欠陥が未確定扱いになる。条件を省略するほど評価が弱くなる。",
+      "repair": "ua_determined=false または author_resized=true の明示値を不足条件判定より先に不成立として扱い、既知spacing FAILを保持する。",
+      "reproduction_command": "python3 campaigns/C/rounds/03/independent-probes.py --case E-ua-partial-contradiction-author_resized --stdout"
+    },
+    {
+      "id": "C03-CR-02",
+      "severity": "major",
+      "origin": "independent_critic",
+      "location": {
+        "path": "modules/ui-engineering-design-system/checks/layout.py",
+        "lines": [
+          165,
+          168
+        ],
+        "function": "reflow / required-item verdict"
+      },
+      "symptom": "availability=missing という欠落申告を、evidence_refが空または空白という理由で未観測HOLDへ消し込む。",
+      "cases": [
+        "R-known-loss-empty-ref-0",
+        "R-known-loss-empty-ref-3"
+      ],
+      "input_summary": "report-editorの必須export-reportをavailability=missing、evidence_ref=\"\"または\"   \"とする。page_overflow=false、両regionのreflows=true、inventory_complete=true。",
+      "expected": "MODEL_FAIL、export-report.status=FAIL_REQUIRED_ITEM_LOST。参照不足は別欄で残す。",
+      "actual": "MODEL_HOLD、export-report.status=HOLD_ITEM_UNOBSERVED。exit=3。",
+      "evidence_source": [
+        "initial-results.json",
+        "evaluation-plan.md §1",
+        "plan.json rubric 1,4",
+        "references/layout-contracts.md §4 MODEL_FAIL優先"
+      ],
+      "impact": "明示的な欠落と、単に観測していないunknownが同じになる。参照補記待ちにより、既知の操作欠落への修正判断を遅らせる。",
+      "repair": "itemが存在しavailability=missingなら欠落FAILを優先し、証拠参照の有無は別の未充足情報として保存する。unknownや存在しないitemはHOLDのままにする。",
+      "reproduction_command": "python3 campaigns/C/rounds/03/independent-probes.py --case R-known-loss-empty-ref-0 --stdout"
+    },
+    {
+      "id": "C03-CR-03",
+      "severity": "major",
+      "origin": "parent_discovery_independently_reproduced",
+      "location": {
+        "path": "modules/ui-engineering-design-system/checks/layout.py",
+        "lines": [
+          352,
+          357
+        ],
+        "function": "main / parse_float and error handling"
+      },
+      "symptom": "巨大指数のJSON数値をDecimalが解釈する段階でdecimal.InvalidOperationが未捕捉になり、構造化INPUT_ERRORを返さない。",
+      "cases": [
+        "I-huge-positive-exponent",
+        "I-huge-negative-exponent",
+        "I-zero-huge-exponent"
+      ],
+      "input_summary": "rectのwidthへ1e99999999999999999999999999999999、その負指数版、0の巨大指数版を渡す。",
+      "expected": "INPUT_ERRORのJSON、exit=2、Tracebackなし。",
+      "actual": "stdout空、decimal.InvalidOperationのTraceback、exit=1。",
+      "evidence_source": [
+        "initial-results.json",
+        "parent-extra-probe-initial.json（親発見を別管理）",
+        "evaluation-plan.md §3",
+        "references/layout-contracts.md §4 数値・CLI契約"
+      ],
+      "impact": "INPUT_ERRORとMODEL_FAILの終了値の区別が失われる。機械処理側がJSONを読めず、診断の位置・理由も欠落する。",
+      "repair": "数値字句の変換限界を構造化入力エラーへ変換し、出力契約を維持する。",
+      "reproduction_command": "python3 campaigns/C/rounds/03/independent-probes.py --case I-huge-positive-exponent --stdout"
+    },
+    {
+      "id": "C03-CR-04",
+      "severity": "major",
+      "origin": "independent_critic",
+      "location": {
+        "path": "modules/ui-engineering-design-system/checks/layout.py",
+        "lines": [
+          358,
+          358
+        ],
+        "function": "main / JSON serialization to stdout"
+      },
+      "symptom": "JSONエスケープで入力した孤立surrogateをensure_ascii=Falseでstdoutへ出すと、出力不能または無効UTF-8になる。",
+      "cases": [
+        "I-lone-surrogate-high",
+        "I-lone-surrogate-low"
+      ],
+      "input_summary": "正常24×24対象のcontext.idをJSONの\\ud800または\\udcffにする。",
+      "expected": "非対応文字列としてINPUT_ERROR/exit2、または安全にエスケープされたMODEL_PASS/exit0の有効UTF-8 JSON。UI/WCAGはHOLD/NOT_ASSESSED。",
+      "actual": "high: UnicodeEncodeError、stdout空、exit1。low: exit0だがstdoutに無効UTF-8の0xFF。",
+      "evidence_source": [
+        "initial-results.json",
+        "initial-unicode-byte-evidence.json（元stdout/stderrをhexで保存）",
+        "evaluation-plan.md §3",
+        "references/layout-contracts.md §4 CLI契約"
+      ],
+      "impact": "同じ文字列形式でクラッシュと壊れた成功レスポンスが分かれ、JSON消費者が結果を読めない。",
+      "repair": "非対応Unicodeを明示拒否するか、ensure_ascii等の安全な直列化でUTF-8/JSON出力を保証する。",
+      "reproduction_command": "python3 campaigns/C/rounds/03/independent-probes.py --case I-lone-surrogate-high --case I-lone-surrogate-low --stdout"
+    }
+  ],
+  "source_claim_review": [
+    {
+      "claim": "24×24の実効内接サイズ、bboxだけでは不十分、spacingは円と他対象・他不足対象の円を調べる。",
+      "source_id": "C-S033",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum",
+      "primary_repository_url": "https://github.com/w3c/wcag/blob/2766fae25fc8286f60181d655115cba054b797e1/understanding/22/target-size-minimum.html",
+      "primary_repository_sha256": "ede35144e897503a5970d1e33a6bfe6aa3dd1e7476ee47bc1d10e08fa672cfb0",
+      "verification": "私有の固定W3C repository sourceのSize requirement、Spacing、Exceptions、該当figcaptionを読み、主張と例外を照合した。",
+      "limit": "公式サイト生成HTMLとのbyte一致や同一deploymentは主張しない。原文転載なし。"
+    },
+    {
+      "claim": "strict <で接触を許容する数式。",
+      "source_id": "C-S033 figures 5 and 10",
+      "verification": "公式例の寸法・間隔から導くモデル上の推論として表示されている。規範本文の明文の不等式と誤表示していない。",
+      "limit": "測定epsilon・非矩形hit領域へ拡張しない。"
+    },
+    {
+      "claim": "reflow境界320/256、局所例外、ページoverflowを単独判定にしない。",
+      "source_id": "C-S007 / C-S032",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow",
+      "verification": "位置付き研究記録と私有readerの該当節を照合。本文・操作へ例外を波及させない記述が契約・protocolに保たれる。",
+      "limit": "規範全文の逐語的取得・ブラウザ実測を今回新規実施したとはしない。"
+    },
+    {
+      "claim": "BCR・点sampling・能力query・実入力・DOM/視覚/Tab/AT順を区別する。",
+      "source_id": "C-S038〜C-S044 / researcher-2 / analysis",
+      "verification": "候補文書と登録Unitに研究記録の条件・未対応理由・版の限界が保たれることを読取確認。",
+      "limit": "現行各ブラウザの対応・実際のAPI結果・入力切替・ATの再現は未検証。"
+    }
+  ],
+  "false_pass_review": "サイズ・spacing・保持・例外の検査集合では、既知の幾何/保持欠陥をMODEL_PASSへする反例は出なかった。FAIL→HOLDの誤区分4ケースと、入力出力破損5ケースは確認した。有限ケースの通過を全入力の証明にしない。",
+  "art_direction_overlap": {
+    "read_files": [
+      "../art-direction/references/e-accessibility.md",
+      "../art-direction/references/visual-composition.md"
+    ],
+    "reused": [
+      "E-02の320/256と例外",
+      "E-03/E-04のfocus遮蔽区別",
+      "E-07の小target例外",
+      "E4-07とvisual-compositionの意味・操作名・読順保持"
+    ],
+    "increment": "必要ID/region/target/証拠由来/geometryの入力契約、exact arithmetic、衝突対診断、例外根拠、未観測HOLDの運用化。新しい視覚原則として重複登録する内容ではない。",
+    "responsibility": "A/Bの業務情報・順序、既存C-UI-001〜004のイベント/keyboard/focus、Dの実画面採否を奪っていない。"
+  },
+  "practical_value": {
+    "verified": "独立したreport-editorのIDを用いて、モデルが予約画面固有のIDに依存せず、誤ったpage_overflow-only/bbox-only推定を避ける診断を実行できた。",
+    "not_verified": "examples/reflow-targets.htmlの描画・activation・ラベル到達・表スクロール・zoom・DOM/Tab/AT・実機器。合成long-label記録は長ラベルの実画面検証ではない。",
+    "examples": "booking/toolbarのJSONはHTMLから抽出されていない合成入力であると明示される。min-block-size等の宣言を実測寸法へ転記していない。"
+  },
+  "runtime_limits": {
+    "browser_executed": false,
+    "server_started": false,
+    "cdp_used": false,
+    "ui_automation_used": false,
+    "dom_double_executed": false,
+    "at_executed": false,
+    "wcag_conformance": "NOT_ASSESSED",
+    "policy": "明示的拒否を受けたブラウザ操作を別経路で再実行していない。"
+  },
+  "correction_policy": "初期resultsと初期critic報告を保持し、実装修正は親担当。修正版は同じscript/127期待値をrecheck-results.jsonへ別記録する。新しい期待値へ合わせ直さない。"
+}

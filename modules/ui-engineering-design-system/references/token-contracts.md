@@ -73,7 +73,7 @@ CSSの利用先プロパティの全文法、ブラウザーの対応、端末�
 ## 原典と判断の境界
 
 - [DTCG Format 2025.10](https://www.designtokens.org/TR/2025.10/format/): §5.2.2、§6.7.3、§7、§8.2、§8.5。型・参照と対応型の値形の根拠。全JSON Pointer対応は本実装の範囲外。
-- [DTCG Color 2025.10](https://www.designtokens.org/TR/2025.10/color/): §4.1、§4.2.1。構造化色の根拠。取得証拠はreader断片で、完全原文ではない。
+- [DTCG Color 2025.10](https://www.designtokens.org/TR/2025.10/color/): §4.1、§4.2.1。構造化色の根拠。当初の取得証拠はreader断片。その後、FormatとColorの2025.10恒久版HTMLを公式リポジトリの固定commitから取得しGit blobを照合した。C-S018/C-S020に取得先とハッシュを追記している。repositoryファイル全体の取得と、公開WebページのHTTPバイト同一性は別であり、後者は未確認。当初の部分取得記録を完全取得へ書き換えていない。
 - [DTCG Resolver 2025.10](https://www.designtokens.org/TR/2025.10/resolver/): §6。統合後の参照解決を採用する根拠。独自wrapperはその完全実装ではない。
 - [Style Dictionary references](https://styledictionary.com/reference/utils/references/): 出力filterで参照先がなくなる実装上の条件。
 - [Style Dictionary #1398](https://github.com/style-dictionary/style-dictionary/issues/1398): 寸法オブジェクト出力の歴史的な失敗報告。最新版での未修正を主張しない。

@@ -1,0 +1,58 @@
+{
+  "at": "2026-11-23T10:34:13.941393+00:00",
+  "registry": {
+    "instruction_units": 9,
+    "canonical_sources": 44,
+    "states": {
+      "ACCEPT": 3,
+      "HOLD": 6,
+      "DRAFT": 0,
+      "REVISE": 0,
+      "REJECT": 0
+    },
+    "status": "PASS_REGISTRY_STRUCTURE"
+  },
+  "python": {
+    "passed": 67,
+    "failed": 0,
+    "evidence": "campaigns/C/rounds/03/revision-execution.json"
+  },
+  "node": {
+    "passed": 6,
+    "failed": 0,
+    "scope": "Pure helpers/DOM doubles only",
+    "evidence": "campaigns/C/rounds/03/execution.json"
+  },
+  "round02_independent": {
+    "passed": 125,
+    "failed": 0,
+    "evidence": "campaigns/C/rounds/02/recheck.json"
+  },
+  "round03_independent": {
+    "passed": 127,
+    "failed": 0,
+    "evidence": "campaigns/C/rounds/03/recheck.json"
+  },
+  "skill_frontmatter_validation": "PASS: official quick_validate.py",
+  "layout_html_script_syntax": "PASS: node --check, not browser execution",
+  "git_diff_check": "PASS",
+  "scope_check": "All changed files limited to C-owned paths",
+  "browser": "BLOCKED",
+  "AT": "NOT_RUN",
+  "CI": "NOT_RUN",
+  "unchanged_tested_code_sha256": {
+    "modules/ui-engineering-design-system/checks/layout.py": "453e5e072fee99dcf412ea475aca278094b6405de53e4d0d8f79581e8e237c24",
+    "modules/ui-engineering-design-system/tests/test_layout.py": "767567291288d505cb7c86676f3269908628becf9fb3ea1b0c09ebcb3b08fcb7",
+    "modules/ui-engineering-design-system/references/layout-contracts.md": "bcc101636c5c6d05f8e756de5ed8bb3ebe110adea27fd88c0781c443e258fb16",
+    "modules/ui-engineering-design-system/checks/layout-observation-protocol.md": "12005ad6a8dee484676ba9b921fdbf5b7633b8b91fdb7b8b153333a88a26deec",
+    "modules/ui-engineering-design-system/examples/reflow-targets.html": "1f841aec1fb4a066d82b2af3d57d0f4fd2d04804b5b5d87795fb1918f8cbe9bb",
+    "modules/ui-engineering-design-system/examples/booking-reflow-model.json": "3ead4e9cc92bf1a40e1ccbfb3ea0ec4a008224aea82fbe5480ca51d210dc1214",
+    "modules/ui-engineering-design-system/examples/toolbar-target-model.json": "c74ca38a4bdd6b359eef9ab93d3143f0ab1d2ac48f14c32a4629a9b4fd58fae8"
+  },
+  "post_review_registry_changes": "Status/version/evidence and two explicit conditions propagated from tested fixes; no further implementation change",
+  "precommit_whitespace_check": {
+    "initial": "FAIL on extra blank EOF lines in two new researcher Markdown reports",
+    "repair": "Removed only extra blank EOF lines; original bytes retained privately",
+    "final": "PASS after staged recheck"
+  }
+}

@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "session": "C",
+  "round": 3,
+  "researcher": 1,
+  "issue": "C-002",
+  "decision": "RESEARCH_COMPLETE; rendered/AT validation HOLD",
+  "question": "Reflow/local overflow/pointer target geometry",
+  "frozen_plan": {
+    "path": "campaigns/C/rounds/03/plan.json",
+    "sha256": "1790a4f36964e7974061986021d3766a2456e8c75cead7085156571ecf6c9f97",
+    "modified": false
+  },
+  "research_status": {
+    "found": [
+      "normative boundaries and five target exceptions",
+      "informative local overflow scope and retention explanation",
+      "tangency examples",
+      "nonrectangular/overlap limits"
+    ],
+    "searched_not_found": [
+      "a normative numerical epsilon/tolerance for geometry"
+    ],
+    "not_searched": [
+      "WCAG GitHub issue history for tangency terminology",
+      "ACT rule-specific target implementations",
+      "1.3.2 and 2.4.11 Understanding pages",
+      "browser engine hit-testing specifications",
+      "device-specific UA target behavior",
+      "empirical motor-control studies"
+    ],
+    "stop_reason": "Bounded primary-source investigation; required propositions located; browser prohibited; no saturation calculation",
+    "cost": "unknown"
+  },
+  "sources": [
+    {
+      "id": "WCAG22",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "status": "normative Recommendation; source identity reused from round-01",
+      "section": [
+        "1.4.10 Reflow",
+        "2.5.8 Target Size (Minimum)",
+        "1.4.4 Resize Text",
+        "1.3.2 Meaningful Sequence",
+        "2.4.11 Focus Not Obscured (Minimum)"
+      ],
+      "web_refs": [
+        "turn607689764view0",
+        "turn607689764view3",
+        "turn607689764view4",
+        "turn718161856view2",
+        "turn718161856view3"
+      ],
+      "web_lines": {
+        "reflow": [
+          612,
+          630
+        ],
+        "target": [
+          1152,
+          1168
+        ],
+        "resize": [
+          506,
+          513
+        ],
+        "sequence": [
+          405,
+          412
+        ],
+        "focus": [
+          987,
+          996
+        ]
+      },
+      "fact": "Reflow preserves information/functionality at 320 CSS px width for vertical scrolling or 256 CSS px height for horizontal scrolling; necessary two-dimensional parts excepted. Target minimum is 24×24 CSS px, subject to named exceptions. Resize Text requires 200% without loss (except captions/images of text). Meaningful reading sequence must be programmatically determinable. Keyboard focus must not be entirely hidden by author-created content.",
+      "inference": "Overflow absence alone cannot establish content retention. Geometry does not establish keyboard, sequence, text resize, or full-page conformance.",
+      "exception": [
+        "spacing",
+        "equivalent same-page control meeting criterion",
+        "in-sentence or non-target line-height constrained inline",
+        "UA-determined size not author-modified",
+        "essential presentation or legally required"
+      ],
+      "full_original": false,
+      "reader_rewritten_summary": true,
+      "duplicate_policy": "No second fetch/download of existing WCAG22 source; new sections read through normative link."
+    },
+    {
+      "id": "C03-R1-S02",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow",
+      "title": "Understanding SC 1.4.10: Reflow",
+      "status": "informative explanation; not a normative requirement",
+      "section": [
+        "Reflowing websites and web applications",
+        "Understanding the scope of exceptions",
+        "Tabular data and grid-based UI",
+        "Why specifically 320px and 256px?",
+        "Overlap with other success criteria"
+      ],
+      "web_refs": [
+        "turn589699756view1",
+        "turn607689764view5"
+      ],
+      "web_lines": [
+        [
+          63,
+          72
+        ],
+        [
+          99,
+          129
+        ],
+        [
+          155,
+          177
+        ],
+        [
+          181,
+          204
+        ]
+      ],
+      "fact": "Relocating or collapsing content is allowed if still accessible. Exceptions stay local; cells generally reflow. Page-level two-dimensional scrolling can pass when caused by excepted content and non-excepted content reflows. Local containment is preferable. 1280-width at 400% corresponds to 320 CSS px; actual viewport matters.",
+      "inference": "A checker may enforce a stricter local-container project policy, but must not call every page-level overflow a WCAG failure. Required information hidden with no reachable alternative fails the retention condition.",
+      "exception": "Table exception does not automatically cover individual cells, adjacent prose, pagination, or actions.",
+      "full_original": false
+    },
+    {
+      "id": "C03-R1-S03",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum",
+      "title": "Understanding SC 2.5.8: Target Size (Minimum)",
+      "status": "informative explanation/examples; normative SC restated separately",
+      "section": [
+        "Exceptions",
+        "Size requirement",
+        "Spacing, Figures 5 and 10",
+        "Key Terms: target, minimum bounding box, essential"
+      ],
+      "web_refs": [
+        "turn589699756view0",
+        "turn533361632view2",
+        "turn533361632view3"
+      ],
+      "web_lines": [
+        [
+          61,
+          103
+        ],
+        [
+          105,
+          129
+        ],
+        [
+          203,
+          235
+        ]
+      ],
+      "fact": "Size requires an axis-aligned 24×24 square entirely inside the target. Spacing circles have diameter 24 and use bounding-box centers, including concave shapes. Examples pass 20×20 targets with 4px gaps, and a 16×16 target with 4px gap from a large target. Overlap is excluded from target-size measurement unless targets perform the same action/open the same page.",
+      "inference": "The examples support accepting tangency in the corresponding geometry model. A bounding rectangle cannot establish an inscribed square or the effective area after clipping. The target is the actual pointer-action area.",
+      "exception": "Underlying temporarily obscured targets are not evaluated while obscured by interaction/scripted content; new overlaid controls remain subject. This is not a general permission to obscure controls.",
+      "full_original": false
+    },
+    {
+      "id": "C03-R1-S04",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text",
+      "title": "Understanding SC 1.4.4: Resize Text",
+      "status": "informative; normative criterion restated at SC section",
+      "section": [
+        "Success Criterion (SC)"
+      ],
+      "web_refs": [
+        "turn607689764view1"
+      ],
+      "web_lines": [
+        [
+          33,
+          35
+        ]
+      ],
+      "fact": "Text can be resized without assistive technology up to 200% without loss of content/functionality, except captions and images of text.",
+      "inference": "A narrow-layout or reflow result is not evidence that actual text can reach 200%.",
+      "exception": [
+        "captions",
+        "images of text"
+      ],
+      "full_original": false
+    }
+  ],
+  "geometry_contract": {
+    "status": "proposal, not implemented or executed",
+    "supported_input": "Finite CSS-pixel coordinates of confirmed axis-aligned filled rectangular effective pointer target areas, same viewport/state/coordinate system; complete adjacent target inventory; no unresolved clipping/overlap/transforms; evidence provenance required.",
+    "size": {
+      "formula": "width >= 24 && height >= 24",
+      "scope": "Only supported filled effective rectangles. Exact 24 passes; either dimension below 24 is undersized. No rounding-up."
+    },
+    "spacing": {
+      "radius": 12,
+      "centers": "(x + width/2, y + height/2)",
+      "circle_circle": "Undersized pair conflicts if (cx_i-cx_j)^2 + (cy_i-cy_j)^2 < 576.",
+      "circle_rectangle": "For each undersized i and every other actual target j, dx=max(x_j-cx_i,0,cx_i-(x_j+w_j)); dy=max(y_j-cy_i,0,cy_i-(y_j+h_j)); conflict if dx^2+dy^2 < 144.",
+      "boundary": "Tangency equality accepted in this bounded model, derived from Understanding Figures 5 and 10; not a separately stated normative inequality.",
+      "must_check_both": "Circle-circle checks alone miss wide/short targets. Circle-versus-actual-target required even when the other target is itself undersized.",
+      "not_required": "A genuinely size-passing target does not need spacing merely because adjacent targets exist; undersized neighbor must still pass its own checks.",
+      "precision": "No WCAG epsilon found. Do not fabricate 0.5px/1px tolerances or round 23.999 up. Measurement uncertainty should produce HOLD."
+    },
+    "exceptions": {
+      "spacing": "Requires geometry evidence, not Boolean claim.",
+      "equivalent": "Different identified control on same page; same function; criterion satisfied. Cyclic or mutually unsupported exemption assertions do not prove satisfaction.",
+      "inline": "Actual sentence participation or size constrained by non-target text line-height; CSS display:inline, list membership, or a text label alone is insufficient evidence.",
+      "user_agent": "UA controls target size and author has not modified it; native tag alone insufficient.",
+      "essential": "Specific presentation essential to conveyed information/functionality, or legally required; document actual reason. Product preference or density preference alone insufficient."
+    },
+    "hold": [
+      "nonrectangular shape supplied only by bbox",
+      "clipped or overlapping area unresolved",
+      "rounded visual shape but effective clickable region unknown",
+      "missing coordinate units/space/state/target inventory",
+      "synthetic observations offered as browser proof",
+      "unknown author sizing of UA control",
+      "unsupported exception claim"
+    ],
+    "input_rejection": [
+      "NaN or Infinity",
+      "boolean/string coordinates accepted by coercion",
+      "nonpositive target dimensions",
+      "duplicate IDs",
+      "missing references",
+      "contradictory provenance",
+      "unsupported shape incorrectly marked rectangular"
+    ],
+    "browser_required": [
+      "effective hit area and occlusion in each reachable state",
+      "actual CSS viewport after zoom, not screenshot or outer window size",
+      "fonts, text wrapping and long localized labels",
+      "all required content/actions retained or accessible through an alternative",
+      "local scroll usability and focus visibility",
+      "DOM/programmatic reading order and keyboard navigation"
+    ],
+    "evidence_labels": [
+      "synthetic_geometry",
+      "supplied_measurement_unverified",
+      "browser_observed",
+      "assistive_technology_observed"
+    ],
+    "output_scope": "Geometry relation only; never generic accessibility PASS or rendered WCAG conformance."
+  },
+  "reflow_contract": {
+    "status": "proposal, not implemented or executed",
+    "boundary": "For vertically scrolling horizontal-writing content, actual equivalent width 320 CSS px. Horizontal-scrolling vertical-writing case uses height 256. 400% is a corresponding setup from 1280/1024, not an independent universal viewport size.",
+    "retention": "Map required information and actions to their accessible location at the boundary. Collapse/reposition may satisfy retention; removing, clipping, or display:none with no reachable alternative does not.",
+    "exception_scope": "Identify specific part and reason two-dimensional layout is necessary for usage/meaning. Reject page-wide inheritance to unrelated prose/actions. Check individual table cells independently unless separately excepted.",
+    "overflow": "Page overflow metric is a diagnostic, not a complete conformance oracle. A local scroll container is recommended; page overflow solely due to an excepted item can still satisfy SC if all non-excepted content reflows.",
+    "related_checks": "Keep 200% text enlargement, meaningful sequence, and focus-not-entirely-obscured as distinct checks; this geometry model establishes none."
+  },
+  "counterexample_proposals": [
+    {
+      "id": "size-exact",
+      "input": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "expected": "size relation passes",
+      "executed": false
+    },
+    {
+      "id": "size-fractional",
+      "input": {
+        "x": 0,
+        "y": 0,
+        "w": 23.999,
+        "h": 24
+      },
+      "expected": "undersized, needs spacing or proven other exception",
+      "executed": false
+    },
+    {
+      "id": "circle-circle-tangent",
+      "input": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 20,
+          "h": 20
+        },
+        {
+          "x": 24,
+          "y": 0,
+          "w": 20,
+          "h": 20
+        }
+      ],
+      "expected": "spacing passes under official Figure 5 interpretation",
+      "executed": false
+    },
+    {
+      "id": "circle-circle-intrusion",
+      "input": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 20,
+          "h": 20
+        },
+        {
+          "x": 23.999,
+          "y": 0,
+          "w": 20,
+          "h": 20
+        }
+      ],
+      "expected": "spacing fails, no epsilon",
+      "executed": false
+    },
+    {
+      "id": "circle-rect-tangent",
+      "input": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 16,
+          "h": 16
+        },
+        {
+          "x": 20,
+          "y": 0,
+          "w": 40,
+          "h": 40
+        }
+      ],
+      "expected": "spacing passes for small target under Figure 10 interpretation",
+      "executed": false
+    },
+    {
+      "id": "circle-rect-intrusion",
+      "input": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 16,
+          "h": 16
+        },
+        {
+          "x": 19.999,
+          "y": 0,
+          "w": 40,
+          "h": 40
+        }
+      ],
+      "expected": "spacing fails",
+      "executed": false
+    },
+    {
+      "id": "wide-short-neighbor",
+      "input": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 16,
+          "h": 16
+        },
+        {
+          "x": 0,
+          "y": 17,
+          "w": 100,
+          "h": 16
+        }
+      ],
+      "expected": "circles alone miss collision: centers >24 apart, small target circle reaches the wide/short target; fails",
+      "executed": false
+    },
+    {
+      "id": "nonrectangular-bbox",
+      "input_description": "circle effective area, diameter 24; bbox 24×24",
+      "expected": "bbox-size pass invalid; circle is undersized, spacing may still pass; shape unsupported checker HOLD",
+      "executed": false
+    },
+    {
+      "id": "overlap-unknown",
+      "input_description": "24×24 element rectangle partly covered by different-action target",
+      "expected": "cannot use full rectangle; unresolved effective area HOLD",
+      "executed": false
+    },
+    {
+      "id": "hidden-required-action",
+      "input_description": "overflow eliminated by hiding sole submit control",
+      "expected": "retention fails despite no overflow",
+      "executed": false
+    },
+    {
+      "id": "local-table",
+      "input_description": "local 2D data table; paragraphs/actions fit 320; cells assessed",
+      "expected": "eligible exception, rendered evidence still required",
+      "executed": false
+    },
+    {
+      "id": "page-excepted-video",
+      "input_description": "wide excepted video causes page scrollbar; all prose/actions reflow",
+      "expected": "page scrollbar alone must not cause WCAG FAIL",
+      "executed": false
+    },
+    {
+      "id": "page-exemption-laundering",
+      "input_description": "table exception asserted for adjacent 700px prose",
+      "expected": "exception does not cover prose",
+      "executed": false
+    },
+    {
+      "id": "synthetic-only",
+      "input_description": "all geometry checks pass against invented rectangles",
+      "expected": "synthetic relation result only; rendered/AT HOLD",
+      "executed": false
+    }
+  ],
+  "art_direction_overlap": {
+    "existing": [
+      {
+        "file": "../art-direction/references/e-accessibility.md",
+        "ids": [
+          "E-02",
+          "E-03",
+          "E-07"
+        ],
+        "scope": "reflow boundary/local exception, focus occlusion, target exceptions already present"
+      },
+      {
+        "file": "../art-direction/references/g-state-forms.md",
+        "ids": [
+          "G4-23",
+          "G4-24",
+          "G4-29",
+          "G4-34"
+        ],
+        "scope": "input semantics, labels and native activation stay existing responsibilities"
+      },
+      {
+        "file": "../art-direction/references/c-usability.md",
+        "ids": [
+          "C2-02",
+          "C2-11",
+          "C3-01"
+        ],
+        "scope": "error location, preserving input, evidence-based evaluation already present"
+      },
+      {
+        "file": "../art-direction/references/d-interaction.md",
+        "ids": [
+          "D2-01",
+          "D2-10",
+          "D2-11"
+        ],
+        "scope": "pointer input, pan/zoom and scroll ancestor responsibilities already present"
+      }
+    ],
+    "addition": "Operational observation schema, geometry boundary cases, exception evidence, and explicit HOLD conditions. These make existing guidance checkable; no new visual principle claimed."
+  },
+  "search_audit": {
+    "initial_queries": [
+      "site:w3.org/WAI/WCAG22/Understanding/target-size-minimum \"touch\" \"bounding\"",
+      "site:w3.org/WAI/WCAG22/Understanding/reflow \"320\" \"two-dimensional\""
+    ],
+    "method": "WebSearch, restricted to primary W3C sources",
+    "search_calls": 1,
+    "tool_visible_hits": [
+      {
+        "title": "Understanding SC 2.5.8: Target Size (Minimum)",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum",
+        "ref": "turn517812018search0"
+      },
+      {
+        "title": "Understanding SC 1.4.10: Reflow",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow",
+        "ref": "turn517812018search1"
+      }
+    ],
+    "all_tool_visible_hits_recorded": true,
+    "query_to_hit_attribution": "Batch response did not expose per-query mapping; do not invent it.",
+    "provider_total_hits": "unknown; results exposed by tool only",
+    "followed_links": [
+      {
+        "from": "target-size-minimum",
+        "link_id": 12,
+        "to": "https://www.w3.org/TR/WCAG22/",
+        "purpose": "understanding -> normative SC"
+      },
+      {
+        "from": "reflow",
+        "link_id": 40,
+        "to": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text",
+        "purpose": "related criterion -> direct W3C explanation"
+      }
+    ],
+    "fetch": {
+      "attempts": 1,
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "command": "fetch.py <private_sources_dir> w3c-target-size-minimum https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "status": "FAIL",
+      "reason": "Host resolution failed: [Errno -3] Temporary failure in name resolution",
+      "retries": 0,
+      "security_override": false
+    },
+    "fallback": "web-reader partial excerpts, private only; all full_original=false; normative reader labeled rewritten summary",
+    "private_directory": "非公開調査記録",
+    "public_contains_full_third_party_text": false,
+    "skill_contract": "README.md, SKILL.md and actual fetch.py --help read; positional contract sources_dir name url; help exits 2. Research used search reader and pure files only; runtime observation unavailable."
+  }
+}

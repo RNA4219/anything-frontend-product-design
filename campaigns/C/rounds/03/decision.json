@@ -1,0 +1,96 @@
+{
+  "round": 3,
+  "issues": [
+    "C-002"
+  ],
+  "decision": "HOLD",
+  "instruction_units": [
+    "C-UI-008",
+    "C-UI-009"
+  ],
+  "model_precheck_decision": "ACCEPT",
+  "model_accepted_scope": "供給されたC-layout-model/1入力の形式検査、明示的な保持/例外申告、条件付きの充填軸平行矩形の正確な幾何precheckに限定する。",
+  "reason": "Both instruction units require real rendering, hit geometry, input and order observations that were not executed. Selected pure-model checks passed after revisions.",
+  "initial_model_decision": "REVISE",
+  "subagents": [
+    {
+      "task": "/root/r03_researcher_1",
+      "role": "Researcher-1",
+      "state": "COMPLETED"
+    },
+    {
+      "task": "/root/r03_researcher_2",
+      "role": "Researcher-2",
+      "state": "COMPLETED"
+    },
+    {
+      "task": "/root/r03_analyst",
+      "role": "Analyst",
+      "state": "COMPLETED"
+    },
+    {
+      "task": "/root/r03_critic",
+      "role": "Critic",
+      "state": "COMPLETED"
+    }
+  ],
+  "source_records": 14,
+  "new_canonical_documents": 13,
+  "duplicate_canonical_records_merged": 1,
+  "tests": {
+    "python_total": 67,
+    "layout_unit_tests": 32,
+    "node_pure": 6,
+    "independent_initial": {
+      "total": 127,
+      "passed": 118,
+      "failed": 9
+    },
+    "independent_recheck": {
+      "total": 127,
+      "passed": 127,
+      "failed": 0
+    },
+    "independently_authored_cases": 124,
+    "parent_discovery_reproductions": 3,
+    "postcheck_assertions": 18,
+    "browser": "BLOCKED",
+    "AT": "NOT_RUN",
+    "CI": "NOT_RUN"
+  },
+  "comparison": {
+    "kind": "Two authored shallow controls, not model-generation effectiveness",
+    "cases": 10,
+    "control_status_mismatches": 6,
+    "candidate_status_mismatches": 0
+  },
+  "resolved_findings": [
+    "C03-CR-01",
+    "C03-CR-02",
+    "C03-CR-03",
+    "C03-CR-04"
+  ],
+  "independence": "Same-model separate critic task, not blind or external validation",
+  "tested_layout_sha256": "453e5e072fee99dcf412ea475aca278094b6405de53e4d0d8f79581e8e237c24",
+  "next": [
+    "C-004 async rendering and status notification",
+    "C-011 real effective geometry and retention",
+    "C-012 reading-flow and hybrid input observations"
+  ],
+  "meaningful_improvement": true,
+  "saturation_claimed": false,
+  "cost": {
+    "measured": false,
+    "amount": null,
+    "reason": "No provider metering exposed"
+  },
+  "control_plane": {
+    "private_schema_adapter": "PASS",
+    "private_artifact_integrity_checks": "PASS",
+    "formal_campaign_budget_gate": "HOLD",
+    "execution_evaluation_promotion": "NOT_CONNECTED",
+    "private_receipts_published": false,
+    "private_experience_record": "PASS"
+  },
+  "at": "2026-11-23T10:32:34.821976+00:00"
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "C-layout-model/1",
+  "kind": "targets",
+  "context": {
+    "id": "synthetic-state-1",
+    "coordinate_space": "viewport-css-px",
+    "css_width": 320,
+    "css_height": 640,
+    "scroll_direction": "vertical"
+  },
+  "evidence": {
+    "kind": "synthetic_geometry",
+    "ref": "Authored synthetic model; not extracted from reflow-targets.html or a browser"
+  },
+  "targets_complete": true,
+  "targets": [
+    {
+      "id": "undo",
+      "action_id": "undo",
+      "geometry": {
+        "kind": "effective_rect",
+        "rect": [
+          0,
+          0,
+          20,
+          20
+        ],
+        "limitations": [],
+        "uncertainty": 0
+      },
+      "exception": null
+    },
+    {
+      "id": "redo",
+      "action_id": "redo",
+      "geometry": {
+        "kind": "effective_rect",
+        "rect": [
+          24,
+          0,
+          20,
+          20
+        ],
+        "limitations": [],
+        "uncertainty": 0
+      },
+      "exception": null
+    }
+  ]
+}

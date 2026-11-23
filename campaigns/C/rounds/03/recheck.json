@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "session": "C",
+  "round": 3,
+  "phase": "correction_recheck",
+  "at": "2026-11-23T10:29:56.360087+00:00",
+  "decision": {
+    "pure_precheck": "ACCEPT",
+    "scope": "\u4f9b\u7d66\u3055\u308c\u305fC-layout-model/1\u5165\u529b\u306e\u5f62\u5f0f\u691c\u67fb\u3001\u660e\u793a\u7684\u306a\u4fdd\u6301/\u4f8b\u5916\u7533\u544a\u3001\u6761\u4ef6\u4ed8\u304d\u306e\u5145\u586b\u8ef8\u5e73\u884c\u77e9\u5f62\u306e\u6b63\u78ba\u306a\u5e7e\u4f55precheck\u306b\u9650\u5b9a\u3059\u308b\u3002",
+    "C-UI-008": "HOLD",
+    "C-UI-009": "HOLD",
+    "wcag_conformance": "NOT_ASSESSED"
+  },
+  "initial_decision": "REVISE",
+  "initial_results_preserved": true,
+  "initial_critic_reports_preserved": true,
+  "initial_summary": {
+    "executed": 127,
+    "passed": 118,
+    "failed": 9,
+    "independently_authored_cases": 124,
+    "parent_discovery_reproductions": 3
+  },
+  "recheck_summary": {
+    "executed": 127,
+    "passed": 127,
+    "failed": 0,
+    "independently_authored_cases": 124,
+    "parent_discovery_reproductions": 3
+  },
+  "case_counts": {
+    "distinct_cases": 127,
+    "independently_authored": 124,
+    "parent_discovery_reproductions": 3,
+    "first_run_failures": 9,
+    "recheck_failures": 0,
+    "supplemental_initial_byte_captures": 2,
+    "total_cli_invocations_initial_and_recheck": 256,
+    "postcheck_assertions": 18,
+    "postcheck_failures": 0
+  },
+  "same_test_script": true,
+  "script_sha256": "49ca022700f7c533ab3acd3958da8930d7b4f821d80639255aa0fed83d20275f",
+  "rechecked_sha256": {
+    "modules/ui-engineering-design-system/checks/layout.py": "453e5e072fee99dcf412ea475aca278094b6405de53e4d0d8f79581e8e237c24",
+    "modules/ui-engineering-design-system/tests/test_layout.py": "767567291288d505cb7c86676f3269908628becf9fb3ea1b0c09ebcb3b08fcb7",
+    "modules/ui-engineering-design-system/references/layout-contracts.md": "bcc101636c5c6d05f8e756de5ed8bb3ebe110adea27fd88c0781c443e258fb16",
+    "modules/ui-engineering-design-system/checks/layout-observation-protocol.md": "12005ad6a8dee484676ba9b921fdbf5b7633b8b91fdb7b8b153333a88a26deec",
+    "modules/ui-engineering-design-system/examples/reflow-targets.html": "1f841aec1fb4a066d82b2af3d57d0f4fd2d04804b5b5d87795fb1918f8cbe9bb",
+    "campaigns/C/rounds/03/plan.json": "1790a4f36964e7974061986021d3766a2456e8c75cead7085156571ecf6c9f97",
+    "campaigns/C/rounds/03/evaluation-plan.md": "1fd8e6f1631618237ac3e8f9126d40a470800582eedeb0fd597a2ce4aa81b865",
+    "campaigns/C/rounds/03/compare_models.py": "d95e8b0fd6fc34e99667e96113cf61f73a4e281cfdc793144eb7a336f3f32ecb",
+    "modules/ui-engineering-design-system/examples/booking-reflow-model.json": "3ead4e9cc92bf1a40e1ccbfb3ea0ec4a008224aea82fbe5480ca51d210dc1214",
+    "modules/ui-engineering-design-system/examples/toolbar-target-model.json": "c74ca38a4bdd6b359eef9ab93d3143f0ab1d2ac48f14c32a4629a9b4fd58fae8",
+    "registry/C/skills/C-UI-008.json": "02335309a0f5698a59d9a50ea53324100ac335155013e60aa954d6637726f23c",
+    "registry/C/skills/C-UI-009.json": "fd45d98431895baae4903e21a6ad47add208cc16c8d0b9c22021513447e22066"
+  },
+  "candidate_unchanged_during_recheck": true,
+  "preserved_file_sha256": {
+    "independent-probes.py": "49ca022700f7c533ab3acd3958da8930d7b4f821d80639255aa0fed83d20275f",
+    "initial-results.json": "949c80eb2a91e690764e0ab361b42f3a7e073bb24b4a69c3b6557066ab09597a",
+    "critic.md": "c7ea910e6c94602771c1808f42a5645d0cb71e169a1ded8b9baacb9037c27101",
+    "critic.json": "8f313ccbcbae8f50fe2fc78a2fd6d0a95c008a5cdc91fc0b4aa73fe4effb698e",
+    "initial-unicode-byte-evidence.json": "92ea575c9eff14e26ca3a89cc7069719fa11252a1a8b9687a4614eccbcd99393"
+  },
+  "recheck_results_sha256": "1eb854ec0a6595f6a27970f8057be08fd9ff4a66e913a3d3f769b119d55992e7",
+  "finding_disposition": [
+    {
+      "id": "C03-CR-01",
+      "origin": "independent_critic",
+      "status": "RESOLVED_IN_RECHECK",
+      "cases": [
+        "E-ua-partial-contradiction-author_resized",
+        "E-ua-partial-contradiction-ua_determined"
+      ],
+      "verification": "\u540c\u3058\u5165\u529b\u30fb\u540c\u3058\u671f\u5f85\u5024\u3067\u5168\u4ef6\u4e00\u81f4\u3002\u5143\u306e\u5931\u6557\u51fa\u529b\u306finitial-results.json\u306b\u4fdd\u6301\u3002"
+    },
+    {
+      "id": "C03-CR-02",
+      "origin": "independent_critic",
+      "status": "RESOLVED_IN_RECHECK",
+      "cases": [
+        "R-known-loss-empty-ref-0",
+        "R-known-loss-empty-ref-3"
+      ],
+      "verification": "\u540c\u3058\u5165\u529b\u30fb\u540c\u3058\u671f\u5f85\u5024\u3067\u5168\u4ef6\u4e00\u81f4\u3002\u5143\u306e\u5931\u6557\u51fa\u529b\u306finitial-results.json\u306b\u4fdd\u6301\u3002"
+    },
+    {
+      "id": "C03-CR-03",
+      "origin": "parent_discovery_independently_reproduced",
+      "status": "RESOLVED_IN_RECHECK",
+      "cases": [
+        "I-huge-positive-exponent",
+        "I-huge-negative-exponent",
+        "I-zero-huge-exponent"
+      ],
+      "verification": "\u540c\u3058\u5165\u529b\u30fb\u540c\u3058\u671f\u5f85\u5024\u3067\u5168\u4ef6\u4e00\u81f4\u3002\u5143\u306e\u5931\u6557\u51fa\u529b\u306finitial-results.json\u306b\u4fdd\u6301\u3002"
+    },
+    {
+      "id": "C03-CR-04",
+      "origin": "independent_critic",
+      "status": "RESOLVED_IN_RECHECK",
+      "cases": [
+        "I-lone-surrogate-high",
+        "I-lone-surrogate-low"
+      ],
+      "verification": "\u540c\u3058\u5165\u529b\u30fb\u540c\u3058\u671f\u5f85\u5024\u3067\u5168\u4ef6\u4e00\u81f4\u3002\u5143\u306e\u5931\u6557\u51fa\u529b\u306finitial-results.json\u306b\u4fdd\u6301\u3002"
+    }
+  ],
+  "postcheck_source": "\nleft={x['id']:x for x in a['results']}\nright={x['id']:x for x in b['results']}\nchecks=[]\ndef check(name,actual,expected):\n checks.append({'name':name,'actual':actual,'expected':expected,'passed':actual==expected})\ncheck('same_test_source',a['script_sha256']==b['script_sha256'],True)\ncheck('same_case_ids',list(left)==list(right),True)\ncheck('same_input_bytes',all(left[k]['input_sha256']==right[k]['input_sha256'] for k in left),True)\ncheck('same_expected_oracles',all(left[k]['expect']==right[k]['expect'] for k in left),True)\ncheck('all_initial_failures_resolved',all(right[k]['passed'] for k in left if not left[k]['passed']),True)\ncheck('formerly_passing_cases_still_pass',all(right[k]['passed'] for k in left if left[k]['passed']),True)\ncheck('candidate_unchanged_during_recheck',b['files_unchanged_during_probes'],True)\nfor case in ['R-known-loss-empty-ref-0','R-known-loss-empty-ref-3']:\n row=next(x for x in right[case]['actual']['results'] if x['id']=='export-report')\n check(case+' retains known loss and reference absence',\n       [row['status'],row.get('evidence_ref_present')],['FAIL_REQUIRED_ITEM_LOST',False])\nfor case in ['R-unknown-action','R-required-id-has-no-row']:\n check(case+' stays unknown',right[case]['actual']['status'],'MODEL_HOLD')\nfor case in ['E-incomplete-review-1','E-incomplete-review-2','E-named-review-2']:\n check(case+' remains reviewable',right[case]['actual']['status'],'MODEL_HOLD')\nfor case in ['I-lone-surrogate-high','I-lone-surrogate-low']:\n expected=json.loads(right[case]['input_json'])['context']['id']\n check(case+' decoded identifier roundtrip',right[case]['actual']['context_id']==expected,True)\ncheck('only_three_expected_candidate_files_changed',sorted(k for k in a['candidate_sha256_before'] if a['candidate_sha256_before'][k]!=b['candidate_sha256_before'][k]),sorted(['modules/ui-engineering-design-system/checks/layout.py','modules/ui-engineering-design-system/tests/test_layout.py','modules/ui-engineering-design-system/references/layout-contracts.md']))\n",
+  "postchecks": [
+    {
+      "name": "same_test_source",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "same_case_ids",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "same_input_bytes",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "same_expected_oracles",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "all_initial_failures_resolved",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "formerly_passing_cases_still_pass",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "candidate_unchanged_during_recheck",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "R-known-loss-empty-ref-0 retains known loss and reference absence",
+      "actual": [
+        "FAIL_REQUIRED_ITEM_LOST",
+        false
+      ],
+      "expected": [
+        "FAIL_REQUIRED_ITEM_LOST",
+        false
+      ],
+      "passed": true
+    },
+    {
+      "name": "R-known-loss-empty-ref-3 retains known loss and reference absence",
+      "actual": [
+        "FAIL_REQUIRED_ITEM_LOST",
+        false
+      ],
+      "expected": [
+        "FAIL_REQUIRED_ITEM_LOST",
+        false
+      ],
+      "passed": true
+    },
+    {
+      "name": "R-unknown-action stays unknown",
+      "actual": "MODEL_HOLD",
+      "expected": "MODEL_HOLD",
+      "passed": true
+    },
+    {
+      "name": "R-required-id-has-no-row stays unknown",
+      "actual": "MODEL_HOLD",
+      "expected": "MODEL_HOLD",
+      "passed": true
+    },
+    {
+      "name": "E-incomplete-review-1 remains reviewable",
+      "actual": "MODEL_HOLD",
+      "expected": "MODEL_HOLD",
+      "passed": true
+    },
+    {
+      "name": "E-incomplete-review-2 remains reviewable",
+      "actual": "MODEL_HOLD",
+      "expected": "MODEL_HOLD",
+      "passed": true
+    },
+    {
+      "name": "E-named-review-2 remains reviewable",
+      "actual": "MODEL_HOLD",
+      "expected": "MODEL_HOLD",
+      "passed": true
+    },
+    {
+      "name": "I-lone-surrogate-high decoded identifier roundtrip",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "I-lone-surrogate-low decoded identifier roundtrip",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "only_three_expected_candidate_files_changed",
+      "actual": [
+        "modules/ui-engineering-design-system/checks/layout.py",
+        "modules/ui-engineering-design-system/references/layout-contracts.md",
+        "modules/ui-engineering-design-system/tests/test_layout.py"
+      ],
+      "expected": [
+        "modules/ui-engineering-design-system/checks/layout.py",
+        "modules/ui-engineering-design-system/references/layout-contracts.md",
+        "modules/ui-engineering-design-system/tests/test_layout.py"
+      ],
+      "passed": true
+    },
+    {
+      "name": "initial_results_not_overwritten",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    }
+  ],
+  "change_impact_review": [
+    {
+      "change": "UA\u306e\u660e\u793a\u7684\u306a\u4e0d\u6210\u7acb\u3092\u5148\u306b\u5224\u65ad",
+      "verified": "author_resized=true\u3060\u3051\u3001ua_determined=false\u3060\u3051\u306e2\u30b1\u30fc\u30b9\u306fMODEL_FAIL\u3002\u6210\u7acb\u53ef\u80fd\u3060\u304c\u7247\u5074\u4e0d\u660e\u306e2\u30b1\u30fc\u30b9\u3068\u6761\u4ef6\u4ed8\u304d\u6b63\u5f53\u4f8b\u5916\u306fMODEL_HOLD\u3092\u7dad\u6301\u3002"
+    },
+    {
+      "change": "availability=missing\u3092\u7a7a\u8a3c\u62e0\u53c2\u7167\u3088\u308a\u512a\u5148",
+      "verified": "\u7a7a/\u7a7a\u767d\u53c2\u7167\u3067\u3082FAIL_REQUIRED_ITEM_LOST\u3002\u65b0\u8a2devidence_ref_present=false\u3092\u4fdd\u6301\u3002unknown\u3068item\u672a\u63d0\u51fa\u306fMODEL_HOLD\u3092\u7dad\u6301\u3002"
+    },
+    {
+      "change": "InvalidOperation\u3092\u69cb\u9020\u5316\u5165\u529b\u30a8\u30e9\u30fc\u3078\u5909\u63db",
+      "verified": "\u89aa\u767a\u898b\u306e\u5de8\u5927\u6b63\u6307\u6570\u30fb\u8ca0\u6307\u6570\u30fb\u30bc\u30ed\u6307\u6570\u306e3\u5165\u529b\u306fINPUT_ERROR/exit2\u3001Traceback\u306a\u3057\u3002"
+    },
+    {
+      "change": "JSON\u3092ASCII\u30a8\u30b9\u30b1\u30fc\u30d7\u3067\u76f4\u5217\u5316",
+      "verified": "high/low\u5b64\u7acbsurrogate\u306e2\u5165\u529b\u306f\u6709\u52b9UTF-8 JSON\u3068\u306a\u308a\u3001decode\u5f8c\u306eidentifier\u306f\u5165\u529b\u3068\u4e00\u81f4\u3002UI/AT/WCAG\u3078\u306e\u6607\u683c\u306a\u3057\u3002"
+    }
+  ],
+  "remaining_limits": [
+    "127\u30b1\u30fc\u30b9\u306e\u7d50\u679c\u306f\u5168\u5165\u529b\u30fb\u5168\u5f62\u72b6\u306e\u5b8c\u5168\u8a3c\u660e\u3067\u306f\u306a\u3044\u3002",
+    "\u540c\u4e00\u57fa\u76e4\u30e2\u30c7\u30eb\u306e\u5225\u30bf\u30b9\u30af\u3067\u3042\u308a\u3001\u5916\u90e8\u8a55\u4fa1\u8005\u306b\u3088\u308b\u72ec\u7acb\u78ba\u8a8d\u3067\u306f\u306a\u3044\u3002",
+    "\u4f8b\u5916\u6587\u7ae0\u3068evidence_ref\u306e\u5185\u5bb9\u30fb\u6e2c\u5b9a\u5024\u306e\u771f\u507d\u30fb\u4e00\u89a7\u5b8c\u5168\u6027\u306f\u8a8d\u8a3c\u3057\u306a\u3044\u3002",
+    "HTML\u306e\u5b9freflow\u3001hit geometry\u3001\u5b9f\u5165\u529b\u3001focus\u3001\u8aad\u9806\u3001AT\u3001\u6587\u5b57\u62e1\u5927\u3001\u30d6\u30e9\u30a6\u30b6\u9593\u5dee\u306f\u672a\u5b9f\u884c\u3002",
+    "\u975e\u77e9\u5f62\u30fbclip\u30fb\u91cd\u306a\u308a\u30fbunion\u7b49\u306f\u3053\u306e\u77e9\u5f62\u30e2\u30c7\u30eb\u306e\u672a\u5bfe\u5fdc/HOLD\u3092\u7dad\u6301\u3059\u308b\u3002"
+  ],
+  "browser_executed": false,
+  "at_executed": false,
+  "dom_double_executed": false,
+  "server_started": false,
+  "implementation_changed_by_critic": false,
+  "reproduction_command": "python3 campaigns/C/rounds/03/independent-probes.py --allow-revised --output recheck-repeat.json"
+}

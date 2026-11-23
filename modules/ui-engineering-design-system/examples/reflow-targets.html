@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>予約日時の変更 — レイアウト観測用サンプル</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; color: #172126; background: #fff; font: 1rem/1.65 system-ui, sans-serif; }
+  main { max-inline-size: 64rem; margin: auto; padding: 1rem; }
+  h1, h2, p, label, button, th, td { overflow-wrap: anywhere; }
+  h1 { font-size: 1.65rem; line-height: 1.35; }
+  h2 { font-size: 1.2rem; }
+  .layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 1.5rem; }
+  .layout > *, fieldset { min-inline-size: 0; }
+  fieldset { margin: 0; padding: 1rem; border: 1px solid #56636b; }
+  legend { padding-inline: .3rem; }
+  .choice { display: flex; gap: .6rem; align-items: flex-start; padding: .75rem 0; }
+  .choice input { flex: none; margin-block-start: .45rem; }
+  button { font: inherit; min-block-size: 2.75rem; max-inline-size: 100%; padding: .6rem 1rem; cursor: pointer; }
+  .actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-block: 1.5rem; }
+  :focus-visible { outline: 3px solid #1048b8; outline-offset: 3px; }
+  details { margin-block: 1rem; }
+  summary { cursor: pointer; padding-block: .6rem; }
+  .table-region { overflow: auto; max-inline-size: 100%; border: 1px solid #56636b; }
+  table { border-collapse: collapse; min-inline-size: 38rem; width: 100%; }
+  th, td { border: 1px solid #56636b; padding: .65rem; text-align: start; }
+  caption { text-align: start; padding: .7rem; font-weight: bold; }
+  #result { min-block-size: 2rem; }
+  .note { border-block-start: 1px solid #56636b; margin-block-start: 2rem; padding-block-start: 1rem; }
+</style>
+<main>
+  <h1>予約日時の変更</h1>
+  <p id="instructions">変更したい日時を選び、内容を確定してください。別の日時に変更しても、お申し込み時の連絡先は引き継がれます。</p>
+  <div class="layout">
+    <form id="booking">
+      <fieldset>
+        <legend>変更後の日時</legend>
+        <label class="choice"><input type="radio" name="slot" value="11月26日（木）10時〜11時" checked><span>11月26日（木）10時〜11時</span></label>
+        <label class="choice"><input type="radio" name="slot" value="11月27日（金）14時〜15時"><span>11月27日（金）14時〜15時 — 装置の点検方法について追加のご相談ができる枠</span></label>
+      </fieldset>
+      <div class="actions"><button id="confirm" type="submit">選択した日時への変更を確定する</button><button type="reset">選択を元に戻す</button></div>
+      <p id="result" role="status"></p>
+    </form>
+    <section aria-labelledby="terms-heading">
+      <h2 id="terms-heading">変更前に確認すること</h2>
+      <p>現在の日時：11月25日（水）10時〜11時。必要な準備と場所の案内は、日時を変更しても確認できます。</p>
+      <details><summary>持ち物と場所の案内を確認する</summary><p>受付番号と点検対象をお持ちください。受付は建物の1階です。詳細な持ち物は実際の業務要件に合わせて設定します。</p></details>
+    </section>
+  </div>
+  <section aria-labelledby="table-heading">
+    <h2 id="table-heading">時間帯ごとの受付状況</h2>
+    <p id="table-help">曜日と時間帯を対応させた一覧です。画面が狭い場合は一覧を横にスクロールできます。日時の選択と確定は上のフォームで行えます。</p>
+    <div class="table-region" role="region" tabindex="0" aria-labelledby="table-heading" aria-describedby="table-help">
+      <table>
+        <caption>比較用の架空の受付枠</caption>
+        <thead><tr><th scope="col">時間帯</th><th scope="col">水曜日</th><th scope="col">木曜日</th><th scope="col">金曜日</th></tr></thead>
+        <tbody><tr><th scope="row">10時〜11時</th><td>現在の予約</td><td>変更先候補</td><td>受付なし</td></tr><tr><th scope="row">14時〜15時</th><td>受付なし</td><td>受付なし</td><td>変更先候補・追加相談に対応</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+  <p class="note">この画面は架空データの表示サンプルです。操作結果は画面内に表示され、実際の予約は送信されません。</p>
+</main>
+<script>
+  const booking = document.getElementById('booking');
+  const result = document.getElementById('result');
+  booking.addEventListener('submit', event => {
+    event.preventDefault();
+    const slot = new FormData(booking).get('slot');
+    result.textContent = `サンプル上の選択結果：${slot}。実際の予約送信はありません。`;
+  });
+  booking.addEventListener('reset', () => { result.textContent = 'サンプルの選択を最初の日時へ戻しました。'; });
+</script>
+</html>

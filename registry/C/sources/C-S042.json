@@ -1,0 +1,15 @@
+{
+  "source_id": "C-S042",
+  "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/elementFromPoint",
+  "title": "Document: elementFromPoint()",
+  "retrieved_date": "2026-11-23",
+  "records": [
+    {
+      "file": "research/ui-engineering-design-system/round-03/researcher-2.json",
+      "source_id": "R2-S8"
+    }
+  ],
+  "original_download": "unavailable",
+  "reader_capture": "partial",
+  "public_fulltext": false
+}
