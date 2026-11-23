@@ -1,0 +1,87 @@
+{
+  "decision": "NOT_EVALUATED",
+  "rationale": "意図した改名と入口変更も差分になる。承認済みか否かをhelperが決めない。",
+  "status": "COMPARED",
+  "exit_code": 0,
+  "differences": {
+    "concepts": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": [
+        {
+          "id": "use-study",
+          "field": "label",
+          "before": {
+            "present": true,
+            "value": "研究用"
+          },
+          "after": {
+            "present": true,
+            "value": "調査研究用"
+          }
+        }
+      ]
+    },
+    "records": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": [
+        {
+          "id": "H-fern",
+          "field": "label",
+          "before": {
+            "present": true,
+            "value": "シダ標本"
+          },
+          "after": {
+            "present": true,
+            "value": "シダ標本・採集地A"
+          }
+        }
+      ]
+    },
+    "entries": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": [
+        {
+          "id": "E-botanist",
+          "field": "path",
+          "before": {
+            "present": true,
+            "value": "/herbarium/research"
+          },
+          "after": {
+            "present": true,
+            "value": "/herbarium/study"
+          }
+        }
+      ]
+    }
+  },
+  "counts": {
+    "concepts": {
+      "before": 2,
+      "after": 2
+    },
+    "records": {
+      "before": 2,
+      "after": 2
+    },
+    "entries": {
+      "before": 2,
+      "after": 2
+    }
+  },
+  "input_warnings": [],
+  "references_not_in_snapshot": [],
+  "unexamined_fields": [],
+  "unavailable_checks": [
+    "source_truth",
+    "whole_inventory_completeness",
+    "semantic_equivalence",
+    "change_authorization",
+    "runtime_findability",
+    "human_effectiveness"
+  ]
+}

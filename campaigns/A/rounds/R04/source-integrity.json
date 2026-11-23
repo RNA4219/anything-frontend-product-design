@@ -1,0 +1,43 @@
+{
+  "round": "R04",
+  "checked_at": "2026-11-23T08:39:34.253826+00:00",
+  "checks": [
+    {
+      "source_id": "R04-R1-S01",
+      "sha256": "75847481df714650b277658b765bd05a7fc76cef105dff2c7525e0a0264b6baa",
+      "matches": true,
+      "scope": "complete local selected-excerpt Markdown file bytes, including metadata; not original remote HTML/PDF"
+    },
+    {
+      "source_id": "R04-R1-S02",
+      "sha256": "314814074a3ff7d69b5cc209ca1c1e8c153f473a6c0b66574603c081139d7fbc",
+      "matches": true,
+      "scope": "complete local selected-excerpt Markdown file bytes, including metadata; not original remote HTML/PDF"
+    },
+    {
+      "source_id": "R04-R1-S03",
+      "sha256": "24ce7d823f08f9661ef9fbb0bf895395e1509df1c608bfe3cb1e18e22824f484",
+      "matches": true,
+      "scope": "complete local selected-excerpt Markdown file bytes, including metadata; not original remote HTML/PDF"
+    },
+    {
+      "source_id": "R04-R2-S01",
+      "sha256": "6cba94ab248ab8af6a34f5dc5ed0fa639e0ef051da71054f16d9cd72411982fe",
+      "matches": true,
+      "scope": null
+    },
+    {
+      "source_id": "R04-R2-S02",
+      "sha256": "d84b1be6024ceb038091f364ebeb5024ce831efd2de0d23fba837f6f1d023925",
+      "matches": true,
+      "scope": null
+    },
+    {
+      "source_id": "R04-R2-S03",
+      "sha256": "c086fd1fc368f0bfa2c9a6fa14547ee0642102cb544ea3be79906be3587a3a11",
+      "matches": true,
+      "scope": null
+    }
+  ],
+  "meaning": "Selected local excerpts match recorded byte hashes; not original-document completeness or semantic entailment."
+}

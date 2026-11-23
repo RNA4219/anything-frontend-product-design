@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-11-23T09:44:20.203227+00:00",
+  "status": "DRAFT_OPEN",
+  "repository_id": 1468558495,
+  "integration_base": "4333d097b5699528b5554434b494d8079126ba0f",
+  "integration_base_tree": "73f9f55b9f7c69efeec70b90f3379d15cbf3e3a4",
+  "previous_integration_base": "8b4d23426ffb71af82e924803f32ca59d80f3662",
+  "previous_base_tree": "73f9f55b9f7c69efeec70b90f3379d15cbf3e3a4",
+  "base_content_identical": true,
+  "previous_hold_record": "remote-validation.json",
+  "recovery_checkpoint": "b0fed3ef954ca2d413ade95991f6310ce28b1f66",
+  "local_base_object": "Reconstructed authenticated API commit fields; verified exact Git object SHA before local reference update. No remote main changes.",
+  "history_policy": "New follow-up commit will parent only the new root. Previous repository ancestry will not be republished.",
+  "testing": "No executable changes; exact base-tree identity preserves prior 70-method module validation and shared browser setup failure.",
+  "draft_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/3",
+  "remote_commit": "03d7aa6cd33d8b2401e2162c5446320f23603e41",
+  "published_tree": "28edf07687cb0506ec0f04e47c025c2337741f4d",
+  "local_remote_tree_identical": true
+}

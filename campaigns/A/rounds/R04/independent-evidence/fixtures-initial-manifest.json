@@ -1,0 +1,109 @@
+{
+  "created_at": "2026-11-23T08:58:56.155351+00:00",
+  "topic": "herbarium specimen catalog",
+  "cases": [
+    {
+      "case_id": "01_set_and_row_order",
+      "sha256": {
+        "before.json": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after.json": "421b18cf180a665429390fcdcaa7c43cb362c0102043113bec37bc5fa1b13a5e",
+        "expected.json": "18c795a05d3e2d875cbcd99101d86aedc9a820be2b712daf9106374464a43b0f"
+      }
+    },
+    {
+      "case_id": "02_equal_count_record_replacement",
+      "sha256": {
+        "before.json": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after.json": "e25efa5f4f763672177fd1733070ed81bef0fee00d954842f0ce479ba4803416",
+        "expected.json": "127c2aef158cf44628abd3671dd9ae6a48e9868f274319c4dc2ee9247ea827a1"
+      }
+    },
+    {
+      "case_id": "03_equal_category_count_membership_swap",
+      "sha256": {
+        "before.json": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after.json": "ab6546a01240a2dce20b6e641e492447e9d285f72500147a4327c8a98a39c6d6",
+        "expected.json": "b0fd6d346551e076853feacb1cdc6a81713edfebd770a529ab1681a7de93d780"
+      }
+    },
+    {
+      "case_id": "04_intended_rename_and_entry_move",
+      "sha256": {
+        "before.json": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after.json": "2180d4e608c22e23026cf0a1b3cd3d20f901770c1616fef2facc3d4d13c9c738",
+        "expected.json": "c8c47192688b6180f634fb96e8b7ee6a527a1242f42b76c9b16645eaef5319ff"
+      }
+    },
+    {
+      "case_id": "05_declared_valid_id_succession",
+      "sha256": {
+        "before.json": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after.json": "2ca7fe82ed3eaedd746b6162ab102ac6dd8d8ee9e273baf107cb2cfcf442afc9",
+        "expected.json": "56773b8d62b71875112b1eb202403a9e12f2d6a3a42b19670067e2bd786342ee"
+      }
+    },
+    {
+      "case_id": "06_valid_multiple_membership",
+      "sha256": {
+        "before.json": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after.json": "c486abdd0dd5cb10ec210759cfb4c7d011769c9262a264abc852b0f6e56d346f",
+        "expected.json": "910de68e743dafac631192416341ce0a3cb8a0701986f32c038ec10300a41f3f"
+      }
+    },
+    {
+      "case_id": "07_same_ids_scope_and_role_change",
+      "sha256": {
+        "before.json": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after.json": "9b135332c5e15c87d6b91ee8c3c5a8e21470222045923cf02d5ebfb88ffcc9a8",
+        "expected.json": "3eae59210c5bfe949b087c04b590c01c28c4d181848a5d036a7a92c9f6312207"
+      }
+    },
+    {
+      "case_id": "08_partial_unknown_and_outside_references",
+      "sha256": {
+        "before.json": "88d6c95ee677edca2e305773fc7f963c8a5ae175089b007b341b3b59a38ba00b",
+        "after.json": "ca6313625c024bacfb00b02270150246d433c1f6ef189e26be0490dda4954d8b",
+        "expected.json": "39ff9ddbd2d74096b01a1ef80c4fc64b00c00c77455af64800099ab501b739cf"
+      }
+    },
+    {
+      "case_id": "09_empty_declared_collections",
+      "sha256": {
+        "before.json": "2f6f9ed3e382706872b5bb20ba46dd7e4d527424a963f882fd55eb7bb201b649",
+        "after.json": "979e2f04f69ce55c85e9c544c98028c5dbc6d589f6f5bf98227a5600fc3f188f",
+        "expected.json": "f11c6d3522bb8c2e9ca53f3e40f318bb013c9bc81f7242fc1720bfbc4a734213"
+      }
+    },
+    {
+      "case_id": "10_invalid_duplicate_identity",
+      "sha256": {
+        "before.json": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after.json": "3a6208650a414b1fa07c80eb1251266bf68eb19fc0ab9d779496606aefe10e3e",
+        "expected.json": "25a957ee6ed9621537647c1a535957be9f409a8675fb34a642fe30e8bad6302b"
+      }
+    },
+    {
+      "case_id": "11_invalid_types_missing_and_duplicate_membership",
+      "sha256": {
+        "before.json": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after.json": "e4aa01ce11110a8b7785200ec1dac5879528a2bab4a38a6289173ba33e8f4da0",
+        "expected.json": "a8b70784d12cd0685c7f9ea306c57aaae94c6637e0a8b57c893ac61a4e621fee"
+      }
+    },
+    {
+      "case_id": "12_identity_basis_and_absence_warnings",
+      "sha256": {
+        "before.json": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+        "after.json": "c7ee5bcce4429a1f8b11c211daf54262f3ec30c3097385a2e4d5da6067175ed4",
+        "expected.json": "92322d1ad26a9608e0669337cde8ce67aa64fe64270966a9e3d6fccdea313a60"
+      }
+    }
+  ],
+  "pre_registration": "Expectations written before first helper execution. No parent test, R04 inventory-cases, 96-task set, rubric/oracle, or anonymized generated proposals read.",
+  "prior_exposure": [
+    "parent assignment and prescribed coverage",
+    "candidate SKILL/reference/helper source",
+    "candidate snapshot metadata",
+    "researcher source records and source findings (including researcher proposed test descriptions)"
+  ]
+}

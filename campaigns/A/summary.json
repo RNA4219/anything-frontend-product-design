@@ -1,0 +1,115 @@
+{
+  "session": "A",
+  "status": "PAUSED_AT_CHECKPOINT",
+  "completed_rounds": [
+    "R01",
+    "R02",
+    "R03",
+    "R04"
+  ],
+  "round_limit": 12,
+  "stop_reason": "Bounded execution checkpoint after four substantive cycles; continuation work is registered. Not saturation or all-domain completion.",
+  "saturation_streak": 0,
+  "meaningful_rounds": 4,
+  "next_round": "R05",
+  "next_A_priority": "A-013",
+  "agents": {
+    "actual_round_dispatches": 24,
+    "completed": 24,
+    "failed": 0,
+    "uncollected": 0,
+    "active_children_at_checkpoint": 0,
+    "role_counts": {
+      "researchers": 8,
+      "analysts": 4,
+      "critics": 4,
+      "task_executors": 8
+    },
+    "max_concurrent_total": 3,
+    "nested_dispatches": 0,
+    "independence_limit": "Fresh task/review threads of the same model family, not objective human evaluation."
+  },
+  "registry": {
+    "units": 10,
+    "new_principles_claimed": 0,
+    "inherited_units_refined": 10,
+    "status_counts": {
+      "ACCEPT": 10
+    },
+    "source_records": 46,
+    "inherited_sources": 20,
+    "new_sources": 26,
+    "research_proposals": 24,
+    "extracted_revisions": 13,
+    "overlaps_consolidated": 11,
+    "source_url_duplicates_retained": 0
+  },
+  "evaluation": {
+    "final_unittest_methods": 70,
+    "standalone_module_tested": true,
+    "paired_scores": [
+      {
+        "round": "R01",
+        "baseline": 5,
+        "candidate": 6,
+        "max": 6,
+        "difference": 1,
+        "interpretation_limit": "both 6/6; difference is declared decision-location consistency"
+      },
+      {
+        "round": "R02",
+        "baseline": 6,
+        "candidate": 6,
+        "max": 6,
+        "difference": 0,
+        "interpretation_limit": "Fixed rubric, one run per arm; no equivalence or superiority proof"
+      },
+      {
+        "round": "R03",
+        "baseline": 6,
+        "candidate": 6,
+        "max": 6,
+        "difference": 0,
+        "interpretation_limit": "Fixed rubric, one run per arm; no equivalence or superiority proof"
+      },
+      {
+        "round": "R04",
+        "baseline": 6,
+        "candidate": 6,
+        "max": 6,
+        "difference": 0,
+        "interpretation_limit": "Fixed rubric, one run per arm; no equivalence or superiority proof"
+      }
+    ],
+    "scope": "All tasks one run per arm; R03 assignment leak preserved. No human efficacy claim.",
+    "browser_rendering": "not executed; environment launch failed in early verification",
+    "CI": "No CI statuses or PR workflow runs observed for 03d7aa6cd33d8b2401e2162c5446320f23603e41; no success claim. Final metadata-only head is checked separately.",
+    "integration_validation": "campaigns/A/rounds/R04/integration-validation.json",
+    "shared_suite": {
+      "status": "NOT_PASS",
+      "completed_passing_methods": 35,
+      "setup_errors": 1,
+      "cause": "Browser executable unavailable; no browser test ran."
+    }
+  },
+  "cost": {
+    "actual_amount": null,
+    "currency": null,
+    "state": "UNKNOWN",
+    "reason": "Provider billing not exposed."
+  },
+  "checkpoint": "campaigns/A/rounds/R04/decision.json",
+  "handoff": "campaigns/A/handoff.md",
+  "at": "2026-11-23T09:46:59.037571+00:00",
+  "publication": {
+    "active_branch": "campaign/A-product-ia-r04-20261123",
+    "integration_base_sha": "4333d097b5699528b5554434b494d8079126ba0f",
+    "prior_pr": 6,
+    "prior_pr_state": "merged by concurrent work; not merged by this session",
+    "follow_up_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/3",
+    "status": "DRAFT_OPEN",
+    "evidence": "campaigns/A/rounds/R04/published-validation.json",
+    "previous_integration_base_sha": "8b4d23426ffb71af82e924803f32ca59d80f3662",
+    "code_evidence_commit": "03d7aa6cd33d8b2401e2162c5446320f23603e41"
+  }
+}

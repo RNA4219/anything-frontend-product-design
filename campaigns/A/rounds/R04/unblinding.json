@@ -1,0 +1,7 @@
+{
+  "round": "R04",
+  "mapping": {
+    "J": "baseline",
+    "S": "candidate"
+  }
+}

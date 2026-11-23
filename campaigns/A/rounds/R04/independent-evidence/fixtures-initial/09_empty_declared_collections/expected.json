@@ -1,0 +1,48 @@
+{
+  "decision": "NOT_EVALUATED",
+  "rationale": "明示的な空集合を受理する。空であるとの入力の真偽・母集団完全性を保証しない。",
+  "status": "COMPARED",
+  "exit_code": 0,
+  "differences": {
+    "concepts": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "records": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "entries": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    }
+  },
+  "counts": {
+    "concepts": {
+      "before": 0,
+      "after": 0
+    },
+    "records": {
+      "before": 0,
+      "after": 0
+    },
+    "entries": {
+      "before": 0,
+      "after": 0
+    }
+  },
+  "input_warnings": [],
+  "references_not_in_snapshot": [],
+  "unexamined_fields": [],
+  "unavailable_checks": [
+    "source_truth",
+    "whole_inventory_completeness",
+    "semantic_equivalence",
+    "change_authorization",
+    "runtime_findability",
+    "human_effectiveness"
+  ]
+}

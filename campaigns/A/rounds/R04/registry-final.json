@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "counts": {
+    "units": 10,
+    "sources": 46,
+    "statuses": {
+      "ACCEPT": 10,
+      "DRAFT": 0,
+      "HOLD": 0,
+      "REJECT": 0,
+      "REVISE": 0
+    }
+  },
+  "scope": "Registry structure and local evidence references only"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "INVALID_INPUT",
+  "decision": "NOT_EVALUATED",
+  "errors": [
+    {
+      "location": "after.records[2].id",
+      "message": "Duplicate ID: H-fern"
+    }
+  ],
+  "unexamined_fields": [],
+  "input_sha256": {
+    "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+    "after": "3a6208650a414b1fa07c80eb1251266bf68eb19fc0ab9d779496606aefe10e3e"
+  }
+}

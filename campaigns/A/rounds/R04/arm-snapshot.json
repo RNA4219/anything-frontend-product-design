@@ -1,0 +1,25 @@
+{
+  "round": "R04",
+  "at": "2026-11-23T09:06:45.170784+00:00",
+  "arms": {
+    "J": {
+      "review.json": "7ea86355b51c6e4ee79eb41b0305742e7a22a3502235d2217a48740cda68fd28",
+      "design.md": "8475058f9ccb38af7fc560d3f9890a2e38316a854161d612965f40fa71576b96",
+      "preview.html": "37887e5c88865b848f5fddb507497b6ed44d9d0e20f7cd777f6e8561f5399c95"
+    },
+    "S": {
+      "review.json": "018e82d12170f3048bdfcbc32aeb8ececef3e7607b32ee8ce3dae637d3588acc",
+      "design.md": "b4fd2f3415468b533a83e8ab422f5717cc4f4911c545e8cafee40213e9578a81",
+      "preview.html": "a6471127bc61c8d6b1f1aebf5529e73343b2f012f00affa6e5ddbd1011403396"
+    }
+  },
+  "assignment_path_scan": {
+    "J": [],
+    "S": []
+  },
+  "limit": "Artifact labels conceal folder assignment; method differences can still make assignment inferable. Same-model evaluation, not objective human assessment.",
+  "frozen_inputs_unchanged": {
+    "baseline": true,
+    "candidate": true
+  }
+}

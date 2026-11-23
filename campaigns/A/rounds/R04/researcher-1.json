@@ -1,0 +1,417 @@
+{
+  "round": "R04",
+  "role": "Researcher-1 — primary sources and standards",
+  "question": "大きめの既存情報集合の分類・ナビゲーション再編で、同一性・ラベル・階層・mappingを区別し、対象・役割別探索・入口の欠落を防ぐ条件。",
+  "search_strategy": {
+    "bounded_rounds": 1,
+    "adopted_sources": 3,
+    "known_source_count": 40,
+    "focus": "W3C SKOSの規範範囲とNISOの語彙変更管理から、分類mappingと実レコード付与の区別を確かめる。",
+    "other_researcher_scope": "親が別担当を稼働。内容は読んでいない。",
+    "stop_reason": "1周目を完了。5論点の規格上の境界に原典位置が付き、Reference本文リンクを保存後にも辿った。実製品の保存・探索成功は未確認として残し、親の指示に従い追加探索を停止。飽和は主張しない。",
+    "children_spawned": 0
+  },
+  "actual_tool_use": {
+    "web_tool_calls": 8,
+    "search_queries": 4,
+    "search_results_returned": 18,
+    "query_batches": 2,
+    "query_hit_attribution_limit": "最初の3queryは一括返却のため個別query別hit所属が非公開。queries.jsonlはbatchとして正確な3語と返却全7件を保持し、個別割当を推測しない。",
+    "opened_sources": 5,
+    "opened_sources_basis": "成功したユニーク文書: SKOS Reference、Primer、NISO PDF、NISO掲載ページ、ISO25964概要。PDF URL別名を二重計上しない。",
+    "open_actions": 17,
+    "click_actions": 4,
+    "find_actions": 9,
+    "screenshot_actions": 1,
+    "verified_body_edges": 2,
+    "failed_body_edges": 1,
+    "imozuru_fetch_attempts": 3,
+    "imozuru_fetch_success": 0,
+    "imozuru_fetch_dns_failures": 3,
+    "selected_excerpt_files": 3,
+    "help_probes": 4,
+    "report_check": {
+      "returncode": 0,
+      "log": "logs/report-check.json",
+      "stdout": "照合 OK: 抜き書き 22 件がすべて原文のとおり\n",
+      "stderr": ""
+    },
+    "report_build": {
+      "returncode": 0,
+      "log": "logs/report-build.json",
+      "stdout": "照合 OK: 抜き書き 22 件がすべて原文のとおり\n→ /workspace/scratch/10bb09e1845f/private/research/R04/researcher-1/report.html\n",
+      "stderr": ""
+    },
+    "digest_add": {
+      "returncode": 0,
+      "log": "logs/digest-add.json",
+      "stdout": "2本を /workspace/scratch/10bb09e1845f/private/research/R04/researcher-1/queries.jsonl に足した（ヒット 18件）\n",
+      "stderr": ""
+    },
+    "digest_check": {
+      "returncode": 0,
+      "log": "logs/digest-check.json",
+      "stdout": "照合 OK: 解説の文がすべて原文の引用を持つ・検索の記録 2本\n",
+      "stderr": ""
+    },
+    "digest_build": {
+      "returncode": 0,
+      "log": "logs/digest-build.json",
+      "stdout": "照合 OK: 解説の文がすべて原文の引用を持つ・検索の記録 2本\n→ /workspace/scratch/10bb09e1845f/private/research/R04/researcher-1/digest.html\n",
+      "stderr": ""
+    }
+  },
+  "source_edges": [
+    {
+      "from_url": "https://www.w3.org/TR/skos-reference/",
+      "to_url": "https://www.w3.org/TR/skos-primer/",
+      "relation": "body_link_to_companion_guide",
+      "tool": "Web click",
+      "ref": "turn321168672view0",
+      "link_id": 30,
+      "from_locator": "Status of this Document L40; companion Primer body link",
+      "result_ref": "turn119438020view1",
+      "verified": true,
+      "post_archive_repeat_ref": "turn708494109view0",
+      "unique_edge": true
+    },
+    {
+      "from_url": "https://www.niso.org/publications/ansiniso-z3919-2005-r2010",
+      "to_url": "https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf",
+      "relation": "official_publication_page_to_standard_pdf",
+      "tool": "Web click",
+      "ref": "turn119438020view0",
+      "link_id": 1,
+      "from_locator": "L7 standard download",
+      "result_ref": "turn810667150view0",
+      "verified": true,
+      "unique_edge": true
+    },
+    {
+      "from_url": "https://www.niso.org/standards-committees/iso-25964",
+      "to_url": "https://www.niso.org/schemas/iso25964/resources/",
+      "relation": "further_reading_body_link",
+      "tool": "Web click",
+      "ref": "turn321168672view1",
+      "link_id": 16,
+      "from_locator": "L63 Further reading and related resources",
+      "result_ref": "turn119438020view2",
+      "verified": false,
+      "outcome": "404 Not Found",
+      "unique_edge": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "R04-R1-C01",
+      "title": "分類概念の対応と実レコードへの分類付与を分ける",
+      "revision_of": [
+        "A005",
+        "A006"
+      ],
+      "source_ids": [
+        "R04-R1-S01",
+        "R04-R1-S03"
+      ],
+      "new_principle": false,
+      "source_facts": [
+        {
+          "source_id": "R04-R1-S01",
+          "fact": "URIで表す概念、ラベル、階層、mappingを区別し、exactMatchはsameAsではない。",
+          "locator": "§1.2 / §10.1 / §10.6.8"
+        },
+        {
+          "source_id": "R04-R1-S01",
+          "fact": "exactMatchから別概念のbroader/related関係をそのまま継承する性質連鎖は定義されていない。",
+          "locator": "§10.6.7"
+        },
+        {
+          "source_id": "R04-R1-S03",
+          "fact": "任意資源と概念を関連付ける主題付与はSKOS語彙の外にあり、一資源の複数主題も可能。",
+          "locator": "§3.3"
+        }
+      ],
+      "inferred_rules": [
+        "作業表では、実レコードのID、分類概念のID、表示ラベル、上位下位関係、別分類への対応、レコード→分類の付与を別の欄として扱う。型付き関係の作業上の区別であり、SKOS/RDFや新しい契約トップレベル項目を要求しない。",
+        "exact/close等のmappingを根拠にレコードIDを併合したり、分類付与・上位下位・役割別入口を一括移植したりしない。必要な意味・対象範囲と各関係の承継根拠を別に確認する。",
+        "単なるラベル変更と、分類概念の分割・統合・意味範囲の変更を区別する。ラベルが同じで範囲が違う対象、ラベルだけ変わって同じ対象を、それぞれ保持して扱う。"
+      ],
+      "conditions": [
+        "既存の分類・カテゴリ・タグ・保存ビューなどを再編する場合。",
+        "概念対応を実レコードの移行や探索維持の根拠に使用しようとしている場合。"
+      ],
+      "exceptions": [
+        "同じ分類概念や実レコードへの別名・複数所属・複数入口は維持してよい。新IDの乱造や階層形状の固定は要求しない。",
+        "確認済みの同一対象承継や意図した分類変更は許容する。関係の変更自体を欠陥とせず、誤った自動継承を対象とする。"
+      ],
+      "failure_modes": [
+        "旧概念C-Aと新概念C-BにexactMatchを書いたので、旧レコードR-Aと新レコードR-Bを同一と扱う。",
+        "同じ名前のカテゴリを統合し、異なるscopeを持つレコード群へ誤った共通所属を付ける。",
+        "概念対応だけを検査してレコードの分類付与が欠落しても移行完了にする。",
+        "closeの連鎖を端から端まで同等と見なす。またはexactと階層関係から未確認の親子関係を移植する。"
+      ],
+      "proposed_tests": [
+        {
+          "kind": "counterexample",
+          "name": "concept_mapping_without_record_membership",
+          "setup": "旧概念C-old→新概念C-newのexact対応はあるが、既存レコードR-17の分類付与だけを欠落させる。",
+          "expected": "分類対応の存在のみでは保持済みにしない。R-17の付与欠落を特定する。"
+        },
+        {
+          "kind": "counterexample",
+          "name": "same_label_distinct_scope",
+          "setup": "同じ表示名の二概念に異なるscopeと異なるレコード集合を持たせる。",
+          "expected": "文字列一致による併合を拒み、同一性または範囲承継の根拠を求める。"
+        },
+        {
+          "kind": "counterexample",
+          "name": "exact_does_not_copy_parent",
+          "setup": "A exact B、B broader Cという対応のみからAの親をCに自動変更する。",
+          "expected": "その継承を原典が保証したとは扱わない。IA変更の別根拠が無ければ未確認。"
+        },
+        {
+          "kind": "control",
+          "name": "renaming_with_stable_identity",
+          "setup": "同じレコードIDと分類IDを保ち、表示名と適切な別名だけを更新する。",
+          "expected": "必要な付与・対象範囲・入口の承継が確認できれば許容する。"
+        },
+        {
+          "kind": "control",
+          "name": "valid_multi_membership",
+          "setup": "一レコードに二分類への正当な付与を持たせる。",
+          "expected": "重複レコードや機能重複と誤判定しない。"
+        }
+      ],
+      "delta": "A005の「同名≠同一」「正本と複数所属」、A006の入口と行先の区別と重なる。追加差分は、分類概念のmappingと実レコードの付与を型の異なる関係として記録し、mappingから周辺関係の承継を推論しない点。A007の画面統合規則は増やさない。",
+      "evidence_boundary": "規範が述べるのはSKOSモデルの意味と非含意。レコード台帳・関係別作業表・HOLD判断はAへの設計上の導出で、原典の義務や効果実証ではない。",
+      "tests": [
+        {
+          "kind": "counterexample",
+          "name": "concept_mapping_without_record_membership",
+          "setup": "旧概念C-old→新概念C-newのexact対応はあるが、既存レコードR-17の分類付与だけを欠落させる。",
+          "expected": "分類対応の存在のみでは保持済みにしない。R-17の付与欠落を特定する。"
+        },
+        {
+          "kind": "counterexample",
+          "name": "same_label_distinct_scope",
+          "setup": "同じ表示名の二概念に異なるscopeと異なるレコード集合を持たせる。",
+          "expected": "文字列一致による併合を拒み、同一性または範囲承継の根拠を求める。"
+        },
+        {
+          "kind": "counterexample",
+          "name": "exact_does_not_copy_parent",
+          "setup": "A exact B、B broader Cという対応のみからAの親をCに自動変更する。",
+          "expected": "その継承を原典が保証したとは扱わない。IA変更の別根拠が無ければ未確認。"
+        },
+        {
+          "kind": "control",
+          "name": "renaming_with_stable_identity",
+          "setup": "同じレコードIDと分類IDを保ち、表示名と適切な別名だけを更新する。",
+          "expected": "必要な付与・対象範囲・入口の承継が確認できれば許容する。"
+        },
+        {
+          "kind": "control",
+          "name": "valid_multi_membership",
+          "setup": "一レコードに二分類への正当な付与を持たせる。",
+          "expected": "重複レコードや機能重複と誤判定しない。"
+        }
+      ],
+      "test_execution": "proposed only; no public checker or task usability tests were run"
+    },
+    {
+      "id": "R04-R1-C02",
+      "title": "変更前の対象集合から分類付与・旧探索入口を照合する",
+      "revision_of": [
+        "A005",
+        "A006",
+        "A007"
+      ],
+      "source_ids": [
+        "R04-R1-S01",
+        "R04-R1-S02",
+        "R04-R1-S03"
+      ],
+      "new_principle": false,
+      "source_facts": [
+        {
+          "source_id": "R04-R1-S02",
+          "fact": "名称や関係を変えた場合の履歴と、過去の索引済みレコードへの検索影響を扱う。",
+          "locator": "§11.3.1.2 / §11.3.2.1–2"
+        },
+        {
+          "source_id": "R04-R1-S02",
+          "fact": "一対一置換と複雑な分割では対応が異なり、表示の必要も利用者区分によって異なる。",
+          "locator": "§11.3.2.1(b)–(c) / §9.1.2"
+        },
+        {
+          "source_id": "R04-R1-S01",
+          "fact": "SKOSのみでは概念体系の全要素を閉じた集合として定義できない。",
+          "locator": "§4.6.1"
+        },
+        {
+          "source_id": "R04-R1-S03",
+          "fact": "分類概念の一覧と実際の資源への主題付与は別の関係である。",
+          "locator": "§3.3"
+        }
+      ],
+      "inferred_rules": [
+        "再編前のrevision/取得日時・対象scopeを固定し、対象ID一覧、分類付与、関係する役割の探索条件・実在する旧入口を対応表にする。件数は補助値にとどめ、各既存対象の承継先・意図した除外/終了・未確認を説明する。",
+        "ラベル/分類概念の対応、実レコードへの付与、役割別入口からの対象集合という三つを別々に照合する。概念対応の全行充足を、レコードや入口の全件充足へ拡張しない。",
+        "一対一の名称変更は範囲が同じか確認し、分割・統合は旧レコードのどの部分集合がどこへ行くかを明示する。全旧対象を全後継へ機械的に複製しない。",
+        "対象母集団が一部しか取得できない場合は、その確認範囲を明記する。参照した標本や同件数だけで全体保存とは表明しない。"
+      ],
+      "conditions": [
+        "多数の既存対象や既存索引があり、分類・名前・所属の変更が探索範囲へ影響する場合。",
+        "旧入口・役割・対象範囲の対応を保持した、という主張を行う場合。"
+      ],
+      "exceptions": [
+        "NISOの索引影響の条件は未使用語を例外とする。Aでも実在しない旧入口を創作して維持義務にしない。",
+        "意図した追加・分割・統合・廃止は許容する。全件数の不変や全レコードの不変を目標にせず、承認された変更理由と対象対応を記録する。",
+        "全role×全itemの人手評価を一律に要求しない。構造的な台帳照合と、関係する役割・探索課題の確認範囲を区別する。",
+        "原典の再索引に関する助言をそのまま製品機能の削除許可や実装方式の規定に変えない。"
+      ],
+      "failure_modes": [
+        "旧1200件から1件を落として別IDを1件加え、件数1200の一致で保持済みにする。",
+        "カテゴリ名と分類IDは全件対応したが、一部の実レコードの分類所属が空になる。",
+        "一般利用者向けの探索入口だけを削除し、管理担当者の到達成功で全roleの成功とする。",
+        "全旧カテゴリを新しい広いカテゴリへ対応させ、必要な絞込や識別範囲の欠落を見落とす。",
+        "小標本だけで確認して、未列挙の対象・索引範囲まで移行済みと表明する。"
+      ],
+      "proposed_tests": [
+        {
+          "kind": "counterexample",
+          "name": "equal_count_replaced_identity",
+          "setup": "旧R0001…R1200に対し、新集合をR0001…R1199とR1300の1200件にする。",
+          "expected": "件数一致でもR1200の欠落とR1300の追加を別々に検出し、説明のない保存主張を却下する。"
+        },
+        {
+          "kind": "counterexample",
+          "name": "mapped_concepts_unmapped_record",
+          "setup": "全分類のmappingを用意したうえで、1レコードだけ新しい所属を未設定にする。",
+          "expected": "概念mapping充足とレコード付与未充足を区別して報告する。"
+        },
+        {
+          "kind": "counterexample",
+          "name": "role_entry_loss",
+          "setup": "対象と分類は維持し、既存の一般利用者入口だけを対応表から除く。管理担当者入口は残す。",
+          "expected": "保持対象とした一般利用者の探索経路の欠落を特定する。"
+        },
+        {
+          "kind": "boundary",
+          "name": "partial_baseline",
+          "setup": "旧集合の一部分だけ取得できており、全件母集団は不明。",
+          "expected": "当該範囲の検査結果を返し、全体保存の結論を保留する。他の確定作業は停止しない。"
+        },
+        {
+          "kind": "control",
+          "name": "justified_split_with_memberships",
+          "setup": "旧広域分類のレコードを根拠付きで二つの新分類へ振り分け、関係する旧入口の案内と役割条件を対応させる。",
+          "expected": "分類数や親子形状が変わっても、宣言した対象・探索条件を満たせば許容する。"
+        },
+        {
+          "kind": "control",
+          "name": "documented_new_and_retired_records",
+          "setup": "新規追加と意図した対象外化を理由付きで別々に記録する。",
+          "expected": "件数差だけで不合格にしない。"
+        }
+      ],
+      "delta": "A005の実データ・件数不明、A006のrole別到達性、R02の旧入口対応と重なる。追加差分は変更前の有限母集団に対する対象ID単位の照合と、分類mapping・レコード付与・探索入口の別々の充足判定。A007への影響は、再分類後も必要な候補集合を担当画面で扱うかの確認に限定する。",
+      "evidence_boundary": "規格の推奨は統制語彙・索引済みレコードに関するもの。有限集合台帳、個別ID差分、role別の対応表はSkillの導出。件数一致が集合一致を含意しないことは独立した論理反例であり、NISOの実験結果ではない。",
+      "tests": [
+        {
+          "kind": "counterexample",
+          "name": "equal_count_replaced_identity",
+          "setup": "旧R0001…R1200に対し、新集合をR0001…R1199とR1300の1200件にする。",
+          "expected": "件数一致でもR1200の欠落とR1300の追加を別々に検出し、説明のない保存主張を却下する。"
+        },
+        {
+          "kind": "counterexample",
+          "name": "mapped_concepts_unmapped_record",
+          "setup": "全分類のmappingを用意したうえで、1レコードだけ新しい所属を未設定にする。",
+          "expected": "概念mapping充足とレコード付与未充足を区別して報告する。"
+        },
+        {
+          "kind": "counterexample",
+          "name": "role_entry_loss",
+          "setup": "対象と分類は維持し、既存の一般利用者入口だけを対応表から除く。管理担当者入口は残す。",
+          "expected": "保持対象とした一般利用者の探索経路の欠落を特定する。"
+        },
+        {
+          "kind": "boundary",
+          "name": "partial_baseline",
+          "setup": "旧集合の一部分だけ取得できており、全件母集団は不明。",
+          "expected": "当該範囲の検査結果を返し、全体保存の結論を保留する。他の確定作業は停止しない。"
+        },
+        {
+          "kind": "control",
+          "name": "justified_split_with_memberships",
+          "setup": "旧広域分類のレコードを根拠付きで二つの新分類へ振り分け、関係する旧入口の案内と役割条件を対応させる。",
+          "expected": "分類数や親子形状が変わっても、宣言した対象・探索条件を満たせば許容する。"
+        },
+        {
+          "kind": "control",
+          "name": "documented_new_and_retired_records",
+          "setup": "新規追加と意図した対象外化を理由付きで別々に記録する。",
+          "expected": "件数差だけで不合格にしない。"
+        }
+      ],
+      "test_execution": "proposed only; no public checker or task usability tests were run"
+    }
+  ],
+  "overlap": {
+    "exact_url_overlap_with_known_40": 0,
+    "conceptual_overlap": [
+      "A005: 同名は同一ではない・正本と複数所属",
+      "A006: 役割別入口・対象承継",
+      "A007: 必要候補や情報のまとまり",
+      "R02: 旧入口と選択対象の意味を別に照合"
+    ],
+    "new_principles_claimed": 0,
+    "revision_candidates": [
+      "R04-R1-C01",
+      "R04-R1-C02"
+    ],
+    "independence_limit": "3資料だが2本は同じW3C SKOS系統。独立した3実証ではなく、実証研究は今回採用していない。",
+    "saturation": {
+      "numerator": null,
+      "denominator": null,
+      "claimed": false,
+      "reason": "独立検索役2本の比較をこの子エージェントでは行わない。原典の論点到達と親の範囲指示で停止。"
+    }
+  },
+  "gaps": [
+    "原HTML/PDF全文の取得は3本ともDNS失敗。保存は選択短句と位置情報で、原典全文のハッシュではない。",
+    "ISO25964の規格全文は未取得・未読。NISOの紹介ページだけからISOの規範的義務を導いていない。",
+    "NISO 2005(R2010)の現在の有効性・最新版を確認していない。",
+    "規格の具体的な実製品への適用効果、役割別の人間の探索成功、実装の認可・遷移は未調査。",
+    "引用照合CLIはローカル短句との一致を検査するのみ。原典全文の完全取得、意味的正しさ、提案の効果を保証しない。"
+  ],
+  "found": [
+    "概念の同一性とラベル・mappingの区別",
+    "分類体系の表現と資源の主題付与の境界",
+    "既存索引済み対象を検索できるかという変更時の考慮"
+  ],
+  "searched_but_not_found": [
+    "調べた規範・原典の節には、件数一致やexactMatch宣言だけで全既存対象・全roleの探索成功を証明できる条件は見つからなかった。規格の不存在一般を主張しない。",
+    "Primerに対するfind(\"same URI\")は一致0件。表記検索の結果であり、識別の説明が無いという意味ではない。"
+  ],
+  "not_searched": [
+    "ISO25964の有料本文や最新版審査状況",
+    "他標準との全面的な比較",
+    "検索エンジン実装・状態遷移・UI部品仕様",
+    "実製品の全件移行データや人による探索実験"
+  ],
+  "cost": {
+    "actual_amount": null,
+    "currency": null,
+    "status": "unknown",
+    "reason": "検索とモデル費用の計測値がツールに提示されない。無料と推測しない。"
+  },
+  "status": "research_complete_local_quotes_checked",
+  "source_records": [
+    "R04-R1-S01",
+    "R04-R1-S02",
+    "R04-R1-S03"
+  ],
+  "publication_scope": "Findings are researcher-authored summaries and conditional proposals. Original excerpts and retrieval responses are excluded."
+}

@@ -1,0 +1,16 @@
+{
+  "case_id": "08_partial_unknown_and_outside_references",
+  "matched_expectations": true,
+  "exit_code": 0,
+  "mismatches": [],
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+    "--before",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/08_partial_unknown_and_outside_references/before.json",
+    "--after",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/08_partial_unknown_and_outside_references/after.json",
+    "--output",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/08_partial_unknown_and_outside_references/actual.json"
+  ]
+}

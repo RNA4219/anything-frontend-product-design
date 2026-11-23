@@ -10,7 +10,8 @@
     "具体的な探索目標とrole、候補集合、正本ID、必要属性",
     "検索語、scope、有効な絞込、権限、索引・表示・件数の制約とその出所",
     "表示名と元属性・元値の対応、カテゴリ固有属性",
-    "統合・分割の代替案、実データまたは代表データ、未確認条件"
+    "統合・分割の代替案、実データまたは代表データ、未確認条件",
+    "再分類が既存集合に影響する場合: 旧新revision/取得範囲、対象ID・概念ID・所属、変更意図と根拠、関係role/scope/実在入口。小変更は同じ意味を短い表でよい。"
   ],
   "decision_rules": [
     "対象は扱うもの、属性は対象の性質、行為は対象へ行うこと、分類は探すための集合として分ける。",
@@ -20,7 +21,10 @@
     "正本は同じ情報・機能の基準となるID。別名や複数入口のために正本を複製しない。複数所属は許容し、同一機能のmergeと混同しない。",
     "カテゴリ数や階層数に普遍的な上限を設けない。画面幅や記憶容量の数字から分類数を決めない。",
     "商品・美術画像探索を業務情報へ適用する場合、実タスクの候補集合と比較目的を確認する。",
-    "研究者が記録した遅延・語形処理等の比較条件差を無視せず、ファセット単独の因果効果としない。詳細数値・方法全文は本分析で再検証していない。"
+    "研究者が記録した遅延・語形処理等の比較条件差を無視せず、ファセット単独の因果効果としない。詳細数値・方法全文は本分析で再検証していない。",
+    "分類概念ID・表示名・親子関係・概念mappingと、実レコードID・分類所属を別々に照合する。概念対応や同名だけでレコード併合・所属移植・階層継承を完了としない。",
+    "変更前後のrevisionと取得scopeを固定し、対象IDとrecord→concept所属を別々に照合する。件数・カテゴリ別件数・標本成功だけから全体保持を断定しない。",
+    "変更操作が作用する対象・子孫・共有部分・場所固有部分と、分類軸が表す意味を記す。製品固有のcopy/merge等の効果を別製品に移植しない。"
   ],
   "procedure": [
     "1. 現在のラベルを「対象／属性／行為／分類／不明」に仮分類する。混在するラベルは理由を記す。",
@@ -32,13 +36,16 @@
     "7. A06で実際の目標経路をたどり、分類案で探せるかを点検する。分類のまとまりがきれいなだけでは採用しない。",
     "探索目標ごとに候補集合・role・scope・有効な絞込・必要属性を特定する。同じ対象の所属・保存ビューは正本IDへ対応させ、表示名の変更・値の表示グループ化・元属性の変更・対象の正本化を混同しない。",
     "0件やフィルタ非表示を設計判断に使うとき、検索語、範囲、権限、条件、索引対象と時点を確認する。観測0は保持し、範囲外や未知を不存在にしない。別名・語形・条件解除で判断が変わるなら確認を残す。設定の存在と当該画面で使える入口を分け、範囲の確認・変更経路も検討する。",
-    "統合・分割・絞込を、同時比較、固有属性、権限、集合規模、製品制約で比較する。比較を壊す分割と必須絞込を失う統合を両方点検する。必要な評価では既知対象と複数属性の探索を分け、成功・取りこぼし・時間・選好を別記録し、未実施の効果と不足は仮説・unresolvedに残す。"
+    "統合・分割・絞込を、同時比較、固有属性、権限、集合規模、製品制約で比較する。比較を壊す分割と必須絞込を失う統合を両方点検する。必要な評価では既知対象と複数属性の探索を分け、成功・取りこぼし・時間・選好を別記録し、未実施の効果と不足は仮説・unresolvedに残す。",
+    "再分類が既存対象へ影響するときはreferences/taxonomy-change.mdを使う。対象/概念/所属/入口を分け、確認済み承継・意図した変更・未対応をID付きで返す。",
+    "比較可能な取得済みsnapshotがあれば任意のcompare_inventory.pyで差分を出す。COMPAREDは比較完了であり採否ではない。意図したID変更・分割・統合は根拠付きの対応で別途照合する。"
   ],
   "expected_outputs": [
     "機能の正本化はA03に従い、`features.target`だけを使う。分類上の所属をtargetへ入れない。",
     "`screens.feature_ids`はkeep正本を参照する。同じ正本を複数画面で参照してよい。",
     "対象・属性・行為の区別、分類案、別名、多重所属、正本の対応は`decision_notes`にID付きで残す。",
-    "件数や分類境界の不明点は`category:information_architecture, owner:A`のunresolvedに置く。"
+    "件数や分類境界の不明点は`category:information_architecture, owner:A`のunresolvedに置く。",
+    "関係の種類を区別した対応表、説明できる変更と未対応の残差、比較/意味レビュー/実操作/利用者確認それぞれの範囲。"
   ],
   "dependencies": [
     "A-IU-001"
@@ -48,18 +55,23 @@
     "Baymardの結果は商品探索の文脈。業務情報へ適用する場合も「何を同時比較するか」を実タスクで確認し、カテゴリ統合を万能策にしない。",
     "母集団・権限・索引・条件が当該判断に十分と確認できる場合、その範囲で該当0件と記録できる。全体不存在へ拡張しない。",
     "属性群・範囲・目的・権限が異なれば別分類を保てる。単純検索にファセットを必須とせず、件数だけで統合・分割を強制しない。",
-    "全製品の索引調査など、当該判断に関係しない確認義務は追加しない。"
+    "全製品の索引調査など、当該判断に関係しない確認義務は追加しない。",
+    "根拠のある追加・改名・ID変更・分割・統合・範囲変更・終了、同一正本への複数所属と複数入口を許す。件数やID文字列の不変、新しい承認フローを一律要求しない。",
+    "局所変更に全製品台帳や全role×全item人手試験を要求しない。未使用語の削除は、該当scopeでの所属と他の参照・入口の影響を確認した範囲で扱う。",
+    "SKOS/RDF、別のplanトップレベルschema、SharePoint固有操作の採用は不要。NISOは確認した2005(R2010)版で現行性未確認。"
   ],
   "failure_modes": [
     "「緊急」という属性を独立した対象とみなし、通常一覧と重複管理する。検索と商品を同列の分類に置く。",
     "部門ごとの業務を利用者の理解と同一視する。同じ候補を複数カテゴリで探す必要があるのに、排他的所属へ固定する。",
     "同じ情報への別入口を、機能が増えたと数えて削除する。",
-    "R02の条件を落として検索範囲・旧入口・選択時の文脈を確定扱いする。"
+    "R02の条件を落として検索範囲・旧入口・選択時の文脈を確定扱いする。",
+    "総数や概念mappingだけが合うため、別IDへの置換・所属交換・scope/role/旧入口条件の変化を見落とす。"
   ],
   "verification": [
     "具体的な対象を一つ選び、正本、別名、所属、入口を逆引きする。内容を更新したときに複数の独立正本が必要となる案は再検討する。",
     "代表タスクで比較する候補を列挙し、同じ条件で一覧化・比較できるか確認する。ラベルの理解は利用者で未確認なら未確認とする。",
-    "探索の正例/反例と、選択場所・期待対象・実際の着地を照合する。実施範囲を分けて報告する。"
+    "探索の正例/反例と、選択場所・期待対象・実際の着地を照合する。実施範囲を分けて報告する。",
+    "同件数での対象入替・所属交換、role/scope変更、未知の所属補完を識別し、承認済み改名/未使用分類の整理/複数所属を無条件に不合格にしない。比較結果だけでは意味と承認を検証済みにしない。"
   ],
   "source_refs": [
     "A-S006",
@@ -67,15 +79,23 @@
     "A-S018",
     "R02-R1-S03",
     "R02-R2-S02",
-    "R02-R2-S03"
+    "R02-R2-S03",
+    "R04-R1-S01",
+    "R04-R1-S02",
+    "R04-R1-S03",
+    "R04-R2-S01",
+    "R04-R2-S02",
+    "R04-R2-S03"
   ],
   "confidence": {
     "source_support": "R02 conditions checked against six bounded primary-source records; inherited sources remain identified separately",
-    "transfer": "One additional synthetic catalogue task and independently authored manual-library counterexamples; no real-user generalization",
-    "empirical_skill_effect": "unverified"
+    "transfer": "Synthetic 96-record task and independently authored small cases; one 1200-record comparator case. Production and human transfer remain unestablished.",
+    "empirical_skill_effect": "unverified",
+    "R04": "Bounded source/independent fixture review and corrected comparison behavior completed; six sources from four families, not six independent experiments.",
+    "task_effect": "R04 single paired task: 6/6 versus 6/6, difference 0; no efficacy claim."
   },
   "status": "ACCEPT",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "provenance": {
     "kind": "inherited",
     "repository": "RNA4219/anything-frontend-art-direction",
@@ -102,13 +122,31 @@
       "action": "bounded_accept_after_independent_review",
       "status": "ACCEPT",
       "at": "2026-11-23T07:46:07.423103+00:00"
+    },
+    {
+      "round": "R04",
+      "version": "1.2.0",
+      "status": "REVISE",
+      "at": "2026-11-23T08:51:06.473229+00:00",
+      "reason": "Five research proposals decomposed into three conditional revisions; independent execution review pending."
+    },
+    {
+      "round": "R04",
+      "version": "1.2.0",
+      "status": "ACCEPT",
+      "at": "2026-11-23T09:14:24.124674+00:00",
+      "reason": "Independent 12 cases, source review, corrected output alias bug with 4 controls; isolated 70-method suite; paired task tie retained."
     }
   ],
-  "acceptance_scope": "Conditional instructions, bounded source review and structural behavior only; semantic facts, runtime navigation, accessibility and human effectiveness require separate evidence",
+  "acceptance_scope": "Conditional instructions and bounded structural/difference behavior. Not semantic approval, human efficacy.",
   "acceptance_evidence": [
     "campaigns/A/rounds/R02/independent-evidence/evaluation.json",
     "campaigns/A/rounds/R02/independent-evidence/findings.json",
     "campaigns/A/rounds/R02/independent-evidence/counterexamples-results.json",
-    "campaigns/A/rounds/R02/tests-final.txt"
+    "campaigns/A/rounds/R02/tests-final.txt",
+    "campaigns/A/rounds/R04/decision.json",
+    "campaigns/A/rounds/R04/independent-evidence/final-review.json",
+    "campaigns/A/rounds/R04/independent-evidence/correction-check.json",
+    "campaigns/A/rounds/R04/tests-final.txt"
   ]
 }

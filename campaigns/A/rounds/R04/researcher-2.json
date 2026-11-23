@@ -1,0 +1,434 @@
+{
+  "round": "R04",
+  "role": "Researcher-2 / independent operational counterexamples",
+  "question": "大きめの既存情報集合の分類/ナビ再編における意味対応と探索範囲の破壊条件",
+  "completed_at": "2026-11-23T08:37:03.982046+00:00",
+  "search_strategy": {
+    "independent_from_R1": true,
+    "R1_results_read": false,
+    "method": "規格用語からではなくGOV.UK publishing運用とMicrosoft SharePointの公式変更手順から探索",
+    "initial_query_count": 2,
+    "search_call_count": 1,
+    "search_result_count": 8,
+    "selected_primary_source_count": 3,
+    "opened_auxiliary_source_count": 3,
+    "rounds_completed": 1,
+    "stopping_reason": "約束で打ち切った：選定する一次資料2〜3件の上限で3件を確認し、本文リンクを追跡した1周を完了。論点は一部のみを含むため、網羅性や飽和を宣言しない。",
+    "saturation": "not evaluated; R1 results not read"
+  },
+  "actual_tool_use": {
+    "imozuru_readme_read": true,
+    "imozuru_skill_fully_read": true,
+    "current_A_skill_and_IA_navigation_refs_read": true,
+    "help_attempts": [
+      "fetch.py --help",
+      "report.py --help",
+      "digest.py --help",
+      "chain.py --help"
+    ],
+    "help_limit": "report/digestは--help非対応で失敗。冒頭docstringの実装済みCLIで実行。",
+    "fetch_attempts": 3,
+    "fetch_dns_failures": 3,
+    "web_calls": 5,
+    "body_link_clicks": 4,
+    "raw_full_source_saved": false,
+    "fallback_selected_excerpts": 3,
+    "children_spawned": 0,
+    "background_processes": 0,
+    "public_repository_modified": false,
+    "report_and_digest_logs": "logs/を参照。build後の検証結果はbundle-check.jsonに保存。",
+    "verification_results": {
+      "report_quotes": 11,
+      "report_check_exit": 0,
+      "report_render_exit": 0,
+      "digest_add_exit": 0,
+      "digest_check_exit": 0,
+      "digest_render_exit": 0,
+      "search_ledger_records": 1,
+      "search_queries_in_batch": 2,
+      "returned_hits_logged": 8,
+      "meaning_validation_note": "照合が保証するのは選択抜粋との文字列一致。分類の意味や実ユーザーの探索成功は保証しない。"
+    }
+  },
+  "source_edges": [
+    {
+      "from": "R04-R2-S02",
+      "to": "R04-R2-S03",
+      "relation": "body_link",
+      "source_locator": "Web turn295127420view1 L68, link 6",
+      "action": "web.click(ref_id=turn295127420view1,id=6)",
+      "target_locator": "turn227876713view0 L67–120",
+      "verified": true,
+      "limit": "本文リンクを実際に開いた。対象は公開手順で実tenantの操作ではない。"
+    },
+    {
+      "from": "R04-R2-S02",
+      "to": "AUX-GROUP",
+      "relation": "body_link",
+      "source_locator": "Web turn295127420view1 L72, link 7",
+      "action": "web.click(ref_id=turn295127420view1,id=7)",
+      "target_url": "https://learn.microsoft.com/en-us/sharepoint/set-up-new-group-for-term-sets",
+      "target_locator": "turn727026394view0 L31–48",
+      "verified": true,
+      "limit": "探索橋渡しのみ。選定3資料の一つに数えず、独立した新規根拠creditを与えない。"
+    },
+    {
+      "from": "R04-R2-S01",
+      "to": "AUX-REQUESTS",
+      "relation": "body_link_with_redirect",
+      "source_locator": "Web turn295127420view0 L169, link 36",
+      "action": "web.click(ref_id=turn295127420view0,id=36)",
+      "requested_url": "https://www.gov.uk/guidance/contact-the-government-digital-service/request-a-thing",
+      "target_url": "https://guidance.publishing.service.gov.uk/accounts-support/make-content-requests/",
+      "target_locator": "turn727026394view1 L14–15",
+      "verified": true,
+      "limit": "探索時の転送を観測しただけで、全旧入口の意味が保存される証拠にしない。"
+    },
+    {
+      "from": "AUX-REQUESTS",
+      "to": "AUX-TOPIC-CHANGES",
+      "relation": "body_link",
+      "source_locator": "Web turn727026394view1 L15, link 10",
+      "action": "web.click(ref_id=turn727026394view1,id=10)",
+      "target_url": "https://guidance.publishing.service.gov.uk/accounts-support/make-content-requests/ask-changes-topics/",
+      "target_locator": "turn227876713view1 L44–57",
+      "verified": true,
+      "limit": "選定3資料外の探索橋渡し。ログインが必要な申請フォームは開いていない。"
+    }
+  ],
+  "source_facts": [
+    {
+      "id": "S01-F1",
+      "source_id": "R04-R2-S01",
+      "statement": "GOV.UKのtopic taxonomyは内容の主題を分類し、発行組織、コンテンツ形式、タスク、利用者集団や職業を同じ軸として扱わない。",
+      "locator": "sections 1.4 / 2.1; Web L110–127",
+      "boundary": "GOV.UKの主題分類の目的。全サービスで役割別ナビを禁じる一般規則ではない。"
+    },
+    {
+      "id": "S01-F2",
+      "source_id": "R04-R2-S01",
+      "statement": "topic pageは当該topicと子topicのコンテンツを表示する。分類は組織の担当分野だけでなく全体系を検討し、通常は最も具体的なtopicへタグ付けするが、広い主題のコンテンツには例外がある。",
+      "locator": "sections 1.4 / 3.3 / 3.4; Web L112, L186–193",
+      "boundary": "当該ページに書かれたGOV.UK運用。すべての製品に親子の集計方式を当てはめない。"
+    },
+    {
+      "id": "S01-F3",
+      "source_id": "R04-R2-S01",
+      "statement": "topic間の件数差は観察対象だが、正当な下位topicが存在しない大きな集合もあり、件数の均等化を前提としない。",
+      "locator": "section 3.5; Web L194–197",
+      "boundary": "普遍的な最大件数や分割閾値は示さない。section 2.3の子topic数の推奨もGOV.UK固有であり採用しない。"
+    },
+    {
+      "id": "S01-F4",
+      "source_id": "R04-R2-S01",
+      "statement": "タグの品質維持として標本の点検、気づいた誤りの修正、topic pageに期待するコンテンツが出ているかの確認を挙げる。",
+      "locator": "section 3.2; Web L177–185",
+      "boundary": "資料は標本点検を認めている。大規模移行の完全性を少数標本や件数一致で保証するとは述べていない。"
+    },
+    {
+      "id": "S02-F1",
+      "source_id": "R04-R2-S02",
+      "statement": "SharePointのtermは固有IDと複数ラベルを持てる。local term setの利用・表示範囲はsite collectionに限定され、global term setとは範囲が異なる。",
+      "locator": "Term Set / Terms; Web L50–67",
+      "boundary": "termのIDは文書など実レコードのIDではない。用語の見える範囲をコンテンツ閲覧の認可成功へ読み替えない。"
+    },
+    {
+      "id": "S02-F2",
+      "source_id": "R04-R2-S02",
+      "statement": "管理された分類と利用者のenterprise keywordsを併用でき、global/local、open/closedの設定を選べる。",
+      "locator": "Metadata scenarios; Web L90–100",
+      "boundary": "一種類へ統一することを必須としない製品能力の説明。混在案の利用効果を比較した研究ではない。"
+    },
+    {
+      "id": "S02-F3",
+      "source_id": "R04-R2-S02",
+      "statement": "termの統合はタグ付けされたコンテンツに反映されると説明される。term groupの管理権限や、tagging/navigationに使う設定も区別されている。",
+      "locator": "Increased flexibility / Managing terms / Properties; Web L124–125, L153–168",
+      "boundary": "統合で文書自体が同一になるという意味ではない。文書の認可実装や索引の即時更新は検証していない。"
+    },
+    {
+      "id": "S03-F1",
+      "source_id": "R04-R2-S03",
+      "statement": "copy termは子をコピーせず、copy with childrenは子もコピーする。pinは元の場所で子を編集して反映する。reuseで後から作る子は作成したterm setだけに存在する。",
+      "locator": "Copy term / Copy with children / Pin term / Reuse term; Web L67–105",
+      "boundary": "似た操作名でも子孫の対応が異なる。実tenantの挙動、各子孫IDの割当て方までは未試験。"
+    },
+    {
+      "id": "S03-F2",
+      "source_id": "R04-R2-S03",
+      "statement": "mergeは同義語・翻訳・カスタム属性を統合先へまとめる。deleteは下位termも削除し、共有termはOrphaned termsへ置く。deprecateは子termを廃止しない。",
+      "locator": "Delete term / Merge term / Deprecate term; Web L81–87, L106–120",
+      "boundary": "操作ごとの構造上の差を示す公式手順。旧タグの全除去、旧URL転送、認可成功やユーザー成果は主張しない。"
+    }
+  ],
+  "findings": [
+    {
+      "id": "R04-R2-F01",
+      "title": "分類ノードの変更と実レコードの所属変更を別の対応として記録する",
+      "source_facts": [
+        "S02-F1",
+        "S02-F3",
+        "S03-F1",
+        "S03-F2"
+      ],
+      "inferred_rules": [
+        "対象の正本ID、分類ノードID、表示ラベル、親子関係、対象→分類の所属、別名/言語、入口を別々に扱う。term IDだけを実対象の同一性の証拠にしない。",
+        "変更対象について、旧ID→新IDまたは承継先と、その関係（改名・配置変更・複製・参照/再利用・統合・分割・終了）を作業表に記録する。名称一致や操作名だけから関係を決めない。",
+        "分割・統合では1対多、多対1、多対多の対応を許容し、各旧対象の新しい所属と例外を残す。未対応を無理な1対1対応で埋めない。",
+        "親ノードの変更時は、子孫が引き継がれる範囲と、共有された部分/場所固有の部分を明記する。参照共有を独立正本の複製と混同しない。",
+        "既存A06の旧入口表へ同じ対応を接続し、入口の移設、分類の統合、実対象の承継を別々に照合する。旧URLの接続成功の新たな実証は今回追加しない。"
+      ],
+      "conditions": [
+        "既存分類のrename/move/copy/reuse/merge/split/delete等が対象・所属・ラベル・入口へ波及する場合。",
+        "変更前後のrevisionと、どのレコード/分類を変更範囲に含めたかを識別できる場合。"
+      ],
+      "exceptions": [
+        "同一正本の表示名だけを変え、関連集合が変わらない小変更は対象箇所の短い対応メモでよい。",
+        "承継先がない正当な終了や、実際に意味が変わる分割は許される。全変更を同一ID維持へ強制しない。"
+      ],
+      "dependencies": [
+        "元データの識別子と変更の責任者による意味確認。",
+        "C: 実データ更新・redirect・索引の挙動、B: 操作順序/再開/状態遷移。Aでは実装成功を宣言しない。"
+      ],
+      "failure_modes": [
+        "分類のmergeを対象レコードのmergeとして記録する。",
+        "copyで子も移ったと誤記する。",
+        "reuseの場所固有の子を全体共有とみなす。",
+        "deprecateを全子孫または既存対象の消失へ読み替える。"
+      ],
+      "tests": [
+        {
+          "id": "T01",
+          "status": "未実行の合成反例案",
+          "fixture": "同じ名称の旧分類をcopyしたが子の所属がない案と、明示的な分割で子を承継先へ再対応した案。",
+          "expected": "前者は子の扱いを未解決として検出し、後者は理由・対応がそろえば構造上許容する。"
+        },
+        {
+          "id": "T02",
+          "status": "未実行の合成対照案",
+          "fixture": "同一termを2つのterm setでreuseし、一方でだけ追加した子がある。",
+          "expected": "共通の正本と場所固有の子を両立させる。子集合の完全一致を要求しない。"
+        }
+      ],
+      "candidate_units": [
+        "A005",
+        "A006"
+      ],
+      "delta_from_existing": "A005は正本/別名/多重所属、A006は旧入口と承継をすでに扱う。追加は分類ノード・実対象・所属辺を区別した変更表と、子孫/共有部分の波及範囲。既存の旧URL条件は再発見として増補しない。",
+      "evidence_boundary": "関係表の形式と全差分照合は調査者の設計上の導出。原典にこのSkill向けの表仕様や完全性保証はない。"
+    },
+    {
+      "id": "R04-R2-F02",
+      "title": "主題・対象者・場所別の探索軸を目的に応じて併存させる",
+      "source_facts": [
+        "S01-F1",
+        "S01-F2",
+        "S01-F3",
+        "S02-F1",
+        "S02-F2"
+      ],
+      "inferred_rules": [
+        "分類軸ごとに、何を表すか、誰が何の判断に使うか、対象集合、適用範囲を記す。主題の一致だけで対象者・職務・公開範囲も同じとしない。",
+        "異なる探索目的が残る場合は、共通の対象正本に対する複数分類・別名・役割別入口・局所ビューを候補に残す。排他的な単一所属や全社一分類へ機械的にそろえない。",
+        "大きい集合に意味のある下位区分がないときは、均等な件数のために分割しない。小さい分類の統合も、役割・範囲・必要な区別を失わない条件で判断する。",
+        "local/globalなど分類の利用範囲と、コンテンツを読める認可範囲は別の条件として残す。分類の可視性から実データの権限を推定しない。"
+      ],
+      "conditions": [
+        "一つのコンテンツ集合に複数の役割・主題・利用場面・場所別の分類需要がある。",
+        "統合候補の目的や対象範囲が一致することが未確認。"
+      ],
+      "exceptions": [
+        "目的・対象・適用範囲が同じ重複分類は統合できる。",
+        "すべての画面に複数軸やファセットを要求しない。GOV.UKの主題専用設計を他サービスの役割別ナビの禁止へ広げない。"
+      ],
+      "dependencies": [
+        "各分類の担当者と利用者の探索目的の確認。",
+        "D: ラベル理解/探索成功の評価。C: スコープ付き検索や認可の実装確認。"
+      ],
+      "failure_modes": [
+        "主題分類だけで職種別の探索も満たしたとみなす。",
+        "local term setの範囲を無視して全社で使える分類と記録する。",
+        "件数が多いという理由だけで意味のない下位カテゴリを作る。"
+      ],
+      "tests": [
+        {
+          "id": "T03",
+          "status": "未実行の合成反例案",
+          "fixture": "同じ資料IDが主題「安全」と対象者「設計者」「保守担当」に所属する。主題一つへ統一して役割別入口を消す。",
+          "expected": "複数の利用目的が残る前提なら、失われた探索軸/入口を残差として示す。正本の重複と誤判定しない。"
+        },
+        {
+          "id": "T04",
+          "status": "未実行の合成対照案",
+          "fixture": "同じ対象集合・同じ目的の旧分類を別名としてまとめ、対象者別の必要な入口を維持する。",
+          "expected": "単一分類への統合そのものは禁止せず、意味と経路の対応が残る案を許容する。"
+        }
+      ],
+      "candidate_units": [
+        "A005",
+        "A006",
+        "A007"
+      ],
+      "delta_from_existing": "A005の多重所属許容を、主題/対象者/出所/場所など分類軸の意味と適用範囲の点検に具体化。A007の画面共有・分割判断へ、分類軸の統一と画面共用を別々に扱う条件を補う。",
+      "evidence_boundary": "GOV.UKは主題分類、SharePointは製品機能の説明。併存案が単一分類より良いという一般的な実験結果ではない。"
+    },
+    {
+      "id": "R04-R2-F03",
+      "title": "件数と標本を完全な意味対応の証明にせず、未対応の集合を残す",
+      "source_facts": [
+        "S01-F2",
+        "S01-F3",
+        "S01-F4",
+        "S02-F1",
+        "S03-F1"
+      ],
+      "inferred_rules": [
+        "件数は診断値として使い、何を数えたか（正本数・分類数・所属数・到達可能対象数）を区別する。総数やカテゴリ別件数の一致だけで意味保存をPASSにしない。",
+        "全件を照合できる入力がある場合、変更範囲内の旧対象/所属/入口を対応表へ結び、消失・未割当て・予期しない追加・対応不能を列挙する。件数の一致を全行の手作業レビューに置き換える規則ではない。",
+        "分割や統合で件数が意図的に変わる場合は、承認した関係とその理由へ照合する。変更前後を無条件に同数にする必要はない。",
+        "標本で確認したものは、役割・範囲・分類境界・同名異対象・複数所属等のどこを覆うかを示す。未確認集合と意味確認の残件を別記し、少数の成功を全体成功へ拡張しない。"
+      ],
+      "conditions": [
+        "複数対象をまとめて移し、全体の対応保存または移行完了を主張する場合。",
+        "期待される変更/維持の関係が入力や責任者によって指定されている場合。"
+      ],
+      "exceptions": [
+        "限定した標本に関する結果として報告するなら標本確認は有効。GOV.UK自体もspot checkingを運用に含める。",
+        "意味の判断は機械的全件照合だけでは証明できない。全入力が取得できなければ対象範囲を限定し、範囲外をゼロや成功にしない。",
+        "普遍的なサンプル数・完全成功率・分類件数上限は導かない。"
+      ],
+      "dependencies": [
+        "同一時点/同一範囲の旧新inventoryと意味上の期待対応。",
+        "A: 対応表と残差の記録。C: 実際の検索/索引/権限制御。D: 利用者の発見・理解・判断成功。"
+      ],
+      "failure_modes": [
+        "正本数が同じなので所属の入替を見落とす。",
+        "一つの役割で見つかったので全roleの範囲を確認済みにする。",
+        "承認済み分割による増加を件数不一致だけでFAILにする。",
+        "標本外や索引外の対象を存在しないものとして扱う。"
+      ],
+      "tests": [
+        {
+          "id": "T05",
+          "status": "未実行の合成反例案",
+          "fixture": "維持要求の分類P={D1,D2}, Q={D3}を、P={D1,D3}, Q={D2}へ変更する。正本総数3、Pの件数2、Qの件数1はいずれも一致する。",
+          "expected": "指定された所属維持に反するD2/D3の差分を検出する。これは原典の実測事例ではなく、同数でも対応が違うことを示す論理反例。"
+        },
+        {
+          "id": "T06",
+          "status": "未実行の合成対照案",
+          "fixture": "分類Pを意味に従いP1/P2へ分割し、旧所属と承継先の全対応と理由がそろう。",
+          "expected": "分類ノード数の増加だけを不合格にせず、承継範囲の充足を確認する。"
+        },
+        {
+          "id": "T07",
+          "status": "未実行の検証案",
+          "fixture": "同名異対象、複数所属、局所分類、境界例、権限で見えない範囲を含む変更範囲を定める。",
+          "expected": "自動照合の範囲、意味レビュー済みの標本、未確認の集合を別々に返す。実利用成功はDへ残す。"
+        }
+      ],
+      "candidate_units": [
+        "A005",
+        "A006",
+        "A007"
+      ],
+      "delta_from_existing": "現行A005は具体例一つの逆引きと例示データだけの確定禁止、A006/A007はrole別の経路を持つ。追加は大量変更時の対象/所属/入口の母集団と残差を明示し、件数・標本・全件の構造照合・意味確認を区別すること。",
+      "evidence_boundary": "原典は全件照合表やサンプルの十分性閾値を規定しない。件数一致が不十分という一般論は同数の異なる集合が存在する論理と、操作ごとの範囲差から導いた検査方針。"
+    }
+  ],
+  "existing_unit_revision_candidates": [
+    {
+      "unit": "A005 / A006",
+      "proposal": "分類ノードと実対象の識別、所属、子孫/共有範囲を分離した変更対応表を必要範囲で残す。",
+      "basis": [
+        "R04-R2-F01"
+      ],
+      "format_boundary": "既存decision_notes、navigation rationale、goal_routes notes、unresolvedへ記載可能。新しいトップレベル項目やenumの実装は提案しない。"
+    },
+    {
+      "unit": "A005 / A006 / A007",
+      "proposal": "分類軸の意味と適用範囲を明示し、主題・対象者・局所分類を一つへそろえる前に残る探索目的を確認する。",
+      "basis": [
+        "R04-R2-F02"
+      ],
+      "format_boundary": "画面の共有と分類軸の統一を同一判断にしない。"
+    },
+    {
+      "unit": "A005 / A006 / A007",
+      "proposal": "大量変更では、件数・標本・全件構造照合・意味レビューの範囲を分離し、変更範囲の未対応と不意の変更を示す。",
+      "basis": [
+        "R04-R2-F03"
+      ],
+      "format_boundary": "分類件数やサンプル数の普遍的閾値を追加せず、全件人手検査を一律に要求しない。"
+    }
+  ],
+  "overlap": {
+    "known_sources_at_start": 40,
+    "selected_duplicate_count": 0,
+    "selected_new_source_count": 3,
+    "existing_A_overlap": [
+      "対象/分類/正本の区別、複数所属、役割別到達性、旧入口の意味対応、索引範囲はすでにA005–A007にある。",
+      "R02のGitHub改名/Shopifyフィルタの再発見は新規creditに含めない。"
+    ],
+    "independence_limit": "3資料はGOV.UK 1件とMicrosoft 2件。3つの独立実験とは数えない。"
+  },
+  "gaps": [
+    "原HTML/PDF全文はDNS失敗で取得できず、Web確認済みの選択抜粋のみを保存した。",
+    "実製品の変更前後inventory、全件照合、実際の検索・redirect・認可・索引反映、利用者の探索成功は未実行。",
+    "全件照合表と残差分類は設計上の導出で、原典が規定する移行手順や実験結果ではない。",
+    "GOV.UKではspot checkingを運用に含める。標本点検自体を不適切とする結論は出さない。",
+    "学術的なサンプル数の十分性、他の大規模カタログ、実移行失敗事例は未探索。費用はunknown。",
+    "変更前後の実データと顧客側の分類/権限一覧は提供されていない。",
+    "GOV.UK原則の全リンク、ISO/NISO、Microsoftの他全製品版・運用差分は追っていない。",
+    "旧URLが別物を指す新しいサービス事例は今回は未取得。既存A06の記述を維持する範囲に限る。"
+  ],
+  "backlog": [
+    {
+      "owner": "A",
+      "question": "実案件の変更前後inventoryと対象・分類・所属の対応を、revisionと範囲をそろえて確認する。",
+      "status": "入力未提供"
+    },
+    {
+      "owner": "B",
+      "question": "分類変更や旧入口の利用時に必要な前段条件・状態復帰・処理中状態をどう保つか。",
+      "status": "引継ぎ。今回未設計/未試験"
+    },
+    {
+      "owner": "C",
+      "question": "redirect、索引反映、検索scope、認可、用語のID/共有動作が実装で成立するか。",
+      "status": "引継ぎ。今回未実装/未試験"
+    },
+    {
+      "owner": "D",
+      "question": "役割別・境界例・同名異対象で利用者が発見/識別/判断できるか。",
+      "status": "引継ぎ。一般実験計画や有効サンプル数は今回の対象外"
+    }
+  ],
+  "cost": {
+    "amount": "unknown",
+    "currency": null,
+    "reason": "課金・トークン計測値は提供されない。検索数から金額を推測しない。"
+  },
+  "status": "research_complete_candidate_only; parent owns registry/implementation/adoption",
+  "artifacts": {
+    "summary.json": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/summary.json",
+    "snapshot-manifest.json": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/snapshot-manifest.json",
+    "map.md": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/map.md",
+    "log.md": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/log.md",
+    "queries.jsonl": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/queries.jsonl",
+    "fetch-log.jsonl": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/fetch-log.jsonl",
+    "extracts.json": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/extracts.json",
+    "report.html": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/report.html",
+    "digest.json": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/digest.json",
+    "digest.html": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/digest.html",
+    "web/call-index.json": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/web/call-index.json",
+    "logs/web-excerpt-check.json": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/logs/web-excerpt-check.json",
+    "bundle-check.json": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/bundle-check.json"
+  },
+  "source_records": [
+    "R04-R2-S01",
+    "R04-R2-S02",
+    "R04-R2-S03"
+  ],
+  "publication_scope": "Findings are researcher-authored summaries and conditional proposals. Original excerpts and retrieval responses are excluded."
+}

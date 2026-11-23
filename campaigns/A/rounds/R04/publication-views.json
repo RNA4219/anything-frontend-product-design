@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-23T09:30:19.637278+00:00",
+  "reason": "Preserve publication cleanup already applied to integration base",
+  "frozen_manifests": "Refer to original experimental bytes, not a claim that redacted public views are byte-identical.",
+  "views": [
+    {
+      "path": "campaigns/A/rounds/R04/instruction-snapshots/baseline/SKILL.md",
+      "original_sha256": "64cf83b646be6ba3de5f8ba767c57fefc3ec30ef97a776825e5f60b8633b832d",
+      "published_sha256": "cf946fedaf29663c3a6780b1026c085e49f74a4070553e38d41de01bc3305459",
+      "change": "Operational footer omitted; design instructions unchanged. Exact original retained with private experimental records."
+    },
+    {
+      "path": "campaigns/A/rounds/R04/instruction-snapshots/candidate/SKILL.md",
+      "original_sha256": "8a1bf6efea8793390b427a2a033345e1cb7be85f08442cb8cae73df608ec419e",
+      "published_sha256": "59da5d848d4ab469792c2fd02a058080265895fcd89886a2ef858a2039dbe825",
+      "change": "Operational footer omitted; design instructions unchanged. Exact original retained with private experimental records."
+    },
+    {
+      "path": "campaigns/A/rounds/R04/analysis.json",
+      "original_sha256": "d5155e06f533ca7a91323c6ded4c535b71ffbd57c1f59c3e8fe16a3dd72dc021",
+      "published_sha256": "ec2795234aa0f6c17816ee84dd3236936e1ddc74fd6693e195a3dd8ec299296c",
+      "change": "Non-design recording-system reference omitted; decision conditions, sources and proposed tests retained."
+    },
+    {
+      "path": "campaigns/A/rounds/R04/decomposition.md",
+      "original_sha256": "5d38478e45776c352aec7582c1b4b9f3bbdcf91d6b449d9dd3764271bc0e03aa",
+      "published_sha256": "8efde2e77dbad058c466df5266a402684ca86e452c293607ab67b9d47add75af",
+      "change": "Non-design recording-system reference omitted; decision conditions, sources and proposed tests retained."
+    }
+  ]
+}

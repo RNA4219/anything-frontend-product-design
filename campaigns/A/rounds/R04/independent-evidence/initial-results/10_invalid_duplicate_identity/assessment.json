@@ -1,0 +1,16 @@
+{
+  "case_id": "10_invalid_duplicate_identity",
+  "matched_expectations": true,
+  "exit_code": 2,
+  "mismatches": [],
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+    "--before",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/10_invalid_duplicate_identity/before.json",
+    "--after",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/fixtures-initial/10_invalid_duplicate_identity/after.json",
+    "--output",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/initial-results/10_invalid_duplicate_identity/actual.json"
+  ]
+}

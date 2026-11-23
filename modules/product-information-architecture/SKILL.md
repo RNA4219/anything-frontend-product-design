@@ -19,6 +19,7 @@ description: 利用者の目標から機能の維持・統合・延期・削除�
 |---|---|
 | 目標・機能の対応、統合・廃止・優先順位 | [機能判断](references/goals-and-features.md)、条件差・利用証拠は[利用条件と証拠](references/feature-context.md)。[A01](../../registry/A/skills/A-IU-001.json) [A02](../../registry/A/skills/A-IU-002.json) [A03](../../registry/A/skills/A-IU-003.json) [A04](../../registry/A/skills/A-IU-004.json) |
 | 分類・入口・画面責務 | [情報構造](references/information-architecture.md)、検索・旧入口・着地は[探索と入口の条件](references/navigation-evidence.md)。[A05](../../registry/A/skills/A-IU-005.json) [A06](../../registry/A/skills/A-IU-006.json) [A07](../../registry/A/skills/A-IU-007.json) |
+| 既存分類の再編・移行 | [分類変更と集合の照合](references/taxonomy-change.md)に沿い、[比較ツール](checks/compare_inventory.py)で対象ID・所属・役割別の入口を照合する。差分は意図した変更と突き合わせて判定する。 |
 | 開示・情報密度・検証 | [情報量と検証](references/disclosure-and-verification.md)、任意タスク・不明値は[判断情報の条件](references/decision-information.md)。[A08](../../registry/A/skills/A-IU-008.json) [A09](../../registry/A/skills/A-IU-009.json) [A10](../../registry/A/skills/A-IU-010.json) |
 | 一覧順・パンくず・分類・検索・翻訳 | [一覧と探索](references/special-navigation.md)：A201〜A205はDRAFT |
 | 用語・目次・図表 | [情報の説明](references/special-content.md)：A206〜A209はDRAFT |

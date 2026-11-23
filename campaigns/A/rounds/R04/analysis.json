@@ -1,0 +1,679 @@
+{
+  "common_conditions": [
+    {
+      "id": "R04-CC01",
+      "text": "全単位は既存A005–A007の条件改訂候補であり、新原則・完成した独立Skillではない。source_factsは研究者による原典確認記録、instructions/inferred_rulesは既存Skillへの導出として分ける。採用・登録・実装・公開の実行許可にしない。"
+    },
+    {
+      "id": "R04-CC02",
+      "text": "保存6抜粋のSHA-256を実再計算し全件一致した。対象は選択抜粋Markdownのbytesであり、原HTML/PDF全文のhashではない。原典全文は6件とも未保存。研究者の原典確認記録と保存抜粋を読んだが、Analystは原典全文を再取得・再読していない。引用CLI成功やhash一致を意味妥当性・実装成功の証明にしない。"
+    },
+    {
+      "id": "R04-CC03",
+      "text": "変更前後のrevision/取得日時、対象scope、関係role/goal、維持条件と承認済み変更理由を区別する。未知を同名・同件数・空欄・検索0で補わない。未確認が影響する判断だけを保留し、取得済み範囲の作業を進める。"
+    },
+    {
+      "id": "R04-CC04",
+      "text": "既存契約1.1のdecision_notes、navigation.rationale、goal_routes.notes、unresolvedへ対応と残件を残す。小変更は短い文章・表でよい。分類所属をfeatures.targetへ入れず、既存enum・正本化/廃止条件を維持する。SKOS/RDF導入、新トップレベル項目、全role×全itemの一律人手試験を追加義務にしない。"
+    },
+    {
+      "id": "R04-CC05",
+      "text": "構造上の対応、意味の確認、実装の索引・遷移・認可、人の発見・理解・判断成功を分ける。Aは構造と確認範囲、Bは操作状態、Cは実装/認可、Dは利用者評価を担う。checker PASSや資料の記載から実利用成功を宣言しない。"
+    },
+    {
+      "id": "R04-CC06",
+      "text": "根拠のある追加・改名・ID変更・分割・統合・範囲変更・終了、同一正本への複数所属/別名/入口、local/globalの併存を許容する。件数や階層形状の不変を要求しない。承認済み変更を記録する条件は一律の新規承認フローを追加する意味ではない。"
+    },
+    {
+      "id": "R04-CC07",
+      "text": "SKOS Referenceは知識組織化モデル、Primerは非規範の同系統説明。NISO 2005(R2010)の現行性は未確認。GOV.UKの主題分類運用とSharePointの操作仕様を一般UI規範へ拡張しない。6資料を6独立実験と数えず、普遍的な件数/階層/標本数の閾値を導かない。"
+    }
+  ],
+  "units": [
+    {
+      "id": "R04-A-U01",
+      "title": "分類概念の対応・実レコードの同一性・所属を別の関係として記録する",
+      "instructions": [
+        "分類・タグ・保存ビュー等を再編するとき、実レコードID、分類概念/ノードID、表示名・別名、概念の意味とscope、親子関係、概念間mapping、レコード→概念の所属、role・scope付き入口を区別して書く。feature/screen IDをレコードIDの代用にしない。必要な識別子が未提示なら同名照合で補わず、同一性判断を未確認とする。",
+        "各関係の主体と対象を明示する。概念C-old→C-newの対応は、実レコードR-old→R-newの同一性/承継でも、R→C-newへの分類付与でもない。概念mappingだけでレコード併合、所属の全移植、親子関係の継承、入口の保持を完了としない。",
+        "mappingや操作名の意味・適用範囲を確かめる。SKOS exactMatchはsameAsとは異なり、closeMatchの連鎖やexactMatchとbroader/relatedから未規定の継承を導かない。他製品のexact/merge/copy等に同じ仕様を仮定せず、当該仕様と実データを照合する。",
+        "改名・移動・複製・共有/再利用・分割・統合・終了ごとに、どの層のID/意味/関係が変わるか、影響する子孫、共有部分と場所固有部分、承継先または未確認を記す。表示名変更と意味範囲変更を分け、親への操作から全子孫への同じ操作を推測しない。",
+        "根拠のある1対多・多対1・多対多の変更対応を許す。概念の分割/統合からレコード自体の分割/統合を自動決定せず、どの旧対象/所属がどこへ移るかを必要範囲で記す。全旧対象を全後継へ複製して未対応を埋めない。",
+        "関係表をdecision_notesへID付きで残し、入口に関わる対応をrationale/notesへ接続する。ID・意味・所属・必要入口が変わらない小さな改名は短い保持根拠でよい。再編完了を主張する場合はU02の対象/所属照合、U03のrole/scopeの確認へ接続する。"
+      ],
+      "trigger": "分類概念の対応やrename/copy/reuse/merge/split等を、実レコードまたは入口の保持・移行の根拠にするとき。",
+      "inputs": [
+        "既存の実レコード/概念識別子、ラベル、意味範囲、親子関係、所属、入口",
+        "変更前後のrevision/取得日時・scope・変更意図と根拠",
+        "操作/関係の定義、子孫・共有部分・局所部分の範囲。未取得の仕様は未取得とする"
+      ],
+      "outputs": [
+        "主体/対象を区別した変更関係の作業表",
+        "各層の保持・変更・未確認と根拠、および関係入口への参照",
+        "同一性・子孫範囲等の不明点と、それにより確定できない判断"
+      ],
+      "conditions": [
+        "R04-CC01",
+        "R04-CC02",
+        "R04-CC03",
+        "R04-CC04",
+        "R04-CC05",
+        "R04-CC06",
+        "R04-CC07"
+      ],
+      "exceptions": [
+        "同一正本への別名・複数所属・複数入口を許容し、独立正本の複製や機能mergeと誤判定しない。",
+        "根拠付きのID/意味変更、承継なしの正当な終了を禁止しない。ID文字列と階層形状の一致は必須ではない。",
+        "局所的な小変更に全製品の台帳を要求しない。",
+        "SharePointのcopy/reuse/deprecateの子への作用は当該製品の説明に留め、他製品に移植しない。"
+      ],
+      "dependencies": [
+        "共通条件R04-CC01〜07。",
+        "既存A005の正本/分類、A006の入口対応、plan-contractのfeatures.targetの意味。",
+        "業務上の同一性・変更意図を確認できる元データ/担当者の根拠。",
+        "集合保持にはU02、探索への影響にはU03。U01だけで移行完了や探索成功を判定しない。"
+      ],
+      "why": "概念表現の整理は、対象集合の完全性や役割別経路の検査とは判定対象が違う。関係の型を先に分ければ、概念mapping全行の充足をレコード保持へ誤変換せずに済む。既存の正本原則を具体化する導出で、表形式の効果は未検証。",
+      "failure_modes": [
+        "概念のID/対応がそろったので実レコードも同一とする。",
+        "同名だが異なるscopeの分類を併合する。",
+        "用語mergeを文書mergeとし、子孫/局所部分まで一括継承する。",
+        "概念mapping・所属・入口を一つの対応済み欄へまとめる。"
+      ],
+      "verification": [
+        "具体的なレコードから同一性、分類、所属、別名、入口を別々に逆引きする。一例の成功を全件保存にしない。",
+        "同名異対象、ラベルだけ変更、複数所属、共有/局所部分を対照に無根拠の併合・全継承を点検する。",
+        "U02/U03の未実施を残し、概念mappingの完成を全レコード付与の完成へ言い換えない。"
+      ],
+      "source_refs": [
+        {
+          "source_id": "R04-R1-S01",
+          "locator": "§1.2; §8.6.6; §10.1; §10.6.3, .7, .8",
+          "url": "https://www.w3.org/TR/skos-reference/",
+          "version": "W3C Recommendation 18 August 2009",
+          "local_snapshot": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-1/sources/w3c-2009-skos-reference-selected-excerpts.md",
+          "sha256": "75847481df714650b277658b765bd05a7fc76cef105dff2c7525e0a0264b6baa",
+          "analyst_hash_match": true,
+          "archive_scope": "selected_excerpt_only; original HTML/PDF full text not saved"
+        },
+        {
+          "source_id": "R04-R1-S03",
+          "locator": "§2.1; §3.2–3.3",
+          "url": "https://www.w3.org/TR/skos-primer/",
+          "version": "W3C Working Group Note 18 August 2009; informative broken-link update 30 October 2023",
+          "local_snapshot": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-1/sources/w3c-2009-skos-primer-selected-excerpts.md",
+          "sha256": "24ce7d823f08f9661ef9fbb0bf895395e1509df1c608bfe3cb1e18e22824f484",
+          "analyst_hash_match": true,
+          "archive_scope": "selected_excerpt_only; original HTML/PDF full text not saved"
+        },
+        {
+          "source_id": "R04-R2-S02",
+          "locator": "Terms / Term Set L50–67; Increased flexibility L124–125",
+          "url": "https://learn.microsoft.com/en-us/sharepoint/managed-metadata",
+          "version": "Last updated 2026-06-25; live page observed 2026-11-23; immutable upstream revision unavailable",
+          "local_snapshot": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/sources/microsoft-2026-managed-metadata.md",
+          "sha256": "d84b1be6024ceb038091f364ebeb5024ce831efd2de0d23fba837f6f1d023925",
+          "analyst_hash_match": true,
+          "archive_scope": "selected_excerpt_only; original HTML/PDF full text not saved"
+        },
+        {
+          "source_id": "R04-R2-S03",
+          "locator": "Copy / Pin / Reuse / Merge / Deprecate term L67–120",
+          "url": "https://learn.microsoft.com/en-us/sharepoint/create-and-manage-terms",
+          "version": "Last updated 2024-05-28; live page observed 2026-11-23; immutable upstream revision unavailable",
+          "local_snapshot": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/sources/microsoft-2024-manage-terms.md",
+          "sha256": "c086fd1fc368f0bfa2c9a6fa14547ee0642102cb544ea3be79906be3587a3a11",
+          "analyst_hash_match": true,
+          "archive_scope": "selected_excerpt_only; original HTML/PDF full text not saved"
+        }
+      ],
+      "source_facts": [
+        {
+          "source_id": "R04-R1-S01",
+          "locator": "§1.2; §10.1; §10.6.8",
+          "statement": "SKOSは概念URI、ラベル、階層、体系間mappingを区別し、exactMatchをsameAsと区別する。",
+          "boundary": "SKOSのデータモデルの記述。アプリのレコード同一性やUI効果は保証しない。"
+        },
+        {
+          "source_id": "R04-R1-S01",
+          "locator": "§10.6.3; §10.6.7",
+          "statement": "closeMatchの連鎖は端点の対応を含意せず、exactMatchとbroader/related等を組み合わせた性質継承も規定しない。",
+          "boundary": "§10.6.7の全文は保存されていない。研究者の原典確認記録とlocatorに依拠する。"
+        },
+        {
+          "source_id": "R04-R1-S03",
+          "locator": "§2.1; §3.3",
+          "statement": "概念は語から独立して説明される。任意資源への主題付与はSKOS語彙自体の外にあり、一資源に複数主題を持てる。",
+          "boundary": "非規範のPrimer。レコード付与表の義務は本Skillへの導出。"
+        },
+        {
+          "source_id": "R04-R2-S02",
+          "locator": "Terms L61; Increased flexibility L124–125",
+          "statement": "SharePointのtermは固有IDと複数ラベルを持て、term統合はタグ付けされたコンテンツに反映されると説明される。",
+          "boundary": "term IDは文書IDではなく、文書の同一化・認可・索引即時更新を実証しない。"
+        },
+        {
+          "source_id": "R04-R2-S03",
+          "locator": "Copy / Reuse / Merge / Deprecate L67–120",
+          "statement": "SharePointではcopyとcopy with children、reuseの後追加子の範囲、mergeの属性統合、deprecateの子への影響が異なる。",
+          "boundary": "製品の公式操作説明。実tenantと子孫ID割当ては未試験。"
+        }
+      ],
+      "inferred_rules": [
+        "concept mapping・record lineage・record→concept付与・入口を別の関係として記録する。",
+        "変更の子孫/共有/局所の波及を別に確認し、操作名から自動継承しない。",
+        "既存notesに関係表を残す。原典がSkill固有の表形式や採用判定を定めたわけではない。"
+      ],
+      "tests": [
+        {
+          "id": "R04-A-U01-T01",
+          "kind": "counterexample",
+          "fixture": "C-old exactMatch C-newだけがあり、R17の新所属は無いのに移行済みとする。",
+          "expected": "概念対応充足とR17付与欠落を分離し、保持完了を確定しない。",
+          "failure": "concept対応からrecord保持を推測する。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R04-A-U01-T02",
+          "kind": "counterexample",
+          "fixture": "同名のC-A/C-Bに異なるscope/record集合があり、名前だけで併合する。",
+          "expected": "同一性/範囲の根拠がない変更を未確認として残す。",
+          "failure": "同名を同一性の証拠にする。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R04-A-U01-T03",
+          "kind": "control",
+          "fixture": "同じrecord/concept IDを保つ改名と、一recordの二つの正当な分類所属。",
+          "expected": "短い保持根拠で改名を許し、二所属を二正本と数えない。",
+          "failure": "全改名に新IDを要求するか複数所属を排除する。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R04-A-U01-T04",
+          "kind": "boundary",
+          "fixture": "共有する概念本体と一つの配置だけに追加した子。操作仕様と範囲は提示済み。",
+          "expected": "共有/局所を分け、全配置の子集合一致を要求しない。",
+          "failure": "親の共有から全子孫を共有扱いする。",
+          "status": "proposed_not_run"
+        }
+      ],
+      "novelty": "新原則0。A005の同名≠同一/多重所属、A006の旧入口対応と重なる。差分はconcept mapping・record lineage・付与を別の型として明示し、子孫/共有範囲の波及を区別する点。",
+      "existing_unit_ids": [
+        "A-IU-005",
+        "A-IU-006"
+      ],
+      "research_candidates": [
+        "R04-R1-C01",
+        "R04-R2-F01"
+      ],
+      "existing_overlap": [
+        "information-architecture.md A05 Decision Rules/Procedure/Verification",
+        "navigation-evidence.md §1 step5、§2 steps1–3",
+        "A-IU-005 v1.1.1; A-IU-006 v1.1.2"
+      ],
+      "changeable": {
+        "allowed": [
+          "作業表の列名・媒体・記載量は影響範囲に応じて変えられる。",
+          "根拠があればID・ラベル・階層・配置・分類数を変更できる。"
+        ],
+        "preserve": [
+          "関係の主体/対象、意味、scope、承継根拠、例外、未確認。",
+          "正本化と分類所属の区別。"
+        ],
+        "undecided": [
+          "実案件の識別子、同一性、子孫/共有範囲。未提示なら確定しない。"
+        ]
+      },
+      "standalone_scope": "共通条件と入力があれば関係の分離・変更記録に使える。集合完全性・役割別探索・実装成功は別の照合を要する。",
+      "existing_context_root": "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture",
+      "test_execution": "All semantic tests are proposed_not_run; no checker or task-usability tests executed by Analyst.",
+      "implementation_boundary": "現契約だけから汎用のrecord→concept対応やnotesの意味を自動検査できるとは宣言しない。ここでは指示の改訂候補を返す。checker/registryの再構成・実装は親担当で、現行checkerは未実行。"
+    },
+    {
+      "id": "R04-A-U02",
+      "title": "変更範囲の対象IDと所属を期待する変更へ照合し、残差を返す",
+      "instructions": [
+        "全体保持や再編完了を主張する前に、旧新inventoryのrevision/取得日時・scope・取得範囲を固定し、実レコード集合とrecord→conceptの所属集合を別に列挙する。集計が正本数・概念数・所属数・到達可能対象数のどれかを明記する。一部取得ならその部分集合を基準とし、範囲外を0件としない。",
+        "旧IDごとに、同一対象の保持、確認済みの後継/分割/統合への承継、承認された対象外化/終了、未確認を区別する。新規追加も別に記し、旧所属の維持または意図した変更の期待対応を残す。これらは説明上の区分で新enumではない。理由と行先が不明な差分を名前一致で埋めない。",
+        "必要な旧新入力が得られた範囲では、各旧対象ID/所属を期待する新ID/所属へ照合し、承継なしの欠落、未割当て、説明のない追加/所属変更、対応不能を列挙する。ID変更は確認済み承継をたどり、分割/統合は旧部分集合ごとの行先を確認する。件数やID文字列の変化だけでは不合格にしない。",
+        "総数やカテゴリ別件数が一致しても対象の入替・所属交換は起こり得る。概念mapping全行の充足、一件の逆引き、少数標本の成功を、レコード/所属全体の保持証拠へ昇格させない。件数は計数対象と照合範囲を伴う診断値として使う。",
+        "該当範囲で未付与と確認できた語の削除に、その語に分類された既存レコードの再索引保護を一律に要求しない。部分検索の0件から未使用とは推定せず、実在する子孫・参照・入口等への別の影響まで無いとはしない。既存対象/機能の廃止は既存A03条件へ戻す。",
+        "台帳/自動処理による構造照合、意味レビュー済みの対象・境界、実操作した入口、利用者評価の範囲を分ける。未確認集合は識別できる範囲で示し、母集団自体が不明ならそのscopeと影響を記す。全入力がなければ範囲限定の結果を返し、全体保持だけを保留する。全行の構造照合を全行の人手意味レビューと混同しない。",
+        "残差と承認済み差分をdecision_notesにID付きでまとめ、影響するrole・scope・旧入口をU03へ接続する。必須保持条件/経路に影響する未解決はblockingとしてunresolvedへ残し、無関係な不足で全作業を止めない。"
+      ],
+      "trigger": "多数の既存対象/所属を再編し、対象・分類付与・探索範囲の全体保持または移行完了を主張するとき。",
+      "inputs": [
+        "比較時点・scopeを明示した旧新の対象ID/所属一覧と取得範囲",
+        "U01または同等の、概念mappingとレコード承継を区別した記録",
+        "維持条件、意図した追加/変更/終了の対象と理由・承継先",
+        "索引/検索/入口の範囲、実施した構造・意味・実操作の記録"
+      ],
+      "outputs": [
+        "対象ID/所属の期待対応への照合結果、承認済み差分、未対応、不意の変更",
+        "構造照合・意味レビュー・実操作・利用者評価のカバレッジと未確認範囲",
+        "ID付きdecision_notesと影響を限定したunresolved"
+      ],
+      "conditions": [
+        "R04-CC01",
+        "R04-CC02",
+        "R04-CC03",
+        "R04-CC04",
+        "R04-CC05",
+        "R04-CC06",
+        "R04-CC07"
+      ],
+      "exceptions": [
+        "正当な追加・分割・統合・ID変更・範囲変更・終了を許容し、件数/ID/所属の全面不変を要求しない。",
+        "未使用語は既存索引済みレコード保護の例外となり得る。未使用の根拠と他の構造/入口影響は別に確認する。",
+        "標本点検自体は有効。確認した範囲として報告し、未観察範囲の保証にしない。",
+        "全role×全itemの一律人手評価、普遍的な標本数/件数上限、無関係な全製品棚卸しを要求しない。",
+        "部分母集団でも範囲内差分は確定できる。未知は全体保持主張を限定するが、範囲内の確定事項を無効化しない。"
+      ],
+      "dependencies": [
+        "共通条件R04-CC01〜07、U01の関係型、元データの識別可能性。",
+        "既存A005の例示だけで全体分類を確定しない条件、A006の承継条件、A03の廃止条件。",
+        "期待する変更の意味を確認する根拠/担当者。件数や名前だけでは代替できない。",
+        "役割/入口への影響はU03、実索引/検索/認可はC、人の発見/判断はD。"
+      ],
+      "why": "同じ要素数の異なる集合が存在し、同じ対象集合でも所属を交換できる。対象IDと所属の期待差分を別に見ると集計で見えない欠落を特定できる。ただし意味保存は期待対応自体の妥当性に依存し、全件構造照合だけでは保証しない。",
+      "failure_modes": [
+        "1件を落として別IDを足し、総数一致で保持済みとする。",
+        "対象集合・カテゴリ件数が一致してもD2/D3の所属交換を見落とす。",
+        "概念mappingが全件そろったので所属未設定を無視する。",
+        "部分snapshotの未取得範囲を不存在とする。",
+        "承認済み分割/終了を件数差だけで拒否する。",
+        "台帳一致・意味確認・人の探索成功を一つのPASSへまとめる。"
+      ],
+      "verification": [
+        "対象集合と所属集合を別々に照合し、期待する新対応への不足と説明されない追加を逆向きにも確認する。全取得範囲の構造差分照合を一律の全行人手意味レビューへ変えない。",
+        "集計一致の反例と、承認済み差分で集計が変わる対照を両方使う。",
+        "scope限定の結果を全体保証に言い換えず、期待対応・母集団の未知を残す。",
+        "概念mapping充足とrecord未付与の反例はU01-T01を共用し、同じ案を追加件数として重複計上しない。"
+      ],
+      "source_refs": [
+        {
+          "source_id": "R04-R1-S02",
+          "locator": "§11.3.1.2; §11.3.2.1; printed pp96–97 / PDF indexes107–108",
+          "url": "https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf",
+          "version": "Approved 25 July 2005; reaffirmed 13 May 2010; PDF 184 pages",
+          "local_snapshot": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-1/sources/niso-2010-controlled-vocabularies-selected-excerpts.md",
+          "sha256": "314814074a3ff7d69b5cc209ca1c1e8c153f473a6c0b66574603c081139d7fbc",
+          "analyst_hash_match": true,
+          "archive_scope": "selected_excerpt_only; original HTML/PDF full text not saved"
+        },
+        {
+          "source_id": "R04-R1-S01",
+          "locator": "§4.6.1; §1.4",
+          "url": "https://www.w3.org/TR/skos-reference/",
+          "version": "W3C Recommendation 18 August 2009",
+          "local_snapshot": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-1/sources/w3c-2009-skos-reference-selected-excerpts.md",
+          "sha256": "75847481df714650b277658b765bd05a7fc76cef105dff2c7525e0a0264b6baa",
+          "analyst_hash_match": true,
+          "archive_scope": "selected_excerpt_only; original HTML/PDF full text not saved"
+        },
+        {
+          "source_id": "R04-R1-S03",
+          "locator": "§3.3",
+          "url": "https://www.w3.org/TR/skos-primer/",
+          "version": "W3C Working Group Note 18 August 2009; informative broken-link update 30 October 2023",
+          "local_snapshot": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-1/sources/w3c-2009-skos-primer-selected-excerpts.md",
+          "sha256": "24ce7d823f08f9661ef9fbb0bf895395e1509df1c608bfe3cb1e18e22824f484",
+          "analyst_hash_match": true,
+          "archive_scope": "selected_excerpt_only; original HTML/PDF full text not saved"
+        },
+        {
+          "source_id": "R04-R2-S01",
+          "locator": "§3.2–3.5; Web L177–197",
+          "url": "https://www.gov.uk/government/publications/govuk-topic-taxonomy-principles/govuk-taxonomy-principles",
+          "version": "Published 2019-06-13; live page observed 2026-11-23; immutable upstream revision unavailable",
+          "local_snapshot": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/sources/govuk-2019-taxonomy-principles.md",
+          "sha256": "6cba94ab248ab8af6a34f5dc5ed0fa639e0ef051da71054f16d9cd72411982fe",
+          "analyst_hash_match": true,
+          "archive_scope": "selected_excerpt_only; original HTML/PDF full text not saved"
+        },
+        {
+          "source_id": "R04-R2-S03",
+          "locator": "Copy / Reuse / Merge / Deprecate term L67–120",
+          "url": "https://learn.microsoft.com/en-us/sharepoint/create-and-manage-terms",
+          "version": "Last updated 2024-05-28; live page observed 2026-11-23; immutable upstream revision unavailable",
+          "local_snapshot": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/sources/microsoft-2024-manage-terms.md",
+          "sha256": "c086fd1fc368f0bfa2c9a6fa14547ee0642102cb544ea3be79906be3587a3a11",
+          "analyst_hash_match": true,
+          "archive_scope": "selected_excerpt_only; original HTML/PDF full text not saved"
+        }
+      ],
+      "source_facts": [
+        {
+          "source_id": "R04-R1-S02",
+          "locator": "§11.3.1.2; §11.3.2.1, printed pp96–97",
+          "statement": "用語/関係の変更履歴と旧形を扱い、変更/削除時に既存索引済みレコードの検索を検討する。未使用語は例外となる。",
+          "boundary": "2005(R2010)版の統制語彙の記述。現行規範や製品機能廃止の一般許可とはしない。"
+        },
+        {
+          "source_id": "R04-R1-S02",
+          "locator": "§11.3.2.1(b)–(c), printed p97",
+          "statement": "一対一の用語変更と複数具体語への再編を区別し、後者は人の判断を要する場合がある。",
+          "boundary": "全role×全itemの人手試験、全件数不変、Skill固有差分表は規定しない。"
+        },
+        {
+          "source_id": "R04-R1-S01",
+          "locator": "§4.6.1; §1.4",
+          "statement": "SKOS単独では概念集合の境界を閉じられず、形式整合性と現実についての真偽は別である。",
+          "boundary": "SKOS表現能力の限界。明示した業務inventoryを作れないという意味ではない。"
+        },
+        {
+          "source_id": "R04-R1-S03",
+          "locator": "§3.3",
+          "statement": "概念の記述と実資源への主題付与は別の関係。",
+          "boundary": "概念一覧の充足は実レコード付与の完全性を保証しない。"
+        },
+        {
+          "source_id": "R04-R2-S01",
+          "locator": "§3.2, §3.5; L177–185, L194–197",
+          "statement": "GOV.UKはタグの標本点検と期待コンテンツの表示確認を挙げ、正当な下位topicのない大集合もあるとする。",
+          "boundary": "件数均等化や標本だけで大規模移行の完全性を保証する規則ではない。"
+        }
+      ],
+      "inferred_rules": [
+        "変更scope内の有限な対象/所属を期待対応へ照合し、残差を返す。原典はこの台帳形式を指定しない。",
+        "件数一致は集合/所属一致を含意しないという論理から保存証明に使わない。原典の移行実験結果ではない。",
+        "構造全件照合・意味レビュー・実操作・人の評価を分ける。標本の普遍的十分性は未導出。"
+      ],
+      "tests": [
+        {
+          "id": "R04-A-U02-T01",
+          "kind": "counterexample",
+          "fixture": "旧R0001…R1200、新R0001…R1199+R1300。承認された変更なし。",
+          "expected": "同数1200でもR1200の欠落とR1300の追加を別に返す。",
+          "failure": "集計一致だけで保存を認める。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R04-A-U02-T02",
+          "kind": "counterexample",
+          "fixture": "維持要求のP={D1,D2}, Q={D3}がP={D1,D3}, Q={D2}へ変わる。対象総数/各カテゴリ件数は一致。",
+          "expected": "D2/D3の所属変更を期待対応との差分として返す。",
+          "failure": "対象集合と各件数が合うため所属保持も認める。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R04-A-U02-T04",
+          "kind": "boundary",
+          "fixture": "一サイトの旧新集合だけ取得し一致。他サイトのID/件数は不明。",
+          "expected": "当該scopeの結果を返し全体保持は未確認。他の確定作業は進める。",
+          "failure": "未知を0か成功にする、または無関係な作業も止める。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R04-A-U02-T05",
+          "kind": "control",
+          "fixture": "承認済みP→P1/P2分割とID変更を伴う後継があり、旧各対象/所属の行先・理由がそろう。",
+          "expected": "承継条件で判断し、概念数・ID文字列の変化だけで拒否しない。",
+          "failure": "件数/ID不変を強制する。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R04-A-U02-T06",
+          "kind": "control",
+          "fixture": "該当scopeで未付与と確認できた語を削除。関係子孫/参照/入口にも未処理の影響なし。",
+          "expected": "存在しない旧付与を創作せず削除を許容する。",
+          "failure": "未使用語にも全record再索引や恒久保存を要求する。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R04-A-U02-T07",
+          "kind": "control",
+          "fixture": "承認された終了と新規追加に対象対応・理由・入口の扱いがある。",
+          "expected": "意図した差分として記録し、同数かによらず必要条件で判断する。",
+          "failure": "全減少を消失不具合、全増加を重複不具合とする。",
+          "status": "proposed_not_run"
+        }
+      ],
+      "novelty": "新原則0。既存A005の例示/不明件数の限界、A006の承継を具体化。差分はscope内の対象ID・所属を別々に全取得範囲へ照合し、集計・標本・構造照合・意味確認の残差とカバレッジを分ける点。",
+      "existing_unit_ids": [
+        "A-IU-005",
+        "A-IU-006",
+        "A-IU-007"
+      ],
+      "research_candidates": [
+        "R04-R1-C02",
+        "R04-R2-F03",
+        "R04-R1-C01",
+        "R04-R2-F01"
+      ],
+      "existing_overlap": [
+        "information-architecture.md A05 Procedure5/Verification、A06/A07 Verification",
+        "navigation-evidence.md §1の検索scope、§2の旧入口承継",
+        "plan-contract.md 検査の範囲・checks_available"
+      ],
+      "changeable": {
+        "allowed": [
+          "照合媒体・自動化方式は固定しない。",
+          "承認済み差分に応じて対象/概念/所属数とIDを変更できる。",
+          "部分入力なら主張範囲を限定できる。"
+        ],
+        "preserve": [
+          "計数対象、比較時点、母集団/部分集合、期待対応、承認済み差分、未確認。",
+          "未使用語・正当な終了/分割/統合の例外。"
+        ],
+        "undecided": [
+          "実案件の母集団・期待所属・承継意味・索引/認可/実利用効果。",
+          "意味レビューに十分な標本選択/数。普遍的閾値は作らない。"
+        ]
+      },
+      "standalone_scope": "共通条件と識別可能な旧新対象/所属・期待対応があればscope限定照合に使える。期待対応が未確定なら差分列挙までで、意味保存/全体移行完了は確定できない。",
+      "existing_context_root": "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture",
+      "test_execution": "All semantic tests are proposed_not_run; no checker or task-usability tests executed by Analyst.",
+      "implementation_boundary": "現契約だけから汎用のrecord→concept対応やnotesの意味を自動検査できるとは宣言しない。ここでは指示の改訂候補を返す。checker/registryの再構成・実装は親担当で、現行checkerは未実行。"
+    },
+    {
+      "id": "R04-A-U03",
+      "title": "再分類後の探索軸と判断候補を関係role・scopeごとに照合する",
+      "instructions": [
+        "影響する分類軸ごとに、主題・対象者・職務・場所等の何を表すか、どのroleの何の判断に使うか、対象record集合と利用scopeを記す。主題の一致から対象者/職務/公開範囲の一致を推測しない。term set等のlocal/global利用範囲、navigationのglobal/local/contextual、コンテンツ閲覧認可を分ける。",
+        "U02の旧対象/所属と残差を、実在し維持が必要な（role、goal、scope、入口）へ接続する。旧入口から探せた対象と必要な絞込/比較条件を、新入口・選択肢・担当画面へ対応させる。管理者の到達、全体検索、概念統合だけで別roleや局所範囲の探索保持を認めない。",
+        "異なる探索目的が残る場合は、同じ正本に対する複数分類・別名・役割別入口・局所ビューを候補に残す。単一所属/分類へ機械的に統一しない。目的・対象・scopeが同じ重複分類は統合できる。件数均等化のために意味のない下位分類を作らない。",
+        "再分類と画面統合/分割を、必要候補集合・横断比較・識別属性・必要絞込・情報権限で照合する。必要な区別を消す統合と比較を壊す分割の両方を点検する。分類共有、画面共用、feature mergeを別の判断とし、異なるrole/object/outcomeのkeep機能を共用画面だけを理由に統合しない。",
+        "既存A006/A007に従い、選択時の文脈・期待対象/粒度・宣言target・実際の判断場所を照合する。必要候補とneeded_informationが判断場所で使える条件を残し、分類上同じ箱にあることを比較/識別可能性の証拠にしない。認可された宣言経路、keep機能、primary情報の既存義務を緩めない。",
+        "確認範囲は変更で影響するrole・scope・分類境界から決める。構造照合した集合と意味/探索を確認した標本を分け、未確認role・範囲・入口と影響を残す。全role×全itemの一律人手試験、提供していない任意タスク、プロセス途中への独立入口を新たに強制しない。",
+        "対応をdecision_notes/rationale/notesへ残す。必要入口や認可条件が不明で必須経路に影響するならblockingとしてB/Cへ、ラベル理解・発見・判断成功の未確認はDへ具体的な課題を渡す。既存廃止条件に従う後継案内・明示終了・範囲変更を許し、旧入口の永久保持を要求しない。"
+      ],
+      "trigger": "分類の統一/分割、共有/局所分類、画面の統合/分割が、役割別入口または必要な判断候補へ影響するとき。",
+      "inputs": [
+        "影響role/goal、探索目的、対象record集合または検証可能な選択条件、分類軸とscope",
+        "実在する旧入口、必要な探索/比較/識別条件、保持/変更/終了の理由",
+        "U01関係記録、U02照合範囲/残差、既存A006/A007の画面・経路・必要情報",
+        "権限・局所範囲・実UI・実操作・利用者確認の既知根拠と未確認"
+      ],
+      "outputs": [
+        "影響する（role、goal、scope、入口）ごとの旧新対象集合と必要判断条件の対応",
+        "複数軸・共用画面・別featureを区別した採否理由",
+        "構造・意味・実装・人の確認を分けた残件とB/C/Dへの依存"
+      ],
+      "conditions": [
+        "R04-CC01",
+        "R04-CC02",
+        "R04-CC03",
+        "R04-CC04",
+        "R04-CC05",
+        "R04-CC06",
+        "R04-CC07"
+      ],
+      "exceptions": [
+        "同じ対象/目的/scopeの分類は統合できる。複数軸・ファセット・複数画面を全案件の義務にしない。",
+        "local/global分類と複数所属は併存できる。分類利用範囲をコンテンツ閲覧認可と同一視しない。",
+        "承認されたscope変更/廃止は既存A03条件と失う成果/入口の扱いを残して許容する。",
+        "途中/結果の独立入口を一律要求しないが、前段条件・must成果・認可は保つ。",
+        "部分母集団/未確認roleについて結果を限定し、無関係なroleや全itemへ人手試験を拡張しない。"
+      ],
+      "dependencies": [
+        "共通条件R04-CC01〜07、U01の軸/record分離。全体保持を主張する場合はU02の集合根拠。",
+        "既存A006のrole別到達と旧入口、A007の判断局面/needed_information、plan-contractの共有画面roles条件。",
+        "Bの前段/再開/状態、Cの検索/索引/表示/認可、Dの発見/理解/判断。資料だけで完了としない。"
+      ],
+      "why": "実レコードと所属が残っても、必要roleが探せる入口や比較条件は失われ得る。分類軸の意味をrole/scopeの判断候補へ接続する仕事として切り出す。既存A006/A007への影響確認の具体化で、新しい一般画面分割原則ではない。",
+      "failure_modes": [
+        "一般利用者入口を消し、管理者の到達で全role保持とする。",
+        "local分類の存在を全社利用/閲覧認可の証拠にする。",
+        "主題一本化で必要な対象者別探索を消す。",
+        "同一recordの複数所属を機能重複として削除する。",
+        "画面共用のために異なる対象/成果/権限のfeatureをmergeする。",
+        "分類表完成を実画面の比較可能性や人の成功とする。"
+      ],
+      "verification": [
+        "維持すべきrole/goal/scope/入口から新対象集合・必要絞込・担当画面への対応をたどる。入口数やadminの成功だけでは完了としない。",
+        "同名異対象、複数所属、局所分類、主題/対象者軸、権限境界が当該変更にある場合に影響を確認する。不要な境界を創作しない。",
+        "分類統合と画面共用を別々に記録し、必要候補・比較属性・primary情報の欠落を点検する。",
+        "実索引/認可/着地、人の発見/理解が未確認なら構造対応のみと報告する。"
+      ],
+      "source_refs": [
+        {
+          "source_id": "R04-R2-S01",
+          "locator": "§1.4; §2.1; §3.3–3.5; Web L110–127, L186–197",
+          "url": "https://www.gov.uk/government/publications/govuk-topic-taxonomy-principles/govuk-taxonomy-principles",
+          "version": "Published 2019-06-13; live page observed 2026-11-23; immutable upstream revision unavailable",
+          "local_snapshot": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/sources/govuk-2019-taxonomy-principles.md",
+          "sha256": "6cba94ab248ab8af6a34f5dc5ed0fa639e0ef051da71054f16d9cd72411982fe",
+          "analyst_hash_match": true,
+          "archive_scope": "selected_excerpt_only; original HTML/PDF full text not saved"
+        },
+        {
+          "source_id": "R04-R2-S02",
+          "locator": "Term Set / Terms L50–67; Metadata scenarios L90–100",
+          "url": "https://learn.microsoft.com/en-us/sharepoint/managed-metadata",
+          "version": "Last updated 2026-06-25; live page observed 2026-11-23; immutable upstream revision unavailable",
+          "local_snapshot": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-2/sources/microsoft-2026-managed-metadata.md",
+          "sha256": "d84b1be6024ceb038091f364ebeb5024ce831efd2de0d23fba837f6f1d023925",
+          "analyst_hash_match": true,
+          "archive_scope": "selected_excerpt_only; original HTML/PDF full text not saved"
+        },
+        {
+          "source_id": "R04-R1-S02",
+          "locator": "§9.1.2; printed pp57–58 / PDF indexes68–69",
+          "url": "https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf",
+          "version": "Approved 25 July 2005; reaffirmed 13 May 2010; PDF 184 pages",
+          "local_snapshot": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-1/sources/niso-2010-controlled-vocabularies-selected-excerpts.md",
+          "sha256": "314814074a3ff7d69b5cc209ca1c1e8c153f473a6c0b66574603c081139d7fbc",
+          "analyst_hash_match": true,
+          "archive_scope": "selected_excerpt_only; original HTML/PDF full text not saved"
+        },
+        {
+          "source_id": "R04-R1-S03",
+          "locator": "§3.3",
+          "url": "https://www.w3.org/TR/skos-primer/",
+          "version": "W3C Working Group Note 18 August 2009; informative broken-link update 30 October 2023",
+          "local_snapshot": "/workspace/scratch/10bb09e1845f/private/research/R04/researcher-1/sources/w3c-2009-skos-primer-selected-excerpts.md",
+          "sha256": "24ce7d823f08f9661ef9fbb0bf895395e1509df1c608bfe3cb1e18e22824f484",
+          "analyst_hash_match": true,
+          "archive_scope": "selected_excerpt_only; original HTML/PDF full text not saved"
+        }
+      ],
+      "source_facts": [
+        {
+          "source_id": "R04-R2-S01",
+          "locator": "§1.4; §2.1 L110–127",
+          "statement": "GOV.UK topic taxonomyは内容の主題を分類し、発行組織・形式・タスク・利用者集団/職業を同じ軸として扱わない。",
+          "boundary": "当該設計の目的。他サービスの対象者分類/role別navigationを禁じない。"
+        },
+        {
+          "source_id": "R04-R2-S01",
+          "locator": "§3.5 L194–197",
+          "statement": "正当な下位topicのない大集合もあり、件数均等化を前提としない。",
+          "boundary": "GOV.UK固有の子topic数推奨を普遍的閾値へ転用しない。"
+        },
+        {
+          "source_id": "R04-R2-S02",
+          "locator": "Term Set / Terms L50–67; Metadata scenarios L90–100",
+          "statement": "SharePointのlocal/global term setでは利用/表示範囲が異なり、管理分類とenterprise keywordsを併用できる。",
+          "boundary": "製品能力の説明。コンテンツ認可成功や複数軸の一般的優越性の実証ではない。"
+        },
+        {
+          "source_id": "R04-R1-S02",
+          "locator": "§9.1.2 printed pp57–58",
+          "statement": "語彙表示では保守担当者・専門検索者・一般利用者の必要を考慮する。",
+          "boundary": "語彙利用の役割。製品認可モデルや全role×全item試験を規定しない。"
+        },
+        {
+          "source_id": "R04-R1-S03",
+          "locator": "§3.3",
+          "statement": "一資源は複数主題を持て、それらは異なる分類体系に由来してもよい。",
+          "boundary": "複数所属の可能性。全UIへの複数軸義務ではない。"
+        }
+      ],
+      "inferred_rules": [
+        "分類軸の目的/scopeを明示し、対象集合を関係role/scopeの入口・判断場所へ接続する。",
+        "必要な目的が異なれば複数分類/別名/局所ビューを選択肢として残す。",
+        "分類軸統合・画面共用・feature正本化を別判断にする。公式資料はこのSkillの対応表や人の成功を規定しない。"
+      ],
+      "tests": [
+        {
+          "id": "R04-A-U03-T01",
+          "kind": "counterexample",
+          "fixture": "recordと分類は維持したが、保持要件のある一般利用者入口だけ削除。管理者入口は残る。",
+          "expected": "一般利用者scopeの探索欠落を返し管理者成功で補わない。",
+          "failure": "record数と管理者経路で全role保持を認める。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R04-A-U03-T02",
+          "kind": "boundary",
+          "fixture": "同名local/global分類がありlocalだけに属する対象がある。分類scopeは既知、文書閲覧認可は未確認。",
+          "expected": "分類scopeと認可を分け、未確認の閲覧成功を主張しない。",
+          "failure": "分類可視性や名称から全利用者の閲覧成功を推測する。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R04-A-U03-T03",
+          "kind": "counterexample",
+          "fixture": "同一D1を主題「安全」と対象者「設計」「保守」で探す必要がある。主題一本化で対象者入口を消す。",
+          "expected": "残る探索目的と失われる入口を示し、複数所属を複数正本と数えない。",
+          "failure": "D1が残るから必要な対象者探索を削除してよいとする。",
+          "status": "proposed_not_run"
+        },
+        {
+          "id": "R04-A-U03-T04",
+          "kind": "control",
+          "fixture": "同じ対象/目的/scopeの重複分類を別名へ統合し、必要role入口・比較属性・別feature keepを保つ共用画面。",
+          "expected": "統合/共用を許し、文字列/分類数不変や複数画面を要求しない。",
+          "failure": "統合自体を禁ずるか共用画面だから異なるfeatureまでmergeする。",
+          "status": "proposed_not_run"
+        }
+      ],
+      "novelty": "新原則0。A005多重所属、A006 role別入口/scope、A007判断材料が基礎。差分は再分類の対象/所属残差をrole/scopeの探索軸・判断候補へ接続し、分類local/globalをnavigation種別/認可と取り違えない点。",
+      "existing_unit_ids": [
+        "A-IU-005",
+        "A-IU-006",
+        "A-IU-007"
+      ],
+      "research_candidates": [
+        "R04-R2-F02",
+        "R04-R1-C02",
+        "R04-R2-F03"
+      ],
+      "existing_overlap": [
+        "information-architecture.md A05比較/多重所属、A06 Decision Rules/Procedure、A07 Decision Rules/Verification",
+        "navigation-evidence.md §1 step4、§2、§3",
+        "plan-contract.md navigation/goal_routesと共用画面roles"
+      ],
+      "changeable": {
+        "allowed": [
+          "目的/対象/scopeが同じなら分類統合・別名整理・画面共用を選べる。",
+          "必要な探索目的が異なれば複数分類・役割入口・局所ビューを残せる。",
+          "既存廃止条件に従い旧入口終了/scope変更を選べる。"
+        ],
+        "preserve": [
+          "必要role、対象scope、候補比較、識別、権限、前段条件。",
+          "分類scope・navigation種別・実認可の区別。既存mandatory capability/needed_informationの経路条件。"
+        ],
+        "undecided": [
+          "実案件で維持すべきrole/軸/入口、実UI比較可能性、索引更新、認可、人の成功。"
+        ]
+      },
+      "standalone_scope": "共通条件と対象集合/role/scope/入口が既知なら影響範囲の経路・判断条件を照合できる。全体保持にはU02相当の集合根拠、実装/人の成功にはB/C/Dの確認が必要。",
+      "existing_context_root": "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture",
+      "test_execution": "All semantic tests are proposed_not_run; no checker or task-usability tests executed by Analyst.",
+      "implementation_boundary": "現契約だけから汎用のrecord→concept対応やnotesの意味を自動検査できるとは宣言しない。ここでは指示の改訂候補を返す。checker/registryの再構成・実装は親担当で、現行checkerは未実行。"
+    }
+  ]
+}

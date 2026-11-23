@@ -1,0 +1,73 @@
+{
+  "case_id": "herbarium-north",
+  "revision": "cabinet-17",
+  "concepts": [
+    {
+      "id": "use-study",
+      "label": "研究用",
+      "axis": "用途",
+      "scope": "collection",
+      "parent_ids": []
+    },
+    {
+      "id": "use-loan",
+      "label": "貸出用",
+      "axis": "用途",
+      "scope": "collection",
+      "parent_ids": [
+        "external-parent"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "H-fern",
+      "label": "シダ標本",
+      "scope": "north",
+      "roles": [
+        "curator",
+        "botanist"
+      ],
+      "concept_ids": [
+        "use-study"
+      ],
+      "source_assertion": "unverified"
+    },
+    {
+      "id": "H-moss",
+      "label": "コケ標本",
+      "scope": "north",
+      "roles": [
+        "curator"
+      ],
+      "concept_ids": [
+        "external-concept"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "E-curator",
+      "path": "/herbarium/catalog",
+      "role": "curator",
+      "scope": "north",
+      "concept_ids": [
+        "use-study",
+        "use-loan"
+      ]
+    },
+    {
+      "id": "E-botanist",
+      "path": "/herbarium/research",
+      "role": "botanist",
+      "scope": "north",
+      "concept_ids": [
+        "use-study"
+      ]
+    }
+  ],
+  "snapshot_coverage": {
+    "scope": "one cabinet only",
+    "total_unknown": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "round": "R04",
+  "frozen_at": "2026-11-23T08:56:15.616845+00:00",
+  "baseline_commit": "9e14fbaa1d7b0c3d00ddf3a4b208a21300f0d337",
+  "candidate": "Parent reconstruction from final R04 analyst output; before independent critique",
+  "files": {
+    "SKILL.md": "8a1bf6efea8793390b427a2a033345e1cb7be85f08442cb8cae73df608ec419e",
+    "checks/validate_plan.py": "4dbc9bd1e541568bcf2acc4c06f720acfc8b391d711e63742c581d3fd6b2617f",
+    "checks/compare_inventory.py": "2e5cc45b1a60c6760ca2ecdb5cf8b3dc6c8ef45bdc4ea5b980507fcb4cdbe7e4",
+    "references/plan-contract.md": "32db06d9faee3ae2633ef81175706eeedfeb10830d8c584e9c1b19f4f93533dd",
+    "references/decision-information.md": "5966d9a675ad24dc98589efa1e5bde3371f9f4750c9b04ab6674ac75ab0e1731",
+    "references/feature-context.md": "a337109da9a1c88a0224e663e569136a377a642951988006a8ce9225f1800411",
+    "references/navigation-evidence.md": "13cdea39838cd389e7604fd11a634c63362f737ceb6238ab90cf9b2d21b2cb85",
+    "references/disclosure-and-verification.md": "c665a6549142d51355789cd794cb2f7df4ec65d56a2c5f4583d3e22bb9f74f05",
+    "references/sources.md": "4cf30b8d425cb61ca963f373960b6aacbb615ccd80757c02636fb4f2a01a6fba",
+    "references/information-architecture.md": "66c9eb73ba8bdcab2ad6644f3cdfe1f27cfe09b703a4026ca675142a84981648",
+    "references/taxonomy-change.md": "f677b8e36d20a81f51d3f4f85c06474575fb9e49110fc9ae681cd1fb2b54d4eb",
+    "references/goals-and-features.md": "528d24f2ed148952d2de194cde0c783bc99a5e18069981d1f32fe14e6c53fbf9",
+    "examples/decisions.md": "9b4e846acf78e6fe2c323a60de1e7b3a6460412ec9a88095643dfd7d04ca26d2"
+  }
+}

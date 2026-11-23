@@ -1,0 +1,27 @@
+{
+  "status": "INVALID_INPUT",
+  "decision": "NOT_EVALUATED",
+  "errors": [
+    {
+      "location": "after.records[0].roles",
+      "message": "Array of nonempty strings required"
+    },
+    {
+      "location": "after.records[0].label",
+      "message": "Nonempty string required"
+    },
+    {
+      "location": "after.records[1].concept_ids",
+      "message": "Repeated membership is ambiguous input; normalize explicitly"
+    },
+    {
+      "location": "after.entries[1].scope",
+      "message": "Required field missing"
+    }
+  ],
+  "unexamined_fields": [],
+  "input_sha256": {
+    "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+    "after": "e4aa01ce11110a8b7785200ec1dac5879528a2bab4a38a6289173ba33e8f4da0"
+  }
+}

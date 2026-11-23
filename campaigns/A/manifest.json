@@ -3,18 +3,19 @@
   "session_id": "A",
   "domain": "product-information-architecture",
   "base_sha": "3d02174a69676afa8e0b02f4062cc6ecb636d300",
-  "branch": "campaign/A-product-ia-evolution-20261123",
+  "branch": "campaign/A-product-ia-r04-20261123",
   "reference_art_direction_sha": "f5df625dbc577d6a3ca28e13ef09e39b135b4a6f",
   "prior_A_reference_sha": "97b19c29c0b63acfee9ad437f93af081ac0c6ef8",
   "max_rounds": 12,
   "max_concurrent_total": 3,
-  "status": "RUNNING",
+  "status": "PAUSED_AT_CHECKPOINT",
   "completed_rounds": [
     "R01",
     "R02",
-    "R03"
+    "R03",
+    "R04"
   ],
-  "next_round": "R04",
+  "next_round": "R05",
   "cost": {
     "currency": null,
     "actual_amount": null,
@@ -32,5 +33,17 @@
     "subagent_mechanism": "collaboration.spawn_agent",
     "tooling": "imozuru and sankai pinned public revisions"
   },
-  "checkpoint": "campaigns/A/rounds/R03/decision.json"
+  "checkpoint": "campaigns/A/rounds/R04/decision.json",
+  "summary": "campaigns/A/summary.json",
+  "stop_reason": "Bounded execution checkpoint after four substantive cycles; continuation work is registered. Not saturation or all-domain completion.",
+  "saturation_streak": 0,
+  "active_children": 0,
+  "integration_base_sha": "4333d097b5699528b5554434b494d8079126ba0f",
+  "previous_branch": "campaign/A-product-ia-evolution-20261123",
+  "previous_pr_url": "https://github.com/RNA4219/anything-frontend-product-design/pull/6",
+  "previous_pr_state": "merged by concurrent work",
+  "publication_status": "DRAFT_OPEN",
+  "publication_checkpoint": "campaigns/A/rounds/R04/published-validation.json",
+  "previous_integration_base_sha": "8b4d23426ffb71af82e924803f32ca59d80f3662",
+  "pr_url": "https://github.com/RNA4219/anything-frontend-product-design/pull/3"
 }

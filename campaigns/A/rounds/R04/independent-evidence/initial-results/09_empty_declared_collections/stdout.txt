@@ -1,0 +1,58 @@
+{
+  "status": "COMPARED",
+  "decision": "NOT_EVALUATED",
+  "basis": {
+    "before_revision": "cabinet-17",
+    "after_revision": "cabinet-18",
+    "proposed_basis_revision": "cabinet-17",
+    "basis_matches": true
+  },
+  "counts": {
+    "concepts": {
+      "before": 0,
+      "after": 0
+    },
+    "records": {
+      "before": 0,
+      "after": 0
+    },
+    "entries": {
+      "before": 0,
+      "after": 0
+    }
+  },
+  "differences": {
+    "concepts": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "records": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "entries": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    }
+  },
+  "input_warnings": [],
+  "references_not_in_snapshot": [],
+  "unexamined_fields": [],
+  "checks_available": {
+    "declared_field_comparison": true,
+    "source_truth": false,
+    "whole_inventory_completeness": false,
+    "semantic_equivalence": false,
+    "change_authorization": false,
+    "runtime_findability": false,
+    "human_effectiveness": false
+  },
+  "meaning": "Differences require interpretation against intended changes and scope. Equal counts or no examined-field differences do not establish preservation, authorization or usability.",
+  "input_sha256": {
+    "before": "2f6f9ed3e382706872b5bb20ba46dd7e4d527424a963f882fd55eb7bb201b649",
+    "after": "979e2f04f69ce55c85e9c544c98028c5dbc6d589f6f5bf98227a5600fc3f188f"
+  }
+}

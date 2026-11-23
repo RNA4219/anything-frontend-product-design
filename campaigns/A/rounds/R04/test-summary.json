@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-23T09:07:34.657628+00:00",
+  "isolated_module_without_campaigns": true,
+  "exit_code": 0,
+  "methods": 70,
+  "scope": "Entire module regression suite, including source-output collision controls; no browser or human evaluation.",
+  "python_version": "3.12.14"
+}

@@ -1,0 +1,33 @@
+{
+  "case_id": "same_before_path",
+  "expected": {
+    "exit_code": 2,
+    "status": "INVALID_INPUT",
+    "source_bytes_preserved": true
+  },
+  "actual": {
+    "exit_code": 2,
+    "status": "INVALID_INPUT",
+    "source_bytes_preserved": true,
+    "decision": "NOT_EVALUATED"
+  },
+  "matched_expectations": true,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/10bb09e1845f/session-A/modules/product-information-architecture/checks/compare_inventory.py",
+    "--before",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/same_before_path/before.json",
+    "--after",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/same_before_path/after.json",
+    "--output",
+    "/workspace/scratch/10bb09e1845f/private/review/R04/correction-results/same_before_path/before.json"
+  ],
+  "input_sha256_before": {
+    "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+    "after": "421b18cf180a665429390fcdcaa7c43cb362c0102043113bec37bc5fa1b13a5e"
+  },
+  "input_sha256_after": {
+    "before": "8c96a04d9c5c0c560c495a456a93461ea7961f16d235089562dc12ca2a67450a",
+    "after": "421b18cf180a665429390fcdcaa7c43cb362c0102043113bec37bc5fa1b13a5e"
+  }
+}

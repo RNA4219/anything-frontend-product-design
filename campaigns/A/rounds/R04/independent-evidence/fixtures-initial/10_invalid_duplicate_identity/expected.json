@@ -1,0 +1,9 @@
+{
+  "decision": "NOT_EVALUATED",
+  "rationale": "同一集合の重複IDを拒否し、比較結果を生成しない。",
+  "status": "INVALID_INPUT",
+  "exit_code": 2,
+  "error_locations": [
+    "after.records[2].id"
+  ]
+}

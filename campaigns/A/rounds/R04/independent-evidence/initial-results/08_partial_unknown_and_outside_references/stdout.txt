@@ -1,0 +1,80 @@
+{
+  "status": "COMPARED",
+  "decision": "NOT_EVALUATED",
+  "basis": {
+    "before_revision": "cabinet-17",
+    "after_revision": "cabinet-18",
+    "proposed_basis_revision": "cabinet-17",
+    "basis_matches": true
+  },
+  "counts": {
+    "concepts": {
+      "before": 2,
+      "after": 2
+    },
+    "records": {
+      "before": 2,
+      "after": 2
+    },
+    "entries": {
+      "before": 2,
+      "after": 2
+    }
+  },
+  "differences": {
+    "concepts": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "records": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "entries": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    }
+  },
+  "input_warnings": [],
+  "references_not_in_snapshot": [
+    {
+      "location": "before.records.H-moss.concept_ids",
+      "id": "external-concept"
+    },
+    {
+      "location": "before.concepts.use-loan.parent_ids",
+      "id": "external-parent"
+    },
+    {
+      "location": "after.records.H-moss.concept_ids",
+      "id": "external-concept"
+    },
+    {
+      "location": "after.concepts.use-loan.parent_ids",
+      "id": "external-parent"
+    }
+  ],
+  "unexamined_fields": [
+    "before.records[].source_assertion",
+    "before.snapshot_coverage",
+    "after.records[].source_assertion",
+    "after.snapshot_coverage"
+  ],
+  "checks_available": {
+    "declared_field_comparison": true,
+    "source_truth": false,
+    "whole_inventory_completeness": false,
+    "semantic_equivalence": false,
+    "change_authorization": false,
+    "runtime_findability": false,
+    "human_effectiveness": false
+  },
+  "meaning": "Differences require interpretation against intended changes and scope. Equal counts or no examined-field differences do not establish preservation, authorization or usability.",
+  "input_sha256": {
+    "before": "88d6c95ee677edca2e305773fc7f963c8a5ae175089b007b341b3b59a38ba00b",
+    "after": "ca6313625c024bacfb00b02270150246d433c1f6ef189e26be0490dda4954d8b"
+  }
+}

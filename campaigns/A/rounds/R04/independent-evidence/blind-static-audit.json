@@ -1,0 +1,358 @@
+{
+  "source_audit": {
+    "source_revision": "inventory-r17",
+    "proposal_revision": "inventory-r18-proposed",
+    "source_count": 96,
+    "proposal_count": 96,
+    "missing_ids": [
+      "ITEM-073"
+    ],
+    "new_ids": [
+      "ITEM-X73"
+    ],
+    "unknown_material_ids": [
+      "ITEM-015",
+      "ITEM-030",
+      "ITEM-045",
+      "ITEM-060",
+      "ITEM-075",
+      "ITEM-090"
+    ],
+    "changed_scope": [
+      {
+        "id": "ITEM-088",
+        "before": "site-B",
+        "after": "site-A"
+      }
+    ],
+    "expanded_roles": [
+      {
+        "id": "ITEM-090",
+        "before": [
+          "inventory_manager"
+        ],
+        "after": [
+          "staff",
+          "inventory_manager"
+        ]
+      }
+    ]
+  },
+  "arms": {
+    "J": {
+      "displayed_rows": 19,
+      "unique_record_count": 13,
+      "unknown_material_unique_ids": [
+        "ITEM-015",
+        "ITEM-030",
+        "ITEM-045",
+        "ITEM-060",
+        "ITEM-075",
+        "ITEM-090"
+      ],
+      "row_checks": [
+        {
+          "record_id": "ITEM-001",
+          "line": 49,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-002",
+          "line": 50,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-003",
+          "line": 51,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-004",
+          "line": 52,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-008",
+          "line": 53,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-015",
+          "line": 54,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-045",
+          "line": 55,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-073",
+          "line": 56,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-075",
+          "line": 57,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-088",
+          "line": 58,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-001",
+          "line": 90,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-045",
+          "line": 91,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-073",
+          "line": 92,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-003",
+          "line": 123,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-015",
+          "line": 124,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-075",
+          "line": 125,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-030",
+          "line": 140,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-060",
+          "line": 141,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-090",
+          "line": 142,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        }
+      ],
+      "mismatches": [],
+      "membership_lists": [
+        {
+          "concept": "task.measure",
+          "line": 200,
+          "listed_count": 24,
+          "matches_source": true
+        },
+        {
+          "concept": "task.cut",
+          "line": 201,
+          "listed_count": 24,
+          "matches_source": true
+        },
+        {
+          "concept": "task.heat",
+          "line": 202,
+          "listed_count": 24,
+          "matches_source": true
+        },
+        {
+          "concept": "task.inspect",
+          "line": 203,
+          "listed_count": 24,
+          "matches_source": true
+        },
+        {
+          "concept": "maintenance.inspect",
+          "line": 204,
+          "listed_count": 12,
+          "matches_source": true
+        }
+      ],
+      "script_elements": 0,
+      "style_elements_or_attributes": 0,
+      "duplicate_dom_ids": [],
+      "dangling_internal_anchors": [],
+      "scope": "Static source values and declared view conditions. No browser rendering, clicks, authentication, filtering, ARIA/WCAG conformance, usability or participant outcome tested."
+    },
+    "S": {
+      "displayed_rows": 16,
+      "unique_record_count": 13,
+      "unknown_material_unique_ids": [
+        "ITEM-015",
+        "ITEM-030",
+        "ITEM-045",
+        "ITEM-060",
+        "ITEM-075",
+        "ITEM-090"
+      ],
+      "row_checks": [
+        {
+          "record_id": "ITEM-001",
+          "line": 34,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-045",
+          "line": 35,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-073",
+          "line": 36,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-003",
+          "line": 42,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-015",
+          "line": 43,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-075",
+          "line": 44,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-002",
+          "line": 49,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-004",
+          "line": 54,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-008",
+          "line": 55,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-088",
+          "line": 56,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-015",
+          "line": 62,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-030",
+          "line": 63,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-045",
+          "line": 64,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-060",
+          "line": 65,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-075",
+          "line": 66,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        },
+        {
+          "record_id": "ITEM-090",
+          "line": 67,
+          "matches_source_and_declared_view": true,
+          "issues": []
+        }
+      ],
+      "mismatches": [],
+      "membership_lists": [
+        {
+          "concept": "task.measure",
+          "line": 74,
+          "listed_count": 24,
+          "matches_source": true
+        },
+        {
+          "concept": "task.cut",
+          "line": 75,
+          "listed_count": 24,
+          "matches_source": true
+        },
+        {
+          "concept": "task.heat",
+          "line": 76,
+          "listed_count": 24,
+          "matches_source": true
+        },
+        {
+          "concept": "task.inspect",
+          "line": 77,
+          "listed_count": 24,
+          "matches_source": true
+        },
+        {
+          "concept": "maintenance.inspect",
+          "line": 79,
+          "listed_count": 12,
+          "matches_source": true
+        }
+      ],
+      "script_elements": 0,
+      "style_elements_or_attributes": 0,
+      "duplicate_dom_ids": [],
+      "dangling_internal_anchors": [],
+      "scope": "Static source values and declared view conditions. No browser rendering, clicks, authentication, filtering, ARIA/WCAG conformance, usability or participant outcome tested."
+    }
+  },
+  "scores_generated": false
+}

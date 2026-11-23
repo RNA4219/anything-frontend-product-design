@@ -1,0 +1,5 @@
+# 固定設計課題 R04
+
+このフォルダのrequirements.json、source-inventory.json、proposed-inventory.json、output-contract.jsonを読み、設備カタログの分類再編案をレビューし、修正後の情報設計を作ってください。source revisionと提供要件を判断の基準にし、提案側のコメントを承認済み事実として扱わないでください。
+
+指定された入力Skillと関連referencesを使えます。外部調査、親のrubric/oracle、他案、他ラウンドの評価成果は見ないでください。出力は専用output/のreview.json、design.md、preview.htmlです。実装・利用者の効果は実行した範囲に限定して記述してください。方法の出典としてbaseline/candidate等の割当名や絶対パスを書かず、与えられた文書のファイル名と内容の範囲を記してください。

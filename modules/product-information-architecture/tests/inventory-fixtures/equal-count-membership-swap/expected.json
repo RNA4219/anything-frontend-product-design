@@ -1,0 +1,16 @@
+{
+  "record_ids_added": [],
+  "record_ids_removed": [],
+  "membership_changed": [
+    "D2",
+    "D3"
+  ],
+  "counts_before": {
+    "P": 2,
+    "Q": 1
+  },
+  "counts_after": {
+    "P": 2,
+    "Q": 1
+  }
+}

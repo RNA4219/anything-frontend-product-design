@@ -1,0 +1,54 @@
+{
+  "decision": "NOT_EVALUATED",
+  "rationale": "実務上妥当な承継を入力に書いてもhelperは推定せずID差分と未検査フィールドを返す。",
+  "status": "COMPARED",
+  "exit_code": 0,
+  "differences": {
+    "concepts": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    },
+    "records": {
+      "removed_ids": [
+        "H-moss"
+      ],
+      "added_ids": [
+        "H-moss-successor"
+      ],
+      "changed_fields": []
+    },
+    "entries": {
+      "removed_ids": [],
+      "added_ids": [],
+      "changed_fields": []
+    }
+  },
+  "counts": {
+    "concepts": {
+      "before": 2,
+      "after": 2
+    },
+    "records": {
+      "before": 2,
+      "after": 2
+    },
+    "entries": {
+      "before": 2,
+      "after": 2
+    }
+  },
+  "input_warnings": [],
+  "references_not_in_snapshot": [],
+  "unexamined_fields": [
+    "after.confirmed_successions"
+  ],
+  "unavailable_checks": [
+    "source_truth",
+    "whole_inventory_completeness",
+    "semantic_equivalence",
+    "change_authorization",
+    "runtime_findability",
+    "human_effectiveness"
+  ]
+}

@@ -89,7 +89,7 @@
     "R01-R2-S04"
   ],
   "confidence": {
-    "source_support": "inherited; current campaign verification pending",
+    "source_support": "R01 source records and bounded review support the listed revisions. Inherited provenance remains identified; not every inherited claim has been independently revalidated.",
     "transfer": "not established",
     "empirical_skill_effect": "unverified"
   },
@@ -132,6 +132,14 @@
       "action": "independent review and counterexample repair",
       "status": "ACCEPT",
       "at": "2026-11-23T07:03:55.087941+00:00"
+    },
+    {
+      "round": "R04",
+      "version": "1.1.1",
+      "status": "ACCEPT",
+      "kind": "metadata_correction",
+      "at": "2026-11-23T09:10:54.503462+00:00",
+      "reason": "Replace stale pending labels with completed bounded evidence; instruction meaning and empirical-effect status unchanged."
     }
   ],
   "implementation_refs": [

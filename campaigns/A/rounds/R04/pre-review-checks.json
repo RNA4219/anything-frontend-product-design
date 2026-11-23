@@ -1,0 +1,18 @@
+[
+  {
+    "file": "tests-pre-review.txt",
+    "exit_code": 0
+  },
+  {
+    "file": "registry-pre-review.json",
+    "exit_code": 0
+  },
+  {
+    "file": "skill-validation.txt",
+    "exit_code": 0
+  },
+  {
+    "file": "comparison.json",
+    "exit_code": 0
+  }
+]

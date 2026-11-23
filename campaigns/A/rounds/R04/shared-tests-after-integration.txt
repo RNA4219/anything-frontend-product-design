@@ -1,0 +1,70 @@
+test_bad_task_build_enum_and_duplicate_keys_are_input_errors (test_design_qa_evaluation.DesignQAEvaluationTests.test_bad_task_build_enum_and_duplicate_keys_are_input_errors) ... ok
+test_blank_evidence_and_missing_checks_do_not_count_as_observations (test_design_qa_evaluation.DesignQAEvaluationTests.test_blank_evidence_and_missing_checks_do_not_count_as_observations) ... ok
+test_empty_observations_remain_pending (test_design_qa_evaluation.DesignQAEvaluationTests.test_empty_observations_remain_pending) ... ok
+test_equal_numeric_values_with_different_types_fail (test_design_qa_evaluation.DesignQAEvaluationTests.test_equal_numeric_values_with_different_types_fail) ... ok
+test_extra_keys_and_non_scalar_checks_are_input_errors (test_design_qa_evaluation.DesignQAEvaluationTests.test_extra_keys_and_non_scalar_checks_are_input_errors) ... ok
+test_matching_normal_path_is_pending_when_required_paths_are_missing_from_plan (test_design_qa_evaluation.DesignQAEvaluationTests.test_matching_normal_path_is_pending_when_required_paths_are_missing_from_plan) ... ok
+test_missing_evidence_and_wrong_method_cannot_prove_a_failure (test_design_qa_evaluation.DesignQAEvaluationTests.test_missing_evidence_and_wrong_method_cannot_prove_a_failure) ... ok
+test_normal_path_alone_remains_pending (test_design_qa_evaluation.DesignQAEvaluationTests.test_normal_path_alone_remains_pending) ... ok
+test_observed_conflict_regression_blocks_release_even_with_other_missing_check (test_design_qa_evaluation.DesignQAEvaluationTests.test_observed_conflict_regression_blocks_release_even_with_other_missing_check) ... ok
+test_required_paths_pass_and_advisory_failure_is_reported (test_design_qa_evaluation.DesignQAEvaluationTests.test_required_paths_pass_and_advisory_failure_is_reported) ... ok
+test_small_differences_between_decimals_fail (test_design_qa_evaluation.DesignQAEvaluationTests.test_small_differences_between_decimals_fail) ... ok
+test_unknown_and_duplicate_cases_are_input_errors (test_design_qa_evaluation.DesignQAEvaluationTests.test_unknown_and_duplicate_cases_are_input_errors) ... ok
+test_all_slots_taken_returns_to_current_booking (test_interaction_ux_flow.BookingFlowTests.test_all_slots_taken_returns_to_current_booking) ... ok
+test_booking_list_distinguishes_used_booking (test_interaction_ux_flow.BookingFlowTests.test_booking_list_distinguishes_used_booking) ... ok
+test_cli_recovers_and_reopens_the_saved_booking (test_interaction_ux_flow.BookingFlowTests.test_cli_recovers_and_reopens_the_saved_booking) ... ok
+test_confirmed_failure_allows_new_intent (test_interaction_ux_flow.BookingFlowTests.test_confirmed_failure_allows_new_intent) ... ok
+test_double_submit_and_duplicate_apply_use_one_change (test_interaction_ux_flow.BookingFlowTests.test_double_submit_and_duplicate_apply_use_one_change) ... ok
+test_editing_and_interruption_keep_only_the_draft (test_interaction_ux_flow.BookingFlowTests.test_editing_and_interruption_keep_only_the_draft) ... ok
+test_external_booking_change_does_not_resolve_unknown_intent (test_interaction_ux_flow.BookingFlowTests.test_external_booking_change_does_not_resolve_unknown_intent) ... ok
+test_normal_commit_and_reopen (test_interaction_ux_flow.BookingFlowTests.test_normal_commit_and_reopen) ... ok
+test_reopen_distinguishes_an_applied_intent_from_latest_booking (test_interaction_ux_flow.BookingFlowTests.test_reopen_distinguishes_an_applied_intent_from_latest_booking) ... ok
+test_reopen_resolves_terminal_outcomes_with_no_response (test_interaction_ux_flow.BookingFlowTests.test_reopen_resolves_terminal_outcomes_with_no_response) ... ok
+test_slot_conflict_retains_booking_and_ignores_old_response (test_interaction_ux_flow.BookingFlowTests.test_slot_conflict_retains_booking_and_ignores_old_response) ... ok
+test_status_recovers_a_change_committed_without_client_response (test_interaction_ux_flow.BookingFlowTests.test_status_recovers_a_change_committed_without_client_response) ... ok
+test_unregistered_outcome_requires_same_intent_after_reopen (test_interaction_ux_flow.BookingFlowTests.test_unregistered_outcome_requires_same_intent_after_reopen) ... ok
+test_another_slot_does_not_pass_the_task (test_product_information_architecture.BookingChoiceTest.test_another_slot_does_not_pass_the_task) ... ok
+test_both_entries_change_and_reopen_same_booking (test_product_information_architecture.BookingChoiceTest.test_both_entries_change_and_reopen_same_booking) ... ok
+test_commit_alone_does_not_pass_result_confirmation (test_product_information_architecture.BookingChoiceTest.test_commit_alone_does_not_pass_result_confirmation) ... ok
+test_confirming_another_eligible_booking_does_not_pass_the_task (test_product_information_architecture.BookingChoiceTest.test_confirming_another_eligible_booking_does_not_pass_the_task) ... ok
+test_guessing_correct_booking_without_original_time_is_not_success (test_product_information_architecture.BookingChoiceTest.test_guessing_correct_booking_without_original_time_is_not_success) ... ok
+test_interactive_entry_uses_visible_actions (test_product_information_architecture.BookingChoiceTest.test_interactive_entry_uses_visible_actions) ... ok
+test_missing_original_time_can_defer_without_mutation (test_product_information_architecture.BookingChoiceTest.test_missing_original_time_can_defer_without_mutation) ... ok
+test_two_changeable_bookings_need_explicit_time_selection (test_product_information_architecture.BookingChoiceTest.test_two_changeable_bookings_need_explicit_time_selection) ... ok
+test_unconfirmed_preview_survives_as_original_after_reopen (test_product_information_architecture.BookingChoiceTest.test_unconfirmed_preview_survives_as_original_after_reopen) ... ok
+test_wrong_status_group_then_recovery (test_product_information_architecture.BookingChoiceTest.test_wrong_status_group_then_recovery) ... ok
+setUpClass (test_ui_engineering_design_system.BookingChangeBrowserTests) ... ERROR
+
+======================================================================
+ERROR: setUpClass (test_ui_engineering_design_system.BookingChangeBrowserTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/10bb09e1845f/session-A/tests/test_ui_engineering_design_system.py", line 45, in setUpClass
+    cls.browser = playwright.chromium.launch(channel=channel)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 16702, in launch
+    self._sync(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_browser_type.py", line 97, in launch
+    await self._channel.send(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: BrowserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-linux64/chrome-headless-shell
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+
+----------------------------------------------------------------------
+Ran 35 tests in 3.330s
+
+FAILED (errors=1)

@@ -1,0 +1,60 @@
+{
+  "round": "R04",
+  "method": "Opened public originals using Web; selected sections read directly; NISO PDF printed p97 also visually inspected.",
+  "full_source_archive_created": false,
+  "independent_source_families": 4,
+  "records": [
+    {
+      "source_id": "R04-R1-S01",
+      "url": "https://www.w3.org/TR/skos-reference/",
+      "sections_read": ["Status of This Document", "1.2", "10.6.3", "10.6.7", "10.6.8"],
+      "web_refs": ["turn547111872view0", "turn829264110view1", "turn525210188view1"],
+      "verified": "概念のmappingと同一資源の関係を区別し、exactMatch/closeMatchを経た周辺関係の一般的継承は含意されない。",
+      "candidate_assessment": "正しく限定。レコード同一性、JSON形式、全件移行検査や権限成功をSKOS原典の要求とはしていない。"
+    },
+    {
+      "source_id": "R04-R1-S03",
+      "url": "https://www.w3.org/TR/skos-primer/",
+      "sections_read": ["Status of This Document", "3.2", "3.3"],
+      "web_refs": ["turn547111872view1", "turn932164474view1"],
+      "verified": "任意資源と概念の主題付与は別語彙で扱う。一資源の複数主題も説明される。",
+      "candidate_assessment": "Referenceと同系統の非規範説明として扱い、独立した実証には数えていない。"
+    },
+    {
+      "source_id": "R04-R1-S02",
+      "url": "https://groups.niso.org/higherlogic/ws/public/download/12591/z39-19-2005r2010.pdf",
+      "publication_page": "https://www.niso.org/publications/ansiniso-z3919-2005-r2010",
+      "sections_read": ["cover", "11.3.1.2", "11.3.1.3", "11.3.2.1", "11.3.2.2"],
+      "visual_page": {"pdf_index": 108, "printed_page": 97},
+      "web_refs": ["turn932164474view0", "turn624789916view2", "turn525210188view0", "turn525210188view2"],
+      "retrieval_limit": "Initial direct PDF open failed; official publication-page link succeeded. Current standard validity/version was not established.",
+      "verified": "2005(R2010)版で、用語変更が過去の索引済みレコードの検索に与える影響を検討し、未付与語を例外とする。一対一置換と複雑な再分類を分け、履歴を扱う。",
+      "candidate_assessment": "歴史的版の確認に限定し、未使用・妥当な変更・現実的な範囲の例外を保つ。全件人手検査や追加承認フローを原典の義務とはしていない。"
+    },
+    {
+      "source_id": "R04-R2-S01",
+      "url": "https://www.gov.uk/government/publications/govuk-topic-taxonomy-principles/govuk-taxonomy-principles",
+      "sections_read": ["1.3", "1.4", "2.1", "2.3", "2.4", "2.5", "3.2", "3.3", "3.4", "3.5"],
+      "web_refs": ["turn547111872view3", "turn932164474view2"],
+      "verified": "主題分類の目的、標本によるタグ点検、期待対象の表示確認、件数均等化ができない場合を述べる。",
+      "candidate_assessment": "当該運用例として扱う。主題以外の軸を禁止せず、子topic数の2〜12という当該指針を一般規範へ広げていない。"
+    },
+    {
+      "source_id": "R04-R2-S02",
+      "url": "https://learn.microsoft.com/en-us/sharepoint/managed-metadata",
+      "sections_read": ["Term Set", "Terms", "Group", "Metadata scenarios", "Increased flexibility"],
+      "web_refs": ["turn547111872view4", "turn624789916view0"],
+      "verified": "termの固有IDと複数ラベル、local/global term setの利用範囲、管理権限とmetadata利用の区別を説明する。",
+      "candidate_assessment": "SharePoint固有の説明として用い、term IDを実レコードIDとせず、分類利用範囲を閲覧認可の成功と混同しない。"
+    },
+    {
+      "source_id": "R04-R2-S03",
+      "url": "https://learn.microsoft.com/en-us/sharepoint/create-and-manage-terms",
+      "sections_read": ["Copy term", "Copy term with children", "Delete term", "Pin term", "Reuse term", "Merge term", "Deprecate term"],
+      "web_refs": ["turn547111872view5", "turn624789916view1"],
+      "verified": "copy、子付きcopy、reuse、delete、deprecate等で子孫や共有への作用が異なる。",
+      "candidate_assessment": "製品固有仕様の確認を促す例として妥当。別製品への一般化、実tenantでの検証、利用者成果の証明を主張しない。"
+    }
+  ],
+  "inference_boundary": "ID・所属・入口の照合手順と任意JSON形式はSkill側の設計上の導出。原典の規範要求、全件意味レビュー、実利用効果として加点しない。"
+}

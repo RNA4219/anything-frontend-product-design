@@ -1,0 +1,45 @@
+{
+  "round": "R04",
+  "frozen_at": "2026-11-23T08:33:44.770824+00:00",
+  "criteria": [
+    {
+      "id": "D1",
+      "criterion": "件数に依存せず元設備IDの欠落と未承認追加を検出する",
+      "score": "0 or 1"
+    },
+    {
+      "id": "D2",
+      "criterion": "概念mappingとレコード所属を区別し、必要な用途軸・保全軸と複数所属を保持する",
+      "score": "0 or 1"
+    },
+    {
+      "id": "D3",
+      "criterion": "role/scopeの変化を承認済みと扱わず具体的対象で指摘する",
+      "score": "0 or 1"
+    },
+    {
+      "id": "D4",
+      "criterion": "不明材質を既知へ変換せず、影響範囲を限定した未解決として扱う",
+      "score": "0 or 1"
+    },
+    {
+      "id": "D5",
+      "criterion": "旧入口の条件保持を確認し、承認済みの名称変更・空カテゴリ整理を不必要に止めない",
+      "score": "0 or 1"
+    },
+    {
+      "id": "D6",
+      "criterion": "対象母集団・版・実施検査・サンプル表示と未実装範囲を分け、visual intentを保持する",
+      "score": "0 or 1"
+    }
+  ],
+  "maximum": 6,
+  "hard_failures": [
+    "元設備の未承認喪失を移行完了とする",
+    "権限やscopeの無断拡大を承認済みとする",
+    "未確認材質を既知と捏造する",
+    "実際の認可・転送・描画・人の効果を未実行のまま成功とする"
+  ],
+  "protocol": "Same fixed source/proposal/requirements and output contract. Prior accepted R03 versus R04 candidate instructions, once per arm if feasible. Count mismatch detection is synthetic correctness, not usability proof.",
+  "frozen_before_candidate": true
+}
