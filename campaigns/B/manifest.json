@@ -3,7 +3,7 @@
   "session_id": "B",
   "domain": "interaction-ux-flow",
   "base_sha": "3d02174a69676afa8e0b02f4062cc6ecb636d300",
-  "branch": "session-b/interaction-evolution-20261123",
+  "branch": "session-b/interaction-evolution-r04-20261123",
   "started_at": "2026-11-23T06:34:35.322404+00:00",
   "max_rounds": 12,
   "max_concurrent_subagents": 2,
@@ -23,9 +23,19 @@
       "round": 3,
       "status": "COMPLETE",
       "decision": "campaigns/B/rounds/03/decision.json"
+    },
+    {
+      "round": 4,
+      "status": "COMPLETE",
+      "decision": "campaigns/B/rounds/04/decision.json"
+    },
+    {
+      "round": 5,
+      "status": "QUEUED_NOT_STARTED",
+      "plan": "campaigns/B/rounds/05/plan.json"
     }
   ],
-  "status": "RUNNING",
+  "status": "CHECKPOINTED_WITH_REMAINING_BACKLOG",
   "budget": {
     "tokens": "not exposed",
     "money": "not exposed",
@@ -38,7 +48,20 @@
   ],
   "source_policy": "Keep original third-party source text outside this repository. Publish original rules, source URLs, section locators and original test evidence only.",
   "checkpoint": {
-    "last_completed_round": 3,
-    "next": "R04 B-007 partial batch outcomes and item-scoped recovery"
-  }
+    "last_completed_round": 4,
+    "next": "R05 B-008 multi-step dependent decisions; plan preserved, not executed"
+  },
+  "saturation": {
+    "declared": false,
+    "consecutive_unproductive_rounds": 0
+  },
+  "termination": {
+    "reason": "Execution checkpoint after four completed research/implementation/review cycles",
+    "max_rounds_reached": false,
+    "domain_complete": false
+  },
+  "previous_branch": "session-b/interaction-evolution-20261123",
+  "integration_base_sha": "20f21fb9bb1b4d0921333ca1be683d6b42a60c63",
+  "integration_record": "campaigns/B/integration-r04.json",
+  "draft_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/9"
 }

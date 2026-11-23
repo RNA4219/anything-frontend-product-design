@@ -1,0 +1,218 @@
+{
+  "review_type": "INTEGRATION_ONLY_FOLLOWUP",
+  "status": "COMPLETED",
+  "verdict": "PASS_NO_BLOCKING_INTEGRATION_REGRESSION",
+  "recorded_at": "2026-11-23T09:15:44.377876+00:00",
+  "reviewer": "Same-model separate-context independent Critic",
+  "base_commit": "20f21fb9bb1b4d0921333ca1be683d6b42a60c63",
+  "reviewed_commit": "bd749c04a2f13851bc568ead6f84ad58e4c671b7",
+  "requested_commit": "bd749c04a2f13851bc568ead6f84ad58e4c671b7",
+  "branch": "session-b/interaction-evolution-r04-20261123",
+  "base_is_ancestor": true,
+  "committed_diff": {
+    "changed_path_count": 80,
+    "allowed_scopes": [
+      "campaigns/B/",
+      "registry/B/",
+      "modules/interaction-ux-flow/"
+    ],
+    "paths": [
+      "campaigns/B/agents.json",
+      "campaigns/B/coverage.md",
+      "campaigns/B/final-verification.json",
+      "campaigns/B/git-checkpoint.json",
+      "campaigns/B/handoff.md",
+      "campaigns/B/manifest.json",
+      "campaigns/B/rounds/01/independent/publication-map.json",
+      "campaigns/B/rounds/02/independent/publication-map.json",
+      "campaigns/B/rounds/03/independent/publication-map.json",
+      "campaigns/B/rounds/04/analysis.md",
+      "campaigns/B/rounds/04/artifacts/initial/B-IU-009.json",
+      "campaigns/B/rounds/04/artifacts/initial/batch-flow.html",
+      "campaigns/B/rounds/04/artifacts/initial/batch-flow.mjs",
+      "campaigns/B/rounds/04/artifacts/initial/batch-outcomes.md",
+      "campaigns/B/rounds/04/artifacts/initial/snapshot.json",
+      "campaigns/B/rounds/04/cases.json",
+      "campaigns/B/rounds/04/decision.json",
+      "campaigns/B/rounds/04/freeze.json",
+      "campaigns/B/rounds/04/independent/REPRODUCE.md",
+      "campaigns/B/rounds/04/independent/artifact-hashes-initial.json",
+      "campaigns/B/rounds/04/independent/artifact-hashes.json",
+      "campaigns/B/rounds/04/independent/critic-artifact-manifest.json",
+      "campaigns/B/rounds/04/independent/dom-events-preliminary.json",
+      "campaigns/B/rounds/04/independent/dom-events.json",
+      "campaigns/B/rounds/04/independent/edge-probes.json",
+      "campaigns/B/rounds/04/independent/fault-controls/N01-IGNORE-MINIMUM-DELAY.json",
+      "campaigns/B/rounds/04/independent/fault-controls/N02-ASSIGN-RESULTS-BY-ARRIVAL-POSITION.json",
+      "campaigns/B/rounds/04/independent/fault-controls/N03-CANCEL-RECEIPT-AS-TERMINAL.json",
+      "campaigns/B/rounds/04/independent/fault-controls/N04-LET-LATE-PENDING-ERASE-TERMINAL.json",
+      "campaigns/B/rounds/04/independent/fault-controls/summary.json",
+      "campaigns/B/rounds/04/independent/finding-B-R04-C01.json",
+      "campaigns/B/rounds/04/independent/frozen-suite.json",
+      "campaigns/B/rounds/04/independent/initial/artifact-hashes-initial.json",
+      "campaigns/B/rounds/04/independent/initial/dom-events.json",
+      "campaigns/B/rounds/04/independent/initial/edge-probes.json",
+      "campaigns/B/rounds/04/independent/initial/frozen-suite.json",
+      "campaigns/B/rounds/04/independent/initial/supplement-suite.json",
+      "campaigns/B/rounds/04/independent/publication-map.json",
+      "campaigns/B/rounds/04/independent/report-initial.md",
+      "campaigns/B/rounds/04/independent/report.md",
+      "campaigns/B/rounds/04/independent/reproduce-dom-events.mjs",
+      "campaigns/B/rounds/04/independent/reproduce-edge-probes.mjs",
+      "campaigns/B/rounds/04/independent/reproduce-fault-controls.py",
+      "campaigns/B/rounds/04/independent/revised1/artifact-hashes.json",
+      "campaigns/B/rounds/04/independent/revised1/dom-events.json",
+      "campaigns/B/rounds/04/independent/source-check-attempts.json",
+      "campaigns/B/rounds/04/independent/source-checks.json",
+      "campaigns/B/rounds/04/independent/supplement-suite.json",
+      "campaigns/B/rounds/04/independent/verdict-initial.json",
+      "campaigns/B/rounds/04/independent/verdict.json",
+      "campaigns/B/rounds/04/interface.md",
+      "campaigns/B/rounds/04/plan.json",
+      "campaigns/B/rounds/04/protocol-notes.md",
+      "campaigns/B/rounds/04/research.json",
+      "campaigns/B/rounds/04/revision.json",
+      "campaigns/B/rounds/04/supplement-freeze.json",
+      "campaigns/B/rounds/04/supplement-results.json",
+      "campaigns/B/rounds/04/task-results.json",
+      "campaigns/B/rounds/04/task.md",
+      "campaigns/B/rounds/04/test-freeze.json",
+      "campaigns/B/rounds/05/plan.json",
+      "modules/interaction-ux-flow/SKILL.md",
+      "modules/interaction-ux-flow/checks/flow-review.md",
+      "modules/interaction-ux-flow/examples/batch-flow.html",
+      "modules/interaction-ux-flow/examples/batch-flow.mjs",
+      "modules/interaction-ux-flow/references/batch-outcomes.md",
+      "modules/interaction-ux-flow/tests/README.md",
+      "modules/interaction-ux-flow/tests/test_batch_boundaries.mjs",
+      "modules/interaction-ux-flow/tests/test_batch_flow.mjs",
+      "registry/B/backlog.jsonl",
+      "registry/B/skills/B-IU-009.json",
+      "registry/B/sources/B-S401.json",
+      "registry/B/sources/B-S402.json",
+      "registry/B/sources/B-S403.json",
+      "registry/B/sources/B-T501.json",
+      "registry/B/sources/B-T502.json",
+      "registry/B/sources/B-T503.json",
+      "registry/B/sources/B-T504.json",
+      "registry/B/sources/B-T505.json"
+    ],
+    "outside_B_paths": [],
+    "outside_B_existing_paths_count": 556,
+    "outside_B_changed_count": 0,
+    "root_shared_files": [
+      {
+        "path": ".gitignore",
+        "unchanged": true,
+        "sha256": "c7641656d77dec121156e02189643632e4e2d8b3a0eb87f85e9bae8dc88fad27"
+      },
+      {
+        "path": "LICENSE",
+        "unchanged": true,
+        "sha256": "0321143415262f129d473a397f6594b171ac7ef4c9c7543e2080028fd6ae48ff"
+      },
+      {
+        "path": "README.md",
+        "unchanged": true,
+        "sha256": "0bc5b84032373875d41473c758bd9a6bb4be3ea77f5f35e9d4723984f1d4fcf9"
+      },
+      {
+        "path": "SKILL.md",
+        "unchanged": true,
+        "sha256": "428a706df98dab56a677608e4db339070f40cda67c51a3269b7595416e8a8fd9"
+      }
+    ]
+  },
+  "main_B_files_preserved": [
+    {
+      "path": "modules/interaction-ux-flow/references/decisions.md",
+      "base_sha256": "e3b56b006f171373c24f7bf8805443de8e378b43b92ae59b5dcf56595025f09b",
+      "head_sha256": "e3b56b006f171373c24f7bf8805443de8e378b43b92ae59b5dcf56595025f09b",
+      "worktree_sha256": "e3b56b006f171373c24f7bf8805443de8e378b43b92ae59b5dcf56595025f09b",
+      "head_equals_main": true,
+      "worktree_equals_head": true
+    },
+    {
+      "path": "modules/interaction-ux-flow/references/booking-change.md",
+      "base_sha256": "9767389068315004484418faa3c756d7c73cc7cf3d7aa87d2cbae22bb28603e6",
+      "head_sha256": "9767389068315004484418faa3c756d7c73cc7cf3d7aa87d2cbae22bb28603e6",
+      "worktree_sha256": "9767389068315004484418faa3c756d7c73cc7cf3d7aa87d2cbae22bb28603e6",
+      "head_equals_main": true,
+      "worktree_equals_head": true
+    },
+    {
+      "path": "modules/interaction-ux-flow/scripts/booking_flow.py",
+      "base_sha256": "052355463dc0975d5e2bb88ee8931023290ac7c423777667d719ac626454307a",
+      "head_sha256": "052355463dc0975d5e2bb88ee8931023290ac7c423777667d719ac626454307a",
+      "worktree_sha256": "052355463dc0975d5e2bb88ee8931023290ac7c423777667d719ac626454307a",
+      "head_equals_main": true,
+      "worktree_equals_head": true
+    }
+  ],
+  "main_entry_preservation": {
+    "path": "modules/interaction-ux-flow/SKILL.md",
+    "base_sha256": "9a92e5dda07b47d001b7478d2a4d6941d1e82530aa46faf213fd7dc151a5d74e",
+    "head_sha256": "97eb70a3658037824b62971bd6ef58852fb34a1856989dfe01e62594be6f8e2c",
+    "license_MIT_preserved": true,
+    "updated_description_present": true,
+    "batch_reference_added": true,
+    "all_main_entry_content_preserved_except_explicit_description_update": true,
+    "main_observation_paragraph_present": true,
+    "main_decisions_link_present": true,
+    "main_booking_cli_and_handoff_paragraph_preserved": true
+  },
+  "append_only_B_document_changes": [
+    {
+      "path": "modules/interaction-ux-flow/checks/flow-review.md",
+      "all_main_content_preserved_as_prefix": true,
+      "base_sha256": "fbf4425c1a400b8c9ffc7a404cb3bc9226bce4582e5d7c0d44798e3a496ec40f",
+      "head_sha256": "d66a7286ab169afb6c2521ade1fe2db448b3ea87fdef618fd3f1b5b586b34dd2"
+    },
+    {
+      "path": "modules/interaction-ux-flow/tests/README.md",
+      "all_main_content_preserved_as_prefix": true,
+      "base_sha256": "cbbca8c3cf9f1798b6abeee98e9b36337758cb689fbfc49da1a85bf3b3c9d595",
+      "head_sha256": "c57c9457b1e7a40ca341a8d5cea593eb9adae1a6045164ca66ab7bd11ea32ab3"
+    }
+  ],
+  "previously_reviewed_candidate_hashes": [
+    {
+      "path": "modules/interaction-ux-flow/examples/batch-flow.mjs",
+      "previously_reviewed_sha256": "7e303c30025abf6b92aa05b269fe83b9e289a61f581f533f06713a7fa58efd12",
+      "head_sha256": "7e303c30025abf6b92aa05b269fe83b9e289a61f581f533f06713a7fa58efd12",
+      "worktree_sha256": "7e303c30025abf6b92aa05b269fe83b9e289a61f581f533f06713a7fa58efd12",
+      "head_matches_reviewed": true,
+      "worktree_matches_reviewed": true
+    },
+    {
+      "path": "modules/interaction-ux-flow/examples/batch-flow.html",
+      "previously_reviewed_sha256": "5207bee27be273599bbab14eeee7f90f7723db809866f9e7162c0aec0e570567",
+      "head_sha256": "5207bee27be273599bbab14eeee7f90f7723db809866f9e7162c0aec0e570567",
+      "worktree_sha256": "5207bee27be273599bbab14eeee7f90f7723db809866f9e7162c0aec0e570567",
+      "head_matches_reviewed": true,
+      "worktree_matches_reviewed": true
+    }
+  ],
+  "diff_check": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "blocking_findings": [],
+  "working_tree_status_at_capture": " M campaigns/B/final-verification.json\n M campaigns/B/git-checkpoint.json\n M campaigns/B/handoff.md\n M campaigns/B/manifest.json\n M registry/B/backlog.jsonl\n?? campaigns/B/integration-r04.json\n?? campaigns/B/pre-integration-verification.json\n",
+  "scope_limits": [
+    "Read-only integration inspection of the specified main-to-HEAD diff; no new research round.",
+    "Did not modify code, main/shared files or public campaign files.",
+    "Did not re-run behavioral/research suites; parent owns current suite and main B CLI13 execution. Prior candidate evidence remains applicable to identical model/HTML bytes.",
+    "Parent metadata updates underway after the reviewed commit are not silently included in this committed-diff verdict.",
+    "External merging of PR5/PR2 is parent-provided history; this follow-up independently verifies ancestry/content preservation, not who performed those merges."
+  ],
+  "actual_followup_actions": [
+    "Inspected committed name/status diff and focused module entry/checklist/README diff.",
+    "Read the main entry to verify its observations, decisions reference, booking CLI, handoff and tests references remain.",
+    "Compared main and reviewed commit bytes for decisions.md, booking-change.md and scripts/booking_flow.py.",
+    "Verified all committed changed paths stay within B, all root files are byte-identical and the reviewed base is an ancestor.",
+    "Compared committed/worktree model and HTML SHA256 to prior independent verdict.",
+    "Ran git diff --check and wrote this private JSON result only."
+  ]
+}

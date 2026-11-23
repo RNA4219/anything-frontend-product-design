@@ -1,0 +1,45 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>一括アーカイブの結果と復帰</title>
+<style>body{font-family:system-ui,sans-serif;max-width:60rem;margin:2rem auto;padding:0 1rem;line-height:1.7;color:#17212b}table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #bcc6ce;padding:.6rem;text-align:left;vertical-align:top}button,select{font:inherit;padding:.4rem;margin:.4rem .3rem .4rem 0}details{border:1px solid #bcc6ce;padding:1rem;margin:1rem 0}pre{white-space:pre-wrap}[hidden]{display:none}</style>
+<main><h1>選択した文書をアーカイブする</h1><p>対象の文書と、各文書の処理結果を確認します。成功済みの文書を含めて、最初から送信し直す操作はありません。</p>
+<p id="scope"></p><p id="summary" role="status"></p><table><thead><tr><th>文書</th><th>結果</th><th>次にできること・理由</th></tr></thead><tbody id="items"></tbody></table>
+<button id="start" type="button"></button><button id="retry" type="button"></button><button id="reconcile" type="button"></button><button id="cancel" type="button"></button>
+<p id="cancel-note">取消の依頼を受け付けても、操作の結果が確定したことにはなりません。成立済みの変更を戻すには別の手順が必要です。</p>
+<details><summary>照合用の情報</summary><pre id="references"></pre></details>
+<details open><summary>試験条件（このページ内だけの模擬サービス）</summary><p>実サービスへの変更は行いません。選択する条件は開始前に固定されます。ページを再読み込みすると、試験用のデータも初期化されます。</p>
+<label>条件 <select id="scenario"><option value="mixed">成功・待機が必要な未適用・結果未確認</option><option value="accepted">受付だけを受け取り、項目結果がまだない</option><option value="lost">一部が成立した後に送信応答を失う</option><option value="dependency">先行文書が未適用で、後続も未実行</option><option value="ambiguous">変更が成立してもエラー相当の応答が返る</option><option value="empty">選択対象なし</option></select></label>
+<button id="advance" type="button">模擬時刻を10秒進める</button><button id="finish" type="button">サーバー側の処理中の項目を完了させる</button><label><input type="checkbox" id="expire"> 操作記録を照会できない状態にする</label><pre id="service"></pre>
+</details><p>この例のrequestIdは項目試行の照合にも使う契約です。実際のAPIで同じ役割を持つ保証はありません。永続保存・本番認可・実ブラウザの動作はこの例では検証していません。</p></main>
+<script type="module">
+import {createBatchFlow} from './batch-flow.mjs';
+const $=id=>document.getElementById(id),clone=x=>JSON.parse(JSON.stringify(x));let seq=0,clock=0,locked=false,flow,mode='mixed';
+const base=[{id:'a',label:'Alpha 文書'},{id:'b',label:'Beta 文書'},{id:'c',label:'Gamma 文書'}];let jobs=new Map(),attempts={},effects={},server={},calls=[];
+const result=(ref,status,extra={})=>({itemId:ref.itemId,requestId:ref.requestId,status,...extra});
+function apply(ref){effects[ref.itemId]=(effects[ref.itemId]||0)+1;server[ref.itemId]='archived';const r=result(ref,'succeeded');jobs.set(ref.requestId,r);return clone(r);}
+const api={submit:async({items})=>{calls.push({method:'submit',items:clone(items)});const replies=[];
+ for(const ref of items){attempts[ref.itemId]=(attempts[ref.itemId]||0)+1;let r;
+  if(mode==='accepted'||(mode==='lost'&&ref.itemId!=='a'))r=result(ref,'pending');
+  else if(mode==='dependency'&&attempts[ref.itemId]===1&&ref.itemId==='a')r=result(ref,'failed',{unapplied:true,retryable:true,reason:'先行する文書の処理が未適用です。再試行できます。'});
+  else if(mode==='dependency'&&attempts[ref.itemId]===1&&ref.itemId==='b')r=result(ref,'blocked',{unapplied:true,retryable:true,reason:'Alpha 文書が成功してから再試行できます。'});
+  else if(mode==='mixed'&&attempts[ref.itemId]===1&&ref.itemId==='b')r=result(ref,'failed',{unapplied:true,retryable:true,nextRetryAt:clock+10000,reason:'変更は未適用です。再試行可能になるまで待機してください。'});
+  else r=apply(ref);
+  jobs.set(ref.requestId,clone(r));
+  if((mode==='mixed'||mode==='ambiguous')&&ref.itemId==='c'&&attempts[ref.itemId]===1)replies.push(mode==='ambiguous'?result(ref,'failed',{reason:'応答にエラーがありますが、変更が未適用かは確認できません。'}):result(ref,'unknown'));
+  else replies.push(r);
+ }
+ if(mode==='lost')throw Error('lost response');
+ return {accepted:true,results:mode==='accepted'?[]:replies.reverse()};},
+ lookup:async ref=>{calls.push({method:'lookup',...ref});return $('expire').checked?result(ref,'expired'):clone(jobs.get(ref.requestId)||result(ref,'not_found'));},
+ cancel:async ref=>{calls.push({method:'cancel',...ref});const prior=jobs.get(ref.requestId);if(prior?.status==='pending')jobs.set(ref.requestId,result(ref,'cancelled'));return {accepted:true};}};
+const labels={ready:'未送信',pending:'処理中',unknown:'結果未確認',succeeded:'成功',failed:'未適用',blocked:'前提未成立・未実行',cancelled:'取消済み'};
+function setup(){if(locked)return;mode=$('scenario').value;const items=mode==='empty'?[]:base.map(x=>({...x,dependsOn:mode==='dependency'&&x.id==='b'?['a']:[]}));jobs=new Map();attempts={};effects={a:0,b:0,c:0};server={a:'active',b:'active',c:'active'};calls=[];flow=createBatchFlow(api,{items,nextRequestId:()=>`attempt-${++seq}`,now:()=>clock});render();}
+function render(){const v=flow.view();$('scope').textContent=`今回の対象は${v.total}件です。処理開始後も対象件数を保持します。`;$('summary').textContent=v.message;const body=$('items');body.replaceChildren();
+ for(const row of v.rows){const tr=document.createElement('tr');tr.dataset.itemId=row.id;const next=v.canRetryIds.includes(row.id)?'再試行できます。':v.canReconcileIds.includes(row.id)?'元の操作の結果を照合できます。':row.status==='failed'&&row.retryable?'再試行の前提・待機条件を確認してください。':row.reason;const finalResult=['succeeded','failed','blocked','cancelled'].includes(row.status);const cancellation=row.cancelState?` 取消要求：${{requesting:'送信中',accepted:finalResult?'受付確認・元操作の結果は確認済み':'受付確認・元結果は別途確認',unconfirmed:'受付未確認'}[row.cancelState]}`:'';
+  for(const text of [row.label,labels[row.status],`${next||''}${cancellation}`]){const td=document.createElement('td');td.textContent=text;tr.appendChild(td);}body.appendChild(tr);
+ }
+ $('start').textContent=`対象${v.total}件のアーカイブを開始`;$('start').disabled=!v.canStart;$('retry').textContent=`再試行可能な${v.canRetryIds.length}件だけ再試行`;$('retry').disabled=!v.canRetryIds.length;$('reconcile').textContent=`未確定の${v.canReconcileIds.length}件を照合`;$('reconcile').disabled=!v.canReconcileIds.length;$('cancel').textContent=`未確定の${v.canCancelIds.length}件に取消を依頼`;$('cancel').disabled=!v.canCancelIds.length;$('scenario').disabled=locked;
+ $('references').textContent=JSON.stringify(v.rows.map(x=>({document:x.label,itemId:x.id,requestId:x.requestId,attempts:x.attempts})),null,2);$('service').textContent=JSON.stringify({virtualTimeSeconds:clock/1000,server,effects},null,2);
+}
+async function act(fn){const promise=fn();render();await promise;render();}
+$('scenario').onchange=setup;$('start').onclick=()=>{if(!flow.view().canStart)return;locked=true;return act(()=>flow.start());};$('retry').onclick=()=>act(()=>flow.retry(flow.view().canRetryIds));$('reconcile').onclick=()=>act(()=>flow.reconcile(flow.view().canReconcileIds));$('cancel').onclick=()=>act(()=>flow.requestCancel(flow.view().canCancelIds));$('advance').onclick=()=>{clock+=10000;render();};$('finish').onclick=()=>{for(const r of [...jobs.values()])if(r.status==='pending')apply(r);render();};setup();
+window.batchDemo={getFlow:()=>flow,getCalls:()=>clone(calls),getEffects:()=>clone(effects),getServer:()=>clone(server)};
+</script></html>

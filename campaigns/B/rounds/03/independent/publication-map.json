@@ -1,0 +1,193 @@
+{
+  "scope": "Maps corresponding private reviewer artifacts to the exact published bytes. It does not re-execute tests.",
+  "transform": "Public copies may replace absolute workspace/private-capture paths; portable scripts have documented environment-path changes. Original evidence is retained privately. Behavioral observations and tested source hashes are not intentionally changed.",
+  "files": [
+    {
+      "path": "campaigns/B/rounds/03/independent/REPRODUCE.md",
+      "private_original_sha256": "7e76bb5d580b7c9be6a12554835fd4634341da4b13c40c110b5051df9687503c",
+      "published_sha256": "81cb7568803aa79c31662f98dc0d7d9caf4b0aa14f2d8c803ca30d25832f2f4c",
+      "bytes_changed": true
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/artifact-hashes.json",
+      "private_original_sha256": "481834a61768af93c47b7910c362d1141beb3fbc4fa104f7cf7807407e628f07",
+      "published_sha256": "481834a61768af93c47b7910c362d1141beb3fbc4fa104f7cf7807407e628f07",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/dom-events.json",
+      "private_original_sha256": "1f2aa35c19a3ec71d2516f8c1b317f01d68755882920bd8b35cc8b63344d6f94",
+      "published_sha256": "00624eabe5e17ff624e08706b35727c538eb564d77a37db78a7c82e57d852979",
+      "bytes_changed": true
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/edge-probes.json",
+      "private_original_sha256": "a1dd34102e62f31293daefef71d41453b1a14a50eeaaa6493ce2689dee817fba",
+      "published_sha256": "2a21339fad1013b7432d568e6b068b05528e165abb10a2d3f976395e1aac4605",
+      "bytes_changed": true
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/frozen-suite.json",
+      "private_original_sha256": "532f986ebb9d4e59bf78de612d948d3d4a5f3268cd3355a5ffdb9239f7ff858b",
+      "published_sha256": "532f986ebb9d4e59bf78de612d948d3d4a5f3268cd3355a5ffdb9239f7ff858b",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/independent-checks.json",
+      "private_original_sha256": "172f984f4f80f0750d3861ce0395017e3e3b20269cf9e177ce65d41285278e82",
+      "published_sha256": "b7ccbd5d1069d6b594252341fd6cfe3815a544dad97f8aa5e280b3042abbd8de",
+      "bytes_changed": true
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/recheck-authority.mjs",
+      "private_original_sha256": "b7b40c16db128830cc315495bda4bcbe51477228c20b542edf8862278cb16aa0",
+      "published_sha256": "b7b40c16db128830cc315495bda4bcbe51477228c20b542edf8862278cb16aa0",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/recheck-focused.mjs",
+      "private_original_sha256": "98ebe3303cbe5d37fd6a339e6283a64cd37ddc43e5fd49b915dca05f7b0528ec",
+      "published_sha256": "98ebe3303cbe5d37fd6a339e6283a64cd37ddc43e5fd49b915dca05f7b0528ec",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/registry-checker.json",
+      "private_original_sha256": "4c12fb9f1873ce27b25f7d9cb0ba3f92cfdc4332538d1479d81d39933afa4600",
+      "published_sha256": "4c12fb9f1873ce27b25f7d9cb0ba3f92cfdc4332538d1479d81d39933afa4600",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/report-initial.md",
+      "private_original_sha256": "ce144f2acedd4f72d65fd0095f40322e1516c002243a46ab87cd370835c523ae",
+      "published_sha256": "ce144f2acedd4f72d65fd0095f40322e1516c002243a46ab87cd370835c523ae",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/report.md",
+      "private_original_sha256": "7d927c3fe9abf2f6325902e02a972f2ee7e12e3222126cf92f88937c021e286b",
+      "published_sha256": "7d927c3fe9abf2f6325902e02a972f2ee7e12e3222126cf92f88937c021e286b",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/reproduce-dom-events.mjs",
+      "private_original_sha256": "615e92ccf03cc64bb3a46c29b9a16d5f7444b9956d47486d491f09ffd7a4a69e",
+      "published_sha256": "615e92ccf03cc64bb3a46c29b9a16d5f7444b9956d47486d491f09ffd7a4a69e",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/reproduce-edge-probes.mjs",
+      "private_original_sha256": "c852bbdd860a99f9410283aaa6720549cbca249c8863ce14cab3c7b09ae7b4e9",
+      "published_sha256": "c852bbdd860a99f9410283aaa6720549cbca249c8863ce14cab3c7b09ae7b4e9",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/reproduce-negative-controls.py",
+      "private_original_sha256": "10b1d50e190b5c9c65310373f84d11d739e79ad9fdf7853c652c5efbaa9c145e",
+      "published_sha256": "10b1d50e190b5c9c65310373f84d11d739e79ad9fdf7853c652c5efbaa9c145e",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/revised1/dom-events.json",
+      "private_original_sha256": "696c288bd8bbda201dd1508d05dbcf76308411c2b5fe041335e64926b7618386",
+      "published_sha256": "1a62b84f4178834bb66c2ad6631e4aa5f0d103218fad20131b355a346d48e9ab",
+      "bytes_changed": true
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/revised1/edge-probes.json",
+      "private_original_sha256": "a1fb4fa468c16e985d3993020ce470494ddcd65bf530d4ac0da510dba3b9391d",
+      "published_sha256": "1536bc7869987932da88b0d029cd83d94dbc8873a685f0bc215951e240fb12ef",
+      "bytes_changed": true
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/revised1/focused-recheck.json",
+      "private_original_sha256": "a2163481ad9345c62910f2e6fe40d126a0df7b09de73d3397a05113e3ca40462",
+      "published_sha256": "a2163481ad9345c62910f2e6fe40d126a0df7b09de73d3397a05113e3ca40462",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/revised1/frozen-suite.json",
+      "private_original_sha256": "532f986ebb9d4e59bf78de612d948d3d4a5f3268cd3355a5ffdb9239f7ff858b",
+      "published_sha256": "532f986ebb9d4e59bf78de612d948d3d4a5f3268cd3355a5ffdb9239f7ff858b",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/revised1/recheck.md",
+      "private_original_sha256": "a1b13dfe63dfce1baf55df84a782b95bba5cc608b54df58e0023cbd7b626e0b0",
+      "published_sha256": "a1b13dfe63dfce1baf55df84a782b95bba5cc608b54df58e0023cbd7b626e0b0",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/revised2/authority-recheck.json",
+      "private_original_sha256": "5997a29e8330295c8d6284a0fb5b248635ed914aaf8a45b97c584225a794170d",
+      "published_sha256": "349382f72de4e2b0449b85023fc9c93d82885a3502aa864cb72b043dfabe1e91",
+      "bytes_changed": true
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/revised2/focused-recheck.json",
+      "private_original_sha256": "59834c750c7974af18515dcdacea48bd87c9a481f21a9dfe43c4efd74d880682",
+      "published_sha256": "59834c750c7974af18515dcdacea48bd87c9a481f21a9dfe43c4efd74d880682",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/revised2/frozen-suite.json",
+      "private_original_sha256": "532f986ebb9d4e59bf78de612d948d3d4a5f3268cd3355a5ffdb9239f7ff858b",
+      "published_sha256": "532f986ebb9d4e59bf78de612d948d3d4a5f3268cd3355a5ffdb9239f7ff858b",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/revised2/recheck.md",
+      "private_original_sha256": "55eff84524790321beac21ed689e6f3e0416187dc5b876f292f41c3e70edc2df",
+      "published_sha256": "55eff84524790321beac21ed689e6f3e0416187dc5b876f292f41c3e70edc2df",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/revised3/artifact-hashes.json",
+      "private_original_sha256": "77a348f24e75b91d0cc2a8429ca26c6f9b97df1981c8d6216642a8725c91147a",
+      "published_sha256": "77a348f24e75b91d0cc2a8429ca26c6f9b97df1981c8d6216642a8725c91147a",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/revised3/authority-recheck.json",
+      "private_original_sha256": "9894da523130faac77b8dd42877ea457b304ee3eed308c453eca127837f438de",
+      "published_sha256": "5486f354de0eccb4df02132287b130a3bcf044f8b49a7f288632894dfb7864d4",
+      "bytes_changed": true
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/revised3/focused-recheck.json",
+      "private_original_sha256": "a487159943ecd0ce276078f526c1fcebccfbfe71bc0d518549b147c0dc14cc72",
+      "published_sha256": "a487159943ecd0ce276078f526c1fcebccfbfe71bc0d518549b147c0dc14cc72",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/revised3/frozen-suite.json",
+      "private_original_sha256": "532f986ebb9d4e59bf78de612d948d3d4a5f3268cd3355a5ffdb9239f7ff858b",
+      "published_sha256": "532f986ebb9d4e59bf78de612d948d3d4a5f3268cd3355a5ffdb9239f7ff858b",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/revised3/registry-checker.json",
+      "private_original_sha256": "192d9e4936b63cbe433e4f21eac86443c077ea8e89e626ba25fe710bea694a92",
+      "published_sha256": "192d9e4936b63cbe433e4f21eac86443c077ea8e89e626ba25fe710bea694a92",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/sources-actually-checked.json",
+      "private_original_sha256": "3503f8d7ff78ea651c80decf4276ee59a394dbef6df91f6c1cd0b5d94d1a0273",
+      "published_sha256": "c720e0483c45605715181b44b7c0fa6218ed12b594dbd10b62bc24123a75a4e9",
+      "bytes_changed": true
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/verdict-initial.json",
+      "private_original_sha256": "38c779d7ba5f1c86986f8d7a6d457196dca459fd5b5ea7bbc4bdcfbc9cdb92bd",
+      "published_sha256": "38c779d7ba5f1c86986f8d7a6d457196dca459fd5b5ea7bbc4bdcfbc9cdb92bd",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/03/independent/verdict.json",
+      "private_original_sha256": "d8bcf73f14b9c21a7764cacd1f751bb6a192decfcaf69b00d4885a856abef066",
+      "published_sha256": "d8bcf73f14b9c21a7764cacd1f751bb6a192decfcaf69b00d4885a856abef066",
+      "bytes_changed": false
+    }
+  ],
+  "other_public_artifacts": []
+}

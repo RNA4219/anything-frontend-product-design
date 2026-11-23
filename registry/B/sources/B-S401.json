@@ -1,0 +1,94 @@
+{
+  "source_id": "B-S401",
+  "url": "https://learn.microsoft.com/en-us/graph/json-batching",
+  "canonical_url": "https://learn.microsoft.com/en-us/graph/json-batching",
+  "title": "Combine multiple HTTP requests using JSON batching — Microsoft Graph",
+  "type": "official-primary",
+  "authority": "official Microsoft product documentation",
+  "section": [
+    "Creating a batch request",
+    "Processing the JSON batch response",
+    "Sequencing requests with the dependsOn property",
+    "Batch size limitations"
+  ],
+  "read_status": "FULL original official repository Markdown saved. Relevant contract and examples read; includes/videos not expanded or watched. Microsoft Learn rendering separately read and retained as tool receipt.",
+  "capture_kind": "official_repository_UTF8_Markdown",
+  "capture_scope": "FULL",
+  "capture_sha256": "660c594c042d11d0a26bb3575c5e983a0652559ea815eec3b6fe7fce2b428e0b",
+  "source_file_name": "microsoft-graph-json-batching.md",
+  "observed_facts": [
+    {
+      "fact": "idは要求と応答を対応させる相関文字列。大文字小文字を区別せず、バッチ内で一意でなければ400。",
+      "location": {
+        "source_id": "B-S401",
+        "local_lines": "48-48",
+        "start": 48,
+        "end": 48,
+        "web_lines": "L61"
+      }
+    },
+    {
+      "fact": "各応答は要求と異なる順序で返り得る。idで対応を取り、各statusはその要求のHTTP status。",
+      "location": {
+        "source_id": "B-S401",
+        "local_lines": "114-117",
+        "start": 114,
+        "end": 117,
+        "web_lines": "L162-L165"
+      }
+    },
+    {
+      "fact": "外側の200は内側の要求群の成功を意味しない。",
+      "location": {
+        "source_id": "B-S401",
+        "local_lines": "119-119",
+        "start": 119,
+        "end": 119,
+        "web_lines": "L166"
+      }
+    },
+    {
+      "fact": "公式例の同一envelopeには200、403、405が混在する。",
+      "location": {
+        "source_id": "B-S401",
+        "local_lines": "244-246",
+        "start": 244,
+        "end": 246,
+        "web_lines": "L286-L288"
+      }
+    },
+    {
+      "fact": "dependsOnは他の要求idを参照する。先行要求が失敗すると依存する要求は424になる。",
+      "location": {
+        "source_id": "B-S401",
+        "local_lines": "251-288",
+        "start": 251,
+        "end": 288,
+        "web_lines": "L289-L324"
+      }
+    },
+    {
+      "fact": "Graph JSON batchは20個のindividual requestまで。基盤serviceのthrottlingは各requestに別々に評価される。",
+      "location": {
+        "source_id": "B-S401",
+        "local_lines": "294-300",
+        "start": 294,
+        "end": 300,
+        "web_lines": "L328-L333"
+      }
+    }
+  ],
+  "limits": [
+    "batch idの保持期間、永続lookup endpoint、idempotency deduplication、取消endpointはこの文書に定義されていない。見つからなかったことを全Graph APIにおける不存在の証明とはしない。",
+    "例の成功応答はreadであり、これだけで任意のwriteが独立commitされることやrollback不存在まで証明しない。今回の非原子性はfixtureの宣言である。",
+    "ODataへのリンクがあることから、ODataのすべてのatomicityGroup仕様がGraphで実装されるとは推論しない。",
+    "Graphの20要求上限、IDのcase規則、HTTP schemaを一般batch APIやfrozen fixtureへ強制しない。"
+  ],
+  "upstream_refs": [
+    "turn351840510view0",
+    "turn283352505view2"
+  ],
+  "checked_at": "2026-11-23T08:34:56.430599+00:00",
+  "round": 4,
+  "redistribution": "Original retrieved text retained privately. This record contains original summaries, locators and provenance only."
+}

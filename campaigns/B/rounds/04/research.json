@@ -1,0 +1,149 @@
+{
+  "round": 4,
+  "new_source_ids": [
+    "B-S401",
+    "B-S402",
+    "B-S403",
+    "B-T501",
+    "B-T502",
+    "B-T503",
+    "B-T504",
+    "B-T505"
+  ],
+  "duplicate_canonical_records_added": 0,
+  "records": [
+    {
+      "researcher": "researcher1",
+      "source_ids": [
+        "B-S401",
+        "B-S402",
+        "B-S403"
+      ],
+      "finding_count": 11,
+      "capture_hashes_verified": true,
+      "tool_runs": [
+        {
+          "tool": "exec_command",
+          "action": "Read frozen task/cases/interface, actual imozuru README/SKILL, existing B sources/units and previous findings structure.",
+          "result": "Read completed. Initial aggregated output was truncated; relevant skill/source portions re-read. Initial schema inspection assumed decision_rules.id and raised KeyError; corrected with schema-tolerant read. No outputs of researcher2 inspected."
+        },
+        {
+          "tool": "imozuru/scripts/fetch.py",
+          "command": "PYTHONDONTWRITEBYTECODE=1 python3 tooling/imozuru/skills/imozuru/scripts/fetch.py private/B/round04/researcher1/sources microsoft-graph-batching https://learn.microsoft.com/en-us/graph/json-batching",
+          "result": "FAIL DNS temporary resolution error. Exactly one direct network probe. No address-validation/network-setting bypass.",
+          "receipt": "tool-output/initial-0.json; fetch-log.jsonl"
+        },
+        {
+          "tool": "official web search/open/click/find",
+          "calls": 7,
+          "queries": 3,
+          "search_hits": 25,
+          "result": "Substantive primary reading plus actual reference traversal. known-issues clicked redirect failed; direct official search hit succeeded. All result objects saved in tool-output."
+        },
+        {
+          "tool": "github_fetch",
+          "calls": 2,
+          "result": "Exact UTF-8 repository files obtained from actually observed Edit URLs; preserved byte-for-byte as connector-provided content."
+        },
+        {
+          "tool": "build_captures.py",
+          "result": "3 source captures with SHA256, complete query input. No source reconstruction or inferred missing lines."
+        },
+        {
+          "tool": "imozuru/scripts/digest.py add",
+          "command": "PYTHONDONTWRITEBYTECODE=1 python3 tooling/imozuru/skills/imozuru/scripts/digest.py add private/B/round04/researcher1 --round 4 --by r04_research_primary < queries-input.json",
+          "result": "SUCCESS 14 records / 35 hits, comprising 3 search records / 25 actual search hits and 11 direct-open/traversal rows / 10 retrieved targets. Failed traversal is empty hits with honest method/query label."
+        },
+        {
+          "tool": "imozuru/scripts/report.py --check",
+          "result": "See verification.json; exact short-quote anchor verification only, not behavior tests."
+        }
+      ],
+      "cost": {
+        "amount": null,
+        "measured": false,
+        "status": "not_measured"
+      },
+      "initial_verification_failure": null
+    },
+    {
+      "researcher": "researcher2",
+      "source_ids": [
+        "B-T501",
+        "B-T502",
+        "B-T503",
+        "B-T504",
+        "B-T505"
+      ],
+      "finding_count": 8,
+      "capture_hashes_verified": true,
+      "tool_runs": [
+        {
+          "id": "R2-TR01",
+          "tool": "local reads",
+          "result": "R04 task/cases/interface, existing registry, imozuru README/SKILL/actual CLI source read. No Round04 Researcher-1 outputs read."
+        },
+        {
+          "id": "R2-TR02",
+          "tool": "imozuru fetch.py",
+          "exit_code": 1,
+          "evidence": "probe-result.json",
+          "result": "one DNS acquisition probe failed with Temporary failure in name resolution; no environment bypass/repeated direct fetch."
+        },
+        {
+          "id": "R2-TR03",
+          "tool": "system1_search_query",
+          "query_count": 2,
+          "returned_hit_count": 7,
+          "evidence": "search.web.txt; search-arguments.json",
+          "result": "official domains; aggregate hit attribution recorded honestly."
+        },
+        {
+          "id": "R2-TR04",
+          "tool": "web.open/find",
+          "result": "5 unique official documents relevant sections read; exact returned representation saved, not raw HTML. 5 web call batches including search and traversal."
+        },
+        {
+          "id": "R2-TR05",
+          "tool": "web.click",
+          "actual_traversal_count": 2,
+          "evidence": "traces.web.txt; trace-arguments.json; actual_reference_traces",
+          "result": "AIP-233->AIP-155 and BatchWriteItem->ErrorHandling redirects followed."
+        },
+        {
+          "id": "R2-TR06",
+          "tool": "imozuru digest.py add",
+          "status": "PASS",
+          "evidence": "queries.jsonl",
+          "exit_code": 0,
+          "result": "digest.py add executed: 3 query/traversal records, 9 aggregate hits; query arguments preserved."
+        },
+        {
+          "id": "R2-TR07",
+          "tool": "imozuru report.py --check",
+          "status": "PASS",
+          "evidence": "report-check.json",
+          "exit_code": 0,
+          "result": "report.py --check executed: all 7 exact excerpts matched stored source positions."
+        },
+        {
+          "id": "R2-TR08",
+          "tool": "artifact verification",
+          "status": "PASS",
+          "evidence": "verification.json",
+          "result": "Artifact consistency, exact captured blocks, SHA256, locators, canonical dedup, proposal status and trace checks. Not application fixture tests."
+        }
+      ],
+      "cost": {
+        "amount": null,
+        "measured": false
+      },
+      "initial_verification_failure": "Comparison inserted an extra file LF between raw response blocks; source bytes unchanged. Initial FAIL retained and exact unnormalized byte comparisons pass."
+    }
+  ],
+  "source_checks": {
+    "passed": 8,
+    "total": 8
+  },
+  "scope": "Batch semantics, decision inputs and API-dependent boundaries; no live vendor integration or human efficacy validation."
+}

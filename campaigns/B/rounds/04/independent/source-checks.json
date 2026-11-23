@@ -1,0 +1,224 @@
+{
+  "checked_at": "2026-11-23T08:55:48.606128+00:00",
+  "method": "Direct reading of retained source text and independent byte/hash comparison; no new web retrieval. No source text redistributed in this result.",
+  "new_sources": 8,
+  "reused_dependencies": 2,
+  "hash_match_count": 10,
+  "r2_exact_byte_matches": 5,
+  "checks": [
+    {
+      "source_id": "B-S401",
+      "file_name": "microsoft-graph-json-batching.md",
+      "sha256": "660c594c042d11d0a26bb3575c5e983a0652559ea815eec3b6fe7fce2b428e0b",
+      "research_metadata_match": true,
+      "registry_match": true,
+      "capture_kind": "official_repository_UTF8_Markdown",
+      "read_scope": "Relevant source sections, not all linked/include content."
+    },
+    {
+      "source_id": "B-S402",
+      "file_name": "microsoft-graph-throttling.md",
+      "sha256": "bcf59f10c6daad493751931665811baab232eb9be8e8aa201ae3f72233068e42",
+      "research_metadata_match": true,
+      "registry_match": true,
+      "capture_kind": "official_repository_UTF8_Markdown",
+      "read_scope": "Relevant source sections, not all linked/include content."
+    },
+    {
+      "source_id": "B-S403",
+      "file_name": "microsoft-graph-known-issues-web-extract.md",
+      "sha256": "51b9b0651fa31e064536cb2a0c1e0cfe31a0f552cf60f96f08c4962a3e057637",
+      "research_metadata_match": true,
+      "registry_match": true,
+      "capture_kind": "complete_web_tool_text_extraction",
+      "read_scope": "Relevant source sections, not all linked/include content."
+    },
+    {
+      "source_id": "B-T501",
+      "file_name": "B-T501-google-aip233.web.txt",
+      "sha256": "0ba623860c6fd81017a10ee477fa147578a7e21771563025e0a0a1418878313e",
+      "research_metadata_match": true,
+      "registry_match": true,
+      "capture_kind": "selected web-tool text extracts; not raw HTML or complete page",
+      "exact_raw_receipt_comparison": {
+        "source_id": "B-T501",
+        "selected_receipt_refs": [
+          "turn611015095view0",
+          "turn505435738view0"
+        ],
+        "actual_bytes": 13958,
+        "expected_bytes": 13958,
+        "exact_bytes_equal": true,
+        "sha256": "0ba623860c6fd81017a10ee477fa147578a7e21771563025e0a0a1418878313e"
+      },
+      "read_scope": "Relevant source ranges, including duplicate returned blocks."
+    },
+    {
+      "source_id": "B-T502",
+      "file_name": "B-T502-dynamodb-batchwrite.web.txt",
+      "sha256": "5fa643a11ba6621656cc5e84bedbe8b4d568bc4a96f37f6f52ee2c603c80b233",
+      "research_metadata_match": true,
+      "registry_match": true,
+      "capture_kind": "selected web-tool text extracts; not raw HTML or complete page",
+      "exact_raw_receipt_comparison": {
+        "source_id": "B-T502",
+        "selected_receipt_refs": [
+          "turn611015095view1",
+          "turn505435738view1"
+        ],
+        "actual_bytes": 26290,
+        "expected_bytes": 26290,
+        "exact_bytes_equal": true,
+        "sha256": "5fa643a11ba6621656cc5e84bedbe8b4d568bc4a96f37f6f52ee2c603c80b233"
+      },
+      "read_scope": "Relevant source ranges, including duplicate returned blocks."
+    },
+    {
+      "source_id": "B-T503",
+      "file_name": "B-T503-dynamodb-transactwrite.web.txt",
+      "sha256": "18c9001532b3ea8bdeaef2a4ba9011daaca9816cfebf1c1b55ef53351edaf81a",
+      "research_metadata_match": true,
+      "registry_match": true,
+      "capture_kind": "selected web-tool text extracts; not raw HTML or complete page",
+      "exact_raw_receipt_comparison": {
+        "source_id": "B-T503",
+        "selected_receipt_refs": [
+          "turn611015095view2",
+          "turn505435738view2",
+          "turn505435738view3"
+        ],
+        "actual_bytes": 26004,
+        "expected_bytes": 26004,
+        "exact_bytes_equal": true,
+        "sha256": "18c9001532b3ea8bdeaef2a4ba9011daaca9816cfebf1c1b55ef53351edaf81a"
+      },
+      "read_scope": "Relevant source ranges, including duplicate returned blocks."
+    },
+    {
+      "source_id": "B-T504",
+      "file_name": "B-T504-google-aip155.web.txt",
+      "sha256": "b757ad79af562ceb1dc0428644d6c5f701b69e7d8fe7b34fd877bc8d0a058825",
+      "research_metadata_match": true,
+      "registry_match": true,
+      "capture_kind": "selected web-tool text extracts; not raw HTML or complete page",
+      "exact_raw_receipt_comparison": {
+        "source_id": "B-T504",
+        "selected_receipt_refs": [
+          "turn522464258view0"
+        ],
+        "actual_bytes": 5707,
+        "expected_bytes": 5707,
+        "exact_bytes_equal": true,
+        "sha256": "b757ad79af562ceb1dc0428644d6c5f701b69e7d8fe7b34fd877bc8d0a058825"
+      },
+      "read_scope": "Relevant source ranges, including duplicate returned blocks."
+    },
+    {
+      "source_id": "B-T505",
+      "file_name": "B-T505-dynamodb-errors.web.txt",
+      "sha256": "7a905062376037e1f98d5c62f853c67690f97857def1fa17c1b3e583e2bdf797",
+      "research_metadata_match": true,
+      "registry_match": true,
+      "capture_kind": "selected web-tool text extracts; not raw HTML or complete page",
+      "exact_raw_receipt_comparison": {
+        "source_id": "B-T505",
+        "selected_receipt_refs": [
+          "turn522464258view1"
+        ],
+        "actual_bytes": 19255,
+        "expected_bytes": 19255,
+        "exact_bytes_equal": true,
+        "sha256": "7a905062376037e1f98d5c62f853c67690f97857def1fa17c1b3e583e2bdf797"
+      },
+      "read_scope": "Relevant source ranges, including duplicate returned blocks."
+    },
+    {
+      "source_id": "B-S104",
+      "file_name": "google-2025-operations.proto",
+      "sha256": "5d2e7f9eeb55b8417b50e0a536a092babd32d26e4fbeb7099c6cdcda6e16db9c",
+      "registry_match": true,
+      "reused_dependency": true
+    },
+    {
+      "source_id": "B-T301",
+      "file_name": "B-T301-microsoft-compensating-transaction.web.txt",
+      "sha256": "8f41b3690e625973f1b3ae1497e3a78176a92c3e7797c1038e88f3aad7cf8369",
+      "registry_match": true,
+      "reused_dependency": true
+    }
+  ],
+  "claim_scope_review": [
+    {
+      "source_id": "B-S401",
+      "locations": "local 48, 114-119, 244-246, 251-288, 294-300",
+      "checked": "Batch-local case-insensitive id and out-of-order correlation; envelope 200 not per-item success; dependent failure; service-specific size.",
+      "scope_boundary": "No durable lookup, idempotency or generic per-item cancel inferred. Example GET successes do not prove independent arbitrary-write commit.",
+      "scope_supported": true
+    },
+    {
+      "source_id": "B-S402",
+      "locations": "local 80-95, 104-108",
+      "checked": "Per-request throttling, Retry-After minimum delay, longest delay for a regrouped batch, repeated 429, SDK/batch distinctions.",
+      "scope_boundary": "No scheduled success or universal per-HTTP-send user confirmation inferred.",
+      "scope_supported": true
+    },
+    {
+      "source_id": "B-S403",
+      "locations": "local 175-183 / web L172-L180; local 248-251 / web L245-L248",
+      "checked": "Single dependency and specified patterns; externalConnection can be created despite a 503 response.",
+      "scope_boundary": "Endpoint-specific counterexample to HTTP error implies nonapplication, not a classification of all 503 responses or arbitrary DAG support.",
+      "scope_supported": true
+    },
+    {
+      "source_id": "B-T501",
+      "locations": "web L82-L86, L129-L145, L151-L158",
+      "checked": "Synchronous batch create atomic; asynchronous atomic/partial modes; original request index correlation; transient server retry and operation outcome separation.",
+      "scope_boundary": "Original index mapping is valid; arrival-order guessing is not. AIP Create guidance is not every batch API.",
+      "scope_supported": true
+    },
+    {
+      "source_id": "B-T502",
+      "locations": "web L10-L28, L285-L296, L386, L456-L463",
+      "checked": "BatchWriteItem non-atomic as a batch; UnprocessedItems can coexist with HTTP 200; returned subset can be resubmitted.",
+      "scope_boundary": "Complement reasoning is conditional on a complete valid response; lost response is not an empty map. Not a conditional-update adapter.",
+      "scope_supported": true
+    },
+    {
+      "source_id": "B-T503",
+      "locations": "web L7-L15, L234-L238, L450-L461",
+      "checked": "All-or-nothing transaction; request-token idempotency window; ordered CancellationReasons and None diagnostics.",
+      "scope_boundary": "No-error diagnostic within rejected transaction is not an individual commit. That conclusion combines two direct rules; fixture does not execute an atomic branch.",
+      "scope_supported": true
+    },
+    {
+      "source_id": "B-T504",
+      "locations": "web L43, L67-L81",
+      "checked": "request_id idempotency role and API-defined lifetime; resource id is distinct; stale success responses can differ.",
+      "scope_boundary": "Fixture attempt-ID rotation is not instructions to rotate a logical idempotency key; B-IU-002 safe same-key replay exception remains.",
+      "scope_supported": true
+    },
+    {
+      "source_id": "B-T505",
+      "locations": "web L188-L190, L201-L202, L215-L227",
+      "checked": "Write HTTP 500 may have applied; response Request ID helps diagnostics; high-level and low-level SDK retry differences.",
+      "scope_boundary": "No generic operation lookup/cancel or uniform SDK behavior inferred.",
+      "scope_supported": true
+    },
+    {
+      "source_id": "B-S104",
+      "locations": "original proto local 88-105, 133-155",
+      "checked": "Cancellation request is asynchronous and best effort; original operation may complete; done and successful response are distinct.",
+      "scope_boundary": "Does not establish a cancel endpoint for every batch vendor. Fixture lookup/cancel remain declared assumptions.",
+      "scope_supported": true
+    },
+    {
+      "source_id": "B-T301",
+      "locations": "web L41-L58, L63-L80",
+      "checked": "Compensation covers completed effects and may fail; business-specific and not necessarily restoring original state.",
+      "scope_boundary": "Blocked/unexecuted dependent work is not itself compensation; no implemented compensation claimed.",
+      "scope_supported": true
+    }
+  ],
+  "r2_prior_initial_failure_retained": "researcher2/verification-initial.json; tool-block LF comparator failure, not candidate behavior failure",
+  "limitations": "Source capture integrity is not behavior, current live API, SDK, or human evidence."
+}

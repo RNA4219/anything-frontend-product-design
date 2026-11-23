@@ -1,0 +1,175 @@
+{
+  "created_at": "2026-11-23T09:01:07.527932+00:00",
+  "files": [
+    {
+      "path": "REPRODUCE.md",
+      "sha256": "c25383e0b637d956d02c2cd188d05037291f83d44099f9a50526887500f793ee",
+      "bytes": 3559
+    },
+    {
+      "path": "artifact-hashes-initial.json",
+      "sha256": "2cd6e11b1a1a9559ca962deac659e0a508d5b2d1abef2626bca5442dc77babe1",
+      "bytes": 3369
+    },
+    {
+      "path": "artifact-hashes.json",
+      "sha256": "3cd51fbd47981436a67db8cd9541cfeb5e9b1320112a082da207d0f2800b4052",
+      "bytes": 5502
+    },
+    {
+      "path": "dom-events-preliminary.json",
+      "sha256": "85e1c5250a091a621b9b2e184c361ff2732c9dff158749ad22fcf98b35502a46",
+      "bytes": 197415
+    },
+    {
+      "path": "dom-events.json",
+      "sha256": "ffccaf7a7c49fc7bd046dcaba289f0e5057ade965d8f4337d7ccd17902b25503",
+      "bytes": 1027
+    },
+    {
+      "path": "edge-probes.json",
+      "sha256": "efc896bb5899168ef5e23f719caca22f1d71f94fb2b03db5c50fc5ab1da4008f",
+      "bytes": 23759
+    },
+    {
+      "path": "fault-controls/N01-IGNORE-MINIMUM-DELAY.json",
+      "sha256": "264f46f7958eee10465efdaa0b74412b40ff90836ea7591b651eaec73efc982f",
+      "bytes": 2321
+    },
+    {
+      "path": "fault-controls/N01-IGNORE-MINIMUM-DELAY.mjs",
+      "sha256": "50989b927b866292c095470b4e76cd47d485f08823bc88b82f10168e76f8f121",
+      "bytes": 6576
+    },
+    {
+      "path": "fault-controls/N02-ASSIGN-RESULTS-BY-ARRIVAL-POSITION.json",
+      "sha256": "c451ea10072e8ea518a642afd95bdbca9925838c09f30435c77ed15135647213",
+      "bytes": 2635
+    },
+    {
+      "path": "fault-controls/N02-ASSIGN-RESULTS-BY-ARRIVAL-POSITION.mjs",
+      "sha256": "99772f37789855cd65712937270fec28a61731a1517c22d1c8d8da38127eafd2",
+      "bytes": 6697
+    },
+    {
+      "path": "fault-controls/N03-CANCEL-RECEIPT-AS-TERMINAL.json",
+      "sha256": "ed15662c88b0cfe44dd9a7e76d8c1a0b37c95bfe811efe1526468a4975d1914e",
+      "bytes": 2563
+    },
+    {
+      "path": "fault-controls/N03-CANCEL-RECEIPT-AS-TERMINAL.mjs",
+      "sha256": "24d1f5fe47a2d5e0473f66675e1e7dd34c4b2d25d06fd1e6c902b4172c3cb47b",
+      "bytes": 6709
+    },
+    {
+      "path": "fault-controls/N04-LET-LATE-PENDING-ERASE-TERMINAL.json",
+      "sha256": "d735976f44537110e2665dea5146b4fb4ae03e00242290da7c6875768ef255b5",
+      "bytes": 1414
+    },
+    {
+      "path": "fault-controls/N04-LET-LATE-PENDING-ERASE-TERMINAL.mjs",
+      "sha256": "e3b7c81db179ccde436f6c3645b499c5147bb073569f70674ae6a333f6d80e18",
+      "bytes": 6594
+    },
+    {
+      "path": "fault-controls/summary.json",
+      "sha256": "eb394452d5736975d6d5b91fa28444c30b4a650f83eaf895c45ee36a7b62ebe1",
+      "bytes": 1981
+    },
+    {
+      "path": "finding-B-R04-C01.json",
+      "sha256": "8ccc572a5c3f74e7e08cd87d1a3fe7b0a2a21b7b9d05b2e4a9239deaa5fbab0d",
+      "bytes": 2321
+    },
+    {
+      "path": "frozen-suite.json",
+      "sha256": "1c7a6211a77300c7c62646ff69c6bd5536be8ba1d4aee11220085087fd553711",
+      "bytes": 1852
+    },
+    {
+      "path": "initial/artifact-hashes-initial.json",
+      "sha256": "2cd6e11b1a1a9559ca962deac659e0a508d5b2d1abef2626bca5442dc77babe1",
+      "bytes": 3369
+    },
+    {
+      "path": "initial/dom-events.json",
+      "sha256": "8c896e799b2480e319f913612e0325d30db82e4a02f9410de406a6d60e2e0e73",
+      "bytes": 216217
+    },
+    {
+      "path": "initial/edge-probes.json",
+      "sha256": "efc896bb5899168ef5e23f719caca22f1d71f94fb2b03db5c50fc5ab1da4008f",
+      "bytes": 23759
+    },
+    {
+      "path": "initial/frozen-suite.json",
+      "sha256": "1c7a6211a77300c7c62646ff69c6bd5536be8ba1d4aee11220085087fd553711",
+      "bytes": 1852
+    },
+    {
+      "path": "initial/supplement-suite.json",
+      "sha256": "95ad0f25923d8c6e38478f25622929e437125783da25f8d743935a60474f6013",
+      "bytes": 771
+    },
+    {
+      "path": "report-initial.md",
+      "sha256": "4bde1de86a824adc340a2ae1aba3c53007702cca7af5303887ae4a7b08dd0dbb",
+      "bytes": 1313
+    },
+    {
+      "path": "report.md",
+      "sha256": "661814fea93502a32dcf78637ca092a3c179281f0667f757b40d3e25bd627919",
+      "bytes": 13038
+    },
+    {
+      "path": "reproduce-dom-events.mjs",
+      "sha256": "c41f7270f767f727427eed517c643df3766f8650cee2ecf5e33556e8899da782",
+      "bytes": 12924
+    },
+    {
+      "path": "reproduce-edge-probes.mjs",
+      "sha256": "2983bb9a2ed304a00ba096ce928154e6a3bc83c42ca8d40dd750d37c2063ef4d",
+      "bytes": 6483
+    },
+    {
+      "path": "reproduce-fault-controls.py",
+      "sha256": "c5e7cc1faeb5a2fe3d770670d4cf5465fc2f7b2fdc064b49256b2d6d5ea419bb",
+      "bytes": 3827
+    },
+    {
+      "path": "revised1/artifact-hashes.json",
+      "sha256": "3cd51fbd47981436a67db8cd9541cfeb5e9b1320112a082da207d0f2800b4052",
+      "bytes": 5502
+    },
+    {
+      "path": "revised1/dom-events.json",
+      "sha256": "af7b58981f051f808d747bbfb5f87890fdc8283d4313c0275728c4d9716bff31",
+      "bytes": 83100
+    },
+    {
+      "path": "source-check-attempts.json",
+      "sha256": "2a9c342134800ce8a27c23ab7e1a0ace7bd8f4ad9d5a3ce1a53ca08647956347",
+      "bytes": 3378
+    },
+    {
+      "path": "source-checks.json",
+      "sha256": "e23bc499779640ef6248658eeed01db0dcd68d385a5fe74e669b04440de77b29",
+      "bytes": 10389
+    },
+    {
+      "path": "supplement-suite.json",
+      "sha256": "95ad0f25923d8c6e38478f25622929e437125783da25f8d743935a60474f6013",
+      "bytes": 771
+    },
+    {
+      "path": "verdict-initial.json",
+      "sha256": "6b389f3987c2bfd88d95dffaf1c1c1b05c8d65c43d3ad644be10265800ae7031",
+      "bytes": 2899
+    },
+    {
+      "path": "verdict.json",
+      "sha256": "d8bf6209c84786fc239546229b8b3e135634963af038f7f0d535961c650d2896",
+      "bytes": 6606
+    }
+  ]
+}

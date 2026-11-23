@@ -1,0 +1,77 @@
+{
+  "round": 4,
+  "frozen_at": "2026-11-23T08:07:11.073738+00:00",
+  "status": "PRE_RESEARCH_ACCEPTANCE",
+  "cases": [
+    {
+      "id": "B01",
+      "name": "Mixed outcomes",
+      "criterion": "One success, one terminal nonapplication and one unresolved item stay distinct; no all-success statement."
+    },
+    {
+      "id": "B02",
+      "name": "Envelope acceptance",
+      "criterion": "Accepted batch without terminal item results is pending, not successful completion."
+    },
+    {
+      "id": "B03",
+      "name": "Correlation",
+      "criterion": "Out-of-order replies map by stable item ID, never array position."
+    },
+    {
+      "id": "B04",
+      "name": "Missing result",
+      "criterion": "A missing item reply remains unresolved; the original selected total and operation reference remain."
+    },
+    {
+      "id": "B05",
+      "name": "Eligible retry subset",
+      "criterion": "Only known retryable unapplied items after their minimum retry time may be resubmitted; successes, permanent failures and unknowns are excluded."
+    },
+    {
+      "id": "B06",
+      "name": "Unknown reconciliation",
+      "criterion": "Unknown items use the original operation reference; lookup does not create new side effects."
+    },
+    {
+      "id": "B07",
+      "name": "Task completion",
+      "criterion": "All items terminal permits task-finished reporting; mixed failure/cancellation is still distinct from all changes succeeding."
+    },
+    {
+      "id": "B08",
+      "name": "Empty scope",
+      "criterion": "No item selected produces no batch call and no invented successful changes."
+    },
+    {
+      "id": "B09",
+      "name": "Ambiguous correlation",
+      "criterion": "Duplicate contradictory or unexpected item identities cannot silently assign an outcome to another intended item."
+    },
+    {
+      "id": "B10",
+      "name": "Lost envelope response",
+      "criterion": "Transport loss alone does not classify every item as unapplied or automatically replay the whole batch."
+    },
+    {
+      "id": "B11",
+      "name": "Cancellation scope",
+      "criterion": "Request cancellation only for eligible unresolved items; receipt is not cancellation completion and already successful items stay successful."
+    },
+    {
+      "id": "B12",
+      "name": "Recovery to completion",
+      "criterion": "After eligible retry and original-operation reconciliation, aggregate output matches actual per-item effects and nothing successful is repeated."
+    },
+    {
+      "id": "B13",
+      "name": "Dependency nonexecution",
+      "criterion": "A blocked dependency result is not shown as success; it cannot be retried while its required predecessor has not succeeded."
+    }
+  ],
+  "limits": [
+    "One declared non-atomic fixture is not evidence of universal batch semantics.",
+    "Dependency logic is limited to declared item prerequisites, not an arbitrary workflow engine.",
+    "No generated baseline or human efficacy comparison."
+  ]
+}

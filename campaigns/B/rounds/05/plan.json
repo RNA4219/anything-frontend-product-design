@@ -1,0 +1,28 @@
+{
+  "round": 5,
+  "status": "QUEUED_NOT_STARTED",
+  "issues": [
+    "B-008"
+  ],
+  "priority": "P1",
+  "created_at": "2026-11-23T08:42:21.819094+00:00",
+  "research_question": "After an upstream decision changes, which dependent inputs, task requirements and reviews must be invalidated, and how does a multi-step task return to a valid completion path without losing independent work?",
+  "prior_work": [
+    "B-IU-005",
+    "B-IU-006",
+    "B-IU-008",
+    "B-IU-009 if accepted in R04"
+  ],
+  "known_coverage": "R02 covered one conditional address branch, active payload/errors and review invalidation. Multi-step dependency changes and completion based on currently required work remain outside its direct tests.",
+  "starting_sources": "Reuse existing B-S205 check-answers capture first. Search current official conditional-step/task-list guidance independently; record only newly needed sections or sources.",
+  "candidate_policy": "Prefer revising B-IU-006 if conditions have the same meaning. Register a new unit only if a distinct actionable decision is demonstrated.",
+  "proposed_validation_questions": [
+    "Does changing an upstream answer invalidate only affected downstream inputs and approvals?",
+    "Can newly required work prevent completion even if every old step was previously visited?",
+    "Are inactive retained values excluded from effective decisions/payload without erasing unrelated work?",
+    "Does returning from a changed answer lead to the next necessary question and then review?",
+    "Are already-applied side effects retained as facts and handed to compensation rules instead of silently undone?"
+  ],
+  "scope_boundary": "B owns task dependencies and completion. A owns information architecture; C owns component/routing implementation; D owns broader efficacy methodology.",
+  "execution": "No subagents or tests for R05 have been executed yet."
+}

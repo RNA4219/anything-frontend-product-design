@@ -1,0 +1,198 @@
+{
+  "source_id": "B-T502",
+  "url": "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_BatchWriteItem.html",
+  "canonical_url": "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_BatchWriteItem.html",
+  "title": "BatchWriteItem - Amazon DynamoDB",
+  "type": "official API documentation",
+  "authority": "Primary official source",
+  "section": [
+    {
+      "section": "Operation semantics and rejection",
+      "line_map": [
+        {
+          "web_line": 8,
+          "local_lines": [
+            11
+          ]
+        },
+        {
+          "web_line": 10,
+          "local_lines": [
+            13,
+            148
+          ]
+        },
+        {
+          "web_line": 11,
+          "local_lines": [
+            14
+          ]
+        },
+        {
+          "web_line": 15,
+          "local_lines": [
+            18
+          ]
+        },
+        {
+          "web_line": 17,
+          "local_lines": [
+            20
+          ]
+        },
+        {
+          "web_line": 21,
+          "local_lines": [
+            24
+          ]
+        },
+        {
+          "web_line": 26,
+          "local_lines": [
+            29
+          ]
+        },
+        {
+          "web_line": 28,
+          "local_lines": [
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Request parameters",
+      "line_map": [
+        {
+          "web_line": 99,
+          "local_lines": [
+            102
+          ]
+        },
+        {
+          "web_line": 101,
+          "local_lines": [
+            104
+          ]
+        },
+        {
+          "web_line": 102,
+          "local_lines": [
+            105
+          ]
+        },
+        {
+          "web_line": 103,
+          "local_lines": [
+            106
+          ]
+        },
+        {
+          "web_line": 105,
+          "local_lines": [
+            108
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Response elements",
+      "line_map": [
+        {
+          "web_line": 252,
+          "local_lines": [
+            216
+          ]
+        },
+        {
+          "web_line": 284,
+          "local_lines": [
+            248
+          ]
+        },
+        {
+          "web_line": 285,
+          "local_lines": [
+            249
+          ]
+        },
+        {
+          "web_line": 287,
+          "local_lines": [
+            251
+          ]
+        },
+        {
+          "web_line": 290,
+          "local_lines": [
+            254
+          ]
+        },
+        {
+          "web_line": 296,
+          "local_lines": [
+            260
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Example 200 response with unprocessed request",
+      "line_map": [
+        {
+          "web_line": 386,
+          "local_lines": [
+            350
+          ]
+        },
+        {
+          "web_line": 456,
+          "local_lines": [
+            420
+          ]
+        },
+        {
+          "web_line": 457,
+          "local_lines": [
+            421
+          ]
+        },
+        {
+          "web_line": 463,
+          "local_lines": [
+            427
+          ]
+        }
+      ]
+    }
+  ],
+  "read_status": "READ_RELEVANT_SECTIONS; exact web-tool representation retained",
+  "capture_kind": "WEB_TOOL_EXTRACT",
+  "capture_scope": {
+    "authority": "official API specification/design guidance",
+    "capture_kind": "TOOL_EXTRACTED_TEXT",
+    "raw_html": false,
+    "page_complete_claim": false,
+    "selection": "Actual returned open/find text blocks; duplicate overlapping lines preserved, not reconstructed HTML.",
+    "retrieved_at": "2026-11-23T08:29:35.826598+00:00"
+  },
+  "capture_sha256": "5fa643a11ba6621656cc5e84bedbe8b4d568bc4a96f37f6f52ee2c603c80b233",
+  "source_file_name": "B-T502-dynamodb-batchwrite.web.txt",
+  "observed_facts": [
+    "個別Put/Deleteはatomicだがbatch全体は非atomic。未処理の要求はUnprocessedItemsで返り、同じRequestItems形式で再送できる。",
+    "200 OKにUnprocessedItemsが残る実例がある。未処理がなければmapは空になる。",
+    "要求はtableとitem/keyを含むPutRequest/DeleteRequest。更新や個別条件を指定できず、同一itemへの重複要求等ではbatch全体を拒否する。"
+  ],
+  "limits": [
+    "このAPIの説明・request/response schemaに項目別durable operation reference、lookup、cancelの契約はない。これだけでAWS全製品の機能不存在を証明しない。",
+    "正しい完全応答内のUnprocessedItemsと、応答を失って未処理集合自体が不明な場合は異なる。",
+    "BatchWriteItemはreviewed conditional update fixtureの実adapterではない。Putは既存itemを上書きし得る。"
+  ],
+  "upstream_refs": [
+    "turn611015095view1",
+    "turn505435738view1"
+  ],
+  "checked_at": "2026-11-23T08:34:56.430599+00:00",
+  "round": 4,
+  "redistribution": "Original retrieved text retained privately. This record contains original summaries, locators and provenance only."
+}

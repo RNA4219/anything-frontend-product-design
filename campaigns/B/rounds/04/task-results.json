@@ -1,0 +1,72 @@
+{
+  "suite": "B-R04-fixed",
+  "total": 13,
+  "passed": 13,
+  "results": [
+    {
+      "id": "B01",
+      "name": "Mixed outcomes remain distinct",
+      "pass": true
+    },
+    {
+      "id": "B02",
+      "name": "Envelope acceptance is not completion",
+      "pass": true
+    },
+    {
+      "id": "B03",
+      "name": "Out-of-order results use identity",
+      "pass": true
+    },
+    {
+      "id": "B04",
+      "name": "Missing result retains scope and original operation",
+      "pass": true
+    },
+    {
+      "id": "B05",
+      "name": "Retry subset and minimum delay",
+      "pass": true
+    },
+    {
+      "id": "B06",
+      "name": "Unknown lookup reuses original operation",
+      "pass": true
+    },
+    {
+      "id": "B07",
+      "name": "Finished mixed task is not all successful",
+      "pass": true
+    },
+    {
+      "id": "B08",
+      "name": "Empty selection makes no request",
+      "pass": true
+    },
+    {
+      "id": "B09",
+      "name": "Ambiguous and unexpected results cannot corrupt mapping",
+      "pass": true
+    },
+    {
+      "id": "B10",
+      "name": "Lost envelope does not replay whole task",
+      "pass": true
+    },
+    {
+      "id": "B11",
+      "name": "Cancellation receipt and scope",
+      "pass": true
+    },
+    {
+      "id": "B12",
+      "name": "Recovery completes only remaining effects",
+      "pass": true
+    },
+    {
+      "id": "B13",
+      "name": "Blocked dependencies cannot be retried prematurely",
+      "pass": true
+    }
+  ]
+}

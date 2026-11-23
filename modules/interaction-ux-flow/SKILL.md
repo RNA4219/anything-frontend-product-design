@@ -23,11 +23,12 @@ description: 利用者のタスクフロー、状態遷移、確認、取消、�
 | Undo、復元、補償、期限切れ | [回復範囲と成立条件](references/undo-and-compensation.md)：[004](../../registry/B/skills/B-IU-004.json) |
 | 入力拒否、修正、確認から戻る | [入力修正と確認](references/forms-and-review.md)：[005](../../registry/B/skills/B-IU-005.json)、[006](../../registry/B/skills/B-IU-006.json) |
 | 作業の再開、権限・版の変化、遅い応答 | [作業の復帰と再判断](references/resume-and-conflict.md)：[007](../../registry/B/skills/B-IU-007.json)、[008](../../registry/B/skills/B-IU-008.json) |
+| 一括操作の部分成功・結果欠落・再試行 | [項目別結果と回復範囲](references/batch-outcomes.md)：[009](../../registry/B/skills/B-IU-009.json) |
 | 住所・氏名・日付・連絡先・認証・属性 | [入力と連絡先](references/input-and-contact.md)：201〜206 |
 | 進捗・繰り返し項目・申請の控え | [処理の進行と控え](references/progress-and-receipts.md)：207、208、212 |
 | 時間制限・退避・通知・選択的取消 | [中断・退避・履歴](references/interruption-and-history.md)：209〜211、213 |
 
-001〜008は ACCEPT、201〜213は DRAFT。いずれも原典を組み合わせた設計推論と原典の直接要求を区別し、適用先の契約と未検証範囲を示す。関連する条件が複数あれば各手順を組み合わせる。[状態とイベントの判断条件](references/decisions.md)は補足として使い、結果の正本を一つで確認できる契約に二重照会を一律に要求しない。
+001〜009は ACCEPT、201〜213は DRAFT。いずれも原典を組み合わせた設計推論と原典の直接要求を区別し、適用先の契約と未検証範囲を示す。関連する条件が複数あれば各手順を組み合わせる。[状態とイベントの判断条件](references/decisions.md)は補足として使い、結果の正本を一つで確認できる契約に二重照会を一律に要求しない。
 
 ## 引き渡し
 

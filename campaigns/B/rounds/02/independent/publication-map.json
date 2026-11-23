@@ -1,0 +1,67 @@
+{
+  "scope": "Maps corresponding private reviewer artifacts to the exact published bytes. It does not re-execute tests.",
+  "transform": "Public copies may replace absolute workspace/private-capture paths; portable scripts have documented environment-path changes. Original evidence is retained privately. Behavioral observations and tested source hashes are not intentionally changed.",
+  "files": [
+    {
+      "path": "campaigns/B/rounds/02/independent/artifact-hashes.json",
+      "private_original_sha256": "0b1f51577356fcacc18fc28ab51156d12f71b9c57dd545dbbf7c7143d58abcdf",
+      "published_sha256": "0b1f51577356fcacc18fc28ab51156d12f71b9c57dd545dbbf7c7143d58abcdf",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/02/independent/dom-events.json",
+      "private_original_sha256": "da4ef5df87393d9c3d5ed7fea9285ab9a5c4f2a9bb1acb238f31bbe6cf345688",
+      "published_sha256": "5337abd209f5f552d33aec0da5a7b20e115c887267dfa7ac9f1fff668e975610",
+      "bytes_changed": true
+    },
+    {
+      "path": "campaigns/B/rounds/02/independent/dom-events.mjs",
+      "private_original_sha256": "1707ed43e2c257a88fe5e90b9497109e83766cefd9cdfdaa23b8019af0175b8a",
+      "published_sha256": "79f7153c63958819c0f6098a82154d2ae547c8afe6d192f48489c0d52b3ff842",
+      "bytes_changed": true
+    },
+    {
+      "path": "campaigns/B/rounds/02/independent/frozen-suite.json",
+      "private_original_sha256": "1c88a007bab8716961e1622bb22c0670c607e943bc9eb87a0a7d5faf0605e8a8",
+      "published_sha256": "ac4c77c72d0b88ba5a670bd70d8a227456789890c914065c9983b63b6b1161a6",
+      "bytes_changed": true
+    },
+    {
+      "path": "campaigns/B/rounds/02/independent/independent-checks.json",
+      "private_original_sha256": "7a4bf59076dac6b356d85bee7f3fb5720a5fc2ed66e2984354201a1d83b92394",
+      "published_sha256": "42a57a1d72100ec28512c238563bc9a5a99810f03a693bcab245e7bd2ccfb000",
+      "bytes_changed": true
+    },
+    {
+      "path": "campaigns/B/rounds/02/independent/recheck-identified-defect.json",
+      "private_original_sha256": "5456a5fbf0a357d067bfc43f9d08048ddb7865677b022b70d26661971c040d0f",
+      "published_sha256": "5456a5fbf0a357d067bfc43f9d08048ddb7865677b022b70d26661971c040d0f",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/02/independent/registry-checker.json",
+      "private_original_sha256": "e261bcccaff7f24f5a1cad72ff7eb5394ab9ba7798c5f032ecfc5ab46d9ade43",
+      "published_sha256": "e261bcccaff7f24f5a1cad72ff7eb5394ab9ba7798c5f032ecfc5ab46d9ade43",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/02/independent/review-initial.json",
+      "private_original_sha256": "a81ec75e3c7c5b589ec270854d8b4e063f30f8d4d8ff62ed26075049aae1bcc1",
+      "published_sha256": "a81ec75e3c7c5b589ec270854d8b4e063f30f8d4d8ff62ed26075049aae1bcc1",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/02/independent/review.json",
+      "private_original_sha256": "9feacb20b7f66f1817d6ef732399c463bf7a7bcfd021bebd4a6212bdfcab72f2",
+      "published_sha256": "9feacb20b7f66f1817d6ef732399c463bf7a7bcfd021bebd4a6212bdfcab72f2",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/02/independent/review.md",
+      "private_original_sha256": "937f5df3bcd034ffbd7efa29b8d34a815c47b2345c33bc2864bef855a1db77e1",
+      "published_sha256": "937f5df3bcd034ffbd7efa29b8d34a815c47b2345c33bc2864bef855a1db77e1",
+      "bytes_changed": false
+    }
+  ],
+  "other_public_artifacts": []
+}

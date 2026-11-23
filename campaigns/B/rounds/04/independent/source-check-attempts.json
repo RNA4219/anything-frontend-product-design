@@ -1,0 +1,106 @@
+{
+  "initial_critic_comparator": {
+    "status": "FAIL_INVALID_COMPARATOR",
+    "method": "Naive title/ref boundary slicing concatenated all historical web_refs, included raw separator rules, and failed to preserve selected block join semantics.",
+    "results": [
+      {
+        "source_id": "B-T501",
+        "equal": false,
+        "actual_bytes": 13958,
+        "incorrect_expected_bytes": 14122,
+        "first_difference_byte": 10759
+      },
+      {
+        "source_id": "B-T502",
+        "equal": false,
+        "actual_bytes": 26290,
+        "incorrect_expected_bytes": 26454,
+        "first_difference_byte": 10871
+      },
+      {
+        "source_id": "B-T503",
+        "equal": false,
+        "actual_bytes": 26004,
+        "incorrect_expected_bytes": 26083,
+        "first_difference_byte": 11970
+      },
+      {
+        "source_id": "B-T504",
+        "equal": false,
+        "actual_bytes": 5707,
+        "incorrect_expected_bytes": 11656,
+        "first_difference_byte": 41
+      },
+      {
+        "source_id": "B-T505",
+        "equal": false,
+        "actual_bytes": 19255,
+        "incorrect_expected_bytes": 38650,
+        "first_difference_byte": 113
+      }
+    ],
+    "interpretation": "Mismatch in this comparison procedure, not evidence of modified source bytes."
+  },
+  "corrected_critic_comparator": {
+    "status": "PASS",
+    "method": "Split actual raw tool text on the observed 80-hyphen separator, use capture-selected receipt refs in order, join selected returned blocks with two LF and append the declared final file LF. No strip/normalization within source blocks.",
+    "results": [
+      {
+        "source_id": "B-T501",
+        "selected_receipt_refs": [
+          "turn611015095view0",
+          "turn505435738view0"
+        ],
+        "actual_bytes": 13958,
+        "expected_bytes": 13958,
+        "exact_bytes_equal": true,
+        "sha256": "0ba623860c6fd81017a10ee477fa147578a7e21771563025e0a0a1418878313e"
+      },
+      {
+        "source_id": "B-T502",
+        "selected_receipt_refs": [
+          "turn611015095view1",
+          "turn505435738view1"
+        ],
+        "actual_bytes": 26290,
+        "expected_bytes": 26290,
+        "exact_bytes_equal": true,
+        "sha256": "5fa643a11ba6621656cc5e84bedbe8b4d568bc4a96f37f6f52ee2c603c80b233"
+      },
+      {
+        "source_id": "B-T503",
+        "selected_receipt_refs": [
+          "turn611015095view2",
+          "turn505435738view2",
+          "turn505435738view3"
+        ],
+        "actual_bytes": 26004,
+        "expected_bytes": 26004,
+        "exact_bytes_equal": true,
+        "sha256": "18c9001532b3ea8bdeaef2a4ba9011daaca9816cfebf1c1b55ef53351edaf81a"
+      },
+      {
+        "source_id": "B-T504",
+        "selected_receipt_refs": [
+          "turn522464258view0"
+        ],
+        "actual_bytes": 5707,
+        "expected_bytes": 5707,
+        "exact_bytes_equal": true,
+        "sha256": "b757ad79af562ceb1dc0428644d6c5f701b69e7d8fe7b34fd877bc8d0a058825"
+      },
+      {
+        "source_id": "B-T505",
+        "selected_receipt_refs": [
+          "turn522464258view1"
+        ],
+        "actual_bytes": 19255,
+        "expected_bytes": 19255,
+        "exact_bytes_equal": true,
+        "sha256": "7a905062376037e1f98d5c62f853c67690f97857def1fa17c1b3e583e2bdf797"
+      }
+    ]
+  },
+  "source_files_changed": false,
+  "candidate_revision_requested": false
+}

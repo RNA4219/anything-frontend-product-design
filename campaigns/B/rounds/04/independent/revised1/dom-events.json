@@ -1,0 +1,2641 @@
+{
+  "runtime": {
+    "node": "v24.22.3",
+    "jsdom": "26.1.0"
+  },
+  "method": "Actual candidate HTML click/change handlers in jsdom; only the single ESM import is replaced by the exact imported candidate factory. No browser rendering, visual, AT, authorization, persistence, SDK, or human evaluation.",
+  "case_filter": [
+    "DOM03-LOST-RESPONSE-LOOKUP-CANCEL",
+    "DOM05-CANCEL-ALREADY-APPLIED-UNKNOWN",
+    "EDOM02-SUCCESS-AFTER-CANCEL-HAS-TERMINAL-COPY",
+    "EDOM03-CANCELLED-HAS-TERMINAL-COPY"
+  ],
+  "hashes": {
+    "module": "7e303c30025abf6b92aa05b269fe83b9e289a61f581f533f06713a7fa58efd12",
+    "html": "5207bee27be273599bbab14eeee7f90f7723db809866f9e7162c0aec0e570567"
+  },
+  "counts": {
+    "representative": {
+      "total": 2,
+      "passed": 2
+    },
+    "exploratory": {
+      "total": 2,
+      "passed": 2
+    }
+  },
+  "results": [
+    {
+      "id": "DOM03-LOST-RESPONSE-LOOKUP-CANCEL",
+      "kind": "representative",
+      "pass": true,
+      "events": [
+        {
+          "type": "change",
+          "id": "scenario",
+          "value": "lost"
+        },
+        {
+          "type": "click",
+          "id": "start",
+          "disabled": false
+        },
+        {
+          "type": "click",
+          "id": "start",
+          "disabled": true
+        },
+        {
+          "type": "click",
+          "id": "retry",
+          "disabled": true
+        },
+        {
+          "type": "click",
+          "id": "reconcile",
+          "disabled": false
+        },
+        {
+          "type": "click",
+          "id": "cancel",
+          "disabled": false
+        },
+        {
+          "type": "click",
+          "id": "reconcile",
+          "disabled": false
+        }
+      ],
+      "observations": [
+        {
+          "step": "lost-after-one-effect",
+          "flow": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "Alpha 文書",
+                "dependsOn": [],
+                "status": "unknown",
+                "requestId": "attempt-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "送信応答を受け取れず結果未確認です。",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "送信応答を受け取れず結果未確認です。"
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "Beta 文書",
+                "dependsOn": [],
+                "status": "unknown",
+                "requestId": "attempt-2",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "送信応答を受け取れず結果未確認です。",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "送信応答を受け取れず結果未確認です。"
+                  }
+                ]
+              },
+              {
+                "id": "c",
+                "label": "Gamma 文書",
+                "dependsOn": [],
+                "status": "unknown",
+                "requestId": "attempt-3",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "送信応答を受け取れず結果未確認です。",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "送信応答を受け取れず結果未確認です。"
+                  }
+                ]
+              }
+            ],
+            "total": 3,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 3,
+              "succeeded": 0,
+              "failed": 0,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": false,
+            "allSucceeded": false,
+            "message": "対象3件：成功0、未適用0、前提未成立0、取消0、処理中0、結果未確認3、未送信0。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [
+              "a",
+              "b",
+              "c"
+            ],
+            "canCancelIds": [
+              "a",
+              "b",
+              "c"
+            ]
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "attempt-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "attempt-2",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "c",
+                  "requestId": "attempt-3",
+                  "dependsOn": []
+                }
+              ]
+            }
+          ],
+          "effects": {
+            "a": 1,
+            "b": 0,
+            "c": 0
+          },
+          "server": {
+            "a": "archived",
+            "b": "active",
+            "c": "active"
+          },
+          "dom": {
+            "scope": "今回の対象は3件です。処理開始後も対象件数を保持します。",
+            "summary": "対象3件：成功0、未適用0、前提未成立0、取消0、処理中0、結果未確認3、未送信0。",
+            "rows": [
+              {
+                "id": "a",
+                "cells": [
+                  "Alpha 文書",
+                  "結果未確認",
+                  "元の操作の結果を照合できます。"
+                ]
+              },
+              {
+                "id": "b",
+                "cells": [
+                  "Beta 文書",
+                  "結果未確認",
+                  "元の操作の結果を照合できます。"
+                ]
+              },
+              {
+                "id": "c",
+                "cells": [
+                  "Gamma 文書",
+                  "結果未確認",
+                  "元の操作の結果を照合できます。"
+                ]
+              }
+            ],
+            "buttons": {
+              "start": {
+                "disabled": true,
+                "text": "対象3件のアーカイブを開始"
+              },
+              "retry": {
+                "disabled": true,
+                "text": "再試行可能な0件だけ再試行"
+              },
+              "reconcile": {
+                "disabled": false,
+                "text": "未確定の3件を照合"
+              },
+              "cancel": {
+                "disabled": false,
+                "text": "未確定の3件に取消を依頼"
+              }
+            },
+            "scenarioDisabled": true,
+            "references": [
+              {
+                "document": "Alpha 文書",
+                "itemId": "a",
+                "requestId": "attempt-1",
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "送信応答を受け取れず結果未確認です。"
+                  }
+                ]
+              },
+              {
+                "document": "Beta 文書",
+                "itemId": "b",
+                "requestId": "attempt-2",
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "送信応答を受け取れず結果未確認です。"
+                  }
+                ]
+              },
+              {
+                "document": "Gamma 文書",
+                "itemId": "c",
+                "requestId": "attempt-3",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "送信応答を受け取れず結果未確認です。"
+                  }
+                ]
+              }
+            ],
+            "service": {
+              "virtualTimeSeconds": 0,
+              "server": {
+                "a": "archived",
+                "b": "active",
+                "c": "active"
+              },
+              "effects": {
+                "a": 1,
+                "b": 0,
+                "c": 0
+              }
+            },
+            "cancelNote": "取消の依頼を受け付けても、操作の結果が確定したことにはなりません。成立済みの変更を戻すには別の手順が必要です。"
+          }
+        },
+        {
+          "step": "no-replay",
+          "flow": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "Alpha 文書",
+                "dependsOn": [],
+                "status": "unknown",
+                "requestId": "attempt-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "送信応答を受け取れず結果未確認です。",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "送信応答を受け取れず結果未確認です。"
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "Beta 文書",
+                "dependsOn": [],
+                "status": "unknown",
+                "requestId": "attempt-2",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "送信応答を受け取れず結果未確認です。",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "送信応答を受け取れず結果未確認です。"
+                  }
+                ]
+              },
+              {
+                "id": "c",
+                "label": "Gamma 文書",
+                "dependsOn": [],
+                "status": "unknown",
+                "requestId": "attempt-3",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "送信応答を受け取れず結果未確認です。",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "送信応答を受け取れず結果未確認です。"
+                  }
+                ]
+              }
+            ],
+            "total": 3,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 3,
+              "succeeded": 0,
+              "failed": 0,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": false,
+            "allSucceeded": false,
+            "message": "対象3件：成功0、未適用0、前提未成立0、取消0、処理中0、結果未確認3、未送信0。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [
+              "a",
+              "b",
+              "c"
+            ],
+            "canCancelIds": [
+              "a",
+              "b",
+              "c"
+            ]
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "attempt-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "attempt-2",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "c",
+                  "requestId": "attempt-3",
+                  "dependsOn": []
+                }
+              ]
+            }
+          ],
+          "effects": {
+            "a": 1,
+            "b": 0,
+            "c": 0
+          },
+          "server": {
+            "a": "archived",
+            "b": "active",
+            "c": "active"
+          },
+          "dom": {
+            "scope": "今回の対象は3件です。処理開始後も対象件数を保持します。",
+            "summary": "対象3件：成功0、未適用0、前提未成立0、取消0、処理中0、結果未確認3、未送信0。",
+            "rows": [
+              {
+                "id": "a",
+                "cells": [
+                  "Alpha 文書",
+                  "結果未確認",
+                  "元の操作の結果を照合できます。"
+                ]
+              },
+              {
+                "id": "b",
+                "cells": [
+                  "Beta 文書",
+                  "結果未確認",
+                  "元の操作の結果を照合できます。"
+                ]
+              },
+              {
+                "id": "c",
+                "cells": [
+                  "Gamma 文書",
+                  "結果未確認",
+                  "元の操作の結果を照合できます。"
+                ]
+              }
+            ],
+            "buttons": {
+              "start": {
+                "disabled": true,
+                "text": "対象3件のアーカイブを開始"
+              },
+              "retry": {
+                "disabled": true,
+                "text": "再試行可能な0件だけ再試行"
+              },
+              "reconcile": {
+                "disabled": false,
+                "text": "未確定の3件を照合"
+              },
+              "cancel": {
+                "disabled": false,
+                "text": "未確定の3件に取消を依頼"
+              }
+            },
+            "scenarioDisabled": true,
+            "references": [
+              {
+                "document": "Alpha 文書",
+                "itemId": "a",
+                "requestId": "attempt-1",
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "送信応答を受け取れず結果未確認です。"
+                  }
+                ]
+              },
+              {
+                "document": "Beta 文書",
+                "itemId": "b",
+                "requestId": "attempt-2",
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "送信応答を受け取れず結果未確認です。"
+                  }
+                ]
+              },
+              {
+                "document": "Gamma 文書",
+                "itemId": "c",
+                "requestId": "attempt-3",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "送信応答を受け取れず結果未確認です。"
+                  }
+                ]
+              }
+            ],
+            "service": {
+              "virtualTimeSeconds": 0,
+              "server": {
+                "a": "archived",
+                "b": "active",
+                "c": "active"
+              },
+              "effects": {
+                "a": 1,
+                "b": 0,
+                "c": 0
+              }
+            },
+            "cancelNote": "取消の依頼を受け付けても、操作の結果が確定したことにはなりません。成立済みの変更を戻すには別の手順が必要です。"
+          }
+        },
+        {
+          "step": "lookup-original-operations",
+          "flow": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "Alpha 文書",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "attempt-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "Beta 文書",
+                "dependsOn": [],
+                "status": "pending",
+                "requestId": "attempt-2",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "pending",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "c",
+                "label": "Gamma 文書",
+                "dependsOn": [],
+                "status": "pending",
+                "requestId": "attempt-3",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "pending",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "total": 3,
+            "counts": {
+              "ready": 0,
+              "pending": 2,
+              "unknown": 0,
+              "succeeded": 1,
+              "failed": 0,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": false,
+            "allSucceeded": false,
+            "message": "対象3件：成功1、未適用0、前提未成立0、取消0、処理中2、結果未確認0、未送信0。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [
+              "b",
+              "c"
+            ],
+            "canCancelIds": [
+              "b",
+              "c"
+            ]
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "attempt-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "attempt-2",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "c",
+                  "requestId": "attempt-3",
+                  "dependsOn": []
+                }
+              ]
+            },
+            {
+              "method": "lookup",
+              "itemId": "a",
+              "requestId": "attempt-1"
+            },
+            {
+              "method": "lookup",
+              "itemId": "b",
+              "requestId": "attempt-2"
+            },
+            {
+              "method": "lookup",
+              "itemId": "c",
+              "requestId": "attempt-3"
+            }
+          ],
+          "effects": {
+            "a": 1,
+            "b": 0,
+            "c": 0
+          },
+          "server": {
+            "a": "archived",
+            "b": "active",
+            "c": "active"
+          },
+          "dom": {
+            "scope": "今回の対象は3件です。処理開始後も対象件数を保持します。",
+            "summary": "対象3件：成功1、未適用0、前提未成立0、取消0、処理中2、結果未確認0、未送信0。",
+            "rows": [
+              {
+                "id": "a",
+                "cells": [
+                  "Alpha 文書",
+                  "成功",
+                  ""
+                ]
+              },
+              {
+                "id": "b",
+                "cells": [
+                  "Beta 文書",
+                  "処理中",
+                  "元の操作の結果を照合できます。"
+                ]
+              },
+              {
+                "id": "c",
+                "cells": [
+                  "Gamma 文書",
+                  "処理中",
+                  "元の操作の結果を照合できます。"
+                ]
+              }
+            ],
+            "buttons": {
+              "start": {
+                "disabled": true,
+                "text": "対象3件のアーカイブを開始"
+              },
+              "retry": {
+                "disabled": true,
+                "text": "再試行可能な0件だけ再試行"
+              },
+              "reconcile": {
+                "disabled": false,
+                "text": "未確定の2件を照合"
+              },
+              "cancel": {
+                "disabled": false,
+                "text": "未確定の2件に取消を依頼"
+              }
+            },
+            "scenarioDisabled": true,
+            "references": [
+              {
+                "document": "Alpha 文書",
+                "itemId": "a",
+                "requestId": "attempt-1",
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "document": "Beta 文書",
+                "itemId": "b",
+                "requestId": "attempt-2",
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "pending",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "document": "Gamma 文書",
+                "itemId": "c",
+                "requestId": "attempt-3",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "pending",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "service": {
+              "virtualTimeSeconds": 0,
+              "server": {
+                "a": "archived",
+                "b": "active",
+                "c": "active"
+              },
+              "effects": {
+                "a": 1,
+                "b": 0,
+                "c": 0
+              }
+            },
+            "cancelNote": "取消の依頼を受け付けても、操作の結果が確定したことにはなりません。成立済みの変更を戻すには別の手順が必要です。"
+          }
+        },
+        {
+          "step": "cancellation-receipts",
+          "flow": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "Alpha 文書",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "attempt-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "Beta 文書",
+                "dependsOn": [],
+                "status": "pending",
+                "requestId": "attempt-2",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": "accepted",
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "pending",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "c",
+                "label": "Gamma 文書",
+                "dependsOn": [],
+                "status": "pending",
+                "requestId": "attempt-3",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": "accepted",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "pending",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "total": 3,
+            "counts": {
+              "ready": 0,
+              "pending": 2,
+              "unknown": 0,
+              "succeeded": 1,
+              "failed": 0,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": false,
+            "allSucceeded": false,
+            "message": "対象3件：成功1、未適用0、前提未成立0、取消0、処理中2、結果未確認0、未送信0。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [
+              "b",
+              "c"
+            ],
+            "canCancelIds": []
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "attempt-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "attempt-2",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "c",
+                  "requestId": "attempt-3",
+                  "dependsOn": []
+                }
+              ]
+            },
+            {
+              "method": "lookup",
+              "itemId": "a",
+              "requestId": "attempt-1"
+            },
+            {
+              "method": "lookup",
+              "itemId": "b",
+              "requestId": "attempt-2"
+            },
+            {
+              "method": "lookup",
+              "itemId": "c",
+              "requestId": "attempt-3"
+            },
+            {
+              "method": "cancel",
+              "itemId": "b",
+              "requestId": "attempt-2"
+            },
+            {
+              "method": "cancel",
+              "itemId": "c",
+              "requestId": "attempt-3"
+            }
+          ],
+          "effects": {
+            "a": 1,
+            "b": 0,
+            "c": 0
+          },
+          "server": {
+            "a": "archived",
+            "b": "active",
+            "c": "active"
+          },
+          "dom": {
+            "scope": "今回の対象は3件です。処理開始後も対象件数を保持します。",
+            "summary": "対象3件：成功1、未適用0、前提未成立0、取消0、処理中2、結果未確認0、未送信0。",
+            "rows": [
+              {
+                "id": "a",
+                "cells": [
+                  "Alpha 文書",
+                  "成功",
+                  ""
+                ]
+              },
+              {
+                "id": "b",
+                "cells": [
+                  "Beta 文書",
+                  "処理中",
+                  "元の操作の結果を照合できます。 取消要求：受付確認・元結果は別途確認"
+                ]
+              },
+              {
+                "id": "c",
+                "cells": [
+                  "Gamma 文書",
+                  "処理中",
+                  "元の操作の結果を照合できます。 取消要求：受付確認・元結果は別途確認"
+                ]
+              }
+            ],
+            "buttons": {
+              "start": {
+                "disabled": true,
+                "text": "対象3件のアーカイブを開始"
+              },
+              "retry": {
+                "disabled": true,
+                "text": "再試行可能な0件だけ再試行"
+              },
+              "reconcile": {
+                "disabled": false,
+                "text": "未確定の2件を照合"
+              },
+              "cancel": {
+                "disabled": true,
+                "text": "未確定の0件に取消を依頼"
+              }
+            },
+            "scenarioDisabled": true,
+            "references": [
+              {
+                "document": "Alpha 文書",
+                "itemId": "a",
+                "requestId": "attempt-1",
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "document": "Beta 文書",
+                "itemId": "b",
+                "requestId": "attempt-2",
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "pending",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "document": "Gamma 文書",
+                "itemId": "c",
+                "requestId": "attempt-3",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "pending",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "service": {
+              "virtualTimeSeconds": 0,
+              "server": {
+                "a": "archived",
+                "b": "active",
+                "c": "active"
+              },
+              "effects": {
+                "a": 1,
+                "b": 0,
+                "c": 0
+              }
+            },
+            "cancelNote": "取消の依頼を受け付けても、操作の結果が確定したことにはなりません。成立済みの変更を戻すには別の手順が必要です。"
+          }
+        },
+        {
+          "step": "terminal-mixed",
+          "flow": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "Alpha 文書",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "attempt-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "Beta 文書",
+                "dependsOn": [],
+                "status": "cancelled",
+                "requestId": "attempt-2",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": "accepted",
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "cancelled",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "c",
+                "label": "Gamma 文書",
+                "dependsOn": [],
+                "status": "cancelled",
+                "requestId": "attempt-3",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": "accepted",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "cancelled",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "total": 3,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 0,
+              "succeeded": 1,
+              "failed": 0,
+              "blocked": 0,
+              "cancelled": 2
+            },
+            "finished": true,
+            "allSucceeded": false,
+            "message": "今回の処理結果がそろいました。対象3件：成功1、未適用0、前提未成立0、取消2、処理中0、結果未確認0、未送信0。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [],
+            "canCancelIds": []
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "attempt-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "attempt-2",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "c",
+                  "requestId": "attempt-3",
+                  "dependsOn": []
+                }
+              ]
+            },
+            {
+              "method": "lookup",
+              "itemId": "a",
+              "requestId": "attempt-1"
+            },
+            {
+              "method": "lookup",
+              "itemId": "b",
+              "requestId": "attempt-2"
+            },
+            {
+              "method": "lookup",
+              "itemId": "c",
+              "requestId": "attempt-3"
+            },
+            {
+              "method": "cancel",
+              "itemId": "b",
+              "requestId": "attempt-2"
+            },
+            {
+              "method": "cancel",
+              "itemId": "c",
+              "requestId": "attempt-3"
+            },
+            {
+              "method": "lookup",
+              "itemId": "b",
+              "requestId": "attempt-2"
+            },
+            {
+              "method": "lookup",
+              "itemId": "c",
+              "requestId": "attempt-3"
+            }
+          ],
+          "effects": {
+            "a": 1,
+            "b": 0,
+            "c": 0
+          },
+          "server": {
+            "a": "archived",
+            "b": "active",
+            "c": "active"
+          },
+          "dom": {
+            "scope": "今回の対象は3件です。処理開始後も対象件数を保持します。",
+            "summary": "今回の処理結果がそろいました。対象3件：成功1、未適用0、前提未成立0、取消2、処理中0、結果未確認0、未送信0。",
+            "rows": [
+              {
+                "id": "a",
+                "cells": [
+                  "Alpha 文書",
+                  "成功",
+                  ""
+                ]
+              },
+              {
+                "id": "b",
+                "cells": [
+                  "Beta 文書",
+                  "取消済み",
+                  " 取消要求：受付確認・元操作の結果は確認済み"
+                ]
+              },
+              {
+                "id": "c",
+                "cells": [
+                  "Gamma 文書",
+                  "取消済み",
+                  " 取消要求：受付確認・元操作の結果は確認済み"
+                ]
+              }
+            ],
+            "buttons": {
+              "start": {
+                "disabled": true,
+                "text": "対象3件のアーカイブを開始"
+              },
+              "retry": {
+                "disabled": true,
+                "text": "再試行可能な0件だけ再試行"
+              },
+              "reconcile": {
+                "disabled": true,
+                "text": "未確定の0件を照合"
+              },
+              "cancel": {
+                "disabled": true,
+                "text": "未確定の0件に取消を依頼"
+              }
+            },
+            "scenarioDisabled": true,
+            "references": [
+              {
+                "document": "Alpha 文書",
+                "itemId": "a",
+                "requestId": "attempt-1",
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "document": "Beta 文書",
+                "itemId": "b",
+                "requestId": "attempt-2",
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "cancelled",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "document": "Gamma 文書",
+                "itemId": "c",
+                "requestId": "attempt-3",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "cancelled",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "service": {
+              "virtualTimeSeconds": 0,
+              "server": {
+                "a": "archived",
+                "b": "active",
+                "c": "active"
+              },
+              "effects": {
+                "a": 1,
+                "b": 0,
+                "c": 0
+              }
+            },
+            "cancelNote": "取消の依頼を受け付けても、操作の結果が確定したことにはなりません。成立済みの変更を戻すには別の手順が必要です。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "DOM05-CANCEL-ALREADY-APPLIED-UNKNOWN",
+      "kind": "representative",
+      "pass": true,
+      "events": [
+        {
+          "type": "click",
+          "id": "start",
+          "disabled": false
+        },
+        {
+          "type": "click",
+          "id": "cancel",
+          "disabled": false
+        },
+        {
+          "type": "click",
+          "id": "reconcile",
+          "disabled": false
+        }
+      ],
+      "observations": [
+        {
+          "step": "applied-unknown",
+          "flow": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "Alpha 文書",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "attempt-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "Beta 文書",
+                "dependsOn": [],
+                "status": "failed",
+                "requestId": "attempt-2",
+                "unapplied": true,
+                "retryable": true,
+                "nextRetryAt": 10000,
+                "reason": "変更は未適用です。再試行可能になるまで待機してください。",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "failed",
+                    "unapplied": true,
+                    "retryable": true,
+                    "nextRetryAt": 10000,
+                    "reason": "変更は未適用です。再試行可能になるまで待機してください。"
+                  }
+                ]
+              },
+              {
+                "id": "c",
+                "label": "Gamma 文書",
+                "dependsOn": [],
+                "status": "unknown",
+                "requestId": "attempt-3",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "total": 3,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 1,
+              "succeeded": 1,
+              "failed": 1,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": false,
+            "allSucceeded": false,
+            "message": "対象3件：成功1、未適用1、前提未成立0、取消0、処理中0、結果未確認1、未送信0。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [
+              "c"
+            ],
+            "canCancelIds": [
+              "c"
+            ]
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "attempt-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "attempt-2",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "c",
+                  "requestId": "attempt-3",
+                  "dependsOn": []
+                }
+              ]
+            }
+          ],
+          "effects": {
+            "a": 1,
+            "b": 0,
+            "c": 1
+          },
+          "server": {
+            "a": "archived",
+            "b": "active",
+            "c": "archived"
+          },
+          "dom": {
+            "scope": "今回の対象は3件です。処理開始後も対象件数を保持します。",
+            "summary": "対象3件：成功1、未適用1、前提未成立0、取消0、処理中0、結果未確認1、未送信0。",
+            "rows": [
+              {
+                "id": "a",
+                "cells": [
+                  "Alpha 文書",
+                  "成功",
+                  ""
+                ]
+              },
+              {
+                "id": "b",
+                "cells": [
+                  "Beta 文書",
+                  "未適用",
+                  "再試行の前提・待機条件を確認してください。"
+                ]
+              },
+              {
+                "id": "c",
+                "cells": [
+                  "Gamma 文書",
+                  "結果未確認",
+                  "元の操作の結果を照合できます。"
+                ]
+              }
+            ],
+            "buttons": {
+              "start": {
+                "disabled": true,
+                "text": "対象3件のアーカイブを開始"
+              },
+              "retry": {
+                "disabled": true,
+                "text": "再試行可能な0件だけ再試行"
+              },
+              "reconcile": {
+                "disabled": false,
+                "text": "未確定の1件を照合"
+              },
+              "cancel": {
+                "disabled": false,
+                "text": "未確定の1件に取消を依頼"
+              }
+            },
+            "scenarioDisabled": true,
+            "references": [
+              {
+                "document": "Alpha 文書",
+                "itemId": "a",
+                "requestId": "attempt-1",
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "document": "Beta 文書",
+                "itemId": "b",
+                "requestId": "attempt-2",
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "failed",
+                    "unapplied": true,
+                    "retryable": true,
+                    "nextRetryAt": 10000,
+                    "reason": "変更は未適用です。再試行可能になるまで待機してください。"
+                  }
+                ]
+              },
+              {
+                "document": "Gamma 文書",
+                "itemId": "c",
+                "requestId": "attempt-3",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "service": {
+              "virtualTimeSeconds": 0,
+              "server": {
+                "a": "archived",
+                "b": "active",
+                "c": "archived"
+              },
+              "effects": {
+                "a": 1,
+                "b": 0,
+                "c": 1
+              }
+            },
+            "cancelNote": "取消の依頼を受け付けても、操作の結果が確定したことにはなりません。成立済みの変更を戻すには別の手順が必要です。"
+          }
+        },
+        {
+          "step": "receipt-does-not-undo",
+          "flow": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "Alpha 文書",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "attempt-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "Beta 文書",
+                "dependsOn": [],
+                "status": "failed",
+                "requestId": "attempt-2",
+                "unapplied": true,
+                "retryable": true,
+                "nextRetryAt": 10000,
+                "reason": "変更は未適用です。再試行可能になるまで待機してください。",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "failed",
+                    "unapplied": true,
+                    "retryable": true,
+                    "nextRetryAt": 10000,
+                    "reason": "変更は未適用です。再試行可能になるまで待機してください。"
+                  }
+                ]
+              },
+              {
+                "id": "c",
+                "label": "Gamma 文書",
+                "dependsOn": [],
+                "status": "unknown",
+                "requestId": "attempt-3",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": "accepted",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "total": 3,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 1,
+              "succeeded": 1,
+              "failed": 1,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": false,
+            "allSucceeded": false,
+            "message": "対象3件：成功1、未適用1、前提未成立0、取消0、処理中0、結果未確認1、未送信0。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [
+              "c"
+            ],
+            "canCancelIds": []
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "attempt-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "attempt-2",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "c",
+                  "requestId": "attempt-3",
+                  "dependsOn": []
+                }
+              ]
+            },
+            {
+              "method": "cancel",
+              "itemId": "c",
+              "requestId": "attempt-3"
+            }
+          ],
+          "effects": {
+            "a": 1,
+            "b": 0,
+            "c": 1
+          },
+          "server": {
+            "a": "archived",
+            "b": "active",
+            "c": "archived"
+          },
+          "dom": {
+            "scope": "今回の対象は3件です。処理開始後も対象件数を保持します。",
+            "summary": "対象3件：成功1、未適用1、前提未成立0、取消0、処理中0、結果未確認1、未送信0。",
+            "rows": [
+              {
+                "id": "a",
+                "cells": [
+                  "Alpha 文書",
+                  "成功",
+                  ""
+                ]
+              },
+              {
+                "id": "b",
+                "cells": [
+                  "Beta 文書",
+                  "未適用",
+                  "再試行の前提・待機条件を確認してください。"
+                ]
+              },
+              {
+                "id": "c",
+                "cells": [
+                  "Gamma 文書",
+                  "結果未確認",
+                  "元の操作の結果を照合できます。 取消要求：受付確認・元結果は別途確認"
+                ]
+              }
+            ],
+            "buttons": {
+              "start": {
+                "disabled": true,
+                "text": "対象3件のアーカイブを開始"
+              },
+              "retry": {
+                "disabled": true,
+                "text": "再試行可能な0件だけ再試行"
+              },
+              "reconcile": {
+                "disabled": false,
+                "text": "未確定の1件を照合"
+              },
+              "cancel": {
+                "disabled": true,
+                "text": "未確定の0件に取消を依頼"
+              }
+            },
+            "scenarioDisabled": true,
+            "references": [
+              {
+                "document": "Alpha 文書",
+                "itemId": "a",
+                "requestId": "attempt-1",
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "document": "Beta 文書",
+                "itemId": "b",
+                "requestId": "attempt-2",
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "failed",
+                    "unapplied": true,
+                    "retryable": true,
+                    "nextRetryAt": 10000,
+                    "reason": "変更は未適用です。再試行可能になるまで待機してください。"
+                  }
+                ]
+              },
+              {
+                "document": "Gamma 文書",
+                "itemId": "c",
+                "requestId": "attempt-3",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "service": {
+              "virtualTimeSeconds": 0,
+              "server": {
+                "a": "archived",
+                "b": "active",
+                "c": "archived"
+              },
+              "effects": {
+                "a": 1,
+                "b": 0,
+                "c": 1
+              }
+            },
+            "cancelNote": "取消の依頼を受け付けても、操作の結果が確定したことにはなりません。成立済みの変更を戻すには別の手順が必要です。"
+          }
+        },
+        {
+          "step": "original-success-confirmed",
+          "flow": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "Alpha 文書",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "attempt-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "Beta 文書",
+                "dependsOn": [],
+                "status": "failed",
+                "requestId": "attempt-2",
+                "unapplied": true,
+                "retryable": true,
+                "nextRetryAt": 10000,
+                "reason": "変更は未適用です。再試行可能になるまで待機してください。",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "failed",
+                    "unapplied": true,
+                    "retryable": true,
+                    "nextRetryAt": 10000,
+                    "reason": "変更は未適用です。再試行可能になるまで待機してください。"
+                  }
+                ]
+              },
+              {
+                "id": "c",
+                "label": "Gamma 文書",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "attempt-3",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": "accepted",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "total": 3,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 0,
+              "succeeded": 2,
+              "failed": 1,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": true,
+            "allSucceeded": false,
+            "message": "今回の処理結果がそろいました。対象3件：成功2、未適用1、前提未成立0、取消0、処理中0、結果未確認0、未送信0。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [],
+            "canCancelIds": []
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "attempt-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "attempt-2",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "c",
+                  "requestId": "attempt-3",
+                  "dependsOn": []
+                }
+              ]
+            },
+            {
+              "method": "cancel",
+              "itemId": "c",
+              "requestId": "attempt-3"
+            },
+            {
+              "method": "lookup",
+              "itemId": "c",
+              "requestId": "attempt-3"
+            }
+          ],
+          "effects": {
+            "a": 1,
+            "b": 0,
+            "c": 1
+          },
+          "server": {
+            "a": "archived",
+            "b": "active",
+            "c": "archived"
+          },
+          "dom": {
+            "scope": "今回の対象は3件です。処理開始後も対象件数を保持します。",
+            "summary": "今回の処理結果がそろいました。対象3件：成功2、未適用1、前提未成立0、取消0、処理中0、結果未確認0、未送信0。",
+            "rows": [
+              {
+                "id": "a",
+                "cells": [
+                  "Alpha 文書",
+                  "成功",
+                  ""
+                ]
+              },
+              {
+                "id": "b",
+                "cells": [
+                  "Beta 文書",
+                  "未適用",
+                  "再試行の前提・待機条件を確認してください。"
+                ]
+              },
+              {
+                "id": "c",
+                "cells": [
+                  "Gamma 文書",
+                  "成功",
+                  " 取消要求：受付確認・元操作の結果は確認済み"
+                ]
+              }
+            ],
+            "buttons": {
+              "start": {
+                "disabled": true,
+                "text": "対象3件のアーカイブを開始"
+              },
+              "retry": {
+                "disabled": true,
+                "text": "再試行可能な0件だけ再試行"
+              },
+              "reconcile": {
+                "disabled": true,
+                "text": "未確定の0件を照合"
+              },
+              "cancel": {
+                "disabled": true,
+                "text": "未確定の0件に取消を依頼"
+              }
+            },
+            "scenarioDisabled": true,
+            "references": [
+              {
+                "document": "Alpha 文書",
+                "itemId": "a",
+                "requestId": "attempt-1",
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "document": "Beta 文書",
+                "itemId": "b",
+                "requestId": "attempt-2",
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "failed",
+                    "unapplied": true,
+                    "retryable": true,
+                    "nextRetryAt": 10000,
+                    "reason": "変更は未適用です。再試行可能になるまで待機してください。"
+                  }
+                ]
+              },
+              {
+                "document": "Gamma 文書",
+                "itemId": "c",
+                "requestId": "attempt-3",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "service": {
+              "virtualTimeSeconds": 0,
+              "server": {
+                "a": "archived",
+                "b": "active",
+                "c": "archived"
+              },
+              "effects": {
+                "a": 1,
+                "b": 0,
+                "c": 1
+              }
+            },
+            "cancelNote": "取消の依頼を受け付けても、操作の結果が確定したことにはなりません。成立済みの変更を戻すには別の手順が必要です。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EDOM02-SUCCESS-AFTER-CANCEL-HAS-TERMINAL-COPY",
+      "kind": "exploratory",
+      "pass": true,
+      "events": [
+        {
+          "type": "click",
+          "id": "start",
+          "disabled": false
+        },
+        {
+          "type": "click",
+          "id": "cancel",
+          "disabled": false
+        },
+        {
+          "type": "click",
+          "id": "reconcile",
+          "disabled": false
+        }
+      ],
+      "observations": [
+        {
+          "step": "success-already-confirmed",
+          "flow": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "Alpha 文書",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "attempt-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "Beta 文書",
+                "dependsOn": [],
+                "status": "failed",
+                "requestId": "attempt-2",
+                "unapplied": true,
+                "retryable": true,
+                "nextRetryAt": 10000,
+                "reason": "変更は未適用です。再試行可能になるまで待機してください。",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "failed",
+                    "unapplied": true,
+                    "retryable": true,
+                    "nextRetryAt": 10000,
+                    "reason": "変更は未適用です。再試行可能になるまで待機してください。"
+                  }
+                ]
+              },
+              {
+                "id": "c",
+                "label": "Gamma 文書",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "attempt-3",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": "accepted",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "total": 3,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 0,
+              "succeeded": 2,
+              "failed": 1,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": true,
+            "allSucceeded": false,
+            "message": "今回の処理結果がそろいました。対象3件：成功2、未適用1、前提未成立0、取消0、処理中0、結果未確認0、未送信0。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [],
+            "canCancelIds": []
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "attempt-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "attempt-2",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "c",
+                  "requestId": "attempt-3",
+                  "dependsOn": []
+                }
+              ]
+            },
+            {
+              "method": "cancel",
+              "itemId": "c",
+              "requestId": "attempt-3"
+            },
+            {
+              "method": "lookup",
+              "itemId": "c",
+              "requestId": "attempt-3"
+            }
+          ],
+          "effects": {
+            "a": 1,
+            "b": 0,
+            "c": 1
+          },
+          "server": {
+            "a": "archived",
+            "b": "active",
+            "c": "archived"
+          },
+          "dom": {
+            "scope": "今回の対象は3件です。処理開始後も対象件数を保持します。",
+            "summary": "今回の処理結果がそろいました。対象3件：成功2、未適用1、前提未成立0、取消0、処理中0、結果未確認0、未送信0。",
+            "rows": [
+              {
+                "id": "a",
+                "cells": [
+                  "Alpha 文書",
+                  "成功",
+                  ""
+                ]
+              },
+              {
+                "id": "b",
+                "cells": [
+                  "Beta 文書",
+                  "未適用",
+                  "再試行の前提・待機条件を確認してください。"
+                ]
+              },
+              {
+                "id": "c",
+                "cells": [
+                  "Gamma 文書",
+                  "成功",
+                  " 取消要求：受付確認・元操作の結果は確認済み"
+                ]
+              }
+            ],
+            "buttons": {
+              "start": {
+                "disabled": true,
+                "text": "対象3件のアーカイブを開始"
+              },
+              "retry": {
+                "disabled": true,
+                "text": "再試行可能な0件だけ再試行"
+              },
+              "reconcile": {
+                "disabled": true,
+                "text": "未確定の0件を照合"
+              },
+              "cancel": {
+                "disabled": true,
+                "text": "未確定の0件に取消を依頼"
+              }
+            },
+            "scenarioDisabled": true,
+            "references": [
+              {
+                "document": "Alpha 文書",
+                "itemId": "a",
+                "requestId": "attempt-1",
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "document": "Beta 文書",
+                "itemId": "b",
+                "requestId": "attempt-2",
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "failed",
+                    "unapplied": true,
+                    "retryable": true,
+                    "nextRetryAt": 10000,
+                    "reason": "変更は未適用です。再試行可能になるまで待機してください。"
+                  }
+                ]
+              },
+              {
+                "document": "Gamma 文書",
+                "itemId": "c",
+                "requestId": "attempt-3",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "service": {
+              "virtualTimeSeconds": 0,
+              "server": {
+                "a": "archived",
+                "b": "active",
+                "c": "archived"
+              },
+              "effects": {
+                "a": 1,
+                "b": 0,
+                "c": 1
+              }
+            },
+            "cancelNote": "取消の依頼を受け付けても、操作の結果が確定したことにはなりません。成立済みの変更を戻すには別の手順が必要です。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EDOM03-CANCELLED-HAS-TERMINAL-COPY",
+      "kind": "exploratory",
+      "pass": true,
+      "events": [
+        {
+          "type": "change",
+          "id": "scenario",
+          "value": "lost"
+        },
+        {
+          "type": "click",
+          "id": "start",
+          "disabled": false
+        },
+        {
+          "type": "click",
+          "id": "reconcile",
+          "disabled": false
+        },
+        {
+          "type": "click",
+          "id": "cancel",
+          "disabled": false
+        },
+        {
+          "type": "click",
+          "id": "reconcile",
+          "disabled": false
+        }
+      ],
+      "observations": [
+        {
+          "step": "cancellation-already-confirmed",
+          "flow": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "Alpha 文書",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "attempt-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "Beta 文書",
+                "dependsOn": [],
+                "status": "cancelled",
+                "requestId": "attempt-2",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": "accepted",
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "cancelled",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "c",
+                "label": "Gamma 文書",
+                "dependsOn": [],
+                "status": "cancelled",
+                "requestId": "attempt-3",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": "accepted",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "cancelled",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "total": 3,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 0,
+              "succeeded": 1,
+              "failed": 0,
+              "blocked": 0,
+              "cancelled": 2
+            },
+            "finished": true,
+            "allSucceeded": false,
+            "message": "今回の処理結果がそろいました。対象3件：成功1、未適用0、前提未成立0、取消2、処理中0、結果未確認0、未送信0。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [],
+            "canCancelIds": []
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "attempt-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "attempt-2",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "c",
+                  "requestId": "attempt-3",
+                  "dependsOn": []
+                }
+              ]
+            },
+            {
+              "method": "lookup",
+              "itemId": "a",
+              "requestId": "attempt-1"
+            },
+            {
+              "method": "lookup",
+              "itemId": "b",
+              "requestId": "attempt-2"
+            },
+            {
+              "method": "lookup",
+              "itemId": "c",
+              "requestId": "attempt-3"
+            },
+            {
+              "method": "cancel",
+              "itemId": "b",
+              "requestId": "attempt-2"
+            },
+            {
+              "method": "cancel",
+              "itemId": "c",
+              "requestId": "attempt-3"
+            },
+            {
+              "method": "lookup",
+              "itemId": "b",
+              "requestId": "attempt-2"
+            },
+            {
+              "method": "lookup",
+              "itemId": "c",
+              "requestId": "attempt-3"
+            }
+          ],
+          "effects": {
+            "a": 1,
+            "b": 0,
+            "c": 0
+          },
+          "server": {
+            "a": "archived",
+            "b": "active",
+            "c": "active"
+          },
+          "dom": {
+            "scope": "今回の対象は3件です。処理開始後も対象件数を保持します。",
+            "summary": "今回の処理結果がそろいました。対象3件：成功1、未適用0、前提未成立0、取消2、処理中0、結果未確認0、未送信0。",
+            "rows": [
+              {
+                "id": "a",
+                "cells": [
+                  "Alpha 文書",
+                  "成功",
+                  ""
+                ]
+              },
+              {
+                "id": "b",
+                "cells": [
+                  "Beta 文書",
+                  "取消済み",
+                  " 取消要求：受付確認・元操作の結果は確認済み"
+                ]
+              },
+              {
+                "id": "c",
+                "cells": [
+                  "Gamma 文書",
+                  "取消済み",
+                  " 取消要求：受付確認・元操作の結果は確認済み"
+                ]
+              }
+            ],
+            "buttons": {
+              "start": {
+                "disabled": true,
+                "text": "対象3件のアーカイブを開始"
+              },
+              "retry": {
+                "disabled": true,
+                "text": "再試行可能な0件だけ再試行"
+              },
+              "reconcile": {
+                "disabled": true,
+                "text": "未確定の0件を照合"
+              },
+              "cancel": {
+                "disabled": true,
+                "text": "未確定の0件に取消を依頼"
+              }
+            },
+            "scenarioDisabled": true,
+            "references": [
+              {
+                "document": "Alpha 文書",
+                "itemId": "a",
+                "requestId": "attempt-1",
+                "attempts": [
+                  {
+                    "requestId": "attempt-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "document": "Beta 文書",
+                "itemId": "b",
+                "requestId": "attempt-2",
+                "attempts": [
+                  {
+                    "requestId": "attempt-2",
+                    "status": "cancelled",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "document": "Gamma 文書",
+                "itemId": "c",
+                "requestId": "attempt-3",
+                "attempts": [
+                  {
+                    "requestId": "attempt-3",
+                    "status": "cancelled",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "service": {
+              "virtualTimeSeconds": 0,
+              "server": {
+                "a": "archived",
+                "b": "active",
+                "c": "active"
+              },
+              "effects": {
+                "a": 1,
+                "b": 0,
+                "c": 0
+              }
+            },
+            "cancelNote": "取消の依頼を受け付けても、操作の結果が確定したことにはなりません。成立済みの変更を戻すには別の手順が必要です。"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "source_id": "B-T501",
+  "url": "https://google.aip.dev/233",
+  "canonical_url": "https://google.aip.dev/233",
+  "title": "AIP-233: Batch methods: Create",
+  "type": "official API documentation",
+  "authority": "Primary official source",
+  "section": [
+    {
+      "section": "Atomic vs. Partial Success",
+      "line_map": [
+        {
+          "web_line": 82,
+          "local_lines": [
+            85
+          ]
+        },
+        {
+          "web_line": 85,
+          "local_lines": [
+            88
+          ]
+        },
+        {
+          "web_line": 86,
+          "local_lines": [
+            89
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Operation metadata message",
+      "line_map": [
+        {
+          "web_line": 129,
+          "local_lines": [
+            132
+          ]
+        },
+        {
+          "web_line": 130,
+          "local_lines": [
+            133
+          ]
+        },
+        {
+          "web_line": 132,
+          "local_lines": [
+            135
+          ]
+        },
+        {
+          "web_line": 133,
+          "local_lines": [
+            136
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Adopting Partial Success",
+      "line_map": [
+        {
+          "web_line": 138,
+          "local_lines": [
+            141,
+            164
+          ]
+        },
+        {
+          "web_line": 140,
+          "local_lines": [
+            143,
+            166
+          ]
+        },
+        {
+          "web_line": 142,
+          "local_lines": [
+            145,
+            168
+          ]
+        },
+        {
+          "web_line": 144,
+          "local_lines": [
+            147,
+            170
+          ]
+        },
+        {
+          "web_line": 145,
+          "local_lines": [
+            148,
+            171
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Rationale / Communicating partial failures",
+      "line_map": [
+        {
+          "web_line": 151,
+          "local_lines": [
+            154,
+            177
+          ]
+        },
+        {
+          "web_line": 154,
+          "local_lines": [
+            157,
+            180
+          ]
+        },
+        {
+          "web_line": 156,
+          "local_lines": [
+            159,
+            182
+          ]
+        },
+        {
+          "web_line": 158,
+          "local_lines": [
+            184
+          ]
+        }
+      ]
+    }
+  ],
+  "read_status": "READ_RELEVANT_SECTIONS; exact web-tool representation retained",
+  "capture_kind": "WEB_TOOL_EXTRACT",
+  "capture_scope": {
+    "authority": "official API specification/design guidance",
+    "capture_kind": "TOOL_EXTRACTED_TEXT",
+    "raw_html": false,
+    "page_complete_claim": false,
+    "selection": "Actual returned open/find text blocks; duplicate overlapping lines preserved, not reconstructed HTML.",
+    "retrieved_at": "2026-11-23T08:29:35.826598+00:00"
+  },
+  "capture_sha256": "0ba623860c6fd81017a10ee477fa147578a7e21771563025e0a0a1418878313e",
+  "source_file_name": "B-T501-google-aip233.web.txt",
+  "observed_facts": [
+    "AIP-233では同期batch createはatomic、非同期はatomicまたはpartial successを許す。",
+    "部分失敗のfailed_requestsは元のrequests配列のindexをキーとする。server側retryで成功し得る一時エラーはこのmapへ入れない。",
+    "operationのHTTP応答コードは underlying outcomeを示さない。request_idをerror相関専用に使う案はAIP-155の冪等性保証と衝突し得るとして採られていない。"
+  ],
+  "limits": [
+    "Googleの設計指針であり全APIの規範ではない。Createの規定をUpdate/任意bulkへ自動適用しない。",
+    "B03をすべてのarray indexの禁止へ一般化すると本資料と矛盾する。fixtureの到着配列順の禁止は維持できる。"
+  ],
+  "upstream_refs": [
+    "turn611015095view0",
+    "turn505435738view0"
+  ],
+  "checked_at": "2026-11-23T08:34:56.430599+00:00",
+  "round": 4,
+  "redistribution": "Original retrieved text retained privately. This record contains original summaries, locators and provenance only."
+}

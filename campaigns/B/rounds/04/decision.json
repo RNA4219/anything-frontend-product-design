@@ -1,0 +1,117 @@
+{
+  "round": 4,
+  "ended_at": "2026-11-23T09:03:27.497089+00:00",
+  "status": "COMPLETE",
+  "investigated": [
+    "B-007"
+  ],
+  "agents": [
+    {
+      "task_name": "/root/r04_research_primary",
+      "round": 4,
+      "role": "Researcher-1",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    },
+    {
+      "task_name": "/root/r04_research_alternative",
+      "round": 4,
+      "role": "Researcher-2",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    },
+    {
+      "task_name": "/root/r04_analyst",
+      "round": 4,
+      "role": "Analyst / sankai",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    },
+    {
+      "task_name": "/root/r04_critic",
+      "round": 4,
+      "role": "Critic / Evaluator",
+      "mechanism": "collaboration.spawn_agent",
+      "fork": "none",
+      "status": "COMPLETED"
+    }
+  ],
+  "new_source_ids": [
+    "B-S401",
+    "B-S402",
+    "B-S403",
+    "B-T501",
+    "B-T502",
+    "B-T503",
+    "B-T504",
+    "B-T505"
+  ],
+  "reused_source_ids": [
+    "B-S104",
+    "B-T301"
+  ],
+  "duplicate_records_added": 0,
+  "instruction_units": {
+    "ACCEPT": [
+      "B-IU-009"
+    ]
+  },
+  "tests": {
+    "fixed": {
+      "passed": 13,
+      "total": 13
+    },
+    "pre_candidate_supplement": {
+      "passed": 3,
+      "total": 3
+    },
+    "independent_representative_dom_initial": {
+      "passed": 7,
+      "total": 7
+    },
+    "independent_exploratory_dom_initial": {
+      "passed": 1,
+      "total": 3
+    },
+    "independent_focused_dom_revised": {
+      "passed": 4,
+      "total": 4
+    },
+    "independent_module_exploration": {
+      "passed": 4,
+      "total": 4
+    },
+    "independent_fault_controls": {
+      "detected": 4,
+      "total": 4
+    }
+  },
+  "decision": "ACCEPT within declared non-atomic fixture after C01 cancellation-receipt copy repair. Independent recommendation ACCEPT_WITH_LIMITATIONS maps to Registry ACCEPT with explicit limits.",
+  "comparison_limit": "No generated baseline, live vendor adapter or human efficacy trial. Fixed13 and supplemental3 are unchanged; exploratory DOM defect and repair are separate evidence.",
+  "next": [
+    "B-008",
+    "B-X-C02",
+    "B-X-D01"
+  ],
+  "cost": {
+    "amount": null,
+    "currency": null,
+    "measured": false,
+    "reason": "Token/billing telemetry unavailable"
+  },
+  "execution": {
+    "subagents_recovered": true,
+    "ci": "NOT_EXECUTED_BY_CAMPAIGN",
+    "real_browser": "NOT_EXECUTED",
+    "dom": "EXECUTED"
+  },
+  "evidence": [
+    "campaigns/B/rounds/04/independent/verdict.json",
+    "campaigns/B/rounds/04/revision.json",
+    "campaigns/B/rounds/04/task-results.json",
+    "campaigns/B/rounds/04/supplement-results.json"
+  ]
+}

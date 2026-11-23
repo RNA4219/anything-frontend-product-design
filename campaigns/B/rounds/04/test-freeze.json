@@ -1,0 +1,16 @@
+{
+  "frozen_at": "2026-11-23T08:09:18.373559+00:00",
+  "before_candidate": true,
+  "before_research": true,
+  "case_count": 13,
+  "files": [
+    {
+      "path": "campaigns/B/rounds/04/interface.md",
+      "sha256": "d730a0dc52460e80bdf0190358fa8a7591157779491292b9a539374b0dfb21fe"
+    },
+    {
+      "path": "modules/interaction-ux-flow/tests/test_batch_flow.mjs",
+      "sha256": "bae7d3e2fec1e16785afde6d0a23d6e958ea73a47c487317b243cc4606506ee3"
+    }
+  ]
+}

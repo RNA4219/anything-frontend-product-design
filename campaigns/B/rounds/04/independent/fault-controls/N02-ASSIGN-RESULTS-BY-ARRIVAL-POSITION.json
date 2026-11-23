@@ -1,0 +1,95 @@
+{
+  "id": "N02-ASSIGN-RESULTS-BY-ARRIVAL-POSITION",
+  "purpose": "Wrong item/result assignment must be detected.",
+  "suite": "modules/interaction-ux-flow/tests/test_batch_flow.mjs",
+  "expected_failure": "B03",
+  "mutant_sha256": "99772f37789855cd65712937270fec28a61731a1517c22d1c8d8da38127eafd2",
+  "candidate_sha256": "7e303c30025abf6b92aa05b269fe83b9e289a61f581f533f06713a7fa58efd12",
+  "detected": true,
+  "exit_code": 1,
+  "failed_cases": [
+    "B03",
+    "B09"
+  ],
+  "result": {
+    "suite": "B-R04-fixed",
+    "total": 13,
+    "passed": 11,
+    "results": [
+      {
+        "id": "B01",
+        "name": "Mixed outcomes remain distinct",
+        "pass": true
+      },
+      {
+        "id": "B02",
+        "name": "Envelope acceptance is not completion",
+        "pass": true
+      },
+      {
+        "id": "B03",
+        "name": "Out-of-order results use identity",
+        "pass": false,
+        "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'failed'\n- 'succeeded'\n"
+      },
+      {
+        "id": "B04",
+        "name": "Missing result retains scope and original operation",
+        "pass": true
+      },
+      {
+        "id": "B05",
+        "name": "Retry subset and minimum delay",
+        "pass": true
+      },
+      {
+        "id": "B06",
+        "name": "Unknown lookup reuses original operation",
+        "pass": true
+      },
+      {
+        "id": "B07",
+        "name": "Finished mixed task is not all successful",
+        "pass": true
+      },
+      {
+        "id": "B08",
+        "name": "Empty selection makes no request",
+        "pass": true
+      },
+      {
+        "id": "B09",
+        "name": "Ambiguous and unexpected results cannot corrupt mapping",
+        "pass": false,
+        "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'succeeded'\n- 'unknown'\n"
+      },
+      {
+        "id": "B10",
+        "name": "Lost envelope does not replay whole task",
+        "pass": true
+      },
+      {
+        "id": "B11",
+        "name": "Cancellation receipt and scope",
+        "pass": true
+      },
+      {
+        "id": "B12",
+        "name": "Recovery completes only remaining effects",
+        "pass": true
+      },
+      {
+        "id": "B13",
+        "name": "Blocked dependencies cannot be retried prematurely",
+        "pass": true
+      }
+    ]
+  },
+  "stderr": "",
+  "edits": [
+    {
+      "before": "const matches=replies.filter(x=>x?.itemId===ref.itemId&&x?.requestId===ref.requestId);",
+      "after": "const arrived=replies[prepared.indexOf(ref)];const matches=arrived?[{...arrived,itemId:ref.itemId,requestId:ref.requestId}]:[];"
+    }
+  ]
+}

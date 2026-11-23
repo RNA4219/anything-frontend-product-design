@@ -1,0 +1,52 @@
+{
+  "source_id": "B-S403",
+  "url": "https://learn.microsoft.com/en-us/graph/known-issues?view=graph-rest-1.0",
+  "canonical_url": "https://learn.microsoft.com/en-us/graph/known-issues?view=graph-rest-1.0",
+  "title": "Known issues in Microsoft Graph",
+  "type": "official-primary",
+  "authority": "official Microsoft product documentation",
+  "section": [
+    "JSON batching / Request dependencies are limited",
+    "Search / Creating an externalConnection with a broken adaptive card returns a 503 Service Unavailable response followed by a 409 Conflict error"
+  ],
+  "read_status": "FULL web-tool extraction L0-L457 saved exactly, not raw HTML. Only relevant JSON batching section and externalConnection counterexample substantively read; unrelated API sections not reviewed.",
+  "capture_kind": "complete_web_tool_text_extraction",
+  "capture_scope": "FULL",
+  "capture_sha256": "51b9b0651fa31e064536cb2a0c1e0cfe31a0f552cf60f96f08c4962a3e057637",
+  "source_file_name": "microsoft-graph-known-issues-web-extract.md",
+  "observed_facts": [
+    {
+      "fact": "現記載では1要求は単一の他要求にのみ依存し、parallel、serial、sameの3パターンに制限される。sameの要求も順次実行と記載される。",
+      "location": {
+        "source_id": "B-S403",
+        "local_lines": "175-183",
+        "start": 175,
+        "end": 183,
+        "web_lines": "L172-L180"
+      }
+    },
+    {
+      "fact": "壊れたadaptive cardでexternalConnectionを作成すると503、その次の要求が既存名の409になり得る。最初の503でもconnection自体は作成済みで、card templateの登録は済んでいない。",
+      "location": {
+        "source_id": "B-S403",
+        "local_lines": "248-251",
+        "start": 248,
+        "end": 251,
+        "web_lines": "L245-L248"
+      }
+    }
+  ],
+  "limits": [
+    "これは現行文書上のknown issueであり、全Graph API、全batch、全503が部分適用になるという主張ではない。",
+    "依存制約はGraph固有。fixtureの複数dependsOnをそのままGraphに送れる保証にはならない。",
+    "本来のbatchページのknown-issuesリンクはtoolでredirect fetchに失敗した。同内容の公式検索結果を直接openして到達。失敗したリンクを成功したchainと数えない。",
+    "Learnの一般的なauthorization案内も保存したが本文は取得できた。ログインや制限回避は行っていない。"
+  ],
+  "upstream_refs": [
+    "turn695366782view0",
+    "turn101899298view0"
+  ],
+  "checked_at": "2026-11-23T08:34:56.430599+00:00",
+  "round": 4,
+  "redistribution": "Original retrieved text retained privately. This record contains original summaries, locators and provenance only."
+}

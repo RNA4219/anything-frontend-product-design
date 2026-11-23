@@ -1,0 +1,151 @@
+{
+  "source_id": "B-T503",
+  "url": "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactWriteItems.html",
+  "canonical_url": "https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactWriteItems.html",
+  "title": "TransactWriteItems - Amazon DynamoDB",
+  "type": "official API documentation",
+  "authority": "Primary official source",
+  "section": [
+    {
+      "section": "Atomic transaction",
+      "line_map": [
+        {
+          "web_line": 7,
+          "local_lines": [
+            10
+          ]
+        },
+        {
+          "web_line": 8,
+          "local_lines": [
+            11
+          ]
+        },
+        {
+          "web_line": 14,
+          "local_lines": [
+            17
+          ]
+        },
+        {
+          "web_line": 15,
+          "local_lines": [
+            18,
+            207
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Ordered TransactItems",
+      "line_map": [
+        {
+          "web_line": 224,
+          "local_lines": [
+            292
+          ]
+        }
+      ]
+    },
+    {
+      "section": "ClientRequestToken",
+      "line_map": [
+        {
+          "web_line": 234,
+          "local_lines": [
+            302
+          ]
+        },
+        {
+          "web_line": 235,
+          "local_lines": [
+            303
+          ]
+        },
+        {
+          "web_line": 236,
+          "local_lines": [
+            304
+          ]
+        },
+        {
+          "web_line": 238,
+          "local_lines": [
+            306
+          ]
+        }
+      ]
+    },
+    {
+      "section": "CancellationReasons",
+      "line_map": [
+        {
+          "web_line": 450,
+          "local_lines": [
+            344
+          ]
+        },
+        {
+          "web_line": 453,
+          "local_lines": [
+            347
+          ]
+        },
+        {
+          "web_line": 455,
+          "local_lines": [
+            349
+          ]
+        },
+        {
+          "web_line": 461,
+          "local_lines": [
+            355
+          ]
+        }
+      ]
+    },
+    {
+      "section": "TransactionInProgressException",
+      "line_map": [
+        {
+          "web_line": 543,
+          "local_lines": [
+            437
+          ]
+        }
+      ]
+    }
+  ],
+  "read_status": "READ_RELEVANT_SECTIONS; exact web-tool representation retained",
+  "capture_kind": "WEB_TOOL_EXTRACT",
+  "capture_scope": {
+    "authority": "official API specification/design guidance",
+    "capture_kind": "TOOL_EXTRACTED_TEXT",
+    "raw_html": false,
+    "page_complete_claim": false,
+    "selection": "Actual returned open/find text blocks; duplicate overlapping lines preserved, not reconstructed HTML.",
+    "retrieved_at": "2026-11-23T08:29:35.826598+00:00"
+  },
+  "capture_sha256": "18c9001532b3ea8bdeaef2a4ba9011daaca9816cfebf1c1b55ef53351edaf81a",
+  "source_file_name": "B-T503-dynamodb-transactwrite.web.txt",
+  "observed_facts": [
+    "同期writeでactionsはall-or-nothing。条件不一致等ではtransaction全体を拒否する。",
+    "CancellationReasonsは要求itemsの順で、個別のエラーがなければcodeはNone。atomic全体の成否と個別診断を区別する必要がある。",
+    "ClientRequestTokenは同じcallの冪等性用。完了後10分の窓を持ち、同じtokenで他parameterが変わればIdempotentParameterMismatch。これは本API固有の条件。"
+  ],
+  "limits": [
+    "Noneを個別commit成功へ変換しないという結論は、atomic契約と診断定義を合わせた推論。",
+    "transaction全体の冪等性tokenから項目別再実行・照会・取消APIを導けない。",
+    "transaction取消は利用者がcancel APIを呼んだことや補償完了を意味しない。",
+    "原子的rollbackの外部結果だけを根拠にする。内部でどのwriteが実行されundoされたかを推測しない。"
+  ],
+  "upstream_refs": [
+    "turn611015095view2",
+    "turn505435738view2",
+    "turn505435738view3"
+  ],
+  "checked_at": "2026-11-23T08:34:56.430599+00:00",
+  "round": 4,
+  "redistribution": "Original retrieved text retained privately. This record contains original summaries, locators and provenance only."
+}

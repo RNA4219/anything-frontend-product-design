@@ -1,0 +1,47 @@
+{
+  "id": "N04-LET-LATE-PENDING-ERASE-TERMINAL",
+  "purpose": "Supplement A02 must detect loss of same-attempt terminal evidence.",
+  "suite": "modules/interaction-ux-flow/tests/test_batch_boundaries.mjs",
+  "expected_failure": "A02",
+  "mutant_sha256": "e3b7c81db179ccde436f6c3645b499c5147bb073569f70674ae6a333f6d80e18",
+  "candidate_sha256": "7e303c30025abf6b92aa05b269fe83b9e289a61f581f533f06713a7fa58efd12",
+  "detected": true,
+  "exit_code": 1,
+  "failed_cases": [
+    "A02"
+  ],
+  "result": {
+    "suite": "B-R04-pre-candidate-supplement",
+    "total": 3,
+    "passed": 2,
+    "results": [
+      {
+        "id": "A01",
+        "name": "Concurrent retry of one eligible item produces one new attempt",
+        "pass": true
+      },
+      {
+        "id": "A02",
+        "name": "Late pending cannot replace a terminal outcome or a newer attempt",
+        "pass": false,
+        "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'pending'\n- 'failed'\n"
+      },
+      {
+        "id": "A03",
+        "name": "Caller or view mutation cannot alter selected scope or internal state",
+        "pass": true
+      }
+    ]
+  },
+  "stderr": "",
+  "edits": [
+    {
+      "before": "if(!terminal(attempt.status)){Object.assign(attempt,copy(next));}",
+      "after": "Object.assign(attempt,copy(next));"
+    },
+    {
+      "before": "if(terminal(row.status))return;",
+      "after": ""
+    }
+  ]
+}

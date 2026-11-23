@@ -1,0 +1,73 @@
+{
+  "source_id": "B-S402",
+  "url": "https://learn.microsoft.com/en-us/graph/throttling",
+  "canonical_url": "https://learn.microsoft.com/en-us/graph/throttling",
+  "title": "Microsoft Graph throttling guidance",
+  "type": "official-primary",
+  "authority": "official Microsoft product documentation",
+  "section": [
+    "What happens when throttling occurs?",
+    "Best practices to handle throttling",
+    "Throttling and batching"
+  ],
+  "read_status": "FULL original official repository Markdown saved and relevant sections read. Rendered Microsoft Learn page also read. No live SDK or transport behavior tested.",
+  "capture_kind": "official_repository_UTF8_Markdown",
+  "capture_scope": "FULL",
+  "capture_sha256": "bcf59f10c6daad493751931665811baab232eb9be8e8aa201ae3f72233068e42",
+  "source_file_name": "microsoft-graph-throttling.md",
+  "observed_facts": [
+    {
+      "fact": "バッチ内のthrottlingは項目ごとに評価され、個別429でもバッチ自体は200になり得る。",
+      "location": {
+        "source_id": "B-S402",
+        "local_lines": "104-108",
+        "start": 104,
+        "end": 108,
+        "web_lines": "L102-L105"
+      }
+    },
+    {
+      "fact": "失敗したthrottled requestをJSON内のretry-afterに従って再試行し、まとめて新batchにする場合はその群の最長delayを待てる。",
+      "location": {
+        "source_id": "B-S402",
+        "local_lines": "106-106",
+        "start": 106,
+        "end": 106,
+        "web_lines": "L104"
+      }
+    },
+    {
+      "fact": "delayを待っても再び429になる場合がある。Retry-Afterがない場合のbackoff方針は別途説明されている。",
+      "location": {
+        "source_id": "B-S402",
+        "local_lines": "80-95",
+        "start": 80,
+        "end": 95,
+        "web_lines": "L81-L94"
+      }
+    },
+    {
+      "fact": "通常要求をSDKが自動再試行しても、batchに入ったthrottled requestは自動再試行されないと記載。",
+      "location": {
+        "source_id": "B-S402",
+        "local_lines": "108-108",
+        "start": 108,
+        "end": 108,
+        "web_lines": "L105"
+      }
+    }
+  ],
+  "limits": [
+    "Throttling and batching節のfailed requestsは429の文脈。全4xx/5xx、応答欠落、通信消失をretry対象へ広げない。",
+    "retry-afterは待機時間であり、成功予定時刻ではない。fixtureのnextRetryAtへの換算はadapter/injected clockの宣言である。",
+    "backoff実装、SDK挙動の版差、同時実行制御はCの責務。この研究ではSDKコードや本番を実測していない。",
+    "未適用・再試行可を示すfixture fieldsはGraph原文schemaではない。"
+  ],
+  "upstream_refs": [
+    "turn283352505view0",
+    "turn695366782view1"
+  ],
+  "checked_at": "2026-11-23T08:34:56.430599+00:00",
+  "round": 4,
+  "redistribution": "Original retrieved text retained privately. This record contains original summaries, locators and provenance only."
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "Four selected fault controls only; not exhaustive mutation testing, a generated baseline, or a general quality/UX effect score. Faults live in temporary copies; candidate and frozen tests are unchanged.",
+  "total": 4,
+  "detected": 4,
+  "controls": [
+    {
+      "id": "N01-IGNORE-MINIMUM-DELAY",
+      "purpose": "Premature retry must be detected.",
+      "suite": "modules/interaction-ux-flow/tests/test_batch_flow.mjs",
+      "expected_failure": "B05",
+      "detected": true,
+      "exit_code": 1,
+      "failed_cases": [
+        "B05"
+      ],
+      "mutant_sha256": "50989b927b866292c095470b4e76cd47d485f08823bc88b82f10168e76f8f121"
+    },
+    {
+      "id": "N02-ASSIGN-RESULTS-BY-ARRIVAL-POSITION",
+      "purpose": "Wrong item/result assignment must be detected.",
+      "suite": "modules/interaction-ux-flow/tests/test_batch_flow.mjs",
+      "expected_failure": "B03",
+      "detected": true,
+      "exit_code": 1,
+      "failed_cases": [
+        "B03",
+        "B09"
+      ],
+      "mutant_sha256": "99772f37789855cd65712937270fec28a61731a1517c22d1c8d8da38127eafd2"
+    },
+    {
+      "id": "N03-CANCEL-RECEIPT-AS-TERMINAL",
+      "purpose": "A cancellation receipt must not fabricate a terminal cancellation.",
+      "suite": "modules/interaction-ux-flow/tests/test_batch_flow.mjs",
+      "expected_failure": "B11",
+      "detected": true,
+      "exit_code": 1,
+      "failed_cases": [
+        "B11"
+      ],
+      "mutant_sha256": "24d1f5fe47a2d5e0473f66675e1e7dd34c4b2d25d06fd1e6c902b4172c3cb47b"
+    },
+    {
+      "id": "N04-LET-LATE-PENDING-ERASE-TERMINAL",
+      "purpose": "Supplement A02 must detect loss of same-attempt terminal evidence.",
+      "suite": "modules/interaction-ux-flow/tests/test_batch_boundaries.mjs",
+      "expected_failure": "A02",
+      "detected": true,
+      "exit_code": 1,
+      "failed_cases": [
+        "A02"
+      ],
+      "mutant_sha256": "e3b7c81db179ccde436f6c3645b499c5147bb073569f70674ae6a333f6d80e18"
+    }
+  ]
+}

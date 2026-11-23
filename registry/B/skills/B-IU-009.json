@@ -1,0 +1,704 @@
+{
+  "skill_id": "B-IU-009",
+  "domain": "interaction-ux-flow",
+  "trigger": [
+    "固定した複数項目へ同じ確認済み変更を行い、部分成功・未処理・応答欠落・項目単位の回復を扱う。",
+    "一括結果の集約表示または再試行範囲が、実際の項目別結果と一致しているか設計・レビューする。"
+  ],
+  "intent": "原子性と完了契約を先に分類し、固定した選択対象へ結果を正しく対応付ける。適格な項目だけを回復し、処理終了・全変更成功・未解決を区別する。",
+  "required_inputs": [
+    "対象API・版・メソッドと、原子的／非原子的／部分成功の選択条件、同期応答／非同期受付／終端結果／未処理集合の意味。未確認の契約は未確認として残す。",
+    "利用者が選択・確認した固定集合S、安定した項目ID、表示名、変更内容、宣言された前提項目。表示順やページの件数はSの代わりにしない。",
+    "選択IDと送信時相関キーまたは元request indexの対応。attempt、論理意図の冪等性キー、永続operation参照、診断IDそれぞれの役割と寿命。",
+    "項目結果を権威ある成功・未適用・取消・未実行・未確定へ解釈する契約。fixtureのunapplied/retryable/nextRetryAtは正規化済みフィールドであり、HTTP statusから自動生成できるとは仮定しない。",
+    "実在する照会・取消・再送の能力、対象範囲、現在権限、保持期限、照会missの意味。存在しないendpointやoperation参照を補わない。",
+    "再試行が利用者の新しい選択か、既承認の同一意図を安全に継続するSDK/transport処理か。判断内容を変える変更は既存review・競合規則へ渡す。",
+    "集約の対象、終端と成功の定義、現在の項目台帳、実行中の試行と既知の確定結果。R04 fixtureは現在権限とlookup/cancelの存在を明示する。"
+  ],
+  "decision_rules": [
+    {
+      "id": "009-D01",
+      "if": "項目単位の結果解釈・回復を設計する前",
+      "then": "原子性、部分成功を許す条件、受付と完了の証拠を分類する。項目別回復は非原子的契約が許す範囲へ適用する。原子的APIは非適用分岐とし、全体失敗内の個別診断Noneをcommit成功にせず、勝手なsubset再送へ変換しない。原子的操作の応答喪失ではall-or-noneという制約だけが既知であり、全未適用とは断定しない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-T501",
+        "B-T502",
+        "B-T503",
+        "B-S104"
+      ],
+      "source_locations": [
+        "B-T501:web L82-L86,L138-L145",
+        "B-T502:web L10-L15,L21",
+        "B-T503:web L7-L15,L450-L461",
+        "B-S104:Operation.done/result lines 133-155",
+        "campaigns/B/rounds/04/task.md:declared non-atomic fixture"
+      ],
+      "verification_cases": [
+        "B01",
+        "B02",
+        "B07"
+      ],
+      "verification_gap": "固定ケースは宣言済み非原子的fixtureだけ。原子的分岐・APIモード切替はG01で別記し、検証済みとしない。"
+    },
+    {
+      "id": "009-D02",
+      "if": "一括タスクを開始・再表示する",
+      "then": "最初に選択したSと確認済み内容を固定し、各項目を安定IDで保持する。返信数、表示順、filter、transportの分割数で選択totalを作り直さない。Sが空なら送信せず成功した変更も作らない。開始済みタスクへのstart再操作は初回要求を再送しない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S401",
+        "B-T501",
+        "B-T502"
+      ],
+      "source_locations": [
+        "B-S401:local 48,114-119,294-300",
+        "B-T501:web L129-L130",
+        "B-T502:web L285-L296",
+        "campaigns/B/rounds/04/interface.md:selected set/start/view",
+        "campaigns/B/rounds/04/cases.json:B04,B08,B10"
+      ],
+      "verification_cases": [
+        "B04",
+        "B08",
+        "B10"
+      ],
+      "verification_gap": "呼出側itemsやview snapshotの変更による内部状態破壊は固定13で未検査（G05）。"
+    },
+    {
+      "id": "009-D03",
+      "if": "要求識別や回復参照を記録する",
+      "then": "項目ID、batch内相関、試行ID、同一意図の冪等性キー、永続照会参照、診断IDを役割ごとに対応付ける。fixtureのrequestIdは相関とlookup参照を兼ねる明示契約だけに限定する。GraphのidやDynamoDBの診断Request IDを永続lookup参照へ昇格させず、AIPのrequest_idを単なるattempt番号として更新しない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S401",
+        "B-T501",
+        "B-T504",
+        "B-T505"
+      ],
+      "source_locations": [
+        "B-S401:local 48",
+        "B-T501:web L154-L158",
+        "B-T504:web L43,L67-L74",
+        "B-T505:web L202",
+        "campaigns/B/rounds/04/interface.md:requestId"
+      ],
+      "verification_cases": [
+        "B03",
+        "B04",
+        "B06"
+      ],
+      "verification_gap": "各vendorのID正規化、寿命、lookupの有無は実adapter未検証（G01/G02）。"
+    },
+    {
+      "id": "009-D04",
+      "if": "項目結果を選択対象へ割り当てる",
+      "then": "契約が明示する相関キーから、送信時に保存したSのIDと該当試行へ戻す。fixtureではitemIdとrequestIdの両方を照合し、順不同replyの到着位置で割り当てない。AIP-233の元requests indexは明示された相関契約なので、保存したindex→選択ID対応を利用できる。Graphのcase-insensitiveかつbatch内一意という規則はGraphにだけ適用する。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S401",
+        "B-T501"
+      ],
+      "source_locations": [
+        "B-S401:local 48,114-117",
+        "B-T501:web L129-L130,L154-L158",
+        "campaigns/B/rounds/04/cases.json:B03",
+        "campaigns/B/rounds/04/interface.md:correlates itemId and requestId"
+      ],
+      "verification_cases": [
+        "B03",
+        "B09"
+      ],
+      "verification_gap": "B03は元request indexの全面禁止ではない。AIP・Graph adapterの正規化はG02で未実行。"
+    },
+    {
+      "id": "009-D05",
+      "if": "batch envelope、非同期受付、項目結果または未処理集合を受信した",
+      "then": "envelope受理と業務結果を分け、契約上の終端・成功・未適用を項目へ反映する。外側200やacceptedだけでは全成功にしない。未終端Operationの空の失敗mapも完了ではない。完全な有効応答でUnprocessedItems等の意味が保証されるAPIは、その集合と補集合を契約どおり解釈できるため、全APIへ個別成功返信を要求しない。fixtureの欠落行、および応答を失って未処理集合自体が不明な場合は未確定のまま残す。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S401",
+        "B-S402",
+        "B-T501",
+        "B-T502",
+        "B-S104"
+      ],
+      "source_locations": [
+        "B-S401:local 119,244-246",
+        "B-S402:local 106",
+        "B-T501:web L132-L133,L151",
+        "B-T502:web L285-L296,L386,L456-L463",
+        "B-S104:Operation.done/result lines 133-155"
+      ],
+      "verification_cases": [
+        "B01",
+        "B02",
+        "B04",
+        "B07"
+      ],
+      "verification_gap": "完全な未処理集合を返すAPIへの変換は固定fixtureに含まれない（G01）。"
+    },
+    {
+      "id": "009-D06",
+      "if": "欠落、未選択ID、相関不一致、矛盾する重複、旧試行の遅い結果を観測した",
+      "then": "曖昧な新結果から成功・未適用を確定せず、他の項目へ転記しない。元選択・参照と未解決を残す。同じ返信集合に矛盾する結果があるfixtureの行はunknownとして照合へ戻す。すでに別の権威ある証拠で確定した結果は、それを保持するB-IU-007/008へ委任し、古いpendingで取り消さない。旧試行の正しい証拠を残すことと、現在の試行・viewへ適用することを分ける。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S401",
+        "B-T501",
+        "B-S104"
+      ],
+      "source_locations": [
+        "B-S401:local 48,114-117",
+        "B-T501:web L129-L130",
+        "B-S104:Operation.done/result lines 133-155",
+        "registry/B/skills/B-IU-007.json:result retention",
+        "registry/B/skills/B-IU-008.json:known terminal result and stale responses",
+        "campaigns/B/rounds/04/cases.json:B09"
+      ],
+      "verification_cases": [
+        "B03",
+        "B04",
+        "B09"
+      ],
+      "verification_gap": "旧requestId・確定後pendingの順序競合はB03/B09だけでは未検証（G04）。"
+    },
+    {
+      "id": "009-D07",
+      "if": "項目の適用結果が未確認、transport応答が喪失、または元操作の照会がmiss/期限切れになった",
+      "then": "B-IU-001へ元操作参照と送信内容を渡す。fixtureではその参照を使うread-only lookupを選び、unknownへ新requestIdを発行するretryや全件replayを行わない。照会missは未適用の証明ではない。実APIにitem lookup/cancelがない場合は、確認できたoperation照会・監査・支援経路だけを示し、未解決を明示する。契約上安全な同一要求replayの例外はD09/B-IU-002で判断する。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S403",
+        "B-T505",
+        "B-S104"
+      ],
+      "source_locations": [
+        "B-S403:local 248-251",
+        "B-T505:web L188-L190,L202",
+        "B-S104:Operation and operation methods",
+        "modules/interaction-ux-flow/references/async-outcomes.md:B-IU-001/002",
+        "campaigns/B/rounds/04/interface.md:lookup and missing records"
+      ],
+      "verification_cases": [
+        "B04",
+        "B06",
+        "B10",
+        "B12"
+      ],
+      "verification_gap": "照会不能・記録失効・不存在endpointを扱う実adapterは未検証。機能が文書中に見つからないことを全製品での不存在証明にしない。"
+    },
+    {
+      "id": "009-D08",
+      "if": "fixtureでretry(itemIds)が明示的に選ばれた",
+      "then": "実行時の候補をS内の今回指定項目に限定し、権威あるunapplied=true、retryable=true、now>=nextRetryAt（指定がある場合）、必要な前提成功、現在の実行能力をすべて確認する。成功済み・恒久失敗・unknown・まだ待機中の項目は送らない。古いcanRetryIds表示を送信許可として流用しない。同じ項目への重なる操作でも二重送信しない条件をCと整合させる。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S402",
+        "B-S403",
+        "B-T502"
+      ],
+      "source_locations": [
+        "B-S402:local 80-95,106",
+        "B-S403:local 248-251",
+        "B-T502:web L10-L15,L285",
+        "campaigns/B/rounds/04/interface.md:retry",
+        "campaigns/B/rounds/04/cases.json:B05,B13"
+      ],
+      "verification_cases": [
+        "B05",
+        "B06",
+        "B12",
+        "B13"
+      ],
+      "verification_gap": "同時retryによる二重submitは固定13の逐次呼出しでは未検証（G03）。"
+    },
+    {
+      "id": "009-D09",
+      "if": "retryの識別・自動化・意図の継続を判断する",
+      "then": "同一意図の安全なreplayはB-IU-002の対象・内容・キー範囲・保持窓・エラー契約に委任する。fixtureの新attempt requestId発行を、AIP等の論理要求の冪等性キー変更に読み替えない。既承認scope内で契約上安全なSDK/transport再試行は継続でき、各ネットワーク送信への追加の利用者確認を一般義務にしない。新しい意図、内容、対象、保証切れを同じ継続へ混ぜない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-T504",
+        "B-T503",
+        "B-T505",
+        "B-S402"
+      ],
+      "source_locations": [
+        "B-T504:web L43,L71-L74",
+        "B-T503:web L234-L238",
+        "B-T505:web L201,L223-L227",
+        "B-S402:local 95,108",
+        "modules/interaction-ux-flow/references/async-outcomes.md:B-IU-002"
+      ],
+      "verification_cases": [
+        "B05",
+        "B06",
+        "B12"
+      ],
+      "verification_gap": "固定B05/B06はfixtureの明示retry境界だけ。実SDKやidempotent replayを実行した証拠にはしない。"
+    },
+    {
+      "id": "009-D10",
+      "if": "Graphのthrottled requestを再送する",
+      "then": "当該要求のRetry-Afterに従って待つ。同じ新batchへまとめるなら、その再送対象群の最長delayを満たす。待機後にも429になり得るため、待機終了を成功予定時刻と表示しない。このガイドの対象はthrottlingであり、全HTTPエラーやunknownへ広げない。",
+      "basis": "source_guidance",
+      "source_refs": [
+        "B-S402"
+      ],
+      "source_locations": [
+        "B-S402:local 80-95,104-108"
+      ],
+      "verification_cases": [
+        "B05"
+      ],
+      "verification_gap": "fixtureのnextRetryAtはD08の宣言条件。HTTP時間の変換・実backoff・再度429は固定13で未実行。"
+    },
+    {
+      "id": "009-D11",
+      "if": "前提未成立によるblocked/未実行を受信し、再試行を選ぶ",
+      "then": "当該項目を成功や補償待ちへ変換しない。fixtureでは必要な先行項目すべての成功を確認した後に明示retryを許す。初回batch内での依存処理は宣言されたsubmit契約に従い、この規則から任意DAGのschedulerを作らない。Graphへ適用するなら単一の先行要求と文書化された依存パターン制約を保つ。成功済み作用を戻す必要はB-IU-004の別操作へ渡す。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S401",
+        "B-S403",
+        "B-T301"
+      ],
+      "source_locations": [
+        "B-S401:local 251-285",
+        "B-S403:local 175-183",
+        "B-T301:web L41-L58,L63-L80",
+        "campaigns/B/rounds/04/interface.md:declared dependencies",
+        "campaigns/B/rounds/04/cases.json:B13"
+      ],
+      "verification_cases": [
+        "B13"
+      ],
+      "verification_gap": "複数依存、循環、外部前提、補償処理、Graph adapterの実挙動はこの固定ケースの証明範囲外。"
+    },
+    {
+      "id": "009-D12",
+      "if": "項目単位の取消を選ぶ",
+      "then": "実在する取消契約と現在能力を満たす、今回指定された未確定項目だけを対象にする。fixtureではpending/unknownの元requestIdを使い、成功済み・既知未適用・blockedを成功の取消へ巻き込まない。取消receiptは元操作の終端結果と分け、B-IU-003へ照合を委任する。元の成功が確定したらその成功を保ち、取消や全影響の復元を装わない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S104",
+        "B-T301"
+      ],
+      "source_locations": [
+        "B-S104:CancelOperation lines 88-105; Operation.done/result lines 133-155",
+        "B-T301:web L41-L58,L63-L80",
+        "modules/interaction-ux-flow/references/async-outcomes.md:B-IU-003",
+        "campaigns/B/rounds/04/interface.md:cancel"
+      ],
+      "verification_cases": [
+        "B11",
+        "B07"
+      ],
+      "verification_gap": "B11はreceipt→lookupでcancelledの経路。成功とのrace、取消失敗、実vendorの取消範囲は別検証。同期取消確定を保証するAPIには追加pollを一律要求しない。"
+    },
+    {
+      "id": "009-D13",
+      "if": "回復中に入力修正、選択対象、判断に関わる事実、actor/capability、review済みrevisionが変わる",
+      "then": "既存B-IU-005/006/007/008へ必要な判断を渡す。確定済み項目の履歴と元Sを保持し、変更後の対象やpayloadを元の承認・冪等性識別へ黙って付け替えない。判断に無関係な変更や明示された同一意図の継続に、全画面の再確認を追加しない。R04 fixtureが前提とする現在権限を本番での認可保証としない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-T504",
+        "B-T503"
+      ],
+      "source_locations": [
+        "B-T504:web L43,L71-L74",
+        "B-T503:web L238",
+        "modules/interaction-ux-flow/references/forms-and-review.md:B-IU-005/006",
+        "modules/interaction-ux-flow/references/resume-and-conflict.md:B-IU-007/008",
+        "campaigns/B/rounds/04/interface.md:current permission and exclusions"
+      ],
+      "verification_cases": [],
+      "verification_gap": "既存単位への条件付き接続。R04の固定13では再認証・内容変更・競合を試験しない。"
+    },
+    {
+      "id": "009-D14",
+      "if": "項目台帳から集約結果と次の選択を表示する",
+      "then": "元Sの各項目を一度だけ数え、成功・確定未適用/失敗・取消・未実行・進行中/未確認を混ぜない。finishedは対象項目の結果が契約上すべて終端になったこと、allSucceededは選択が空でなく全項目の変更成功を確認したこととして区別する。混在終端なら処理終了と成功件数・失敗/取消の内訳を伝える。未解決があれば完了とせず、元参照と実際に利用できる回復選択を残す。終端失敗に再試行余地がある場合も、全変更成功とは表示しない。",
+      "basis": "campaign_inference",
+      "source_refs": [
+        "B-S401",
+        "B-T501",
+        "B-T502",
+        "B-S104"
+      ],
+      "source_locations": [
+        "B-S401:local 119,244-246",
+        "B-T501:web L132-L133,L151",
+        "B-T502:web L285-L296",
+        "B-S104:Operation.done/result lines 133-155",
+        "campaigns/B/rounds/04/interface.md:view",
+        "campaigns/B/rounds/04/cases.json:B01,B07,B08,B12"
+      ],
+      "verification_cases": [
+        "B01",
+        "B02",
+        "B04",
+        "B07",
+        "B08",
+        "B12"
+      ],
+      "verification_gap": "集約schema・日本語文言はCampaignの設計。固定試験は人間の理解度、実描画、ARIAを測定しない。"
+    }
+  ],
+  "procedure": [
+    "D01でAPIの原子性・部分成功モード・受付と終端の契約を分類する。原子的／不明な契約では項目単位の独立再送を採用せず、その契約で確認できる全体結果と回復へ分岐する。",
+    "D02/D03で選択S、確認済み内容、対象IDと各識別の役割を記録する。初回開始を一度のタスクとして扱い、空選択は送信しない。",
+    "D04/D05で応答の相関と意味を解釈する。arrival位置を使わず、契約に明記された元indexは保存対応表から変換する。外側受付と項目結果を分ける。",
+    "D06/D07で欠落・矛盾・旧応答・通信喪失を処理し、未解決を元操作の照合へ渡す。存在しないlookupや取消を作らず、既知の確定結果を保つ既存規則を使う。",
+    "回復を選ぶ時点でD08/D09/D10/D11のscope・未適用・再送安全性・時刻・依存条件を再評価する。fixtureの明示選択とCが担う安全なtransport継続を分ける。",
+    "取消が必要ならD12で対象を限定し、受付と最終結果を既存B-IU-003で分ける。すでに成功した効果の回復はB-IU-004へ渡す。",
+    "内容・actor・権限・版が変わった場合だけD13の依存先へ渡し、必要なreviewや比較を行う。元の成功履歴や無関係な入力を失わせない。",
+    "D14で元totalと各項目の結果に一致する集約・次の選択を返す。親が凍結済みB01-B13を実行し、実副作用・呼出しscope・参照・表示を照合する。追加探索と未実行範囲を分けて記録する。"
+  ],
+  "expected_outputs": [
+    "API契約の分類表：原子性、受付/終端、項目結果の意味、実在する回復能力、非適用分岐。",
+    "固定選択Sと、項目ID・相関・attempt・冪等性キー・永続参照の対応を保つ項目台帳。",
+    "実行時に評価するretry/reconcile/cancelの対象集合と、除外理由・残る未解決経路。",
+    "元totalに対する項目別状態、件数、finished/allSucceededを分けた集約表示。",
+    "B01-B13への検証対応、別枠の探索候補、実行結果と未検証事項を混同しない記録。"
+  ],
+  "dependencies": [
+    {
+      "ref": "B-IU-001",
+      "when": "受付・結果未確認・照会を扱う",
+      "need": "通信/操作/業務結果の証拠を区別し、結果未確認を未適用にしない。"
+    },
+    {
+      "ref": "B-IU-002",
+      "when": "再試行・同一要求の安全なreplay・再操作を扱う",
+      "need": "同一意図、識別、内容、保持窓、既知未適用の例外。SDK継続の安全性も対象契約へ結ぶ。"
+    },
+    {
+      "ref": "B-IU-003",
+      "when": "取消を提示する",
+      "need": "取消対象、受付、終端、成功競合と実在する能力を区別する。"
+    },
+    {
+      "ref": "B-IU-004",
+      "when": "成功済み作用を戻す必要がある",
+      "need": "未実行blockedとは別の補償操作・効果・失敗を扱う。常時必須の補償engineにはしない。"
+    },
+    {
+      "ref": "B-IU-005/B-IU-006",
+      "when": "入力修正またはreviewした内容が変わる",
+      "need": "修正対象と必要な再判断だけを扱い、元承認を別payloadへ移さない。"
+    },
+    {
+      "ref": "B-IU-007/B-IU-008",
+      "when": "復帰・権限変化・版競合・旧応答・既知結果の保持が問題になる",
+      "need": "現在contextへの採用と元操作の証拠保持を分ける。一般原則を再実装しない。"
+    },
+    {
+      "ref": "API/service contract and C",
+      "when": "常時",
+      "need": "実際の原子性、ID正規化、結果意味、権限、lookup/cancel能力、HTTP/SDK scheduling、時刻変換、chunking、並行呼出し境界。Bは選択と結果の判断条件を定める。"
+    },
+    {
+      "ref": "C",
+      "when": "実UIを構築する",
+      "need": "focus、ARIA、keyboard、pagination/virtualization、snapshot/data-layer実装。"
+    },
+    {
+      "ref": "D",
+      "when": "人にとっての理解・操作の有効性を主張する",
+      "need": "人間の評価設計と観測。今回の構造確認やfixture適合から効果を推定しない。"
+    }
+  ],
+  "exceptions": [
+    "原子的APIはD01の非適用分岐。transaction全体の失敗内のNoneは個別commit成功ではなく、部分再送で元の不変条件を変えない。原子的結果が不明なら全未適用とも断定しない。",
+    "AIP-233の同期batch createは原子的、非同期は原子的または部分成功というAIP内の規定。同期200の意味を別APIへ一般化しない。",
+    "AIPの元request indexは正規の相関契約。B03が禁止するのはfixtureの順不同replyの到着位置での割当てである。",
+    "完全で有効なUnprocessedItems応答から処理済み集合を導けるAPIは、その契約を使う。fixtureの欠落行unknownを、項目別成功返信のない全APIへ強制しない。",
+    "D08のunknown除外は新attemptを送るfixtureのretry。B-IU-002に適合する同一key・同一意図の安全なreplayまで禁止しない。",
+    "既承認意図の安全なSDK自動retryは毎回のUI確認を要求しない。Graph batch内と非batch、DynamoDBのSDK/version/clientごとの違いはCと確認する。",
+    "Graphのcase規則、20要求上限、依存パターン、HTTP schemaは製品固有。任意のbatchへ移植せず、分割しても利用者の選択totalを失わせない。",
+    "lookup/cancelが未提供なら該当回復操作を提供しない。別の実在経路と未解決を残す。この調査で見つからないことを全APIでの不存在証明にはしない。",
+    "同期応答で必要な終端結果を確認できれば追加pollは不要。取消・補償・認証・reviewの条件は依存先の例外も維持する。"
+  ],
+  "failure_modes": [
+    "原子的transactionの個別診断を部分commitと読み、失敗行だけを新規送信する。",
+    "外側200/acceptedまたは空の途中失敗mapから全変更成功を表示する。",
+    "並べ替えたreplyや表示順で結果を割り当てる、または明記された元index相関まで禁止する。",
+    "返信のある行だけでtotalを再計算し、欠落した選択項目・元参照を失う。",
+    "HTTP失敗を未適用と決め、成功済みの作用を再送する。Graphの503後作成済み反例を無視する。",
+    "batch correlation ID・診断Request ID・冪等性キーを同一視し、架空のlookup/cancelを提供する。",
+    "古い候補一覧や重なるretryから適格性を再確認せず、同一項目を重複送信する。",
+    "未知結果の回復で新しい冪等性キーを発行する、または安全な同一意図のSDK継続まで毎回承認待ちにする。",
+    "前提未成立のblockedを成功・補償待ち・即再送可と表示する。",
+    "取消receiptからcancelledを表示し、すでに確認した成功を消す。",
+    "旧attempt・古いpending・可変snapshotで既知の結果や固定選択を上書きする。",
+    "finishedとallSucceededを同じ表示にし、失敗・取消・未解決または空選択を成功件数へ含める。",
+    "元操作の終端を照合済みなのに、取消受付の案内が元結果の追加確認を求め続ける。"
+  ],
+  "verification": {
+    "status": "PASS_WITH_DECLARED_LIMITATIONS",
+    "criteria": [
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09",
+      "B10",
+      "B11",
+      "B12",
+      "B13"
+    ],
+    "evidence": [
+      "campaigns/B/rounds/04/task.md",
+      "campaigns/B/rounds/04/cases.json",
+      "campaigns/B/rounds/04/interface.md",
+      "campaigns/B/rounds/04/test-freeze.json",
+      "modules/interaction-ux-flow/tests/test_batch_flow.mjs",
+      "campaigns/B/rounds/04/task-results.json",
+      "campaigns/B/rounds/04/supplement-results.json",
+      "campaigns/B/rounds/04/independent/verdict.json"
+    ],
+    "evidence_kind": "Frozen definitions plus parent execution; independent evaluation pending.",
+    "execution": {
+      "analyst_behavioral_tests_executed": 0,
+      "parent_fixed_cases": 13,
+      "parent_supplemental_criteria": 3,
+      "independent_review": "EXECUTED; fixed13, supplemental3, DOM, source and selected fault-control evidence",
+      "live_api_tests_executed": 0,
+      "human_tests_executed": 0
+    },
+    "mapping": [
+      {
+        "case": "B01",
+        "rules": [
+          "009-D01",
+          "009-D05",
+          "009-D14"
+        ],
+        "observe": "成功1・未適用失敗1・unknown1、元total、実副作用、未完了と全成功false。"
+      },
+      {
+        "case": "B02",
+        "rules": [
+          "009-D01",
+          "009-D05",
+          "009-D14"
+        ],
+        "observe": "受付だけでは項目成功もtask完了も作らない。"
+      },
+      {
+        "case": "B03",
+        "rules": [
+          "009-D03",
+          "009-D04",
+          "009-D06"
+        ],
+        "observe": "順不同返信のitemId/requestIdを元選択へ対応させる。"
+      },
+      {
+        "case": "B04",
+        "rules": [
+          "009-D02",
+          "009-D05",
+          "009-D06",
+          "009-D07",
+          "009-D14"
+        ],
+        "observe": "欠落行unknown、元totalと送信参照を保持する。"
+      },
+      {
+        "case": "B05",
+        "rules": [
+          "009-D08",
+          "009-D09",
+          "009-D10"
+        ],
+        "observe": "最小時刻前に送信せず、到達後も指定された適格な未適用項目だけを送る。"
+      },
+      {
+        "case": "B06",
+        "rules": [
+          "009-D03",
+          "009-D07",
+          "009-D09"
+        ],
+        "observe": "unknownへ新規writeせず、同じ元参照のlookupで結果を得る。"
+      },
+      {
+        "case": "B07",
+        "rules": [
+          "009-D05",
+          "009-D12",
+          "009-D14"
+        ],
+        "observe": "成功・失敗・取消の混在終端でfinishedとallSucceededを分ける。"
+      },
+      {
+        "case": "B08",
+        "rules": [
+          "009-D02",
+          "009-D14"
+        ],
+        "observe": "空選択はsubmitなし、total0、全変更成功false。"
+      },
+      {
+        "case": "B09",
+        "rules": [
+          "009-D04",
+          "009-D06"
+        ],
+        "observe": "同じ返信集合の矛盾・未選択IDで他項目を汚染しない。"
+      },
+      {
+        "case": "B10",
+        "rules": [
+          "009-D02",
+          "009-D07"
+        ],
+        "observe": "通信喪失とstart再操作から全件replayしない。"
+      },
+      {
+        "case": "B11",
+        "rules": [
+          "009-D12"
+        ],
+        "observe": "取消は適格未確定項目だけ。receiptではcancelledにせず元参照で終端確認する。"
+      },
+      {
+        "case": "B12",
+        "rules": [
+          "009-D07",
+          "009-D08",
+          "009-D09",
+          "009-D14"
+        ],
+        "observe": "適格retryと元操作lookupの後、各副作用は一度、集約結果は実効果と一致。"
+      },
+      {
+        "case": "B13",
+        "rules": [
+          "009-D08",
+          "009-D11"
+        ],
+        "observe": "blockedは成功にせず、前提成功前のretryを抑止。成功後も明示retryで処理する。"
+      }
+    ],
+    "additional_gaps": [
+      {
+        "id": "G01",
+        "severity": "transfer_limit",
+        "status": "PROPOSED_UNTESTED",
+        "case": "原子的transaction失敗とNone診断、原子的応答喪失、AIP非同期途中map、完全なUnprocessedItems応答をそれぞれの実契約で解釈する。",
+        "boundary": "非原子的fixtureの固定13へ追加・混算しない。"
+      },
+      {
+        "id": "G02",
+        "severity": "transfer_limit",
+        "status": "PROPOSED_UNTESTED",
+        "case": "AIP元request index→固定ID、Graph case-insensitive batch ID、冪等性キー・診断ID・永続参照を区別するadapter。",
+        "boundary": "固定B03/B06はvendor adapterへの適合証拠ではない。"
+      },
+      {
+        "id": "G03",
+        "severity": "critical_additional_probe",
+        "status": "PARENT_AND_INDEPENDENT_PROBED_WITHIN_FIXTURE",
+        "case": "同じ適格項目へ同時にretryを呼び、一方の送信開始後に他方が重複submitしないか観測する。",
+        "boundary": "固定13は逐次呼出しであり未検査。親/独立Criticが別枠で扱う。"
+      },
+      {
+        "id": "G04",
+        "severity": "critical_additional_probe",
+        "status": "PARENT_AND_INDEPENDENT_PROBED_WITHIN_FIXTURE",
+        "case": "旧requestIdの結果と現在試行が交差する場合、または確定成功の後に古いpendingが届く場合に、元証拠を保ち現在試行を汚染しないか観測する。",
+        "boundary": "B03/B09の順不同・同一返信集合の矛盾だけでは証明しない。既存007/008への依存を再利用する。"
+      },
+      {
+        "id": "G05",
+        "severity": "critical_additional_probe",
+        "status": "PARENT_AND_INDEPENDENT_PROBED_WITHIN_FIXTURE",
+        "case": "呼出側items、dependsOn、view().rows等を外部から変えても固定scopeと内部状態が変更されないか観測する。",
+        "boundary": "interfaceのimmutable snapshots/selected set条件はあるが固定13の直接assertionはない。"
+      }
+    ],
+    "limitations": [
+      "Independent conformance/source/DOM/fault-control review accepted the declared fixture after cancellation-copy repair. No live API/SDK/browser/AT/human evaluation.",
+      "B01-B13は宣言された非原子的fixtureの検査定義。原子的API、任意DAG、vendor固有IDやlookup/cancel能力を証明しない。",
+      "Graph公式混在例の成功はreadであり、任意writeの独立commitやrollback不存在の証拠ではない。",
+      "現在権限、永続保存、復帰、payload変更時review/競合の本番適用は既存単位とサービス契約へ依存する。",
+      "G03-G05は固定13外の重要な検査候補。固定基準を結果に合わせて変更せず、実行する場合も別結果として報告する。"
+    ],
+    "supplemental_criteria": [
+      "A01",
+      "A02",
+      "A03"
+    ],
+    "supplemental_freeze": "campaigns/B/rounds/04/supplement-freeze.json"
+  },
+  "source_refs": [
+    "B-S401",
+    "B-S402",
+    "B-S403",
+    "B-T501",
+    "B-T502",
+    "B-T503",
+    "B-T504",
+    "B-T505",
+    "B-S104",
+    "B-T301"
+  ],
+  "confidence": {
+    "source_support": "新規8件の公式一次資料と既存B-S104/B-T301を参照。APIの直接契約と、このCampaignによる選択・台帳・集約の設計推論を分離した。",
+    "transfer": "ACCEPT within stated contracts and observed paths. Atomic APIs, vendor adapters, durable storage and human efficacy require separate evidence.",
+    "limits": [
+      "原子的API・partial mode・成功/未適用の具体的証拠・各IDの寿命は実APIで確認する。",
+      "項目lookup/cancel不在、記録失効、権限変化時の実在経路は適用先の入力が必要。",
+      "時刻換算、並行呼出し、SDK自動retry、データ層とUI mechanicsはCへ渡す。",
+      "固定試験への対応表は試験結果ではなく、人間への有効性はDで別検証する。"
+    ]
+  },
+  "status": "ACCEPT",
+  "version": "0.1.1",
+  "introduced_round": 4,
+  "relationship_to_existing": {
+    "type": "conditional_composition_of_existing_concepts",
+    "references": [
+      "B-IU-001",
+      "B-IU-002",
+      "B-IU-003",
+      "B-IU-004",
+      "B-IU-005",
+      "B-IU-006",
+      "B-IU-007",
+      "B-IU-008",
+      "campaigns/B/existing-pr-overlap.json"
+    ],
+    "existing_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/2",
+    "existing_pr_revision": "f66e7954f2a59a59dad861901b9270076c2fc691",
+    "additional_value": "原子性分類を入口に、固定選択S・各種identity・項目別証拠・回復subset・終端集約の接続を明文化し、凍結済みB01-B13へ対応付ける。既存概念や試験提案を新原則・実績へ数え直さない。"
+  },
+  "history": [
+    {
+      "at": "2026-11-23T08:45:36.178883+00:00",
+      "version": "0.1.0",
+      "status": "DRAFT",
+      "reason": "Parent reviewed the 14-rule composition, API-specific counterexamples and proposed tests; registered before implementation. Supplemental A01-A03 were frozen separately before candidate."
+    },
+    {
+      "version": "0.1.1",
+      "status": "REVISE",
+      "at": "2026-11-23T08:57:05.698371+00:00",
+      "reason": "Independent DOM finding: cancellation receipt copy continued to require outcome lookup after the original item result was terminal and confirmed. HTML copy repaired; focused independent recheck pending."
+    },
+    {
+      "version": "0.1.1",
+      "status": "ACCEPT",
+      "at": "2026-11-23T09:03:27.497089+00:00",
+      "reason": "Independent final ACCEPT_WITH_LIMITATIONS; C01 copy defect resolved by focused DOM recheck. State model/fixed13/supplement3 bytes unchanged."
+    }
+  ]
+}

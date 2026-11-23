@@ -1,0 +1,266 @@
+{
+  "recorded_at": "2026-11-23T09:15:23.294995+00:00",
+  "scope": "Final local integration verification on main 20f21fb9bb1b4d0921333ca1be683d6b42a60c63 plus the unchanged reviewed R04 implementation. Repeated executions are not additional independent samples. Includes the existing main B booking CLI suite. Historical invalid evaluators v1-v3 were not used.",
+  "integration_base_sha": "20f21fb9bb1b4d0921333ca1be683d6b42a60c63",
+  "tested_content_checkpoint": "bd749c04a2f13851bc568ead6f84ad58e4c671b7",
+  "commands_passed": 14,
+  "commands_total": 14,
+  "results": [
+    {
+      "id": "registry",
+      "command": [
+        "python3",
+        "modules/interaction-ux-flow/checks/check_registry.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "41b6c816638b186b3a1d851380806de36c06b0981648f00df12b44c41b72e353",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": {
+        "units": 9,
+        "sources": 35,
+        "statuses": {
+          "ACCEPT": 9
+        },
+        "errors": []
+      }
+    },
+    {
+      "id": "skill-format",
+      "command": [
+        "python3",
+        "PRIVATE_SKILL_HELPER/quick_validate.py",
+        "modules/interaction-ux-flow"
+      ],
+      "exit": 0,
+      "stdout_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary_text": "Skill is valid!\n"
+    },
+    {
+      "id": "registry-negative-tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "modules/interaction-ux-flow/tests",
+        "-p",
+        "test_registry.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "322e9bec5d6bbde47d6476008f309469c1e42048ed96320a3bae52af8811e27a",
+      "summary_text": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.007s\n\nOK\n"
+    },
+    {
+      "id": "recovery-policy",
+      "command": [
+        "node",
+        "modules/interaction-ux-flow/tests/test_recovery_policy.mjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "3d4431fc22cbaa125b3cc57d8a5af0cd76a3cc9978dfa290e743aff80dbaa83e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": {
+        "suite": "B-recovery-policy-v1",
+        "total": 14,
+        "passed": 14
+      }
+    },
+    {
+      "id": "r01-baseline-v4",
+      "command": [
+        "node",
+        "modules/interaction-ux-flow/tests/run_flow_trials_v4.mjs",
+        "campaigns/B/rounds/01/artifacts/baseline/flow.mjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "a92ce6950a6b3aadaa39044cf90936ac76e6b2bcb5a032bcda773ed20a06dcb0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": {
+        "suite": "B-R01-flow-trials-v4",
+        "total": 14,
+        "passed": 14
+      }
+    },
+    {
+      "id": "r01-candidate-v4",
+      "command": [
+        "node",
+        "modules/interaction-ux-flow/tests/run_flow_trials_v4.mjs",
+        "campaigns/B/rounds/01/artifacts/candidate/flow.mjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "c83654c90ca852f7ac2cfef862d8db0cae280b08357c119f3ae1c434604475dc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": {
+        "suite": "B-R01-flow-trials-v4",
+        "total": 14,
+        "passed": 14
+      }
+    },
+    {
+      "id": "r01-revised-v4",
+      "command": [
+        "node",
+        "modules/interaction-ux-flow/tests/run_flow_trials_v4.mjs",
+        "campaigns/B/rounds/01/artifacts/candidate-revised/flow.mjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "9adc728c2e8e513992ebd74428ee5a47e9afdc1c0f423796e45d07ad005d3e8c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": {
+        "suite": "B-R01-flow-trials-v4",
+        "total": 14,
+        "passed": 14
+      }
+    },
+    {
+      "id": "r02-fixed",
+      "command": [
+        "node",
+        "modules/interaction-ux-flow/tests/test_task_flows.mjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "74f743446e5e8e51da5e3fcebf00bc967ed19106f44efe493f203ec885ab8f41",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": {
+        "suite": "B-R02-task-flows-v1",
+        "total": 16,
+        "passed": 16
+      }
+    },
+    {
+      "id": "r02-regressions",
+      "command": [
+        "node",
+        "modules/interaction-ux-flow/tests/test_branch_error_regressions.mjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "49b28c9321e0e84b027c3be900dd5e8e5805824ec45ed28eb5ec0e4fe6726393",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": {
+        "suite": "B-R02-exploratory-branch-error-regressions",
+        "total": 3,
+        "passed": 3
+      }
+    },
+    {
+      "id": "r03-fixed",
+      "command": [
+        "node",
+        "modules/interaction-ux-flow/tests/test_resume_conflict.mjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "edf34b0aaac40147c716344a3eb57b641a132df807656ad12fee4d06e64b579a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": {
+        "suite": "B-R03-resume-conflict-v1",
+        "total": 13,
+        "passed": 13
+      }
+    },
+    {
+      "id": "r03-regressions",
+      "command": [
+        "node",
+        "modules/interaction-ux-flow/tests/test_resume_evidence_regressions.mjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "1ddb8235f04798cf8a62b3c18d9ef4c42f8bafa9191f8d7a1ef2b1682adf3f63",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": {
+        "suite": "B-R03-exploratory-evidence-v3",
+        "total": 4,
+        "passed": 4
+      }
+    },
+    {
+      "id": "r04-fixed",
+      "command": [
+        "node",
+        "modules/interaction-ux-flow/tests/test_batch_flow.mjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "9077b7dde272bb7a3359fb9b9e066cb088768ceae164cad8b87ea054846e2902",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": {
+        "suite": "B-R04-fixed",
+        "total": 13,
+        "passed": 13
+      }
+    },
+    {
+      "id": "r04-supplement",
+      "command": [
+        "node",
+        "modules/interaction-ux-flow/tests/test_batch_boundaries.mjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "dcd40f51dbbde663a6ea551b25d7a4db1b5bb64cc3033554e85a4d6b701e7b05",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": {
+        "suite": "B-R04-pre-candidate-supplement",
+        "total": 3,
+        "passed": 3
+      }
+    },
+    {
+      "id": "integrated-booking-cli",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_interaction_ux_flow.py",
+        "-v"
+      ],
+      "exit": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "13a851b02825107a690286bf04bc25c458822eeaf3e1d1c9aa81015f21145af0",
+      "summary_text": "test_all_slots_taken_returns_to_current_booking (test_interaction_ux_flow.BookingFlowTests.test_all_slots_taken_returns_to_current_booking) ... ok\ntest_booking_list_distinguishes_used_booking (test_interaction_ux_flow.BookingFlowTests.test_booking_list_distinguishes_used_booking) ... ok\ntest_cli_recovers_and_reopens_the_saved_booking (test_interaction_ux_flow.BookingFlowTests.test_cli_recovers_and_reopens_the_saved_booking) ... ok\ntest_confirmed_failure_allows_new_intent (test_interaction_ux_flow.BookingFlowTests.test_confirmed_failure_allows_new_intent) ... ok\ntest_double_submit_and_duplicate_apply_use_one_change (test_interaction_ux_flow.BookingFlowTests.test_double_submit_and_duplicate_apply_use_one_change) ... ok\ntest_editing_and_interruption_keep_only_the_draft (test_interaction_ux_flow.BookingFlowTests.test_editing_and_interruption_keep_only_the_draft) ... ok\ntest_external_booking_change_does_not_resolve_unknown_intent (test_interaction_ux_flow.BookingFlowTests.test_external_booking_change_does_not_resolve_unknown_intent) ... ok\ntest_normal_commit_and_reopen (test_interaction_ux_flow.BookingFlowTests.test_normal_commit_and_reopen) ... ok\ntest_reopen_distinguishes_an_applied_intent_from_latest_booking (test_interaction_ux_flow.BookingFlowTests.test_reopen_distinguishes_an_applied_intent_from_latest_booking) ... ok\ntest_reopen_resolves_terminal_outcomes_with_no_response (test_interaction_ux_flow.BookingFlowTests.test_reopen_resolves_terminal_outcomes_with_no_response) ... ok\ntest_slot_conflict_retains_booking_and_ignores_old_response (test_interaction_ux_flow.BookingFlowTests.test_slot_conflict_retains_booking_and_ignores_old_response) ... ok\ntest_status_recovers_a_change_committed_without_client_response (test_interaction_ux_flow.BookingFlowTests.test_status_recovers_a_change_committed_without_client_response) ... ok\ntest_unregistered_outcome_requires_same_intent_after_reopen (test_interaction_ux_flow.BookingFlowTests.test_unregistered_outcome_requires_same_intent_after_reopen) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.044s\n\nOK\n"
+    }
+  ],
+  "tested_module_files": {
+    "modules/interaction-ux-flow/SKILL.md": "97eb70a3658037824b62971bd6ef58852fb34a1856989dfe01e62594be6f8e2c",
+    "modules/interaction-ux-flow/agents/openai.yaml": "d7c4b05229dae8a048bc20566b746a055b00cbad270d12dba69e357135b63065",
+    "modules/interaction-ux-flow/checks/check_registry.py": "e5740e4460b7aa0bdfd02034b5268512ea4aacedf4b495c932f2dec543eb91cc",
+    "modules/interaction-ux-flow/checks/flow-review.md": "d66a7286ab169afb6c2521ade1fe2db448b3ea87fdef618fd3f1b5b586b34dd2",
+    "modules/interaction-ux-flow/examples/batch-flow.html": "5207bee27be273599bbab14eeee7f90f7723db809866f9e7162c0aec0e570567",
+    "modules/interaction-ux-flow/examples/batch-flow.mjs": "7e303c30025abf6b92aa05b269fe83b9e289a61f581f533f06713a7fa58efd12",
+    "modules/interaction-ux-flow/examples/recovery-policy.mjs": "148ac8919714730a4c7b5e154291a4d322a5256d9fb69c4c6ad258a0a2e187c7",
+    "modules/interaction-ux-flow/examples/repair-and-undo.html": "d93571557e22bb4742cc743b4ad2a3fb8d319393cfbfdf451f48601a328ce1a4",
+    "modules/interaction-ux-flow/examples/resume-and-conflict.html": "84a92808062a8f903e2a64a9cb33041b367f9fcaff0102297cf6ce3f39779a9f",
+    "modules/interaction-ux-flow/examples/resume-and-conflict.mjs": "c5130db7bd10a48bb586f30c689a40089deae648c966c372c0bc6e4c95bd41a4",
+    "modules/interaction-ux-flow/examples/task-flows.mjs": "668a67ab761a2c021a8ea3d1afb51c134a8a350a8e135fe1dd8f9743be8b5b40",
+    "modules/interaction-ux-flow/references/async-outcomes.md": "29898273c0fc5c6a502887854b8b2ff6ea09ab3dcf1721cc840d70110df00e17",
+    "modules/interaction-ux-flow/references/batch-outcomes.md": "8046cc3c53924b35eae820eebea4291e116d7b92a5c95d059ceb9d9a4077efb4",
+    "modules/interaction-ux-flow/references/booking-change.md": "9767389068315004484418faa3c756d7c73cc7cf3d7aa87d2cbae22bb28603e6",
+    "modules/interaction-ux-flow/references/decisions.md": "e3b56b006f171373c24f7bf8805443de8e378b43b92ae59b5dcf56595025f09b",
+    "modules/interaction-ux-flow/references/forms-and-review.md": "cdf91d1031315180c5a436e01deb7e4efeb7e8cea84a5726b604f5bc6a755998",
+    "modules/interaction-ux-flow/references/resume-and-conflict.md": "3cbb71acf758c17d7d5616146188ffd42ab4ab305b7a39a96de1e90c2591f7be",
+    "modules/interaction-ux-flow/references/undo-and-compensation.md": "50e7c85d9b31feebbb8e0e7afd754925a39216d4ad3b9627625ebb60b32eccb2",
+    "modules/interaction-ux-flow/scripts/booking_flow.py": "052355463dc0975d5e2bb88ee8931023290ac7c423777667d719ac626454307a",
+    "modules/interaction-ux-flow/tests/README.md": "c57c9457b1e7a40ca341a8d5cea593eb9adae1a6045164ca66ab7bd11ea32ab3",
+    "modules/interaction-ux-flow/tests/run_flow_trials.mjs": "b6124123085292d1865d6927a1a76358ce75511901436fd981c9f1fdda8c9003",
+    "modules/interaction-ux-flow/tests/run_flow_trials_v2.mjs": "7697c2ca300070f955d826704ce874bd7dc2fc7f4730517a87e15ed715b6cdaf",
+    "modules/interaction-ux-flow/tests/run_flow_trials_v3.mjs": "b8c41e7a76f7c748cdf713d9ccd0b5568a4235a214b777a71e9d183a57655dbd",
+    "modules/interaction-ux-flow/tests/run_flow_trials_v4.mjs": "ee855a2e279e313a450e8138daef7b9567cd1e0cb70745e04020d5d80e7ebd0a",
+    "modules/interaction-ux-flow/tests/test_batch_boundaries.mjs": "95644896ccb970f92d63ef34ebe9efb52afb4751181b0535ce18a4577c2fbd99",
+    "modules/interaction-ux-flow/tests/test_batch_flow.mjs": "bae7d3e2fec1e16785afde6d0a23d6e958ea73a47c487317b243cc4606506ee3",
+    "modules/interaction-ux-flow/tests/test_branch_error_regressions.mjs": "4ca62e4439a6927138e5eff49d228d3397807fed004fb0752c459c29e857a55d",
+    "modules/interaction-ux-flow/tests/test_recovery_policy.mjs": "7af19c790991a7e1f2b15302357ab76aab9378fdb17607d0fddd1b5742d26108",
+    "modules/interaction-ux-flow/tests/test_registry.py": "19ec8b538ae383e29e3c183a645703248c4840159ea46c283ebcd39398245483",
+    "modules/interaction-ux-flow/tests/test_resume_conflict.mjs": "f2f52bfe67da04a680299ed771581b25b6e0004325cfea6128f7b34c5e68289f",
+    "modules/interaction-ux-flow/tests/test_resume_evidence_regressions.mjs": "720205d10780440f1cd205ccc5028d26d4bb75f50ca10d424ecdedd637d85b80",
+    "modules/interaction-ux-flow/tests/test_task_flows.mjs": "804a03de301db48aaaad3100c162cfdb7171cc0781c73fc1f8d03b99c7538957",
+    "tests/test_interaction_ux_flow.py": "1ee1ef06b8aad0db60b4e37e52b2ef8368586c7bda0ccf482aa5a70f742b7e3b"
+  },
+  "ci": "NOT_EXECUTED_BY_CAMPAIGN",
+  "real_browser": "NOT_EXECUTED",
+  "independent_evidence": "Separate round Critic reports, including actual jsdom DOM events and selected fault controls; integration-only follow-up separately recorded."
+}

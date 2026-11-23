@@ -110,5 +110,45 @@
     "mechanism": "collaboration.spawn_agent",
     "fork": "none",
     "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r04_research_primary",
+    "round": 4,
+    "role": "Researcher-1",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r04_research_alternative",
+    "round": 4,
+    "role": "Researcher-2",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r04_analyst",
+    "round": 4,
+    "role": "Analyst / sankai",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED"
+  },
+  {
+    "task_name": "/root/r04_critic",
+    "round": 4,
+    "role": "Critic / Evaluator",
+    "mechanism": "collaboration.spawn_agent",
+    "fork": "none",
+    "status": "COMPLETED",
+    "followups": [
+      {
+        "type": "integration-only review",
+        "status": "COMPLETED",
+        "evidence": "campaigns/B/rounds/04/independent/integration-review.json",
+        "new_agent_count": 0
+      }
+    ]
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "frozen_at": "2026-11-23T08:07:11.073738+00:00",
+  "files": [
+    {
+      "path": "campaigns/B/rounds/04/plan.json",
+      "sha256": "544ec6dd23d0091b0f07b444255cffdf589a6ddef0b665e65636fa793f4b3e51"
+    },
+    {
+      "path": "campaigns/B/rounds/04/task.md",
+      "sha256": "f5b6c4104cb531872b4a455cf945cb7be02595dc26f44d540306942086807f7b"
+    },
+    {
+      "path": "campaigns/B/rounds/04/cases.json",
+      "sha256": "4d629a5e77fd77dfd4a39834bc896289cad0ff36fd14e7c3c30522ee13db7aec"
+    }
+  ]
+}
