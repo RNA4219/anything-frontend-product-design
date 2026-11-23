@@ -1,0 +1,138 @@
+{
+  "source_id": "B-T505",
+  "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Programming.Errors.html",
+  "canonical_url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Programming.Errors.html",
+  "title": "Error handling with DynamoDB - Amazon DynamoDB",
+  "type": "official API documentation",
+  "authority": "Primary official source",
+  "section": [
+    {
+      "section": "HTTP status code 5xx",
+      "line_map": [
+        {
+          "web_line": 174,
+          "local_lines": [
+            177
+          ]
+        },
+        {
+          "web_line": 188,
+          "local_lines": [
+            191
+          ]
+        },
+        {
+          "web_line": 189,
+          "local_lines": [
+            192
+          ]
+        },
+        {
+          "web_line": 190,
+          "local_lines": [
+            193
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Error handling in your application",
+      "line_map": [
+        {
+          "web_line": 201,
+          "local_lines": [
+            204
+          ]
+        },
+        {
+          "web_line": 202,
+          "local_lines": [
+            205
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Batch operations and error handling",
+      "line_map": [
+        {
+          "web_line": 215,
+          "local_lines": [
+            218
+          ]
+        },
+        {
+          "web_line": 216,
+          "local_lines": [
+            219
+          ]
+        },
+        {
+          "web_line": 218,
+          "local_lines": [
+            221
+          ]
+        },
+        {
+          "web_line": 220,
+          "local_lines": [
+            223
+          ]
+        },
+        {
+          "web_line": 223,
+          "local_lines": [
+            226
+          ]
+        },
+        {
+          "web_line": 224,
+          "local_lines": [
+            227
+          ]
+        },
+        {
+          "web_line": 225,
+          "local_lines": [
+            228
+          ]
+        },
+        {
+          "web_line": 227,
+          "local_lines": [
+            230
+          ]
+        }
+      ]
+    }
+  ],
+  "read_status": "READ_RELEVANT_SECTIONS; exact web-tool representation retained",
+  "capture_kind": "WEB_TOOL_EXTRACT",
+  "capture_scope": {
+    "authority": "official API specification/design guidance",
+    "capture_kind": "TOOL_EXTRACTED_TEXT",
+    "raw_html": false,
+    "page_complete_claim": false,
+    "selection": "Actual returned open/find text blocks; duplicate overlapping lines preserved, not reconstructed HTML.",
+    "retrieved_at": "2026-11-23T08:29:35.826598+00:00"
+  },
+  "capture_sha256": "7a905062376037e1f98d5c62f853c67690f97857def1fa17c1b3e583e2bdf797",
+  "source_file_name": "B-T505-dynamodb-errors.web.txt",
+  "observed_facts": [
+    "writeの500は成功/失敗どちらもあり得ると明記。単一item writeの回復とtransactionの冪等性を区別して説明する。",
+    "応答Request IDはAWS Supportとの問題診断に使えると説明される。",
+    "UnprocessedItemsへのbackoffを推奨する一方、高レベルSDKが未処理項目を自動retryする例もある。"
+  ],
+  "limits": [
+    "500後のsingle-item read/conditionの記述をBatchWriteItem全体に無条件移植しない。",
+    "SDKの自動再試行はCの実装契約。Bの明示的retry decisionを全HTTP送信の都度ユーザー確認する一般要件にしない。",
+    "本文の具体retry timingsやSDK一覧は本研究の新B規則には採用しない。"
+  ],
+  "upstream_refs": [
+    "turn953400052view1",
+    "turn522464258view1"
+  ],
+  "checked_at": "2026-11-23T08:34:56.430599+00:00",
+  "round": 4,
+  "redistribution": "Original retrieved text retained privately. This record contains original summaries, locators and provenance only."
+}

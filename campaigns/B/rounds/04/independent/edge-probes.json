@@ -1,0 +1,817 @@
+{
+  "kind": "Independent exploratory probes, not additions to original 13 or pre-candidate supplemental 3.",
+  "runtime": "v24.22.3",
+  "module_sha256": "7e303c30025abf6b92aa05b269fe83b9e289a61f581f533f06713a7fa58efd12",
+  "total": 4,
+  "passed": 4,
+  "results": [
+    {
+      "id": "E01-LATE-CANCEL-RECEIPT-AFTER-SUCCESS",
+      "pass": true,
+      "observations": [
+        {
+          "step": "success-before-cancel-receipt",
+          "view": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "a",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "e1-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": "requesting",
+                "attempts": [
+                  {
+                    "requestId": "e1-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "total": 1,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 0,
+              "succeeded": 1,
+              "failed": 0,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": true,
+            "allSucceeded": true,
+            "message": "対象1件すべての変更成功を確認しました。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [],
+            "canCancelIds": []
+          },
+          "effects": 1,
+          "calls": [
+            {
+              "method": "submit",
+              "itemId": "a",
+              "requestId": "e1-1",
+              "dependsOn": []
+            },
+            {
+              "method": "cancel",
+              "itemId": "a",
+              "requestId": "e1-1"
+            },
+            {
+              "method": "lookup",
+              "itemId": "a",
+              "requestId": "e1-1"
+            }
+          ]
+        },
+        {
+          "step": "late-receipt-preserves-success",
+          "view": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "a",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "e1-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": "accepted",
+                "attempts": [
+                  {
+                    "requestId": "e1-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "total": 1,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 0,
+              "succeeded": 1,
+              "failed": 0,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": true,
+            "allSucceeded": true,
+            "message": "対象1件すべての変更成功を確認しました。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [],
+            "canCancelIds": []
+          },
+          "effects": 1,
+          "calls": [
+            {
+              "method": "submit",
+              "itemId": "a",
+              "requestId": "e1-1",
+              "dependsOn": []
+            },
+            {
+              "method": "cancel",
+              "itemId": "a",
+              "requestId": "e1-1"
+            },
+            {
+              "method": "lookup",
+              "itemId": "a",
+              "requestId": "e1-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E02-WRONG-ITEM-OR-ATTEMPT-CANNOT-CONFIRM",
+      "pass": true,
+      "observations": [
+        {
+          "step": "wrong-correlations-remain-unresolved",
+          "view": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "a",
+                "dependsOn": [],
+                "status": "unknown",
+                "requestId": "e2-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "結果と対象操作の対応を確認できません。",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "e2-1",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "結果と対象操作の対応を確認できません。"
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "b",
+                "dependsOn": [],
+                "status": "unknown",
+                "requestId": "e2-2",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "結果と対象操作の対応を確認できません。",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "e2-2",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "結果と対象操作の対応を確認できません。"
+                  }
+                ]
+              }
+            ],
+            "total": 2,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 2,
+              "succeeded": 0,
+              "failed": 0,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": false,
+            "allSucceeded": false,
+            "message": "対象2件：成功0、未適用0、前提未成立0、取消0、処理中0、結果未確認2、未送信0。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [
+              "a",
+              "b"
+            ],
+            "canCancelIds": []
+          },
+          "effects": {
+            "a": 1,
+            "b": 1
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "e2-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "e2-2",
+                  "dependsOn": []
+                }
+              ]
+            },
+            {
+              "method": "lookup",
+              "itemId": "a",
+              "requestId": "e2-1"
+            },
+            {
+              "method": "lookup",
+              "itemId": "b",
+              "requestId": "e2-2"
+            }
+          ]
+        },
+        {
+          "step": "correct-original-refs-resolve",
+          "view": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "a",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "e2-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "e2-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "b",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "e2-2",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "e2-2",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "total": 2,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 0,
+              "succeeded": 2,
+              "failed": 0,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": true,
+            "allSucceeded": true,
+            "message": "対象2件すべての変更成功を確認しました。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [],
+            "canCancelIds": []
+          },
+          "effects": {
+            "a": 1,
+            "b": 1
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "e2-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "e2-2",
+                  "dependsOn": []
+                }
+              ]
+            },
+            {
+              "method": "lookup",
+              "itemId": "a",
+              "requestId": "e2-1"
+            },
+            {
+              "method": "lookup",
+              "itemId": "b",
+              "requestId": "e2-2"
+            },
+            {
+              "method": "lookup",
+              "itemId": "a",
+              "requestId": "e2-1"
+            },
+            {
+              "method": "lookup",
+              "itemId": "b",
+              "requestId": "e2-2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E03-FAILED-BLOCKED-WITHOUT-NONAPPLICATION-EVIDENCE",
+      "pass": true,
+      "observations": [
+        {
+          "step": "not-authoritatively-unapplied",
+          "view": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "a",
+                "dependsOn": [],
+                "status": "unknown",
+                "requestId": "e3-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "この応答から変更の適用結果を確定できません。",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "e3-1",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "この応答から変更の適用結果を確定できません。"
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "b",
+                "dependsOn": [],
+                "status": "unknown",
+                "requestId": "e3-2",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "この応答から変更の適用結果を確定できません。",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "e3-2",
+                    "status": "unknown",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": "この応答から変更の適用結果を確定できません。"
+                  }
+                ]
+              }
+            ],
+            "total": 2,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 2,
+              "succeeded": 0,
+              "failed": 0,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": false,
+            "allSucceeded": false,
+            "message": "対象2件：成功0、未適用0、前提未成立0、取消0、処理中0、結果未確認2、未送信0。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [
+              "a",
+              "b"
+            ],
+            "canCancelIds": []
+          },
+          "effects": {
+            "a": 1,
+            "b": 1
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "e3-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "e3-2",
+                  "dependsOn": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": "known-outcome",
+          "view": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "a",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "e3-1",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "e3-1",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "b",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "e3-2",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "e3-2",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "total": 2,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 0,
+              "succeeded": 2,
+              "failed": 0,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": true,
+            "allSucceeded": true,
+            "message": "対象2件すべての変更成功を確認しました。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [],
+            "canCancelIds": []
+          },
+          "effects": {
+            "a": 1,
+            "b": 1
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "e3-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "e3-2",
+                  "dependsOn": []
+                }
+              ]
+            },
+            {
+              "method": "lookup",
+              "itemId": "a",
+              "requestId": "e3-1"
+            },
+            {
+              "method": "lookup",
+              "itemId": "b",
+              "requestId": "e3-2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E04-EXPLICIT-SUBSET-AND-RENEWED-MINIMUM-DELAY",
+      "pass": true,
+      "observations": [
+        {
+          "step": "retry-can-fail-again",
+          "view": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "a",
+                "dependsOn": [],
+                "status": "failed",
+                "requestId": "e4-1",
+                "unapplied": true,
+                "retryable": true,
+                "nextRetryAt": 20,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "e4-1",
+                    "status": "failed",
+                    "unapplied": true,
+                    "retryable": true,
+                    "nextRetryAt": 20,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "b",
+                "dependsOn": [],
+                "status": "failed",
+                "requestId": "e4-3",
+                "unapplied": true,
+                "retryable": true,
+                "nextRetryAt": 40,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "e4-2",
+                    "status": "failed",
+                    "unapplied": true,
+                    "retryable": true,
+                    "nextRetryAt": 20,
+                    "reason": ""
+                  },
+                  {
+                    "requestId": "e4-3",
+                    "status": "failed",
+                    "unapplied": true,
+                    "retryable": true,
+                    "nextRetryAt": 40,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "total": 2,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 0,
+              "succeeded": 0,
+              "failed": 2,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": true,
+            "allSucceeded": false,
+            "message": "今回の処理結果がそろいました。対象2件：成功0、未適用2、前提未成立0、取消0、処理中0、結果未確認0、未送信0。",
+            "canStart": false,
+            "canRetryIds": [
+              "a"
+            ],
+            "canReconcileIds": [],
+            "canCancelIds": []
+          },
+          "effects": {
+            "a": 0,
+            "b": 0
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "e4-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "e4-2",
+                  "dependsOn": []
+                }
+              ]
+            },
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "b",
+                  "requestId": "e4-3",
+                  "dependsOn": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "step": "explicit-eligible-completion",
+          "view": {
+            "rows": [
+              {
+                "id": "a",
+                "label": "a",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "e4-5",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "e4-1",
+                    "status": "failed",
+                    "unapplied": true,
+                    "retryable": true,
+                    "nextRetryAt": 20,
+                    "reason": ""
+                  },
+                  {
+                    "requestId": "e4-5",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              },
+              {
+                "id": "b",
+                "label": "b",
+                "dependsOn": [],
+                "status": "succeeded",
+                "requestId": "e4-4",
+                "unapplied": false,
+                "retryable": false,
+                "nextRetryAt": null,
+                "reason": "",
+                "cancelState": null,
+                "attempts": [
+                  {
+                    "requestId": "e4-2",
+                    "status": "failed",
+                    "unapplied": true,
+                    "retryable": true,
+                    "nextRetryAt": 20,
+                    "reason": ""
+                  },
+                  {
+                    "requestId": "e4-3",
+                    "status": "failed",
+                    "unapplied": true,
+                    "retryable": true,
+                    "nextRetryAt": 40,
+                    "reason": ""
+                  },
+                  {
+                    "requestId": "e4-4",
+                    "status": "succeeded",
+                    "unapplied": false,
+                    "retryable": false,
+                    "nextRetryAt": null,
+                    "reason": ""
+                  }
+                ]
+              }
+            ],
+            "total": 2,
+            "counts": {
+              "ready": 0,
+              "pending": 0,
+              "unknown": 0,
+              "succeeded": 2,
+              "failed": 0,
+              "blocked": 0,
+              "cancelled": 0
+            },
+            "finished": true,
+            "allSucceeded": true,
+            "message": "対象2件すべての変更成功を確認しました。",
+            "canStart": false,
+            "canRetryIds": [],
+            "canReconcileIds": [],
+            "canCancelIds": []
+          },
+          "effects": {
+            "a": 1,
+            "b": 1
+          },
+          "calls": [
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "e4-1",
+                  "dependsOn": []
+                },
+                {
+                  "itemId": "b",
+                  "requestId": "e4-2",
+                  "dependsOn": []
+                }
+              ]
+            },
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "b",
+                  "requestId": "e4-3",
+                  "dependsOn": []
+                }
+              ]
+            },
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "b",
+                  "requestId": "e4-4",
+                  "dependsOn": []
+                }
+              ]
+            },
+            {
+              "method": "submit",
+              "items": [
+                {
+                  "itemId": "a",
+                  "requestId": "e4-5",
+                  "dependsOn": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

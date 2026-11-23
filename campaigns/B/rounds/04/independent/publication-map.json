@@ -1,0 +1,198 @@
+{
+  "scope": "Maps corresponding private reviewer artifacts to exact public bytes; not a new test execution.",
+  "transform": "Absolute workspace/capture paths replaced with repository paths or private capture labels. Original reviewer evidence retained privately. Observations and tested artifact hashes are not intentionally changed.",
+  "files": [
+    {
+      "path": "campaigns/B/rounds/04/independent/REPRODUCE.md",
+      "private_original_sha256": "c25383e0b637d956d02c2cd188d05037291f83d44099f9a50526887500f793ee",
+      "published_sha256": "c25383e0b637d956d02c2cd188d05037291f83d44099f9a50526887500f793ee",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/artifact-hashes-initial.json",
+      "private_original_sha256": "2cd6e11b1a1a9559ca962deac659e0a508d5b2d1abef2626bca5442dc77babe1",
+      "published_sha256": "2cd6e11b1a1a9559ca962deac659e0a508d5b2d1abef2626bca5442dc77babe1",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/artifact-hashes.json",
+      "private_original_sha256": "3cd51fbd47981436a67db8cd9541cfeb5e9b1320112a082da207d0f2800b4052",
+      "published_sha256": "3cd51fbd47981436a67db8cd9541cfeb5e9b1320112a082da207d0f2800b4052",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/critic-artifact-manifest.json",
+      "private_original_sha256": "84b645222235405d97e270f2860cc129aa48a0c5fbf230dfc49c7b545e5b307a",
+      "published_sha256": "84b645222235405d97e270f2860cc129aa48a0c5fbf230dfc49c7b545e5b307a",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/dom-events-preliminary.json",
+      "private_original_sha256": "85e1c5250a091a621b9b2e184c361ff2732c9dff158749ad22fcf98b35502a46",
+      "published_sha256": "85e1c5250a091a621b9b2e184c361ff2732c9dff158749ad22fcf98b35502a46",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/dom-events.json",
+      "private_original_sha256": "ffccaf7a7c49fc7bd046dcaba289f0e5057ade965d8f4337d7ccd17902b25503",
+      "published_sha256": "ffccaf7a7c49fc7bd046dcaba289f0e5057ade965d8f4337d7ccd17902b25503",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/edge-probes.json",
+      "private_original_sha256": "efc896bb5899168ef5e23f719caca22f1d71f94fb2b03db5c50fc5ab1da4008f",
+      "published_sha256": "efc896bb5899168ef5e23f719caca22f1d71f94fb2b03db5c50fc5ab1da4008f",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/fault-controls/N01-IGNORE-MINIMUM-DELAY.json",
+      "private_original_sha256": "264f46f7958eee10465efdaa0b74412b40ff90836ea7591b651eaec73efc982f",
+      "published_sha256": "264f46f7958eee10465efdaa0b74412b40ff90836ea7591b651eaec73efc982f",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/fault-controls/N02-ASSIGN-RESULTS-BY-ARRIVAL-POSITION.json",
+      "private_original_sha256": "c451ea10072e8ea518a642afd95bdbca9925838c09f30435c77ed15135647213",
+      "published_sha256": "c451ea10072e8ea518a642afd95bdbca9925838c09f30435c77ed15135647213",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/fault-controls/N03-CANCEL-RECEIPT-AS-TERMINAL.json",
+      "private_original_sha256": "ed15662c88b0cfe44dd9a7e76d8c1a0b37c95bfe811efe1526468a4975d1914e",
+      "published_sha256": "ed15662c88b0cfe44dd9a7e76d8c1a0b37c95bfe811efe1526468a4975d1914e",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/fault-controls/N04-LET-LATE-PENDING-ERASE-TERMINAL.json",
+      "private_original_sha256": "d735976f44537110e2665dea5146b4fb4ae03e00242290da7c6875768ef255b5",
+      "published_sha256": "d735976f44537110e2665dea5146b4fb4ae03e00242290da7c6875768ef255b5",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/fault-controls/summary.json",
+      "private_original_sha256": "eb394452d5736975d6d5b91fa28444c30b4a650f83eaf895c45ee36a7b62ebe1",
+      "published_sha256": "eb394452d5736975d6d5b91fa28444c30b4a650f83eaf895c45ee36a7b62ebe1",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/finding-B-R04-C01.json",
+      "private_original_sha256": "8ccc572a5c3f74e7e08cd87d1a3fe7b0a2a21b7b9d05b2e4a9239deaa5fbab0d",
+      "published_sha256": "8ccc572a5c3f74e7e08cd87d1a3fe7b0a2a21b7b9d05b2e4a9239deaa5fbab0d",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/frozen-suite.json",
+      "private_original_sha256": "1c7a6211a77300c7c62646ff69c6bd5536be8ba1d4aee11220085087fd553711",
+      "published_sha256": "1c7a6211a77300c7c62646ff69c6bd5536be8ba1d4aee11220085087fd553711",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/initial/artifact-hashes-initial.json",
+      "private_original_sha256": "2cd6e11b1a1a9559ca962deac659e0a508d5b2d1abef2626bca5442dc77babe1",
+      "published_sha256": "2cd6e11b1a1a9559ca962deac659e0a508d5b2d1abef2626bca5442dc77babe1",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/initial/dom-events.json",
+      "private_original_sha256": "8c896e799b2480e319f913612e0325d30db82e4a02f9410de406a6d60e2e0e73",
+      "published_sha256": "a0d10a48c68ca059324a9c29e25cfa9de4e7bd6fde01a2a107cafe840e5803ca",
+      "bytes_changed": true
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/initial/edge-probes.json",
+      "private_original_sha256": "efc896bb5899168ef5e23f719caca22f1d71f94fb2b03db5c50fc5ab1da4008f",
+      "published_sha256": "efc896bb5899168ef5e23f719caca22f1d71f94fb2b03db5c50fc5ab1da4008f",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/initial/frozen-suite.json",
+      "private_original_sha256": "1c7a6211a77300c7c62646ff69c6bd5536be8ba1d4aee11220085087fd553711",
+      "published_sha256": "1c7a6211a77300c7c62646ff69c6bd5536be8ba1d4aee11220085087fd553711",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/initial/supplement-suite.json",
+      "private_original_sha256": "95ad0f25923d8c6e38478f25622929e437125783da25f8d743935a60474f6013",
+      "published_sha256": "95ad0f25923d8c6e38478f25622929e437125783da25f8d743935a60474f6013",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/report-initial.md",
+      "private_original_sha256": "4bde1de86a824adc340a2ae1aba3c53007702cca7af5303887ae4a7b08dd0dbb",
+      "published_sha256": "4bde1de86a824adc340a2ae1aba3c53007702cca7af5303887ae4a7b08dd0dbb",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/report.md",
+      "private_original_sha256": "661814fea93502a32dcf78637ca092a3c179281f0667f757b40d3e25bd627919",
+      "published_sha256": "661814fea93502a32dcf78637ca092a3c179281f0667f757b40d3e25bd627919",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/reproduce-dom-events.mjs",
+      "private_original_sha256": "c41f7270f767f727427eed517c643df3766f8650cee2ecf5e33556e8899da782",
+      "published_sha256": "c41f7270f767f727427eed517c643df3766f8650cee2ecf5e33556e8899da782",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/reproduce-edge-probes.mjs",
+      "private_original_sha256": "2983bb9a2ed304a00ba096ce928154e6a3bc83c42ca8d40dd750d37c2063ef4d",
+      "published_sha256": "2983bb9a2ed304a00ba096ce928154e6a3bc83c42ca8d40dd750d37c2063ef4d",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/reproduce-fault-controls.py",
+      "private_original_sha256": "c5e7cc1faeb5a2fe3d770670d4cf5465fc2f7b2fdc064b49256b2d6d5ea419bb",
+      "published_sha256": "c5e7cc1faeb5a2fe3d770670d4cf5465fc2f7b2fdc064b49256b2d6d5ea419bb",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/revised1/artifact-hashes.json",
+      "private_original_sha256": "3cd51fbd47981436a67db8cd9541cfeb5e9b1320112a082da207d0f2800b4052",
+      "published_sha256": "3cd51fbd47981436a67db8cd9541cfeb5e9b1320112a082da207d0f2800b4052",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/revised1/dom-events.json",
+      "private_original_sha256": "af7b58981f051f808d747bbfb5f87890fdc8283d4313c0275728c4d9716bff31",
+      "published_sha256": "af7b58981f051f808d747bbfb5f87890fdc8283d4313c0275728c4d9716bff31",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/source-check-attempts.json",
+      "private_original_sha256": "2a9c342134800ce8a27c23ab7e1a0ace7bd8f4ad9d5a3ce1a53ca08647956347",
+      "published_sha256": "2a9c342134800ce8a27c23ab7e1a0ace7bd8f4ad9d5a3ce1a53ca08647956347",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/source-checks.json",
+      "private_original_sha256": "e23bc499779640ef6248658eeed01db0dcd68d385a5fe74e669b04440de77b29",
+      "published_sha256": "e23bc499779640ef6248658eeed01db0dcd68d385a5fe74e669b04440de77b29",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/supplement-suite.json",
+      "private_original_sha256": "95ad0f25923d8c6e38478f25622929e437125783da25f8d743935a60474f6013",
+      "published_sha256": "95ad0f25923d8c6e38478f25622929e437125783da25f8d743935a60474f6013",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/verdict-initial.json",
+      "private_original_sha256": "6b389f3987c2bfd88d95dffaf1c1c1b05c8d65c43d3ad644be10265800ae7031",
+      "published_sha256": "6b389f3987c2bfd88d95dffaf1c1c1b05c8d65c43d3ad644be10265800ae7031",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/verdict.json",
+      "private_original_sha256": "d8bf6209c84786fc239546229b8b3e135634963af038f7f0d535961c650d2896",
+      "published_sha256": "d8bf6209c84786fc239546229b8b3e135634963af038f7f0d535961c650d2896",
+      "bytes_changed": false
+    },
+    {
+      "path": "campaigns/B/rounds/04/independent/integration-review.json",
+      "private_original_sha256": "0dc234f37486443646cbdf05e3de27a98a09d262a3a225cdd4263b3b544ec762",
+      "published_sha256": "0dc234f37486443646cbdf05e3de27a98a09d262a3a225cdd4263b3b544ec762",
+      "bytes_changed": false
+    }
+  ]
+}

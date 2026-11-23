@@ -1,0 +1,39 @@
+{
+  "method": "Stage-index of independent actual DOM event traces; no mixing of initial failure and focused revision pass.",
+  "initial": {
+    "trace": "initial/dom-events.json",
+    "counts": {
+      "representative": {
+        "total": 7,
+        "passed": 7
+      },
+      "exploratory": {
+        "total": 3,
+        "passed": 1
+      }
+    },
+    "hashes": {
+      "module": "7e303c30025abf6b92aa05b269fe83b9e289a61f581f533f06713a7fa58efd12",
+      "html": "dc4922b346b1e7dade402e441bcb29f0fd72727ba6b9bdaef6dba379370891c4"
+    }
+  },
+  "revised_focused": {
+    "trace": "revised1/dom-events.json",
+    "counts": {
+      "representative": {
+        "total": 2,
+        "passed": 2
+      },
+      "exploratory": {
+        "total": 2,
+        "passed": 2
+      }
+    },
+    "hashes": {
+      "module": "7e303c30025abf6b92aa05b269fe83b9e289a61f581f533f06713a7fa58efd12",
+      "html": "5207bee27be273599bbab14eeee7f90f7723db809866f9e7162c0aec0e570567"
+    }
+  },
+  "finding": "B-R04-C01",
+  "final_resolution": "RESOLVED"
+}

@@ -1,0 +1,102 @@
+{
+  "captured_at": "2026-11-23T08:50:41.546386+00:00",
+  "artifacts": [
+    {
+      "path": "modules/interaction-ux-flow/examples/batch-flow.mjs",
+      "sha256": "7e303c30025abf6b92aa05b269fe83b9e289a61f581f533f06713a7fa58efd12"
+    },
+    {
+      "path": "modules/interaction-ux-flow/examples/batch-flow.html",
+      "sha256": "dc4922b346b1e7dade402e441bcb29f0fd72727ba6b9bdaef6dba379370891c4"
+    },
+    {
+      "path": "modules/interaction-ux-flow/references/batch-outcomes.md",
+      "sha256": "8046cc3c53924b35eae820eebea4291e116d7b92a5c95d059ceb9d9a4077efb4"
+    },
+    {
+      "path": "modules/interaction-ux-flow/SKILL.md",
+      "sha256": "e0ae74413efc7e1a6aa49ca33eebbdf97a975aa97a444cbe2fca66d1f2dab906"
+    },
+    {
+      "path": "registry/B/skills/B-IU-009.json",
+      "sha256": "c138638c11d3c3cdb85cbbf137efaf24bb23bfeb92dea27d8823adef7eab1707"
+    },
+    {
+      "path": "campaigns/B/rounds/04/task.md",
+      "sha256": "f5b6c4104cb531872b4a455cf945cb7be02595dc26f44d540306942086807f7b"
+    },
+    {
+      "path": "campaigns/B/rounds/04/cases.json",
+      "sha256": "4d629a5e77fd77dfd4a39834bc896289cad0ff36fd14e7c3c30522ee13db7aec"
+    },
+    {
+      "path": "campaigns/B/rounds/04/interface.md",
+      "sha256": "d730a0dc52460e80bdf0190358fa8a7591157779491292b9a539374b0dfb21fe"
+    },
+    {
+      "path": "campaigns/B/rounds/04/test-freeze.json",
+      "sha256": "14bb59e96e33674a8e2a4f93e00aa0bd130f6561601adcca89c5a14b13260438"
+    },
+    {
+      "path": "campaigns/B/rounds/04/supplement-freeze.json",
+      "sha256": "bbcbb647dd929deab57edc2f719a29a7d3b3081fa7a4b8b57fa40a09dfede1c0"
+    },
+    {
+      "path": "campaigns/B/rounds/04/protocol-notes.md",
+      "sha256": "f6652650c2262a0ac4da74da0aa9e32c0bb4589597829b27f1435be71b052707"
+    },
+    {
+      "path": "campaigns/B/rounds/04/analysis.md",
+      "sha256": "2f6feab614f18acc42d3246f3b892f4ff39e0718b5caf2b050ddf8ca392a59b7"
+    },
+    {
+      "path": "modules/interaction-ux-flow/tests/test_batch_flow.mjs",
+      "sha256": "bae7d3e2fec1e16785afde6d0a23d6e958ea73a47c487317b243cc4606506ee3"
+    },
+    {
+      "path": "modules/interaction-ux-flow/tests/test_batch_boundaries.mjs",
+      "sha256": "95644896ccb970f92d63ef34ebe9efb52afb4751181b0535ce18a4577c2fbd99"
+    }
+  ],
+  "freeze_and_snapshot_checks": [
+    {
+      "path": "campaigns/B/rounds/04/interface.md",
+      "match": true,
+      "kind": "original freeze"
+    },
+    {
+      "path": "modules/interaction-ux-flow/tests/test_batch_flow.mjs",
+      "match": true,
+      "kind": "original freeze"
+    },
+    {
+      "path": "modules/interaction-ux-flow/tests/test_batch_boundaries.mjs",
+      "match": true,
+      "kind": "supplement freeze"
+    },
+    {
+      "path": "modules/interaction-ux-flow/examples/batch-flow.mjs",
+      "match": true,
+      "snapshot_hash_match": true,
+      "kind": "initial snapshot"
+    },
+    {
+      "path": "modules/interaction-ux-flow/examples/batch-flow.html",
+      "match": true,
+      "snapshot_hash_match": true,
+      "kind": "initial snapshot"
+    },
+    {
+      "path": "modules/interaction-ux-flow/references/batch-outcomes.md",
+      "match": true,
+      "snapshot_hash_match": true,
+      "kind": "initial snapshot"
+    },
+    {
+      "path": "registry/B/skills/B-IU-009.json",
+      "match": false,
+      "snapshot_hash_match": true,
+      "kind": "initial snapshot"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "frozen_at": "2026-11-23T08:39:23.026032+00:00",
+  "before_candidate": true,
+  "case_count": 3,
+  "original_13_unchanged": true,
+  "motivation": "Analyst flagged concurrent retry, stale per-attempt replies/terminal retention, and external state mutation as untested boundaries. A02 exercises same-attempt and newer-attempt variants.",
+  "file": "modules/interaction-ux-flow/tests/test_batch_boundaries.mjs",
+  "sha256": "95644896ccb970f92d63ef34ebe9efb52afb4751181b0535ce18a4577c2fbd99",
+  "status_at_freeze": "NOT_EXECUTED"
+}

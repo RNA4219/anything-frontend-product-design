@@ -1,0 +1,132 @@
+{
+  "source_id": "B-T504",
+  "url": "https://google.aip.dev/155",
+  "canonical_url": "https://google.aip.dev/155",
+  "title": "AIP-155: Request identification",
+  "type": "official API documentation",
+  "authority": "Primary official source",
+  "section": [
+    {
+      "section": "Request identification",
+      "line_map": [
+        {
+          "web_line": 42,
+          "local_lines": [
+            45
+          ]
+        },
+        {
+          "web_line": 43,
+          "local_lines": [
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Guidance and distinct resource/request fields",
+      "line_map": [
+        {
+          "web_line": 55,
+          "local_lines": [
+            58
+          ]
+        },
+        {
+          "web_line": 60,
+          "local_lines": [
+            63
+          ]
+        },
+        {
+          "web_line": 65,
+          "local_lines": [
+            68
+          ]
+        },
+        {
+          "web_line": 67,
+          "local_lines": [
+            70
+          ]
+        },
+        {
+          "web_line": 68,
+          "local_lines": [
+            71
+          ]
+        },
+        {
+          "web_line": 71,
+          "local_lines": [
+            74
+          ]
+        },
+        {
+          "web_line": 72,
+          "local_lines": [
+            75
+          ]
+        },
+        {
+          "web_line": 73,
+          "local_lines": [
+            76
+          ]
+        },
+        {
+          "web_line": 74,
+          "local_lines": [
+            77
+          ]
+        }
+      ]
+    },
+    {
+      "section": "Stale success responses",
+      "line_map": [
+        {
+          "web_line": 80,
+          "local_lines": [
+            83
+          ]
+        },
+        {
+          "web_line": 81,
+          "local_lines": [
+            84
+          ]
+        }
+      ]
+    }
+  ],
+  "read_status": "READ_RELEVANT_SECTIONS; exact web-tool representation retained",
+  "capture_kind": "WEB_TOOL_EXTRACT",
+  "capture_scope": {
+    "authority": "official API specification/design guidance",
+    "capture_kind": "TOOL_EXTRACTED_TEXT",
+    "raw_html": false,
+    "page_complete_claim": false,
+    "selection": "Actual returned open/find text blocks; duplicate overlapping lines preserved, not reconstructed HTML.",
+    "retrieved_at": "2026-11-23T08:29:35.826598+00:00"
+  },
+  "capture_sha256": "b757ad79af562ceb1dc0428644d6c5f701b69e7d8fe7b34fd877bc8d0a058825",
+  "source_file_name": "B-T504-google-aip155.web.txt",
+  "observed_facts": [
+    "request_idが提供されるなら冪等性を保証するというAIP規定。期限はAPIごとに定め得る。",
+    "例ではresource名のbook_idとrequest_idが別field。request_idはresource自体のfieldではない。",
+    "同じ論理要求のretryでも履歴応答を保持できない場合は現在resourceの状態を返し得る。"
+  ],
+  "limits": [
+    "idempotencyという目的のrequest_idであり、fixtureの新attempt requestIdや一般のresponse Request IDと同一語だから同一機能とはしない。",
+    "AIP-155そのものはrequest_idをキーにしたdurable status lookup endpointを定義しない。",
+    "冪等性一般は既存B-IU-002に委任する。この資料はbatch error correlationとの混同を避ける追加根拠。"
+  ],
+  "upstream_refs": [
+    "turn953400052view0",
+    "turn522464258view0"
+  ],
+  "checked_at": "2026-11-23T08:34:56.430599+00:00",
+  "round": 4,
+  "redistribution": "Original retrieved text retained privately. This record contains original summaries, locators and provenance only."
+}

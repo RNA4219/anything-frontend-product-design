@@ -1,0 +1,26 @@
+{
+  "saved_at": "2026-11-23T08:48:32.650650+00:00",
+  "purpose": "Initial candidate before independent R04 Critic; not efficacy baseline",
+  "files": [
+    {
+      "original_path": "modules/interaction-ux-flow/examples/batch-flow.mjs",
+      "snapshot_path": "campaigns/B/rounds/04/artifacts/initial/batch-flow.mjs",
+      "sha256": "7e303c30025abf6b92aa05b269fe83b9e289a61f581f533f06713a7fa58efd12"
+    },
+    {
+      "original_path": "modules/interaction-ux-flow/examples/batch-flow.html",
+      "snapshot_path": "campaigns/B/rounds/04/artifacts/initial/batch-flow.html",
+      "sha256": "dc4922b346b1e7dade402e441bcb29f0fd72727ba6b9bdaef6dba379370891c4"
+    },
+    {
+      "original_path": "modules/interaction-ux-flow/references/batch-outcomes.md",
+      "snapshot_path": "campaigns/B/rounds/04/artifacts/initial/batch-outcomes.md",
+      "sha256": "8046cc3c53924b35eae820eebea4291e116d7b92a5c95d059ceb9d9a4077efb4"
+    },
+    {
+      "original_path": "registry/B/skills/B-IU-009.json",
+      "snapshot_path": "campaigns/B/rounds/04/artifacts/initial/B-IU-009.json",
+      "sha256": "b3781a54b25901c41bdbf684022996cb5f4dba36b853eb3c724c0df9c5864673"
+    }
+  ]
+}

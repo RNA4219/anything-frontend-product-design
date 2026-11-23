@@ -1,0 +1,78 @@
+{
+  "round": "B-R04",
+  "verdict": "REVISE",
+  "scope": "Initial candidate snapshot; independent exploratory display finding, not frozen acceptance failure.",
+  "recorded_at": "2026-11-23T08:58:32.464259+00:00",
+  "artifact_hashes": {
+    "module": "7e303c30025abf6b92aa05b269fe83b9e289a61f581f533f06713a7fa58efd12",
+    "html": "dc4922b346b1e7dade402e441bcb29f0fd72727ba6b9bdaef6dba379370891c4"
+  },
+  "fixed_suite": {
+    "passed": 13,
+    "total": 13
+  },
+  "pre_candidate_supplement": {
+    "passed": 3,
+    "total": 3
+  },
+  "dom": {
+    "representative": {
+      "total": 7,
+      "passed": 7
+    },
+    "exploratory": {
+      "total": 3,
+      "passed": 1
+    }
+  },
+  "findings": [
+    {
+      "id": "B-R04-C01",
+      "severity": "medium",
+      "category": "task-result copy",
+      "location": {
+        "path": "modules/interaction-ux-flow/examples/batch-flow.html",
+        "line": 36,
+        "function": "render(), cancellation receipt text"
+      },
+      "symptom": "An accepted cancellation receipt kept the prompt 元結果は別途確認 after the original operation was already terminal and the relevant lookup option was unavailable.",
+      "reproduction": [
+        {
+          "scenario": "mixed",
+          "events": [
+            "click start",
+            "click cancel",
+            "click reconcile"
+          ],
+          "observed": "c succeeded, effects.c=1, c excluded from canReconcileIds, but c next-action cell still requested separate original-result confirmation."
+        },
+        {
+          "scenario": "lost",
+          "events": [
+            "change scenario=lost",
+            "click start",
+            "click reconcile",
+            "click cancel",
+            "click reconcile"
+          ],
+          "observed": "b/c cancelled, task finished, no canReconcileIds, but the same confirmation prompt remained."
+        }
+      ],
+      "expected": "Preserve the receipt fact while showing that the original terminal result has already been confirmed. Keep separate-result guidance only while pending/unknown.",
+      "impact": "Conflicting next-step guidance after completion; no duplicate side effect or state corruption observed.",
+      "evidence": [
+        "initial/dom-events.json: EDOM02-SUCCESS-AFTER-CANCEL-HAS-TERMINAL-COPY",
+        "initial/dom-events.json: EDOM03-CANCELLED-HAS-TERMINAL-COPY"
+      ],
+      "basis": [
+        "registry/B/skills/B-IU-009.json:009-D12,009-D14",
+        "campaigns/B/rounds/04/task.md: truthful item/task outcomes and recovery"
+      ],
+      "remedy": "Render the accepted cancellation message conditionally on terminal row status.",
+      "fixed_by_parent": false,
+      "resolution": "OPEN",
+      "initial_html_sha256": "dc4922b346b1e7dade402e441bcb29f0fd72727ba6b9bdaef6dba379370891c4"
+    }
+  ],
+  "candidate_revision_required": "Local HTML receipt copy only; model and fixed criteria unaffected."
+}

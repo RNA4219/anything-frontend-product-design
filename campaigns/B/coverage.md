@@ -9,8 +9,8 @@
 | Consequential review/completion | B-004 | ACCEPT B-IU-006; review/change/active payload and hidden-error regression |
 | Interrupted task | B-005 | ACCEPT B-IU-007; current actor/capability, saved outcome and authority regression fixtures |
 | Stale revisions | B-006 | ACCEPT B-IU-008; conditional update, review and delayed-response evidence |
-| Partial batch results | B-007 | R04 queued, criteria frozen |
-| Dependent decisions | B-008 | PARTIAL: inactive answers/errors/payload; broader dependencies pending |
+| Partial batch results | B-007 | ACCEPT B-IU-009; fixed13, separate pre-candidate supplement3 and independent DOM/fault controls |
+| Dependent decisions | B-008 | PARTIAL: inactive answers/errors/payload; broader multi-step dependencies queued for R05 |
 
 Art Direction retains typography, colour, composition and visual tone. B determines action meaning, allowed transitions, decision evidence and recovery. C owns focus, keyboard, components and live-region mechanics; D owns broader comparative methodology and human evaluation. No common root entry or Art Direction file has been changed.
 

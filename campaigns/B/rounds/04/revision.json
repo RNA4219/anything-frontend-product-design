@@ -1,0 +1,11 @@
+{
+  "finding": "R04 cancellation-receipt copy after confirmed terminal outcome",
+  "status": "ACCEPT",
+  "revised_at": "2026-11-23T08:57:05.698967+00:00",
+  "model_unchanged": true,
+  "fixed_13_unchanged": true,
+  "supplement_3_unchanged": true,
+  "html_sha256": "5207bee27be273599bbab14eeee7f90f7723db809866f9e7162c0aec0e570567",
+  "initial_snapshot": "campaigns/B/rounds/04/artifacts/initial",
+  "independent_recheck": "4/4 focused DOM; model/fixed/supplement unchanged"
+}

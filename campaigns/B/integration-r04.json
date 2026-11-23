@@ -1,0 +1,47 @@
+{
+  "recorded_at": "2026-11-23T09:15:22.138879+00:00",
+  "event": "External main changes observed during final publication preparation",
+  "main_sha": "20f21fb9bb1b4d0921333ca1be683d6b42a60c63",
+  "previous_campaign_pr": {
+    "number": 5,
+    "url": "https://github.com/RNA4219/anything-frontend-product-design/pull/5",
+    "observed_state": "closed",
+    "observed_merged": true,
+    "merge_commit": "5de51ce19d6edeb57c59e34ca37d38e9b54b4125"
+  },
+  "overlap_pr": {
+    "number": 2,
+    "url": "https://github.com/RNA4219/anything-frontend-product-design/pull/2",
+    "observed_state": "closed",
+    "observed_merged": true,
+    "merge_commit": "0e9d17976395a5e6d91e9223551b8fb852782b5c"
+  },
+  "merge_performed_by_this_campaign": false,
+  "continuation_branch": "session-b/interaction-evolution-r04-20261123",
+  "continuation_base": "20f21fb9bb1b4d0921333ca1be683d6b42a60c63",
+  "resolution": "Cherry-picked the two unpublished R04 local checkpoints onto the observed main. The sole SKILL frontmatter conflict retains the incoming MIT license and the current B description. Existing main B CLI, tests, references and entry routes are preserved. No shared root file was edited.",
+  "unpublished_local_checkpoints": [
+    "51550841e37b43c1a71d31f6b1dd0ab9967a93bb",
+    "279c4e664c7ad07c683f72049357491c839b7c6a"
+  ],
+  "cherry_picked_checkpoints": [
+    "b3c278fe72e80fc7768952312ab58a103fde4a7c",
+    "bd749c04a2f13851bc568ead6f84ad58e4c671b7"
+  ],
+  "verification": "campaigns/B/final-verification.json",
+  "independent_review": "campaigns/B/rounds/04/independent/integration-review.json",
+  "limits": "Repository integration and existing B CLI conformance only. This is not an additional research round, independent efficacy sample, CI run, native browser test or authorization proof.",
+  "continuation_draft_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/9",
+  "initial_published_commit": "53a6ce960303d81bc95fa20bad150d5fb0a4ca6a",
+  "initial_published_tree": "ed55d076067b73fbb5497f283d13db9d98936119",
+  "local_tree_equality_verified": true,
+  "pr_observed": {
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "mergeable": true,
+    "mergeable_state": "clean",
+    "base": "20f21fb9bb1b4d0921333ca1be683d6b42a60c63",
+    "observation": "Initial publication observation; verify actual PR state when resuming."
+  }
+}

@@ -59,3 +59,14 @@ B_DOM_JSDOM_PATH=/absolute/path/to/jsdom node campaigns/B/rounds/02/independent/
 ```
 
 This portable copy changes only environment paths. Its default output is a temporary file; archived independent results are not overwritten. The current model passes the eight representative scenarios and the exploratory inactive-error scenario. This portability rerun is not an additional independent sample.
+
+## Partial batches (R04)
+
+```sh
+node modules/interaction-ux-flow/tests/test_batch_flow.mjs
+node modules/interaction-ux-flow/tests/test_batch_boundaries.mjs
+```
+
+The original frozen suite has 13 cases. Three supplemental boundary criteria were frozen after analysis and before candidate implementation; they are reported separately. A02 covers both a late same-attempt reply and a reply from an older attempt. Serve the examples directory to operate `batch-flow.html`.
+
+This is one declared non-atomic fixture. The same requestId is also a durable lookup reference only by its explicit contract. No test of a live Graph/AWS/AIP adapter, atomic transaction, SDK retry, arbitrary dependency graph, persistent recovery or production authorization is implied. See the R04 protocol notes for source-driven limits on generalization.

@@ -1,0 +1,22 @@
+{
+  "suite": "B-R04-pre-candidate-supplement",
+  "total": 3,
+  "passed": 3,
+  "results": [
+    {
+      "id": "A01",
+      "name": "Concurrent retry of one eligible item produces one new attempt",
+      "pass": true
+    },
+    {
+      "id": "A02",
+      "name": "Late pending cannot replace a terminal outcome or a newer attempt",
+      "pass": true
+    },
+    {
+      "id": "A03",
+      "name": "Caller or view mutation cannot alter selected scope or internal state",
+      "pass": true
+    }
+  ]
+}

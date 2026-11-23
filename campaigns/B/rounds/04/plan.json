@@ -1,0 +1,13 @@
+{
+  "round": 4,
+  "status": "QUEUED",
+  "issues": [
+    "B-007"
+  ],
+  "priority": "P1 recurring multi-item task failure",
+  "created_at": "2026-11-23T08:07:11.073738+00:00",
+  "research_question": "When a bulk task has mixed or missing outcomes, how should item identity, completion, retry scope, dependencies and cancellation be represented without repeating successful effects?",
+  "frozen_before_research": true,
+  "implementation_scope": "One candidate unit for partial batch outcomes and item-scoped recovery; reuse R01 unknown/retry/cancel and R02 compensation. Atomic batch services are an explicit counterexample, not silently forced into independent-item semantics.",
+  "next_if_new": "Dependent answers and task branches beyond current form validation, or selective evidence-gathering for unresolved contracts."
+}

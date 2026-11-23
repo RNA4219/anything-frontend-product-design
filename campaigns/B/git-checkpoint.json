@@ -1,12 +1,23 @@
 {
-  "branch": "session-b/interaction-evolution-20261123",
+  "branch": "session-b/interaction-evolution-r04-20261123",
   "base_sha": "3d02174a69676afa8e0b02f4062cc6ecb636d300",
   "round1_commit": "11265cccef22ceed7e11c34915f433868523cdeb",
   "round1_tree": "4d8b125e25417c5c08169a5c5d77acad3137967e",
-  "draft_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/5",
   "local_checkpoint_before_api_publish": "a7c792b6fdd5a8df581e9dffe09d7d170ac44d7e",
   "tree_equality_verified": true,
-  "main_merged": false,
   "round2_commit": "fa9732b07230111481c36f207dcba31ea4dba4da",
-  "round2_local_checkpoint_before_api_publish": "bfd1a2514a461a652fc1f5ba3f8577c5ba3e910b"
+  "round2_local_checkpoint_before_api_publish": "bfd1a2514a461a652fc1f5ba3f8577c5ba3e910b",
+  "round3_commit": "89091a5d60f0e89c2c83331d07ff768916c59c5a",
+  "round3_local_checkpoint_before_api_publish": "344ac3bb2484bd0dcacf93084babf38e6036ead5",
+  "previous_branch": "session-b/interaction-evolution-20261123",
+  "previous_draft_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/5",
+  "main_merge_performed_by_campaign": false,
+  "integration_base_sha": "20f21fb9bb1b4d0921333ca1be683d6b42a60c63",
+  "current_draft_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/9",
+  "current_publication_state": "DRAFT_OPEN",
+  "latest_commit_locator": "Actual continuation PR head; exact final head is also recorded in the private resume checkpoint after publication",
+  "round4_initial_published_commit": "53a6ce960303d81bc95fa20bad150d5fb0a4ca6a",
+  "round4_initial_published_tree": "ed55d076067b73fbb5497f283d13db9d98936119",
+  "round4_local_checkpoint_before_api_publish": "5bbbfe09e26e6f14760e5dfc26d51e0c80497e08",
+  "round4_initial_tree_equality_verified": true
 }
