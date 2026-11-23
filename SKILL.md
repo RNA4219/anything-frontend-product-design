@@ -22,4 +22,5 @@ description: Webプロダクトの機能・情報設計、操作フロー、UI�
 複数案は内容・課題・成功条件をそろえ、結果の差と失敗条件を比べる。
 実装後は課題を最後まで試し、入力・アプリの版・観察結果・未確認の条件を残す。
 根拠は各ルールの出典か[分野別の資料](research/design-evidence/README.md)から調べる。
-視覚表現も扱うときは主要な情報・操作・制約を[Art Direction](https://github.com/RNA4219/anything-frontend-art-direction)へ渡し、適用後の実画面で発見から完了までを再確認する。
+
+視覚表現も扱うときは、利用課題・受入条件と画面で優先する情報や操作をそろえ、[Art Direction の手順](https://github.com/RNA4219/anything-frontend-art-direction/blob/main/SKILL.md)で意匠を決める。すでに意匠案があればそこから始める。[受け渡しの記入例](references/handoff.md#art-direction)に沿って対象の部品に反映し、同じ課題を実画面で再確認する。
