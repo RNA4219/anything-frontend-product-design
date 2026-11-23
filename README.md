@@ -1,62 +1,78 @@
 # Anything Frontend Product Design
 
-フロントエンドを作るときに、「利用者が何を選び、どう操作し、何をもって完了とするか」を決めるスキルです。たとえば画像を書き出す画面なら、保存ボタンの見た目に加えて、ダウンロードした画像が直前のプレビューと一致するところまで確かめます。
+Webプロダクトを、利用者が用事を終えるところまで設計・検証するためのスキルです。たとえば予約変更なら、対象の予約を見つけ、新しい日時を選び、ページを開き直しても変更後の日時を確認できるところまでを扱います。クリック数、要素間の余白、画面内の情報密度を測り、どこを直すか判断します。
 
-## 動く作例『水葬線』
-
-**[『水葬線』を開く](https://rna4219.github.io/anything-frontend-product-design/)** · [単体HTMLの保存へ](https://rna4219.github.io/anything-frontend-product-design/#download) · [序章の台本を読む](examples/suisosen/prologue.ks)
-
-[![『水葬線』。湖に沈んだ駅を背に、赤い襟巻きの水守澪が振り返る。左に作品名と「序章をプレイ」のボタンがある。](assets/suisosen-preview.webp)](https://rna4219.github.io/anything-frontend-product-design/)
-
-湖底の駅に、十二年前に亡くした妹から電話がかかってくる。架空の短編伝奇ADVの作品サイトです。「序章をプレイ」を開き、全文を表示して台詞を送ると、赤い灯を振るか、受話器を握るかを選べます。どちらの結末からも選択の直前に戻れます。台詞と作品紹介は差し替え用の仮稿です。
-
-### 序章の遊び方
-
-| したいこと | 操作 |
-| --- | --- |
-| 自分の速さで読む | 本文をクリック／タップ。表示途中の1回目はその台詞の全文表示、表示後の1回で次へ進む。キーボードでは Enter・Space・→ で送り、← で一つ戻る。分岐では Tab と Enter で選ぶ。 |
-| 読み返す | 「履歴」で今回通った台詞を確認。「既読スキップ」は、次が未読のときと選択肢で止まる。「オート」も選択肢で待つ。 |
-| 選択の前に保存する | 「セーブ・ロード」で3つの栞から保存先を選ぶ。ロードすると台詞と選択履歴が戻る。同じブラウザーで再訪すると、作品ページから直前の場面を再開できる。 |
-| オフラインで遊ぶ | 作品情報の「単体HTMLを保存」で `suisosen.html` を保存して開く。3枚の絵とプレイヤーを収録。保存先のブラウザーやファイルの場所によって、栞の保管先は変わる。 |
-
-### 4つのスキルを1つずつ、2周使った記録
-
-| 順番 | 1周目で作ったもの | 2周目に実画面で変えたこと |
-| --- | --- | --- |
-| 1. [Product Design](SKILL.md) | 「初見で序章を起動し、選んだ結末を読める」を完了条件にした。台詞送り、分岐、終幕、栞からの復帰をつないだ。 | Enterで分岐へ進むとフォーカスが本文の外に抜けた。最初の選択肢に移し、履歴は直近の発言が見える位置から開くようにした。 |
-| 2. [Art Direction](https://github.com/RNA4219/anything-frontend-art-direction) | 『魔法使いの夜』PC版の物語紹介で、雨の街と赤い傘が一枚に収まる構図を観察。『水葬線』では青い湖面を題名の余白に取り、赤い襟巻きを人物の目印にした。DGXのMOSS-Imageで主人公、水没駅、業務電話の3枚を生成した。[参照した公式画面](https://www.typemoon.com/products/mahoyo/story.html) · [MOSS-Image](https://openmoss.ai/MOSS-Image/) | 390px幅で片目が画面外に切れた。スマートフォンでは画像の表示位置を右へ寄せ、両目を入れた。画面幅に合わせて駅の風景も個別に切り取った。[390px幅の実画面](assets/suisosen-mobile.webp) |
-| 3. [Motion Atlas](https://github.com/RNA4219/motion-atlas) | タイトルに[Soft enter](https://github.com/RNA4219/motion-atlas/blob/8cff76041b06a30d7f4b4b9f79979b8e30512f60/src/cinema.js)を応用。台詞の途中で押すと、その台詞を一度で表示する。 | 背景が変わるときだけ、直前の絵を340msで透過する2層構成にした。既読スキップ時は即時切替。端末の「動きを減らす」設定では、タイトル・背景・文字送りをすべて即時表示にした。 |
-| 4. [unslop](https://github.com/heydamir/unslop) | 操作の主役を「序章をプレイ」に絞り、下端の細い路線と終電時刻をこの作品の地紋にした。 | 外部リンクに見える矢印を取り、入口を切符の切り取り線で仕上げた。スマートフォンの読書画面を全面に広げ、6個の補助操作を2段にそろえた。 |
-
-Chromeで文字を即時表示にした場合、初見から片方の終幕まで **7操作**（起動1・台詞送り4・選択1・台詞送り1）。390 × 844 CSS pxでは起動ボタンの上端が566px、高さが52px、直前の紹介文との余白が18px。320px幅でも横スクロールは0pxだった。マウス・キーボードとタッチエミュレーションで操作し、保存したHTMLは通信を無効にして終幕まで確認した。
-
-### 台本を差し替える
-
-[序章の台本](examples/suisosen/prologue.ks)で、各ラベルの本文、話者、背景、選択先を編集します。台詞末尾の `[p]` がページ送り、`[link]` が分岐です。ラベル名はセーブ位置にも使います。変更後はリポジトリのルートで `python examples/suisosen/sync_scenario.py` を実行すると[配布HTML](docs/index.html)に反映されます。`--check` で同期状態だけを確認できます。プレイヤーは吉里吉里／KAGのページ待ち・リンク・栞を参照したブラウザー実装で、この台本用のタグを解釈します。[KAG3 タグリファレンス](https://krkrz.github.io/krkr2doc/kag3doc/contents/Tags.html)
-
-同じ手順で作例を依頼するときは、利用者の最初の操作と、最後に画面で確認できる結果を指定します。
-
-> 架空の伝奇ADVの公式サイトと、2通りの結末まで読める序章を単体HTMLで作ってください。Product Design、Art Direction、Motion Atlas、unslopの順に1つずつ使い、2周してください。1周目は「起動 → 台詞送り → 分岐 → 終幕」を通し、2周目は390px幅の実画面とキーボードで見つけた問題を直してください。画像はDGXのMOSS-Imageで生成し、紹介文と台詞は仮稿として分離してください。
-
-
+[スキルを読む](SKILL.md) · [製品評価チェックリスト](references/product-checklist.md) · [動く作例『水葬線』を開く](https://rna4219.github.io/anything-frontend-product-design/)
 
 ## 自分のプロダクトで使う
 
-[スキルの入口](SKILL.md)から相談に合う担当を選びます。製品を点検するときは、用件ごとに成功条件を先に決め、操作回数、要素間の余白、画面内の情報密度、実際に得られた結果を記録します。[製品評価チェックリスト](references/product-checklist.md) · [担当間の受け渡し](references/handoff.md)
+このリポジトリを手元に置き、対象の画面と `SKILL.md` を参照できる状態で、エージェントに利用者の用事を一つ指定します。予約変更画面なら、次のように依頼できます。
 
-| 担当 | 設計するもの | 担当ディレクトリ |
+> この予約変更画面を、Anything Frontend Product Design の製品評価チェックリストで点検してください。利用者の用事は「12月8日14時の工作室の予約を、12月10日14時に変更する」です。PCではクリック数、スマートフォンではタップ数を数え、確定後にページを開き直して日時を確かめてください。希望枠が埋まっていた場合は、元の予約が残り、別の枠を選べるかも確認してください。
+
+最初に「何を確認できれば完了か」を書き、次に実際の画面で測ります。結果には画面幅、入力方法、操作数、最後に表示された内容を残します。この例の初期データと受入条件も同梱しています。[予約変更の課題](tests/fixtures/booking-change.md) · [チェックリストと記入欄](references/product-checklist.md)
+
+| 困っていること | 使うスキル |
+| --- | --- |
+| 利用者が目的の予約を見つけられない | [A　機能と情報設計](modules/product-information-architecture/SKILL.md) |
+| 日時変更の途中で失敗すると元に戻れない | [B　操作フロー](modules/interaction-ux-flow/SKILL.md) |
+| ダイアログを閉じるとキーボードの操作位置が分からなくなる | [C　UI部品の設計と実装](modules/ui-engineering-design-system/SKILL.md) |
+| 修正後に何を測ればリリースできるか決めたい | [D　検証とリリース判定](modules/design-qa-evaluation/SKILL.md) |
+
+## 実サイトの測定記録を引く
+
+たとえば「スマートフォンでパスワードの再設定方法を探す」経路は、リポジトリのルートで次のコマンドを実行すると調べられます。
+
+```sh
+python scripts/find_journeys.py --task reset --mode mobile --status confirmed --view layout --limit 1
+```
+
+Adobeの観察例は、再設定方法を案内記事で確認するまでに**2タップと1回のスクロール**。画面内の操作要素は入口の3個から記事の9個へ、文字が占める面積の割合は10.23%から22.94%へ変わりました。操作数は同じコマンドの `--view layout` を `--view actions` に替えて確認できます。[Adobeの観察記録](research/product-journeys/expansion/reset.md#reset-adobe-mobile) · [余白と密度の測定方法](research/product-journeys/spacing/README.md)
+
+用件別の索引から、商品探し、誤入力からの復帰、店舗の営業時間なども引けます。利用者が実際に迷った時間や達成率を調べたいときは、人を対象にした研究を参照してください。[実サイトの用件別索引](references/site-comparisons.md) · [29ブランド・施設の観察](research/product-journeys/walkthrough/README.md) · [追加観察](research/product-journeys/expansion/README.md) · [利用者を観察した研究](research/product-journeys/human-studies/README.md) · [設計ルールと原典](research/design-evidence/README.md)
+
+## 動く作例『水葬線』
+
+湖に沈んだ駅から、十二年前に亡くした妹が電話をかけてくる。『水葬線』は、架空の短編伝奇ADVの作品サイトです。「序章をプレイ」から読み始め、赤い灯を振るか、受話器を握るかを選ぶと、異なる結末にたどり着きます。台詞と紹介文は差し替え用の仮稿です。
+
+**[作品サイトで序章をプレイ](https://rna4219.github.io/anything-frontend-product-design/)** · [オフライン用の単体HTMLを保存](https://rna4219.github.io/anything-frontend-product-design/#download) · [スマートフォンでの表示](assets/suisosen-mobile.webp)
+
+[![湖面の左側に『水葬線』の題名とプレイボタン、右側に赤い襟巻きの主人公を配置した作品サイト。](assets/suisosen-preview.webp)](https://rna4219.github.io/anything-frontend-product-design/)
+
+| 確認したこと | Chromeでの結果 |
+| --- | --- |
+| 初めて開いてから一つの結末を読むまで | 文字の即時表示時は7操作。起動1回、台詞送り4回、選択1回、最後の台詞送り1回。 |
+| 紹介文とプレイボタンの距離 | 390 × 844 CSS pxのタッチエミュレーションで18px。ボタンの上端は画面上端から566px、高さは52px。320px幅でも横スクロールは0px。 |
+| 中断した場面に戻る | 分岐直前に保存した栞をロードすると、同じ台詞と二つの選択肢に戻る。ダウンロードしたHTMLでも、通信を切って終幕まで確認。 |
+
+<details>
+<summary>作例の依頼文と、4つのスキルを2周使った記録</summary>
+
+> 架空の伝奇ADVの作品サイトと、二つの結末まで遊べる序章を単体HTMLで作ってください。Product Design、Art Direction、Motion Atlas、unslopを一つずつ順に使ってください。1周目は起動から終幕までを作り、2周目は390px幅の表示とキーボード操作を試して直してください。画像はDGXのMOSS-Imageで生成し、台詞は差し替えられる仮稿にしてください。
+
+| 順番 | 1周目 | 2周目 |
 | --- | --- | --- |
-| A | 利用目的、情報の分類と名前、見つけ方 | `modules/product-information-architecture/` |
-| B | 操作手順、状態遷移、中断・失敗からの復帰 | `modules/interaction-ux-flow/` |
-| C | 実装時の部品選択、部品の契約、デザインシステム | `modules/ui-engineering-design-system/` |
-| D | 検証の設計、観察結果、リリース判断 | `modules/design-qa-evaluation/` |
+| 1. [Product Design](SKILL.md) | 序章の起動から終幕までをつなぎ、分岐前に栞を保存できるようにした。 | キーボードで分岐へ進むと操作位置が外れたため、最初の選択肢にフォーカスを移した。 |
+| 2. [Art Direction](https://github.com/RNA4219/anything-frontend-art-direction) | 『魔法使いの夜』の雨の街と赤い傘の構図を参照。青い湖と赤い襟巻きを軸に、主人公・水没駅・業務電話の3枚をDGXのMOSS-Imageで生成した。[公式の物語紹介](https://www.typemoon.com/products/mahoyo/story.html) · [MOSS-Image](https://openmoss.ai/MOSS-Image/) | 390px幅で主人公の片目が切れたため、縦画面の切り取り位置を変えた。 |
+| 3. [Motion Atlas](https://github.com/RNA4219/motion-atlas) | タイトルの登場に「Soft enter」の動きを使い、台詞は表示途中でも全文を出せるようにした。[参照した作例](https://github.com/RNA4219/motion-atlas/blob/8cff76041b06a30d7f4b4b9f79979b8e30512f60/src/cinema.js) | 背景が変わるときだけ前の絵を340msかけて消すようにした。端末で「動きを減らす」を選ぶと即時表示になる。 |
+| 4. [unslop](https://github.com/heydamir/unslop) | 最初の画面の主な操作を「序章をプレイ」に絞り、終電時刻を添えた。 | 外部リンクに見えた矢印を切符の切り取り線に替え、スマートフォンの読書画面では6個の補助操作を2段にそろえた。 |
 
-## 設計判断に使える記録
+</details>
 
-[実サイトの用件別の索引](references/site-comparisons.md)から、操作回数・余白・情報密度を参照できます。[29ブランド・施設の実画面](research/product-journeys/walkthrough/README.md)と[新規12ブランド・施設を含む追加観察](research/product-journeys/expansion/README.md)を収録しています。人の探索時間や達成率については[利用者を観察した研究](research/product-journeys/human-studies/README.md)を参照してください。
+<details>
+<summary>序章の操作と台本の編集方法</summary>
 
-[調査資料の置き方](research/README.md)、[検証の実行方法](tests/README.md)、[実行・評価の証跡](evidence/README.md)。
+本文をクリック／タップすると、表示途中なら全文が現れ、表示後なら次に進みます。キーボードでは → で送り、← で一つ戻り、選択肢は Tab と Enter で選びます。「履歴」で通った台詞を読み返せます。「既読スキップ」は未読の手前で止まり、「オート」も選択肢で待ちます。「セーブ・ロード」には3つの栞があります。
+
+台本は吉里吉里／KAGのページ待ち・分岐を参考にした、この作例のブラウザープレイヤー用です。本文・話者・選択肢を編集したら、次のコマンドで単体HTMLに反映します。ラベル名はセーブ位置にも使います。[序章の台本](examples/suisosen/prologue.ks) · [配布HTML](docs/index.html) · [KAG3のタグリファレンス](https://krkrz.github.io/krkr2doc/kag3doc/contents/Tags.html)
+
+```sh
+python examples/suisosen/sync_scenario.py
+python examples/suisosen/sync_scenario.py --check
+```
+
+</details>
 
 ## ライセンス
 
-このリポジトリのコードと作例は[MIT License](LICENSE)で配布します。参照したunslopの作者はDamir Sokolovskyで、スキルのライセンスは[CC BY 4.0](https://github.com/heydamir/unslop/blob/main/LICENSE)です。作例は端末の書体を利用します。第三者の原典には各資料の条件が適用されます。
+このリポジトリのコードと作例はMITライセンスで配布しています。作例で参照したunslopの作者はDamir Sokolovskyで、同スキルにはCC BY 4.0が適用されます。第三者の資料には各原典の条件が適用されます。[MIT License](LICENSE) · [unslopのライセンス](https://github.com/heydamir/unslop/blob/main/LICENSE)
