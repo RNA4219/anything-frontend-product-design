@@ -1,0 +1,29 @@
+{
+  "round": 3,
+  "issues": ["C-002"],
+  "question": "How should an engineer distinguish a reflow failure from a justified local two-dimensional region, and assess pointer target size/spacing without confusing declarations with measured layout?",
+  "selection_reason": "Repeated layout and input failures remain uncovered after component and token contracts. The browser limitation must be reflected in evidence labels rather than omitted.",
+  "evaluation_frozen_before_research": true,
+  "rubric": [
+    "Preserve task-relevant information and actions at the reflow boundary; do not hide required content to make overflow disappear",
+    "Classify two-dimensional exceptions locally with a documented reason, rather than exempting the entire page",
+    "Use authoritative target geometry thresholds and retain the named exceptions and input assumptions",
+    "Reject malformed, missing, contradictory, or unsupported observations instead of returning a generic accessibility pass",
+    "Distinguish synthetic geometry checks, supplied measurements, browser observation, and assistive-technology evidence",
+    "Do not turn an observation-model pass into rendered WCAG conformance",
+    "Preserve existing Art Direction and component/keyboard responsibilities"
+  ],
+  "required_cases": [
+    "narrow-prose-page",
+    "local-two-dimensional-table",
+    "unjustified-page-wide-exemption",
+    "long-label-and-retained-action",
+    "target-size-boundary",
+    "undersized-target-spacing",
+    "exception-with-and-without-evidence",
+    "nonrectangular-or-clipped-target-limit",
+    "missing-or-synthetic-measurement"
+  ],
+  "evidence_limit": "Browser execution remains blocked in this session. Any implementation requiring actual rendering/AT observation stays HOLD; pure geometry or schema checks may receive a narrowly scoped result only.",
+  "decision_rule": "ACCEPT only a clearly bounded rule with executed tests and independent recheck; unresolved conditions or unavailable runtime evidence HOLD; concrete defects REVISE."
+}

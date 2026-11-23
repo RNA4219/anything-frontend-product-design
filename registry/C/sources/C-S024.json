@@ -1,0 +1,16 @@
+{
+  "source_id": "C-S024",
+  "url": "https://github.com/RNA4219/anything-frontend-art-direction",
+  "title": "Art Direction コンポーネント基盤",
+  "retrieved_date": "2026-11-23",
+  "version": null,
+  "records": [
+    {
+      "file": "research/ui-engineering-design-system/round-02/researcher-1.json",
+      "source_id": "C02-R1-S07"
+    }
+  ],
+  "original_download": "available_local_checkout",
+  "reader_capture": "partial",
+  "public_fulltext": false
+}

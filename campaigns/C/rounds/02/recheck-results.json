@@ -1,0 +1,3016 @@
+{
+  "reviewer": "same-model separate-task independent critic",
+  "hidden_holdout": false,
+  "cost": "unknown",
+  "candidate_sha256": "3f327cd1427e029d3ee9823ee999423ee72311088ccf720006ce2d8a05315b7e",
+  "probe_source_sha256": "5e021c27bf7fb258a80067c57d7110ca80fe160c41a0e2ef656ecb6c375e354c",
+  "original_cases": 73,
+  "additional_cases": 52,
+  "total": 125,
+  "passed": 125,
+  "failed": 0,
+  "results": [
+    {
+      "id": "number-control",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "number-True",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NUMBER_VALUE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "NUMBER_VALUE",
+          "path": "reading",
+          "message": "Expected a finite JSON number, excluding boolean",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "number-False",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NUMBER_VALUE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "NUMBER_VALUE",
+          "path": "reading",
+          "message": "Expected a finite JSON number, excluding boolean",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "number-inf",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NUMBER_VALUE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "NUMBER_VALUE",
+          "path": "reading",
+          "message": "Expected a finite JSON number, excluding boolean",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "number--inf",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NUMBER_VALUE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "NUMBER_VALUE",
+          "path": "reading",
+          "message": "Expected a finite JSON number, excluding boolean",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "number-nan",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NUMBER_VALUE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "NUMBER_VALUE",
+          "path": "reading",
+          "message": "Expected a finite JSON number, excluding boolean",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "dimension-negative",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "dimension-boolean",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "MEASURE_VALUE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "MEASURE_VALUE",
+          "path": "reading",
+          "message": "Expected finite number and unit in ['px', 'rem']",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "dimension-infinite",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "MEASURE_VALUE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "MEASURE_VALUE",
+          "path": "reading",
+          "message": "Expected finite number and unit in ['px', 'rem']",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "dimension-zero",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "duration-negative",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "duration-boolean",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "MEASURE_VALUE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "MEASURE_VALUE",
+          "path": "reading",
+          "message": "Expected finite number and unit in ['ms', 's']",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "duration-infinite",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "MEASURE_VALUE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "MEASURE_VALUE",
+          "path": "reading",
+          "message": "Expected finite number and unit in ['ms', 's']",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "duration-zero",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "color-control",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "color-COLOR_NONE-{'components': ['none', 0, 1]}",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "COLOR_NONE",
+      "expected_kind": "UNSUPPORTED",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "UNSUPPORTED",
+          "code": "COLOR_NONE",
+          "path": "reading",
+          "message": "The valid none keyword is outside this subset",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "color-COLOR_SPACE-{'colorSpace': 'display-p3'}",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "COLOR_SPACE",
+      "expected_kind": "UNSUPPORTED",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "UNSUPPORTED",
+          "code": "COLOR_SPACE",
+          "path": "reading",
+          "message": "Only numeric sRGB is supported",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "color-COLOR_RANGE-{'components': [True, 0, 1]}",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "COLOR_RANGE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "COLOR_RANGE",
+          "path": "reading",
+          "message": "sRGB components must be numeric in [0,1]",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "color-COLOR_RANGE-{'components': [0, 0, 1.0001]}",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "COLOR_RANGE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "COLOR_RANGE",
+          "path": "reading",
+          "message": "sRGB components must be numeric in [0,1]",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "color-COLOR_ALPHA-{'alpha': True}",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "COLOR_ALPHA",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "COLOR_ALPHA",
+          "path": "reading",
+          "message": "alpha must be numeric in [0,1]",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "color-COLOR_ALPHA-{'alpha': -0.01}",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "COLOR_ALPHA",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "COLOR_ALPHA",
+          "path": "reading",
+          "message": "alpha must be numeric in [0,1]",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "color-COLOR_HEX-{'hex': '#0008'}",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "COLOR_HEX",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "COLOR_HEX",
+          "path": "reading",
+          "message": "Optional fallback hex must have six digits",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "color-COLOR_HEX-{'hex': '#000000FF'}",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "COLOR_HEX",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "COLOR_HEX",
+          "path": "reading",
+          "message": "Optional fallback hex must have six digits",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "parent-alias-conflict",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "AMBIGUOUS_ALIAS_TYPE",
+      "expected_kind": "CONTRACT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "CONTRACT",
+          "code": "AMBIGUOUS_ALIAS_TYPE",
+          "path": "g.reading",
+          "message": "Conflicting parent/target types require explicit $type under this local policy",
+          "chain": [
+            "g.reading",
+            "source"
+          ],
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "parent-conflict-explicit-resolution",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "unsupported-root",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NODE_CONSTRUCT",
+      "expected_kind": "UNSUPPORTED",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "UNSUPPORTED",
+          "code": "NODE_CONSTRUCT",
+          "path": "other",
+          "message": "$root is not implemented; this is not a DTCG-invalidity judgment",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "unsupported-ref",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NODE_CONSTRUCT",
+      "expected_kind": "UNSUPPORTED",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "UNSUPPORTED",
+          "code": "NODE_CONSTRUCT",
+          "path": "other",
+          "message": "$ref is not implemented; this is not a DTCG-invalidity judgment",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "unsupported-extends",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NODE_CONSTRUCT",
+      "expected_kind": "UNSUPPORTED",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "UNSUPPORTED",
+          "code": "NODE_CONSTRUCT",
+          "path": "other",
+          "message": "$extends is not implemented; this is not a DTCG-invalidity judgment",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "unsupported-extensions",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NODE_CONSTRUCT",
+      "expected_kind": "UNSUPPORTED",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "UNSUPPORTED",
+          "code": "NODE_CONSTRUCT",
+          "path": "other",
+          "message": "$extensions is not implemented; this is not a DTCG-invalidity judgment",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "unsupported-deprecated",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NODE_CONSTRUCT",
+      "expected_kind": "UNSUPPORTED",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "UNSUPPORTED",
+          "code": "NODE_CONSTRUCT",
+          "path": "other",
+          "message": "$deprecated is not implemented; this is not a DTCG-invalidity judgment",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "unsupported-schema",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NODE_CONSTRUCT",
+      "expected_kind": "UNSUPPORTED",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "UNSUPPORTED",
+          "code": "NODE_CONSTRUCT",
+          "path": "other",
+          "message": "$schema is not implemented; this is not a DTCG-invalidity judgment",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "descriptions-empty-group-control",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "metadata-wrong-type",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "DESCRIPTION_SHAPE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "DESCRIPTION_SHAPE",
+          "path": "reading",
+          "message": "$description must be a string",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "unknown-wrapper-schema",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "CONFIG_FIELDS",
+      "expected_kind": "UNSUPPORTED",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "UNSUPPORTED",
+          "code": "CONFIG_FIELDS",
+          "path": "<root>",
+          "message": "Extra wrapper fields, export filters and multiple destinations are unsupported"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "token-name-'x; color:red'",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NAME_SUBSET",
+      "expected_kind": "UNSUPPORTED",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "UNSUPPORTED",
+          "code": "NAME_SUBSET",
+          "path": "<root>",
+          "message": "This CSS name mapping supports ASCII letters, digits, underscore, hyphen only",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "token-name-'日本語'",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NAME_SUBSET",
+      "expected_kind": "UNSUPPORTED",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "UNSUPPORTED",
+          "code": "NAME_SUBSET",
+          "path": "<root>",
+          "message": "This CSS name mapping supports ASCII letters, digits, underscore, hyphen only",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "token-name-'x\\nbody'",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NAME_SUBSET",
+      "expected_kind": "UNSUPPORTED",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "UNSUPPORTED",
+          "code": "NAME_SUBSET",
+          "path": "<root>",
+          "message": "This CSS name mapping supports ASCII letters, digits, underscore, hyphen only",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "token-name-'x[bad]'",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NAME_SUBSET",
+      "expected_kind": "UNSUPPORTED",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "UNSUPPORTED",
+          "code": "NAME_SUBSET",
+          "path": "<root>",
+          "message": "This CSS name mapping supports ASCII letters, digits, underscore, hyphen only",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "case-distinct",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "Day",
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "injection-prefix",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "PREFIX",
+      "expected_kind": "CONTRACT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "CONTRACT",
+          "code": "PREFIX",
+          "path": "<root>",
+          "message": "prefix must be a safe ASCII identifier beginning with a letter"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "injection-theme",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "THEME_ID",
+      "expected_kind": "CONTRACT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "CONTRACT",
+          "code": "THEME_ID",
+          "path": "day\"] { body",
+          "message": "Theme IDs must map safely and injectively to generated selectors"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "three-segment-collision",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "CSS_NAME_COLLISION",
+      "expected_kind": "CONTRACT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "CONTRACT",
+          "code": "CSS_NAME_COLLISION",
+          "path": "a.b-c",
+          "message": "--sensor-a-b-c also represents a-b.c",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "empty-group-token-conflict",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "MERGE_KIND",
+      "expected_kind": "CONTRACT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "CONTRACT",
+          "code": "MERGE_KIND",
+          "path": "empty",
+          "message": "Token/group replacement or partial-token patch is unsupported",
+          "theme": "night"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "token-empty-group-conflict",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "MERGE_KIND",
+      "expected_kind": "CONTRACT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "CONTRACT",
+          "code": "MERGE_KIND",
+          "path": "reading",
+          "message": "Token/group replacement or partial-token patch is unsupported",
+          "theme": "night"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "inherited-role-control",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day",
+        "night"
+      ],
+      "ok": true
+    },
+    {
+      "id": "late-theme-required-type-change",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "ROLE_TYPE",
+      "expected_kind": "CONTRACT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "CONTRACT",
+          "code": "ROLE_TYPE",
+          "path": "reading",
+          "message": "Required role has an incompatible effective type",
+          "theme": "zbad"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "missing-required-role",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "ROLE_MISSING",
+      "expected_kind": "CONTRACT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "CONTRACT",
+          "code": "ROLE_MISSING",
+          "path": "absent",
+          "message": "Required role missing after theme merge",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "partial-measure-patch",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "MEASURE_SHAPE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "MEASURE_SHAPE",
+          "path": "reading",
+          "message": "Expected exactly {value, unit}, including unit at zero",
+          "theme": "night"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "unused-broken-token",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "REFERENCE_MISSING",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "REFERENCE_MISSING",
+          "path": "absent",
+          "message": "Reference must target a complete existing token",
+          "chain": [
+            "unused",
+            "absent"
+          ],
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "group-target",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "REFERENCE_MISSING",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "REFERENCE_MISSING",
+          "path": "g",
+          "message": "Reference must target a complete existing token",
+          "chain": [
+            "reading",
+            "g"
+          ],
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "self-cycle",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "REFERENCE_CYCLE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "REFERENCE_CYCLE",
+          "path": "reading",
+          "message": "Cyclic token reference",
+          "chain": [
+            "reading",
+            "reading"
+          ],
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "property-brace-reference",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "ALIAS_SYNTAX",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "ALIAS_SYNTAX",
+          "path": "reading",
+          "message": "Expected an exact whole-token {path} alias",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "group-depth-31",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "GROUP_DEPTH",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "GROUP_DEPTH",
+          "path": "deep.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.last",
+          "message": "Group depth limit: 32",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "group-depth-32",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "GROUP_DEPTH",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "GROUP_DEPTH",
+          "path": "deep.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g.g",
+          "message": "Group depth limit: 32",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "group-depth-1200",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "JSON_DEPTH",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "JSON_DEPTH",
+          "path": "<root>/base/deep/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g",
+          "message": "JSON nesting limit: 64"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "group-depth-positive",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "alias-node-count-256",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "alias-node-count-257",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "ALIAS_DEPTH",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "ALIAS_DEPTH",
+          "path": "n0256",
+          "message": "Alias depth limit: 256",
+          "chain": [
+            "n0000",
+            "n0001",
+            "n0002",
+            "n0003",
+            "n0004",
+            "n0005",
+            "n0006",
+            "n0007",
+            "n0008",
+            "n0009",
+            "n0010",
+            "n0011",
+            "n0012",
+            "n0013",
+            "n0014",
+            "n0015",
+            "n0016",
+            "n0017",
+            "n0018",
+            "n0019",
+            "n0020",
+            "n0021",
+            "n0022",
+            "n0023",
+            "n0024",
+            "n0025",
+            "n0026",
+            "n0027",
+            "n0028",
+            "n0029",
+            "n0030",
+            "n0031",
+            "n0032",
+            "n0033",
+            "n0034",
+            "n0035",
+            "n0036",
+            "n0037",
+            "n0038",
+            "n0039",
+            "n0040",
+            "n0041",
+            "n0042",
+            "n0043",
+            "n0044",
+            "n0045",
+            "n0046",
+            "n0047",
+            "n0048",
+            "n0049",
+            "n0050",
+            "n0051",
+            "n0052",
+            "n0053",
+            "n0054",
+            "n0055",
+            "n0056",
+            "n0057",
+            "n0058",
+            "n0059",
+            "n0060",
+            "n0061",
+            "n0062",
+            "n0063",
+            "n0064",
+            "n0065",
+            "n0066",
+            "n0067",
+            "n0068",
+            "n0069",
+            "n0070",
+            "n0071",
+            "n0072",
+            "n0073",
+            "n0074",
+            "n0075",
+            "n0076",
+            "n0077",
+            "n0078",
+            "n0079",
+            "n0080",
+            "n0081",
+            "n0082",
+            "n0083",
+            "n0084",
+            "n0085",
+            "n0086",
+            "n0087",
+            "n0088",
+            "n0089",
+            "n0090",
+            "n0091",
+            "n0092",
+            "n0093",
+            "n0094",
+            "n0095",
+            "n0096",
+            "n0097",
+            "n0098",
+            "n0099",
+            "n0100",
+            "n0101",
+            "n0102",
+            "n0103",
+            "n0104",
+            "n0105",
+            "n0106",
+            "n0107",
+            "n0108",
+            "n0109",
+            "n0110",
+            "n0111",
+            "n0112",
+            "n0113",
+            "n0114",
+            "n0115",
+            "n0116",
+            "n0117",
+            "n0118",
+            "n0119",
+            "n0120",
+            "n0121",
+            "n0122",
+            "n0123",
+            "n0124",
+            "n0125",
+            "n0126",
+            "n0127",
+            "n0128",
+            "n0129",
+            "n0130",
+            "n0131",
+            "n0132",
+            "n0133",
+            "n0134",
+            "n0135",
+            "n0136",
+            "n0137",
+            "n0138",
+            "n0139",
+            "n0140",
+            "n0141",
+            "n0142",
+            "n0143",
+            "n0144",
+            "n0145",
+            "n0146",
+            "n0147",
+            "n0148",
+            "n0149",
+            "n0150",
+            "n0151",
+            "n0152",
+            "n0153",
+            "n0154",
+            "n0155",
+            "n0156",
+            "n0157",
+            "n0158",
+            "n0159",
+            "n0160",
+            "n0161",
+            "n0162",
+            "n0163",
+            "n0164",
+            "n0165",
+            "n0166",
+            "n0167",
+            "n0168",
+            "n0169",
+            "n0170",
+            "n0171",
+            "n0172",
+            "n0173",
+            "n0174",
+            "n0175",
+            "n0176",
+            "n0177",
+            "n0178",
+            "n0179",
+            "n0180",
+            "n0181",
+            "n0182",
+            "n0183",
+            "n0184",
+            "n0185",
+            "n0186",
+            "n0187",
+            "n0188",
+            "n0189",
+            "n0190",
+            "n0191",
+            "n0192",
+            "n0193",
+            "n0194",
+            "n0195",
+            "n0196",
+            "n0197",
+            "n0198",
+            "n0199",
+            "n0200",
+            "n0201",
+            "n0202",
+            "n0203",
+            "n0204",
+            "n0205",
+            "n0206",
+            "n0207",
+            "n0208",
+            "n0209",
+            "n0210",
+            "n0211",
+            "n0212",
+            "n0213",
+            "n0214",
+            "n0215",
+            "n0216",
+            "n0217",
+            "n0218",
+            "n0219",
+            "n0220",
+            "n0221",
+            "n0222",
+            "n0223",
+            "n0224",
+            "n0225",
+            "n0226",
+            "n0227",
+            "n0228",
+            "n0229",
+            "n0230",
+            "n0231",
+            "n0232",
+            "n0233",
+            "n0234",
+            "n0235",
+            "n0236",
+            "n0237",
+            "n0238",
+            "n0239",
+            "n0240",
+            "n0241",
+            "n0242",
+            "n0243",
+            "n0244",
+            "n0245",
+            "n0246",
+            "n0247",
+            "n0248",
+            "n0249",
+            "n0250",
+            "n0251",
+            "n0252",
+            "n0253",
+            "n0254",
+            "n0255",
+            "n0256"
+          ],
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "token-count-10000",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "token-count-10001",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "TOKEN_COUNT",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "TOKEN_COUNT",
+          "path": "n10000",
+          "message": "Token limit: 10000",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "deep-malformed-value",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "JSON_DEPTH",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "JSON_DEPTH",
+          "path": "<root>/base/reading/$value/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g",
+          "message": "JSON nesting limit: 64"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "large-integer-serializer",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "INTEGER_SIZE",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "INTEGER_SIZE",
+          "path": "<root>/base/reading/$value",
+          "message": "Integer magnitude limit: 1024 bits"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "transfer-industrial-console",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "cli-syntax-invalid",
+      "interface": "cli",
+      "expected_returncode": 2,
+      "returncode": 2,
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "IO_OR_PARSE",
+            "code": "JSONDecodeError",
+            "message": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+          }
+        ],
+        "css": null
+      },
+      "stderr_tail": "",
+      "preserved_previous": true,
+      "input_unchanged": true,
+      "ok": true
+    },
+    {
+      "id": "cli-duplicate-key",
+      "interface": "cli",
+      "expected_returncode": 2,
+      "returncode": 2,
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "INVALID",
+            "code": "DUPLICATE_JSON_KEY",
+            "path": "a",
+            "message": "Duplicate JSON member would create an implicit overwrite"
+          }
+        ],
+        "css": null
+      },
+      "stderr_tail": "",
+      "preserved_previous": true,
+      "input_unchanged": true,
+      "ok": true
+    },
+    {
+      "id": "cli-non-json-constant",
+      "interface": "cli",
+      "expected_returncode": 2,
+      "returncode": 2,
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "INVALID",
+            "code": "JSON_NUMBER",
+            "path": "<root>",
+            "message": "Non-JSON numeric constant: NaN"
+          }
+        ],
+        "css": null
+      },
+      "stderr_tail": "",
+      "preserved_previous": true,
+      "input_unchanged": true,
+      "ok": true
+    },
+    {
+      "id": "cli-invalid-utf8",
+      "interface": "cli",
+      "expected_returncode": 2,
+      "returncode": 2,
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "IO_OR_PARSE",
+            "code": "UnicodeDecodeError",
+            "message": "'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
+          }
+        ],
+        "css": null
+      },
+      "stderr_tail": "",
+      "preserved_previous": true,
+      "input_unchanged": true,
+      "ok": true
+    },
+    {
+      "id": "cli-oversized-json-integer",
+      "interface": "cli",
+      "expected_returncode": 2,
+      "returncode": 2,
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "LIMIT",
+            "code": "INTEGER_SIZE",
+            "path": "<root>",
+            "message": "Integer magnitude limit: 1024 bits"
+          }
+        ],
+        "css": null
+      },
+      "stderr_tail": "",
+      "preserved_previous": true,
+      "input_unchanged": true,
+      "ok": true
+    },
+    {
+      "id": "cli-deep-json",
+      "interface": "cli",
+      "expected_returncode": 1,
+      "returncode": 1,
+      "report": {
+        "status": "FAIL",
+        "scope": "bounded token graph, theme role and literal CSS serialization only",
+        "format": "C-token-subset/1",
+        "dtcg_conformance": "NOT_CLAIMED",
+        "limits": {
+          "group_depth": 32,
+          "tokens_per_theme": 10000,
+          "alias_depth": 256,
+          "json_depth": 64,
+          "json_nodes": 250000,
+          "integer_bits": 1024
+        },
+        "diagnostics": [
+          {
+            "kind": "LIMIT",
+            "code": "JSON_DEPTH",
+            "path": "<root>/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0",
+            "message": "JSON nesting limit: 64"
+          }
+        ],
+        "themes": {},
+        "css": null,
+        "visual": {
+          "rendered_contrast": "NOT_TESTED",
+          "forced_colors": "NOT_TESTED",
+          "nested_themes": "NOT_TESTED",
+          "browser_support": "NOT_TESTED",
+          "assistive_technology": "NOT_TESTED",
+          "wcag_conformance": "NOT_TESTED"
+        }
+      },
+      "stderr_tail": "",
+      "preserved_previous": true,
+      "input_unchanged": true,
+      "ok": true
+    },
+    {
+      "id": "cli-overflow-float",
+      "interface": "cli",
+      "expected_returncode": 1,
+      "returncode": 1,
+      "report": {
+        "status": "FAIL",
+        "scope": "bounded token graph, theme role and literal CSS serialization only",
+        "format": "C-token-subset/1",
+        "dtcg_conformance": "NOT_CLAIMED",
+        "limits": {
+          "group_depth": 32,
+          "tokens_per_theme": 10000,
+          "alias_depth": 256,
+          "json_depth": 64,
+          "json_nodes": 250000,
+          "integer_bits": 1024
+        },
+        "diagnostics": [
+          {
+            "kind": "INVALID",
+            "code": "NUMBER_VALUE",
+            "path": "reading",
+            "message": "Expected a finite JSON number, excluding boolean",
+            "theme": "day"
+          }
+        ],
+        "themes": {},
+        "css": null,
+        "visual": {
+          "rendered_contrast": "NOT_TESTED",
+          "forced_colors": "NOT_TESTED",
+          "nested_themes": "NOT_TESTED",
+          "browser_support": "NOT_TESTED",
+          "assistive_technology": "NOT_TESTED",
+          "wcag_conformance": "NOT_TESTED"
+        }
+      },
+      "stderr_tail": "",
+      "preserved_previous": true,
+      "input_unchanged": true,
+      "ok": true
+    },
+    {
+      "id": "cli-late-theme-failure",
+      "interface": "cli",
+      "expected_returncode": 1,
+      "returncode": 1,
+      "report": {
+        "status": "FAIL",
+        "scope": "bounded token graph, theme role and literal CSS serialization only",
+        "format": "C-token-subset/1",
+        "dtcg_conformance": "NOT_CLAIMED",
+        "limits": {
+          "group_depth": 32,
+          "tokens_per_theme": 10000,
+          "alias_depth": 256,
+          "json_depth": 64,
+          "json_nodes": 250000,
+          "integer_bits": 1024
+        },
+        "diagnostics": [
+          {
+            "kind": "INVALID",
+            "code": "NUMBER_VALUE",
+            "path": "reading",
+            "message": "Expected a finite JSON number, excluding boolean",
+            "theme": "zbad"
+          }
+        ],
+        "themes": {},
+        "css": null,
+        "visual": {
+          "rendered_contrast": "NOT_TESTED",
+          "forced_colors": "NOT_TESTED",
+          "nested_themes": "NOT_TESTED",
+          "browser_support": "NOT_TESTED",
+          "assistive_technology": "NOT_TESTED",
+          "wcag_conformance": "NOT_TESTED"
+        }
+      },
+      "stderr_tail": "",
+      "preserved_previous": true,
+      "input_unchanged": true,
+      "ok": true
+    },
+    {
+      "id": "cli-normal-success",
+      "interface": "cli",
+      "expected_returncode": 0,
+      "returncode": 0,
+      "report": {
+        "status": "PASS_SUPPORTED_SCOPE",
+        "scope": "bounded token graph, theme role and literal CSS serialization only",
+        "format": "C-token-subset/1",
+        "dtcg_conformance": "NOT_CLAIMED",
+        "limits": {
+          "group_depth": 32,
+          "tokens_per_theme": 10000,
+          "alias_depth": 256,
+          "json_depth": 64,
+          "json_nodes": 250000,
+          "integer_bits": 1024
+        },
+        "diagnostics": [],
+        "themes": {
+          "day": {
+            "tokens": {
+              "reading": {
+                "type": "number",
+                "value": 1,
+                "declared_type": "number",
+                "inherited_type": null,
+                "alias_target": null,
+                "chain": [
+                  "reading"
+                ],
+                "definition_origin": "base",
+                "value_origin": "base",
+                "css_name": "--sensor-reading"
+              }
+            },
+            "roles": {
+              "reading": {
+                "type": "number",
+                "value": 1,
+                "declared_type": "number",
+                "inherited_type": null,
+                "alias_target": null,
+                "chain": [
+                  "reading"
+                ],
+                "definition_origin": "base",
+                "value_origin": "base",
+                "css_name": "--sensor-reading"
+              }
+            }
+          }
+        },
+        "css": "/* C-token-subset/1: resolved literals; rendering unverified. */\n:root,\n[data-theme=\"day\"] {\n  --sensor-reading: 1;\n}\n",
+        "visual": {
+          "rendered_contrast": "NOT_TESTED",
+          "forced_colors": "NOT_TESTED",
+          "nested_themes": "NOT_TESTED",
+          "browser_support": "NOT_TESTED",
+          "assistive_technology": "NOT_TESTED",
+          "wcag_conformance": "NOT_TESTED"
+        }
+      },
+      "stderr_tail": "",
+      "preserved_previous": false,
+      "input_unchanged": true,
+      "ok": true
+    },
+    {
+      "id": "cli-output-io-failure",
+      "interface": "cli",
+      "returncode": 2,
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "IO_OR_PARSE",
+            "code": "FileNotFoundError",
+            "message": "[Errno 2] No such file or directory: '/tmp/tmp3yb2ysbq/absent/tmppz0jgu6v'"
+          }
+        ],
+        "css": null
+      },
+      "ok": true
+    },
+    {
+      "id": "resource-json-depth-63",
+      "interface": "resources",
+      "expected_code": null,
+      "status": "RESOURCE_ACCEPT",
+      "ok": true
+    },
+    {
+      "id": "build-json-depth-63",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NUMBER_VALUE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "NUMBER_VALUE",
+          "path": "reading",
+          "message": "Expected a finite JSON number, excluding boolean",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "resource-json-depth-64",
+      "interface": "resources",
+      "expected_code": null,
+      "status": "RESOURCE_ACCEPT",
+      "ok": true
+    },
+    {
+      "id": "build-json-depth-64",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "NUMBER_VALUE",
+      "expected_kind": "INVALID",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "INVALID",
+          "code": "NUMBER_VALUE",
+          "path": "reading",
+          "message": "Expected a finite JSON number, excluding boolean",
+          "theme": "day"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "resource-json-depth-65",
+      "interface": "resources",
+      "expected_code": "JSON_DEPTH",
+      "status": "RESOURCE_REJECT",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "JSON_DEPTH",
+          "path": "<root>/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0",
+          "message": "JSON nesting limit: 64"
+        }
+      ],
+      "ok": true
+    },
+    {
+      "id": "build-json-depth-65",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "JSON_DEPTH",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "JSON_DEPTH",
+          "path": "<root>/base/reading/$value/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0",
+          "message": "JSON nesting limit: 64"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "resolve-deep-1200",
+      "interface": "resolve",
+      "expected_code": "JSON_DEPTH",
+      "status": "REJECTED",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "JSON_DEPTH",
+          "path": "<root>/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g/g",
+          "message": "JSON nesting limit: 64"
+        }
+      ],
+      "ok": true
+    },
+    {
+      "id": "resource-json-nodes-249999",
+      "interface": "resources",
+      "expected_code": null,
+      "status": "RESOURCE_ACCEPT",
+      "ok": true
+    },
+    {
+      "id": "resource-json-nodes-250000",
+      "interface": "resources",
+      "expected_code": null,
+      "status": "RESOURCE_ACCEPT",
+      "ok": true
+    },
+    {
+      "id": "resource-json-nodes-250001",
+      "interface": "resources",
+      "expected_code": "JSON_NODES",
+      "status": "RESOURCE_REJECT",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "JSON_NODES",
+          "path": "<root>/0",
+          "message": "JSON node limit: 250000"
+        }
+      ],
+      "ok": true
+    },
+    {
+      "id": "build-json-nodes-250000",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "build-json-nodes-250001",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "JSON_NODES",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "JSON_NODES",
+          "path": "<root>/format",
+          "message": "JSON node limit: 250000"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "integer-1024-bits-number-1",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "integer-1025-bits-number-1",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "INTEGER_SIZE",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "INTEGER_SIZE",
+          "path": "<root>/base/reading/$value",
+          "message": "Integer magnitude limit: 1024 bits"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "integer-1024-bits-dimension-1",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "integer-1025-bits-dimension-1",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "INTEGER_SIZE",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "INTEGER_SIZE",
+          "path": "<root>/base/reading/$value/value",
+          "message": "Integer magnitude limit: 1024 bits"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "integer-1024-bits-duration-1",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "integer-1025-bits-duration-1",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "INTEGER_SIZE",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "INTEGER_SIZE",
+          "path": "<root>/base/reading/$value/value",
+          "message": "Integer magnitude limit: 1024 bits"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "resolve-integer-1024-1",
+      "interface": "resolve",
+      "expected_code": null,
+      "status": "RESOLVED",
+      "token_count": 1,
+      "ok": true
+    },
+    {
+      "id": "resolve-integer-1025-1",
+      "interface": "resolve",
+      "expected_code": "INTEGER_SIZE",
+      "status": "REJECTED",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "INTEGER_SIZE",
+          "path": "<root>/reading/$value",
+          "message": "Integer magnitude limit: 1024 bits"
+        }
+      ],
+      "ok": true
+    },
+    {
+      "id": "integer-1024-bits-number--1",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "integer-1025-bits-number--1",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "INTEGER_SIZE",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "INTEGER_SIZE",
+          "path": "<root>/base/reading/$value",
+          "message": "Integer magnitude limit: 1024 bits"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "integer-1024-bits-dimension--1",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "integer-1025-bits-dimension--1",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "INTEGER_SIZE",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "INTEGER_SIZE",
+          "path": "<root>/base/reading/$value/value",
+          "message": "Integer magnitude limit: 1024 bits"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "integer-1024-bits-duration--1",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "integer-1025-bits-duration--1",
+      "interface": "build",
+      "expected_status": "FAIL",
+      "expected_code": "INTEGER_SIZE",
+      "expected_kind": "LIMIT",
+      "status": "FAIL",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "INTEGER_SIZE",
+          "path": "<root>/base/reading/$value/value",
+          "message": "Integer magnitude limit: 1024 bits"
+        }
+      ],
+      "css_present": false,
+      "theme_names": [],
+      "ok": true
+    },
+    {
+      "id": "resolve-integer-1024--1",
+      "interface": "resolve",
+      "expected_code": null,
+      "status": "RESOLVED",
+      "token_count": 1,
+      "ok": true
+    },
+    {
+      "id": "resolve-integer-1025--1",
+      "interface": "resolve",
+      "expected_code": "INTEGER_SIZE",
+      "status": "REJECTED",
+      "diagnostics": [
+        {
+          "kind": "LIMIT",
+          "code": "INTEGER_SIZE",
+          "path": "<root>/reading/$value",
+          "message": "Integer magnitude limit: 1024 bits"
+        }
+      ],
+      "ok": true
+    },
+    {
+      "id": "finite-float-1.7976931348623157e+308",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "finite-float--1.7976931348623157e+308",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "finite-float-5e-324",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "finite-float--5e-324",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "finite-float--0.0",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "day"
+      ],
+      "ok": true
+    },
+    {
+      "id": "cli-integer-1024-1",
+      "interface": "cli",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "expected_code": null,
+      "expected_kind": null,
+      "report": {
+        "status": "PASS_SUPPORTED_SCOPE",
+        "scope": "bounded token graph, theme role and literal CSS serialization only",
+        "format": "C-token-subset/1",
+        "dtcg_conformance": "NOT_CLAIMED",
+        "limits": {
+          "group_depth": 32,
+          "tokens_per_theme": 10000,
+          "alias_depth": 256,
+          "json_depth": 64,
+          "json_nodes": 250000,
+          "integer_bits": 1024
+        },
+        "diagnostics": [],
+        "themes": {
+          "day": {
+            "tokens": {
+              "reading": {
+                "type": "number",
+                "value": 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137215,
+                "declared_type": "number",
+                "inherited_type": null,
+                "alias_target": null,
+                "chain": [
+                  "reading"
+                ],
+                "definition_origin": "base",
+                "value_origin": "base",
+                "css_name": "--sensor-reading"
+              }
+            },
+            "roles": {
+              "reading": {
+                "type": "number",
+                "value": 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137215,
+                "declared_type": "number",
+                "inherited_type": null,
+                "alias_target": null,
+                "chain": [
+                  "reading"
+                ],
+                "definition_origin": "base",
+                "value_origin": "base",
+                "css_name": "--sensor-reading"
+              }
+            }
+          }
+        },
+        "css": "/* C-token-subset/1: resolved literals; rendering unverified. */\n:root,\n[data-theme=\"day\"] {\n  --sensor-reading: 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137215;\n}\n",
+        "visual": {
+          "rendered_contrast": "NOT_TESTED",
+          "forced_colors": "NOT_TESTED",
+          "nested_themes": "NOT_TESTED",
+          "browser_support": "NOT_TESTED",
+          "assistive_technology": "NOT_TESTED",
+          "wcag_conformance": "NOT_TESTED"
+        }
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": false,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-integer-1025-1",
+      "interface": "cli",
+      "returncode": 2,
+      "expected_returncode": 2,
+      "expected_code": "INTEGER_SIZE",
+      "expected_kind": "LIMIT",
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "LIMIT",
+            "code": "INTEGER_SIZE",
+            "path": "<root>",
+            "message": "Integer magnitude limit: 1024 bits"
+          }
+        ],
+        "css": null
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": true,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-5001-digits-1",
+      "interface": "cli",
+      "returncode": 2,
+      "expected_returncode": 2,
+      "expected_code": "INTEGER_SIZE",
+      "expected_kind": "LIMIT",
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "LIMIT",
+            "code": "INTEGER_SIZE",
+            "path": "<root>",
+            "message": "Integer magnitude limit: 1024 bits"
+          }
+        ],
+        "css": null
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": true,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-integer-1024--1",
+      "interface": "cli",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "expected_code": null,
+      "expected_kind": null,
+      "report": {
+        "status": "PASS_SUPPORTED_SCOPE",
+        "scope": "bounded token graph, theme role and literal CSS serialization only",
+        "format": "C-token-subset/1",
+        "dtcg_conformance": "NOT_CLAIMED",
+        "limits": {
+          "group_depth": 32,
+          "tokens_per_theme": 10000,
+          "alias_depth": 256,
+          "json_depth": 64,
+          "json_nodes": 250000,
+          "integer_bits": 1024
+        },
+        "diagnostics": [],
+        "themes": {
+          "day": {
+            "tokens": {
+              "reading": {
+                "type": "number",
+                "value": -179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137215,
+                "declared_type": "number",
+                "inherited_type": null,
+                "alias_target": null,
+                "chain": [
+                  "reading"
+                ],
+                "definition_origin": "base",
+                "value_origin": "base",
+                "css_name": "--sensor-reading"
+              }
+            },
+            "roles": {
+              "reading": {
+                "type": "number",
+                "value": -179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137215,
+                "declared_type": "number",
+                "inherited_type": null,
+                "alias_target": null,
+                "chain": [
+                  "reading"
+                ],
+                "definition_origin": "base",
+                "value_origin": "base",
+                "css_name": "--sensor-reading"
+              }
+            }
+          }
+        },
+        "css": "/* C-token-subset/1: resolved literals; rendering unverified. */\n:root,\n[data-theme=\"day\"] {\n  --sensor-reading: -179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137215;\n}\n",
+        "visual": {
+          "rendered_contrast": "NOT_TESTED",
+          "forced_colors": "NOT_TESTED",
+          "nested_themes": "NOT_TESTED",
+          "browser_support": "NOT_TESTED",
+          "assistive_technology": "NOT_TESTED",
+          "wcag_conformance": "NOT_TESTED"
+        }
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": false,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-integer-1025--1",
+      "interface": "cli",
+      "returncode": 2,
+      "expected_returncode": 2,
+      "expected_code": "INTEGER_SIZE",
+      "expected_kind": "LIMIT",
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "LIMIT",
+            "code": "INTEGER_SIZE",
+            "path": "<root>",
+            "message": "Integer magnitude limit: 1024 bits"
+          }
+        ],
+        "css": null
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": true,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-5001-digits--1",
+      "interface": "cli",
+      "returncode": 2,
+      "expected_returncode": 2,
+      "expected_code": "INTEGER_SIZE",
+      "expected_kind": "LIMIT",
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "LIMIT",
+            "code": "INTEGER_SIZE",
+            "path": "<root>",
+            "message": "Integer magnitude limit: 1024 bits"
+          }
+        ],
+        "css": null
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": true,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-json-depth-64",
+      "interface": "cli",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "expected_code": "NUMBER_VALUE",
+      "expected_kind": "INVALID",
+      "report": {
+        "status": "FAIL",
+        "scope": "bounded token graph, theme role and literal CSS serialization only",
+        "format": "C-token-subset/1",
+        "dtcg_conformance": "NOT_CLAIMED",
+        "limits": {
+          "group_depth": 32,
+          "tokens_per_theme": 10000,
+          "alias_depth": 256,
+          "json_depth": 64,
+          "json_nodes": 250000,
+          "integer_bits": 1024
+        },
+        "diagnostics": [
+          {
+            "kind": "INVALID",
+            "code": "NUMBER_VALUE",
+            "path": "reading",
+            "message": "Expected a finite JSON number, excluding boolean",
+            "theme": "day"
+          }
+        ],
+        "themes": {},
+        "css": null,
+        "visual": {
+          "rendered_contrast": "NOT_TESTED",
+          "forced_colors": "NOT_TESTED",
+          "nested_themes": "NOT_TESTED",
+          "browser_support": "NOT_TESTED",
+          "assistive_technology": "NOT_TESTED",
+          "wcag_conformance": "NOT_TESTED"
+        }
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": true,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-json-depth-65",
+      "interface": "cli",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "expected_code": "JSON_DEPTH",
+      "expected_kind": "LIMIT",
+      "report": {
+        "status": "FAIL",
+        "scope": "bounded token graph, theme role and literal CSS serialization only",
+        "format": "C-token-subset/1",
+        "dtcg_conformance": "NOT_CLAIMED",
+        "limits": {
+          "group_depth": 32,
+          "tokens_per_theme": 10000,
+          "alias_depth": 256,
+          "json_depth": 64,
+          "json_nodes": 250000,
+          "integer_bits": 1024
+        },
+        "diagnostics": [
+          {
+            "kind": "LIMIT",
+            "code": "JSON_DEPTH",
+            "path": "<root>/base/reading/$value/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0",
+            "message": "JSON nesting limit: 64"
+          }
+        ],
+        "themes": {},
+        "css": null,
+        "visual": {
+          "rendered_contrast": "NOT_TESTED",
+          "forced_colors": "NOT_TESTED",
+          "nested_themes": "NOT_TESTED",
+          "browser_support": "NOT_TESTED",
+          "assistive_technology": "NOT_TESTED",
+          "wcag_conformance": "NOT_TESTED"
+        }
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": true,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-json-nodes-250000",
+      "interface": "cli",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "expected_code": null,
+      "expected_kind": null,
+      "report": {
+        "status": "PASS_SUPPORTED_SCOPE",
+        "scope": "bounded token graph, theme role and literal CSS serialization only",
+        "format": "C-token-subset/1",
+        "dtcg_conformance": "NOT_CLAIMED",
+        "limits": {
+          "group_depth": 32,
+          "tokens_per_theme": 10000,
+          "alias_depth": 256,
+          "json_depth": 64,
+          "json_nodes": 250000,
+          "integer_bits": 1024
+        },
+        "diagnostics": [],
+        "themes": {
+          "day": {
+            "tokens": {
+              "reading": {
+                "type": "number",
+                "value": 1,
+                "declared_type": "number",
+                "inherited_type": null,
+                "alias_target": null,
+                "chain": [
+                  "reading"
+                ],
+                "definition_origin": "base",
+                "value_origin": "base",
+                "css_name": "--sensor-reading"
+              }
+            },
+            "roles": {
+              "reading": {
+                "type": "number",
+                "value": 1,
+                "declared_type": "number",
+                "inherited_type": null,
+                "alias_target": null,
+                "chain": [
+                  "reading"
+                ],
+                "definition_origin": "base",
+                "value_origin": "base",
+                "css_name": "--sensor-reading"
+              }
+            }
+          }
+        },
+        "css": "/* C-token-subset/1: resolved literals; rendering unverified. */\n:root,\n[data-theme=\"day\"] {\n  --sensor-reading: 1;\n}\n",
+        "visual": {
+          "rendered_contrast": "NOT_TESTED",
+          "forced_colors": "NOT_TESTED",
+          "nested_themes": "NOT_TESTED",
+          "browser_support": "NOT_TESTED",
+          "assistive_technology": "NOT_TESTED",
+          "wcag_conformance": "NOT_TESTED"
+        }
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": false,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-json-nodes-250001",
+      "interface": "cli",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "expected_code": "JSON_NODES",
+      "expected_kind": "LIMIT",
+      "report": {
+        "status": "FAIL",
+        "scope": "bounded token graph, theme role and literal CSS serialization only",
+        "format": "C-token-subset/1",
+        "dtcg_conformance": "NOT_CLAIMED",
+        "limits": {
+          "group_depth": 32,
+          "tokens_per_theme": 10000,
+          "alias_depth": 256,
+          "json_depth": 64,
+          "json_nodes": 250000,
+          "integer_bits": 1024
+        },
+        "diagnostics": [
+          {
+            "kind": "LIMIT",
+            "code": "JSON_NODES",
+            "path": "<root>/format",
+            "message": "JSON node limit: 250000"
+          }
+        ],
+        "themes": {},
+        "css": null,
+        "visual": {
+          "rendered_contrast": "NOT_TESTED",
+          "forced_colors": "NOT_TESTED",
+          "nested_themes": "NOT_TESTED",
+          "browser_support": "NOT_TESTED",
+          "assistive_technology": "NOT_TESTED",
+          "wcag_conformance": "NOT_TESTED"
+        }
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": true,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-parser-recursion",
+      "interface": "cli",
+      "returncode": 2,
+      "expected_returncode": 2,
+      "expected_code": "RecursionError",
+      "expected_kind": "IO_OR_PARSE",
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "IO_OR_PARSE",
+            "code": "RecursionError",
+            "message": "maximum recursion depth exceeded while decoding a JSON array from a unicode string"
+          }
+        ],
+        "css": null
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": true,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-non-json-positive-infinity",
+      "interface": "cli",
+      "returncode": 2,
+      "expected_returncode": 2,
+      "expected_code": "JSON_NUMBER",
+      "expected_kind": "INVALID",
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "INVALID",
+            "code": "JSON_NUMBER",
+            "path": "<root>",
+            "message": "Non-JSON numeric constant: Infinity"
+          }
+        ],
+        "css": null
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": true,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-non-json-negative-infinity",
+      "interface": "cli",
+      "returncode": 2,
+      "expected_returncode": 2,
+      "expected_code": "JSON_NUMBER",
+      "expected_kind": "INVALID",
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "INVALID",
+            "code": "JSON_NUMBER",
+            "path": "<root>",
+            "message": "Non-JSON numeric constant: -Infinity"
+          }
+        ],
+        "css": null
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": true,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-utf8-truncated",
+      "interface": "cli",
+      "returncode": 2,
+      "expected_returncode": 2,
+      "expected_code": "UnicodeDecodeError",
+      "expected_kind": "IO_OR_PARSE",
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "IO_OR_PARSE",
+            "code": "UnicodeDecodeError",
+            "message": "'utf-8' codec can't decode bytes in position 6-7: invalid continuation byte"
+          }
+        ],
+        "css": null
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": true,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-integer-leading-zero",
+      "interface": "cli",
+      "returncode": 2,
+      "expected_returncode": 2,
+      "expected_code": "JSONDecodeError",
+      "expected_kind": "IO_OR_PARSE",
+      "report": {
+        "status": "ERROR_INPUT_OR_OUTPUT",
+        "diagnostics": [
+          {
+            "kind": "IO_OR_PARSE",
+            "code": "JSONDecodeError",
+            "message": "Expecting ',' delimiter: line 1 column 7 (char 6)"
+          }
+        ],
+        "css": null
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": true,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-missing-file-control",
+      "interface": "cli",
+      "returncode": 1,
+      "expected_returncode": 1,
+      "expected_code": "CONFIG_SHAPE",
+      "expected_kind": "CONTRACT",
+      "report": {
+        "status": "FAIL",
+        "scope": "bounded token graph, theme role and literal CSS serialization only",
+        "format": "C-token-subset/1",
+        "dtcg_conformance": "NOT_CLAIMED",
+        "limits": {
+          "group_depth": 32,
+          "tokens_per_theme": 10000,
+          "alias_depth": 256,
+          "json_depth": 64,
+          "json_nodes": 250000,
+          "integer_bits": 1024
+        },
+        "diagnostics": [
+          {
+            "kind": "CONTRACT",
+            "code": "CONFIG_SHAPE",
+            "path": "<root>",
+            "message": "Required wrapper fields: ['base', 'default_theme', 'format', 'prefix', 'roles', 'themes']"
+          }
+        ],
+        "themes": {},
+        "css": null,
+        "visual": {
+          "rendered_contrast": "NOT_TESTED",
+          "forced_colors": "NOT_TESTED",
+          "nested_themes": "NOT_TESTED",
+          "browser_support": "NOT_TESTED",
+          "assistive_technology": "NOT_TESTED",
+          "wcag_conformance": "NOT_TESTED"
+        }
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": true,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-float-maximum",
+      "interface": "cli",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "expected_code": null,
+      "expected_kind": null,
+      "report": {
+        "status": "PASS_SUPPORTED_SCOPE",
+        "scope": "bounded token graph, theme role and literal CSS serialization only",
+        "format": "C-token-subset/1",
+        "dtcg_conformance": "NOT_CLAIMED",
+        "limits": {
+          "group_depth": 32,
+          "tokens_per_theme": 10000,
+          "alias_depth": 256,
+          "json_depth": 64,
+          "json_nodes": 250000,
+          "integer_bits": 1024
+        },
+        "diagnostics": [],
+        "themes": {
+          "day": {
+            "tokens": {
+              "reading": {
+                "type": "number",
+                "value": 1.7976931348623157e+308,
+                "declared_type": "number",
+                "inherited_type": null,
+                "alias_target": null,
+                "chain": [
+                  "reading"
+                ],
+                "definition_origin": "base",
+                "value_origin": "base",
+                "css_name": "--sensor-reading"
+              }
+            },
+            "roles": {
+              "reading": {
+                "type": "number",
+                "value": 1.7976931348623157e+308,
+                "declared_type": "number",
+                "inherited_type": null,
+                "alias_target": null,
+                "chain": [
+                  "reading"
+                ],
+                "definition_origin": "base",
+                "value_origin": "base",
+                "css_name": "--sensor-reading"
+              }
+            }
+          }
+        },
+        "css": "/* C-token-subset/1: resolved literals; rendering unverified. */\n:root,\n[data-theme=\"day\"] {\n  --sensor-reading: 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368;\n}\n",
+        "visual": {
+          "rendered_contrast": "NOT_TESTED",
+          "forced_colors": "NOT_TESTED",
+          "nested_themes": "NOT_TESTED",
+          "browser_support": "NOT_TESTED",
+          "assistive_technology": "NOT_TESTED",
+          "wcag_conformance": "NOT_TESTED"
+        }
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": false,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "cli-float-minimum-subnormal",
+      "interface": "cli",
+      "returncode": 0,
+      "expected_returncode": 0,
+      "expected_code": null,
+      "expected_kind": null,
+      "report": {
+        "status": "PASS_SUPPORTED_SCOPE",
+        "scope": "bounded token graph, theme role and literal CSS serialization only",
+        "format": "C-token-subset/1",
+        "dtcg_conformance": "NOT_CLAIMED",
+        "limits": {
+          "group_depth": 32,
+          "tokens_per_theme": 10000,
+          "alias_depth": 256,
+          "json_depth": 64,
+          "json_nodes": 250000,
+          "integer_bits": 1024
+        },
+        "diagnostics": [],
+        "themes": {
+          "day": {
+            "tokens": {
+              "reading": {
+                "type": "number",
+                "value": 5e-324,
+                "declared_type": "number",
+                "inherited_type": null,
+                "alias_target": null,
+                "chain": [
+                  "reading"
+                ],
+                "definition_origin": "base",
+                "value_origin": "base",
+                "css_name": "--sensor-reading"
+              }
+            },
+            "roles": {
+              "reading": {
+                "type": "number",
+                "value": 5e-324,
+                "declared_type": "number",
+                "inherited_type": null,
+                "alias_target": null,
+                "chain": [
+                  "reading"
+                ],
+                "definition_origin": "base",
+                "value_origin": "base",
+                "css_name": "--sensor-reading"
+              }
+            }
+          }
+        },
+        "css": "/* C-token-subset/1: resolved literals; rendering unverified. */\n:root,\n[data-theme=\"day\"] {\n  --sensor-reading: 5e-324;\n}\n",
+        "visual": {
+          "rendered_contrast": "NOT_TESTED",
+          "forced_colors": "NOT_TESTED",
+          "nested_themes": "NOT_TESTED",
+          "browser_support": "NOT_TESTED",
+          "assistive_technology": "NOT_TESTED",
+          "wcag_conformance": "NOT_TESTED"
+        }
+      },
+      "input_unchanged": true,
+      "previous_css_preserved": false,
+      "stderr_tail": "",
+      "ok": true
+    },
+    {
+      "id": "booking-css-regression",
+      "interface": "build",
+      "expected_status": "PASS_SUPPORTED_SCOPE",
+      "expected_code": null,
+      "expected_kind": null,
+      "status": "PASS_SUPPORTED_SCOPE",
+      "diagnostics": [],
+      "css_present": true,
+      "theme_names": [
+        "dark",
+        "light"
+      ],
+      "ok": true
+    }
+  ]
+}

@@ -26,7 +26,7 @@
     "状態→DOM属性→公開実行経路のガード→検証参加→送信期待値の対応表"
   ],
   "dependencies": [
-    "C001-U1",
+    "C-UI-001",
     "art-direction/references/g-state-forms.md# g4-17, g6-12, g6-24, g7-05, g7-14, g7-25, g10-13"
   ],
   "exceptions": [
@@ -69,37 +69,45 @@
       "id": "HTML-DISABLED",
       "url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#enabling-and-disabling-form-controls:-the-disabled-attribute",
       "evidence_kind": "HTML Living Standard; normative",
-      "record": "researcher-1.json#/sources/2"
+      "record": "research/ui-engineering-design-system/round-01/researcher-1.json#/sources/2",
+      "registry_source_id": "C-S003"
     },
     {
       "id": "HTML-READONLY",
       "url": "https://html.spec.whatwg.org/multipage/input.html#attr-input-readonly",
       "evidence_kind": "HTML Living Standard; normative plus explanatory note",
-      "record": "researcher-1.json#/sources/3"
+      "record": "research/ui-engineering-design-system/round-01/researcher-1.json#/sources/3",
+      "registry_source_id": "C-S004"
     },
     {
       "id": "ARIA-HTML",
       "url": "https://www.w3.org/TR/2026/REC-html-aria-20260811/#requirements-for-use-of-aria-attributes-in-place-of-equivalent-html-attributes",
       "evidence_kind": "W3C Recommendation; normative",
-      "record": "researcher-1.json#/sources/4"
+      "record": "research/ui-engineering-design-system/round-01/researcher-1.json#/sources/4",
+      "registry_source_id": "C-S005"
     },
     {
       "id": "ARIA12",
       "url": "https://www.w3.org/TR/wai-aria-1.2/",
       "evidence_kind": "W3C Recommendation; normative",
-      "record": "researcher-1.json#/sources/5"
+      "record": "research/ui-engineering-design-system/round-01/researcher-1.json#/sources/5",
+      "registry_source_id": "C-S006"
     },
     {
-      "id": "R2-S1",
+      "id": "S1",
       "url": "https://design-system.service.gov.uk/components/button/#disabled-buttons",
       "evidence_kind": "non-normative implementation guidance or author-reported implementation incident",
-      "record": "researcher-2.json#/sources/0"
+      "record": "research/ui-engineering-design-system/round-01/researcher-2.json#/sources/0",
+      "registry_source_id": "C-S010",
+      "analysis_source_id": "R2-S1"
     },
     {
-      "id": "R2-S2",
+      "id": "S2",
       "url": "https://designsystem.digital.gov/components/button/#accessibility-guidance",
       "evidence_kind": "non-normative implementation guidance or author-reported implementation incident",
-      "record": "researcher-2.json#/sources/1"
+      "record": "research/ui-engineering-design-system/round-01/researcher-2.json#/sources/1",
+      "registry_source_id": "C-S011",
+      "analysis_source_id": "R2-S2"
     }
   ],
   "confidence": {
@@ -108,7 +116,7 @@
     "transfer": "unverified"
   },
   "status": "HOLD",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "analysis_unit": "C001-U2",
   "round": 1,
   "fact_rule_boundary": "decision_rules are original conditional engineering instructions; source_refs identify normative facts versus guidance",
@@ -133,6 +141,10 @@
       "at": "2026-11-23T09:10:05.613722+00:00",
       "status": "HOLD",
       "reason": "Browser and assistive-technology verification unavailable; do not convert pure checks into browser acceptance."
+    },
+    {
+      "event": "TRACEABILITY_NORMALIZATION",
+      "reason": "Resolve source record paths from repository root and map decomposition identities to registry identities; no behavioral rule change."
     }
   ]
 }

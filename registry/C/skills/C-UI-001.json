@@ -25,7 +25,7 @@
   "dependencies": [
     "art-direction/references/g-state-forms.md# g9-01, g9-03, g9-04",
     "art-direction/references/i-components.md# i-09, i-10",
-    "C001-U2（利用可否またはフォーム値があるとき）"
+    "C-UI-002（利用可否またはフォーム値があるとき）"
   ],
   "exceptions": [
     "現行HTMLのtype既定はAutoで、command/commandforと親selectの条件がある。USWDSの省略時submitという説明を全HTMLへ一般化しない。",
@@ -58,25 +58,30 @@
       "id": "HTML-ANCHOR",
       "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element",
       "evidence_kind": "HTML Living Standard; normative",
-      "record": "researcher-1.json#/sources/8"
+      "record": "research/ui-engineering-design-system/round-01/researcher-1.json#/sources/8",
+      "registry_source_id": "C-S009"
     },
     {
       "id": "HTML-BUTTON",
       "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element",
       "evidence_kind": "HTML Living Standard; normative",
-      "record": "researcher-1.json#/sources/7"
+      "record": "research/ui-engineering-design-system/round-01/researcher-1.json#/sources/7",
+      "registry_source_id": "C-S008"
     },
     {
       "id": "WCAG22",
       "url": "https://www.w3.org/TR/WCAG22/",
       "evidence_kind": "W3C Recommendation; normative SC; non-normative accompanying note",
-      "record": "researcher-1.json#/sources/6"
+      "record": "research/ui-engineering-design-system/round-01/researcher-1.json#/sources/6",
+      "registry_source_id": "C-S007"
     },
     {
-      "id": "R2-S2",
+      "id": "S2",
       "url": "https://designsystem.digital.gov/components/button/#accessibility-guidance",
       "evidence_kind": "non-normative implementation guidance or author-reported implementation incident",
-      "record": "researcher-2.json#/sources/1"
+      "record": "research/ui-engineering-design-system/round-01/researcher-2.json#/sources/1",
+      "registry_source_id": "C-S011",
+      "analysis_source_id": "R2-S2"
     }
   ],
   "confidence": {
@@ -85,7 +90,7 @@
     "transfer": "unverified"
   },
   "status": "HOLD",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "analysis_unit": "C001-U1",
   "round": 1,
   "fact_rule_boundary": "decision_rules are original conditional engineering instructions; source_refs identify normative facts versus guidance",
@@ -110,6 +115,10 @@
       "at": "2026-11-23T09:10:05.613722+00:00",
       "status": "HOLD",
       "reason": "Browser and assistive-technology verification unavailable; do not convert pure checks into browser acceptance."
+    },
+    {
+      "event": "TRACEABILITY_NORMALIZATION",
+      "reason": "Resolve source record paths from repository root and map decomposition identities to registry identities; no behavioral rule change."
     }
   ]
 }

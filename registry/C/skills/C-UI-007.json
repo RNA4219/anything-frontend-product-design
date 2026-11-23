@@ -1,0 +1,224 @@
+{
+  "skill_id": "C-UI-007",
+  "domain": "ui-engineering-design-system",
+  "trigger": "検証済みtoken/theme契約をCSS成果物へ変換する直前。",
+  "intent": "CSS名と出力先を検査し、決定的literalを出力する",
+  "required_inputs": [
+    "U1/U2の解決済み全テーマ",
+    "名前写像と数値/色/単位serializer",
+    "scopeと出力先の契約",
+    "必要なら明示的export対象"
+  ],
+  "decision_rules": [
+    "【製品policy】パスのソート、CSS名への写像、大小文字、許容名またはescaping、数値表現、単位、セレクター、改行、出力先を固定する。パスの同一性を保ったまま写像後の名前が一意か調べ、a-b.cとa.b-c等の衝突を元の両パス付きで拒否する。CSS名の制限による拒否をDTCG一般の名前不正としない。",
+    "【製品policy】今回を単一の決定的CSS bundleと生成済み[data-theme=\"id\"] selectorに固定するなら、テーマIDからscopeへの写像を一意にし、出力先は一つの集約jobだけが所有する。この構成ではテーマごとの複数file出力を対応範囲から外し、複数出力先の上書き検査を実装済みとは呼ばない。複数file方式を追加する場合にだけ正規化した出力先衝突を検査し、後のテーマによる無言上書きを拒否する。",
+    "【推論＋製品policy】限定実装はU1/U2で解決した値をliteralとして型別serializerで出力する。dimension/durationは数値と許可unitを一つの値にし、value/unitを別token化したりobjectを文字列化しない。sRGBの数値・alphaを保つcolor(srgb … / …)等、採用する表記を明示し、hexへの丸めや色空間変換を勝手に加えない。全対象の検査後にだけ出力を確定する。",
+    "【事実＋製品policy】reference-preserving出力・export filter・外部CSS変数は未実装なら拒否する。追加実装する場合は、残す全参照が宣言したbundleとscopeで閉じるかを確認し、参照先を出力から落としたら明示的なliteralへ解決するか失敗にする。raw var()/calc()/fallbackを解析しない検査器が、それらを安全と判定してはならない。",
+    "【事実＋推論】CSSのfallbackは存在する不適合な値を利用先の型へ修復する機構ではない。fallback内部もCSSの循環依存に関わり、custom propertyの解決と継承には順序がある。literal出力や静的DTCG解決をCSSカスケードのシミュレーターとして扱わない。",
+    "【製品policy】結果をgraph/type、theme role、name/destination、serializationの検査範囲として返す。rendered contrast、focus visibility、forced-colors、端末設定、入れ子theme、ブラウザ機能対応、WCAG適合は別の観測欄で未検証/HOLDとする。graph成功をvisual成功に変換しない。"
+  ],
+  "procedure": [
+    "【製品policy】パスのソート、CSS名への写像、大小文字、許容名またはescaping、数値表現、単位、セレクター、改行、出力先を固定する。パスの同一性を保ったまま写像後の名前が一意か調べ、a-b.cとa.b-c等の衝突を元の両パス付きで拒否する。CSS名の制限による拒否をDTCG一般の名前不正としない。",
+    "【製品policy】今回を単一の決定的CSS bundleと生成済み[data-theme=\"id\"] selectorに固定するなら、テーマIDからscopeへの写像を一意にし、出力先は一つの集約jobだけが所有する。この構成ではテーマごとの複数file出力を対応範囲から外し、複数出力先の上書き検査を実装済みとは呼ばない。複数file方式を追加する場合にだけ正規化した出力先衝突を検査し、後のテーマによる無言上書きを拒否する。",
+    "【推論＋製品policy】限定実装はU1/U2で解決した値をliteralとして型別serializerで出力する。dimension/durationは数値と許可unitを一つの値にし、value/unitを別token化したりobjectを文字列化しない。sRGBの数値・alphaを保つcolor(srgb … / …)等、採用する表記を明示し、hexへの丸めや色空間変換を勝手に加えない。全対象の検査後にだけ出力を確定する。",
+    "【事実＋製品policy】reference-preserving出力・export filter・外部CSS変数は未実装なら拒否する。追加実装する場合は、残す全参照が宣言したbundleとscopeで閉じるかを確認し、参照先を出力から落としたら明示的なliteralへ解決するか失敗にする。raw var()/calc()/fallbackを解析しない検査器が、それらを安全と判定してはならない。",
+    "【事実＋推論】CSSのfallbackは存在する不適合な値を利用先の型へ修復する機構ではない。fallback内部もCSSの循環依存に関わり、custom propertyの解決と継承には順序がある。literal出力や静的DTCG解決をCSSカスケードのシミュレーターとして扱わない。",
+    "【製品policy】結果をgraph/type、theme role、name/destination、serializationの検査範囲として返す。rendered contrast、focus visibility、forced-colors、端末設定、入れ子theme、ブラウザ機能対応、WCAG適合は別の観測欄で未検証/HOLDとする。graph成功をvisual成功に変換しない。"
+  ],
+  "expected_outputs": [
+    "決定的なCSS文字列または成果物",
+    "元パスと生成名/テーマ/出力先の対応表",
+    "検査済み範囲と未検証visual欄を分けた報告"
+  ],
+  "dependencies": [
+    "C-UI-005",
+    "C-UI-006（複数テーマの場合）",
+    "Art Directionの既存theme/contrast指針",
+    "Dの評価とリリース判定"
+  ],
+  "exceptions": [
+    "大小文字を維持すればAとaは異なるCSS custom propertyである。小文字化を選ぶ場合は写像後の衝突を拒否する。",
+    "literal方針では出力されない基底tokenを解決に使えても、壊れたvar参照は出力しない。",
+    "文字列が決定的であることは、全ブラウザの描画・利用先CSS文法の妥当性を保証しない。"
+  ],
+  "failure_modes": [
+    "ハイフン結合の衝突を後勝ちで隠す",
+    "テーマファイルの無言上書き",
+    "dimensionを分裂または二重unitにする",
+    "出力から消したpaletteへのvarを残す",
+    "fallbackが型不一致を直すと誤認",
+    "graph成功をWCAG合格として出力"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "name-collision",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "a-b.cとa.b-cが同名へ写像される入力を与える。",
+        "falsifier": "両者を一変数へ上書きする。"
+      },
+      {
+        "case": "permuted-json-key-order",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "値とoverride配列順を保ちJSONメンバーの順だけ変え、CSSバイトを比較する。",
+        "falsifier": "出力順や数値表記が変わる。"
+      },
+      {
+        "case": "dimension-object-split",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "{value:1,unit:px}の出力を検査する。",
+        "falsifier": "value/unit別変数、object文字列化、単位欠落・二重化。"
+      },
+      {
+        "case": "rendered-contrast-hold",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "graph正常例のレポートを読み、描画・forced-colors・WCAG欄を確認する。",
+        "falsifier": "未実行のvisual欄にpass/ACCEPTが立つ。"
+      }
+    ],
+    "status": "PASS_SUPPORTED_SCOPE",
+    "evidence": [
+      "campaigns/C/rounds/02/revision-execution.json",
+      "campaigns/C/rounds/02/recheck.json",
+      "campaigns/C/rounds/02/recheck-results.json",
+      "campaigns/C/rounds/02/comparison.json"
+    ],
+    "accepted_scope": "Injective generated names and theme IDs, deterministic single CSS bundle of typed literals, and CLI failure/output preservation; no rendering or multi-file publication validation.",
+    "visual": "NOT_TESTED"
+  },
+  "source_refs": [
+    {
+      "id": "C02-R1-S04",
+      "url": "https://www.w3.org/TR/2022/CR-css-variables-1-20220616/",
+      "evidence_kind": "W3C Candidate Recommendation Snapshot; not yet Recommendation in observed publication",
+      "record": "research/ui-engineering-design-system/round-02/researcher-1.json#/sources/3",
+      "sections": [
+        {
+          "heading": "2 Defining Custom Properties",
+          "web_lines": [
+            93,
+            131
+          ]
+        },
+        {
+          "heading": "2.3 Resolving Dependency Cycles",
+          "web_lines": [
+            273,
+            303
+          ]
+        },
+        {
+          "heading": "3 Using Cascading Variables: the var() notation",
+          "web_lines": [
+            442,
+            482
+          ]
+        },
+        {
+          "heading": "3.1 Invalid Variables",
+          "web_lines": [
+            537,
+            558
+          ]
+        }
+      ],
+      "registry_source_id": "C-S021"
+    },
+    {
+      "id": "R2-S1",
+      "url": "https://styledictionary.com/reference/utils/references/",
+      "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+      "record": "research/ui-engineering-design-system/round-02/researcher-2.json#/sources/0",
+      "version": "live documentation retrieved 2026-11-23; package version unpinned",
+      "section": "outputReferencesFilter; outputReferencesTransformed",
+      "registry_source_id": "C-S025"
+    },
+    {
+      "id": "R2-S3",
+      "url": "https://github.com/style-dictionary/style-dictionary/issues/1590",
+      "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+      "record": "research/ui-engineering-design-system/round-02/researcher-2.json#/sources/2",
+      "version": "issue opened 2025-11-04; comments inspected through 2026-10-16; current release support not verified",
+      "section": "Proposal; comments 2026-08-27, 2026-08-28, 2026-08-31, 2026-09-18",
+      "registry_source_id": "C-S027"
+    },
+    {
+      "id": "R2-S4",
+      "url": "https://github.com/style-dictionary/style-dictionary/issues/1398",
+      "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+      "record": "research/ui-engineering-design-system/round-02/researcher-2.json#/sources/3",
+      "version": "report opened 2024-11-25 for v4; page observed closed; fixed release not checked",
+      "section": "Description; collaborator comments 2024-11-26 and 2025-01-20",
+      "registry_source_id": "C-S028"
+    },
+    {
+      "id": "R2-S6",
+      "url": "https://www.w3.org/TR/2022/CR-css-variables-1-20220616/",
+      "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+      "record": "research/ui-engineering-design-system/round-02/researcher-2.json#/sources/5",
+      "version": "W3C Candidate Recommendation Snapshot 2022-06-16",
+      "section": "2.2 Guaranteed-Invalid Values; 2.3 Resolving Dependency Cycles; 3 var(); 3.1 Invalid Variables",
+      "registry_source_id": "C-S021"
+    },
+    {
+      "id": "R2-S7",
+      "url": "https://www.w3.org/TR/2025/CR-css-color-adjust-1-20251216/",
+      "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+      "record": "research/ui-engineering-design-system/round-02/researcher-2.json#/sources/6",
+      "version": "W3C Candidate Recommendation Snapshot 2025-12-16",
+      "section": "2 Preferred Color Schemes; 3.1 Properties Affected by Forced Colors Mode",
+      "registry_source_id": "C-S030"
+    },
+    {
+      "id": "R2-S8",
+      "url": "https://spectrum.adobe.com/page/color",
+      "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+      "record": "research/ui-engineering-design-system/round-02/researcher-2.json#/sources/7",
+      "version": "live documentation retrieved 2026-11-23",
+      "section": "Solid color background with black or white; Two-tone color pairing",
+      "registry_source_id": "C-S031"
+    }
+  ],
+  "confidence": {
+    "source": "primary specifications and tooling reports; partial reader captures",
+    "implementation": "Executed primary and separate-task adversarial tests in supported scope",
+    "transfer": "unverified"
+  },
+  "status": "ACCEPT",
+  "version": "0.1.1",
+  "analysis_unit": "C003-U3",
+  "round": 2,
+  "fact_rule_boundary": "Fact/inference/local policy labels preserved from sankai analysis; not full DTCG conformance",
+  "history": [
+    {
+      "event": "REGISTER",
+      "at": "2026-11-23T09:25:48.001849+00:00",
+      "status": "DRAFT"
+    },
+    {
+      "event": "CRITIC",
+      "status": "REVISE",
+      "findings": [
+        "R02-CR-01",
+        "R02-CR-02",
+        "R02-CR-03"
+      ],
+      "reason": "Resource and CLI exception contracts failed independent probes; fixes await recheck."
+    },
+    {
+      "event": "TRACEABILITY_NORMALIZATION",
+      "reason": "Resolve source record paths from repository root and map decomposition identities to registry identities; no behavioral rule change."
+    },
+    {
+      "event": "DECIDE",
+      "at": "2026-11-23T09:43:45.637135+00:00",
+      "status": "ACCEPT",
+      "accepted_scope": "Injective generated names and theme IDs, deterministic single CSS bundle of typed literals, and CLI failure/output preservation; no rendering or multi-file publication validation.",
+      "remaining": "Browser/AT, rendered accessibility and full DTCG unsupported features remain outside acceptance."
+    }
+  ]
+}

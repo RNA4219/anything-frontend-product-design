@@ -1,0 +1,99 @@
+{
+  "round": 2,
+  "issues": [
+    "C-003"
+  ],
+  "decision": "ACCEPT",
+  "accepted_scope": "Pure bounded token graph, product theme/role contract and deterministic literal CSS output; not browser rendering or full DTCG conformance.",
+  "instruction_units": [
+    "C-UI-005",
+    "C-UI-006",
+    "C-UI-007"
+  ],
+  "initial_decision": "REVISE",
+  "visual_decision": "HOLD",
+  "subagents": [
+    {
+      "task": "/root/r02_researcher_1",
+      "role": "Researcher-1",
+      "state": "COMPLETED"
+    },
+    {
+      "task": "/root/r02_researcher_2",
+      "role": "Researcher-2",
+      "state": "COMPLETED"
+    },
+    {
+      "task": "/root/r02_analyst",
+      "role": "Analyst",
+      "state": "COMPLETED"
+    },
+    {
+      "task": "/root/r02_critic",
+      "role": "Critic",
+      "state": "COMPLETED"
+    }
+  ],
+  "source_records": 15,
+  "new_canonical_documents": 14,
+  "duplicate_canonical_records_merged": 1,
+  "tests": {
+    "python_total": 35,
+    "token_unit": 19,
+    "node_pure": 6,
+    "independent_initial_raw": {
+      "total": 73,
+      "passed": 67,
+      "failed": 6
+    },
+    "independent_initial_adjudicated": {
+      "normal": 68,
+      "actual_failed": 5,
+      "finding_groups": 3,
+      "reviewer_oracle_error": 1
+    },
+    "independent_recheck": {
+      "total": 125,
+      "passed": 125,
+      "failed": 0
+    },
+    "browser": "NOT_RUN",
+    "AT": "NOT_RUN",
+    "CI": "NOT_RUN"
+  },
+  "comparison": {
+    "kind": "Authored shallow declaration control, not model-generation effectiveness",
+    "cases": 8,
+    "control_false_accepts": 7,
+    "candidate_false_accepts": 0,
+    "candidate_false_rejects": 0
+  },
+  "resolved_findings": [
+    "R02-CR-01",
+    "R02-CR-02",
+    "R02-CR-03"
+  ],
+  "traceability_maintenance": {
+    "previous_round_source_aliases_resolved": 8,
+    "behavioral_rules_changed": false
+  },
+  "next": [
+    "C-002 reflow and pointer target contracts",
+    "C-009 supported format expansion with new tests",
+    "C-010 runtime token consumer verification"
+  ],
+  "cost": {
+    "measured": false,
+    "amount": null,
+    "reason": "No token or monetary metering exposed"
+  },
+  "control_plane": {
+    "private_schema_adapter": "PASS",
+    "private_artifact_integrity_checks": "PASS",
+    "formal_campaign_budget_gate": "HOLD",
+    "execution_evaluation_promotion": "NOT_CONNECTED",
+    "private_receipts_published": false,
+    "private_experience_record": "PASS"
+  },
+  "at": "2026-11-23T09:43:45.637135+00:00"
+}

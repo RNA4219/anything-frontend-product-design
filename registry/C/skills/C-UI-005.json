@@ -1,0 +1,276 @@
+{
+  "skill_id": "C-UI-005",
+  "domain": "ui-engineering-design-system",
+  "trigger": "既存トークン文書の取込、変換、テーマ検査の前段。",
+  "intent": "対応範囲を宣言し、型付き参照グラフを検証する",
+  "required_inputs": [
+    "版と対応subset",
+    "型付きトークン文書",
+    "型継承の解釈policy",
+    "資源上限と診断分類"
+  ],
+  "decision_rules": [
+    "【製品policy】入力をDTCG 2025.10の限定サブセットとして宣言する。候補は単一JSON内のグループ、全値の波括弧alias、colorの数値sRGB、dimensionのpx/rem、durationのms/s、有限numberである。採用する型ごとに値形とserializerを列挙し、未実装の型を受理しない。全Format/Color/Resolver対応とは表示しない。",
+    "【事実＋製品policy】意味を持つ構文を検出してからグループとトークンを列挙する。未実装の$ref、$extends、$root、複合型、未知$type、外部参照、noneや非sRGB色はunsupportedとして拒否し、メタデータや空グループとして捨てない。原典で合法な構文をDTCG一般の不正と呼ばない。無視できる記述メタデータも明示的な許可リストに限定する。",
+    "【事実＋解釈policy】宣言$type、親グループ型、alias参照先の型を別々に保持し、値の見た目から型を推測しない。非aliasの未明示型は最も近い親型を使う。未明示aliasは§5.2.2の参照先型の扱いを採用候補とし、§6.7.3の継承リストにはこの分岐がないことを残す。親型と参照型が異なる場合は明示$typeを要求する局所契約エラーにし、仕様矛盾を解消したとは主張しない。明示型があるaliasは終端の型と一致させる。",
+    "【事実】波括弧aliasを値全体として解析し、トークンを指す有向辺として扱う。グループやtoken.$value内部への波括弧参照、壊れた構文、欠落対象、自己参照と多段循環、型不一致を拒否する。全トークンを走査し、失敗したテーマ・パス・参照経路を返す。文字列置換で補間やcalcを実装したことにしない。",
+    "【事実＋subset policy】終端値を型別に検証する。dimensionは有限数valueとpx/rem、durationは有限数valueとms/s、numberは有限数のみとしbooleanを数値として通さない。ゼロでも寸法unitを要求する。colorはcolorSpace=srgb、3個の有限数componentsを各0〜1、alphaを0〜1（省略時1）、hexがあれば6桁として確認する。noneと他色空間は未対応、sRGB範囲外や4/8桁fallbackは対応型の形式不正として区別する。",
+    "【製品policy】形式不正、サブセット未対応、製品契約違反、実装資源上限を区別して報告する。数値範囲・トークン数・参照深さに実装上限を設けるなら値を明記する。例外落ちや途中までの受理を成功として返さない。"
+  ],
+  "procedure": [
+    "【製品policy】入力をDTCG 2025.10の限定サブセットとして宣言する。候補は単一JSON内のグループ、全値の波括弧alias、colorの数値sRGB、dimensionのpx/rem、durationのms/s、有限numberである。採用する型ごとに値形とserializerを列挙し、未実装の型を受理しない。全Format/Color/Resolver対応とは表示しない。",
+    "【事実＋製品policy】意味を持つ構文を検出してからグループとトークンを列挙する。未実装の$ref、$extends、$root、複合型、未知$type、外部参照、noneや非sRGB色はunsupportedとして拒否し、メタデータや空グループとして捨てない。原典で合法な構文をDTCG一般の不正と呼ばない。無視できる記述メタデータも明示的な許可リストに限定する。",
+    "【事実＋解釈policy】宣言$type、親グループ型、alias参照先の型を別々に保持し、値の見た目から型を推測しない。非aliasの未明示型は最も近い親型を使う。未明示aliasは§5.2.2の参照先型の扱いを採用候補とし、§6.7.3の継承リストにはこの分岐がないことを残す。親型と参照型が異なる場合は明示$typeを要求する局所契約エラーにし、仕様矛盾を解消したとは主張しない。明示型があるaliasは終端の型と一致させる。",
+    "【事実】波括弧aliasを値全体として解析し、トークンを指す有向辺として扱う。グループやtoken.$value内部への波括弧参照、壊れた構文、欠落対象、自己参照と多段循環、型不一致を拒否する。全トークンを走査し、失敗したテーマ・パス・参照経路を返す。文字列置換で補間やcalcを実装したことにしない。",
+    "【事実＋subset policy】終端値を型別に検証する。dimensionは有限数valueとpx/rem、durationは有限数valueとms/s、numberは有限数のみとしbooleanを数値として通さない。ゼロでも寸法unitを要求する。colorはcolorSpace=srgb、3個の有限数componentsを各0〜1、alphaを0〜1（省略時1）、hexがあれば6桁として確認する。noneと他色空間は未対応、sRGB範囲外や4/8桁fallbackは対応型の形式不正として区別する。",
+    "【製品policy】形式不正、サブセット未対応、製品契約違反、実装資源上限を区別して報告する。数値範囲・トークン数・参照深さに実装上限を設けるなら値を明記する。例外落ちや途中までの受理を成功として返さない。"
+  ],
+  "expected_outputs": [
+    "パス・宣言型・実効型・解決値・出典を持つグラフ結果",
+    "失敗分類とテーマ/パス/参照経路"
+  ],
+  "dependencies": [
+    "researcher-1.jsonのC02-R1-P01〜P05と原典節",
+    "C-UI-006：テーマを扱う場合は合成後の各グラフを入力する"
+  ],
+  "exceptions": [
+    "負のduration・dimensionを型一般のDTCG不正としない。非負制約が必要なら利用先または製品の別契約にする。",
+    "§6.9.2の%の例は§8.2のpx/remの規範規則を広げる根拠にしない。",
+    "合法な$rootを通常のドル接頭辞禁止だけで形式不正としない。未知typeの拒否は対応範囲の拒否であり、未知値の合法性までは確定しない。"
+  ],
+  "failure_modes": [
+    "合法な未対応構文を無視して空の成功結果を返す",
+    "alias型を値形から推測する",
+    "循環を途中のキャッシュで隠す",
+    "boolean・unitなしゼロ・無効sRGBを受理する",
+    "負の値を根拠なくDTCG不正と呼ぶ"
+  ],
+  "verification": {
+    "planned": [
+      {
+        "case": "valid-chain",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "明示dimension終端→未明示alias→明示dimension aliasを解決し、同じ型と0.5remを得る。",
+        "falsifier": "値・型の相違、元JSON順序による結果の変化。"
+      },
+      {
+        "case": "missing-reference",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "存在しないトークン参照を入力する。",
+        "falsifier": "成功、欠落パスのない一般エラー。"
+      },
+      {
+        "case": "cycle",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "3ノード循環を入力する。",
+        "falsifier": "成功、無限再帰、循環経路が不明。"
+      },
+      {
+        "case": "type-mismatch",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "duration aliasからdimension終端を指す。",
+        "falsifier": "型を無視した受理。"
+      },
+      {
+        "case": "unsupported-construct",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "未実装$ref・$extends・複合型を入力する。",
+        "falsifier": "黙って無視、DTCG全体の不正と断定。"
+      },
+      {
+        "case": "valid-srgb / invalid-zero-no-unit",
+        "status": "not_executed",
+        "partition": "candidate_examples",
+        "procedure": "数値sRGB正常例とunitなしのdimensionゼロを別々に判定する。",
+        "falsifier": "両方accept、または正常sRGB拒否。"
+      }
+    ],
+    "status": "PASS_SUPPORTED_SCOPE",
+    "evidence": [
+      "campaigns/C/rounds/02/revision-execution.json",
+      "campaigns/C/rounds/02/recheck.json",
+      "campaigns/C/rounds/02/recheck-results.json",
+      "campaigns/C/rounds/02/comparison.json"
+    ],
+    "accepted_scope": "Supported parsing, type/whole-token alias resolution, malformed/unsupported input and documented resource bounds; no full DTCG compliance.",
+    "visual": "NOT_TESTED"
+  },
+  "source_refs": [
+    {
+      "id": "C02-R1-S01",
+      "url": "https://www.designtokens.org/TR/2025.10/format/",
+      "evidence_kind": "Final Community Group Report; not W3C Standard/Recommendation",
+      "record": "research/ui-engineering-design-system/round-02/researcher-1.json#/sources/0",
+      "sections": [
+        {
+          "heading": "5.2.2 Type",
+          "web_lines": [
+            426,
+            441
+          ]
+        },
+        {
+          "heading": "6.4.2 Reference Resolution and Evaluation; 6.4.3 Inheritance Semantics",
+          "web_lines": [
+            738,
+            762
+          ]
+        },
+        {
+          "heading": "6.7.3 Type Inheritance",
+          "web_lines": [
+            1026,
+            1034
+          ]
+        },
+        {
+          "heading": "7.1.1 Curly Brace Syntax; 7.1.2 JSON Pointer Syntax",
+          "web_lines": [
+            1349,
+            1378
+          ]
+        },
+        {
+          "heading": "7.2.2 Chained References; 7.2.3 Circular References",
+          "web_lines": [
+            1439,
+            1468
+          ]
+        },
+        {
+          "heading": "7.4.5 Error Conditions",
+          "web_lines": [
+            1645,
+            1653
+          ]
+        },
+        {
+          "heading": "8.2 Dimension; 8.2.1 Validation",
+          "web_lines": [
+            1727,
+            1759
+          ]
+        },
+        {
+          "heading": "8.5 Duration; 8.5.1 Validation",
+          "web_lines": [
+            1814,
+            1841
+          ]
+        }
+      ],
+      "registry_source_id": "C-S018"
+    },
+    {
+      "id": "C02-R1-S03",
+      "url": "https://www.designtokens.org/TR/2025.10/color/",
+      "evidence_kind": "Final Community Group Report",
+      "record": "research/ui-engineering-design-system/round-02/researcher-1.json#/sources/2",
+      "sections": [
+        {
+          "heading": "4.1 Format",
+          "anchor": "#format",
+          "web_lines": [
+            150,
+            160
+          ]
+        },
+        {
+          "heading": "4.1.1 The none keyword",
+          "web_lines": [
+            184,
+            190
+          ]
+        },
+        {
+          "heading": "4.2 Supported Color spaces",
+          "web_lines": [
+            223,
+            277
+          ]
+        },
+        {
+          "heading": "4.2.1.1 Components",
+          "web_lines": [
+            295,
+            301
+          ]
+        }
+      ],
+      "registry_source_id": "C-S020"
+    },
+    {
+      "id": "C02-R1-S06",
+      "url": "https://www.designtokens.org/technical-reports/",
+      "evidence_kind": "Official publication index",
+      "record": "research/ui-engineering-design-system/round-02/researcher-1.json#/sources/5",
+      "sections": [
+        {
+          "heading": "Technical Reports"
+        }
+      ],
+      "registry_source_id": "C-S023"
+    },
+    {
+      "id": "R2-S2",
+      "url": "https://styledictionary.com/info/tokens/",
+      "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+      "record": "research/ui-engineering-design-system/round-02/researcher-2.json#/sources/1",
+      "version": "live documentation retrieved 2026-11-23; explicitly describes v4/legacy examples",
+      "section": "Overview note; Referencing / Aliasing; Collision warnings",
+      "registry_source_id": "C-S026"
+    },
+    {
+      "id": "R2-S4",
+      "url": "https://github.com/style-dictionary/style-dictionary/issues/1398",
+      "evidence_kind": "primary documentation or author-reported incident; not a universal normative requirement",
+      "record": "research/ui-engineering-design-system/round-02/researcher-2.json#/sources/3",
+      "version": "report opened 2024-11-25 for v4; page observed closed; fixed release not checked",
+      "section": "Description; collaborator comments 2024-11-26 and 2025-01-20",
+      "registry_source_id": "C-S028"
+    }
+  ],
+  "confidence": {
+    "source": "primary specifications and tooling reports; partial reader captures",
+    "implementation": "Executed primary and separate-task adversarial tests in supported scope",
+    "transfer": "unverified"
+  },
+  "status": "ACCEPT",
+  "version": "0.1.1",
+  "analysis_unit": "C003-U1",
+  "round": 2,
+  "fact_rule_boundary": "Fact/inference/local policy labels preserved from sankai analysis; not full DTCG conformance",
+  "history": [
+    {
+      "event": "REGISTER",
+      "at": "2026-11-23T09:25:48.001849+00:00",
+      "status": "DRAFT"
+    },
+    {
+      "event": "CRITIC",
+      "status": "REVISE",
+      "findings": [
+        "R02-CR-01",
+        "R02-CR-02",
+        "R02-CR-03"
+      ],
+      "reason": "Resource and CLI exception contracts failed independent probes; fixes await recheck."
+    },
+    {
+      "event": "TRACEABILITY_NORMALIZATION",
+      "reason": "Resolve source record paths from repository root and map decomposition identities to registry identities; no behavioral rule change."
+    },
+    {
+      "event": "DECIDE",
+      "at": "2026-11-23T09:43:45.637135+00:00",
+      "status": "ACCEPT",
+      "accepted_scope": "Supported parsing, type/whole-token alias resolution, malformed/unsupported input and documented resource bounds; no full DTCG compliance.",
+      "remaining": "Browser/AT, rendered accessibility and full DTCG unsupported features remain outside acceptance."
+    }
+  ]
+}

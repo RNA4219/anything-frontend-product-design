@@ -30,7 +30,7 @@
     "観測されたfocusと未検証のAT条件"
   ],
   "dependencies": [
-    "C001-U3",
+    "C-UI-003",
     "art-direction/references/e-accessibility.md# e2-02, e2-03, e2-04, e2-05",
     "art-direction/references/i-components.md# i-09, i-11"
   ],
@@ -80,26 +80,33 @@
       "id": "HTML-DIALOG",
       "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
       "evidence_kind": "HTML Living Standard; normative algorithms and author guidance",
-      "record": "researcher-1.json#/sources/0",
-      "additional_reader_location": "private-research/C/round-01/researcher-1/sources/open-response-04-web-excerpt.txt:82 (cancel/requestClose); sources/chase-response-01-web-excerpt.txt:149-177 (close algorithm)"
+      "record": "research/ui-engineering-design-system/round-01/researcher-1.json#/sources/0",
+      "additional_reader_location": "private-research/C/round-01/researcher-1/sources/open-response-04-web-excerpt.txt:82 (cancel/requestClose); sources/chase-response-01-web-excerpt.txt:149-177 (close algorithm)",
+      "registry_source_id": "C-S001"
     },
     {
-      "id": "R2-S3",
+      "id": "S3",
       "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/#keyboardinteraction",
       "evidence_kind": "non-normative implementation guidance or author-reported implementation incident",
-      "record": "researcher-2.json#/sources/2"
+      "record": "research/ui-engineering-design-system/round-01/researcher-2.json#/sources/2",
+      "registry_source_id": "C-S012",
+      "analysis_source_id": "R2-S3"
     },
     {
-      "id": "R2-S5",
+      "id": "S5",
       "url": "https://github.com/uswds/uswds/pull/6703",
       "evidence_kind": "non-normative implementation guidance or author-reported implementation incident",
-      "record": "researcher-2.json#/sources/4"
+      "record": "research/ui-engineering-design-system/round-01/researcher-2.json#/sources/4",
+      "registry_source_id": "C-S014",
+      "analysis_source_id": "R2-S5"
     },
     {
-      "id": "R2-S6",
+      "id": "S6",
       "url": "https://github.com/adobe/react-spectrum/pull/2763",
       "evidence_kind": "non-normative implementation guidance or author-reported implementation incident",
-      "record": "researcher-2.json#/sources/5"
+      "record": "research/ui-engineering-design-system/round-01/researcher-2.json#/sources/5",
+      "registry_source_id": "C-S015",
+      "analysis_source_id": "R2-S6"
     }
   ],
   "confidence": {
@@ -108,7 +115,7 @@
     "transfer": "unverified"
   },
   "status": "HOLD",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "analysis_unit": "C001-U4",
   "round": 1,
   "fact_rule_boundary": "decision_rules are original conditional engineering instructions; source_refs identify normative facts versus guidance",
@@ -133,6 +140,10 @@
       "at": "2026-11-23T09:10:05.613722+00:00",
       "status": "HOLD",
       "reason": "Browser and assistive-technology verification unavailable; do not convert pure checks into browser acceptance."
+    },
+    {
+      "event": "TRACEABILITY_NORMALIZATION",
+      "reason": "Resolve source record paths from repository root and map decomposition identities to registry identities; no behavioral rule change."
     }
   ]
 }

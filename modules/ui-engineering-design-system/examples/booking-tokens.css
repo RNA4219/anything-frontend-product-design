@@ -1,0 +1,27 @@
+/* C-token-subset/1: resolved literals; rendering unverified. */
+:root,
+[data-theme="light"] {
+  --booking-motion-feedback: 120ms;
+  --booking-palette-boundary: color(srgb 0.4 0.4 0.4 / 1);
+  --booking-palette-ink: color(srgb 0.1 0.1 0.1 / 1);
+  --booking-palette-paper: color(srgb 1 1 1 / 1);
+  --booking-semantic-controlGap: 0.75rem;
+  --booking-semantic-line: color(srgb 0.4 0.4 0.4 / 1);
+  --booking-semantic-surface: color(srgb 1 1 1 / 1);
+  --booking-semantic-text: color(srgb 0.1 0.1 0.1 / 1);
+  --booking-size-gap: 0.75rem;
+  --booking-size-line: 1px;
+}
+
+[data-theme="dark"] {
+  --booking-motion-feedback: 120ms;
+  --booking-palette-boundary: color(srgb 0.4 0.4 0.4 / 1);
+  --booking-palette-ink: color(srgb 0.95 0.95 0.95 / 1);
+  --booking-palette-paper: color(srgb 0.08 0.08 0.08 / 1);
+  --booking-semantic-controlGap: 0.75rem;
+  --booking-semantic-line: color(srgb 0.4 0.4 0.4 / 1);
+  --booking-semantic-surface: color(srgb 0.08 0.08 0.08 / 1);
+  --booking-semantic-text: color(srgb 0.95 0.95 0.95 / 1);
+  --booking-size-gap: 0.75rem;
+  --booking-size-line: 1px;
+}

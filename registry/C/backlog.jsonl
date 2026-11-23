@@ -11,3 +11,7 @@
 {"issue_id": "C-003", "event": "prioritize", "status": "READY", "planned_round": 2, "reason": "Pure graph and build contracts can be tested without browser"}
 {"issue_id": "C-002", "event": "prioritize", "status": "OPEN", "planned_round": 3}
 {"issue_id": "C-008", "priority": 2, "status": "OPEN", "owner": "C", "title": "Expand real browser matrix: pointer/Enter/Space success, Shift+Tab and Escape after invoker deletion", "source": "round-01 critic suite coverage gaps"}
+{"issue_id": "C-009", "priority": 2, "status": "OPEN", "owner": "C", "title": "Extend DTCG subset only with additional typed reference and resolver evidence", "source": "round-02: $ref/$root/$extends/composite and type precedence remain outside supported subset"}
+{"issue_id": "C-010", "priority": 1, "status": "HOLD", "owner": "C", "title": "Measure token consumers under nested themes, forced colors and browser color() support", "source": "round-02: pure compiler acceptance does not establish rendering", "depends_on": "C-005"}
+{"issue_id": "C-002", "event": "next_round_registered", "status": "READY", "planned_round": 3, "source": "round-02 coverage review"}
+{"issue_id": "C-003", "event": "decision", "status": "PARTIAL_ACCEPT", "round": 2, "accepted": "bounded static graph/theme/export", "remaining": ["C-009", "C-010"]}

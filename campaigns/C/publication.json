@@ -1,0 +1,10 @@
+{
+  "repository": "RNA4219/anything-frontend-product-design",
+  "branch": "session-c/ui-engineering-20261123",
+  "draft_pr": "https://github.com/RNA4219/anything-frontend-product-design/pull/1",
+  "current_public_base": "4333d097b5699528b5554434b494d8079126ba0f",
+  "remote_head_before_round02": "346f30380e4dfe5f69d347e2a32bafbd5fc18bc6",
+  "reconciliation": "Rebased only tested C changes onto the observed current branch. Preserved remote deletions and current public history; no old parent history reattached.",
+  "main_merged": false,
+  "at": "2026-11-23T09:50:55.593550+00:00"
+}

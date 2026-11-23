@@ -1,0 +1,353 @@
+{
+  "session": "C",
+  "round": 2,
+  "researcher": "researcher-2",
+  "candidate": "C-003",
+  "date": "2026-11-23",
+  "status": "bounded_research_complete_with_raw_fetch_failure",
+  "strategy": "Primary tooling and design-system counterexamples; distinguish format, build, theme policy and browser used values.",
+  "reused_art_direction": [
+    {
+      "file": "references/i-components.md",
+      "ids": [
+        "I-01",
+        "I-02",
+        "I-03"
+      ]
+    },
+    {
+      "file": "references/b-visual.md",
+      "ids": [
+        "B-01",
+        "B-02",
+        "B-03",
+        "B-04",
+        "B3-03",
+        "B3-05",
+        "B3-07",
+        "B3-11",
+        "B3-14"
+      ]
+    },
+    {
+      "file": "templates/theme.html",
+      "scope": "Native color-scheme / system colors / explicit reset to system preference. Not a token graph validator."
+    }
+  ],
+  "sources": [
+    {
+      "id": "R2-S1",
+      "title": "Style Dictionary: References",
+      "url": "https://styledictionary.com/reference/utils/references/",
+      "version": "live documentation retrieved 2026-11-23; package version unpinned",
+      "section": "outputReferencesFilter; outputReferencesTransformed",
+      "web_ref": "turn424078527view0",
+      "web_lines": [
+        526,
+        657
+      ],
+      "reader_file": "reader-collision-search-and-finds.txt",
+      "fact": "Filtering an exported reference target can leave a broken output reference; helpers conditionally emit resolved values and account for transitive transforms.",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction; not byte-identical original",
+      "reader_sha256": "87171b3ebca9258ed8dcf2e1a2bffbc519870147a3d67f8009e4752ff52c0111"
+    },
+    {
+      "id": "R2-S2",
+      "title": "Style Dictionary: Design Tokens",
+      "url": "https://styledictionary.com/info/tokens/",
+      "version": "live documentation retrieved 2026-11-23; explicitly describes v4/legacy examples",
+      "section": "Overview note; Referencing / Aliasing; Collision warnings",
+      "web_ref": "turn424078527view2",
+      "web_lines": [
+        89,
+        90,
+        362,
+        366
+      ],
+      "reader_file": "reader-collision-search-and-finds.txt",
+      "fact": "Docs distinguish legacy and DTCG syntax and explain ordered include/source deep merge. Source overrides include intentionally. This is not a universal ban on all repeated source paths.",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction; not byte-identical original",
+      "reader_sha256": "87171b3ebca9258ed8dcf2e1a2bffbc519870147a3d67f8009e4752ff52c0111"
+    },
+    {
+      "id": "R2-S3",
+      "title": "Style Dictionary issue #1590: Support for DTCG v2025.10",
+      "url": "https://github.com/style-dictionary/style-dictionary/issues/1590",
+      "version": "issue opened 2025-11-04; comments inspected through 2026-10-16; current release support not verified",
+      "section": "Proposal; comments 2026-08-27, 2026-08-28, 2026-08-31, 2026-09-18",
+      "web_ref": "turn910884138view3",
+      "web_lines": [
+        397,
+        410,
+        430,
+        436,
+        454,
+        480
+      ],
+      "reader_file": "reader-issues.txt",
+      "fact": "Participants distinguish intentional theme overrides from output-name collisions and discuss per-context output destinations to avoid overwriting another theme. These are reports and design discussions, not a promise about the latest release.",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction; not byte-identical original",
+      "reader_sha256": "f0f12c64840e46a2fbe1b1899bc086d5ffbd12ba8b4228cd66cca13dd60332f6"
+    },
+    {
+      "id": "R2-S4",
+      "title": "Style Dictionary issue #1398: Incorrect/unexpected dimension output",
+      "url": "https://github.com/style-dictionary/style-dictionary/issues/1398",
+      "version": "report opened 2024-11-25 for v4; page observed closed; fixed release not checked",
+      "section": "Description; collaborator comments 2024-11-26 and 2025-01-20",
+      "web_ref": "turn910884138view0",
+      "web_lines": [
+        137,
+        200,
+        217,
+        220,
+        355,
+        359
+      ],
+      "reader_file": "reader-issues.txt",
+      "fact": "Reported object dimension value/unit split into separate output variables; discussion calls for transforms and integration tests. Historical counterexample only.",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction; not byte-identical original",
+      "reader_sha256": "f0f12c64840e46a2fbe1b1899bc086d5ffbd12ba8b4228cd66cca13dd60332f6"
+    },
+    {
+      "id": "R2-S5",
+      "title": "Spectrum Web Components styles",
+      "url": "https://opensource.adobe.com/spectrum-web-components/tools/styles/",
+      "version": "page badge NPM 1.12.6; retrieved 2026-11-23; examples vary by system",
+      "section": "Global tokens; Color options; Token imports",
+      "web_ref": "turn954199233view2",
+      "web_lines": [
+        43,
+        108
+      ],
+      "reader_file": "reader-chain-and-theme.txt",
+      "fact": "A semantic token can reference different raw tokens in light and dark; Spectrum 2 standalone files differ from Spectrum base-plus-override imports.",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction; not byte-identical original",
+      "reader_sha256": "34beb0ab47030c28d878e6c909194fcb6a64e692ec61bfd3d581396e471406b0"
+    },
+    {
+      "id": "R2-S6",
+      "title": "CSS Custom Properties for Cascading Variables Level 1",
+      "url": "https://www.w3.org/TR/2022/CR-css-variables-1-20220616/",
+      "version": "W3C Candidate Recommendation Snapshot 2022-06-16",
+      "section": "2.2 Guaranteed-Invalid Values; 2.3 Resolving Dependency Cycles; 3 var(); 3.1 Invalid Variables",
+      "web_ref": "turn213824290view3",
+      "web_lines": [
+        266,
+        318,
+        478,
+        482,
+        516,
+        590
+      ],
+      "reader_file": "reader-cycles-and-adjustment.txt",
+      "fact": "CSS fallback does not repair a valid custom-property token stream with the wrong consumer grammar. Fallback references participate in cycles. Variables resolve before inheritance; units cannot be appended by textual concatenation.",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction; not byte-identical original",
+      "reader_sha256": "5ca2dda0514a9974e1660db117a675c682c5235c91d449ad40ac5bbdb8bcc601"
+    },
+    {
+      "id": "R2-S7",
+      "title": "CSS Color Adjustment Level 1",
+      "url": "https://www.w3.org/TR/2025/CR-css-color-adjust-1-20251216/",
+      "version": "W3C Candidate Recommendation Snapshot 2025-12-16",
+      "section": "2 Preferred Color Schemes; 3.1 Properties Affected by Forced Colors Mode",
+      "web_ref": "turn213824290view4",
+      "web_lines": [
+        99,
+        107,
+        255,
+        304
+      ],
+      "reader_file": "reader-cycles-and-adjustment.txt",
+      "fact": "Forced colors can override used colors and remove shadows. Default/system colors combined with authored colors do not guarantee a contrast level.",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction; not byte-identical original",
+      "additional_reader_file": "reader-chain-and-theme.txt",
+      "reader_sha256": "5ca2dda0514a9974e1660db117a675c682c5235c91d449ad40ac5bbdb8bcc601"
+    },
+    {
+      "id": "R2-S8",
+      "title": "Spectrum Colors",
+      "url": "https://spectrum.adobe.com/page/color",
+      "version": "live documentation retrieved 2026-11-23",
+      "section": "Solid color background with black or white; Two-tone color pairing",
+      "web_ref": "turn941343926view3",
+      "web_lines": [
+        38,
+        49
+      ],
+      "reader_file": "reader-initial-open.txt",
+      "fact": "Color usage guidance depends on foreground/background pairing, opacity, themes, and redundant labels; generic token resolution does not establish those conditions.",
+      "authority": "primary",
+      "raw_original_status": "unavailable",
+      "reader_status": "partial tool extraction; not byte-identical original",
+      "reader_sha256": "5d1524d079ad77450b2d77e1339deddafbbb18af0ece00c61d2707dc8f435f29"
+    }
+  ],
+  "proposed_rules": [
+    {
+      "id": "C003-R2-P1",
+      "type": "proposed_rule",
+      "title": "Pin supported token dialect and serializer",
+      "sources": [
+        "R2-S2",
+        "R2-S4"
+      ],
+      "rule": "Declare accepted syntax, effective type resolution, value schema and serialization for each supported type. Reject mixed or unsupported constructs instead of stringifying or guessing.",
+      "counterexample": "dimension-object-split",
+      "falsifier": "A supported dimension {value:1,unit:'px'} emits multiple value/unit tokens, '[object Object]', a double unit, or loses the unit; alternatively an unsupported object shape is accepted.",
+      "unit_expectation": "Either exact supported output 1px with retained dimension type, or explicit unsupported-construct error."
+    },
+    {
+      "id": "C003-R2-P2",
+      "type": "proposed_rule",
+      "title": "Re-resolve every effective theme",
+      "sources": [
+        "R2-S3",
+        "R2-S5"
+      ],
+      "rule": "Merge base plus one explicitly declared override set, then validate and resolve the resulting graph independently. Keep declared semantic role paths and types stable; permit alias targets to change.",
+      "counterexample": "dark-role-repoints",
+      "falsifier": "base body->gray.900 and dark body->gray.50 resolve to the same cached target, or a dark-only missing reference/cycle/type mismatch passes.",
+      "unit_expectation": "All declared themes yield complete role maps with expected values; malformed dark-only graphs fail with theme and token path."
+    },
+    {
+      "id": "C003-R2-P3",
+      "type": "proposed_rule",
+      "title": "Separate intentional overrides and generated collisions",
+      "sources": [
+        "R2-S2",
+        "R2-S3"
+      ],
+      "rule": "Authorize duplicate source paths only through a declared merge order. Require generated CSS names and per-theme artifact destinations to be injective within their output namespace.",
+      "counterexample": "hyphen-collapse-and-theme-overwrite",
+      "falsifier": "paths a.b and a-b both emit --a-b; dark and light outputs silently write the same file.",
+      "unit_expectation": "Both collisions fail with conflicting original paths or theme names; explicit base-to-theme replacement remains valid."
+    },
+    {
+      "id": "C003-R2-P4",
+      "type": "proposed_rule",
+      "title": "Close exported reference graphs",
+      "sources": [
+        "R2-S1"
+      ],
+      "rule": "For reference-preserving output, every reference must resolve in the declared output bundle and scope. Otherwise emit an explicitly resolved literal, or reject. A deliberately external variable needs an explicit contract.",
+      "counterexample": "filtered-palette-target",
+      "falsifier": "semantic.text references palette.ink, only semantic tokens are exported, and output still refers to omitted --palette-ink.",
+      "unit_expectation": "No dangling emitted references; resolving a filtered dependency does not change its value. If export filters are out of scope, reject or document them as unsupported."
+    },
+    {
+      "id": "C003-R2-P5",
+      "type": "proposed_rule",
+      "title": "Do not treat CSS fallback as type recovery",
+      "sources": [
+        "R2-S6"
+      ],
+      "rule": "Validate local declared types before CSS emission. A bounded checker should reject raw CSS var(), calc(), interpolated aliases, or fallback expressions unless it actually implements their grammar and graph rules.",
+      "counterexample": "wrong-type-with-fallback",
+      "falsifier": "--x:16px; color:var(--x,red) is reported as guaranteed red or valid color because a fallback exists.",
+      "unit_expectation": "Token color-to-dimension alias fails. Unsupported raw expressions fail rather than being declared safe. Actual browser computed behavior remains untested."
+    },
+    {
+      "id": "C003-R2-P6",
+      "type": "proposed_rule",
+      "title": "Declare theme scope semantics",
+      "sources": [
+        "R2-S6"
+      ],
+      "rule": "A resolved token graph is not a CSS cascade simulator. Prefer fully resolved role values per declared theme scope; if keeping runtime aliases, state where dependent declarations are emitted and test nested scopes separately.",
+      "counterexample": "ancestor-alias-freeze",
+      "falsifier": ":root defines --base:red and --role:var(--base); a descendant changes only --base:blue; the tool claims inherited --role must become blue.",
+      "unit_expectation": "Static emitter asserts complete role declarations per supported scope. Nested scope equivalence is HOLD without browser tests."
+    },
+    {
+      "id": "C003-R2-P7",
+      "type": "proposed_rule",
+      "title": "Local semantic role manifest",
+      "sources": [
+        "R2-S5",
+        "R2-S8"
+      ],
+      "rule": "Use a product-owned list of required semantic roles and foreground/background pairings. Check presence and types after each theme merge, retaining source provenance. Do not invent a universally mandatory role inventory or token tier count.",
+      "counterexample": "all-tokens-resolve-but-text-role-missing",
+      "falsifier": "Every present token resolves, but a required on-surface role is absent and the checker reports the theme complete.",
+      "unit_expectation": "Missing required role fails; inherited base role can satisfy the contract if explicit merge policy permits it."
+    },
+    {
+      "id": "C003-R2-P8",
+      "type": "proposed_rule",
+      "title": "Keep compile and visual results separate",
+      "sources": [
+        "R2-S7",
+        "R2-S8"
+      ],
+      "rule": "Report graph/type/name/theme checks only. Mark rendered contrast, focus visibility, forced colors and system preference handling as unverified unless separately measured in context.",
+      "counterexample": "shadow-only-focus-in-forced-colors",
+      "falsifier": "A well-typed theme with a shadow-only focus indicator receives an accessibility or WCAG pass solely from token compilation.",
+      "unit_expectation": "Machine report never produces rendered accessibility conformance from graph success; visual checks remain HOLD."
+    }
+  ],
+  "found": [
+    "primary reference-filter failure documentation",
+    "ordered theme override versus generated name collision distinction",
+    "historical dimension object serialization failure",
+    "theme-dependent alias target example",
+    "CSS fallback, cycle and pre-inheritance resolution constraints",
+    "forced color used-value adjustment"
+  ],
+  "not_found": [
+    "universal semantic role inventory or mandatory number of token tiers",
+    "successfully acquired raw originals",
+    "verified fixed release for historical issue 1398"
+  ],
+  "not_searched": [
+    "Fluent and USWDS token-specific source deep dives",
+    "live package install/build reproduction",
+    "current release compatibility matrix",
+    "full DTCG 2025.10 format/resolver compliance; delegated to complementary research",
+    "browser execution, nested theme application and screen-reader testing"
+  ],
+  "fetch": {
+    "attempted": 1,
+    "success": 0,
+    "failure": 1,
+    "reason": "DNS resolution unavailable",
+    "security_bypass": false,
+    "reader_alternative": "partial extracts separately saved; no full originals claimed",
+    "command": "python3 skills/imozuru/scripts/fetch.py /workspace/scratch/785c8ae49c7b/private-research/C/round-02/researcher-2/sources style-dictionary-references https://styledictionary.com/reference/utils/references/"
+  },
+  "search": {
+    "initial_queries": 3,
+    "verification_queries": 1,
+    "all_returned_hits_recorded": false,
+    "limitation": "Initial combined response was oversized and full hit list was not retained. Follow-up search response with all 9 returned hits is saved.",
+    "followed_link": {
+      "from": "https://github.com/style-dictionary/style-dictionary/issues/1590",
+      "to": "https://github.com/style-dictionary/style-dictionary/issues/1398",
+      "method": "reader click link 66"
+    }
+  },
+  "private_record_location": "/workspace/scratch/785c8ae49c7b/private-research/C/round-02/researcher-2",
+  "cost": {
+    "amount": null,
+    "status": "unknown"
+  },
+  "stop_reason": "bounded task; no saturation claim",
+  "public_third_party_fulltext": false,
+  "implementation_changes": false,
+  "registration_changes": false,
+  "commits_created": false
+}
